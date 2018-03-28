@@ -1,16 +1,19 @@
 ---
-title: /books
+title: /TQL
 position: 1.1
-type: post
-description: Create Book
+type: get
+description: Create Query for example query
 parameters:
   - name: title
     content: The title for the book
   - name: score
     content: The book's score between 0 and 5
-content_markdown: |-
-  The book will automatically be added to your reading list
+content_markdown: >-
+  The query returns software that includes 'Excel'. This is query is case
+  sensitive.
+
   {: .success}
+
 
   Adds a book to your collection.
 left_code_blocks:
