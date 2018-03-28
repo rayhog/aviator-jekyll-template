@@ -10,7 +10,7 @@ content_markdown: |-
   This API document is designed for those interested in developing for our platform.
   This API is still under development and is a work in progress
 
-  ![apiEcon](images/apiEcon.png)
+  ![apiEcon](apiEcon.png)
 
 
   You'll succeed if you do this.
