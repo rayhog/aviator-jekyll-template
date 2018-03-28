@@ -1,29 +1,295 @@
 ---
-title: Getting Started
+title: Getting Started with version 6 API
 position: 1
 parameters:
   - name:
     content:
-content_markdown: |-
-  Welcome to our API documentation.
+content_markdown: >-
+  **Welcome to our API documentation.**
 
-  This API document is designed for those interested in developing for our platform.
-  This API is still under development and is a work in progress
 
-  ![apiEcon](apiEcon.png)
+  This API document is designed for those interested in developing for our
+  platform. This API is still under development and is a work in progress
+
+
+  | Node Type | Software Category | Software Attributes | Relationships | More
+  content |
+
+  | <font size="1"><font color="#333333"><font
+  face="Consolas">cat_sw_product_id</font><font face="Arial">&nbsp;|
+  int</font></font></font> | | <font color="#333333"><font face="Consolas"><font
+  size="1">Accounting</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Alerts and
+  Monitoring Tools</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font
+  size="1">Analytics</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Anti Virus and
+  Malware</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Application
+  Architecture and Design</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Application
+  Servers</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Application
+  Testing and QA</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Archiving and
+  Content Storage</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Backup and
+  Recovery</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font
+  size="1">Banking</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Blogs &amp;
+  Wikis</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Business
+  Intelligence (BI) Suites</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Business Metrics
+  and Reporting Tools</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Business
+  Performance Management</font></font></font> |
+
+
+  <colgroup><col width="262" style="width: 197pt;" /></colgroup> | | <font
+  color="#333333"><font face="Consolas"><font
+  size="1">Accounting</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Alerts and
+  Monitoring Tools</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font
+  size="1">Analytics</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Anti Virus and
+  Malware</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Application
+  Architecture and Design</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Application
+  Servers</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Application
+  Testing and QA</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Archiving and
+  Content Storage</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Backup and
+  Recovery</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font
+  size="1">Banking</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Blogs &amp;
+  Wikis</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Business
+  Intelligence (BI) Suites</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Business Metrics
+  and Reporting Tools</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Business
+  Performance Management</font></font></font> |
+
+
+  <colgroup><col width="262" style="width: 197pt;" /></colgroup> | | <font
+  color="#333333"><font face="Consolas"><font
+  size="1">Accounting</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Alerts and
+  Monitoring Tools</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font
+  size="1">Analytics</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Anti Virus and
+  Malware</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Application
+  Architecture and Design</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Application
+  Servers</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Application
+  Testing and QA</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Archiving and
+  Content Storage</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Backup and
+  Recovery</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font
+  size="1">Banking</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Blogs &amp;
+  Wikis</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Business
+  Intelligence (BI) Suites</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Business Metrics
+  and Reporting Tools</font></font></font> |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Business
+  Performance Management</font></font></font> |
+
+
+  <colgroup><col width="262" style="width: 197pt;" /></colgroup> | &nbsp; |
+
+  | <font color="#333333"><font face="Consolas"><font
+  size="1">Accounting</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Alerts and
+  Monitoring Tools</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+  | <font color="#333333"><font face="Consolas"><font
+  size="1">Analytics</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Anti Virus and
+  Malware</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Application
+  Architecture and Design</font></font></font> | &nbsp; | &nbsp; | &nbsp; |
+  &nbsp; |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Application
+  Servers</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Application
+  Testing and QA</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Archiving and
+  Content Storage</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Backup and
+  Recovery</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+  | <font color="#333333"><font face="Consolas"><font
+  size="1">Banking</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Blogs &amp;
+  Wikis</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Business
+  Intelligence (BI) Suites</font></font></font> | &nbsp; | &nbsp; | &nbsp; |
+  &nbsp; |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Business Metrics
+  and Reporting Tools</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+  | <font color="#333333"><font face="Consolas"><font size="1">Business
+  Performance Management</font></font></font> | &nbsp; | &nbsp; | &nbsp; |
+  &nbsp; |
+
+  | <font size="1"><font color="#333333"><font face="Consolas">alias</font><font
+  face="Arial">&nbsp;| text</font></font></font> | &nbsp; | &nbsp; | &nbsp; |
+  &nbsp; |
+
+  | <font size="1"><font color="#333333"><font
+  face="Consolas">component</font><font face="Arial">&nbsp;|
+  text</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+  | <font size="1"><font color="#333333"><font
+  face="Consolas">cat_sw_product_desupported_flag</font><font
+  face="Arial">&nbsp;| text</font></font></font> | &nbsp; | &nbsp; | &nbsp; |
+  &nbsp; |
+
+  | <font size="1"><font color="#333333"><font
+  face="Consolas">cat_sw_product_discontinued_flag</font><font
+  face="Arial">&nbsp;| text</font></font></font> | &nbsp; | &nbsp; | &nbsp; |
+  &nbsp; |
+
+  | <font size="1"><font color="#333333"><font
+  face="Consolas">family</font><font face="Arial">&nbsp;|
+  text</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+  | <font size="1"><font color="#333333"><font
+  face="Consolas">is_suite</font><font face="Arial">&nbsp;|
+  bool</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+  | <font size="1"><font color="#333333"><font
+  face="Consolas">nfamily</font><font face="Arial">&nbsp;|
+  bool</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+  | <font size="1"><font color="#333333"><font
+  face="Consolas">plicsable</font><font face="Arial">&nbsp;|
+  bool</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+  | <font size="1"><font color="#333333"><font face="Consolas">title</font><font
+  face="Arial">&nbsp;| text</font></font></font> | &nbsp; | &nbsp; | &nbsp; |
+  &nbsp; |
+
+  | <font size="1"><font color="#333333"><font
+  face="Consolas">cat_sw_product_url</font><font face="Arial">&nbsp;|
+  text</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+  | <font size="1"><font color="#333333"><font
+  face="Consolas">vendor_category</font><font face="Arial">&nbsp;|
+  text</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+  | <font size="1"><font color="#333333"><font
+  face="Consolas">cat_sw_product_id</font><font face="Arial">&nbsp;|
+  int</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+  | <font size="1"><font color="#333333"><font
+  face="Consolas">cat_sw_edition_desupported_flag</font><font
+  face="Arial">&nbsp;| boolean</font></font></font> | &nbsp; | &nbsp; | &nbsp; |
+  &nbsp; |
+
+  | <font size="1"><font color="#333333"><font
+  face="Consolas">edition</font><font face="Arial">&nbsp;|
+  text</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+  | <font size="1"><font color="#333333"><font
+  face="Consolas">edition_order</font><font face="Arial">&nbsp;|
+  int</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+  | <font size="1"><font color="#333333"><font
+  face="Consolas">cat_sw_edition_url</font><font face="Arial">&nbsp;|
+  text</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+  | <font size="1"><font color="#333333"><font
+  face="Consolas">cat_sw_product_id</font><font face="Arial">&nbsp;|
+  int</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+  | &nbsp;
+
+
+  &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 
   You'll succeed if you do this.
-  {: .success }
+
+  {: .success}
+
 
   Here's some useful information.
-  {: .info }
+
+  {: .info}
+
 
   Something may not happen if you try and do this.
-  {: .warning }
+
+  {: .warning}
+
 
   Something bad will happen if you do this.
-  {: .error }
+
+  {: .error}
 left_code_blocks:
   - code_block:
     title:
