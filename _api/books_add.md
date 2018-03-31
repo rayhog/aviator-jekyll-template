@@ -18,14 +18,13 @@ content_markdown: >-
   Adds a book to your collection.
 left_code_blocks:
   - code_block: >-
-
       https://v6.technopedia.com/tql?q=MATCH(SOFTWARE:s) WHERE s.title CONTAINS
       "excel" RETURN s
 
 
       Return software that contains excel in the title
     title: GET
-    language: javascript
+    language: json
 right_code_blocks:
   - code_block:
     title:
