@@ -22,7 +22,7 @@ left_code_blocks:
     title: Response
     language: json
 right_code_blocks:
-  - code_block:
-    title:
-    language:
+  - code_block: "{\r\n  \"error\": true,\r\n  \"message\": \"error message here\"\r\n}\r\n\r\n{\r\n  \"error\": true,\r\n  \"message\": \"error message here\"\r\n}"
+    title: Error Examples
+    language: json
 ---
