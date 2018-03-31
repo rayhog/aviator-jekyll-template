@@ -17,15 +17,14 @@ content_markdown: >-
 
   Adds a book to your collection.
 left_code_blocks:
-  - code_block: |-
-      $.post("http://api.myapp.com/books/", {
-        "token": "YOUR_APP_KEY",
-        "title": "The Book Thief",
-        "score": 4.3
-      }, function(data) {
-        alert(data);
-      });
-    title: jQuery
+  - code_block: >-
+
+      https://v6.technopedia.com/tql?q=MATCH(SOFTWARE:s) WHERE s.title CONTAINS
+      "excel" RETURN s
+
+
+      Return software that contains excel in the title
+    title: GET
     language: javascript
 right_code_blocks:
   - code_block:
