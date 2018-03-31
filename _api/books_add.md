@@ -28,10 +28,8 @@ left_code_blocks:
     title: jQuery
     language: javascript
 right_code_blocks:
-  - code_block: >-
-      https://v6.technopedia.com/tql?q=MATCH(SOFTWARE:s) WHERE s.title CONTAINS
-      "excel" RETURN s
-    title: GET
+  - code_block:
+    title:
     language: json
   - code_block: |-
       {
