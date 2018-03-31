@@ -28,6 +28,11 @@ left_code_blocks:
     title: jQuery
     language: javascript
 right_code_blocks:
+  - code_block: >-
+      https://v6.technopedia.com/tql?q=MATCH(SOFTWARE:s) WHERE s.title CONTAINS
+      "excel" RETURN s
+    title: GET
+    language: json
   - code_block: |-
       {
           "results": [
@@ -50,13 +55,6 @@ right_code_blocks:
                           "cat_sw_rel_platform_id": null,
                           "cat_sw_rel_supp_stage_id": null,
     title: Response Example
-    language: json
-  - code_block: |-
-      {
-        "error": true,
-        "message": "Invalid score"
-      }
-    title: Error
     language: json
 ---
 
