@@ -26,9 +26,6 @@ left_code_blocks:
     title: GET
     language: json
 right_code_blocks:
-  - code_block:
-    title:
-    language: json
   - code_block: |-
       {
           "results": [
@@ -50,7 +47,7 @@ right_code_blocks:
                           "cat_sw_rel_platform_discontinued_flag": false,
                           "cat_sw_rel_platform_id": null,
                           "cat_sw_rel_supp_stage_id": null,
-    title: Response Example
+    title: Sample Response
     language: json
 ---
 
