@@ -30,12 +30,26 @@ left_code_blocks:
 right_code_blocks:
   - code_block: |-
       {
-        "id": 3,
-        "title": "The Book Thief",
-        "score": 4.3,
-        "dateAdded": "5/1/2015"
-      }
-    title: Response
+          "results": [
+              {
+                  "s": {
+                      "attributes": {
+                          "approved_by": null,
+                          "avg_price": null,
+                          "cat_currency_id": null,
+                          "cat_sw_edition_desupported_flag": false,
+                          "cat_sw_edition_id": null,
+                          "cat_sw_edition_url": null,
+                          "cat_sw_major_release_id": 18143816,
+                          "cat_sw_major_version_id": 18143559,
+                          "cat_sw_pricing_id": null,
+                          "cat_sw_product_link_id": null,
+                          "cat_sw_rel_lifecycle_id": 317053450,
+                          "cat_sw_rel_platform_desupported_flag": false,
+                          "cat_sw_rel_platform_discontinued_flag": false,
+                          "cat_sw_rel_platform_id": null,
+                          "cat_sw_rel_supp_stage_id": null,
+    title: Response Example
     language: json
   - code_block: |-
       {
