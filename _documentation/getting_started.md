@@ -5,11 +5,12 @@ parameters:
   - name:
     content:
 content_markdown: >-
-  **Welcome to our API documentation.**
+  ** Welcome to our API documentation.**
 
 
   This API document is designed for those interested in developing for our
   platform. This API is still under development and is a work in progress
+![V6 Logo](\images\logo.svg)
 
 
   | Node Type | Software Category | Software Attributes | Relationships | More
