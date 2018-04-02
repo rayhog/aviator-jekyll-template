@@ -13,7 +13,8 @@ content_markdown: >-
   please contact support.
 
 
-![A Bee][/images/logo.png]
+![A Bee][/images/logo.jpg]
+![A Bee][logo.jpg]
 
   You must use this API key to authorise.
 
