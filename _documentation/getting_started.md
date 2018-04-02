@@ -10,7 +10,16 @@ content_markdown: >-
 
   This API document is designed for those interested in developing for our
   platform. This API is still under development and is a work in progress
-![V6 Logo](\images\logo.svg)
+![V6 Logo](/images/logo.svg)
+
+```javascript
+function fancyAlert(arg) {
+  if(arg) {
+    $.facebox({div:'#foo'})
+  }
+}
+```
+
 
 
   | Node Type | Software Category | Software Attributes | Relationships | More
