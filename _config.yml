@@ -19,6 +19,12 @@ collections:
   api:
     title: APIs
     position: 2
+  Software:
+    title: Software
+    position: 3
+  Hardware:
+    title: Hardware
+    position: 4
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
