@@ -31,11 +31,11 @@ collections:
   CPU:
     title: CPU GET
     position: 6
-  Software License GET:
-    title: Software License GET
+  CVE:
+    title: CVE GET
     position: 7
-  Software License:
-    title: Software License GET
+  SoftwareLicense:
+    title: SoftwareLicense GET
     position: 8
   Hardware License:
     title: Hardware License GET
