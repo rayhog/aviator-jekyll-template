@@ -14,17 +14,32 @@ timezone: Etc/UTC
 
 collections:
   documentation:
-    title: Documentation
+    title: Getting Started
     position: 1
   api:
     title: APIs
     position: 2
   Software:
-    title: Software
+    title: Software GET
     position: 3
   Hardware:
-    title: Hardware
+    title: Hardware GET
     position: 4
+  Manufacturer:
+    title: Manufacturer GET
+    position: 5
+  CPU:
+    title: CPU GET
+    position: 6
+  CPE:
+    title: CPE GET
+    position: 7
+  Software Licnese:
+    title: Sorfware Licnese GET
+    position: 8
+  Hardware Licnese:
+    title: Hardware Licnese GET
+    position: 9
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
