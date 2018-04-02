@@ -7,8 +7,9 @@ parameters:
   - name:
     content:
 content_markdown: |-
-  Returns a specific book from your collection. This is a very precise query.
+  Returns a specific book from your collection.<br> 
   ![API Image](/images/logo.jpg){:class="img-responsive"} 
+  This is a very precise query.
 left_code_blocks:
   - code_block: |-
       $.get("http://api.myapp.com/books/3", {
