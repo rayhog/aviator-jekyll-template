@@ -8,7 +8,7 @@ parameters:
     content:
 content_markdown: |-
   Returns a specific book from your collection.<br> 
-  ![API Image](/images/logo.jpg){:class="img-responsive"} 
+  ![API Image](/images/logo.jpg){:class="img-responsive"} <br>
   This is a very precise query.
 left_code_blocks:
   - code_block: |-
