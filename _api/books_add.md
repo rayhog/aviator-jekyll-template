@@ -91,6 +91,9 @@ left_code_blocks:
                       "technopedia_id": "2b0e74ee-b8c0-4a6d-a096-a892fbaed1fc"
                   }
               },
+    title: QUERY EXAMPLE AND RESPONSE
+    language: bash
+  - code_block:
     title:
     language:
 right_code_blocks:
