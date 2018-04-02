@@ -34,11 +34,11 @@ collections:
   CPE:
     title: CPE GET
     position: 7
-  Software Licnese:
-    title: Sorfware Licnese GET
+  Software License:
+    title: Software License GET
     position: 8
-  Hardware Licnese:
-    title: Hardware Licnese GET
+  Hardware License:
+    title: Hardware License GET
     position: 9
 plugins:
   - jekyll-sitemap
@@ -68,7 +68,37 @@ defaults:
     scope:
       type: "software"
     values:
-      _hide_content: true      
+      _hide_content: true
+  -
+    scope:
+      type: "hardware"
+    values:
+      _hide_content: true
+  -
+    scope:
+      type: "manufacturer"
+    values:
+      _hide_content: true
+  -
+    scope:
+      type: "CPU"
+    values:
+      _hide_content: true
+  -
+    scope:
+      type: "CVE"
+    values:
+      _hide_content: true 
+  -
+    scope:
+      type: "software license"
+    values:
+      _hide_content: true 
+  -
+    scope:
+      type: "hardware license"
+    values:
+      _hide_content: true                      
 
 
 # -----------
