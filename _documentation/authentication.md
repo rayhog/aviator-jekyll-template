@@ -13,6 +13,7 @@ content_markdown: >-
   please contact support.
 
 
+
   You must &nbsp;this API key to authorise.
 
   {: .error}
@@ -22,6 +23,9 @@ left_code_blocks:
       "https://v6.technopedia.com/<endpoint>" --data-urlencode "<query>"
     title: REQUEST EXAMPLE
     language: javascript
+
+
+
 right_code_blocks:
   - code_block: |2-
        $.get("http://api.myapp.com/books/", { "token": "YOUR_APP_KEY"}, function(data) {
@@ -32,4 +36,7 @@ right_code_blocks:
   - code_block: ' curl http://api.myapp.com/books?token=YOUR_APP_KEY'
     title: Curl
     language: bash
+
+
+    
 ---
