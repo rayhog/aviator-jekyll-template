@@ -31,8 +31,8 @@ collections:
   CPU:
     title: CPU GET
     position: 6
-  CPE:
-    title: CPE GET
+  Software License GET:
+    title: Software License GET
     position: 7
   Software License:
     title: Software License GET
