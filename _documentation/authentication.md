@@ -13,8 +13,9 @@ content_markdown: >-
   please contact support.
 
 
+![A Bee][/images/logo.png]
 
-  You must &nbsp;this API key to authorise.
+  You must use this API key to authorise.
 
   {: .error}
 left_code_blocks:
@@ -38,5 +39,5 @@ right_code_blocks:
     language: bash
 
 
-    
+
 ---
