@@ -35,9 +35,9 @@ collections:
     title: CVE GET
     position: 7
   SoftwareLicense:
-    title: SoftwareLicense GET
+    title: Software License GET
     position: 8
-  Hardware License:
+  HardwareLicense:
     title: Hardware License GET
     position: 9
 plugins:
