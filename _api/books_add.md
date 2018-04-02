@@ -73,7 +73,7 @@ right_code_blocks:
   - code_block: "NODE TYPES\r\nSOFTWARE\r\nHARDWARE\_\r\nMANUFACTURER\r\nCPU\_\r\nCVE\r\nSOFTWARE_LICENSE\r\nHARDWARE_LICENSE\_\r\n"
     title: NODE TYPES
     language:
-  - code_block: "PARAMETER\t        TYPE\tDESCRIPTION\r\ncat_sw_product_id\_\tinteger\tProduct ID\r\nalias\_\t            text\tAlias\r\ncat_sw_product_id\_\tinteger\tProduct ID\r\nalias\_\t            text\tAlias\r\ncat_sw_product_id\_\tinteger\tProduct ID\r\nalias\_\t            text\tAlias"
+  - code_block: "PARAMETER\t                TYPE\tDESCRIPTION\r\ncat_sw_product_id\_\t        integer\tProduct ID\r\nalias\_\t                    text\tAlias\r\ncat_sw_product_id\_\t        integer\tProduct ID\r\nalias\_\t                    text\tAlias\r\ncat_sw_product_id\_\t        integer\tProduct ID\r\nalias\_\t                    text\tAlias"
     title: Software Node Attribues
     language:
 ---
