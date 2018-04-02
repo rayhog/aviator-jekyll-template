@@ -19,26 +19,26 @@ collections:
   api:
     title: APIs
     position: 2
-  Software:
-    title: Software GET
+  software:
+    title: GET Software 
     position: 3
-  Hardware:
-    title: Hardware GET
+  hardware:
+    title: GET Hardware
     position: 4
-  Manufacturer:
-    title: Manufacturer GET
+  manufacturer:
+    title: GET Manufacturer
     position: 5
-  CPU:
-    title: CPU GET
+  cpu:
+    title: GET CPU 
     position: 6
-  CVE:
+  cve:
     title: CVE GET
     position: 7
-  SoftwareLicense:
-    title: Software License GET
+  softwarelicense:
+    title: GET Software License 
     position: 8
-  HardwareLicense:
-    title: Hardware License GET
+  hardwarelicense:
+    title: GET Hardware License 
     position: 9
 plugins:
   - jekyll-sitemap
