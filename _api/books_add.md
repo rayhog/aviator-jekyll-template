@@ -2,7 +2,9 @@
 title: /TQL
 position: 1.1
 type: get
-description: Create Query for example query
+description: >-
+  Create Query for example query. In this example, we will pull data from
+  Technopedia that contains 'excel'.
 parameters:
   - name: title
     content: The title for the book
@@ -33,21 +35,42 @@ right_code_blocks:
               {
                   "s": {
                       "attributes": {
-                          "approved_by": null,
-                          "avg_price": null,
-                          "cat_currency_id": null,
-                          "cat_sw_edition_desupported_flag": false,
-                          "cat_sw_edition_id": null,
-                          "cat_sw_edition_url": null,
-                          "cat_sw_major_release_id": 18143816,
-                          "cat_sw_major_version_id": 18143559,
-                          "cat_sw_pricing_id": null,
-                          "cat_sw_product_link_id": null,
-                          "cat_sw_rel_lifecycle_id": 317053450,
-                          "cat_sw_rel_platform_desupported_flag": false,
-                          "cat_sw_rel_platform_discontinued_flag": false,
-                          "cat_sw_rel_platform_id": null,
-                          "cat_sw_rel_supp_stage_id": null,
+                          "title": "Total Access 900 Series IP Business Gateway"
+                      },
+                      "created_at": "2017-11-17T13:29:54.555Z",
+                      "created_by": "00000000-0000-0000-0000-000000000000",
+                      "label": "HARDWARE",
+                      "owner": "00000000-0000-0000-0000-000000000000",
+                      "quality_grade": 3,
+                      "technopedia_id": "7f4f7044-e0de-4da9-87b1-817266df9684"
+                  }
+              },
+              {
+                  "s": {
+                      "attributes": {
+                          "title": "Total Access 900 Series IP Business Gateway"
+                      },
+                      "created_at": "2017-11-17T13:29:54.555Z",
+                      "created_by": "00000000-0000-0000-0000-000000000000",
+                      "label": "HARDWARE",
+                      "owner": "00000000-0000-0000-0000-000000000000",
+                      "quality_grade": 3,
+                      "technopedia_id": "f35c4a08-785e-4b3b-93c6-3588b298e976"
+                  }
+              },
+              {
+                  "s": {
+                      "attributes": {
+                          "title": "Total Access 900e Series IP Business Gateway"
+                      },
+                      "created_at": "2017-11-17T13:29:54.555Z",
+                      "created_by": "00000000-0000-0000-0000-000000000000",
+                      "label": "HARDWARE",
+                      "owner": "00000000-0000-0000-0000-000000000000",
+                      "quality_grade": 3,
+                      "technopedia_id": "f620a8b5-c928-4adb-8047-6ca2d1375d7a"
+                  }
+              },
     title: Sample Response
     language: json
 ---
