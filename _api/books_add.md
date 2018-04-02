@@ -13,6 +13,7 @@ parameters:
 content_markdown: >-
   The query returns software that includes 'Excel'. This is query is case
   sensitive.
+  ![API logo](/images/logo.jpg)
 
   {: .success}
 
