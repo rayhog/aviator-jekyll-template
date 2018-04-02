@@ -63,6 +63,36 @@ left_code_blocks:
               },
     title: GET
     language: json
+  - code_block: >
+      MATCH (<Node_Type>:<alias> {<attribute>: '<attribute_value>'}) RETURN
+      <alias>
+
+      MATCH (SOFTWARE:s {category: 'Web Browsers'}) RETURN s.title
+
+
+      SAMPLE RESPONSE
+
+      {
+          "version": "1.0.0",
+          "request-id": "a3505e21-8d91-40ff-b587-3f6731a1086b",
+          "results": [
+              {
+                  "s": {
+                      "attributes": {
+                          "end_of_life_str": "1/9/2007",
+                          "title": "Excel for Mac",
+                          "version": "10.0"
+                      },
+                      "created_at": "2017-11-17T12:15:47.158Z",
+                      "created_by": "00000000-0000-0000-0000-000000000000",
+                      "label": "SOFTWARE",
+                      "owner": "00000000-0000-0000-0000-000000000000",
+                      "quality_grade": 3,
+                      "technopedia_id": "2b0e74ee-b8c0-4a6d-a096-a892fbaed1fc"
+                  }
+              },
+    title:
+    language:
 right_code_blocks:
   - code_block: |
       SOFTWARE CATEGORIES
