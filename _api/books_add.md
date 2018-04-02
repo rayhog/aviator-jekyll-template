@@ -64,16 +64,151 @@ left_code_blocks:
     title: GET
     language: json
 right_code_blocks:
-  - code_block: "SOFTWARE CATEGORIES\r\nAccounting\r\nAlerts and Monitoring Tools\r\nAnalytics\r\nAnti Virus and Malware\r\nApplication Architecture and Design\r\nApplication Servers\r\nApplication Testing and QA\r\nArchiving and Content Storage\r\nBackup and Recovery\r\nBanking\r\nBlogs & Wikis\r\nBusiness Intelligence (BI) Suites\r\nBusiness Metrics and Reporting Tools\r\nBusiness Performance Management\r\nCapacity Planning\r\nCartography/Mapping\r\nCD & DVD Recording\r\nCollaboration Platforms\r\nCompiler and Decompiler\r\nComputer Hardware Configuration Management\r\nComputer-Based Training\r\nConferencing\r\nConfiguration Management Database (CMDB)\r\nConnectivity Tools\r\nContent Delivery and Distribution\r\nCross-Industry ERP Suites\r\nCustomer Relationship Management (CRM) Suites\r\nCustomer Service & Support\r\nData Mining and Warehousing\r\nData Security and Encryption\r\nDemand Management\r\nDesktop Enhancements\r\nDesktop Publishing (DTP)\r\nDevelopment Environment\r\nDictionary and Encyclopedia\r\nDistribution and Transportation Management\r\nDocument and Records Management\r\nDocument Capturing and Imaging\r\nDrivers\r\nElectronic Design Automation\r\nEnterprise\r\nEnterprise Integration\r\nFault Management\r\nFile Managers\r\nFinancial Management\r\nFinancial Management Suites\r\nFirewall and Intrusion Prevention\r\nGames\r\nGraphics and Image Editing\r\nHardware Virtualization\r\nHelp and Service Desk\r\nHospital Management\r\nHypervisor\r\nIBM i\r\nIdentity and Access Management\r\nIndustry-Specific ERP Suites\r\nInstant Messaging\r\nInsurance\r\nInventory Management\r\nInvestment\r\nIT Asset Maintenance & Support\r\nIT Asset Management\r\nLicense Management\r\nLife Sciences\r\nLifestyle and Personal Improvement\r\nLocation-Aware Services\r\nMac OS\r\nMail Servers\r\nMainframe\r\nManufacturing Process Management\r\nMarketing Management\r\nMathematics and Physics\r\nMechanical CAD, CAM, and CAE Software\r\nMedical software\r\nMerchandising\r\nMultimedia Players\r\nNavigation Tools\r\nNetwork Performance Management\r\nOther Educational Software\r\nOther Engineering & Scientific Software\r\nOther Entertainment Software\r\nOther Hobbies Software\r\nOther Multimedia and Graphics Tools\r\nOther Operating Systems\r\nOther References Software\r\nOther Utilities\r\nPayment Systems\r\nPayroll & Time Accounting\r\nPeer-to-peer (P2P) Networking\r\nPersonal\r\nPIM & Contact Managers\r\nPlant/Shop Control\r\nPoint of Sale\r\nPresence\r\nPresentation\r\nProcurement and Sourcing\r\nProduct and Portfolio Management\r\nProduct Data Management\r\nProduct Design\r\nProductivity Suites\r\nRecruitment & Training\r\nRegulatory and Compliance Management\r\nReligious Software\r\nSales and Operations Planning\r\nSales Management\r\nSecurity Suites\r\nSocial Networking\r\nSoftware Configuration Management\r\nSoftware Virtualization\r\nSpatial Analysis\r\nSports Software\r\nSpreadsheets\r\nStorage Resource Management\r\nStorage Virtualization\r\nStore Operations\r\nSupplier Relationship Management\r\nSupply Chain Management (SCM) Suites\r\nSynchronization Tools\r\nTaxation\r\nUnclassified Middleware\r\nUnclassified Software\r\nUNIX\r\nVideo and Audio Editing\r\nVirtualization Management Software\r\nVulnerability Management\r\nWarehouse Management System\r\nWeb Browsers\r\nWeb Content Management\r\nWeb Design\r\nWeb Servers\r\nWindows\r\nWord Processors\r\nWorkflow and Business Process Management\r\nWorkforce Management\r\n"
+  - code_block: |
+      SOFTWARE CATEGORIES
+      Accounting
+      Alerts and Monitoring Tools
+      Analytics
+      Anti Virus and Malware
+      Application Architecture and Design
+      Application Servers
+      Application Testing and QA
+      Archiving and Content Storage
+      Backup and Recovery
+      Banking
+      Blogs & Wikis
+      Business Intelligence (BI) Suites
+      Business Metrics and Reporting Tools
+      Business Performance Management
+      Capacity Planning
+      Cartography/Mapping
+      CD & DVD Recording
+      Collaboration Platforms
+      Compiler and Decompiler
+      Computer Hardware Configuration Management
+      Computer-Based Training
+      Conferencing
+      Configuration Management Database (CMDB)
+      Connectivity Tools
+      Content Delivery and Distribution
+      Cross-Industry ERP Suites
+      Customer Relationship Management (CRM) Suites
+      Customer Service & Support
+      Data Mining and Warehousing
+      Data Security and Encryption
+      Demand Management
+      Desktop Enhancements
+      Desktop Publishing (DTP)
+      Development Environment
+      Dictionary and Encyclopedia
+      Distribution and Transportation Management
+      Document and Records Management
+      Document Capturing and Imaging
+      Drivers
+      Electronic Design Automation
+      Enterprise
+      Enterprise Integration
+      Fault Management
+      File Managers
+      Financial Management
+      Financial Management Suites
+      Firewall and Intrusion Prevention
+      Games
+      Graphics and Image Editing
+      Hardware Virtualization
+      Help and Service Desk
+      Hospital Management
+      Hypervisor
+      IBM i
+      Identity and Access Management
+      Industry-Specific ERP Suites
+      Instant Messaging
+      Insurance
+      Inventory Management
+      Investment
+      IT Asset Maintenance & Support
+      IT Asset Management
+      License Management
+      Life Sciences
+      Lifestyle and Personal Improvement
+      Location-Aware Services
+      Mac OS
+      Mail Servers
+      Mainframe
+      Manufacturing Process Management
+      Marketing Management
+      Mathematics and Physics
+      Mechanical CAD, CAM, and CAE Software
+      Medical software
+      Merchandising
+      Multimedia Players
+      Navigation Tools
+      Network Performance Management
+      Other Educational Software
+      Other Engineering & Scientific Software
+      Other Entertainment Software
+      Other Hobbies Software
+      Other Multimedia and Graphics Tools
+      Other Operating Systems
+      Other References Software
+      Other Utilities
+      Payment Systems
+      Payroll & Time Accounting
+      Peer-to-peer (P2P) Networking
+      Personal
+      PIM & Contact Managers
+      Plant/Shop Control
+      Point of Sale
+      Presence
+      Presentation
+      Procurement and Sourcing
+      Product and Portfolio Management
+      Product Data Management
+      Product Design
+      Productivity Suites
+      Recruitment & Training
+      Regulatory and Compliance Management
+      Religious Software
+      Sales and Operations Planning
+      Sales Management
+      Security Suites
+      Social Networking
+      Software Configuration Management
+      Software Virtualization
+      Spatial Analysis
+      Sports Software
+      Spreadsheets
+      Storage Resource Management
+      Storage Virtualization
+      Store Operations
+      Supplier Relationship Management
+      Supply Chain Management (SCM) Suites
+      Synchronization Tools
+      Taxation
+      Unclassified Middleware
+      Unclassified Software
+      UNIX
+      Video and Audio Editing
+      Virtualization Management Software
+      Vulnerability Management
+      Warehouse Management System
+      Web Browsers
+      Web Content Management
+      Web Design
+      Web Servers
+      Windows
+      Word Processors
+      Workflow and Business Process Management
+      Workforce Management
     title: SOFTWARE CATEGORIES
-    language: html
-  - code_block: "SOFTWARE NODE TYPE ATTRIBUTES\r\ncat_sw_product_id\_| int\r\nalias\_| text\r\ncomponent\_| text\r\ncat_sw_product_desupported_flag\_| text\r\ncat_sw_product_discontinued_flag\_| text\r\nfamily\_| text\r\nis_suite\_| bool\r\nnfamily\_| bool\r\nplicsable\_| bool\r\ntitle\_| text\r\ncat_sw_product_url\_| text\r\nvendor_category\_| text\r\ncat_sw_product_id\_| int\r\ncat_sw_edition_desupported_flag\_| boolean\r\nedition\_| text\r\nedition_order\_| int\r\ncat_sw_edition_url\_| text\r\ncat_sw_product_id\_| int\r\ncloud\_| text\r\ncat_sw_release_id\_| int\r\ncat_sw_major_release_id\_| int\r\ncat_sw_release_desupported_flag\_| boolean\r\ncat_sw_release_discontinued_flag\_| boolean\r\nga_date| text\r\nis_major\_| text\r\nlicensable\_| boolean\r\ncat_sw_release_patchlevel\_| text\r\nrelease\_| boolean\r\nunverified_version\_| boolean\r\ncat_sw_release_url\_| text\r\ncat_sw_version_id\_| int\r\ncat_sw_major_version_id\_| int\r\ncat_sw_version_desupported_flag\_| boolean\r\nis_major_version\_| boolean\r\ncat_sw_version_patchlevel\_| text\r\nsubversion\_| text\r\nversion\_| text\r\nversion_order\_| int\r\ncat_sw_version_group_id\_| int\r\nversion_group\_| text\r\ncat_sw_suite_id\_| int\r\ncat_sw_suite_desupported_flag\_| boolean\r\nsuite\_| text\r\ncat_sw_pricing_id\_| int\r\navg_price\_| float\r\nmax_price\_| float\r\nmin_price\_| float\r\ncat_currency_id\_| int\r\ncurrency_code\_| text\r\ncat_sw_rel_lifecycle_id\_| int\r\nend_of_life\_| timestamp\r\nend_of_life_exception\_| text\r\nend_of_life_range_end\_| timestamp\r\nend_of_life_range_start\_| timestamp\r\nend_of_life_str\_| text\r\nend_of_life_support_level\_| text\r\nga_exception\_| text\r\nga_range_end\_| timestamp\r\nga_range_start\_| timestamp\r\ngeneral_availability\_| timestamp\r\ngeneral_availability_str\_| text\r\nobsolete\_| timestamp\r\nobsolete_exception\_| text\r\nobsolete_range_end\_| timestamp\r\nobsolete_range_start\_| timestamp\r\nobsolete_str\_| text\r\nobsolete_support_level\_| text\r\ncat_sw_rel_platform_id\_| int\r\ncat_sw_rel_platform_desupported_flag\_| boolean\r\ncat_sw_rel_platform_discontinued_flag\_| boolean\r\nhas_fingerprint\_| boolean\r\nplatform_label\_| text\r\nplatform_type\_| text\r\nrelease_platform\_| text\r\ncat_sw_rel_supp_stage_id\_| int\r\ndate_end_date\_| timestamp\r\nrelease_support_stage\_| text\r\nstage_order\_| int\r\ncat_windows10_compatibility_id\_| int\r\nwin10_32bit_compat_status\_| int\r\nwin10_32bit_compat_status_desc\_| text\r\nwin10_32bit_compat_upg_path\_| text\r\nwin10_32bit_compat_date\_| timestamp\r\nwin10_32bit_readiness\_| text\r\nwin10_64bit_compat_status\_| int\r\nwin10_64bit_compat_status_desc\_| text\r\nwin10_64bit_compat_upg_path\_| text\r\nwin10_64bit_compat_date\_| timestamp\r\nwin10_64bit_readiness\_| text\r\ncat_windows8_compatibility_id\_| int\r\nwin8_32bit_compat_status\_| int\r\nwin8_32bit_compat_status_desc\_| text\r\nwin8_32bit_compat_upgrade_path\_| text\r\nwin8_32bit_compat_date\_| timestamp\r\nwin8_32bit_readiness\_| text\r\nwin8_64bit_compat_status\_| int\r\nwin8_64bit_compat_status_desc\_| text\r\nwin8_64bit_compat_upgrade_path\_| text\r\nwin8_64bit_compat_date\_| timestamp\r\nwin8_64bit_readiness\_| text\r\ncat_windows7_compatibility_id\_| int\r\nwin7_32bit_compat_status\_| int\r\nwin7_32bit_compat_status_desc\_| text\r\nwin7_32bit_compat_upgrade_path\_| text\r\nwin7_32bit_compat_date\_| timestamp\r\nwin7_32bit_readiness\_| text\r\nwin7_64bit_compat_status\_| int\r\nwin7_64bit_compat_status_desc\_| text\r\nwin7_64bit_compat_upgrade_path\_| text\r\nwin7_64bit_compat_date\_| timestamp\r\nwin7_64bit_readiness\_| text\r\n"
+    language: bash
+  - code_block: "SOFTWARE NODE TYPE ATTRIBUTES\ncat_sw_product_id\_| int\nalias\_| text\ncomponent\_| text\ncat_sw_product_desupported_flag\_| text\ncat_sw_product_discontinued_flag\_| text\nfamily\_| text\nis_suite\_| bool\nnfamily\_| bool\nplicsable\_| bool\ntitle\_| text\ncat_sw_product_url\_| text\nvendor_category\_| text\ncat_sw_product_id\_| int\ncat_sw_edition_desupported_flag\_| boolean\nedition\_| text\nedition_order\_| int\ncat_sw_edition_url\_| text\ncat_sw_product_id\_| int\ncloud\_| text\ncat_sw_release_id\_| int\ncat_sw_major_release_id\_| int\ncat_sw_release_desupported_flag\_| boolean\ncat_sw_release_discontinued_flag\_| boolean\nga_date| text\nis_major\_| text\nlicensable\_| boolean\ncat_sw_release_patchlevel\_| text\nrelease\_| boolean\nunverified_version\_| boolean\ncat_sw_release_url\_| text\ncat_sw_version_id\_| int\ncat_sw_major_version_id\_| int\ncat_sw_version_desupported_flag\_| boolean\nis_major_version\_| boolean\ncat_sw_version_patchlevel\_| text\nsubversion\_| text\nversion\_| text\nversion_order\_| int\ncat_sw_version_group_id\_| int\nversion_group\_| text\ncat_sw_suite_id\_| int\ncat_sw_suite_desupported_flag\_| boolean\nsuite\_| text\ncat_sw_pricing_id\_| int\navg_price\_| float\nmax_price\_| float\nmin_price\_| float\ncat_currency_id\_| int\ncurrency_code\_| text\ncat_sw_rel_lifecycle_id\_| int\nend_of_life\_| timestamp\nend_of_life_exception\_| text\nend_of_life_range_end\_| timestamp\nend_of_life_range_start\_| timestamp\nend_of_life_str\_| text\nend_of_life_support_level\_| text\nga_exception\_| text\nga_range_end\_| timestamp\nga_range_start\_| timestamp\ngeneral_availability\_| timestamp\ngeneral_availability_str\_| text\nobsolete\_| timestamp\nobsolete_exception\_| text\nobsolete_range_end\_| timestamp\nobsolete_range_start\_| timestamp\nobsolete_str\_| text\nobsolete_support_level\_| text\ncat_sw_rel_platform_id\_| int\ncat_sw_rel_platform_desupported_flag\_| boolean\ncat_sw_rel_platform_discontinued_flag\_| boolean\nhas_fingerprint\_| boolean\nplatform_label\_| text\nplatform_type\_| text\nrelease_platform\_| text\ncat_sw_rel_supp_stage_id\_| int\ndate_end_date\_| timestamp\nrelease_support_stage\_| text\nstage_order\_| int\ncat_windows10_compatibility_id\_| int\nwin10_32bit_compat_status\_| int\nwin10_32bit_compat_status_desc\_| text\nwin10_32bit_compat_upg_path\_| text\nwin10_32bit_compat_date\_| timestamp\nwin10_32bit_readiness\_| text\nwin10_64bit_compat_status\_| int\nwin10_64bit_compat_status_desc\_| text\nwin10_64bit_compat_upg_path\_| text\nwin10_64bit_compat_date\_| timestamp\nwin10_64bit_readiness\_| text\ncat_windows8_compatibility_id\_| int\nwin8_32bit_compat_status\_| int\nwin8_32bit_compat_status_desc\_| text\nwin8_32bit_compat_upgrade_path\_| text\nwin8_32bit_compat_date\_| timestamp\nwin8_32bit_readiness\_| text\nwin8_64bit_compat_status\_| int\nwin8_64bit_compat_status_desc\_| text\nwin8_64bit_compat_upgrade_path\_| text\nwin8_64bit_compat_date\_| timestamp\nwin8_64bit_readiness\_| text\ncat_windows7_compatibility_id\_| int\nwin7_32bit_compat_status\_| int\nwin7_32bit_compat_status_desc\_| text\nwin7_32bit_compat_upgrade_path\_| text\nwin7_32bit_compat_date\_| timestamp\nwin7_32bit_readiness\_| text\nwin7_64bit_compat_status\_| int\nwin7_64bit_compat_status_desc\_| text\nwin7_64bit_compat_upgrade_path\_| text\nwin7_64bit_compat_date\_| timestamp\nwin7_64bit_readiness\_| text\n"
     title: SOFTWARE NODE ATTRIBUTES
-    language: html
-  - code_block: "NODE TYPES\r\nSOFTWARE\r\nHARDWARE\_\r\nMANUFACTURER\r\nCPU\_\r\nCVE\r\nSOFTWARE_LICENSE\r\nHARDWARE_LICENSE\_\r\n"
+    language: bash
+  - code_block: "NODE TYPES\nSOFTWARE\nHARDWARE\_\nMANUFACTURER\nCPU\_\nCVE\nSOFTWARE_LICENSE\nHARDWARE_LICENSE\_\n"
     title: NODE TYPES
-    language:
-  - code_block: "PARAMETER\t                TYPE\tDESCRIPTION\r\ncat_sw_product_id\_\t        integer\tProduct ID\r\nalias\_\t                    text\tAlias\r\ncat_sw_product_id\_\t        integer\tProduct ID\r\nalias\_\t                    text\tAlias\r\ncat_sw_product_id\_\t        integer\tProduct ID\r\nalias\_\t                    text\tAlias"
+    language: bash
+  - code_block: "PARAMETER\t                TYPE\tDESCRIPTION\ncat_sw_product_id\_\t        integer\tProduct ID\nalias\_\t                    text\tAlias\ncat_sw_product_id\_\t        integer\tProduct ID\nalias\_\t                    text\tAlias\ncat_sw_product_id\_\t        integer\tProduct ID\nalias\_\t                    text\tAlias"
     title: Software Node Attribues
     language:
 ---
