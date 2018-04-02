@@ -11,9 +11,10 @@ parameters:
   - name: score
     content: The book's score between 0 and 5
 content_markdown: >-
-  The query returns software that includes 'Excel'. This is query is case
-  sensitive.
-  ![API logo](/images/logo.jpg)
+  The query returns software that includes 'Excel'. 
+  ![API Image](/images/logo.jpg){:class="img-responsive"} 
+  This is query is case sensitive.
+
 
   {: .success}
 
