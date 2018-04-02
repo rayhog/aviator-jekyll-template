@@ -130,6 +130,6 @@ _options:
     link: true
     bulletedlist: true
     numberedlist: true
-    image: true
+    images: /images/
     table: true
     styles: /css/editor.css

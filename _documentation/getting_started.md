@@ -12,6 +12,9 @@ content_markdown: >-
 ## platform. This API is still under development and is a work in progress
 
 ![My logo](/images/logo.svg "my image")
+![My logo](/images/logo.jpg "my image")
+![My logo](/images/logo.png "my image")
+
 
 
 ```javascript

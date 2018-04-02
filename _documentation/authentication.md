@@ -12,9 +12,6 @@ content_markdown: >-
   should have been provided to you by Flexera support. If you do not have a key
   please contact support.
 
-
-
-
   You must use this API key to authorise.
 
   {: .error}
