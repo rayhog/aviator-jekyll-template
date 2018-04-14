@@ -99,7 +99,7 @@ left_code_blocks:
 right_code_blocks:
   - code_block: |
       SOFTWARE CATEGORIES
-      ===================
+      _____________________________________
       Accounting
       Alerts and Monitoring Tools
       Analytics

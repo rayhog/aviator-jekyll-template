@@ -14,9 +14,7 @@ content_markdown: >-
   should have been provided to you by Flexera support. If you do not have a key
   please contact support.
 
-Returns a specific book from your collection.<br> 
-  ![API Image](/images/node_table.png){:class="img-responsive"} <br>
-  This is a very precise query.
+
   You must &nbsp;this API key to authorise.
 
   {: .error}
