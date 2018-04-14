@@ -6,6 +6,7 @@ parameters:
     content:
 content_markdown: >-
   ** Welcome to our API documentation.**
+  ![API Image](/images/node_table.png){:class="img-responsive"} <br>
 
 
 ## This API document is designed for those interested in developing for our
