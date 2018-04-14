@@ -14,7 +14,7 @@ content_markdown: >-
   The query returns software that includes 'Excel'. This is query is case
   sensitive.
    Returns a specific book from your collection.<br> 
-  ![API Image](/images/node_table.png){:class="img-responsive"} <br>
+  ![API Image](/images/node_table2.png){:class="img-responsive"} <br>
   This is a very precise query.
 
   {: .success}

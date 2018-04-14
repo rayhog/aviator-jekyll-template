@@ -15,7 +15,7 @@ content_markdown: >-
   please contact support.
 
 Returns a specific book from your collection.<br> 
-  ![API Image](/images/node_table.png){:class="img-responsive"} <br>
+  ![API Image](/images/node_table2.png){:class="img-responsive"} <br>
   This is a very precise query.
   You must &nbsp;this API key to authorise.
 
