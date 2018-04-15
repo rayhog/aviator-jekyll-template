@@ -1,11 +1,11 @@
 ---
-title: /books/:id
+title: CVE 
 position: 1.5
-type: delete
-description: Deletes a book
+type: MATCH
+description: Matches a CVE from Technopeida
 parameters:
-  - name:
-    content:
+  - Category:
+    Attribute:
 content_markdown: |-
   Deletes a book in your collection.
 left_code_blocks:
