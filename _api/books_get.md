@@ -7,7 +7,7 @@ parameters:
   - name:
     content:
 content_markdown: |-
-  Returns a specific book from your collection.<br> 
+  ### Returns a specific book from your collection.<br> 
   ![API Image](/images/logo.jpg){:class="img-responsive"} <br>
   This is a very precise query.
 left_code_blocks:

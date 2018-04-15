@@ -9,10 +9,10 @@ parameters:
   - name: limit
     content: Limit the number of books returned
 content_markdown: |-
-  This call will return a maximum of 100 books
+  ### This call will return a maximum of 100 books
   {: .info }
 
-  Lists all the photos you have access to. You can paginate by using the parameters listed above.
+  ## Lists all the photos you have access to. You can paginate by using the parameters listed above.
 left_code_blocks:
   - code_block: |-
       $.get("http://api.myapp.com/books/", { "token": "YOUR_APP_KEY"}, function(data) {
