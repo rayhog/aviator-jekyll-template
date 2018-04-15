@@ -4,10 +4,11 @@ position: 1.5
 type: MATCH
 description: Matches a CVE from Technopeida
 parameters:
-  - Category:
-    Attribute:
+  - Category: Any category for the Software Category list
+    Attribute: Any attribute from the Software Attributes list
+    Requirement: The category is optional
 content_markdown: |-
-  Deletes a book in your collection.
+  ### This API deletes a book in your collection.
 left_code_blocks:
   - code_block: |-
       $.ajax({
