@@ -1,5 +1,5 @@
 ---
-title: /books/:id
+title: Software
 position: 1.3
 type: get
 description: Get Book
@@ -8,6 +8,7 @@ parameters:
     content:
 content_markdown: |-
   # Returns a specific book from your collection.<br>
+  * Returns a specific book from your collection.<br>
   ## Returns a specific book from your collection.<br>
   #### Returns a specific book from your collection.<br>
   ##### Returns a specific book from your collection.<br>
