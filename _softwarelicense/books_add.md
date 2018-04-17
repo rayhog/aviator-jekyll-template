@@ -1,5 +1,5 @@
 ---
-title: '/TQL [software]'
+title: HARDWARE 
 position: 1.1
 type: get
 description: >-
@@ -11,7 +11,7 @@ parameters:
   - name: score
     content: The book's score between 0 and 5
 content_markdown: >-
-  The query returns software that includes 'Excel'. This is query is case
+  ## The query returns software that includes 'Excel'. This is query is case
   sensitive.
 
   {: .success}
