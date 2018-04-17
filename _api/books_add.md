@@ -1,5 +1,5 @@
 ---
-title: '/TQL [software]'
+title: '/TQL MATCH [software]'
 position: 1.1
 type: get
 description: >-

@@ -5,7 +5,7 @@ parameters:
   - name:
     content:
 content_markdown: >-
-  You need to be authenticated for all API requests. You can generate an API key
+  ## You need to be authenticated for all API requests. You can generate an API key
   in your developer dashboard. 
   Add the API key to all requests as a GET parameter.<br>
   ![API Image](/images/logo.jpg){:class="img-responsive"} <br>
@@ -14,7 +14,7 @@ content_markdown: >-
   should have been provided to you by Flexera support. If you do not have a key
   please contact support.
 
-Returns a specific book from your collection.<br> 
+# Returns a specific book from your collection.<br> 
   ![API Image](/images/node_table2.png){:class="img-responsive"} <br>
   This is a very precise query.
   You must &nbsp;this API key to authorise.
