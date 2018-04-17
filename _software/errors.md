@@ -1,5 +1,5 @@
 ---
-title: Errors
+title: ERRORS
 position: 3
 parameters:
   - name:
@@ -9,8 +9,11 @@ content_markdown: |-
   | --- | --- | --- |
   | 200 | OK | Success |
   | 201 | Created | Creation Successful |
-  | 400 | Bad Request | We could not process that action |
-  | 403 | Forbidden | We couldn't authenticate you |
+  | 400 | Bad Request | Unable to process the request |
+  | 403 | Forbidden | You're not authorized |
+### Temp Image
+ Returns a specific book from your collection.<br> 
+  ![API Image](/images/apeEcon.png){:class="img-responsive"} <br>
 
   All errors will return JSON in the following format:
 left_code_blocks:
