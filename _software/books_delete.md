@@ -1,5 +1,5 @@
 ---
-title: /books/:id
+title: SOFTWARE
 position: 1.5
 type: delete
 description: Deletes a book
@@ -8,6 +8,9 @@ parameters:
     content:
 content_markdown: |-
   Deletes a book in your collection.
+
+   Returns a specific book from your collection.<br> 
+  ![API Image](/images/node_table.png){:class="img-responsive"} <br>
 left_code_blocks:
   - code_block: |-
       $.ajax({

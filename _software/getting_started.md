@@ -1,14 +1,14 @@
 ---
-title: Getting Started with version 6 API
+title: Getting Started with API V6
 position: 1
 parameters:
   - name:
     content:
 content_markdown: >-
-  **Welcome to our API documentation.**
+  # Welcome to our API documentation.
 
 
-  This API document is designed for those interested in developing for our
+ ### This API document is designed for those interested in developing for our
   platform. This API is still under development and is a work in progress
 
 
