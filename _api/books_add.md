@@ -1,6 +1,6 @@
 ---
-title: '/TQL MATCH [software]'
-position: 1.1
+title: 'MATCH [Software]'
+position: 1.2
 type: get
 description: >-
   Create Query for example query. In this example, we will pull data from

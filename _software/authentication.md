@@ -8,7 +8,7 @@ content_markdown: >-
   ## You need to be authenticated for all API requests. You can generate an API key
   in your developer dashboard. 
   Add the API key to all requests as a GET parameter.<br>
-  ![API Image](/images/logo.jpg){:class="img-responsive"} <br>
+  ![API Image](/images/logo.png){:class="img-responsive"} <br>
   The Technopedia Version 6.0 API uses OAuth for authentication. To
   authenticate a session, pass your key in the request header. Your API key
   should have been provided to you by Flexera support. If you do not have a key
