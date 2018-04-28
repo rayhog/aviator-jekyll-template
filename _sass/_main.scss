@@ -189,7 +189,7 @@ dl dd:after {
 	a {
 		color: #240202;
 		text-decoration: none;
-		font-size: .90em;
+		font-size: 1.2em;
 		display: block;
 		width: 100%;
 		text-overflow: ellipsis;
@@ -303,10 +303,10 @@ hr {
 	background: #ffffff; /* Old browsers */
 	background: -moz-linear-gradient(left,	#ffffff 0%, #ffffff 60%, #c9b8b8 60%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffffff), color-stop(60%,#ffffff), color-stop(60%,#232323)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(left,	#ffffff 0%,#ffffff 60%,#c9b8b8 60%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(left,	#ffffff 0%,#ffffff 60%,#c9b8b8 60%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(left,	#ffffff 0%,#ffffff 60%,#c9b8b8 60%); /* IE10+ */
-	background: linear-gradient(to right,	#ffffff 0%,#ffffff 60%,#c9b8b8 60%); /* W3C */
+	background: -webkit-linear-gradient(left,	#ffffff 0%,#ffffff 60%,#E1E1E1 60%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,	#ffffff 0%,#ffffff 60%,#e1e1e1 60%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,	#ffffff 0%,#ffffff 60%,#e1e1e1 60%); /* IE10+ */
+	background: linear-gradient(to right,	#ffffff 0%,#ffffff 60%,#e1e1e1 60%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#232323',GradientType=1 ); /* IE6-9 */
 }
 
