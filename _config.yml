@@ -25,15 +25,12 @@ collections:
   hardware:
     title: Hardware
     position: 4
-  manufacturer:
-    title: Manufacturer
-    position: 5
-  cpu:
+   cpu:
     title: CPU 
-    position: 6
+    position: 5
   cve:
     title: CVE 
-    position: 7
+    position: 6
   softwarelicense:
     title: Software License 
     position: 8
