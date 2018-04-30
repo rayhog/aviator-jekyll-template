@@ -1,5 +1,5 @@
 ---
-title: /books/:id
+title: MATCH HARDWARE
 position: 1.4
 type: put
 description: Update Book
@@ -10,7 +10,7 @@ parameters:
     content: The book's score between 0 and 5
 content_markdown: |-
   Returns a specific book from your collection.<br> 
-  ![API Image](/images/gears.png){:class="img-responsive"} <br>
+  ![API Image](/images/apiEcon.png){:class="img-responsive"} <br>
   This is a very precise query.
   
   Update an existing book in your collection.

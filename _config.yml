@@ -25,7 +25,7 @@ collections:
   hardware:
     title: Hardware
     position: 4
-   cpu:
+  cpu:
     title: CPU 
     position: 5
   cve:
