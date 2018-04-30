@@ -61,6 +61,34 @@ defaults:
       type: "api"
     values:
       _hide_content: true
+       -
+    scope:
+      type: "software"
+    values:
+      _hide_content: true
+  -
+    scope:
+      type: "hardware"
+    values:
+      _hide_content: true
+      scope:
+      type: "cpu"
+    values:
+      _hide_content: true
+  -
+    scope:
+      type: "cve"
+    values:
+      _hide_content: true
+      scope:
+      type: "softwarelicense"
+    values:
+      _hide_content: true
+  -
+    scope:
+      type: "hardwarelicense"
+    values:
+      _hide_content: true
 
 # -----------
 # CloudCannon
