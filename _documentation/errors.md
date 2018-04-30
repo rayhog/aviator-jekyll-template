@@ -26,5 +26,3 @@ left_code_blocks:
     title: Error Examples
     language: json
 ---
-
-* ##### The following t![](/uploads/gears.PNG)able shows the error codes:
