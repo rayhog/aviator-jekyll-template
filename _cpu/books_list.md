@@ -1,6 +1,6 @@
 ---
 title: NODES
-position: 1.15
+position: 1.1
 type: get
 description: List all books
 parameters:
