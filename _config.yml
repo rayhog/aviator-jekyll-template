@@ -33,10 +33,10 @@ collections:
     position: 6
   softwarelicense:
     title: Software License 
-    position: 8
+    position: 7
   hardwarelicense:
     title: Hardware License 
-    position: 9
+    position: 8
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
