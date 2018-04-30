@@ -1,6 +1,6 @@
 ---
 title: ERRORS
-position: 3
+position: 1.3
 parameters:
   - name:
     content:
@@ -9,7 +9,7 @@ content_markdown: |-
   | --- | --- | --- |
   | 200 | OK | Success |
   | 201 | Created | Creation Successful |
-  | 400 | Bad Request | Unable to process the request Test |
+  | 400 | Bad Request | Unable to process the request Test2 |
   | 403 | Forbidden | You're not authorized |
 ### Temp Image
  Returns a specific book from your collection.<br> 

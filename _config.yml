@@ -14,7 +14,7 @@ timezone: Etc/UTC
 
 collections:
   documentation:
-    title: Documentation
+    title: Overview 
     position: 1
   api:
     title: APIs

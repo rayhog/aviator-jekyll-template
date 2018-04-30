@@ -1,20 +1,18 @@
 ---
-title: Getting Started with version 6 API
+title: Get Started
 position: 1.1
 parameters:
   - name:
     content:
 content_markdown: >-
-  ** Welcome to our API documentation.**
+  ## Welcome to our API documentation
   ![API Image](/images/node_table.png){:class="img-responsive"} <br>
 
 
-## This API document is designed for those interested in developing for our
-## platform. This API is still under development and is a work in progress
+### This API document is designed for those interested in developing for our
+### platform. This API is still under development and is a work in progress
 
 ![My logo](logo.png "my image")
-
-
 
 ```javascript
 function fancyAlert(arg) {
@@ -23,7 +21,6 @@ function fancyAlert(arg) {
   }
 }
 ```
-
 
 
   | Node Type | Software Category | Software Attributes | Relationships | More

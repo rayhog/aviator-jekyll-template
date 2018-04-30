@@ -1,6 +1,6 @@
 ---
 title: Authentication
-position: 1.3
+position: 1.1
 parameters:
   - name:
     content:
