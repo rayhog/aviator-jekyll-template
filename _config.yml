@@ -14,31 +14,31 @@ timezone: Etc/UTC
 
 collections:
   documentation:
-    title: Getting Started
+    title: Get Started
     position: 1
   api:
     title: APIs
     position: 2
   software:
-    title: GET Software 
+    title: Software
     position: 3
   hardware:
-    title: GET Hardware
+    title: Hardware
     position: 4
   manufacturer:
-    title: GET Manufacturer
+    title: Manufacturer
     position: 5
   cpu:
-    title: GET CPU 
+    title: CPU 
     position: 6
   cve:
-    title: GET CVE 
+    title: CVE 
     position: 7
   softwarelicense:
-    title: GET Software License 
+    title: Software License 
     position: 8
   hardwarelicense:
-    title: GET Hardware License 
+    title: Hardware License 
     position: 9
 plugins:
   - jekyll-sitemap

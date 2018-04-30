@@ -117,8 +117,8 @@ left_code_blocks:
         -H "Authorization: meowmeowmeow"
     title:
     language:
-right_code_blocks:
+<!right_code_blocks:
   - code_block:
     title:
-    language:
+    language:-->
 ---
