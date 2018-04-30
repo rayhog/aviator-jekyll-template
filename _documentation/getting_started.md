@@ -11,7 +11,6 @@ content_markdown: >-
 
 ## This API document is designed for those interested in developing for our
 ## platform. This API is still under development and is a work in progress
-![My logo](logo.jpg "my image")
 <br>
 ![My logo](logo.png "my image")
 
