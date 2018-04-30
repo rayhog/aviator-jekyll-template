@@ -1,6 +1,6 @@
 ---
 title: Getting Started with version 6 API
-position: 1
+position: 1.1
 parameters:
   - name:
     content:
