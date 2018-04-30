@@ -1,7 +1,7 @@
 # ----
 # Site
 
-title: Flexible
+title: FLEXY
 description: Jekyll template for API documentation.
 url: https://example.com
 google_analytics_key:
@@ -19,24 +19,6 @@ collections:
   api:
     title: APIs
     position: 2
-  software:
-    title: Software
-    position: 3
-  hardware:
-    title: Hardware
-    position: 4
-   cpu:
-    title: CPU 
-    position: 5
-  cve:
-    title: CVE 
-    position: 6
-  softwarelicense:
-    title: Software License 
-    position: 8
-  hardwarelicense:
-    title: Hardware License 
-    position: 9
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
@@ -60,7 +42,7 @@ defaults:
     scope:
       type: "api"
     values:
-      _hide_content: true                 
+      _hide_content: true
 
 # -----------
 # CloudCannon
@@ -85,12 +67,12 @@ languages:
 
 _options:
   content_markdown:
-    format: p h1 h2 h3 h4 h5 h6
+    format: p h4 h5 h6
     bold: true
     italic: true
     link: true
     bulletedlist: true
     numberedlist: true
-    images: /images/
+    image: true
     table: true
     styles: /css/editor.css
