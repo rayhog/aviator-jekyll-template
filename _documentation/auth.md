@@ -20,21 +20,17 @@ content_markdown: |-
   This is a very precise query.
   You must &nbsp;this API key to authorise.
 
-  {: .error}
+All errors will return JSON in the following format:
 left_code_blocks:
   - code_block: |-
-      curl -G -H "Authorization: Bearer <Your_API_Key>"
-      "https://v6.technopedia.com/<endpoint>" --data-urlencode "<query>"
-    title: REQUEST EXAMPLE
-    language: javascript
-right_code_blocks:
-  - code_block: |2-
-       $.get("http://api.myapp.com/books/", { "token": "YOUR_APP_KEY"}, function(data) {
-         alert(data);
-       });
-    title: JQuery
-    language: javascript
-  - code_block: ' curl http://api.myapp.com/books?token=YOUR_APP_KEY'
-    title: Curl
-    language: bash
+      {
+        "error": true,
+        "message": "error message here"
+      }
+    title: Response
+    language: json
+    right_code_blocks:
+  - code_block: "{\r\n  \"error\": true,\r\n  \"message\": \"error message here\"\r\n}\r\n\r\n{\r\n    \"message\": \"Internal Server Error\",\r\n    \"request-id\": \"4f6bfd02-e367-4a61-90c7-832d0226dd8c\"\r\n}"
+    title: Error Examples
+    language: json
 ---
