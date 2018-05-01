@@ -2,7 +2,7 @@
 title: MATCH [Y]
 position: 1.4
 type: put
-description: Update Book
+description: Write a MATCH statement to query the SOFTWARE Node.
 parameters:
   - name: title
     content: The title for the book
