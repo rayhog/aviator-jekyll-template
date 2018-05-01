@@ -1,11 +1,11 @@
 ---
 title: Getting Started with version 6 API
-position: 1.3
+position: 1.0
 parameters:
   - name:
     content:
-content_markdown: >-
-  ** Welcome to our API documentation.**
+content_markdown: |-
+# Welcome to our API documentation
   ![API Image](/images/node_table.png){:class="img-responsive"} <br>
 
 
