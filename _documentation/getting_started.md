@@ -11,61 +11,6 @@ content_markdown: |-
 
 ## This API document is designed for those interested in developing for our
 ## platform. This API is still under development and is a work in progress
-<br>
-![My logo](logo.png "my image")
-
-
-  | Node Type | Software Category | Software Attributes | Relationships | More
-  content |
-
-  | <font size="1"><font color="#333333"><font
-  face="Consolas">cat_sw_product_id</font><font
-  face="Arial">&nbsp;</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-
-  | <font color="#333333"><font face="Consolas"><font size="1">Alerts and
-  Monitoring Tools</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-
-  | <font color="#333333"><font face="Consolas"><font
-  size="1">Analytics</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-
-  | <font color="#333333"><font face="Consolas"><font size="1">Anti Virus and
-  Malware</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-
-  | <font color="#333333"><font face="Consolas"><font size="1">Application
-  Architecture and Design</font></font></font> | &nbsp; | &nbsp; | &nbsp; |
-  &nbsp; |
-
-  | <font color="#333333"><font face="Consolas"><font size="1">Application
-  Servers</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-
-  | <font color="#333333"><font face="Consolas"><font size="1">Application
-  Testing and QA</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-
-  | <font color="#333333"><font face="Consolas"><font size="1">Archiving and
-  Content Storage</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-
-  | <font color="#333333"><font face="Consolas"><font size="1">Backup and
-  Recovery</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-
-  | <font color="#333333"><font face="Consolas"><font
-  size="1">Banking</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-
-  | <font color="#333333"><font face="Consolas"><font size="1">Blogs &amp;
-  Wikis</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-
-  | <font color="#333333"><font face="Consolas"><font size="1">Business
-  Intelligence (BI) Suites</font></font></font> | &nbsp; | &nbsp; | &nbsp; |
-  &nbsp; |
-
-  | <font color="#333333"><font face="Consolas"><font size="1">Business Metrics
-  and Reporting Tools</font></font></font> | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-
-  | <font color="#333333"><font face="Consolas"><font size="1">Business
-  Performance Management</font></font></font> | &nbsp; | &nbsp; | &nbsp; |
-  &nbsp; |
-
-
-  | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 
   You'll succeed if you do this.
