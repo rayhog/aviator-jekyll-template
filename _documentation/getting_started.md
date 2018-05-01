@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-position: 1.01
+position: 1.02
 parameters:
   - name:
     content:
@@ -11,25 +11,6 @@ content_markdown: |-
   | 201 | Created | Creation Successful |
   | 400 | Bad Request | We could not process that action TESTx |
   | 403 | Forbidden | We couldn't authenticate you |
-
-You'll succeed if you do this.
-
-  {: .success}
-
-
-  Here's some useful information.
-
-  {: .info}
-
-
-  Something may not happen if you try and do this.
-
-  {: .warning}
-
-
-  Something bad will happen if you do this.
-
-  {: .error}
 
   All errors will return JSON in the following format:
 left_code_blocks:
