@@ -1,56 +1,28 @@
 ---
-title: Get Started
+title: Error Codes
 position: 1.01
 parameters:
   - name:
     content:
 content_markdown: |-
-# Welcome to our API documentation
-  ![API Image](/images/node_table.png){:class="img-responsive"} <br>
+  | Code | Name | Description |
+  | --- | --- | --- |
+  | 200 | OK | Success |
+  | 201 | Created | Creation Successful |
+  | 400 | Bad Request | We could not process that action TEST2 |
+  | 403 | Forbidden | We couldn't authenticate you |
 
-
-## This API document is designed for those interested in developing for our
-## platform. This API is still under development and is a work in progress
-
-
-  You'll succeed if you do this.
-
-  {: .success}
-
-
-  Here's some useful information.
-
-  {: .info}
-
-
-  Something may not happen if you try and do this.
-
-  {: .warning}
-
-
-  Something bad will happen if you do this.
-
-  {: .error}
+  All errors will return JSON in the following format:
 left_code_blocks:
-  - code_block: |
-      GET Example
-
-      require 'kittn'
-
-      api = Kittn::APIClient.authorize!('meowmeowmeow')
-      api.kittens.get
-
-      import kittn
-
-      api = kittn.authorize('meowmeowmeow')
-      api.kittens.get()
-
-      curl "http://example.com/api/kittens"
-        -H "Authorization: meowmeowmeow"
-    title:
-    language:
-<!right_code_blocks:
-  - code_block:
-    title:
-    language:-->
+  - code_block: |-
+      {
+        "error": true,
+        "message": "error message here"
+      }
+    title: Response
+    language: json
+    right_code_blocks:
+  - code_block: "{\r\n  \"error\": true,\r\n  \"message\": \"error message here\"\r\n}\r\n\r\n{\r\n    \"message\": \"Internal Server Error\",\r\n    \"request-id\": \"4f6bfd02-e367-4a61-90c7-832d0226dd8c\"\r\n}"
+    title: Error Examples
+    language: json
 ---
