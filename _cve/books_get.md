@@ -1,5 +1,5 @@
 ---
-title: Software
+title: CPU
 position: 1.3
 type: get
 description: Get Book

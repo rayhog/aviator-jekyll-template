@@ -1,5 +1,5 @@
 ---
-title: 'SOFTWARE'
+title: 'HARDWARE'
 position: 1.1
 type: get
 description: >-

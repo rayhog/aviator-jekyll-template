@@ -1,5 +1,5 @@
 ---
-title: /books/:id
+title: Hardware License
 position: 1.5
 type: delete
 description: Deletes a book
