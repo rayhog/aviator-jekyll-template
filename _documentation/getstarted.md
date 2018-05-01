@@ -1,5 +1,5 @@
 ---
-title: Getting Started with version 6 API
+title: Get Started
 position: 1.0
 parameters:
   - name:

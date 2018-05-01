@@ -1,6 +1,6 @@
 ---
-title: Getting Started with version 6 API
-position: 1.0
+title: Get Started
+position: 1.01
 parameters:
   - name:
     content:
@@ -13,17 +13,6 @@ content_markdown: |-
 ## platform. This API is still under development and is a work in progress
 <br>
 ![My logo](logo.png "my image")
-
-
-
-```javascript
-function fancyAlert(arg) {
-  if(arg) {
-    $.facebox({div:'#foo'})
-  }
-}
-```
-
 
 
   | Node Type | Software Category | Software Attributes | Relationships | More
