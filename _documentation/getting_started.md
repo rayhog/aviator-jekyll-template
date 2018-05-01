@@ -3,7 +3,11 @@ title: Getting Started
 position: 1.02
 parameters:
   - name:
-    content:
+    content: >-
+      Welcome to our API documentation   ![API
+      Image](/images/node_table.png){:class="img-responsive"} <br>   ## This API
+      document is designed for those interested in developing for the platform.
+      This API is still under development and is a work in progress
 content_markdown:
 left_code_blocks:
   - code_block: |-
