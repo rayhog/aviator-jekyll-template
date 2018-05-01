@@ -4,15 +4,7 @@ position: 1.02
 parameters:
   - name:
     content:
-content_markdown: |-
-  | Code | Name | Description |
-  | --- | --- | --- |
-  | 200 | OK | Success |
-  | 201 | Created | Creation Successful |
-  | 400 | Bad Request | We could not process that action TESTx |
-  | 403 | Forbidden | We couldn't authenticate you |
-
-  All errors will return JSON in the following format:
+content_markdown:
 left_code_blocks:
   - code_block: |-
       {
