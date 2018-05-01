@@ -20,17 +20,30 @@ content_markdown: |-
   This is a very precise query.
   You must &nbsp;this API key to authorise.
 
-All errors will return JSON in the following format:
 left_code_blocks:
   - code_block: |-
+      $.get("http://api.myapp.com/books/3", {
+        token: "YOUR_APP_KEY",
+      }, function(data) {
+        alert(data);
+      });
+    title: jQuery
+    language: javascript
+right_code_blocks:
+  - code_block: |2-
       {
-        "error": true,
-        "message": "error message here"
+        "id": 3,
+        "title": "The Book Thief",
+        "score": 4.3,
+        "dateAdded": "5/1/2015"
       }
     title: Response
     language: json
-    right_code_blocks:
-  - code_block: "{\r\n  \"error\": true,\r\n  \"message\": \"error message here\"\r\n}\r\n\r\n{\r\n    \"message\": \"Internal Server Error\",\r\n    \"request-id\": \"4f6bfd02-e367-4a61-90c7-832d0226dd8c\"\r\n}"
-    title: Error Examples
+  - code_block: |2-
+      {
+        "error": true,
+        "message": "Book doesn't exist"
+      }
+    title: Error
     language: json
 ---
