@@ -5,6 +5,7 @@ description: >-
   Text Placement. In this example, we will pull data from
   Technopedia that contains 'excel'.
 parameters:
+<<<<<<< HEAD
   - name: Apples
     content: Oranges
 content_markdown: |-
@@ -16,6 +17,15 @@ content_markdown: |-
   | 403 | Forbidden | We couldn't authenticate you |
 
   All errors will return JSON in the following format:
+=======
+  - name:
+    content: >-
+      Welcome to our API documentation   ![API
+      Image](/images/node_table.png){:class="img-responsive"} <br>   ## This API
+      document is designed for those interested in developing for the platform.
+      This API is still under development and is a work in progress
+content_markdown:
+>>>>>>> 5c41f91febeed1fc030f41faf7208bf3ce174665
 left_code_blocks:
   - code_block: |-
       {
