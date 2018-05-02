@@ -1,7 +1,7 @@
 ---
 title: MATCH [Y]
 position: 1.4
-type: MATCH
+type: get
 description: Write a MATCH statement to query the SOFTWARE Node.
 parameters:
   - name: title

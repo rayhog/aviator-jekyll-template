@@ -1,7 +1,7 @@
 # ----
 # Site
 
-title: FLEXY
+title: FLEXYara
 description: Jekyll template for API documentation.
 url: https://example.com
 google_analytics_key:
@@ -97,7 +97,7 @@ types:
   - get
   - put
   - delete
-  - Match
+  - post
 
 languages:
   bash: Bash
