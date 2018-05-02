@@ -19,13 +19,17 @@ content_markdown: |-
   All errors will return JSON in the following format:
 =======
   - name:
-    content: >-
+    content:
+content_markdown: |-
       Welcome to our API documentation   ![API
       Image](/images/node_table.png){:class="img-responsive"} <br>   ## This API
       document is designed for those interested in developing for the platform.
       This API is still under development and is a work in progress
+<<<<<<< HEAD
 content_markdown:
 >>>>>>> 5c41f91febeed1fc030f41faf7208bf3ce174665
+=======
+>>>>>>> 945a17ab12b031b6b16ffa3976f19d14d8d1f432
 left_code_blocks:
   - code_block: |-
       {
