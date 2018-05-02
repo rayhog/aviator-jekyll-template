@@ -1,11 +1,11 @@
 ---
 title: Getting Started 
-![API Image](/images/logo.png){:class="img-responsive"}
 position: 1.02
 parameters:
   - name:
     content:
 content_markdown: |-
+      ![API Image](/images/logo.png){:class="img-responsive"}  
       Welcome to our API documentation <br>  ![API
       Image](/images/node_table.png){:class="img-responsive"} <br>   ## This API
       document is designed for those interested in developing for the platform.
