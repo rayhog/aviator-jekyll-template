@@ -1,9 +1,8 @@
 ---
-title: Getting Started
+title: ![API Image](/images/logo.png){:class="img-responsive"}
+Getting Started
 position: 1.02
-description: ![API Image](/images/logo.png){:class="img-responsive"} 
-Get started with V6 API by following the instructions on this page.
-
+description: Get started with V6 API by following the instructions on this page.
 parameters:
   - name:
     content:
