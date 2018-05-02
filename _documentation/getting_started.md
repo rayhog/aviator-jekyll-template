@@ -1,6 +1,6 @@
 ---
 title: # Getting Started ![API Image](/images/logo.png){:class="img-responsive"}
-      position: 1.02
+position: 1.02
 content_markdown: |-
       ## ![API Image](/images/logo.png){:class="img-responsive"}  <br>
       ## Welcome to API documentation <br>  
