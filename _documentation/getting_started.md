@@ -5,10 +5,10 @@ parameters:
   - name:
     content:
 content_markdown: |-
-      ![API Image](/images/logo.png){:class="img-responsive"}  
-      Welcome to our API documentation <br>  ![API
-      Image](/images/node_table.png){:class="img-responsive"} <br>   ## This API
-      document is designed for those interested in developing for the platform.
+      ![API Image](/images/logo.png){:class="img-responsive"}  <br>
+      ## Welcome to our API documentation <br>  ![API
+      Image](/images/node_table.png){:class="img-responsive"} <br>  
+      ## This API document is designed for those interested in developing for the platform.
       This API is still under development and is a work in progress
 left_code_blocks:
   - code_block: |-
