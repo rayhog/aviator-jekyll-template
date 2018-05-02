@@ -3,7 +3,8 @@ title: 'HARDWARE'
 position: 1.1
 type: get
 description: >-
-  Create Query for example query. In this example, we will pull data from
+
+  <br> Create Query for example query. In this example, we will pull data from
   Technopedia that contains 'excel'.
 parameters:
   - name: title
