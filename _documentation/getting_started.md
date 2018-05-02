@@ -1,5 +1,5 @@
 ---
-title: # ![API Image](/images/logo.png){:class="img-responsive"}
+title: # Getting Started
 position: 1.02
 content_markdown: |-
       ## ![API Image](/images/logo.png){:class="img-responsive"}  <br>
