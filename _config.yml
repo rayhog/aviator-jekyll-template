@@ -97,7 +97,7 @@ types:
   - get
   - put
   - delete
-  - post
+  - Match
 
 languages:
   bash: Bash

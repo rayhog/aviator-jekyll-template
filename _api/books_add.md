@@ -1,7 +1,7 @@
 ---
 title: 'MATCH [X]'
 position: 1.2
-type: get
+type: MATCH
 description: >-
   Create Query for example query. In this example, we will pull data from
   Technopedia that contains 'excel'.
