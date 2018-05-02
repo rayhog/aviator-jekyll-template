@@ -1,11 +1,12 @@
 ---
-title: ![API Image](/images/logo.png){:class="img-responsive"}
-Getting Started
+title: Getting Started ![API Image](/images/logo.png){:class="img-responsive"}
 position: 1.02
-description: Get started with V6 API by following the instructions on this page.
+description: >-
+  Text Placement. In this example, we will pull data from
+  Technopedia that contains 'excel'.
 parameters:
-  - name:
-    content:
+  - name: Apples
+    content: Oranges
 content_markdown: |-
   | Code | Name | Description |
   | --- | --- | --- |
