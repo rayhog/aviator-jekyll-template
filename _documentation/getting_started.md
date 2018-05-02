@@ -1,6 +1,9 @@
 ---
 title: Getting Started
 position: 1.02
+description: ![API Image](/images/logo.png){:class="img-responsive"} 
+Get started with V6 API by following the instructions on this page.
+
 parameters:
   - name:
     content:
@@ -9,7 +12,7 @@ content_markdown: |-
   | --- | --- | --- |
   | 200 | OK | Success |
   | 201 | Created | Creation Successful |
-  | 400 | Bad Request | We could not process that action TESTx |
+  | 400 | Bad Request | We could not process that action TEST Y |
   | 403 | Forbidden | We couldn't authenticate you |
 
   All errors will return JSON in the following format:
