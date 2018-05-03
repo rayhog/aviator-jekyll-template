@@ -1,7 +1,7 @@
 ---
-title: CVE 
+title: MATCH CVE 
 position: 1.5
-type: Get
+type: 
 description: Matches a CVE from Technopedia XXXX
 parameters:
   - Category: Any category for the Software Category list

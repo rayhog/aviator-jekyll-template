@@ -9,7 +9,7 @@ parameters:
   - name: Relationships
     content: Relationships to other Nodes
 content_markdown: |-
-  ###### MATCH (CPU:a) RETURN a
+  ######  MATCH (CPU:a) RETURN a
   {: .info }
   <br>
   ### You can paginate by using the parameters listed above.

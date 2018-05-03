@@ -1,7 +1,7 @@
 ---
 title: Hardware License
 position: 1.5
-type: delete
+type: 
 description: Deletes a book
 parameters:
   - name:

@@ -1,12 +1,12 @@
 ---
-title: MATCH [Y]
+title: MATCH HARDWARE
 position: 1.4
-type: get
+type: 
 description: Write a MATCH statement to query the SOFTWARE Node.
 parameters:
-  - name: title
-    content: The title for the book
-  - name: score
+  - attribute: Type of hardware
+    type: Type 
+  - name: Hardware
     content: The book's score between 0 and 5
 content_markdown: |-
   Returns a specific book from your collection.<br> 
