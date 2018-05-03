@@ -7,7 +7,7 @@ title: API Docs
 	{% for doc in sorted_docs %}
 		<section class="doc-content">
 			<section class="left-docs">
-				<h4>
+				<h3>
 					<a id="{{ doc.id | replace: '/', '' | replace: '.', '' }}">
 						{{ doc.title }}
 						{% if doc.type %}
@@ -15,7 +15,7 @@ title: API Docs
 						{% endif %}
 					</a>
 					<a class="editor-link" href="cloudcannon:collections/{{ doc.relative_path }}">Edit</a>
-				</h4>
+				</h3>
 				{% if doc.description %}
 					<p class="description">{{ doc.description }}</p>
 				{% endif %}
