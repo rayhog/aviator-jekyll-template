@@ -1,5 +1,5 @@
 ---
-title: 'MATCH SOFTWARE'
+title: 'SOFTWARE'
 position: 1.2
 type: 
 description: >-
