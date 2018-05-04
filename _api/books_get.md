@@ -1,18 +1,17 @@
 ---
 title: CPU
 position: 1.4
-type: get
-description: Get Book
+type: 
+description: Get CPU information
 parameters:
   - name:
     content:
 content_markdown: |-
-  # Returns a specific book from your collection.<br>
-  ## Returns a specific book from your collection.<br>
-  ## Returns a specific book from your collection.<br>
   #### Returns a specific book from your collection.<br>
+  ### Returns a specific book from your collection.<br>
   ##### Returns a specific book from your collection.<br>
-  ###### # Returns a specific book from your collection.<br> 
+  #### Returns a specific book from your collection.<br>
+    ###### # Returns a specific book from your collection.<br> 
   ![API Image](/images/logo.png){:class="img-responsive"} <br>
   
 left_code_blocks:

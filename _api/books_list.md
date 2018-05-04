@@ -1,5 +1,5 @@
 ---
-title: CPU Node
+title: CPU 
 position: 1.6
 type: 
 description: List all books

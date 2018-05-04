@@ -1,8 +1,8 @@
 ---
-title: Hardware License
+title: HARDWARE LICENSE
 position: 1.95
 type: 
-description: Deletes a book
+description: Licensing information
 parameters:
   - name:
     content:

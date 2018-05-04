@@ -1,7 +1,7 @@
 ---
-title: CPU
+title: CPU 2
 position: 1.5
-type: get
+type: 
 description: Get Book
 parameters:
   - name:
