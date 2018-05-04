@@ -9,6 +9,14 @@ parameters:
     Requirement: The category is optional
 content_markdown: |-
   This API deletes a book in your collection.
+
+  #### Returns a specific book from your collection.<br>
+  ### Returns a specific book from your collection.<br>
+  ##### Returns a specific book from your collection.<br>
+  #### Returns a specific book from your collection.<br>
+    ###### # Returns a specific book from your collection.<br> 
+  ![API Image](/images/logo.png){:class="img-responsive"} <br>
+  
 left_code_blocks:
   - code_block: |-
       $.ajax({

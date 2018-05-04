@@ -14,6 +14,14 @@ content_markdown: |-
   This is a very precise query.
   
   Update an existing book in your collection.
+
+  #### Returns a specific book from your collection.<br>
+  ### Returns a specific book from your collection.<br>
+  ##### Returns a specific book from your collection.<br>
+  #### Returns a specific book from your collection.<br>
+  ###### # Returns a specific book from your collection.<br> 
+  ![API Image](/images/logo.png){:class="img-responsive"} <br>
+
 left_code_blocks:
   - code_block: |-
       $.ajax({
