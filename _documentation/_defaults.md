@@ -1,5 +1,5 @@
 ---
-content_markdown:
+image:
 title: 
 position:
 parameters:

@@ -1,4 +1,5 @@
 ---
+image: /![API Image](/images/logo.png){:class="img-responsive"}
 title: Authentication
 position: 1.2
 description: ### You must authenticate before you can get data with the API
