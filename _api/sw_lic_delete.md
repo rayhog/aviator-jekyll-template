@@ -1,6 +1,6 @@
 ---
 title: HARDWARE LICENSE
-position: 1.95
+position: 2.1
 type: 
 description: Licensing information
 parameters:

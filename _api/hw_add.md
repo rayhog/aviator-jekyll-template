@@ -1,7 +1,7 @@
 ---
 title: 'SOFTWARE'
 position: 1.8
-type: get
+type: 
 description: >-
   Create Query for example query. In this example, we will pull data from
   Technopedia that contains 'excel'.

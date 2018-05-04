@@ -1,5 +1,5 @@
 ---
-title: CPU 2
+title: Software Release
 position: 1.5
 type: 
 description: Get Book
