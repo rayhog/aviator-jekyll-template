@@ -2,9 +2,9 @@
 title: Getting Started
 position: 1.02
 content_markdown: |-
-      ###### ![API Image](/images/logo.png){:class="img-responsive"}  <br>
-      #### Welcome to the API documentation page <br>
-      #### Here's a diagram of how Nodes and Relationships work: 
+      ![API Image](/images/logo.png){:class="img-responsive"}  <br>
+      ##### Welcome to the API documentation page <br>
+      ###### Here's a diagram of how Nodes and Relationships work: 
 
       ![API Image](/images/nodes_and_rel.png){:class="img-responsive"} <br> 
       Here's another image:
@@ -24,4 +24,19 @@ left_code_blocks:
   - code_block: "{\r\n  \"error\": true,\r\n  \"message\": \"error message here\"\r\n}\r\n\r\n{\r\n    \"message\": \"Internal Server Error\",\r\n    \"request-id\": \"4f6bfd02-e367-4a61-90c7-832d0226dd8c\"\r\n}"
     title: Error Examples
     language: json
+    right_code_blocks:
+  - code_block: |2-
+      
+      ![API Image](/images/nodes_and_rel.png){:class="img-responsive"} 
+      
+    title: Image of Nodes and Relationships
+    language: json
+  - code_block: |2-
+      {
+        "error": true,
+        "message": "Book doesn't exist"
+      }
+    title: Technopedia Query Language
+    language: 
+---
 ---
