@@ -6,6 +6,7 @@ parameters:
     content:
 content_markdown: |-
   ###### The following table shows the codes that are returned by the API
+  
   | Code | Name | Description |
   | --- | --- | --- |
   | 200 | OK | Success |
