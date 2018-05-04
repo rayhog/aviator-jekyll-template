@@ -1,22 +1,22 @@
 ---
-description: # Test ![API Image](/images/logo.png){:class="img-responsive"}
+description: |![Banner Image](/images/logo.png){:class="img-responsive"}
 title: Getting Started
 position: 1.02
 content_markdown: |-
       ![API Image](/images/logo.png){:class="img-responsive"}  <br>
-      ##### Welcome to the API documentation page <br>
+      ###### Welcome to the API documentation page <br>
       ###### Here's a diagram of how Nodes and Relationships work: 
 
      
-       ![API Image](/images/nodes_and_rel.png){:class="img-responsive"} <br> 
-      Here's another image:
-      ![API Image](/images/allservices_diagram.png){:class="img-responsive"} <br> 
-      ## This API document is designed for those interested in developing for the platform.
-      This API is still under development and is a work in progress.
       ![API Image](/images/nodes_and_rel.png){:class="img-responsive"} <br> 
       Here's another image:
       ![API Image](/images/allservices_diagram.png){:class="img-responsive"} <br> 
-      ## This API document is designed for those interested in developing for the platform.
+      ### This API document is designed for those interested in developing for the platform.
+      ### This API is still under development and is a work in progress.
+      ![API Image](/images/nodes_and_rel.png){:class="img-responsive"} <br> 
+      Here's another image:
+      ![API Image](/images/allservices_diagram.png){:class="img-responsive"} <br> 
+      ###### This API document is designed for those interested in developing for the platform.
       This API is still under development and is a work in progress.
 
 left_code_blocks:
