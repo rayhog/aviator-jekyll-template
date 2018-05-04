@@ -19,24 +19,7 @@ collections:
   api:
     title: APIs
     position: 2
-  software:
-    title: Software
-    position: 3
-  hardware:
-    title: Hardware
-    position: 4
-  cpu:
-    title: CPU 
-    position: 5
-  cve:
-    title: CVE 
-    position: 6
-  softwarelicense:
-    title: Software License 
-    position: 7
-  hardwarelicense:
-    title: Hardware License 
-    position: 8
+  
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
@@ -91,7 +74,7 @@ defaults:
       _hide_content: true
 
 # -----------
-# CloudCannon
+# Flexy
 
 types:
   - get

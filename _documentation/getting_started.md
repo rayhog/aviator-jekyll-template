@@ -28,7 +28,7 @@ left_code_blocks:
     language: json
 right_code_blocks:
   - code_block: |2-
-      
+content_markdown:
       ![API Image](/images/nodes_and_rel.png){:class="img-responsive"} 
       
     title: Image of Nodes and Relationships
