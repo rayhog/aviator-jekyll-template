@@ -1,5 +1,5 @@
 ---
-title: HARDWARE LICENSE
+title: Hardware Licensing
 position: 2.1
 type: 
 description: Licensing information

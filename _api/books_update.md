@@ -1,5 +1,5 @@
 ---
-title: HARDWARE
+title: Hardware
 position: 1.4
 type: 
 description: Write a MATCH statement to query the SOFTWARE Node.

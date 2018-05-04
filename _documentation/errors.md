@@ -1,5 +1,5 @@
 ---
-title: Error Codes
+title: Returned Codes
 position: 1.2
 parameters:
   - name:
@@ -15,7 +15,7 @@ content_markdown: |-
   | 403 | Forbidden | We couldn't authenticate you |
 
   All errors will return JSON in the following format:
-  
+
   | Code | Name | Description |
   | --- | --- | --- |
   | 200 | OK | Success |

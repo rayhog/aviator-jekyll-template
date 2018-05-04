@@ -1,5 +1,4 @@
 ---
-image: /images/logo.png
 title: Getting Started
 position: 1.02
 content_markdown: |-

@@ -1,5 +1,5 @@
 ---
-title: SOFTWARE LICENSE
+title: Software Licensing
 position: 1.9
 type: 
 description: >-
