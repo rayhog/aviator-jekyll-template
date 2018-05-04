@@ -28,17 +28,18 @@ left_code_blocks:
     language: json
 right_code_blocks:
   - code_block: |2-
-content_markdown:
-      ![API Image](/images/nodes_and_rel.png){:class="img-responsive"} 
-      
-    title: Image of Nodes and Relationships
+      {
+        "id": 3,
+        "status": "deleted"
+      }
+    title: Test for image
     language: json
   - code_block: |2-
       {
         "error": true,
         "message": "Book doesn't exist"
       }
-    title: Technopedia Query Language
-    language: 
----
+      ![API Image](/images/logo.png){:class="img-responsive"} 
+    title: Error
+    language: json
 ---
