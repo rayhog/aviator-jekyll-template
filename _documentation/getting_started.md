@@ -7,17 +7,13 @@ content_markdown: >-
 
   ###### Welcome to the API documentation page
 
-
   ###### Here's a diagram of how Nodes and Relationships work:
-
 
   ![API Image](/images/nodes_and_rel.png){: .img-responsive}<br>Here's another
   image: ![API Image](/images/allservices_diagram.png){: .img-responsive}
 
-
   ### This API document is designed for those interested in developing for the
   platform.
-
 
   ### This API is still under development and is a work in progress.
 

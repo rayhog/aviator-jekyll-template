@@ -1,9 +1,6 @@
 ---
 title: Returned Codes
 position: 1.2
-parameters:
-  - name:
-    content:
 content_markdown: |-
   ###### The following table shows the codes that are returned by the API
   
