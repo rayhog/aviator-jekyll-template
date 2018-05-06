@@ -1,5 +1,5 @@
 ---
-title: 'SOFTWARE'
+title: Software
 position: 1.2
 type: 
 description: >-
