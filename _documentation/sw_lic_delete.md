@@ -4,7 +4,10 @@ position: 1.03
 type: 
 description: TQL (Technopedia Query Language) is the graph query language that you use to get data from Technpedia.
 content_markdown: |-
-  Deletes a book in your collection.
+  ###### Here's a diagram of how Nodes and Relationships work:
+
+  ![API Image](/images/nodes_and_rel.png){: .img-responsive}<br>
+  
   The query returns software that includes 'Excel'. This is query is case
   sensitive.
   {: .success}
