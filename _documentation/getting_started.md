@@ -59,7 +59,7 @@ right_code_blocks:
     title: Error
     language: json
   - code_block: |-
-
+  Here's some text to display
 
       Here's another one
     title: Another one
