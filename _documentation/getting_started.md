@@ -55,12 +55,12 @@ right_code_blocks:
         "error": true,
         "message": "Book doesn't exist"
       }
-      ![API Image](/images/logo.png){:class="img-responsive"} 
+      
     title: Error
     language: json
+    image: ![API Image](/images/logo.png){:class="img-responsive"}
   - code_block: |-
-  Here's some text to display
-
+  
       Here's another one
     title: Another one
     language: json
