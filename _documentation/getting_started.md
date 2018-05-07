@@ -3,8 +3,6 @@ title: Getting Started
 position: 1.02
 content_markdown: >-
   ![API Image](/images/logo.png){: .img-responsive}
-
-
   ###### Welcome to the API documentation page
 
   Here's an example image
@@ -60,10 +58,12 @@ right_code_blocks:
       
     title: Error
     language: json
-    image: ![API Image](/images/logo.png){:class="img-responsive"}
-  - code_block: |-
-  
-      Here's another one
+      - code_block: |-
+      {
+        "error": true,
+        "message": "Book doesn't exist"
+      }
+    
     title: Another one
     language: json
 ---
