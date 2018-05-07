@@ -22,7 +22,7 @@ content_markdown: |-
   - Attributes are properties of  a node and they store data in key-value pairs, such as '{name Joe}' <br>
   ###### Here's a diagram of how Nodes and Relationships work:
 
-  ![API Image](/images/nodes_and_rel.png){: .img-responsive}<br>
+  ![API Image](/images/NodeAndRel.png){: .img-responsive}<br>
   <br>
  
   ![API Image](/images/logo.png){:class="img-responsive"} <br>
