@@ -3,6 +3,7 @@ title: Returned Codes
 position: 1.2
 content_markdown: |-
   ###### The following table shows the codes that are returned by the API
+  Throughout this document we provide you with inline examples regarding how to perform requests to the API. The cURL examples should work on most systems. Mac and Linux users typically have cURL installed already, although Windows users will likely need to install cURL.
   
   | Code | Name | Description |
   | --- | --- | --- |
@@ -11,7 +12,9 @@ content_markdown: |-
   | 400 | Bad Request | We could not process that action TEST2 |
   | 403 | Forbidden | We couldn't authenticate you |
 
-  All errors will return JSON in the following format:
+  Throughout this document we provide you with inline examples regarding how to perform requests to the API. The cURL examples should work on most systems. Mac and Linux users typically have cURL installed already, although Windows users will likely need to install cURL.
+
+  All errors will return JSON in the following format
 
   | Code | Name | Description |
   | --- | --- | --- |
