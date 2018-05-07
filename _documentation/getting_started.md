@@ -58,12 +58,12 @@ right_code_blocks:
       
     title: Error
     language: json
-      - code_block: |-
+  - code_block: |-
       {
         "error": true,
         "message": "Book doesn't exist"
       }
-    
+      BOOK DOES NOT EXIST
     title: Another one
     language: json
 ---
