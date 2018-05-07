@@ -1,7 +1,7 @@
 ---
 image: /![API Image](/images/logo.png){:class="img-responsive"}
 title: Authentication
-position: 1.2
+position: 1.19
 description: ### You must authenticate before you can get data with the API
 content_markdown: |-
   ###### The Technopedia Version 6.0 API is hosted by Flexera, so no installation is required.

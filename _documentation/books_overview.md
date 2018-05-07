@@ -13,15 +13,16 @@ content_markdown: |-
   #### TQL graph concepts
   <br>
   ###### The following concepts are involved in the storage of data is stored in Technopedia
-  - Nodes are Graph data records, such as software version or hardware.
-  - A relationship is a connection between nodes, such as the grows_in relationship; in this example, the node     apple grows_in node orchard.
+  - Nodes are Graph data records that are entities in the graph, such as software version or hardware. Nodes contain attributes, which are key-value pairs.
   - Attributes are properties of  a node and they store data in key-value pairs, such as '{name Joe}' <br>
+  - Relationship provide a connection between nodes. Relationships have a start node, end node, a type, and a direction. For example, the nodes apple and an orchard have a relationship in the graph which is named 'grows_in'. Apple is the start node; orchard is the end node; 'grows_in' is the relationship and the direction is apple to orchard.
+  
   ###### Here's a diagram of how Nodes and Relationships work:
 
   ![API Image](/images/NodeAndRel.png){: .img-responsive}<br>
   <br>
  
-  ![API Image](/images/logo.png){:class="img-responsive"} <br>
+  
   
 left_code_blocks:
   - code_block: |-
