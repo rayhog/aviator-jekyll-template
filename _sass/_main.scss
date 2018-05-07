@@ -159,11 +159,11 @@ dl dd:after {
 }
 
 .sidebar h5 {
-	line-height: 1em;
-	font-size: 1.5rem;
+	line-height: 1.1em;
+	font-size: 1.6rem;
 	letter-spacing: 1.2px;
 	color: rgb(153, 153, 153);
-	font-weight: bold;
+	font-weight: bolder;
 }
 
 .sidebar {
@@ -326,7 +326,7 @@ hr {
 .left-docs {
 	width: 60%;
 	float: left;
-	padding: 0 50px;
+	padding: 0 40px;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;		/* Firefox, other Gecko */
 	box-sizing: border-box;				 /* Opera/IE 8+ */
@@ -466,8 +466,8 @@ header {
 		border-bottom: 1px solid rgba(0, 0, 0, 0.075);
 
 		img {
-			height: 30px;
-			margin: 0 10px;
+			height: 35px;
+			margin: 0 5px;
 		}
 	}
 
