@@ -137,7 +137,7 @@ dl dt {
 	float: left;
 	font-weight: bold;
 	position: relative;
-	top: 20px;
+	top: 15px;
 }
 
 dl dd {
@@ -176,7 +176,7 @@ dl dd:after {
 	}
 
 	ul {
-		padding: 0 0 0 10px;
+		padding: 0 0 0 5px;
 		margin: 0;
 		list-style: none;
 	}
@@ -466,15 +466,15 @@ header {
 		border-bottom: 1px solid rgba(0, 0, 0, 0.075);
 
 		img {
-			height: 26px;
-			margin: 0 14px;
+			height: 30px;
+			margin: 0 10px;
 		}
 	}
 
 	.open-nav {
 		width: 25px;
 		height: 25px;
- 		margin: 0 0 0 18px;
+ 		margin: 0 0 0 10px;
 		background-image: url($base-url + '/images/menu.svg');
 		background-color: transparent;
 		background-repeat: no-repeat;
@@ -539,7 +539,7 @@ header {
 
 .search-page {
 	max-width: 800px;
-	margin: 0 0 0 50px;
+	margin: 0 0 0 30px;
 	padding: 50px 20px 0 20px;
 }
 
