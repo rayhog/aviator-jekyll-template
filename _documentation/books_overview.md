@@ -26,10 +26,10 @@ content_markdown: >-
   ###### To query the Technopedia database you use the following endpoints:
 
   * `https://v6.technopedia.com/tql?q=MATCH [Query Parameters]`<br>
-    You provide query parameters to the MATCH statement to generate the criteria for your query.
-    ![API Image](/images/tql.png){: .img-responsive}<br>
+    You provide query parameters to the MATCH statement to generate the criteria for your query, as in the following example:<br>
+    ![API Image](/images/get_tql.png){: .img-responsive}<br>
   * `https://v6.technopedia.com/technopedia-id/[Technopedia ID]`<br>
-    You provide the Technopedia ID for the product that you're querying to return data for that specific product.
+    You provide the Technopedia ID for the product that you're querying to return data for that specific product, as in the following example:<br>
     ![API Image](/images/tid.png){: .img-responsive}<br>
 
   
