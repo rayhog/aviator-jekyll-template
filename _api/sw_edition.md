@@ -1,5 +1,5 @@
 ---
-title: CVE 
+title: Software Edition
 position: 1.5
 type: 
 description: Matches a CVE from Technopedia XXXX

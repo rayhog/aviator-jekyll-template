@@ -1,8 +1,8 @@
 ---
-title: Hardware Licensing
+title: Manufacturer
 position: 2.1
 type: 
-description: Licensing information
+description: The manufacturer is the creator of the prouduct and in relationships the manufacturer is referered to as VENDOR_OF, for example Microsoft is the vendor of Microsoft Word.
 parameters:
   - name:
     content:
@@ -15,10 +15,7 @@ content_markdown: |-
 
   The query returns software that includes 'Excel'. This is query is case
   sensitive.
-
   {: .success}
-
-
 left_code_blocks:
   - code_block: |-
       $.ajax({

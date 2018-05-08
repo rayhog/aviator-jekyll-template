@@ -1,22 +1,18 @@
 ---
-title: Software
-position: 1.8
+title: Software Version
+position: 1.2
 type: 
 description: >-
   Create Query for example query. In this example, we will pull data from
   Technopedia that contains 'excel'.
-parameters:
-  - name: title
-    content: The title for the book
-  - name: score
-    content: The book's score between 0 and 5
 content_markdown: >-
-  The query returns software that includes 'Excel'. This is query is case
-  sensitive.
+  The query returns software that includes 'Excel'. 
+    This is query is case sensitive.
+
+
   {: .success}
-  The query returns software that includes 'Excel'. This is query is case
-  sensitive.
-  {: .success}
+
+
   Adds a book to your collection.
 left_code_blocks:
   - code_block: |-
