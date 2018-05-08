@@ -18,7 +18,7 @@ content_markdown: >-
   * TQL (Technopedia Query Language) endpoint that is used for graph-based
   querying of the Technopedia database.
 
-  * Technopedia-id endpoint that you use to look any Technopedia product by ID.
+  * Technopedia-id endpoint that you use to look any Technopedia product by ID.<br>
 
   #### V6 API Endpoints
 
@@ -26,7 +26,10 @@ content_markdown: >-
   ###### To query the Technopedia database you use the following endpoints:
 
   * `https://v6.technopedia.com/tql?q=MATCH [Query Parameters]`
+    You provide query parameters to the MATCH statement to generate the criteria for your query.
+
   * `https://v6.technopedia.com/technopedia-id/[Technopedia ID]`
+    You provide the Technopedia ID for the product that you're querying to return data for that specific product.
 
   
   #### TQL graph concepts
