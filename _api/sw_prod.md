@@ -12,7 +12,7 @@ content_markdown: >-
 left_code_blocks:
   - code_block: "\r\nMATCH (n:SOFTWARE_PRODUCT) \r\nWHERE n.title = \"PDF Converter\" \r\nRETURN n"
     title: MATCH SOFTWARE_PRODUCT
-    language: json
+    language: curl
   - code_block: |-
       [
         {
