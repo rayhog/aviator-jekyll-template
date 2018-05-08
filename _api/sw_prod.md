@@ -5,15 +5,10 @@ type:
 description: >-
   Create Query for example query. In this example, we will pull data from
   Technopedia that contains 'excel'.
-parameters:
-  - name: title
-    content: The title for the book
-  - name: score
-    content: The book's score between 0 and 5
 content_markdown: >-
   The query returns software that includes 'Excel'. This is query is case
   sensitive. {: .success} MATCH (n:SOFTWARE\_PRODUCT) WHERE n.title = "PDF
-  Converter" RETURN n {: .success} Adds a book to your collection.
+  Converter" RETURN n 
 left_code_blocks:
   - code_block: "\r\nMATCH (n:SOFTWARE_PRODUCT) \r\nWHERE n.title = \"PDF Converter\" \r\nRETURN n"
     title: MATCH SOFTWARE_PRODUCT
