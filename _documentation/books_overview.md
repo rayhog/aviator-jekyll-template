@@ -21,13 +21,13 @@ content_markdown: >-
   * Technopedia-id endpoint that you use to look any Technopedia product by ID.
 
   #### V6 API Endpoints
-  To query the Technopedia database you use the following endpoints:
 
-  -'https://v6.technopedia.com/tql?q=MATCH <Query Parameters>
-  -'https://v6.technopedia.com/technopedia-id/<Technopedia ID>'
+  ###### To query the Technopedia database you use the following endpoints:
+
+  - 'https://v6.technopedia.com/tql?q=MATCH [Query Parameters]'
+  - 'https://v6.technopedia.com/technopedia-id/[Technopedia ID]'
 
   #### TQL graph concepts
-
 
   ###### The following concepts are involved in the storage of data is stored in
   Technopedia
