@@ -1,7 +1,7 @@
 ---
 title: Software Product
 position: 1.8
-type: 
+type:
 description: >-
   Create Query for example query. In this example, we will pull data from
   Technopedia that contains 'excel'.
@@ -12,11 +12,8 @@ parameters:
     content: The book's score between 0 and 5
 content_markdown: >-
   The query returns software that includes 'Excel'. This is query is case
-  sensitive.
-  {: .success}
-  MATCH (n:SOFTWARE_PRODUCT) WHERE n.title = "PDF Converter" RETURN n
-  {: .success}
-  Adds a book to your collection.
+  sensitive. {: .success} MATCH (n:SOFTWARE\_PRODUCT) WHERE n.title = "PDF
+  Converter" RETURN n {: .success} Adds a book to your collection.
 left_code_blocks:
   - code_block: |-
       {
@@ -92,9 +89,48 @@ left_code_blocks:
               },
     title: QUERY EXAMPLE AND RESPONSE
     language: bash
-  - code_block:
-    title:
-    language:
+  - code_block: |-
+      MATCH (n:SOFTWARE_PRODUCT) 
+      WHERE n.title = "PDF Converter" 
+      RETURN n
+    title: Match Query
+    language: json
+  - code_block: |-
+
+      [
+        {
+          "keys": [
+            "n"
+          ],
+          "length": 1,
+          "_fields": [
+            {
+              "identity": {
+                "low": 57619464,
+                "high": 0
+              },
+              "labels": [
+                "SOFTWARE_PRODUCT"
+              ],
+              "properties": {
+                "product_url": "http://welcome.hp.com/country/us/en/prodserv/software/eda/pdf/HowToDownloadSoftware.pdf",
+                "software": "PDF Converter",
+                "cat_sw_product_id": "441336845",
+                "created_at": "2017-08-28 12:56:27",
+                "title": "PDF Converter",
+                "is_suite": "FALSE",
+                "vendor_category": "Converter",
+                "cat_manufacturer_id": "7796",
+                "technopedia_id": "\\x6a9a4000083f685ae0530100007f9f25",
+                "nfamily": "TRUE",
+                "plicsable": "1",
+                "alias": "HP Exstream PDF Converter",
+                "modified_at": "2017-08-28 12:56:27",
+                "family": "Exstream"
+              }
+            }[   {   
+    title: Response Example
+    language: json
 right_code_blocks:
   - code_block: |
       SOFTWARE CATEGORIES
@@ -245,5 +281,4 @@ right_code_blocks:
     title: Software Node Attribues
     language:
 ---
-
 
