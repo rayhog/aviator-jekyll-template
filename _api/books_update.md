@@ -2,24 +2,13 @@
 title: Hardware
 position: 1.4
 type: 
-description: Write a MATCH statement to query the SOFTWARE Node.
-parameters:
-  - attribute: Type of hardware
-    type: Type 
-  - name: Hardware
-    content: The book's score between 0 and 5
+description: Write a MATCH statement to query the Hardware Node.
 content_markdown: |-
   Returns a specific book from your collection.<br> 
   ![API Image](/images/apiEcon.PNG){:class="img-responsive"} <br>
   This is a very precise query.
-  
-  Update an existing book in your collection.
-
-  #### Returns a specific book from your collection.<br>
-  ### Returns a specific book from your collection.<br>
-  ##### Returns a specific book from your collection.<br>
-  #### Returns a specific book from your collection.<br>
-  ###### # Returns a specific book from your collection.<br> 
+  Update an existing book in your collection.  
+  ###### Returns a specific book from your collection.<br> 
   ![API Image](/images/logo.png){:class="img-responsive"} <br>
 
 left_code_blocks:

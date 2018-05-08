@@ -13,13 +13,10 @@ parameters:
 content_markdown: >-
   The query returns software that includes 'Excel'. This is query is case
   sensitive.
-
   {: .success}
   The query returns software that includes 'Excel'. This is query is case
   sensitive.
-
   {: .success}
-
   Adds a book to your collection.
 left_code_blocks:
   - code_block: |-

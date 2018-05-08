@@ -9,9 +9,9 @@ content_markdown: |-
   - Graph store organization model that enables Technopedia to store asset data from any industry.
   - TQL (Technopedia Query Language) endpoint that is used for graph-based querying of the Technopedia database.
   - Technopedia-id endpoint that you use to look any Technopedia product by ID.
-  <br>
+  <p>
   #### TQL graph concepts
-  <br>
+  </p>
   ###### The following concepts are involved in the storage of data is stored in Technopedia
   - Nodes are Graph data records that are entities in the graph, such as software version or hardware. Nodes contain attributes, which are key-value pairs.
   - Attributes are properties of  a node and they store data in key-value pairs, such as '{name Joe}' <br>

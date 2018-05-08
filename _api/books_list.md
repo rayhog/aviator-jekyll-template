@@ -9,17 +9,11 @@ parameters:
   - name: Relationships
     content: Relationships to other Nodes
 content_markdown: |-
-  ######  MATCH (CPU:a) RETURN a
+  MATCH (CPU:a) RETURN a
   {: .info }
   <br>
   ### You can paginate by using the parameters listed above.
-
   ###### Lists all the photos you have access to. You can paginate by using the parameters listed above.
-  #### Returns a specific book from your collection.<br>
-  ### Returns a specific book from your collection.<br>
-  ##### Returns a specific book from your collection.<br>
-  #### Returns a specific book from your collection.<br>
-  ###### # Returns a specific book from your collection.<br> 
   ![API Image](/images/logo.png){:class="img-responsive"} <br>
 
 left_code_blocks:

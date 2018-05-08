@@ -15,7 +15,6 @@ content_markdown: >-
   ### This API is under continuous development and changes are implemented on a regular basis.
   Throughout this document we provide you with inline examples regarding how to perform requests to the API. The cURL examples should work on most systems. Mac and Linux users typically have cURL installed already, although Windows users will likely need to install cURL.
 
-
   ![API Image](/images/NodeAndRel.png){: .img-responsive}<br>
  
   <br>Here's another

@@ -8,7 +8,6 @@ parameters:
     content:
 content_markdown: |-
   Deletes a book in your collection.
-
   The query returns software that includes 'Excel'. This is query is case
   sensitive.
 
@@ -18,7 +17,6 @@ content_markdown: |-
   sensitive.
 
   {: .success}
-
 
 
 left_code_blocks:
