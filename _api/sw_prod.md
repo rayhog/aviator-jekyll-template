@@ -15,11 +15,8 @@ content_markdown: >-
   sensitive. {: .success} MATCH (n:SOFTWARE\_PRODUCT) WHERE n.title = "PDF
   Converter" RETURN n {: .success} Adds a book to your collection.
 left_code_blocks:
-  - code_block: |-
-      MATCH (n:SOFTWARE_PRODUCT) 
-      WHERE n.title = "PDF Converter" 
-      RETURN n
-    title: Match Query
+  - code_block: "\r\nMATCH (n:SOFTWARE_PRODUCT) \r\nWHERE n.title = \"PDF Converter\" \r\nRETURN n"
+    title: MATCH SOFTWARE_PRODUCT
     language: json
   - code_block: |-
       [
