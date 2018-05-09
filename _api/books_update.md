@@ -7,9 +7,9 @@ content_markdown: |-
   Returns a specific book from your collection.<br> 
   ![API Image](/images/apiEcon.PNG){:class="img-responsive"} <br>
   This is a very precise query.
-  Update an existing book in your collection.  
-  ###### Returns a specific book from your collection.<br> 
-  ![API Image](/images/logo.png){:class="img-responsive"} <br>
+  Update an existing object in your collection.  
+  ###### Returns a specific object from your collection.<br> 
+  ![API Image](/images/tid.png){:class="img-responsive"} <br>
 
 left_code_blocks:
   - code_block: |-

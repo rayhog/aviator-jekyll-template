@@ -20,16 +20,17 @@ content_markdown: >-
 
   * Technopedia-id endpoint that you use to look any Technopedia product by ID.<br>
 
+  <br>
   #### V6 API Endpoints
 
 
   ###### To query the Technopedia database you use the following endpoints:
 
   * `https://v6.technopedia.com/tql?q=MATCH [Query Parameters]`<br>
-    You provide query parameters to the MATCH statement to generate the criteria for your query, as in the following example:<br>
+    ###### You provide query parameters to the MATCH statement to generate the criteria for your query, as in the following example:<br>
     ![API Image](/images/get_tql.png){: .img-responsive}<br>
   * `https://v6.technopedia.com/technopedia-id/[Technopedia ID]`<br>
-    You provide the Technopedia ID for the product that you're querying to return data for that specific product, as in the following example:<br>
+    ###### You provide the Technopedia ID for the product that you're querying to return data for that specific product, as in the following example:<br>
     ![API Image](/images/tid.png){: .img-responsive}<br>
 
   
@@ -47,14 +48,14 @@ content_markdown: >-
   * Attributes are properties of a node and they store data in key-value pairs,
   such as '{name Joe}'
 
-  * Relationship provide a connection between nodes. Relationships have a start
-  node, end node, a type, and a direction. For example, the nodes apple and an
-  orchard have a relationship in the graph which is named 'grows\_in'. Apple is
+  * Relationships provide a connection between nodes. Relationships have a start
+  node, end node, a type, and a direction. 
+  For example, the nodes apple and an orchard have a relationship in the graph which is named 'grows\_in'. Apple is
   the start node; orchard is the end node; 'grows\_in' is the relationship and
   the direction is apple to orchard.
 
 
-  ###### Here's a diagram of how Nodes and Relationships work:
+  ###### The following diagram is an example of how Nodes and Relationships are connected:
 
 
   ![API Image](/images/NodeAndRel.png){: .img-responsive}<br>&nbsp;
