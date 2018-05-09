@@ -38,6 +38,7 @@ right_code_blocks:
     language: json
 right_code_blocks:
   - code_block: |3-
+      EXAMPLE 2
       {
         "id": 3,
         "title": "The Book Thief",
