@@ -7,17 +7,16 @@ description: >-
   Technopedia that contains 'excel'.
 parameters:
   - name: title
-    content: The title for the book
-  - name: score
-    content: The book's score between 0 and 5
+    content: The title for the software
+  - name: name of license
+    content: The license score 
 content_markdown: >-
-  ## The query returns software that includes 'Excel'. This is query is case
+  ###### The query returns software that includes 'Excel'. This is query is case
   sensitive.
 
   {: .success}
 
-
-  Adds a book to your collection.
+  Adds an object to your collection.
 left_code_blocks:
   - code_block: |-
       {

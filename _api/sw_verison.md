@@ -7,10 +7,10 @@ description: >-
   Technopedia that contains 'excel'.
 content_markdown: >-
   The query returns software that includes 'Excel'. This is query is case sensitive.
-
-
-  {: .success}
+  
   Gets software version information
+  {: .success}
+  
 left_code_blocks:
   - code_block: |-
       {

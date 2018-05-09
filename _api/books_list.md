@@ -1,20 +1,22 @@
 ---
-title: CPU 
+title: Software Release
 position: 1.6
 type: 
-description: List all books
+description: Get software release data
 parameters:
   - name: Categories
-    content: Category of CPU
+    content: Category of class
   - name: Relationships
     content: Relationships to other Nodes
 content_markdown: |-
-  MATCH (CPU:a) RETURN a
+  MATCH (SOFTWARE_VERSION:a) RETURN a
   {: .info }
   <br>
-  ### You can paginate by using the parameters listed above.
+  ##### You can paginate by using the parameters listed above.
   ###### Lists all the photos you have access to. You can paginate by using the parameters listed above.
-  ![API Image](/images/logo.png){:class="img-responsive"} <br>
+  ![API Image](/images/api.png){:class="img-responsive"} <br>
+  <br> The Technopedia Version 6.0 API uses OAuth for authentication. To authenticate a session, pass your key in the request header. 
+  Your API key should have been provided to you by Flexera support. If you do not have a key please contact support.
 
 left_code_blocks:
   - code_block: |-
