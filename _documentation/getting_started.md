@@ -1,8 +1,9 @@
 ---
+image: /images/NodeAndRel.png
 title: Getting Started
 position: 1.02
 content_markdown: >-
-  ![API Image](/images/logo.png){: .img-responsive} <br>
+  
 
   ###### Welcome to the API documentation page<br>
   ###### This API document is designed for those interested in developing for the
