@@ -14,7 +14,7 @@ content_markdown: |-
   <br>
   ###### You can paginate by using the parameters listed above.
   Lists all the photos you have access to. You can paginate by using the parameters listed above.<br>
-  ![API Image](/images/apiEcon.png){:class="img-responsive"} 
+  ![API Image](/images/apiEcon.PNG){:class="img-responsive"} 
   <br> The Technopedia Version 6.0 API uses OAuth for authentication. To authenticate a session, pass your key in the request header. 
   Your API key should have been provided to you by Flexera support. If you do not have a key please contact support.
 
