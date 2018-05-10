@@ -85,7 +85,7 @@ right_code_blocks:
         "dateAdded": "5/1/2015"
       }
     title: Response
-    language: json
+    language: html
   - code_block: |-
       QUERY RESPONSE 2
 
@@ -94,5 +94,5 @@ right_code_blocks:
         "message": "Book doesn't exist"
       }
     title: Error
-    language: json
+    language: html
 ---
