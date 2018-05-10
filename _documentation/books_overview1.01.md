@@ -6,7 +6,7 @@ description:
 content_markdown: >-
   ###### The Techopedia version 6 API provides enhanced, cloud-based access to
   asset data in Technopedia. Technopedia uses the API with the graph-based query
-  language to provide a cloud-first, high-performance resource for customers.
+  language to provide a cloud-first, high-performance resource for customers.<br>
 
 
   #### What’s in Technopedia V6 API
@@ -20,9 +20,9 @@ content_markdown: >-
 
   * Technopedia-id endpoint that you use to look any Technopedia product by ID.<br>
 
+  
+  ### V6 API Endpoints
   <br>
-  #### V6 API Endpoints
-
 
   ###### To query the Technopedia database you use the following endpoints:
 
