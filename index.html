@@ -5,7 +5,10 @@ title: API Docs
 {% for collection in sorted_collections %}
 	{% assign sorted_docs = collection.docs | sort: "position" %}
 	{% for doc in sorted_docs %}
+	<div>
+		<img class="full-width" src='./images/logo.png' />
 		<section class="doc-content">
+			
 			<section class="left-docs">
 				<h3>
 					<a id="{{ doc.id | replace: '/', '' | replace: '.', '' }}">
@@ -46,5 +49,6 @@ title: API Docs
 				</section>
 			{% endif %}
 		</section>
+	</div>
 	{% endfor %}
 {% endfor %}
