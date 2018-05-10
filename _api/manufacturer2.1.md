@@ -16,6 +16,10 @@ content_markdown: |-
   The query returns software that includes 'Excel'. This is query is case
   sensitive.
   {: .success}
+
+  ###### This API is being continuously developed and changes are implemented on a regular basis.
+  Throughout this document inline examples are provided that show examples of how to make requests to the API. The cURL examples should work on most systems. Mac and Linux users typically have cURL installed already, although Windows users will likely need to install cURL.
+  
 left_code_blocks:
   - code_block: |-
       $.ajax({
