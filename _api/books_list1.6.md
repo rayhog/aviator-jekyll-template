@@ -2,7 +2,7 @@
 title: Software Release
 position: 1.6
 type: 
-description: Get software release data
+description: Get software release data from Technopedia
 parameters:
   - name: Categories
     content: Category of class
@@ -13,8 +13,8 @@ content_markdown: |-
   {: .info }
   <br>
   ###### You can paginate by using the parameters listed above.
-  ###### Lists all the photos you have access to. You can paginate by using the parameters listed above.
-  ![API Image](/images/apiEcon.png){:class="img-responsive"} <br>
+  Lists all the photos you have access to. You can paginate by using the parameters listed above.<br>
+  ![API Image](/images/apiEcon.png){:class="img-responsive"} 
   <br> The Technopedia Version 6.0 API uses OAuth for authentication. To authenticate a session, pass your key in the request header. 
   Your API key should have been provided to you by Flexera support. If you do not have a key please contact support.
 

@@ -1,8 +1,8 @@
 ---
-title: Software Release
-position: 1.5
+title: Software
+position: 1.1
 type: 
-description: Get software release data
+description: Get software data
 parameters:
   - name:
     content:
