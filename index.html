@@ -7,15 +7,12 @@ title: API Docs
 	<div>
 		<img class="full-width" src='./images/logox.png' />
 		{% for doc in sorted_docs %}
-
-			
-			
 			<section class="doc-content">
 				
 				<section class="left-docs">
 					<h3>
 						<a id="{{ doc.id | replace: '/', '' | replace: '.', '' }}">
-							{{ doc.title }}
+							{{ doc.title }} test
 							{% if doc.type %}
 								<span class="endpoint {{ doc.type }}"></span>
 							{% endif %}
