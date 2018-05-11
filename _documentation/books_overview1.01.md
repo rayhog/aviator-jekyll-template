@@ -6,7 +6,7 @@ description:
 content_markdown: >-
   ###### The Techopedia version 6 API provides enhanced, cloud-based access to
   asset data in Technopedia. Technopedia uses the API with the graph-based query
-  language to provide a cloud-first, high-performance resource for customers.<br>
+  language to provide a cloud-first, high-performance resource for customers.
 
 
   #### What’s in Technopedia V6 API
@@ -18,22 +18,27 @@ content_markdown: >-
   * TQL (Technopedia Query Language) endpoint that is used for graph-based
   querying of the Technopedia database.
 
-  * Technopedia-id endpoint that you use to look any Technopedia product by ID.<br>
+  * Technopedia-id endpoint that you use to look any Technopedia product by ID.
 
-  
+
   ### V6 API Endpoints
-  <br>
+
 
   ###### To query the Technopedia database you use the following endpoints:
 
-  * `https://v6.technopedia.com/tql?q=MATCH [Query Parameters]`<br>
-    ###### You provide query parameters to the MATCH statement to generate the criteria for your query, as in the following example:<br>
-    ![API Image](/images/get_tql.png){: .img-responsive}<br>
-  * `https://v6.technopedia.com/technopedia-id/[Technopedia ID]`<br>
-    ###### You provide the Technopedia ID for the product that you're querying to return data for that specific product, as in the following example:<br>
-    ![API Image](/images/tid.png){: .img-responsive}<br>
 
-  
+  * `https://v6.technopedia.com/tql?q=MATCH [Query Parameters]`
+
+    ###### You provide query parameters to the MATCH statement to generate the criteria for your query, as in the following example:
+
+    ![API Image](/images/get_tql.png){: .img-responsive}
+
+  * `https://v6.technopedia.com/technopedia-id/[Technopedia ID]`
+
+    ###### You provide the Technopedia ID for the product that you're querying to return data for that specific product, as in the following example:
+
+    ![API Image](/images/tid.png){: .img-responsive}
+
   #### TQL graph concepts
 
 
@@ -49,13 +54,14 @@ content_markdown: >-
   such as '{name Joe}'
 
   * Relationships provide a connection between nodes. Relationships have a start
-  node, end node, a type, and a direction. 
-  For example, the nodes apple and an orchard have a relationship in the graph which is named 'grows\_in'. Apple is
+  node, end node, a type, and a direction. For example, the nodes apple and an
+  orchard have a relationship in the graph which is named 'grows\_in'. Apple is
   the start node; orchard is the end node; 'grows\_in' is the relationship and
   the direction is apple to orchard.
 
 
-  ###### The following diagram is an example of how Nodes and Relationships are connected:
+  ###### The following diagram is an example of how Nodes and Relationships are
+  connected:
 
 
   ![API Image](/images/NodeAndRel.png){: .img-responsive}<br>&nbsp;
@@ -70,6 +76,8 @@ left_code_blocks:
     language: javascript
 right_code_blocks:
   - code_block: |-
+      QUERY RESPONSE
+
       {
         "id": 3,
         "title": "The Book Thief",
@@ -77,12 +85,14 @@ right_code_blocks:
         "dateAdded": "5/1/2015"
       }
     title: Response
-    language: json
+    language: html
   - code_block: |-
+      QUERY RESPONSE 2
+
       {
         "error": true,
         "message": "Book doesn't exist"
       }
     title: Error
-    language: json
+    language: html
 ---
