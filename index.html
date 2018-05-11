@@ -2,7 +2,7 @@
 title: API Docs
 ---
 <div>
-	<img class="full-width" src='./images/logox.png' />
+	<img class="full-width" src='./images/logox.png' /div>
 	{% assign sorted_collections = site.collections | sort: "position" %}
 	{% for collection in sorted_collections %}
 		{% assign sorted_docs = collection.docs | sort: "position" %}
@@ -12,7 +12,7 @@ title: API Docs
 					<section class="left-docs">
 						<h3>
 							<a id="{{ doc.id | replace: '/', '' | replace: '.', '' }}">
-								{{ doc.title }} test
+								{{ doc.title }}
 								{% if doc.type %}
 									<span class="endpoint {{ doc.type }}"></span>
 								{% endif %}
@@ -53,4 +53,4 @@ title: API Docs
 			{% endfor %}
 		
 	{% endfor %}
-</div>
+

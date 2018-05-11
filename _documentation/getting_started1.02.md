@@ -21,7 +21,8 @@ content_markdown: >-
 
   Testing image placement:
  
-  <br>Here's another image: ![API Image](/images/allservices_diagram.png){: .img-responsive}
+  <br>Here's another image: <br>
+  ![API Image](/images/allservices_diagram.png){: .img-responsive}
 
   ###### This API document is designed for those interested in developing for
   the platform. This API is still under development and is a work in progress.
