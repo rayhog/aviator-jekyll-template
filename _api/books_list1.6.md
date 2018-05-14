@@ -28,9 +28,7 @@ content_markdown: >-
   you do not have a key please contact support.
 left_code_blocks:
   - code_block: |+
-      MATCH (n:SOFTWARE_RELEASE) 
-      RETURN
-      n.cat_sw_release_id, n.ga_date
+      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
 
       RESPONSE SAMPLE
       {
@@ -53,16 +51,38 @@ left_code_blocks:
 
     title: Example 1
     language: javascript
-  - code_block: "MATCH (n:SOFTWARE_RELEASE) \r\nRETURN \r\nn.cat_sw_release_id, \r\nn.release_url, \r\nn.ga_date LIMIT 1\r\n\r\nRESPONSE SAMPLE\r\n{\r\n    \"keys\": [\r\n      \"n.cat_sw_release_id\",\r\n      \"n.release_url\",\r\n      \"n.ga_date\"\r\n    ],\r\n    \"length\": 3,\r\n    \"_fields\": [\r\n      {\r\n        \"low\": 10427852,\r\n        \"high\": 0\r\n      },\r\n      \"www.nntest.com/files/import/Solutions%20Catalog%20Data.xls\",\r\n      \"Not Available\"\r\n    ],\r\n    \"_fieldLookup\": {\r\n      \"n.cat_sw_release_id\": 0,\r\n      \"n.release_url\": 1,\r\n      \"n.ga_date\": 2\r\n    }"
+  - code_block: >-
+      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.release_url,
+      n.ga_date LIMIT 1
+
+
+      RESPONSE SAMPLE
+
+      {
+          "keys": [
+            "n.cat_sw_release_id",
+            "n.release_url",
+            "n.ga_date"
+          ],
+          "length": 3,
+          "_fields": [
+            {
+              "low": 10427852,
+              "high": 0
+            },
+            "www.nntest.com/files/import/Solutions%20Catalog%20Data.xls",
+            "Not Available"
+          ],
+          "_fieldLookup": {
+            "n.cat_sw_release_id": 0,
+            "n.release_url": 1,
+            "n.ga_date": 2
+          }
     title: Example 2
     language: javascript
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE)
-      -[:RELEASE_OF]->
-      (SOFTWARE_PRODUCT) 
-      RETURN 
-      n.cat_sw_release_id 
-      LIMIT 5
+      MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->
+      (SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 5
 
       RESPONSE SAMPLE
       {
