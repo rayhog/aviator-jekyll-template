@@ -11,7 +11,7 @@ content_markdown: >-
 
   ![API Image](/images/apiEcon.PNG){: .img-responsive}<br>
 
-  This API document is designed for those interested in developing for the
+  ##### This API document is designed for those interested in developing for the
   platform. Throughout this document we provide you with inline examples regarding how to perform requests to the API. The cURL examples should work on most systems. Mac and Linux users typically have cURL installed already, although Windows users will likely need to install cURL.
 
   ###### This API is being continuously developed and changes are implemented on a regular basis.

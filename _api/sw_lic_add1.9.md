@@ -5,13 +5,9 @@ type:
 description: >-
   Create Query for example query. In this example, we will pull data from
   Technopedia that contains 'excel'.
-parameters:
-  - name: title
-    content: The title for the software
-  - name: name of license
-    content: The license score 
+
 content_markdown: >-
-  ###### The query returns software that includes 'Excel'. This is query is case
+  ######  The query returns software that includes 'Excel'. This is query is case
   sensitive.
 
   {: .success}
@@ -90,7 +86,7 @@ left_code_blocks:
                       "technopedia_id": "2b0e74ee-b8c0-4a6d-a096-a892fbaed1fc"
                   }
               },
-    title: QUERY EXAMPLE AND RESPONSE
+    title: QUERY EXAMPLE
     language: bash
   - code_block:
     title:
