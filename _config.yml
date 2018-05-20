@@ -1,7 +1,7 @@
 # ----
 # Site
 
-title: FLEXYara
+title: RAY API
 description: Jekyll template for API documentation.
 url: https://example.com
 google_analytics_key:
@@ -14,12 +14,11 @@ timezone: Etc/UTC
 
 collections:
   documentation:
-    title: Overview 
+    title: Documentation
     position: 1
   api:
-    title: API 
+    title: APIs
     position: 2
-  
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
@@ -44,37 +43,9 @@ defaults:
       type: "api"
     values:
       _hide_content: true
-       -
-    scope:
-      type: "software"
-    values:
-      _hide_content: true
-  -
-    scope:
-      type: "hardware"
-    values:
-      _hide_content: true
-      scope:
-      type: "cpu"
-    values:
-      _hide_content: true
-  -
-    scope:
-      type: "cve"
-    values:
-      _hide_content: true
-      scope:
-      type: "softwarelicense"
-    values:
-      _hide_content: true
-  -
-    scope:
-      type: "hardwarelicense"
-    values:
-      _hide_content: true
 
 # -----------
-# Flexy
+# CloudCannon
 
 types:
   - get
@@ -96,7 +67,7 @@ languages:
 
 _options:
   content_markdown:
-    format: p h1 h2 h3 h4 h5 h6
+    format: p h4 h5 h6
     bold: true
     italic: true
     link: true
