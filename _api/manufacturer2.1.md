@@ -45,5 +45,5 @@ right_code_blocks:
       Application Architecture and Design
     title: Manufacturer Attributes
     language: bash
-  ---
+---
 
