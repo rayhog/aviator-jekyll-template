@@ -44,6 +44,6 @@ right_code_blocks:
       Anti Virus and Malware
       Application Architecture and Design
     title: Manufacturer Attributes
-    language: json
+    language: bash
   ---
 
