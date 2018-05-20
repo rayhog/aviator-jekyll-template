@@ -34,7 +34,7 @@ left_code_blocks:
     language: javascript
 right_code_blocks:
   - code_block: |2
-      Manufacturer Attributes
+      Manufacturer Attributes:
       _____________________________________
       Accounting
       Alerts and Monitoring Tools
@@ -43,16 +43,5 @@ right_code_blocks:
       Application Architecture and Design
     title: Manufacturer Attributes
     language: bash
-right_code_blocks:
-  - code_block: |3
-      Manufacturer Attributes
-      _____________________________________
-      Accounting
-      Alerts and Monitoring Tools
-      Analytics
-      Anti Virus and Malware
-      Application Architecture and Design
-    title: Manufacturer Attributes
-    language: bash    
 ---
 
