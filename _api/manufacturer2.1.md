@@ -35,19 +35,15 @@ left_code_blocks:
     title: jQuery
     language: javascript
 right_code_blocks:
-  - code_block: |2-
-      {
-        "id": 3,
-        "status": "deleted"
-      }
-    title: Response
+  - code_block: |2
+      Manufacturer Attributes
+      _____________________________________
+      Accounting
+      Alerts and Monitoring Tools
+      Analytics
+      Anti Virus and Malware
+      Application Architecture and Design
+    title: Manufacturer Attributes
     language: json
-  - code_block: |2-
-      {
-        "error": true,
-        "message": "Book doesn't exist"
-      }
-    title: Error
-    language: json
----
+  ---
 
