@@ -3,9 +3,6 @@ title: Manufacturer
 position: 2.1
 type: 
 description: The manufacturer is the creator of the prouduct and in relationships the manufacturer is referered to as VENDOR_OF, for example Microsoft is the vendor of Microsoft Word.
-parameters:
-  - name:
-    content:
 content_markdown: |-
   Deletes a book in your collection.
   The query returns software that includes 'Excel'. This is query is case
@@ -15,6 +12,7 @@ content_markdown: |-
 
   The query returns software that includes 'Excel'. This is query is case
   sensitive.
+
   {: .success}
 
   ###### This API is being continuously developed and changes are implemented on a regular basis.
