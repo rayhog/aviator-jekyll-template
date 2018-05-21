@@ -9,9 +9,10 @@ content_markdown: >-
   ###### You can use the API with TQL (Technopedia query language), which is a graph-based query language that you use to query the Technopedia database.<br>
 
   ###### Version 6 Technopedia query language uses API graph databases, which are designed to process data by using a graph-based methodology, rather than the relational database model. 
-  ##### You query the Technopedia database by using the graph-based Technopedia query language (TQL) to select nodes and attributes of those nodes to refine the query and return relevant data. For example, you might query the software product node and include the title property to return titles of software products.
-  ##### The following query is an example of a GET request with a graph query, which is like a Select statement in SQL, which selects the software node and returns titles of software products.
-  GET: `https://v6.technopedia.com/tql?MATCH (n:SOFTWARE_PRODUCT) RETURN n.title`
+  You query the Technopedia database by using the graph-based Technopedia query language (TQL) to select nodes and attributes of those nodes to refine the query and return relevant data. For example, you might query the software product node and include the title property to return titles of software products.<br>
+
+  ###### The following query is an example of a GET request with a graph query, which is like a Select statement in SQL, which selects the software node and returns titles of software products.<br>
+  GET: `https://v6.technopedia.com/tql?MATCH (n:SOFTWARE_PRODUCT) RETURN n.title`<br>
 
 
 
