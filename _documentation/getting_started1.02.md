@@ -3,31 +3,28 @@ image: /images/NodeAndRel.png
 title: Getting Started
 position: 1.02
 content_markdown: >-
-  ###### Welcome to the API documentation page<br>
-  This API document is designed for those interested in developing for the
-  platform. Throughout this document we provide you with inline examples regarding how to perform requests to the API. The cURL examples should work on most systems. Mac and Linux users typically have cURL installed already, although Windows users will likely need to install cURL.
+  ###### Welcome to the API documentation page about getting started.<br>
+  Technopedia endpoints enable to you to use the Technopedia ID endpoint to get product information for a specific product by specifying the Technopedia ID, and to use the Technopedia query language (TQL) with the TQL endpoint to query data from the Technopedia database.<br> 
+  ###### You can only make GET API requests. Examples of API GET requests and MATCH statements are provided throughout this guide. 
+  Mac and Linux users typically have cURL installed already, although Windows users will likely need to install cURL.
+   
+  ###### The base URL for all queries by using the API is: https://v6.technopedia.com/ <br>
+  ###### The Technopedia Version 6 API uses OAuth for authentication. To authenticate in a new session, you pass the API key in the request header. The API key is provided by Flexera Technopedia support.
 
-  <p>Here's an example image: </p>
+  Here’s some examples of using the following fake API key by using cURL and Postman.
+  `curl -G -H "Authorization: Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode "q=MATCH (s:SOFTWARE) RETURN s.title"`
+  The query returns software that includes 'Excel'. This is query is case
+  sensitive.
 
-  ![API Image](/images/apiEcon.PNG){: .img-responsive}<br>
+   {: .success}
 
-  ##### This API document is designed for those interested in developing for the
-  platform. Throughout this document we provide you with inline examples regarding how to perform requests to the API. The cURL examples should work on most systems. Mac and Linux users typically have cURL installed already, although Windows users will likely need to install cURL.
+  To avoid issues with whitespaces in https Get requests, use the --data-urlencode option in the cURL command to encode spaces. 
+  ###### Here’s an example of adding the API key to the header in Postman:
 
-  ###### This API is being continuously developed and changes are implemented on a regular basis.
-  Throughout this document inline examples are provided that show examples of how to make requests to the API. The cURL examples should work on most systems. Mac and Linux users typically have cURL installed already, although Windows users will likely need to install cURL.
+  ![API Image](/images/bearer_token.png){: .img-responsive}<br>
 
-  ![API Image](/images/NodeAndRel.png){: .img-responsive}<br>
-
-  Testing image placement:
  
-  <br>Here's another image: <br>
-
-  ![API Image](/images/allservices_diagram.png){: .img-responsive}
-  <br>
-
-  ###### This API document is designed for those interested in developing for
-  the platform. This API is still under development and is a work in progress.
+  
 
 left_code_blocks:
   - code_block: |-

@@ -4,21 +4,27 @@ position: 1.01
 type:
 description:
 content_markdown: >-
-  ###### The Techopedia version 6 API provides enhanced, cloud-based access to
-  asset data in Technopedia. Technopedia uses the API with the graph-based query
-  language to provide a cloud-first, high-performance resource for customers.
+  ###### The Techopedia version 6 API enables cloud-based access to asset data in Technopedia to provide a cloud-first, high-performance resource for customers.
+
+  ###### You can use the API with TQL (Technopedia query language), which is a graph-based query language that you use to query the Technopedia database.<br>
+
+  ###### Version 6 Technopedia query language uses API graph databases, which are designed to process data by using a graph-based methodology, rather than the relational database model. 
+  ##### You query the Technopedia database by using the graph-based Technopedia query language (TQL) to select nodes and attributes of those nodes to refine the query and return relevant data. For example, you might query the software product node and include the title property to return titles of software products.
+  ##### The following query is an example of a GET request with a graph query, which is like a Select statement in SQL, which selects the software node and returns titles of software products.
+  GET: `https://v6.technopedia.com/tql?MATCH (n:SOFTWARE_PRODUCT) RETURN n.title`
 
 
-  #### What’s in Technopedia V6 API
+
+  #### What’s in Technopedia V6 API?
 
 
   * Graph store organization model that enables Technopedia to store asset data
-  from any industry.
+  from any entity.
 
-  * TQL (Technopedia Query Language) endpoint that is used for graph-based
+  * TQL (Technopedia Query Language) endpoint that you use for graph-based
   querying of the Technopedia database.
 
-  * Technopedia-id endpoint that you use to look any Technopedia product by ID.
+  * Technopedia-id endpoint that you use to look any Technopedia product by its ID.
 
 
   #### V6 API Endpoints
