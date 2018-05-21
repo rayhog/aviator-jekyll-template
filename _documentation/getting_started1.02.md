@@ -9,6 +9,7 @@ content_markdown: >-
 
   
   #### Make API requests with cURL or a third-party API client<br>
+  
   You can use cURL or a third-party API client to get data from the Technopedia database.
   The base URL for all API queries is: https://v6.technopedia.com/ <br>
   
