@@ -20,6 +20,7 @@ content_markdown: >-
 
   To avoid issues with whitespaces in https Get requests, use the --data-urlencode option in the cURL command to encode spaces. 
   Here’s an example of adding the API key to the header in Postman:<br>
+  <p></p>
 
   ![API Image](/images/bearer_token.png){: .img-responsive}<br>
 
