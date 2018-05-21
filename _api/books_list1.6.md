@@ -131,7 +131,7 @@ right_code_blocks:
     title: Error
     language: json
 right_code_blocks:
-  - code_block: |-
+  - code_block: |-2
       [
         {
           "id": 1,
