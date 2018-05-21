@@ -13,11 +13,11 @@ content_markdown: >-
 
   ###### The following query is an example of a GET request with a graph query, which is like a Select statement in SQL, which selects the software node and returns titles of software products.<br>
   
-  GET: `https://v6.technopedia.com/tql?MATCH (n:SOFTWARE_PRODUCT) RETURN n.title`<br>
+  `GET:` `https://v6.technopedia.com/tql?MATCH (n:SOFTWARE_PRODUCT) RETURN n.title`<br>
 
 
 
-  #### What’s in Technopedia V6 API?
+  #### What’s included in Technopedia V6 API?
 
 
   * Graph store organization model that enables Technopedia to store asset data
@@ -29,7 +29,7 @@ content_markdown: >-
   * Technopedia-id endpoint that you use to look any Technopedia product by its ID.
 
 
-  #### V6 API Endpoints
+  #### What are the V6 API Endpoints?
 
 
   ###### To query the Technopedia database you use the following endpoints:

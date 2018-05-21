@@ -13,14 +13,15 @@ content_markdown: >-
 
   Here’s some examples of using the following fake API key by using cURL and Postman.<br>
   `curl -G -H "Authorization: Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode "q=MATCH (s:SOFTWARE) RETURN s.title"`<br>
-  The query returns software that includes 'Excel'. This is query is case
-  sensitive.
+  
 
    {: .success}
 
-  To avoid issues with whitespaces in https Get requests, use the --data-urlencode option in the cURL command to encode spaces. 
+  To avoid issues with whitespaces in https Get requests, use the `--data-urlencode` option in the cURL command to encode spaces.<br><br>
+  
+  
   Here’s an example of adding the API key to the header in Postman:<br>
-  <p></p>
+  <br>
 
   ![API Image](/images/bearer_token.png){: .img-responsive}<br>
 
