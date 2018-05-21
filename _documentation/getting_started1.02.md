@@ -6,22 +6,26 @@ description:
 content_markdown: >-
   ###### Technopedia endpoints enable to you to use the Technopedia ID endpoint to get product information for a specific product by specifying the Technopedia ID, and to use the Technopedia query language (TQL) with the TQL endpoint to query data from the Technopedia database.<br> 
 
-  You can only make GET API requests. 
+  You can only make GET API requests. <br>
   
-  #### Use cURL to make API requests or install a third-part API client
+  #### Use cURL to make API requests or install a third-part API client<br>
+  
   Examples of API GET requests and MATCH statements are provided throughout this guide. 
   Typically Mac and Linux users have cURL installed, and Windows users most likely have to install cURL. You can also use a third-party API client, such as Postman to send API requests.
    
   ###### The base URL for all API queries is: https://v6.technopedia.com/ <br>
   
  
-  #### Get your API key
-  Before you can get data from data from the Technopedia database, you must get an API key from Flexera Technopedia support.
+  #### Get your API key<br>
 
-  #### Method
-  You can only make GET API requests to the Technopedia database.
+  Before you can get data from data from the Technopedia database, you must get an API key from Flexera Technopedia support.<br>
 
-  #### Parameters
+  #### Method<br>
+
+  You can only make GET API requests to the Technopedia database.<br>
+
+  #### Parameters<br>
+
   For the Technopedia-id endpoint, you provide the Technopedia ID.
   For the TQL endpoint, you provide MATCH statements with parameters that specify nodes, attributes, and relationships.
 
