@@ -77,8 +77,7 @@ left_code_blocks:
     title: Example 2
     language: javascript
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->
-      (SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 5
+      MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 5
 
       RESPONSE SAMPLE
       {
@@ -127,7 +126,7 @@ right_code_blocks:
     title: Error
     language: json
 right_code_blocks:
-  - code_block: |-2
+  - code_block: |-3
       [
         {
           "id": 1,

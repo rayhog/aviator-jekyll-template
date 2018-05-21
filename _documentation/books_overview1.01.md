@@ -46,10 +46,10 @@ content_markdown: >-
 
     ![API Image](/images/tid.png){: .img-responsive}
 
-  #### TQL graph concepts
+  #### Technopedia query language (TQL) graph concepts
 
 
-  ###### The following concepts are involved in the storage of data is stored in
+  ###### The following concepts are involved in the storage of data that is stored in
   Technopedia
 
 
@@ -58,13 +58,15 @@ content_markdown: >-
   pairs.
 
   * Attributes are properties of a node and they store data in key-value pairs,
-  such as '{name Joe}'
+  such as '{name: Joe}' or '{color: blue}'.
 
   * Relationships provide a connection between nodes. Relationships have a start
-  node, end node, a type, and a direction. For example, the nodes apple and an
-  orchard have a relationship in the graph which is named 'grows\_in'. Apple is
-  the start node; orchard is the end node; 'grows\_in' is the relationship and
-  the direction is apple to orchard.
+  node, end node, a type, and a direction. For example, the nodes Organization and employees
+  might have a relationship in the graph, for example 'Is_Employee_of' is a possible relationship between employees and organization.
+  If Joe is an employee of the organization then this relationship can be expressed in the following way:
+
+  The start node is employees; organization is the end node; 'Is_Employee_of' is the relationship and
+  the direction is employees to organization. The relationship can be expressed as (Employees)-[Is_Employee_of]->(organization).
 
 
   ###### The following diagram is an example of how Nodes and Relationships are

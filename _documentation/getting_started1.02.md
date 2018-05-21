@@ -8,14 +8,15 @@ content_markdown: >-
   The base URL for all API queries is: https://v6.technopedia.com/ <br>
 
   
-  #### Make API requests with cURL or a third-part API client<br>
+  #### Make API requests with cURL or a third-party API client<br>
 
   Examples of API GET requests and MATCH statements are provided throughout this guide. 
   Typically, Mac and Linux users have cURL installed, and Windows users most likely have to install cURL. 
   For example, <br>
-  `curl -G -H "Authorization: Bearer <API_KEY>" https://v6.technopedia.com/tql" --data-urlencode "q=MATCH (s:SOFTWARE) RETURN s.title"`
+  `curl -G -H "Authorization: Bearer <API_KEY>" https://v6.technopedia.com/tql" --data-urlencode "q=MATCH (s:SOFTWARE) RETURN s.title"`<br>
+
   
-  You can also use a third-party API client, such as Postman to send API requests.<br>
+  You can also use a third-party API client, such as Postman as shown in the following image to send API requests.<br>
   <br>
   ![API Image](/images/bearer_token.png){: .img-responsive}<br>
     
