@@ -130,5 +130,30 @@ right_code_blocks:
       }
     title: Error
     language: json
+right_code_blocks:
+  - code_block: |-
+      [
+        {
+          "id": 1,
+          "title": "The Hunger Games",
+          "score": 4.5,
+          "dateAdded": "12/12/2013"
+        },
+        {
+          "id": 1,
+          "title": "The Hunger Games",
+          "score": 4.7,
+          "dateAdded": "15/12/2013"
+        },
+      ]
+    title: Response
+    language: json
+  - code_block: |-
+      {
+        "error": true,
+        "message": "Invalid offset"
+      }
+    title: Error
+    language: json    
 ---
 
