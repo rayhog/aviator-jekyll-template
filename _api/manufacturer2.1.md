@@ -8,10 +8,7 @@ content_markdown: |-
   The query returns software that includes 'Excel'. This is query is case
   sensitive.
 
-   {: .success}
-
-  The query returns software that includes 'Excel'. This is query is case
-  sensitive.
+  
 
    {: .success}
 

@@ -16,7 +16,7 @@ content_markdown: >-
   `curl -G -H "Authorization: Bearer <API_KEY>" https://v6.technopedia.com/tql" --data-urlencode "q=MATCH (s:SOFTWARE) RETURN s.title"`<br>
 
   
-  You can also use a third-party API client, such as Postman as shown in the following image to send API requests.<br>
+  You can also use a third-party API client, such as Postman to send API requests as shown in the following image.<br>
   <br>
   ![API Image](/images/bearer_token.png){: .img-responsive}<br>
     
@@ -32,7 +32,7 @@ content_markdown: >-
   #### Parameters<br>
 
   For the Technopedia-id endpoint, you provide the Technopedia ID.<br>
-  For the TQL endpoint, you provide MATCH statements with parameters that specify nodes, attributes, and relationships.
+  For the TQL endpoint, you provide MATCH statements with parameters that specify nodes, attributes, and relationships which are optional.
 
 
 left_code_blocks:

@@ -2,7 +2,7 @@
 title: Software Edition
 position: 1.5
 type: 
-description: Matches a CVE from Technopedia XXXX
+description: Matches the software edition from Technopedia XXXX
 content_markdown: |-
   This API deletes a book in your collection.
   #### Returns a specific book from your collection.<br>
