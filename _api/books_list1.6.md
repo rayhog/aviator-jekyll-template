@@ -3,11 +3,7 @@ title: Software Release
 position: 1.6
 type:
 description: Get software release data from Technopedia
-parameters:
-  - name: Categories
-    content: Category of class
-  - name: Relationships
-    content: Relationships to other Nodes
+
 content_markdown: >-
   MATCH (SOFTWARE\_VERSION:a) RETURN a
 
