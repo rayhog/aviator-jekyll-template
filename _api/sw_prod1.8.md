@@ -9,11 +9,13 @@ content_markdown: >-
   The query returns software that includes 'Excel'. This is query is case
   sensitive. 
   
-  {: .success} MATCH (n:SOFTWARE\_PRODUCT) WHERE n.title = "PDF Converter" RETURN n 
+  {: .success} 
+  
+  MATCH (n:SOFTWARE\_PRODUCT) WHERE n.title = "PDF Converter" RETURN n 
 left_code_blocks:
   - code_block: "\r\nMATCH (n:SOFTWARE_PRODUCT) \r\nWHERE n.title = \"PDF Converter\" \r\nRETURN n"
     title: MATCH SOFTWARE_PRODUCT
-    language: curl
+    language: bash
   - code_block: |-
       [
         {
