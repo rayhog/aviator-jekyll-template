@@ -4,17 +4,21 @@ title: Getting Started
 position: 1.02
 description: 
 content_markdown: >-
-  ###### Technopedia endpoints enable to you to use the Technopedia ID endpoint to get product information for a specific product by specifying the Technopedia ID, and to use the Technopedia query language (TQL) with the TQL endpoint to query data from the Technopedia database.<br> 
+  ###### Technopedia endpoints enable to you to use the Technopedia ID endpoint to get product information for a specific product by specifying the Technopedia ID, and to use the Technopedia query language (TQL) with the TQL endpoint to query data from the Technopedia database.<br>
+  The base URL for all API queries is: https://v6.technopedia.com/ <br>
 
-  You can only make GET API requests. <br>
   
-  #### Use cURL to make API requests or install a third-part API client<br>
-  
+  #### Make API requests with cURL or a third-part API client<br>
+
   Examples of API GET requests and MATCH statements are provided throughout this guide. 
-  Typically Mac and Linux users have cURL installed, and Windows users most likely have to install cURL. You can also use a third-party API client, such as Postman to send API requests.
-   
-  ###### The base URL for all API queries is: https://v6.technopedia.com/ <br>
+  Typically, Mac and Linux users have cURL installed, and Windows users most likely have to install cURL. 
+  For example, <br>
+  `curl -G -H "Authorization: Bearer <API_KEY>" https://v6.technopedia.com/tql" --data-urlencode "q=MATCH (s:SOFTWARE) RETURN s.title"`
   
+  You can also use a third-party API client, such as Postman to send API requests.<br>
+  <br>
+  ![API Image](/images/bearer_token.png){: .img-responsive}<br>
+    
  
   #### Get your API key<br>
 
@@ -26,7 +30,7 @@ content_markdown: >-
 
   #### Parameters<br>
 
-  For the Technopedia-id endpoint, you provide the Technopedia ID.
+  For the Technopedia-id endpoint, you provide the Technopedia ID.<br>
   For the TQL endpoint, you provide MATCH statements with parameters that specify nodes, attributes, and relationships.
 
 
