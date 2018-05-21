@@ -9,7 +9,7 @@ content_markdown: >-
 
   
   #### Make API requests with cURL or a third-party API client<br>
-  
+
   You can use cURL or a third-party API client to get data from the Technopedia database.
   The base URL for all API queries is: https://v6.technopedia.com/ <br>
   
@@ -34,7 +34,7 @@ content_markdown: >-
   #### Parameters<br>
 
   For the Technopedia-id endpoint, you provide the Technopedia ID.<br>
-  For the TQL endpoint, you provide MATCH statements with parameters that specify nodes, attributes, and relationships which are optional.
+  For the TQL endpoint, you provide MATCH statements with parameters that specify nodes, attributes, and relationships between nodes which are optional.
 
 
 left_code_blocks:
