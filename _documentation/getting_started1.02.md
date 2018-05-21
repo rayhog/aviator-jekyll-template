@@ -2,15 +2,15 @@
 image: /images/NodeAndRel.png
 title: Getting Started
 position: 1.02
+description: 
 content_markdown: >-
   ###### Technopedia endpoints enable to you to use the Technopedia ID endpoint to get product information for a specific product by specifying the Technopedia ID, and to use the Technopedia query language (TQL) with the TQL endpoint to query data from the Technopedia database.<br> 
 
   You can only make GET API requests. Examples of API GET requests and MATCH statements are provided throughout this guide. 
-  Typically Mac and Linux users have cURL installed, and Windows users most likely have to install cURL.
+  Typically Mac and Linux users have cURL installed, and Windows users most likely have to install cURL. You can also use a third-party API client, such as Postman to send API requests.
    
-  ###### The base URL for all queries by using the API is: https://v6.technopedia.com/ <br>
+  ###### The base URL for all API queries is: https://v6.technopedia.com/ <br>
   
-
  
   
 

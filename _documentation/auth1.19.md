@@ -4,8 +4,7 @@ title: Authentication
 position: 1.03
 description: You must authenticate before you can get data by using the API.
 content_markdown: |-
-  ###### 
-  The Technopedia Version 6 API uses OAuth for authentication. To authenticate in a new session, you pass the API key in the request header. The API key is provided by Flexera Technopedia support.
+  ###### The Technopedia Version 6 API uses OAuth for authentication. To authenticate in a new session, you pass the API key in the request header. The API key is provided by Flexera Technopedia support.
 
   Here’s some examples of using the API key: `Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a` by using cURL and Postman:<br>
   The following example shows where you add the API key in a cURL request:
@@ -14,7 +13,7 @@ content_markdown: |-
 
    {: .success}
 
-  To avoid issues with white spaces in your API requests, use the `--data-urlencode` option in the cURL command to encode spaces.<br>
+  Use the `--data-urlencode` option in the cURL command to encode spaces.<br>
   
   The following example shows how you add the API key to the header in Postman:<br>
   <br>
@@ -25,7 +24,7 @@ left_code_blocks:
 
       curl -G -H "Authorization: Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode "q=MATCH (n:SOFTWARE_PRODUCT) WHERE n.title = "PDF Converter" RETURN n
     title: cURL examples
-    language: curl
+    language: bash
 right_code_blocks:
   - code_block: |2-
       {
