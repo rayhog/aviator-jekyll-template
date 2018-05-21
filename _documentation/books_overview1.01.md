@@ -6,7 +6,7 @@ description:
 content_markdown: >-
   ###### The Technopedia version 6 API enables cloud-based access to asset data in Technopedia to provide a cloud-first, high-performance resource for customers.
 
-  ###### You can use the API with TQL (Technopedia query language), which is a graph-based query language that you use to query the Technopedia database. Version 6 Technopedia query language uses API graph databases, which are designed to process data by using a graph-based methodology, rather than the relational database model. 
+  ###### You can use the API with TQL (Technopedia query language), which is a graph-based query language that you use to query the Technopedia database. Version 6 Technopedia query language uses API graph databases, which are designed to process data by using a graph-based methodology, rather than the relational database model. <br>
 
   ###### You query the Technopedia database by using the graph-based Technopedia query language (TQL) to select nodes and attributes of those nodes to refine the query and return relevant data. For example, you might query the software product node and include the title property to return titles of software products.<br>
 
