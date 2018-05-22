@@ -2,10 +2,10 @@
 title: Software Edition
 position: 1.5
 type: 
-description: Matches the software edition from Technopedia XXXX
+description: Matches the software edition from the Technopedia database.
 content_markdown: |-
-  This API deletes a book in your collection.
-  #### Returns a specific book from your collection.<br>
+  Software edition represents the version of the product, such as Standard, Premium, or other version name for the product.
+  <br>
      
 left_code_blocks:
   - code_block: |-
@@ -22,19 +22,20 @@ left_code_blocks:
     title: jQuery
     language: javascript
 right_code_blocks:
+  - code_block: |2
+      Technopedia_id
+      Edition
+      Edition_Desupported_Flag
+      Edition_Order
+      URL
+      Created_At
+      Modified_At
+    title: Software Edition Attributes
+    language: bash
   - code_block: |2-
-      {
-        "id": 3,
-        "status": "deleted"
-      }
-    title: Response
-    language: json
-  - code_block: |2-
-      {
-        "error": true,
-        "message": "Book doesn't exist"
-      }
-    title: Error
-    language: json
+    Edition_of Software Release
+    Edition of Software Product 
+    title: Relationships
+    language: bash
 ---
 

@@ -7,7 +7,14 @@ parameters:
   - name:
     content:
 content_markdown: |-
-  ##### Returns a specific book from your collection.<br>
+  ###### Software is a general classification that can be broken into the following classifications:
+  - Software Product
+  - Software Version
+  - Software Edition
+  - Software Release
+  
+  You can use a combination of the software nodes with relationships to get the data that you specify in your query.
+  <br>
   ![API Image](/images/gears.PNG){:class="img-responsive"} <br>
   
 left_code_blocks:

@@ -16,8 +16,8 @@ content_markdown: >-
   ### Software Major Version
   <br>
   
-  ####### The node that represents the major version of software is 
-  Software versioning used categorize the unique states of software as it is developed and released. The version identifier might be a word, or a number, or inlcude both. For example, version 1.0 is often used to represent the initial release of a software product.
+  ###### The node that represents the major version of software is `SOFTWARE_MAJOR_VERSION`.
+  Software versioning is used to categorize the unique states of software as it is developed and released. The version identifier might be a word, or a number, or inlcude both. For example, version 1.0 is often used to represent the initial release of a software product.
 
 
   
