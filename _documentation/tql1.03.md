@@ -28,8 +28,7 @@ content_markdown: >-
   Here's a diagram of how Nodes and Relationships work:
 
 
-  ![API Image](/images/nodes_and_rel.png){: .img-responsive}
-
+  ![API Image](/images/NodeAndRel.png)<br>&nbsp;
 
   The query returns software that includes 'Excel'. This is query is case
   sensitive.
