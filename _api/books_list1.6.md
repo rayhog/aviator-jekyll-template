@@ -23,7 +23,7 @@ content_markdown: >-
   header. Your API key should have been provided to you by Flexera support. If
   you do not have a key please contact support.
 left_code_blocks:
-  - code_block: |+
+  - code_block: |
       MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
 
       RESPONSE SAMPLE
