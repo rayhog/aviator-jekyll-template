@@ -43,6 +43,7 @@ right_code_blocks:
   - code_block: |2-
       (SOFTWARE_PRODUCT)<-[:EDITION_OF]-(SOFTWARE_EDITION)
       (SOFTWARE_PRODUCT)<-[:VENDOR_OF]-(MANUFACTURER)
+      
 
     title: Relationships
     language: bash

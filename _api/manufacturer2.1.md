@@ -32,16 +32,36 @@ left_code_blocks:
 right_code_blocks:
   - code_block: |2
       Technopedia_id
-      Edition
-      Edition_Desupported_Flag
-      Edition_Order
-      URL
-      Created_At
-      Modified_At
-    title: Software Product Attributes
+      Cat_Manufacturer_ID
+      Title
+      Legal
+      Revenue
+      Symbol
+      Tier
+      Website
+      Description
+      Known_as
+      Phone
+      Fax
+      City
+      Country
+      Email
+      Publicly_Traded
+      State
+      Street
+      ZIP
+      Revenue_Date
+      Fiscal_End_Date
+      Profits_Per_Year
+      Profits_Date
+      Employees
+      Employees_Date
+      Created_at
+      Modified_at
+    title: Manufacturer Attributes
     language: bash
   - code_block: |2-
-      [:VENDOR_OF]->(Manufacturer)
+      (Manufacturer)-[:VENDOR_OF]->(SOFTWARE_PRODUCT)
     title: Relationships
     language: bash
 ---

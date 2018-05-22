@@ -33,17 +33,22 @@ left_code_blocks:
     language: javascript
 right_code_blocks:
   - code_block: |2
-      Technopedia_id
-      Edition
-      Edition_Desupported_Flag
-      Edition_Order
-      URL
-      Created_At
-      Modified_At
-    title: Software Product Attributes
+      Software is broken into 5 nodes
+
+      SOFTWARE_PRODUCT
+      SOFTWARE_VERSION
+      SOFTWARE_MAJOR_VERSION
+      SOFTWARE_EDITION
+      SOFTWARE RELEASE
+    title: Software Nodes
     language: bash
   - code_block: |2-
-      [:VENDOR_OF]->(Manufacturer)
+      EXAMPLES OF SOFTWARE RELATIONSHIPS
+
+      (SOFTWARE_PRODUCT)<-[:EDITION_OF]-(SOFTWARE_EDITION)
+      (MANUFACTURER)-[:VENDOR_OF]->(SOFTWARE_PRODUCT)
+      (SOFTWARE_VERSION)<-[:RELEASE_OF]-(SOFTWARE_RELEASE)
+      (SOFTWARE_VERSION)<-[:MAJOR_VERSION_OF]-(SOFTWARE_MAJOR_VERSION)
     title: Relationships
     language: bash
 ---
