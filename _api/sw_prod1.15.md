@@ -13,44 +13,19 @@ content_markdown: >-
   
   `MATCH (n:SOFTWARE\_PRODUCT) WHERE n.title = "PDF Converter" RETURN n`
 left_code_blocks:
-  - code_block: "\r\nMATCH (n:SOFTWARE_PRODUCT) WHERE n.title = "PDF Converter\" \r\nRETURN n"
-    title: MATCH SOFTWARE_PRODUCT
-    language: bash
   - code_block: |-
-      [
-        {
-          "keys": [
-            "n"
-          ],
-          "length": 1,
-          "_fields": [
-            {
-              "identity": {
-                "low": 57619464,
-                "high": 0
-              },
-              "labels": [
-                "SOFTWARE_PRODUCT"
-              ],
-              "properties": {
-                "product_url": "http://welcome.hp.com/country/us/en/prodserv/software/eda/pdf/HowToDownloadSoftware.pdf",
-                "software": "PDF Converter",
-                "cat_sw_product_id": "441336845",
-                "created_at": "2017-08-28 12:56:27",
-                "title": "PDF Converter",
-                "is_suite": "FALSE",
-                "vendor_category": "Converter",
-                "cat_manufacturer_id": "7796",
-                "technopedia_id": "\\x6a9a4000083f685ae0530100007f9f25",
-                "nfamily": "TRUE",
-                "plicsable": "1",
-                "alias": "HP Exstream PDF Converter",
-                "modified_at": "2017-08-28 12:56:27",
-                "family": "Exstream"
-              }
-            }[   {   
-    title: Response Example
-    language: json
+      $.ajax({
+        "url": "http://api.myapp.com/books/3",
+        "type": "DELETE",
+        "data": {
+          "token": "YOUR_APP_KEY"
+        },
+        "success": function(data) {
+          alert(data);
+        }
+      });
+    title: jQuery
+    language: javascript
 right_code_blocks:
   - code_block: |
       SOFTWARE VERSION ATTRIBUTES
