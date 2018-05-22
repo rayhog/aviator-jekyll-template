@@ -33,8 +33,8 @@ right_code_blocks:
     title: Software Edition Attributes
     language: bash
   - code_block: |2-
-    Edition_of Software Release
-    Edition of Software Product 
+      Edition_of Software Release
+      Edition of Software Product 
     title: Relationships
     language: bash
 ---
