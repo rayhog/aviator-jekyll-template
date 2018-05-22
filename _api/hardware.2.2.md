@@ -1,6 +1,6 @@
 ---
 title: Hardware
-position: 1.4
+position: 2.2
 type: 
 description: Write a MATCH statement to query the Hardware Node.
 content_markdown: |-
