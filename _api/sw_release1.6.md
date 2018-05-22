@@ -137,7 +137,8 @@ right_code_blocks:
     title: Software Product Attributes
     language: bash
   - code_block: |2-
-      [:VENDOR_OF]->(Manufacturer)
+      (SOFTWARE_RELEASE)-[:RELEASE_OF]->(SOFTWARE_VERSION)
+      (SOFTWARE_RELEASE)<-[:EDITION_OF]-(SOFTWARE_EDITION)
     title: Relationships
     language: bash
 ---
