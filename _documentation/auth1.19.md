@@ -6,7 +6,8 @@ description: You must authenticate before you can get data by using the API.
 content_markdown: |-
   ###### The Technopedia Version 6 API uses OAuth for authentication. To authenticate in a new session, you pass the API key in the request header. The API key is provided by Flexera Technopedia support.
 
-  Here’s two ways of using an example API key: `Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a` by using cURL and Postman:<br>
+  In the following examples, an API key example is used in a cURL example and with an API client. The example API key: `Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a` is used in both examples.
+  <br>
   The following example shows where you add the API key in a cURL request:<br>
   <br>
   `curl -G -H "Authorization: Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode "q=MATCH (s:SOFTWARE) RETURN s.title"`<br>

@@ -11,9 +11,9 @@ content_markdown: >-
   
   {: .success} 
   
-  MATCH (n:SOFTWARE\_PRODUCT) WHERE n.title = "PDF Converter" RETURN n 
+  `MATCH (n:SOFTWARE\_PRODUCT) WHERE n.title = "PDF Converter" RETURN n`
 left_code_blocks:
-  - code_block: "\r\nMATCH (n:SOFTWARE_PRODUCT) \r\nWHERE n.title = \"PDF Converter\" \r\nRETURN n"
+  - code_block: "\r\nMATCH (n:SOFTWARE_PRODUCT) WHERE n.title = "PDF Converter\" \r\nRETURN n"
     title: MATCH SOFTWARE_PRODUCT
     language: bash
   - code_block: |-
