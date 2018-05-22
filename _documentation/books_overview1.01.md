@@ -6,8 +6,8 @@ description:
 content_markdown: >-
   ###### The Technopedia version 6 API enables cloud-based access to asset data in Technopedia to provide a cloud-first, high-performance resource for customers.
 
-  ###### You can use the API with TQL (Technopedia query language), which is a graph-based query language that you use to query the Technopedia database. Version 6 Technopedia query language uses API graph databases, which are designed to process data by using a graph-based methodology, rather than the relational database model. <br>
-
+  ###### You can use the API with TQL (Technopedia query language), which is a graph-based query language that you use to query the Technopedia database. Version 6 Technopedia query language (TQL) uses API graph databases, which are designed to process data by using a graph-based methodology, rather than the relational database model. <br>
+  <br>
 
   ###### You query the Technopedia database by using the graph-based Technopedia query language (TQL) to select nodes and attributes of those nodes to define the criteria for the query and return relevant data. For example, you might query the `SOFTWARE_PRODUCT` node and specify the title attribute to return titles of software products.<br>
   `MATCH (s:SOFTWARE_PRODUCT) WHERE title = "Microsoft" RETURN s.title`
@@ -65,10 +65,10 @@ content_markdown: >-
 
   * Relationships provide a connection between nodes. Relationships have a start
   node, end node, a type, and a direction. For example, the nodes Organization and employees
-  might have a relationship in the graph, for example 'Is_Employee_of' is a possible relationship between employees and organization.
+  might have a relationship in the graph, for example `Is_Employee_of` is a possible relationship between employees and organization.
   If Joe is an employee of the organization then this relationship can be expressed in the following way:<br>
 
-  The start node is employees; organization is the end node; 'Is_Employee_of' is the relationship and
+  The start node is employees; organization is the end node; `Is_Employee_of` is the relationship and
   the direction is employees to organization. The relationship can be expressed as `(Employees)-[Is_Employee_of]->(organization)`.
 
 

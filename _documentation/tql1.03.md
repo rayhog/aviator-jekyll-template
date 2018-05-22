@@ -9,7 +9,7 @@ description: >-
   time, which makes it more efficient than a relational database.
 content_markdown: >-
   ###### Nodes are the entities in the Technopedia graph. They can hold any
-  number of attributes, which are key-value-pairs. Relationships provide
+  number of attributes, which are represented by key-value-pairs. Relationships provide
   semantically relevant connections between nodes. Relationships have a
   type,such as 'friend\_of' and a direction such as Joe (node) friend\_of Bob
   (node)
@@ -30,6 +30,7 @@ content_markdown: >-
 
   ![API Image](/images/NodeAndRel.png)<br>&nbsp;
 
+  <br>
   The query returns software that includes 'Excel'. This is query is case
   sensitive.
 
