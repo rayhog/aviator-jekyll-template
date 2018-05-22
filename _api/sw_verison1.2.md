@@ -3,13 +3,23 @@ title: Software Version
 position: 1.2
 type: 
 description: >-
-  Create Query for example query. In this example, we will pull data from
-  Technopedia that contains 'excel'.
+  Two nodes represent software versions. The Software major version represents the major version attributes and the software version represents the attributes that are associated with child versions of the parent major version.
 content_markdown: >-
   The query returns software that includes 'Excel'. This is query is case sensitive.
   
   Gets software version information
+
   {: .success}
+
+  <br>
+
+  ### Software Major Version
+  <br>
+  
+  ####### The node that represents the major version of software is 
+  Software versioning used categorize the unique states of software as it is developed and released. The version identifier might be a word, or a number, or inlcude both. For example, version 1.0 is often used to represent the initial release of a software product.
+
+
   
 left_code_blocks:
   - code_block: |-

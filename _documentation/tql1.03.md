@@ -3,10 +3,7 @@ title: TQL
 position: 1.03
 type:
 description: >-
-  TQL (Technopedia Query Language) is the graph query language that you use to
-  get data from Technopeida. The graph database stores connections between nodes
-  as first-class citizens so it doesn't have to compute relationships at query
-  time, which makes it more efficient than a relational database.
+  You use the Technopedia query language with the TQL endpoint to query data in the Technopedia database. TQL is the graph query language that you use to query the database. The graph database stores connections between nodes as first-class citizens so it doesn't have to compute relationships at query time, which makes it more efficient than a relational database.
 content_markdown: >-
   ###### Nodes are the entities in the Technopedia graph. They can hold any
   number of attributes, which are represented by key-value-pairs. Relationships provide
@@ -16,7 +13,7 @@ content_markdown: >-
 
 
   ###### In the following example, you match the relationship is descriped as
-  Joe is a friend of Bob.
+  Joe is a friend of Bob. This relationship connection 
 
 
   `Match (node)-[:RELATIONSHIP]-> (node)`
@@ -30,6 +27,7 @@ content_markdown: >-
 
   ![API Image](/images/NodeAndRel.png)<br>&nbsp;
 
+  
   <br>
   The query returns software that includes 'Excel'. This is query is case
   sensitive.
