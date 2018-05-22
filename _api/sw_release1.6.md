@@ -5,13 +5,16 @@ type:
 description: Get software release data from Technopedia
 
 content_markdown: >-
-  MATCH (SOFTWARE\_VERSION:a) RETURN a
+  MATCH (SOFTWARE_VERSION:a) RETURN a
 
   {: .info}
 
 
   &nbsp;
-
+  <br>
+  Here's an example of querying the release title "Advanced Partitioning Option" that is a release of software version.
+  <br>
+  ![API Image](/images/sw_rel_to_ver.png){:class="img-responsive"} <br>
 
   ###### You can paginate by using the parameters listed above.
 
