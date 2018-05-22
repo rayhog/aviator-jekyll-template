@@ -37,6 +37,7 @@ left_code_blocks:
     language: javascript
 right_code_blocks:
   - code_block: |2
+      VERSION ATTRIBUTES
       Technopedia_id
       Edition
       Edition_Desupported_Flag
@@ -44,10 +45,16 @@ right_code_blocks:
       URL
       Created_At
       Modified_At
-    title: Software Product Attributes
+
+      MAJOR VERSION ATTRIBUTES
+      Version
+      Version Order
+
+    title: Software Version Attributes
     language: bash
   - code_block: |2-
-      [:VENDOR_OF]->(Manufacturer)
+      (SOFTWARE_VERSION)<-[:RELEASE_OF]-(SOFTWARE_RELEASE)
+      (SOFTWARE_VERSION)<-[:MAJOR_VERSION_OF]-(SOFTWARE_MAJOR_VERSION)
     title: Relationships
     language: bash
 ---
