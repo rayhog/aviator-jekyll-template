@@ -32,18 +32,18 @@ left_code_blocks:
     title: jQuery
     language: javascript
 right_code_blocks:
+  - code_block: |2
+      Technopedia_id
+      Edition
+      Edition_Desupported_Flag
+      Edition_Order
+      URL
+      Created_At
+      Modified_At
+    title: Software Product Attributes
+    language: bash
   - code_block: |2-
-      {
-        "id": 3,
-        "status": "deleted"
-      }
-    title: Response
-    language: json
-  - code_block: |2-
-      {
-        "error": true,
-        "message": "Book doesn't exist"
-      }
-    title: Error
-    language: json
+      [:VENDOR_OF]->(Manufacturer)
+    title: Relationships
+    language: bash
 ---

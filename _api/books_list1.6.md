@@ -126,29 +126,19 @@ right_code_blocks:
     title: Error
     language: json
 right_code_blocks:
-  - code_block: |-3
-      [
-        {
-          "id": 1,
-          "title": "The Hunger Games",
-          "score": 4.5,
-          "dateAdded": "12/12/2013"
-        },
-        {
-          "id": 1,
-          "title": "The Hunger Games",
-          "score": 4.7,
-          "dateAdded": "15/12/2013"
-        },
-      ]
-    title: Response
-    language: json
-  - code_block: |-
-      {
-        "error": true,
-        "message": "Invalid offset"
-      }
-    title: Error
-    language: json    
+  - code_block: |2
+      Technopedia_id
+      Edition
+      Edition_Desupported_Flag
+      Edition_Order
+      URL
+      Created_At
+      Modified_At
+    title: Software Product Attributes
+    language: bash
+  - code_block: |2-
+      [:VENDOR_OF]->(Manufacturer)
+    title: Relationships
+    language: bash
 ---
 

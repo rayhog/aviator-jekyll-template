@@ -31,14 +31,18 @@ left_code_blocks:
     language: javascript
 right_code_blocks:
   - code_block: |2
-      Manufacturer Attributes:
-      _____________________________________
-      Accounting
-      Alerts and Monitoring Tools
-      Analytics
-      Anti Virus and Malware
-      Application Architecture and Design
-    title: Manufacturer Attributes
+      Technopedia_id
+      Edition
+      Edition_Desupported_Flag
+      Edition_Order
+      URL
+      Created_At
+      Modified_At
+    title: Software Product Attributes
+    language: bash
+  - code_block: |2-
+      [:VENDOR_OF]->(Manufacturer)
+    title: Relationships
     language: bash
 ---
 
