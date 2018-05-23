@@ -12,7 +12,6 @@ content_markdown: >-
   <br>
 
   MATCH (a:SOFTWARE_VERSION) RETURN a.version
-  
   {: .success} 
   
   <br>
@@ -21,7 +20,6 @@ content_markdown: >-
   <br>
   
   MATCH (a:SOFTWARE_MAJOR_VERSION) RETURN a.version
-  
   {: .success} 
 
 
