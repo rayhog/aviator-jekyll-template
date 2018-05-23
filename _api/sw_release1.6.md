@@ -12,16 +12,16 @@ content_markdown: >-
 
   &nbsp;
   <br>
-  Here's an example of querying the release title "Advanced Partitioning Option" that is a release of software version.
+  Here's an example of querying the release title "Advanced Partitioning Option" that is a release of a software version.
+  `MATCH (SOFTWARE_PRODUCT)<-[:EDITION_OF]-(SOFTWARE_EDITION) WHERE n.release_title = "Advanced Partitioning Option" RETURN n`
   <br>
+  The folloiwng diagaram shows the nodes, attributes, and relationships that feature in the query example.
   ![API Image](/images/sw_rel_to_ver.png){:class="img-responsive"} <br>
 
   ###### You can paginate by using the parameters listed above.
 
 
-  Lists all the photos you have access to. You can paginate by using the
-  parameters listed above.<br>![API Image](/images/apiEcon.PNG){:
-  .img-responsive}<br>The Technopedia Version 6.0 API uses OAuth for
+  <br>The Technopedia Version 6.0 API uses OAuth for
   authentication. To authenticate a session, pass your key in the request
   header. Your API key should have been provided to you by Flexera support. If
   you do not have a key please contact support.
