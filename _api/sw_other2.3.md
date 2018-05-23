@@ -12,6 +12,15 @@ content_markdown: >-
   {: .success}
 
   Adds an object to your collection.
+
+
+
+  ###### Temp Info
+  Cypher queries that use
+  Key words MATCH, WHERE, AND, OR, COUNT, DISTINCT, CONTAINS
+  Operators =, <>, >, <, >=, <=
+  Case insensitivity
+
 left_code_blocks:
   - code_block: |-
       {

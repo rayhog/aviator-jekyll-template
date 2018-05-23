@@ -49,6 +49,6 @@ right_code_blocks:
       (MANUFACTURER)-[:VENDOR_OF]->(SOFTWARE_PRODUCT)
       (SOFTWARE_VERSION)<-[:RELEASE_OF]-(SOFTWARE_RELEASE)
       (SOFTWARE_VERSION)<-[:MAJOR_VERSION_OF]-(SOFTWARE_MAJOR_VERSION)
-    title:Software Node Relationships
+    title:Software Nodes Relationships
     language: bash
 ---

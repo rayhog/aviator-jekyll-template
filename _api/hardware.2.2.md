@@ -14,20 +14,9 @@ content_markdown: |-
 
 left_code_blocks:
   - code_block: |-
-      $.ajax({
-        "url": "http://api.myapp.com/books/3",
-        "type": "PUT",
-        "data": {
-          "token": "YOUR_APP_KEY",
-          "score": 5.0,
-          "title": "The Book Stealer"
-        },
-        "success": function(data) {
-          alert(data);
-        }
-      });
-    title: jQuery
-    language: javascript
+      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:MANUFACTURER) RETURN h.manufacturer"
+    title: cURL Examples
+    language: bash
 right_code_blocks:
   - code_block: |2
       Technopedia_id

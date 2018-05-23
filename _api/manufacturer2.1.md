@@ -20,18 +20,10 @@ content_markdown: |-
   
 left_code_blocks:
   - code_block: |-
-      $.ajax({
-        "url": "http://api.myapp.com/books/3",
-        "type": "DELETE",
-        "data": {
-          "token": "YOUR_APP_KEY"
-        },
-        "success": function(data) {
-          alert(data);
-        }
-      });
-    title: jQuery
-    language: javascript
+      curl -G -H "Authorization: Bearer b900477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (m:MANUFACTURER)-[VENDOR_OF]->(s:SOFTWARE_PRODUCT)<-[VERSION_OF]->(v:SOFTWARE_VERSION)<-[MAJOR_VERSION_OF]->(z:SOFTWARE_MAJOR_VERSION)  WHERE m.manufacturer = "Microsoft" RETURN m, s, v, z LIMIT 1
+
+    title: cURL
+    language: bash
 right_code_blocks:
   - code_block: |2
       Technopedia_id
@@ -66,6 +58,10 @@ right_code_blocks:
   - code_block: |2-
       (Manufacturer)-[:VENDOR_OF]->(SOFTWARE_PRODUCT)
     title: Relationships
+    language: bash
+  - code_block: |2-
+      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (m:MANUFACTURER) RETURN m.manufacturer, m.technopedia_id"
+    title: cURL Example
     language: bash
 ---
 
