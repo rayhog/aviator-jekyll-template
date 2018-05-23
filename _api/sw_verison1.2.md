@@ -6,12 +6,13 @@ description: >-
   Two nodes represent software versions. The Software major version represents the major version attributes and the software version represents the attributes that are associated with child versions of the parent major version.
 content_markdown: >-
   The query returns software that includes 'Excel'. This is query is case sensitive.
-  
   Gets software version information
   <br>
   <br>
+  
 
   MATCH (a:SOFTWARE_VERSION) RETURN a.version
+
   {: .success} 
   
   <br>
@@ -20,6 +21,7 @@ content_markdown: >-
   <br>
   
   MATCH (a:SOFTWARE_MAJOR_VERSION) RETURN a.version
+
   {: .success} 
 
 
