@@ -3,15 +3,13 @@ title: Software Product
 position: 1.15
 type:
 description: >-
-  Create Query for example query. In this example, we will pull data from
-  Technopedia that contains 'excel'.
+  In the following qeury example, we get data from Technopedia that contains PDF Converter in the title of the software product title.
 content_markdown: >-
-  The query returns software that includes 'Excel'. This is query is case
-  sensitive. 
+  `MATCH (n:SOFTWARE_PRODUCT) WHERE n.title = "PDF Converter" RETURN n` 
   
   {: .success} 
   
-  `MATCH (n:SOFTWARE_PRODUCT) WHERE n.title = "PDF Converter" RETURN n`
+  
 left_code_blocks:
   - code_block: |-
       $.ajax({
