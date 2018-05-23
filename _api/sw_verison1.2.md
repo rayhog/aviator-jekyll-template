@@ -8,9 +8,9 @@ content_markdown: >-
   The query returns software that includes 'Excel'. This is query is case sensitive.
   
   Gets software version information
+  <br>
 
   MATCH (a:SOFTWARE_VERSION) RETURN a.version
-
   {: .success} 
 
   
@@ -20,7 +20,6 @@ content_markdown: >-
   <br>
   
   MATCH (a:SOFTWARE_MAJOR_VERSION) RETURN a.version
-
   {: .success} 
 
   ###### The node that represents the major version of software is `SOFTWARE_MAJOR_VERSION`.
