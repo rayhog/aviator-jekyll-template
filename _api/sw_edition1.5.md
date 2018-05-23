@@ -12,7 +12,14 @@ content_markdown: |-
    
    {: .success}
 
+  
+
+  <br>
+  <br>
   The following diagaram shows the nodes, attributes, and relationships that feature in the query example.
+  <br>
+
+
   ![API Image](/images/sw_edition.png){:class="img-responsive"} <br>
 
 left_code_blocks:

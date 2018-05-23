@@ -9,10 +9,12 @@ content_markdown: |-
 
   {: .success}
   
+
+
   <br> 
   ![API Image](/images/apiEcon.PNG){:class="img-responsive"} <br>
   <br> 
-  ![API Image](/images/apiEcon.PNG){:class="img-responsive"} <br>
+  
   
   ###### Returns a specific hardware item from the Technopedia database.<br> 
   ![API Image](/images/tid.png){:class="img-responsive"} <br>

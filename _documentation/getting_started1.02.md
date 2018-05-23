@@ -17,6 +17,8 @@ content_markdown: >-
   Typically, Mac and Linux users have cURL preinstalled, and Windows users most likely have to install cURL. 
   For example, the following example is a cURL query: <br>
   `curl -G -H "Authorization: Bearer <API_KEY>" https://v6.technopedia.com/tql" --data-urlencode "q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.title"`<br>
+  
+  <br>
   Examples of API GET requests, and MATCH statements which are used to form the query statment are provided throughout this guide. 
   
   You can also use a third-party API client, such as Postman to send API requests as shown in the following image.<br>

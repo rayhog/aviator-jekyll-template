@@ -5,7 +5,7 @@ type:
 description: Get software release data from the Technopedia database.
 
 content_markdown: >-
-  MATCH (a:SOFTWARE_RELEASE) RETURN a.Release_Title
+  `MATCH (a:SOFTWARE_RELEASE) RETURN a.Release_Title`
 
   {: .success} 
 
@@ -14,11 +14,11 @@ content_markdown: >-
   <br>
   Here's an example of querying the release title "Advanced Partitioning Option" that is a release of a software version.<br>
   <br>
-  <br>
   `MATCH (SOFTWARE_PRODUCT)<-[:EDITION_OF]-(SOFTWARE_EDITION) WHERE n.release_title = "Advanced Partitioning Option" RETURN n`
   <br>
   <br>
-  The folloiwng diagaram shows the nodes, attributes, and relationships that feature in the query example.
+  The following diagram shows the nodes, attributes, and relationships that are referenced in the query example.
+  <br>
   ![API Image](/images/sw_rel_to_ver.png){:class="img-responsive"} <br>
 
   ###### You can paginate by using the parameters listed above.
@@ -30,7 +30,7 @@ content_markdown: >-
   you do not have a key please contact support.
 left_code_blocks:
   - code_block: |
-      `MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date`
+      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
 
       RESPONSE SAMPLE
       {
@@ -54,7 +54,7 @@ left_code_blocks:
     title: Example 1
     language: javascript
   - code_block: >-
-      `MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.release_url n.ga_date`
+      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.release_url n.ga_date
 
 
       RESPONSE SAMPLE
@@ -82,7 +82,7 @@ left_code_blocks:
     title: Example 2
     language: javascript
   - code_block: |-
-      `MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1`
+      MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1
 
       RESPONSE SAMPLE
       {
