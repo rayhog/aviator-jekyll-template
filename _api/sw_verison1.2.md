@@ -38,7 +38,6 @@ left_code_blocks:
 right_code_blocks:
   - code_block: |2
       VERSION ATTRIBUTES
-
       Technopedia_id
       Edition
       Edition_Desupported_Flag
@@ -48,7 +47,6 @@ right_code_blocks:
       Modified_At
 
       MAJOR VERSION ATTRIBUTES
-      
       Version
       Version Order
 

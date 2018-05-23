@@ -33,7 +33,7 @@ left_code_blocks:
     language: javascript
 right_code_blocks:
   - code_block: |2
-      Software is broken into 5 nodes
+      Software consists of the follwoing 5 nodes:
 
       SOFTWARE_PRODUCT
       SOFTWARE_VERSION
@@ -43,12 +43,12 @@ right_code_blocks:
     title: Software Nodes
     language: bash
   - code_block: |2-
-      EXAMPLES OF SOFTWARE RELATIONSHIPS
+      SOFTWARE NODES RELATIONSHIPS
 
       (SOFTWARE_PRODUCT)<-[:EDITION_OF]-(SOFTWARE_EDITION)
       (MANUFACTURER)-[:VENDOR_OF]->(SOFTWARE_PRODUCT)
       (SOFTWARE_VERSION)<-[:RELEASE_OF]-(SOFTWARE_RELEASE)
       (SOFTWARE_VERSION)<-[:MAJOR_VERSION_OF]-(SOFTWARE_MAJOR_VERSION)
-    title: Relationships
+    title:Software Node Relationships
     language: bash
 ---
