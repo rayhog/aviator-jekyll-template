@@ -8,10 +8,11 @@ content_markdown: |-
   The manufacturer has relationships to other nodes.
 
 
-  
-  {: .info}
-
   MATCH (a:MANUFACTURER) WHERE title = “Microsoft” RETURN a.title
+
+  {: .success}
+
+  
   
   {: .success}
 

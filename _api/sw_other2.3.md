@@ -7,14 +7,12 @@ description: >-
   Technopedia that contains 'excel'.
 
 content_markdown: >-
- ###### The query returns software that includes 'Excel'. This is query is case
-  sensitive.
+ ###### The CAT is  about CATS
+
+  `MATCH (SOFTWARE_PRODUCT)<-[:EDITION_OF]-(SOFTWARE_EDITION) WHERE n.release_title = "Advanced Partitioning Option" RETURN n`
   {: .success}
 
-  Adds an object to your collection.
-
-
-
+  
   ###### Temp Info
   Cypher queries that use
   Key words MATCH, WHERE, AND, OR, COUNT, DISTINCT, CONTAINS

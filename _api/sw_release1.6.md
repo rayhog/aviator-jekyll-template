@@ -7,7 +7,7 @@ description: Get software release data from the Technopedia database.
 content_markdown: >-
   MATCH (a:SOFTWARE_RELEASE) RETURN a.Release_Title
 
-  {: .info}
+  {: .success} 
 
 
   &nbsp;

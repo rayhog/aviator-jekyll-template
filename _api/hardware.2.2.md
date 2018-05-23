@@ -2,14 +2,19 @@
 title: Hardware
 position: 2.2
 type: 
-description: Write a MATCH statement to query the Hardware Node.
+description: Write a MATCH statement to query the Hardware Nodes.
 content_markdown: |-
-  Returns a specific book from your collection.<br> 
-  ![API Image](/images/apiEcon.PNG){:class="img-responsive"} <br>
-  This is a very precise query.
+
+  MATCH (a:HW_MODEL) RETURN a.model
+
+  {: .success}
   
-  Update an existing object in your collection.  
-  ###### Returns a specific object from your collection.<br> 
+  <br> 
+  ![API Image](/images/apiEcon.PNG){:class="img-responsive"} <br>
+  <br> 
+  ![API Image](/images/apiEcon.PNG){:class="img-responsive"} <br>
+  
+  ###### Returns a specific hardware item from the Technopedia database.<br> 
   ![API Image](/images/tid.png){:class="img-responsive"} <br>
 
 left_code_blocks:
