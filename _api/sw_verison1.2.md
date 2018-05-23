@@ -9,10 +9,11 @@ content_markdown: >-
   
   Gets software version information
   <br>
+  <br>
 
-  MATCH (a:SOFTWARE_VERSION) RETURN a.version
+  `MATCH (a:SOFTWARE_VERSION) RETURN a.version`
   
-  {: .success} 
+   {: .success} 
 
   
   <br>
