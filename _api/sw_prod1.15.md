@@ -11,7 +11,7 @@ content_markdown: >-
   
   {: .success} 
   
-  `MATCH (n:SOFTWARE\_PRODUCT) WHERE n.title = "PDF Converter" RETURN n`
+  `MATCH (n:SOFTWARE_PRODUCT) WHERE n.title = "PDF Converter" RETURN n`
 left_code_blocks:
   - code_block: |-
       $.ajax({

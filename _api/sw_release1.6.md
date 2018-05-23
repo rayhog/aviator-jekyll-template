@@ -27,7 +27,7 @@ content_markdown: >-
   you do not have a key please contact support.
 left_code_blocks:
   - code_block: |
-      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
+      `MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date`
 
       RESPONSE SAMPLE
       {
@@ -51,8 +51,7 @@ left_code_blocks:
     title: Example 1
     language: javascript
   - code_block: >-
-      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.release_url,
-      n.ga_date LIMIT 1
+      `MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.release_url n.ga_date`
 
 
       RESPONSE SAMPLE
@@ -80,7 +79,7 @@ left_code_blocks:
     title: Example 2
     language: javascript
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 5
+      `MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1`
 
       RESPONSE SAMPLE
       {
@@ -131,13 +130,15 @@ right_code_blocks:
 right_code_blocks:
   - code_block: |2
       Technopedia_id
-      Edition
-      Edition_Desupported_Flag
-      Edition_Order
-      URL
+      Release_Title
+      Release_Patchlevel
+      GA_Date
+      Release_Discontinued_Flag
+      Release_Desupported_Flag
+      Release_URL
       Created_At
       Modified_At
-    title: Software Product Attributes
+    title: Software Release Attributes
     language: bash
   - code_block: |2-
       (SOFTWARE_RELEASE)-[:RELEASE_OF]->(SOFTWARE_VERSION)
