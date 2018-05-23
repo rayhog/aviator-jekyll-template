@@ -11,6 +11,7 @@ content_markdown: |-
   MATCH (a:SOFTWARE_RELEASE) RETURN a.Release_Title
 
   {: .success} 
+  
   ###### Software is a general classification that can be broken into the following classifications:
   - Software Product
   - Software Version

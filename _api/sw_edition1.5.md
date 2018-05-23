@@ -9,7 +9,8 @@ content_markdown: |-
 
 
   `MATCH (e:SOFTWARE_EDITION {cat_sw_edition_id: '24853332'})-[*1..3]->(b) RETURN b LIMIT 10`
-     
+   
+   {: .success}
 
   The following diagaram shows the nodes, attributes, and relationships that feature in the query example.
   ![API Image](/images/sw_edition.png){:class="img-responsive"} <br>

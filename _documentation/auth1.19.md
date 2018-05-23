@@ -8,11 +8,11 @@ content_markdown: |-
 
   In the following examples, an API key example is used in a cURL example and with the Posman API client. The API key example: `Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a` is used in both examples.
   <br>
+  <br>
   The following example shows where you add the API key in a cURL request:<br>
   <br>
   `curl -G -H "Authorization: Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode "q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.title"`<br>
   
-
    {: .success}
 
   Use the `--data-urlencode` option in the cURL command to encode spaces.<br>

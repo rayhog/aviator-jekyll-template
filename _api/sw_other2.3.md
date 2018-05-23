@@ -10,6 +10,7 @@ content_markdown: >-
  ###### The CAT is  about CATS
 
   `MATCH (SOFTWARE_PRODUCT)<-[:EDITION_OF]-(SOFTWARE_EDITION) WHERE n.release_title = "Advanced Partitioning Option" RETURN n`
+  
   {: .success}
 
   
