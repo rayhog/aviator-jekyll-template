@@ -13,7 +13,7 @@ content_markdown: >-
 
   `MATCH (a:SOFTWARE_VERSION) RETURN a.version`
   
-   {: .success} 
+  {: .success} 
 
   
   <br>
