@@ -2,18 +2,21 @@
 title: Software Release
 position: 1.6
 type:
-description: Get software release data from Technopedia
+description: Get software release data from the Technopedia database.
 
 content_markdown: >-
-  MATCH (SOFTWARE_VERSION:a) RETURN a
+  MATCH (a:SOFTWARE_RELEASE) RETURN a.Release_Title
 
   {: .info}
 
 
   &nbsp;
   <br>
-  Here's an example of querying the release title "Advanced Partitioning Option" that is a release of a software version.
+  Here's an example of querying the release title "Advanced Partitioning Option" that is a release of a software version.<br>
+  <br>
+  <br>
   `MATCH (SOFTWARE_PRODUCT)<-[:EDITION_OF]-(SOFTWARE_EDITION) WHERE n.release_title = "Advanced Partitioning Option" RETURN n`
+  <br>
   <br>
   The folloiwng diagaram shows the nodes, attributes, and relationships that feature in the query example.
   ![API Image](/images/sw_rel_to_ver.png){:class="img-responsive"} <br>

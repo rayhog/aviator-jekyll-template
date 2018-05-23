@@ -8,9 +8,13 @@ content_markdown: |-
   The manufacturer has relationships to other nodes.
 
 
-  The query returns software that includes 'Excel'. The query is case sensitive.
+  MATCH (a:MANUFACTURER) WHERE title = "Microsoft" RETURN a.title
+
+  {: .info}
+
+  Manufacturer is the creator of product
   
-   {: .success}
+  {: .success}
 
   
   
