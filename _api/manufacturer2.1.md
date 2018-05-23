@@ -8,19 +8,20 @@ content_markdown: |-
   The manufacturer has relationships to other nodes.
 
 
-  MATCH (a:MANUFACTURER) WHERE title = "Microsoft" RETURN a.title
-
+  
   {: .info}
 
-  Manufacturer is the creator of product
+  MATCH (a:MANUFACTURER) WHERE title = “Microsoft” RETURN a.title
   
   {: .success}
 
-  
-  
+    
 left_code_blocks:
   - code_block: |-
       curl -G -H "Authorization: Bearer b900477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (m:MANUFACTURER)-[VENDOR_OF]->(s:SOFTWARE_PRODUCT)<-[VERSION_OF]->(v:SOFTWARE_VERSION)<-[MAJOR_VERSION_OF]->(z:SOFTWARE_MAJOR_VERSION)  WHERE m.manufacturer = "Microsoft" RETURN m, s, v, z LIMIT 1
+
+      Append the following cURL syntax before your MATCH statemen and replace the API key (Bearer b9004...) with your key.
+      curl -G -H "Authorization: Bearer b900477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=
 
     title: cURL
     language: bash
