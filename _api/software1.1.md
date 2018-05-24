@@ -13,11 +13,11 @@ content_markdown: |-
   {: .success} 
   
   Software is a general classification that can be broken into the following classifications
-  - Software Product
-  - Software Version
-  - Software Major Version
-  - Software Edition
-  - Software Release
+   - Software Product
+   - Software Version
+   - Software Major Version
+   - Software Edition
+   - Software Release
   
   
   Use a combination of the software nodes with relationships to get the data that you specify in your query.
