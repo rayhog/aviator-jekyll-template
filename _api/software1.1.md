@@ -5,9 +5,13 @@ type:
 description: Get software data by using relationships between software nodes
 content_markdown: |-
     
-  {: .success} 
-  
+    
   `MATCH (a:SOFTWARE_RELEASE) RETURN a.release.title`
+
+  {: .success}
+
+  <br>
+  <br>
 
   Software is a general classification that can be broken into the following classifications
     * Software Product
