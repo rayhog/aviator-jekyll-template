@@ -4,7 +4,7 @@ position: 1.03
 type:
 description: >-
 content_markdown: >-
-  ###### Nodes are the entities in the Technopedia graph where each nodes stores specific data. Nodes can have any
+  ####### Nodes are the entities in the Technopedia graph where each nodes stores specific data. Nodes can have any
   number of attributes, which are represented by key-value-pairs. 
   
   To get data from multiple nodes in one query, you use defined relationships in your queries to connect the nodes and their attributes. 

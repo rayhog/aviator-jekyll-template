@@ -7,21 +7,23 @@ parameters:
   - name:
     content:
 content_markdown: |-
-
   MATCH (a:SOFTWARE_RELEASE) RETURN a.Release_Title
 
+  
   {: .success} 
   
-  ###### Software is a general classification that can be broken into the following classifications:
+  Software is a general classification that can be broken into the following classifications
   - Software Product
   - Software Version
+  - Software Major Version
   - Software Edition
   - Software Release
   
-  You can use a combination of the software nodes with relationships to get the data that you specify in your query.
+  
+  Use a combination of the software nodes with relationships to get the data that you specify in your query.
   <br>
-
-  ![API Image](/images/gears.PNG){:class="img-responsive"} <br>
+  ![API Image](/images/node_ex.png){:class="img-responsive"} <br> 
+ 
   
 left_code_blocks:
   - code_block: |-
