@@ -3,7 +3,7 @@ title: Software Product
 position: 1.15
 type:
 description: >-
-  In the following qeury example, we get data from Technopedia that contains PDF Converter in the title of the software product title.
+  In the following query example, you get data from Technopedia that contains PDF Converter in the title of the software product title.
 content_markdown: >-
   `MATCH (n:SOFTWARE_PRODUCT) WHERE n.title = "PDF Converter" RETURN n` 
   
@@ -26,16 +26,23 @@ left_code_blocks:
     language: javascript
 right_code_blocks:
   - code_block: |2
-      Technopedia_id
-      Title
-      Family
-      Component
-      Alias
-      Nfamily
-      Product_Desupported_Flag
-      Product_Discontinued_Flag
-      Created_at
-      Modified_At
+      cat_sw_product_id
+      title
+      family
+      component
+      alias
+      is_suite
+      plicsable
+      nfamily
+      vendor_category
+      product_desupported_flag
+      product_discontinued_flag
+      product_url
+      technopedia_id
+      created_at
+      modified_at
+      deleted_at
+      load_id
     title: Software Product Attributes
     language: bash
   - code_block: |2-

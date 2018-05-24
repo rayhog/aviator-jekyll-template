@@ -2,7 +2,7 @@
 title: Software
 position: 1.1
 type: 
-description: Get software data by creating relationships between software nodes
+description: Get software data by using relationships between software nodes
 parameters:
   - name:
     content:
@@ -20,6 +20,7 @@ content_markdown: |-
   
   You can use a combination of the software nodes with relationships to get the data that you specify in your query.
   <br>
+
   ![API Image](/images/gears.PNG){:class="img-responsive"} <br>
   
 left_code_blocks:

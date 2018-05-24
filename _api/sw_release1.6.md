@@ -132,15 +132,21 @@ right_code_blocks:
     language: json
 right_code_blocks:
   - code_block: |2
-      Technopedia_id
-      Release_Title
-      Release_Patchlevel
-      GA_Date
-      Release_Discontinued_Flag
-      Release_Desupported_Flag
-      Release_URL
-      Created_At
-      Modified_At
+      cat_sw_release_id
+      release_title
+      release_patchlevel
+      ga_date
+      licensable
+      is_major
+      unverified_version
+      release_discontinued_flag
+      release_desupported_flag
+      release_url
+      technopedia_id
+      created_at
+      modified_at
+      deleted_at
+      load_id
     title: Software Release Attributes
     language: bash
   - code_block: |2-

@@ -8,6 +8,7 @@ description: >-
 
 content_markdown: >-
  ###### The CAT is  about CATS
+  <br>
 
   `MATCH (SOFTWARE_PRODUCT)<-[:EDITION_OF]-(SOFTWARE_EDITION) WHERE n.release_title = "Advanced Partitioning Option" RETURN n`
   
@@ -17,7 +18,7 @@ content_markdown: >-
   <br>
 
   
-  ###### Temp Info
+ ##### Temp Info
   Cypher queries that use
   Key words MATCH, WHERE, AND, OR, COUNT, DISTINCT, CONTAINS
   Operators =, <>, >, <, >=, <=

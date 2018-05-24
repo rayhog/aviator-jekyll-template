@@ -48,13 +48,19 @@ left_code_blocks:
 right_code_blocks:
   - code_block: |2
       VERSION ATTRIBUTES
-      Technopedia_id
-      Edition
-      Edition_Desupported_Flag
-      Edition_Order
-      URL
-      Created_At
-      Modified_At
+      cat_sw_version_id
+      version_desupported_flag
+      version_patchlevel
+      subversion
+      version
+      version_order
+      cat_sw_product_id
+      version_group
+      technopedia_id
+      created_at
+      modified_at
+      deleted_at
+      load_id
 
       MAJOR VERSION ATTRIBUTES
       Version
