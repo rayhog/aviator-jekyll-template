@@ -4,11 +4,9 @@ position: 1.1
 type: 
 description: Get software data by using relationships between software nodes
 content_markdown: |-
-    
+  The following query returns software releases by title:  
     
   `MATCH (a:SOFTWARE_RELEASE) RETURN a.release.title`
-
-  {: .success}
 
   <br>
   <br>
