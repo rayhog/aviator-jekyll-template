@@ -29,8 +29,8 @@ right_code_blocks:
       cat_sw_product_id
       title
       family
-      component
       alias
+      component
       is_suite
       plicsable
       nfamily
@@ -43,6 +43,13 @@ right_code_blocks:
       modified_at
       deleted_at
       load_id
+
+      Query Examples:
+      MATCH (n:SOFTWARE_PRODUCT) RETURN n.title
+      MATCH (n:SOFTWARE_PRODUCT) RETURN n.cat_sw_product_id
+      MATCH (n:SOFTWARE_PRODUCT) RETURN n.vendor_category
+
+
     title: Software Product Attributes
     language: bash
   - code_block: |2-
