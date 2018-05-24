@@ -6,7 +6,7 @@ description: >-
 content_markdown: >-
   
   #### About Nodes in Technopedia
-  <br>
+  
   ######
   Nodes are the entities in the Technopedia graph where each nodes stores specific data. Nodes can have any
   number of attributes, which are represented by key-value-pairs.<br> 
@@ -16,9 +16,9 @@ content_markdown: >-
    
   To get data from multiple nodes in one query, you use defined relationships in your queries to connect the nodes and their attributes. 
 
-  #### Relationships between Nodes in Technopedia <br>
+  #### Relationships between Nodes in Technopedia 
+
   ######
-  <br>
   Relationships provide semantically relevant connections between the Technopedia nodes. Relationships might have a
   type,such as `friend\_of` and a direction such as Joe (node) `friend_of` Bob
   (node), where an arrow in a query determines the direction of the relationship.
