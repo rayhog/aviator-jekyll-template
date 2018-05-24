@@ -1,30 +1,26 @@
 ---
-title: Software
+title: Software Edition
 position: 1.1
 type: 
-description: Get software data by using relationships between software nodes
-parameters:
-  - name:
-    content:
+description: Matches the software edition from the Technopedia database.
 content_markdown: |-
-  MATCH (a:SOFTWARE_RELEASE) RETURN a.Release_Title
+  Software edition represents the version of the product, such as Standard, Premium, or other version name for the product.
+  <br>
+
+
+  MATCH (e:SOFTWARE_EDITION {cat_sw_edition_id: '24853332'})-[*1..3]->(b) RETURN b LIMIT 10
+  {: .success}
 
   
-  {: .success} 
-  
-  Software is a general classification that can be broken into the following classifications
-   - Software Product
-   - Software Version
-   - Software Major Version
-   - Software Edition
-   - Software Release
-  
-  
-  Use a combination of the software nodes with relationships to get the data that you specify in your query.
+
   <br>
-  ![API Image](/images/node_ex.png){:class="img-responsive"} <br> 
- 
-  
+  <br>
+  The following diagaram shows the nodes, attributes, and relationships that feature in the query example.
+  <br>
+
+
+  ![API Image](/images/sw_edition.png){:class="img-responsive"} <br>
+
 left_code_blocks:
   - code_block: |-
       $.ajax({
@@ -41,22 +37,22 @@ left_code_blocks:
     language: javascript
 right_code_blocks:
   - code_block: |2
-      Software consists of the follwoing 5 nodes:
-
-      SOFTWARE_PRODUCT
-      SOFTWARE_VERSION
-      SOFTWARE_MAJOR_VERSION
-      SOFTWARE_EDITION
-      SOFTWARE RELEASE
-    title: Software Nodes
+      cat_sw_edition_id
+      edition
+      edition_desupported_flag
+      edition_order
+      url
+      technopedia_id
+      created_at
+      modified_at
+      deleted_at
+      load_id
+    title: Software Edition Attributes
     language: bash
   - code_block: |2-
-      SOFTWARE NODES RELATIONSHIPS
-
-      (SOFTWARE_PRODUCT)<-[:EDITION_OF]-(SOFTWARE_EDITION)
-      (MANUFACTURER)-[:VENDOR_OF]->(SOFTWARE_PRODUCT)
-      (SOFTWARE_VERSION)<-[:RELEASE_OF]-(SOFTWARE_RELEASE)
-      (SOFTWARE_VERSION)<-[:MAJOR_VERSION_OF]-(SOFTWARE_MAJOR_VERSION)
-    title:Software Nodes Relationships
+      (SOFTWARE_EDITION)<-[:EDITION_OF]-(SOFTWARE_EDITION)
+      (SOFTWARE_EDITION)-[:EDITION_OF]->(SOFTWARE_PRODUCT) 
+    title: Relationships
     language: bash
 ---
+
