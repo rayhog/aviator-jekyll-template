@@ -40,21 +40,26 @@ left_code_blocks:
     language: javascript
 right_code_blocks:
   - code_block: |2
-      Software consists of the following 5 nodes:
+      Software consists of the following five nodes:
 
-      SOFTWARE_PRODUCT
-      SOFTWARE_VERSION
-      SOFTWARE_MAJOR_VERSION
-      SOFTWARE_EDITION
-      SOFTWARE RELEASE
+      * SOFTWARE_PRODUCT
+      * SOFTWARE_VERSION
+      * SOFTWARE_MAJOR_VERSION
+      * SOFTWARE_EDITION
+      * SOFTWARE RELEASE
+      You can query for specific software data by using the individual nodes, or you can refer to multiple nodes by using relationships.
+      
     title: Software Nodes
     language: bash
   - code_block: |2-
       SOFTWARE NODES RELATIONSHIPS
 
       (SOFTWARE_PRODUCT)<-[:EDITION_OF]-(SOFTWARE_EDITION)
+
       (MANUFACTURER)-[:VENDOR_OF]->(SOFTWARE_PRODUCT)
+
       (SOFTWARE_VERSION)<-[:RELEASE_OF]-(SOFTWARE_RELEASE)
+
       (SOFTWARE_VERSION)<-[:MAJOR_VERSION_OF]-(SOFTWARE_MAJOR_VERSION)
     title: Software Nodes Relationships
     language: bash
