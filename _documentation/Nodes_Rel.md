@@ -24,10 +24,10 @@ content_markdown: >-
 
   
 
-  The following diagram represents an image that is to be removed:
+  The following diagram represents a simple representation of nodes and relationships:
 
 
-  ![API Image](/images/NodeAndRel.png)<br>&nbsp;
+  ![API Image](/images/node_ex.png)<br>&nbsp;
   
   <br>
  
