@@ -29,7 +29,6 @@ right_code_blocks:
       cat_sw_product_id
       title
       family
-      alias
       component
       is_suite
       plicsable
@@ -44,9 +43,12 @@ right_code_blocks:
       deleted_at
       load_id
 
-      Query Examples:
+      MATCH QUERY EXAMPLES:
+      
       MATCH (n:SOFTWARE_PRODUCT) RETURN n.title
+
       MATCH (n:SOFTWARE_PRODUCT) RETURN n.cat_sw_product_id
+
       MATCH (n:SOFTWARE_PRODUCT) RETURN n.vendor_category
 
 
