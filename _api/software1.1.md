@@ -3,15 +3,12 @@ title: Software Nodes
 position: 1.1
 type: 
 description: Get software data by using relationships between software nodes
-parameters:
-  - name:
-    content:
 content_markdown: |-
-  MATCH (a:SOFTWARE_RELEASE) RETURN a.Release_Title
-
-  
+    
   {: .success} 
   
+  `MATCH (a:SOFTWARE_RELEASE) RETURN a.release.title`
+
   Software is a general classification that can be broken into the following classifications
     * Software Product
     * Software Version
