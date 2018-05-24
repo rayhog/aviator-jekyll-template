@@ -4,7 +4,7 @@ position: 1.01
 type:
 description:
 content_markdown: >-
-  ###### The Technopedia version 6 API enables cloud-based access to asset data in Technopedia to provide a cloud-first, high-performance resource for customers.
+  ###### The Technopedia version 6 API enables cloud-based access to asset data in Technopedia to provide you with a cloud-first, high-performance resource to help you manage your asssets.
 
   ###### You can use the API with TQL (Technopedia query language), which is a graph-based query language that you use to query the Technopedia database. Version 6 Technopedia query language (TQL) uses API graph databases, which are designed to process data by using a graph-based methodology, rather than the relational database model. <br>
   <br>
@@ -34,7 +34,7 @@ content_markdown: >-
   #### What are the V6 API Endpoints?
 
 
-  ###### To query the Technopedia database you use the following endpoints:
+  ###### To query the Technopedia database you use one of the following two endpoints:
 
 
   * `https://v6.technopedia.com/tql?q=MATCH [Query Parameters]`
@@ -57,22 +57,25 @@ content_markdown: >-
 
 
   * Nodes are Graph data records that are entities in the graph, such as
-  software version or hardware. Nodes contain attributes, which are key-value
-  pairs.
+  software version or hardware.           
+          
+    
 
-  * Attributes are properties of a node and they store data in key-value pairs,
-  such as '{name: Joe}' or '{color: blue}'.
+  * Nodes contain attributes, which are key-value
+  pairs. Attributes are properties of a node and they store data in key-value pairs,
+  such as `{title: Excel}` or `{manufactuer: Microsoft}`.
 
-  * Relationships provide a connection between nodes. Relationships have a start
+  * Relationships provide node to node connections. Relationships have a start
   node, end node, a type, and a direction. For example, the nodes Organization and employees
   might have a relationship in the graph, for example `Is_Employee_of` is a possible relationship between employees and organization.
   If Joe is an employee of the organization then this relationship can be expressed in the following way:<br>
 
   The start node is employees; organization is the end node; `Is_Employee_of` is the relationship and
-  the direction is employees to organization. The relationship can be expressed as `(Employees)-[Is_Employee_of]->(organization)`.
+  the direction is employees to organization. The relationship can be expressed in the following way: <br>
+  `(Employees)-[Is_Employee_of]->(organization)`.
 
 
-  ###### The following diagram is an example of how Nodes and Relationships are
+  ###### The following diagram shows how Nodes and Relationships are
   connected:
 
 
