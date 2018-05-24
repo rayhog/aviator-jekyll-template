@@ -8,7 +8,7 @@ content_markdown: >-
   #### About Nodes in Technopedia
   <br>
   <br>
-   ###### Nodes are the entities in the Technopedia graph where each nodes stores specific data. Nodes can have any
+  Nodes are the entities in the Technopedia graph where each nodes stores specific data. Nodes can have any
   number of attributes, which are represented by key-value-pairs.<br> 
    * Nodes are entities that store the Technopedia data.
    * Node names are surrounded by parentheses in a query, for example, (Node).
@@ -19,7 +19,7 @@ content_markdown: >-
   #### Relationships between Nodes in Technopedia <br>
   <br>
   <br>
-   ###### Relationships provide semantically relevant connections between the Technopedia nodes. Relationships might have a
+  Relationships provide semantically relevant connections between the Technopedia nodes. Relationships might have a
   type,such as `friend\_of` and a direction such as Joe (node) `friend_of` Bob
   (node), where an arrow in a query determines the direction of the relationship.
   To get Technopedia data by connecting Nodes, You use relationships to traverse nodes and define the criteria for the data that you want to extract from the database.
