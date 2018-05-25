@@ -3,7 +3,7 @@ title: API Docs
 ---
 <div>
 	<img class="full-width" src='./images/logoy.PNG' /div>
-	{% assign sorted_collections = site.collections | sort: "position" %}
+<div>	{% assign sorted_collections = site.collections | sort: "position" %}
 	{% for collection in sorted_collections %}
 		{% assign sorted_docs = collection.docs | sort: "position" %}
 			{% for doc in sorted_docs %}
@@ -54,3 +54,4 @@ title: API Docs
 		
 	{% endfor %}
 
+</div>
