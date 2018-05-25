@@ -31,6 +31,10 @@ content_markdown: >-
   {: .success}
 
 
+
+  To get data from a specific node or relationship, you use an alias or variable that you append to the node or relationship. That alias is bound to that node or relationship so you can use that alias in the Return clause of the MATCH query to get specific data from that node or alias.
+  `Match (myalias:node)-[another_alias:RELATIONSHIP]`
+
   The query returns software that includes 'Excel'. This is query is case
   sensitive.
 left_code_blocks:

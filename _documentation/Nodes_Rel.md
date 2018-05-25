@@ -12,9 +12,9 @@ content_markdown: >-
   number of attributes, which are represented by key-value-pairs.<br> 
    * Nodes are entities that store the Technopedia data.
    * Node names are surrounded by parentheses in a query, for example, (Node).
-   * Nodes have different attributes that show date in key-value pairs.
+   * Nodes have different attributes that show data in key-value pairs.
    
-  To get data from multiple nodes in one query, you use defined relationships in your queries to connect the nodes and their attributes. 
+  To get data from multiple nodes in one query, you use defined relationships to other nodes in your queries to connect the nodes and their attributes. 
 
   #### Relationships between Nodes in Technopedia 
 
@@ -26,11 +26,11 @@ content_markdown: >-
 
    * Relationships are represented by an arrow `->` between two nodes, which represent the direction of the relationship.   Relationships often exist only in a single direction, but they can be bidirectional.
 
-   * Relationships provide semantically relevant connections between the Technopedia database nodes, for example, the       manufacturer node has the relationship: `[vendor_of]->` software product node.
+   * Relationships provide semantically relevant connections between the Technopedia database nodes, for example, the manufacturer node has the relationship: `[vendor_of]->` software product node.
 
-   * Relationships allow you to traverse the Technopedia Nodes and by using the Technopedia query language, and to get      data from the specified nodes.
+   * Relationships allow you to traverse the Technopedia Nodes and by using the Technopedia query language, and to get data from the specified nodes.
 
-   * Like nodes, relationships can also have attributes. Typically, relationships have quantitative attributes, such as     time intervals.
+   * Like nodes, relationships can also have attributes. Typically, relationships have quantitative attributes, such as time intervals.
 
 
   ###### The following diagram represents a simple representation of nodes and relationships:
@@ -46,6 +46,10 @@ content_markdown: >-
  
 
   {: .success}
+
+  To get data from a specific node or relationship, you use an alias or variable that you append to the node or relationship. That alias is bound to that node or relationship so you can use that alias in the Return clause of the MATCH query to get specific data from that node or alias.
+  `Match (myalias:node)-[another_alias:RELATIONSHIP]`
+  
 
   The query returns software that includes 'Excel'. This is query is case
   sensitive.
