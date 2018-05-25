@@ -296,7 +296,7 @@ hr {
 .doc-content {
 	border: 0;
 	border-bottom: 1px solid transparent;
-	border-image: linear-gradient(to right,	#eee 0%,#eee 100%,#333333 100%);
+	border-image: linear-gradient(to right,	#eee 0%,#eee 100%,#eee 100%);
 	-moz-border-image: -moz-linear-gradient(left,	#eee 0%, #eee 70%, #333333 70%);
 	-webkit-border-image: -webkit-linear-gradient(left,	#eee 0%,#eee 70%,#333333 70%);
 	border-image-slice: 1;
