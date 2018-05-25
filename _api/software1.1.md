@@ -47,8 +47,8 @@ right_code_blocks:
       * SOFTWARE_MAJOR_VERSION
       * SOFTWARE_EDITION
       * SOFTWARE RELEASE
-      You can query for specific software data by using the individual nodes, or you can refer to multiple nodes by using relationships.
-      
+      Query specific software data by using the individual nodes, or use relationships to connect nodes.
+
     title: Software Nodes
     language: bash
   - code_block: |2-

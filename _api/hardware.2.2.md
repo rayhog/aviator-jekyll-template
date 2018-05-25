@@ -6,15 +6,15 @@ description: Write a MATCH statement to query the Hardware Nodes.
 content_markdown: |-
 
   MATCH (a:HW_MODEL) RETURN a.model
-
+  {: .info}
   {: .success}
-  
+  <br>
 
 
   <br> 
+    
+  
   ![API Image](/images/apiEcon.PNG){:class="img-responsive"} <br>
-  <br> 
-  
   
   ###### Returns a specific hardware item from the Technopedia database.<br> 
   ![API Image](/images/tid.png){:class="img-responsive"} <br>
