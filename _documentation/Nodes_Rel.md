@@ -54,6 +54,10 @@ content_markdown: >-
   The query returns software that includes 'Excel'. This is query is case
   sensitive.
   
+  The following diagagram shows the data nodes and relationships in the Technopedia database:
+  ![API Image](/images/graph.png)<br>&nbsp;
+
+
 left_code_blocks:
   - code_block: |-
       $.ajax({
