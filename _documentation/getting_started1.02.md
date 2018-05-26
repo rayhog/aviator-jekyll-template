@@ -16,6 +16,7 @@ content_markdown: >-
   The base URL for all API queries is:<br>
   https://v6.technopedia.com/ 
   <br>
+  
   Typically, cURL is preinstalled on Mac and Linux computers, and Windows users most likely have to install cURL. 
   For example, the following example is a cURL query: <br>
   `curl -G -H "Authorization: Bearer <API_KEY>" https://v6.technopedia.com/tql" --data-urlencode "q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.title"`<br>

@@ -11,13 +11,11 @@ content_markdown: |-
   MATCH (e:SOFTWARE_EDITION {cat_sw_edition_id: '24853332'})-[*1..3]->(b) RETURN b LIMIT 10
   {: .success}
 
-  
-
   <br>
+  Here's an example of querying the release title "Advanced Partitioning Option" that is a release of a software version.<br>
   <br>
-  The following diagaram shows the nodes, attributes, and relationships that feature in the query example.
+  `MATCH (SOFTWARE_PRODUCT)<-[:EDITION_OF]-(SOFTWARE_EDITION) WHERE n.release_title = "Advanced Partitioning Option" RETURN n`
   <br>
-
 
   ![API Image](/images/sw_edition.png){:class="img-responsive"} <br>
 
