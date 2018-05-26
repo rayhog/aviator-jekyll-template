@@ -1,20 +1,19 @@
 ---
 image: /![API Image](/images/logo.png){:class="img-responsive"}
-title: Authentication
-position: 1.03
-description: You must authenticate before you can get data by using the API.
+title: Overview
+position: 1.01
+description: 
 content_markdown: |-
   ###### The Technopedia version 6 API enables cloud-based access to asset data in Technopedia that provides you with a cloud-first, high-performance resource to manage your assets.
   ###### You can use the API with TQL (Technopedia query language), which is a graph-based query language that you use to query the Technopedia database. Graph databases are designed to process data by using a graph-based methodology, rather than the relational database model. <br>
   <br>
 
-  ###### You query the Technopedia database by using the graph-based Technopedia query language (TQL) to select nodes and attributes of those nodes to define the criteria for your query and return relevant data. For example, you might query the `SOFTWARE_PRODUCT` node in Technopedia and specify the title attribute becasuse you want to return titles of software products. The following examplE is a TQL query that returns software titles:
+  ###### You query the Technopedia database by using the graph-based Technopedia query language (TQL) to select nodes and attributes of those nodes to define the criteria for your query and return relevant data. For example, you might query the `SOFTWARE_PRODUCT` node in Technopedia and specify the title attribute becasuse you want to return titles of software products. The following example is a TQL query that returns software titles:
   <br>
   `MATCH (s:SOFTWARE_PRODUCT) WHERE title = "Microsoft" RETURN s.title`
   <br>
-
-  ###### The following query is an example of a GET request with a graph query, which is like a `SELECT` statement in SQL, which selects the software node and then returns titles of software products.<br>
-  
+  ###### The following query is an example of a GET request with a graph query, which is like a `SELECT` statement in SQL, which selects the software node and then returns titles of software products.
+  <br>
   `GET:` `https://v6.technopedia.com/tql?MATCH (n:SOFTWARE_PRODUCT) RETURN n.title`<br>
 
 
