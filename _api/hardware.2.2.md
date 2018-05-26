@@ -7,7 +7,7 @@ content_markdown: |-
 
   MATCH (a:HW_MODEL) RETURN a.model
   {: .info}
-  {: .success}
+  
   <br>
 
 
