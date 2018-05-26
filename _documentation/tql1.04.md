@@ -1,6 +1,6 @@
 ---
 title: TQL
-position: 1.04
+position: 1.05
 type:
 description: >-
   You use the Technopedia query language (TQL) with the TQL endpoint to query data in the Technopedia database. TQL is the graph query language that you use to query the database. The graph database stores connections between nodes as first-class citizens so it doesn't have to compute relationships at query time, which makes it more efficient than a relational database.

@@ -86,8 +86,13 @@ left_code_blocks:
     title: Response example
     language: json
 right_code_blocks:
-  - code_block: "https://v6.technopedia.com/tql?"
-                "https://v6.technopedia.com/technopedia-id/
+   - code_block: |2-
+      
+      https://v6.technopedia.com/tql
+
+      https://v6.technopedia.com/technopedia-id/
+
+      
     title: Technopedia Endpoints
-    language: json
+    language: bash
 ---
