@@ -9,13 +9,19 @@ content_markdown: >-
 
 
   ###### In the following example, you match the relationship is descriped as
-  Joe is a friend of Bob. This relationship connection 
+  employee is employee of organization. The folllowing example shows a relationship connection format:
 
 
   `Match (node)-[:RELATIONSHIP]-> (node)`
 
 
-  `Match (Joe)-[:FRIEND_OF]-> (Bob)`
+  `Match (Joe)-[:Is_Employee_of]-> (organization)`
+  If Joe is an employee of the organization then this relationship might be expressed in the following way:<br>
+
+  The start node is employee; organization is the end node; `Is_Employee_of` is the relationship and
+  the direction is employee to organization, which is determined by the arrow. The syntax of the query that defines the relationship might be expressed in the following way: <br>
+
+  `MATCH (e:employee)-[Is_Employee_of]->(organization) WHERE e.person = "Joe" RETURN e`
 
 
   Here's a diagram of how Nodes and Relationships work:
