@@ -11,7 +11,7 @@ content_markdown: >-
   <br>
 
   `MATCH (SOFTWARE_PRODUCT)<-[:EDITION_OF]-(SOFTWARE_EDITION) WHERE n.release_title = "Advanced Partitioning Option" RETURN n`
-  
+  {: .info}
   {: .success}
 
 
@@ -19,10 +19,16 @@ content_markdown: >-
 
   
  ##### Temp Info
-  Cypher queries that use
-  Key words MATCH, WHERE, AND, OR, COUNT, DISTINCT, CONTAINS
-  Operators =, <>, >, <, >=, <=
-  Case insensitivity
+  * TQL queries can use the following keywords:
+  * MATCH
+  * WHERE
+  * AND
+  * OR
+  * COUNT
+  * DISTINCT 
+  * CONTAINS
+  *Operators =, <>, >, <, >=, <=
+  *Case insensitivity
 
 left_code_blocks:
   - code_block: |-
