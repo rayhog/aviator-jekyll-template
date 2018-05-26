@@ -80,8 +80,8 @@ content_markdown: >-
   ###### The following diagram shows how Nodes and Relationships are
   connected:
 
-
   ![API Image](/images/NodeAndRel.png){: .img-responsive}<br>&nbsp;
+
 left_code_blocks:
   - code_block: |-
       $.get("http://api.myapp.com/books/3", {
@@ -93,11 +93,7 @@ left_code_blocks:
     language: javascript
 right_code_blocks:
   - code_block: |-
-      Endpoints
-
-      https://v6.technopedia.com/tql?
-      
-      https://v6.technopedia.com/technopedia-id/
+      Endpoints   
 
     title: Technopedia Endpoints
     language: html

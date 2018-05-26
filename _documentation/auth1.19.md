@@ -17,7 +17,7 @@ content_markdown: |-
 
   Use the `--data-urlencode` option in the cURL command to encode spaces.<br>
   
-  The following example shows how you add the API key to the header of a GET request in Postman:<br>
+  The following example shows how you add the API key to the header of a GET request in the Postman API client:<br>
   <br>
   ![API Image](/images/bearer_token.png){: .img-responsive}<br>
 left_code_blocks:
