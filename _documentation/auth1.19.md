@@ -28,11 +28,10 @@ left_code_blocks:
     title: cURL examples
     language: bash
     - code_block: |-
-      GET: https://v6.technopedia.com/tql?q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.title
+        GET: https://v6.technopedia.com/tql?q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.title
 
-      GET: https://v6.technopedia.com/tql?q=MATCH (n:SOFTWARE_PRODUCT) WHERE n.title = "PDF Converter" RETURN n
+        GET: https://v6.technopedia.com/tql?q=MATCH (n:SOFTWARE_PRODUCT) WHERE n.title = "PDF Converter" RETURN n
 
-      curl -G -H "Authorization: Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode "q=MATCH (n:SOFTWARE_PRODUCT) WHERE n.title = "PDF Converter" RETURN n
     title: GET examples
     language: bash
 right_code_blocks:
