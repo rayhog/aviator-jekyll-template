@@ -70,7 +70,7 @@ content_markdown: |-
 
 left_code_blocks:
   - code_block: |-
-      GET: https://v6.technopedia.com/tql?MATCH (n:SOFTWARE_PRODUCT) RETURN n.title
+      GET: https://v6.technopedia.com/tql?MATCH (n:SOFTWARE_PRODUCT) RETURN name
       
     title: API Query Example
     language: bash
