@@ -73,7 +73,7 @@ left_code_blocks:
     GET: https://v6.technopedia.com/tql?MATCH (n:SOFTWARE_PRODUCT) RETURN n.title
       
     title: API Query Example
-    language: json
+    language: bash
 right_code_blocks:
   - code_block: |2
       https://v6.technopedia.com/tql
