@@ -20,7 +20,7 @@ content_markdown: >-
 
   ######
   Relationships provide semantically relevant connections between the Technopedia nodes. Relationships might have a
-  type,such as `friend\_of` and a direction such as Joe (node) `friend_of` Bob
+  type,such as `friend_of` and a direction such as Joe (node) `friend_of` Bob
   (node), where an arrow in a query determines the direction of the relationship.
   To get Technopedia data by connecting Nodes, You use relationships to traverse nodes and define the criteria for the data that you want to extract from the database.
 
@@ -39,22 +39,26 @@ content_markdown: >-
   ![API Image](/images/node_ex.png)<br>&nbsp;
   
   In a query, nodes are surrounded by parenthesis and relationships are surrounded by square brackets as shown in the following example:
-  
+  <br>
   `Match (node)-[:RELATIONSHIP]-> (node)`
   
   <br>
  
 
-  {: .success}
+  
 
-  To get data from a specific node or relationship, you use an alias or variable that you append to the node or relationship. That alias is bound to that node or relationship so you can use that alias in the Return clause of the MATCH query to get specific data from that node or alias.
-  `Match (myalias:node)-[another_alias:RELATIONSHIP]`
+  To get data from a specific node or relationship, you use an alias or variable that you append to the node or relationship. That alias is bound to that node or relationship so you can use that alias in the Return clause of the MATCH query to get your specific data.
+  <Br>
+  `Match (myalias:node1)-[another_alias:RELATIONSHIP]->(other_alias:node2)`
+  <br>
+  MATCH (aliasX:MANUFACTURER)-[aliasV:VENDOR_OF]->(aliasY:SOFTWARE_PRODUCT) RETURN aliasX, aliasY
   
 
   The query returns software that includes 'Excel'. This is query is case
   sensitive.
   
-  The following diagagram shows the data nodes and relationships in the Technopedia database:
+  The following diagram shows the data nodes and relationships in the Technopedia database:
+  <br>
   ![API Image](/images/graph.png)<br>&nbsp;
 
 

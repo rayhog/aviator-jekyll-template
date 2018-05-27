@@ -2,19 +2,16 @@
 title: CPU
 position: 3.2
 type: 
-description: Write a MATCH statement to query the CPU Node.
+description: 
 content_markdown: |-
   ###### The CPU node in the Technopedia database stores information that relates to the CPU, such as the model ID, number or cores, and model information. 
 
-  The CPU node is connected to the MANUFACTUER node by the VENDOR_OF relationship, which points to the CPU.
+  The CPU node is connected to the MANUFACTUER node by the VENDOR_OF relationship, which points toward the CPU node.
 
   MATCH (a:CPU) RETURN a.model
   {: .info}
   
   <br>
-
-
-  <br> 
     
   
   ![API Image](/images/graph.png){:class="img-responsive"} <br>
@@ -41,7 +38,7 @@ right_code_blocks:
     title: CPU Attributes
     language: bash
   - code_block: |2-
-      (Manufacturer)-[:VENDOR_OF]->(CPU)
+      (MANUFACTURER)-[:VENDOR_OF]->(CPU)
     title: Relationships
     language: bash
 ---
