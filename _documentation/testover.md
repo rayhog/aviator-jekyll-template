@@ -70,14 +70,20 @@ content_markdown: |-
 
 left_code_blocks:
   - code_block: |-
-      {
-        "error": true,
-        "message": "error message here"
-      }
-    title: Response example
+    GET: https://v6.technopedia.com/tql?MATCH (n:SOFTWARE_PRODUCT) RETURN n.title
+      
+    title: API Query Example
     language: json
 right_code_blocks:
-  - code_block: "{\r\n  \"error\": true,\r\n  \"message\": \"error message here\"\r\n}\r\n\r\n{\r\n    \"message\": \"Internal Server Error\",\r\n    \"request-id\": \"4f6bfd02-e367-4a61-90c7-832d0226dd8c\"\r\n}"
+  - code_block: |2
+      https://v6.technopedia.com/tql
+      https://v6.technopedia.com/technopedia-id/
+      
+      
+
+
     title: Technopedia Endpoints
-    language: json
+    language: bash
+  
 ---
+
