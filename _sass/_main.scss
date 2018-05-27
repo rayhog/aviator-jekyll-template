@@ -296,9 +296,9 @@ hr {
 .doc-content {
 	border: 0;
 	border-bottom: 1px solid transparent;
-	border-image: linear-gradient(to right,	#eee 0%,#eee 100%,#eee 100%);
-	-moz-border-image: -moz-linear-gradient(left,	#eee 0%, #eee 70%, #fffg 70%);
-	-webkit-border-image: -webkit-linear-gradient(left,	#eee 0%,#eee 70%,#fff 70%);
+	border-image: linear-gradient(to right,	#fff 0%,#fff 100%,#fff 100%);
+	-moz-border-image: -moz-linear-gradient(left,	#fff 0%, #fff 70%, #fffg 70%);
+	-webkit-border-image: -webkit-linear-gradient(left,	#fff 0%,#fff 70%,#fff 70%);
 	border-image-slice: 1;
 	padding: 30px 0;
 	background: #ffffff; /* Old browsers */
