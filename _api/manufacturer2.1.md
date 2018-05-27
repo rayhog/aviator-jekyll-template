@@ -53,12 +53,15 @@ right_code_blocks:
       employees_date
       created_at
       modified_at
+
+
+
     title: Manufacturer Attributes
     language: bash
-- code_block: |2-
+  - code_block: |2-
       (Manufacturer)-[:VENDOR_OF]->(SOFTWARE_PRODUCT)
       
     title: Relationships
     language: bash
-  ---
+---
 
