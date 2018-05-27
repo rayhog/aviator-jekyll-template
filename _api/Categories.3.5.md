@@ -27,26 +27,18 @@ right_code_blocks:
   - code_block: |2
         label
         description
-        
-
-
-
-
     title: Category_Group_Attributes
     language: bash
   - code_block: |2-
         label
         description
         cat_taxonomy2012_id
-        
-
     title: Category_1 Attributes
     language: bash
   - code_block: |2-
         label
         description
         cat_taxonomy2012_id
-       
     title: Category_2 Attributes
     language: bash
 ---
