@@ -17,7 +17,7 @@ content_markdown: >-
   
   <br>
 
-  ### Software Major Version
+  ### Software Version Group
   
   ######
   The node that represents the major version of software is `SOFTWARE_MAJOR_VERSION`.
@@ -51,29 +51,23 @@ left_code_blocks:
 right_code_blocks:
   - code_block: |2
       VERSION ATTRIBUTES
-      cat_sw_version_id
-      version_desupported_flag
-      version_patchlevel
-      subversion
-      version
-      version_order
-      cat_sw_product_id
-      version_group
       technopedia_id
-      created_at
-      modified_at
-      deleted_at
-      load_id
+      cat_sw_version_id
+      version
+      version_patchlevel
+      is_major
+      version_order
+      version_desupported_flag
 
-      MAJOR VERSION ATTRIBUTES
+      MAJOR VERSION GROUP
       Version
-      Version Order
+      cat_sw_version_group_id
 
     title: Software Version Attributes
     language: bash
   - code_block: |2-
       (SOFTWARE_VERSION)<-[:RELEASE_OF]-(SOFTWARE_RELEASE)
-      (SOFTWARE_VERSION)<-[:MAJOR_VERSION_OF]-(SOFTWARE_MAJOR_VERSION)
+      (SOFTWARE_VERSION)<-[:MAJOR_VERSION_OF]-(to be determined)
     title: Relationships
     language: bash
 ---

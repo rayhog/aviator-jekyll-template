@@ -128,26 +128,18 @@ right_code_blocks:
     language: json
 right_code_blocks:
   - code_block: |2
-      cat_sw_release_id
-      release_title
-      release_patchlevel
-      ga_date
-      licensable
-      is_major
-      unverified_version
-      release_discontinued_flag
-      release_desupported_flag
-      release_url
-      technopedia_id
+      discontinued_flag
+      desupported_flag
+      url
       created_at
       modified_at
-      deleted_at
-      load_id
+      
     title: Software Release Attributes
     language: bash
   - code_block: |2-
       (SOFTWARE_RELEASE)-[:RELEASE_OF]->(SOFTWARE_VERSION)
       (SOFTWARE_RELEASE)<-[:EDITION_OF]-(SOFTWARE_EDITION)
+      (SUPPORT_STAGE)
     title: Relationships
     language: bash
 ---
