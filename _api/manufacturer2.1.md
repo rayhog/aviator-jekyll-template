@@ -29,16 +29,14 @@ left_code_blocks:
     language: bash
 right_code_blocks:
   - code_block: |2
+      technopedia_id
       cat_manufacturer_id
-      title
       manufacturer
       legal
       revenue
       symbol
       tier
       website
-      owner_id
-      date_acquired
       description
       known_as
       phone
@@ -56,21 +54,15 @@ right_code_blocks:
       profits_date
       employees
       employees_date
-      technopedia_id
       created_at
       modified_at
-      to_be_deleted
-      deleted_at
-      load_id
+
     title: Manufacturer Attributes
     language: bash
   - code_block: |2-
       (Manufacturer)-[:VENDOR_OF]->(SOFTWARE_PRODUCT)
+      
     title: Relationships
     language: bash
-  - code_block: |2-
-      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (m:MANUFACTURER) RETURN m.manufacturer, m.technopedia_id"
-    title: cURL Example
-    language: bash
----
+  ---
 
