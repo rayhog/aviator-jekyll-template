@@ -163,7 +163,7 @@ dl dd:after {
 	font-size: 1.5rem;
 	letter-spacing: 1.3px;
 	color: rgb(51, 51, 51);
-	font-weight: bolder;
+	font-weight: bold;
 }
 
 .sidebar {
@@ -463,7 +463,7 @@ header {
 		@include display-flex();
 		@include flex-direction(row);
 		@include align-items(center);
-		border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+		border-bottom: 1px solid rgba(0, 0, 0, 0.);
 
 		img {
 			height: 40px;
@@ -524,7 +524,7 @@ header {
 	box-sizing: border-box;
 
 	border: 0;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.0);
 
 	font-size: 1.3rem;
 	font-weight: 400;
