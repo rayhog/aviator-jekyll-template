@@ -86,6 +86,6 @@ right_code_blocks:
         "message": "Book doesn't exist"
       }
     title: Error
-    language: json
+    language: json  
 ---
 
