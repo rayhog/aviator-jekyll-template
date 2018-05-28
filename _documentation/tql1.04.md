@@ -32,6 +32,7 @@ content_markdown: >-
   <br>
 
   #### Building a MATCH query<br>
+  
   <br>
   To create a MATCH statement you must identify the location of your information and use the following guide to help you to build your query:
 
