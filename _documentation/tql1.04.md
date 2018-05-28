@@ -132,15 +132,26 @@ right_code_blocks:
     language: json
 right_code_blocks:
   - code_block: |2
-      MATCH
-      WHERE
-      AND
-      OR
-      COUNT
-      DISTINCT 
-      CONTAINS
-      Operators =, <>, >, <, >=, <=
       
+      MATCH (alias.NODE) RETURN alias 
+      MATCH (n:SOFTWARE_PRODUCT) RETURN n 
+
+      MATCH (alias.NODE) RETURN alias.attribute 
+      MATCH (n:SOFTWARE_PRODUCT) RETURN n.name 
+
+      MATCH (alias.NODE) RETURN alias 
+      MATCH (s:SOFTWARE_RELEASE) RETURN s 
+
+      MATCH (alias.NODE) RETURN alias.attribute 
+      MATCH (s:SOFTWARE_RELEASE) RETURN s.version 
+      
+      MATCH (alias.NODE) RETURN alias 
+      MATCH (n:MANUFACTURER) RETURN n
+
+      MATCH (alias.NODE) RETURN alias.attribute
+      MATCH (n:MANUFACTURER) RETURN n.manufactuer 
+
+           
     title: Simple MATCH statements
     language: bash
   - code_block: |2-

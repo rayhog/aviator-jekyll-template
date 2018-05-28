@@ -8,7 +8,7 @@ content_markdown: |-
 
   The CPU node is connected to the MANUFACTUER node by the VENDOR_OF relationship, which points toward the CPU node.
 
-  MATCH (a:CPU) RETURN a.model
+  `MATCH (a:CPU) RETURN a.model`
   {: .info}
   
   <br>

@@ -47,7 +47,7 @@ content_markdown: >-
 
   
 
-  To get data from a specific node or relationship, you use an alias or variable that you append to the node or relationship. That alias is bound to that node or relationship so you can use that alias in the Return clause of the MATCH query to get your specific data.
+  To get data from a specific node or relationship, you use an alias or variable that you append to the node or relationship. TQL binds the alias that you specify to that node or relationship so you can use that alias in the Return clause of the MATCH query to get your specific data.
   <Br>
   `Match (myalias:node1)-[another_alias:RELATIONSHIP]->(other_alias:node2)`
   <br>
