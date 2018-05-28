@@ -27,8 +27,8 @@ content_markdown: >-
   * COUNT
   * DISTINCT 
   * CONTAINS
-  *Operators =, <>, >, <, >=, <=
-  *Case insensitivity
+  * Operators =, <>, >, <, >=, <=
+  * Case insensitivity
 
 left_code_blocks:
   - code_block: |-

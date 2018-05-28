@@ -3,7 +3,7 @@ title: Software Product
 position: 1.15
 type:
 description: >-
-  In the following query example, you get data from Technopedia that contains PDF Converter in the title of the software product title.
+  In the following query example, you get data from Technopedia that contains PDF Converter in the name of the software product name.
 content_markdown: >-
   `MATCH (n:SOFTWARE_PRODUCT) WHERE n.name = "PDF Converter" RETURN n` 
   
