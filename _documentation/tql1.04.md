@@ -54,7 +54,8 @@ content_markdown: >-
   `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name = "Adobe" Return s`
 
   <br>
-  In this example, software products that have Adobe in the name fields are returned.
+  In this example, software products that have Adobe in the name fields are returned.<br>
+
   <br>
   <br>
 
@@ -64,11 +65,11 @@ content_markdown: >-
 
   <br>
 
-  <b>Objective:</b> To find software that is manufactured by Adobe
+  <b>Objective:</b> To find software that is manufactured by Adobe<br>
 
   <br>
 
-  <b>Objective:</b> To find software that is manufactured by Adobe
+  <b>Objective:</b> To find software that is manufactured by Adobe<br>
 
 
 
