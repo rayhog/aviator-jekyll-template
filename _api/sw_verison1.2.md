@@ -11,7 +11,7 @@ content_markdown: >-
   <br>
   
 
-  MATCH (a:SOFTWARE_VERSION) RETURN a.version
+  `MATCH (a:SOFTWARE_VERSION) RETURN a.version`
 
   {: .success} 
   

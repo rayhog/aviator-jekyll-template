@@ -5,7 +5,7 @@ type:
 description: Write a MATCH statement to query the Hardware Nodes.
 content_markdown: |-
 
-  MATCH (a:HW_MODEL) RETURN a.model
+  `MATCH (a:HW_MODEL) RETURN a.model`
   {: .info}
   
   <br>

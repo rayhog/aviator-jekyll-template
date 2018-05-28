@@ -8,7 +8,7 @@ content_markdown: |-
   <br>
 
 
-  MATCH (e:SOFTWARE_EDITION {cat_sw_edition_id: '24853332'})-[*1..3]->(b) RETURN b LIMIT 10
+  `MATCH (e:SOFTWARE_EDITION {cat_sw_edition_id: '24853332'})-[*1..3]->(b) RETURN b LIMIT 10`
   {: .success}
 
   <br>
