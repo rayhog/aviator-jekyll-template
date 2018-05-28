@@ -138,26 +138,26 @@ right_code_blocks:
 right_code_blocks:
   - code_block: |2
       
-      MATCH (alias.NODE) RETURN alias 
+      MATCH (alias1.NODE) RETURN alias1 
       MATCH (n:SOFTWARE_PRODUCT) RETURN n 
 
       MATCH (alias.NODE) RETURN alias.attribute 
       MATCH (n:SOFTWARE_PRODUCT) RETURN n.name 
 
-      MATCH (alias.NODE) RETURN alias 
+      MATCH (alias2.NODE) RETURN alias2 
       MATCH (s:SOFTWARE_RELEASE) RETURN s 
 
       MATCH (alias.NODE) RETURN alias.attribute 
       MATCH (s:SOFTWARE_RELEASE) RETURN s.version 
       
-      MATCH (alias.NODE) RETURN alias 
+      MATCH (alias3.NODE) RETURN alias3 
       MATCH (n:MANUFACTURER) RETURN n
 
-      MATCH (alias.NODE) RETURN alias.attribute
+      MATCH (alias4.NODE) RETURN alias4.attribute
       MATCH (n:MANUFACTURER) RETURN n.manufactuer 
 
            
-    title: Simple MATCH statements
+    title: MATCH statements
     language: bash
   - code_block: |2-
       MATCH
@@ -168,6 +168,6 @@ right_code_blocks:
       DISTINCT 
       CONTAINS
       Operators =, <>, >, <, >=, <=
-    title: TQL Keywords and Operators
+    title: TQL Keywords
     language: bash
 ---
