@@ -13,6 +13,7 @@ content_markdown: >-
   To make a query with TQL, you must use a MATCH statement, which is like Select statement in SQL. You add the MATCH statement as a query parameter to the TQL endpoint.<br>
   For example, `https://v6.technopedia.com/tql?q=MATCH <query_parameters>`
   <br>
+  
   The TQL MATCH statement returns results from one or more nodes and relationships that are specified in the query. Typically, the data results are returned in key-value pairs, in a format that resembles the format in the following image:
   <br>
   ![API Image](/images/key_val.png)<br>&nbsp;
@@ -27,8 +28,17 @@ content_markdown: >-
   To get data from a specific node or relationship, you use an alias or variable that you append to the node or relationship. That alias is bound to that node or relationship so you can use that alias in the Return clause of the MATCH query to get specific data from that node or alias.
   `Match (myalias:node)-[another_alias:RELATIONSHIP]`
 
-  The query returns software that includes 'Excel'. This is query is case
-  sensitive.
+  #### Building a MATCH query
+  To create a MATCH statement you must identify the location of your information and use the following guide to help you to build your query:
+   
+  1.	Select the Nodes that you want to use in your query.
+  2.	Identify the node attributes that store the information you require.
+  3.	Select relationships to connect nodes that hold the data that you require.
+  4.	Write your MATCH statement
+  
+  ##### Here’s some examples:
+  <b>Objective:</b> To find software that is manufactured by Adobe
+
 left_code_blocks:
   - code_block: |
       MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
