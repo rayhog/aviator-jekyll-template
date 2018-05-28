@@ -14,10 +14,10 @@ content_markdown: >-
   For example, `https://v6.technopedia.com/tql?q=MATCH <query_parameters>`
   <br>
   
-  The TQL MATCH statement returns results from one or more nodes and relationships that are specified in the query. Typically, the data results are returned in key-value pairs, in a format that resembles the format in the following key-pair value:
+  The TQL MATCH statement returns results from one or more nodes and relationships that are specified in the query. Typically, the data results are returned in key-value pairs, in a format that resembles the format in the following key-value pair value:
   <br>
    
-  {"Manufacturer": "Microsoft"}
+  `{"Manufacturer": "Microsoft"}`
    
   <br>
 
