@@ -65,7 +65,7 @@ right_code_blocks:
     language: json
 
 
-    <br>
+   <br>
 
   #### HTTP Status Codes
   The following table shows the HTTP status codes that are returned by the API.
@@ -77,5 +77,5 @@ right_code_blocks:
   | 400 | Bad Request | Request can't be processed |
   | 403 | Forbidden | Failed to authenticate |
 
-<br>
+   <br>
 ---
