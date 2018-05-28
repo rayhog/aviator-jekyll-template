@@ -18,7 +18,14 @@ content_markdown: >-
   <br>
    
   `{"Manufacturer": "Microsoft"}`
-   
+
+  ```
+  { 
+    "Manufacturer": "Microsoft"
+    "name": "Word"
+    "version": "5.0"
+  }
+  ```
   <br>
 
   The following diagram is an example of how Nodes and Relationships are connected:
@@ -27,12 +34,12 @@ content_markdown: >-
 
   ![API Image](/images/NodeAndRel.png)<br>&nbsp;
   <br>  
-  To get data from a specific node or relationship, you use an alias or variable that you append to the node or relationship. That alias is bound to that node or relationship so you can use that alias in the Return clause of the MATCH query to get specific data from that node or alias.
+  To get data from a specific node or relationship, you use an alias or variable that you append to the node or relationship. That alias is bound to that node or relationship so you can use that alias in the Return clause of the MATCH query to get specific data from that node or alias. For example,<br>
   `Match (myalias:node)-[another_alias:RELATIONSHIP]`
   <br>
 
   #### Building a MATCH query<br>
-  
+
   <br>
   To create a MATCH statement you must identify the location of your information and use the following guide to help you to build your query:
 
