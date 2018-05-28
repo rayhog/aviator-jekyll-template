@@ -27,14 +27,15 @@ content_markdown: >-
   <br>  
   To get data from a specific node or relationship, you use an alias or variable that you append to the node or relationship. That alias is bound to that node or relationship so you can use that alias in the Return clause of the MATCH query to get specific data from that node or alias.
   `Match (myalias:node)-[another_alias:RELATIONSHIP]`
+  <br>
 
   #### Building a MATCH query
   To create a MATCH statement you must identify the location of your information and use the following guide to help you to build your query:
-   
-  1.	Select the Nodes that you want to use in your query.
-  2.	Identify the node attributes that store the information you require.
-  3.	Select relationships to connect nodes that hold the data that you require.
-  4.	Write your MATCH statement
+
+   1	Select the Nodes that you want to use in your query.
+   2	Identify the node attributes that store the information you require.
+   3	Select relationships to connect nodes that hold the data that you require.
+   4	Write your MATCH statement
   
   ##### Here’s some examples:
   <b>Objective:</b> To find software that is manufactured by Adobe
