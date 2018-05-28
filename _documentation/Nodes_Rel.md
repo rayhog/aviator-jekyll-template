@@ -1,10 +1,11 @@
 ---
-title: Date
+title: Data
 position: 1.04
 type:
-description: >- Data that is stored in Technopedia is referenced by nodes and relationships.
+description: >-  
 content_markdown: >-
-  
+  ###### Data that is stored in Technopedia is referenced by nodes and relationships.
+
   #### About Nodes in Technopedia
   
   ######
