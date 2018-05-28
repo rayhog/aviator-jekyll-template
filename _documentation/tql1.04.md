@@ -52,9 +52,10 @@ content_markdown: >-
     * We have to use the WHERE clause with the equals operator to specify condition `name = "Adobe"`.<br>
   <br>
   `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name = "Adobe" Return s`
-  
+
   <br>
   In this example, software products that have Adobe in the name fields are returned.
+  <br>
   <br>
 
   You must add an alias to nodes and relationships in a MATCH statement. You refer to this alias with the return clause to specify the query ouput.
