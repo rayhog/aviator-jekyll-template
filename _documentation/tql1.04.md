@@ -13,8 +13,8 @@ content_markdown: >-
   To make a query with TQL, you must use a MATCH statement, which is like Select statement in SQL. You add the MATCH statement as a query parameter to the TQL endpoint. 
   For example, `https://v6.technopedia.com/tql?q=MATCH <query_parameters>`
   The TQL MATCH statement returns results from one or more nodes. The results are returned in a format that resembles the following format in the image:
-
   <br>
+  
   ![API Image](/images/key_val.png)<br>&nbsp;
   <br>
 
