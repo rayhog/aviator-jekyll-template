@@ -39,19 +39,20 @@ content_markdown: >-
    1.	Select the Nodes that you want to use in your query.<br>
    2.	Identify the node attributes that store the information you require.<br>
    3.	Select relationships to connect nodes that hold the data that you require.<br>
-   4.	Write your MATCH statement<br>
+   4.	Write your MATCH statement
+
   <br>
-  
   Here’s some examples:
   <br>
   <b>Objective:</b> To find software that contains the name Adobe.<br>
 
-   * The Software Product node has an attribute called name.<br>
-   * We use MATCH to select the SOFTWARE_PRODUCT node and the name attribute to filter for Adobe.<br>
-   * For each Technopedia node, you can view the list of attributes on that page.<br>
-   * We have to use the WHERE clause with the equals operator to specify condition `name = "Adobe"`.<br>
+    * The Software Product node has an attribute called name.<br>
+    * We use MATCH to select the SOFTWARE_PRODUCT node and the name attribute to filter for Adobe.<br>
+    * For each Technopedia node, you can view the list of attributes on that page.<br>
+    * We have to use the WHERE clause with the equals operator to specify condition `name = "Adobe"`.<br>
   <br>
   `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name = "Adobe" Return s`
+  
   <br>
   In this example, software products that have Adobe in the name fields are returned.
   <br>
