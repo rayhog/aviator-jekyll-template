@@ -45,7 +45,7 @@ right_code_blocks:
 
 
 
-      <br>
+      
 
 
 

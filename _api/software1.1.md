@@ -45,7 +45,19 @@ right_code_blocks:
       * SOFTWARE_MAJOR_VERSION
       * SOFTWARE_EDITION
       * SOFTWARE RELEASE
+
       Query specific software data by using the individual nodes, or use relationships to connect nodes.
+
+
+
+
+
+
+
+
+
+
+      
 
     title: Software Nodes
     language: bash
