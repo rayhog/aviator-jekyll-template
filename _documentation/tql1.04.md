@@ -19,14 +19,7 @@ content_markdown: >-
    
   `{"Manufacturer": "Microsoft"}`
 
-  ```
-  { 
-    "Manufacturer": "Microsoft"
-    "name": "Word"
-    "version": "5.0"
-  }
-  ```
-  <br>
+   <br>
 
   The following diagram is an example of how Nodes and Relationships are connected:
   <br>
@@ -52,6 +45,8 @@ content_markdown: >-
   Here’s some examples:
   <br>
   <b>Objective:</b> To find software that is manufactured by Adobe
+
+  
 
 left_code_blocks:
   - code_block: |
