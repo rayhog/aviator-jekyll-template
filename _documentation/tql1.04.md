@@ -14,16 +14,11 @@ content_markdown: >-
   For example, `https://v6.technopedia.com/tql?q=MATCH <query_parameters>`
   <br>
   
-  The TQL MATCH statement returns results from one or more nodes and relationships that are specified in the query. Typically, the data results are returned in key-value pairs, in a format that resembles the format in the following snippet:
+  The TQL MATCH statement returns results from one or more nodes and relationships that are specified in the query. Typically, the data results are returned in key-value pairs, in a format that resembles the format in the following key-pair value:
   <br>
-  {% highlight javascript %}
-  {
-    "Manufacturer": "Microsoft",
-    "name": "Word",
-    "version": "5.0"
-  }
-  {% endhighlight %}
-
+   
+  {"Manufacturer": "Microsoft"}
+   
   <br>
 
   The following diagram is an example of how Nodes and Relationships are connected:
@@ -36,9 +31,9 @@ content_markdown: >-
   `Match (myalias:node)-[another_alias:RELATIONSHIP]`
   <br>
 
-  #### Building a MATCH query
+  #### Building a MATCH query<br>
   <br>
-  ######
+  
   To create a MATCH statement you must identify the location of your information and use the following guide to help you to build your query:
 
    1	Select the Nodes that you want to use in your query.<br>
@@ -46,7 +41,8 @@ content_markdown: >-
    3	Select relationships to connect nodes that hold the data that you require.<br>
    4	Write your MATCH statement<br>
   <br>
-  ##### Here’s some examples:
+  ##### 
+  Here’s some examples:
   <br>
   <b>Objective:</b> To find software that is manufactured by Adobe
 
