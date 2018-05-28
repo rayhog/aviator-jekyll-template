@@ -4,7 +4,13 @@ position: 1.04
 type:
 description: >-  
 content_markdown: >-
-  ###### Data that is stored in Technopedia is referenced by nodes and relationships.
+  ###### You query data that is stored in Technopedia by referencing nodes, relationships, or Technopedia IDs.
+
+  #### Technopedia ID
+
+  ######
+  Products that are stored in Technopedia have a Technopedia ID that you can reference in an API GET request.
+  You specify the Technopedia ID as a parameter for the Technopedia-id TQL endpoint.
 
   #### About Nodes in Technopedia
   
@@ -14,7 +20,7 @@ content_markdown: >-
    * Nodes are entities that store the Technopedia data.
    * Node names are surrounded by parentheses in a query, for example, (Node).
    * Nodes have different attributes that show data in key-value pairs.
-   * Nodes are connected to other nodes by relatioships.
+   * Nodes are connected to other nodes by relationships.
    
   To get data from multiple nodes in one query, you use defined relationships to other nodes in your queries to connect the nodes and their attributes. 
 
@@ -76,7 +82,7 @@ left_code_blocks:
         }
       });
     title: Example
-    language: json
+    language: javascript
 right_code_blocks:
   - code_block: |2
       

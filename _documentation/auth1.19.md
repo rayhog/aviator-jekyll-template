@@ -20,6 +20,7 @@ content_markdown: |-
   The following example shows where you add the API key to the header of a GET request in the Postman API client:<br>
   <br>
   ![API Image](/images/bearer_token.png){: .img-responsive}<br>
+  <br>
 
   #### HTTP Status Codes
   The following table shows the HTTP status codes that are returned by the API.

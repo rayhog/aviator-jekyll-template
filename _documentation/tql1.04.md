@@ -11,8 +11,8 @@ content_markdown: >-
   #### Get started with TQL<br>
 
   To make a query with TQL, you must use a MATCH statement, which is like Select statement in SQL. You add the MATCH statement as a query parameter to the TQL endpoint.<br>
-  For example, `https://v6.technopedia.com/tql?q=MATCH <query_parameters>`
-  The TQL MATCH statement returns results from one or more nodes and relationships that are specified in the query. Typically, the data results are returned in key-value pairs, a format that resembles the format in the follwing image:
+  For example, `https://v6.technopedia.com/tql?q=MATCH <query_parameters>`<br>
+  The TQL MATCH statement returns results from one or more nodes and relationships that are specified in the query. Typically, the data results are returned in key-value pairs, in a format that resembles the format in the following image:
   <br>
   
   ![API Image](/images/key_val.png)<br>&nbsp;
@@ -163,6 +163,6 @@ right_code_blocks:
       DISTINCT 
       CONTAINS
       Operators =, <>, >, <, >=, <=
-    title: TQL Operators
+    title: TQL Keywords and Operators
     language: bash
 ---
