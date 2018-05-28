@@ -19,7 +19,7 @@ content_markdown: >-
      "manufacturer": "Microsoft",
      "name": "Word",
      "version": "5.0"
-   }
+   }`
 
   <br>
 
