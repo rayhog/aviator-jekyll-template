@@ -1,18 +1,19 @@
 ---
-title: Nodes 
+title: Date
 position: 1.04
 type:
-description: >-
+description: >- Data that is stored in Technopedia is referenced by nodes and relationships.
 content_markdown: >-
   
   #### About Nodes in Technopedia
   
   ######
-  Nodes are the entities in the Technopedia graph where each nodes stores specific data. Nodes can have any
+  Nodes are the entities in the Technopedia graph that store specific data. Nodes can have any
   number of attributes, which are represented by key-value-pairs.<br> 
    * Nodes are entities that store the Technopedia data.
    * Node names are surrounded by parentheses in a query, for example, (Node).
    * Nodes have different attributes that show data in key-value pairs.
+   * Nodes are connected to other nodes by relatioships.
    
   To get data from multiple nodes in one query, you use defined relationships to other nodes in your queries to connect the nodes and their attributes. 
 
@@ -48,16 +49,15 @@ content_markdown: >-
   
 
   To get data from a specific node or relationship, you use an alias or variable that you append to the node or relationship. TQL binds the alias that you specify to that node or relationship so you can use that alias in the Return clause of the MATCH query to get your specific data.
-  <Br>
+  <br>
   `Match (myalias:node1)-[another_alias:RELATIONSHIP]->(other_alias:node2)`
   <br>
-  MATCH (aliasX:MANUFACTURER)-[aliasV:VENDOR_OF]->(aliasY:SOFTWARE_PRODUCT) RETURN aliasX, aliasY
+  `MATCH (aliasX:MANUFACTURER)-[aliasV:VENDOR_OF]->(aliasY:SOFTWARE_PRODUCT) RETURN aliasX, aliasY`
   
 
-  The query returns software that includes 'Excel'. This is query is case
-  sensitive.
   
-  The following diagram shows the data nodes and relationships in the Technopedia database:
+  
+  The following diagram shows the nodes and relationships in the Technopedia database:
   <br>
   ![API Image](/images/graph.png)<br>&nbsp;
 
@@ -74,22 +74,22 @@ left_code_blocks:
           alert(data);
         }
       });
-    title: jQuery
-    language: javascript
-right_code_blocks:
-  - code_block: |-
-      {
-        "id": 3,
-        "status": "deleted"
-      }
-    title: Response
+    title: Example
     language: json
-  - code_block: |-
-      {
-        "error": true,
-        "message": "Book doesn't exist"
-      }
-    title: Error
-    language: json  
+right_code_blocks:
+  - code_block: |2
+      
+      MANUFACTURER
+      SOFTWARE_PRODUCT
+      SOFTWARE_VERSION
+      SOFTWARE_RELEASE
+      SOFTWARE_EDITION
+      CPU
+      HARDWARE
+
+
+           
+    title: Nodes in Technopedia
+    language: bash
 ---
 

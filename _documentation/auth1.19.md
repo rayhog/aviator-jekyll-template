@@ -20,6 +20,18 @@ content_markdown: |-
   The following example shows where you add the API key to the header of a GET request in the Postman API client:<br>
   <br>
   ![API Image](/images/bearer_token.png){: .img-responsive}<br>
+
+  #### HTTP Status Codes
+  The following table shows the HTTP status codes that are returned by the API.
+
+  | Code | Name | Description |
+  | --- | --- | --- |
+  | 200 | OK | Success |
+  | 201 | Created | Creation Successful |
+  | 400 | Bad Request | Request can't be processed |
+  | 403 | Forbidden | Failed to authenticate |
+
+
 left_code_blocks:
   - code_block: |-
       curl -G -H "Authorization: Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode "q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.title"
