@@ -108,8 +108,15 @@ left_code_blocks:
     title: Example 3
     language: javascript
   - code_block: 'curl http://sampleapi.readme.com/orders?key=YOUR_APP_KEY'
-    title: Curl
+    title: Example 4
     language: bash
+  - code_block: 'curl http://sampleapi.readme.com/orders?key=YOUR_APP_KEY'
+    title: Example 5
+    language: bash
+  - code_block: 'curl http://sampleapi.readme.com/orders?key=YOUR_APP_KEY'
+    title: cURL
+    language: bash
+    
 right_code_blocks:
   - code_block: |-
       [
