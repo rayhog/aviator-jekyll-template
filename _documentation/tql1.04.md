@@ -46,19 +46,24 @@ content_markdown: >-
   <br>
   <b>Objective:</b> To find software that contains the name Adobe.<br>
 
-  * The Software Product node has an attribute called name.
-  * We use MATCH to select the SOFTWARE_PRODUCT node and the name attribute to filter for Adobe.
-  * For each Technopedia node, you can view the list of attributes on that page.
-  * We have to use the WHERE clause with the equals operator to specify condition `name = "Adobe"`.
-  
+  * The Software Product node has an attribute called name.<br>
+  * We use MATCH to select the SOFTWARE_PRODUCT node and the name attribute to filter for Adobe.<br>
+  * For each Technopedia node, you can view the list of attributes on that page.<br>
+  * We have to use the WHERE clause with the equals operator to specify condition `name = "Adobe"`.<br>
+  <br>
   `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name = "Adobe" Return s`
   <br>
   In this example, software products that have Adobe in the name fields are returned.
-
+  <br>
   You must using an alias with nodes and relationships in a MATCH statement.
+  
   {: .warning}
 
+  <br>
+
   <b>Objective:</b> To find software that is manufactured by Adobe
+
+  <br>
 
   <b>Objective:</b> To find software that is manufactured by Adobe
 
