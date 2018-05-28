@@ -16,11 +16,13 @@ content_markdown: >-
   
   The TQL MATCH statement returns results from one or more nodes and relationships that are specified in the query. Typically, the data results are returned in key-value pairs, in a format that resembles the format in the following snippet:
   <br>
-  `{`
-   ` "manufacturer": "Microsoft",`
-   ` "name": "Word"`
-   ` "version": "5.0"`
-  `}`
+  {% highlight javascript %}
+  {
+    "Manufacturer": "Microsoft",
+    "name": "Word",
+    "version": "5.0"
+  }
+  {% endhighlight %}
 
   <br>
 
@@ -35,6 +37,7 @@ content_markdown: >-
   <br>
 
   #### Building a MATCH query
+  <br>
   ######
   To create a MATCH statement you must identify the location of your information and use the following guide to help you to build your query:
 
