@@ -9,13 +9,10 @@ content_markdown: |-
 
 
   `MATCH (a:MANUFACTURER) WHERE title = “Microsoft” RETURN a.title`
-
-  {: .success}
+  {: .info}
 
   
   
-  {: .success}
-
     
 left_code_blocks:
   - code_block: |-

@@ -9,7 +9,6 @@ content_markdown: |-
 
   Category nodes are linked by relationships from the software product node.
 
-  
   {: .info}
   
   <br>

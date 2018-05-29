@@ -7,6 +7,7 @@ content_markdown: |-
   The following query returns software releases by title:  
     
   `MATCH (a:SOFTWARE_RELEASE) RETURN a.release.title`
+  {: .info}
 
   <br>
   Software is a general classification that can be broken into the following classifications
