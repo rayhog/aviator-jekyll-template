@@ -100,8 +100,7 @@ left_code_blocks:
   - code_block: 'curl http://sampleapi.readme.com/orders?key=YOUR_APP_KEY'
     title: Example 5
     language: bash
-  - code_block: 
-      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:CPU) RETURN h.cores"
+  - code_block: 'curl http://sampleapi.readme.com/orders?key=YOUR_APP_KEY'
     title: cURL
     language: bash
     
