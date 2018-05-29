@@ -22,9 +22,7 @@ left_code_blocks:
       curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:CPU) RETURN h.cores"
     title: cURL Example
     language: bash
-     title: Example 1
-    language: javascript
-  - code_block: >-
+    - code_block: >-
       MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.release_url n.ga_date
 
 
@@ -52,7 +50,7 @@ left_code_blocks:
           }
     title: Example 2
     language: javascript
-  - code_block: |-
+ - code_block: |-
       MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1
 
       RESPONSE SAMPLE
