@@ -27,12 +27,14 @@ right_code_blocks:
       name
       family
       component
+      alias
       is_suite
       product_desupported_flag
       product_discontinued_flag
       product_url
       created_at
       modified_at
+
 
 
       

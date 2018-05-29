@@ -1,11 +1,11 @@
 ---
-title: Hardware Product
-position: 2.2
+title: Power Profile
+position: 2.7
 type: 
-description: Hardware information in Technopedia is 
+description: The power profile node represents harware power attributes.
 content_markdown: |-
 
-  `MATCH (a:HW_MODEL) RETURN a.model`
+  `MATCH (a:POWER_PROFILE) RETURN a.label`
   {: .info}
   
   <br>
@@ -26,21 +26,17 @@ left_code_blocks:
     language: bash
 right_code_blocks:
   - code_block: |2
-      technopedia_id
-      cat_manufacturer_id
-      product
-      desupported_flag
-      create_date
-      modified_at
+      Technopedia_id
+      Edition
+      Edition_Desupported_Flag
+      Edition_Order
+      URL
+      Created_At
+      Modified_At
     title: Software Product Attributes
     language: bash
   - code_block: |2-
-      [:VENDOR_OF]<-(MANUFACTURER)
-      [:CATEGORY]->(CATEGORY_2)
-      [:CERTIFICATIONS]->(CERTIFICATION)
-
-      
-      
+      [:VENDOR_OF]->(MANUFACTURER)
     title: Relationships
     language: bash
 ---

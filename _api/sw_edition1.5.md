@@ -35,16 +35,15 @@ left_code_blocks:
     language: javascript
 right_code_blocks:
   - code_block: |2
+      technopedia_id
       cat_sw_edition_id
       edition
       edition_desupported_flag
       edition_order
       url
-      technopedia_id
       created_at
       modified_at
-      deleted_at
-      load_id
+
     title: Software Edition Attributes
     language: bash
   - code_block: |2-

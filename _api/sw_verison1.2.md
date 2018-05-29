@@ -55,11 +55,14 @@ right_code_blocks:
       version
       version_patchlevel
       is_major
-      version_order
       version_desupported_flag
+      version_order
+      created_at
+
 
       MAJOR VERSION GROUP
-      Version
+      technopedia_id
+      version
       cat_sw_version_group_id
 
     title: Software Version Attributes

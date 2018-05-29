@@ -128,6 +128,8 @@ right_code_blocks:
     language: json
 right_code_blocks:
   - code_block: |2
+      technopedia_id
+      cat_sw_release_id
       discontinued_flag
       desupported_flag
       url

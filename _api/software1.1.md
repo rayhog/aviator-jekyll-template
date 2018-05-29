@@ -12,7 +12,7 @@ content_markdown: |-
   Software is a general classification that can be broken into the following classifications
     * Software Product
     * Software Version
-    * Software Major Version
+    * Software Group Version
     * Software Edition
     * Software Release
   

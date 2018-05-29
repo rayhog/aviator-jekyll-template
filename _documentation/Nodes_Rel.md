@@ -91,6 +91,7 @@ right_code_blocks:
       SOFTWARE_VERSION
       SOFTWARE_RELEASE
       SOFTWARE_EDITION
+      SOFTWARE_GROUP_VERSION
       CPU
       HARDWARE
 
