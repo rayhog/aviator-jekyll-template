@@ -8,36 +8,113 @@ content_markdown: |-
 
 
   Category nodes are linked by relationships from the software product node.
-
   {: .info}
   
+  The following diagaram shows the nodes and relationships for categories:
+
+  ![API Image](/images/cat_group.png){:class="img-responsive"} <br>
+
   <br>
+  ### CATEGORY_1
+  
+  This category node features 
+
+
+
+  ### CATEGORY_2
+
+
+
+  ### CATEGORY_GROUP
+
+
     
   
-  ![API Image](/images/cat_group.png){:class="img-responsive"} <br>
+  
   
  
 left_code_blocks:
+  - code_block: |
+      MATCH (n:CATEGORY_1) RETURN n.label LIMIT 5
+
+      RESPONSE SAMPLE
+      {
+          
+          }
+
+    title: Category_1 Example
+    language: javascript
+
+  - code_block: >-
+      MATCH (n:CATEGORY_2) RETURN n.label, n.description LIMIT 2
+
+
+      RESPONSE SAMPLE
+
+      {
+         
+          }
+    title: Category_2 Example
+    language: javascript
+
   - code_block: |-
-      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:CPU) RETURN h.cores"
-    title: cURL Example
-    language: bash
+      MATCH (n:CATEGORY_2) WHERE n.label = "Distributed Network Architecture" RETURN n LIMIT 2
+
+      RESPONSE SAMPLE
+      {
+         
+        }
+    title: Category_2 Example 
+    language: javascript
+
+  - code_block: |- 
+      MATCH (n:CATEGORY_2) WHERE n.label = "Distributed Network Architecture" RETURN n LIMIT 2
+      RESPONSE SAMPLE
+      {
+         
+        }
+    title: Category_Group Example
+    language: javascript
+
+  - code_block: |- 
+      MATCH (n:CATEGORY_2) WHERE n.label = "Distributed Network Architecture" RETURN n LIMIT 2
+      RESPONSE SAMPLE
+      {
+         
+        }
+    title: Category_Group Example
+    language: javascript
+
+  - code_block: |- 
+      MATCH (n:CATEGORY_2) WHERE n.label = "Distributed Network Architecture" RETURN n LIMIT 2
+      RESPONSE SAMPLE
+      {
+         
+        }
+    title: Category_Group Example
+    language: javascript
 right_code_blocks:
   - code_block: |2
         label
         description
     title: Category_Group_Attributes
     language: bash
+
   - code_block: |2-
+        technopedia_id
         label
         description
         cat_taxonomy2012_id
+        categrory_group
     title: Category_1 Attributes
     language: bash
+
   - code_block: |2-
+        technopedia_id
         label
         description
         cat_taxonomy2012_id
+        cat_taxonomy2012_parent_id
     title: Category_2 Attributes
     language: bash
 ---
