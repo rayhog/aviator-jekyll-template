@@ -8,7 +8,7 @@ content_markdown: |-
 
   The CPU node is connected to the MANUFACTURER node by the `VENDOR_OF` relationship, which points toward the CPU node.
   Here's a simple query to return 25 results for CPU models:
-  
+
   `MATCH (n:CPU_MODEL) RETURN n LIMIT 25`
   {: .info}
   
@@ -101,7 +101,7 @@ left_code_blocks:
     title: Example 5
     language: bash
   - code_block: 
-     curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:CPU) RETURN h.cores"
+      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:CPU) RETURN h.cores"
     title: cURL
     language: bash
     
