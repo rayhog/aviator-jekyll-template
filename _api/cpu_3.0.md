@@ -6,8 +6,9 @@ description:
 content_markdown: |-
   ###### The CPU node in the Technopedia database stores information that relates to the CPU, such as the model ID, number or cores, and model information. 
 
-  The CPU node is connected to the MANUFACTUER node by the `VENDOR_OF` relationship, which points toward the CPU node.
+  The CPU node is connected to the MANUFACTURER node by the `VENDOR_OF` relationship, which points toward the CPU node.
   Here's a simple query to return 25 results for CPU models:
+  
   `MATCH (n:CPU_MODEL) RETURN n LIMIT 25`
   {: .info}
   
