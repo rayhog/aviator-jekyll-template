@@ -59,9 +59,9 @@ content_markdown: >-
   <br>
   <br>
 
-  You must add an alias to nodes and relationships in a MATCH statement. You refer to this alias with the return clause to specify the query ouput.
+   You must add an alias to nodes and relationships in a MATCH statement. You refer to this alias with the return clause to specify the query ouput.
+   {: .warning}
   
-  {: .warning}
   
   
 

@@ -29,7 +29,7 @@ content_markdown: >-
   * CONTAINS
   * Operators =, <>, >, <, >=, <=
   * Case insensitivity
-  {: .success}
+  
 
 left_code_blocks:
   - code_block: |-
