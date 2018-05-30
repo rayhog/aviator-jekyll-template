@@ -2,16 +2,23 @@
 title: Manufacturer
 position: 2.1
 type: 
-description: The manufacturer is the creator of the product and in relationships the manufacturer is referered as VENDOR_OF, for example Microsoft is the vendor of Microsoft Word, or Adobe is the vendor of Adobe Photoshop.
+description: The manufacturer is the creator of the product and in relationships the manufacturer is referred as HAS_A, for example, Microsoft is the manufacturer of, or `HAS_A` a software product called Microsoft Word, and Adobe is the manufacturer of, or `HAS_A` software product called Adobe Photoshop.
 content_markdown: |-
-  The manufacturer nodes has many attributes; examples of popular attributes are Title, Technopedia_id, and cat_manufacturer_id.
-  The manufacturer has relationships to other nodes.
+  The manufacturer node has many attributes; the following attributes are popular attributes: 
+  * `manufacturer` provides the name of the manufacturer.
+  * `Technopedia_id` provides a unique ID.
+  * `cat_manufacturer_id` provides the ID of the manfacturer.
+ <br>
+ 
+ The manufacturer has relationships to other nodes. The following MATCH query returns information about the manufactuer called Microsoft. 
 
 
-  `MATCH (a:MANUFACTURER) WHERE title = “Microsoft” RETURN a.title`
+  `MATCH (a:MANUFACTURER) WHERE a.manufacturer = "Microsoft" RETURN a`
   {: .info}
 
-  
+  The following diagram shows the the manufacturer node and nodes that are one hop away.
+
+  ![API Image](/images/manu.PNG){:class="img-responsive"} <br>
   
     
 left_code_blocks:
@@ -56,7 +63,12 @@ right_code_blocks:
     title: Manufacturer Attributes
     language: bash
   - code_block: |2-
-      (Manufacturer)-[:VENDOR_OF]->(SOFTWARE_PRODUCT)
+      (MANUFACTURER)-[:HAS_A]->(SOFTWARE_PRODUCT)
+
+      (MANUFACTURER)-[:HAS_A]->(CPU)
+
+      (MANUFACTURER)-[:HAS_A]->(HARWARE_PRODUCT)
+
       
     title: Relationships
     language: bash
