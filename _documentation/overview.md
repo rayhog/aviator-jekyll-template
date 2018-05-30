@@ -63,9 +63,9 @@ content_markdown: |-
   node, end node, a type, and a direction. For example, the nodes organization and employee
   might have a relationship in the graph. An example of an relationship might be `Is_Employee_of`, which could be a relationship between employee and organization.
 
-  ###### The following diagram shows how Relationships are used to connect nodes:
+  ###### The following diagram shows the nodes and relationships in the Technopedia database:
   
-  ![API Image](/images/NodeAndRel.png){: .img-responsive}<br>&nbsp;
+  ![API Image](/images/graph.png){: .img-responsive}<br>&nbsp;
 
 left_code_blocks:
   - code_block: |-

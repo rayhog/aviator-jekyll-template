@@ -3,7 +3,7 @@ title: Software Version
 position: 1.2
 type: 
 description: >-
-  Software versions are represented by two nodes. The Software Group Version represents the major or group version attributes and the software version represents the attributes that are associated with child versions of the parent major version. The relationship bewtween the nodes is `HAS_A` which points from `SOFTWARE_VERSION` towards `SOFTWARE_MAJOR_VERSION`.
+  Software versions are represented by two nodes. The Software Version Group node represents the major or group version attributes and the software version node represents the attributes that are associated with child versions of the parent major version. The relationship bewtween the nodes is `HAS_A` which points from `SOFTWARE_VERSION` towards `SOFTWARE_VERSION_GROUP`.
 content_markdown: >-
   Gets software version information
   <br>
@@ -18,15 +18,16 @@ content_markdown: >-
   The following diagaram shows the nodes, attributes, and relationships that feature software nodes and their relationships.
   <br>
   ![API Image](/images/sw_rel_to_ver.png){:class="img-responsive"} <br>
+
   ### Software Version Group
   
   ######
-  The node that represents the major version of software is `SOFTWARE_GROUP_VERSION`.
+  The node that represents the major version of software is `SOFTWARE_VERSION_GROUPN`.
   Software versioning is used to categorize the unique states of software as it is developed and released. The version identifier might be a word, or a number, or inlcude both. For example, version 1.0 is often used to represent the initial release of a software product.
 
   Gets software version information
 
-  `MATCH (a:SOFTWARE_GROUP_VERSION) RETURN a.version`
+  `MATCH (a:SOFTWARE_VERSION_GROUP) RETURN a.version`
 
   {: .success} 
 
