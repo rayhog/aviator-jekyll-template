@@ -54,7 +54,7 @@ left_code_blocks:
       {
          
           }
-    title: Category_2 Example
+    title: Example 1
     language: javascript
 
   - code_block: |-
@@ -64,7 +64,7 @@ left_code_blocks:
       {
          
         }
-    title: Category_2 Example 
+    title: Example 2 
     language: javascript
 
   - code_block: |- 
@@ -73,7 +73,7 @@ left_code_blocks:
       {
          
         }
-    title: Category_Group Example
+    title: Example 3
     language: javascript
 
   - code_block: |- 

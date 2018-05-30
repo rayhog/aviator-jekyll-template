@@ -79,25 +79,37 @@ content_markdown: >-
 
   #### TQL Clauses<br>
 
-  * WHERE
-  Use the WHERE condition to filter results.  return
-  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name = "Office"  RETURN s`
-  Return software products where the name field is equal to 'Office'.
+  * WHERE <br>
+  Use the WHERE condition to filter results. <br>
+  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name = "Office"  RETURN s` <br>
+  Return software products where the name field is equal to 'Office'. <br>
 
-  * AND 
-  Use the AND clause to add an addtional filter.
-  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name = "Office" AND s.family = "HealthMatics"  RETURN s`
-  Return software products where name is Office and the family is HealthMatics.
+  * AND <br>
+  Use the AND clause to add an addtional filter.<br>
+  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name = "Office" AND s.family = "HealthMatics"  RETURN s` <br>
+  Return software products where name is Office and the family is HealthMatics. <br>
+
+  * OR <br>
+  Use the OR clause to  return one condition <br>
+  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name = "Office" OR s.family = "HealthMatics"  RETURN s` <br>
+  Return software products where name is Office or the family is HealthMatics. <br>
   
-  * LIMIT  return
-  Limit the number of results that are returned by specifiying a number with the LIMIT clause.
+  * LIMIT <br>
+  Limit the number of results that are returned by specifiying a number with the LIMIT clause. <br>
   
   `MATCH (s:SOFTWARE_PRODUCT) RETURN s LIMIT 5` <br>
+
+  * CONTAINS <br>
+
+  * DISTINCT <br>
+
+  * COUNT <br>
+
+  * Operators <br>
+
+
  
-
-
-
-  <br>
+  
   
 
 left_code_blocks:

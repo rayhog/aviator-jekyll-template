@@ -18,17 +18,7 @@ content_markdown: >-
   <br>
 
   
- ##### Temp Info
-  * TQL queries can use the following keywords:
-  * MATCH
-  * WHERE
-  * AND
-  * OR
-  * COUNT
-  * DISTINCT 
-  * CONTAINS
-  * Operators =, <>, >, <, >=, <=
-  * Case insensitivity
+ 
   
 
 left_code_blocks:
