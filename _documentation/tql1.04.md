@@ -100,12 +100,17 @@ content_markdown: >-
   `MATCH (s:SOFTWARE_PRODUCT) RETURN s LIMIT 5` <br>
 
   * CONTAINS <br>
+  MATCH (s:SOFTWARE_PRODUCT) WHERE s.name CONTAINS "Microsoft" RETURN s <br>
 
   * DISTINCT <br>
-
+  Return distinct records only. 
+  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name = "Microsoft Exchange Server Monitor" RETURN DISTINCT s`<br>
   * COUNT <br>
+  Return count of records. <br>
+  `MATCH (s:SOFTWARE_PRODUCT) RETURN count(*)` < br>
 
   * Operators <br>
+  
 
 
  

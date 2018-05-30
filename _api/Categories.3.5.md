@@ -18,14 +18,17 @@ content_markdown: |-
   ### Category 1
   
   This category node features 
+  `MATCH (n:CATEGORY_1) RETURN n LIMIT 25`
 
 
 
   ### Category 2
-
+  `MATCH (n:CATEGORY_2) RETURN n LIMIT 25`
+  
 
 
   ### Category Group
+  `MATCH (n:CATEGORY_1) RETURN n LIMIT 25`
 
 
     
@@ -68,7 +71,10 @@ left_code_blocks:
     language: javascript
 
   - code_block: |- 
-      MATCH (n:CATEGORY_2) WHERE n.label = "Distributed Network Architecture" RETURN n LIMIT 2
+      MATCH (n:CATEGORY_2)-[v:CHILD_OF]->(c:CATEGORY_1) RETURN c, n LIMIT 25
+      
+      Return records for CATEGORY_2 and CATEGORY_1 where CATEGORY_2 has a child of relationship with CATEGORY_1
+
       RESPONSE SAMPLE
       {
          

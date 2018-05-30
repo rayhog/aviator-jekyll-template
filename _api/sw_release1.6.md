@@ -85,7 +85,6 @@ left_code_blocks:
 right_code_blocks:
   - code_block: |-
       technopedia_id
-      cat_sw_release_id
       discontinued_flag
       desupported_flag
       url
