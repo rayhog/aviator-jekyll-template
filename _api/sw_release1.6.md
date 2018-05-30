@@ -84,7 +84,7 @@ left_code_blocks:
     language: bash
 right_code_blocks:
   - code_block: |-
-       technopedia_id
+      technopedia_id
       cat_sw_release_id
       discontinued_flag
       desupported_flag
@@ -100,18 +100,21 @@ right_code_blocks:
       (SOFTWARE_RELEASE)-[:HAS_A]->(SOFTWARE_EDITION)
 
       (SOFTWARE_RELEASE)-[:HAS_A]->(SUPPORT_STAGE)
-      Relationship attributes: created_at
-                               modified_at
-                               end_date
+      Relationship attributes: 
+      created_at
+      modified_at
+      end_date
 
       (SOFTWARE_RELEASE)-[:HAS_A]->(COMPATIBLE_PLATFORM)
-      Relationship attributes: status
-                               description
-                               upgrade_path
-                               date
+      Relationship attributes: 
+      status                          
+      description
+      upgrade_path
+      date
        
       (SOFTWARE_RELEASE)-[:HAS_A]->(CERTIFICATION)
-      Relationship attributes: certified
+      Relationship attributes: 
+      certified
     title: Relationships
     language: bash
 right_code_blocks:
@@ -132,18 +135,21 @@ right_code_blocks:
       (SOFTWARE_RELEASE)-[:HAS_A]->(SOFTWARE_EDITION)
 
       (SOFTWARE_RELEASE)-[:HAS_A]->(SUPPORT_STAGE)
-      Relationship attributes: created_at
-                               modified_at
-                               end_date
+      Relationship attributes: 
+      created_at
+      modified_at
+      end_date
 
       (SOFTWARE_RELEASE)-[:HAS_A]->(COMPATIBLE_PLATFORM)
-      Relationship attributes: status
-                               description
-                               upgrade_path
-                               date
+      Relationship attributes: 
+      status
+      description
+      upgrade_path
+      date
        
       (SOFTWARE_RELEASE)-[:HAS_A]->(CERTIFICATION)
-      Relationship attributes: certified
+      Relationship attributes: 
+      certified
     title: Relationships
     language: bash
 ---
