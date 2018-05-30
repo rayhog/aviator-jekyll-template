@@ -75,7 +75,23 @@ content_markdown: >-
 
 
 
+ <br>
 
+  #### TQL Clauses<br>
+
+  #### WHERE
+  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name = "Office"  RETURN s`
+  ####  AND
+  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name = "Office" AND s.family = "HealthMatics"  RETURN s`
+  Return software products where name is Office and the 
+  #### LIMIT
+  `MATCH (s:SOFTWARE_PRODUCT) RETURN s LIMIT 5`
+  Limit to 5 results.
+
+
+
+
+  <br>
   
 
 left_code_blocks:
