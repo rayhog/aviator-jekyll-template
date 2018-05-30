@@ -15,17 +15,17 @@ content_markdown: |-
   ![API Image](/images/cat_group.png){:class="img-responsive"} <br>
 
   <br>
-  ### CATEGORY_1
+  ### Category 1
   
   This category node features 
 
 
 
-  ### CATEGORY_2
+  ### Category 2
 
 
 
-  ### CATEGORY_GROUP
+  ### Category Group
 
 
     
