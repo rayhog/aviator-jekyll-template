@@ -8,9 +8,9 @@ content_markdown: |-
   * `manufacturer` provides the name of the manufacturer.
   * `Technopedia_id` provides a unique ID.
   * `cat_manufacturer_id` provides the ID of the manfacturer.
- <br>
+  <br>
  
- The manufacturer has relationships to other nodes. The following MATCH query returns information about the manufactuer called Microsoft. 
+  The manufacturer has relationships to other nodes. The following MATCH query returns information about the manufactuer called Microsoft. 
 
 
   `MATCH (a:MANUFACTURER) WHERE a.manufacturer = "Microsoft" RETURN a`
