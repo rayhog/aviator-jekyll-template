@@ -84,29 +84,36 @@ left_code_blocks:
     language: bash
 right_code_blocks:
   - code_block: |-
-      [
-        {
-          "id": 1,
-          "title": "The Hunger Games",
-          "score": 4.5,
-          "dateAdded": "12/12/2013"
-        },
-        {
-          "id": 1,
-          "title": "The Hunger Games",
-          "score": 4.7,
-          "dateAdded": "15/12/2013"
-        },
-      ]
-    title: Response
-    language: json
-  - code_block: |-
-      {
-        "error": true,
-        "message": "Invalid offset"
-      }
-    title: Error
-    language: json
+       technopedia_id
+      cat_sw_release_id
+      discontinued_flag
+      desupported_flag
+      url
+      created_at
+      modified_at
+      
+    title: Software Release Attributes
+    language: bash
+  - code_block: |2-
+      (SOFTWARE_RELEASE)-[:HAS_A]->(SOFTWARE_VERSION)
+
+      (SOFTWARE_RELEASE)-[:HAS_A]->(SOFTWARE_EDITION)
+
+      (SOFTWARE_RELEASE)-[:HAS_A]->(SUPPORT_STAGE)
+      Relationship attributes: created_at
+                               modified_at
+                               end_date
+
+      (SOFTWARE_RELEASE)-[:HAS_A]->(COMPATIBLE_PLATFORM)
+      Relationship attributes: status
+                               description
+                               upgrade_path
+                               date
+       
+      (SOFTWARE_RELEASE)-[:HAS_A]->(CERTIFICATION)
+      Relationship attributes: certified
+    title: Relationships
+    language: bash
 right_code_blocks:
   - code_block: |2
       technopedia_id
@@ -120,9 +127,23 @@ right_code_blocks:
     title: Software Release Attributes
     language: bash
   - code_block: |2-
-      (SOFTWARE_RELEASE)-[:RELEASE_OF]->(SOFTWARE_VERSION)
-      (SOFTWARE_RELEASE)<-[:EDITION_OF]-(SOFTWARE_EDITION)
-      (SUPPORT_STAGE)
+      (SOFTWARE_RELEASE)-[:HAS_A]->(SOFTWARE_VERSION)
+
+      (SOFTWARE_RELEASE)-[:HAS_A]->(SOFTWARE_EDITION)
+
+      (SOFTWARE_RELEASE)-[:HAS_A]->(SUPPORT_STAGE)
+      Relationship attributes: created_at
+                               modified_at
+                               end_date
+
+      (SOFTWARE_RELEASE)-[:HAS_A]->(COMPATIBLE_PLATFORM)
+      Relationship attributes: status
+                               description
+                               upgrade_path
+                               date
+       
+      (SOFTWARE_RELEASE)-[:HAS_A]->(CERTIFICATION)
+      Relationship attributes: certified
     title: Relationships
     language: bash
 ---
