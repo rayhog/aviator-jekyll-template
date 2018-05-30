@@ -23,10 +23,57 @@ content_markdown: |-
     
 left_code_blocks:
   - code_block: |-
-      curl -G -H "Authorization: Bearer b900477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (m:MANUFACTURER)-[VENDOR_OF]->(s:SOFTWARE_PRODUCT)<-[VERSION_OF]->(v:SOFTWARE_VERSION)<-[MAJOR_VERSION_OF]->(z:SOFTWARE_MAJOR_VERSION)  WHERE m.manufacturer = "Microsoft" RETURN m, s, v, z LIMIT 1
+      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:MANUFACTURER) RETURN h.manufacturer"
+    title: cURL Examples
+    language: bash
+
+
+  - code_block: >-
+      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.release_url n.ga_date
+
+
+      RESPONSE SAMPLE
+
+      {
+          
+          }
+    title: Example 1
+    language: javascript
+  - code_block: |-
+      MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1
+
+      RESPONSE SAMPLE
+      {
+          
+        }
+    title: Example 2
+    language: javascript
+
+  - code_block: |-
+      MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1
+
+      RESPONSE SAMPLE
+      {
+          
+        }
+    title: Example 3
+    language: javascript
+
+  - code_block: |-
+      MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1
+
+      RESPONSE SAMPLE
+      {
+          
+        }
+    title: Example 4
+    language: javascript
+
+  - code_block: |-
+      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:CPU) RETURN h.cores"
 
       
-    title: cURL Example
+    title: Example 5
     language: bash
 right_code_blocks:
   - code_block: |2
