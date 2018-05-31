@@ -31,25 +31,25 @@ content_markdown: >-
   `Match (myalias:node)-[another_alias:RELATIONSHIP]`
   <br>
 
-  #### Building a MATCH query<br>
+  #### Overview of creating a MATCH query<br>
 
   <br>
-  To create a MATCH statement you must identify the location of your information and use the following guide to help you to build your query:
+  To create a MATCH statement you must identify the nodes that store the infromaiton you require, and use the following guide to help you to build your query:
 
    1.	Select the Nodes that you want to use in your query.<br>
    2.	Identify the node attributes that store the information you require.<br>
-   3.	Select relationships to connect nodes that hold the data that you require.<br>
+   3.	Select any relationships to connect nodes that hold your required data.<br>
    4.	Write your MATCH statement
 
   <br>
   Here’s some examples:
   <br>
-  <b>Objective:</b> To find software that contains the name Adobe.<br>
+  <b>Objective:</b> To find software that is named Adobe.<br>
 
     * The Software Product node has an attribute called name.<br>
-    * We use MATCH to select the SOFTWARE_PRODUCT node and the name attribute to filter for Adobe.<br>
-    * For each Technopedia node, you can view the list of attributes on that page.<br>
-    * We have to use the WHERE clause with the equals operator to specify condition `name = "Adobe"`.<br>
+    * We use MATCH to select the `SOFTWARE_PRODUCT` node and the `name` attribute to filter for Adobe.<br>
+    * View the list of attributes that you can use on the Software Product page.<br>
+    * Use the WHERE clause with the equals operator to specify condition `name = "Adobe"`.<br>
   <br>
   `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name = "Adobe" Return s`
 
@@ -59,19 +59,45 @@ content_markdown: >-
   <br>
   <br>
 
-   You must add an alias to nodes and relationships in a MATCH statement. You refer to this alias with the return clause to specify the query ouput.
+   You must add an alias before the colon in nodes and relationships in the MATCH statement. You refer to this alias in the return clause to specify the query ouput.
    {: .warning}
   
   
   
 
   <br>
-
-  <b>Objective:</b> To find software that is manufactured by Adobe<br>
-
+  <br>
   <br>
 
-  <b>Objective:</b> To find software that is manufactured by Adobe<br>
+  The following diagram identifies the software nodes and the relationship directions.
+  <br>
+  
+  ![API Image](/images/sw_graph.png)<br>&nbsp;
+  <br>  
+  <br>  
+  <br>
+
+   Follow the relationship direction in the diagram.
+   {: .warning}
+
+  <br>
+  <b>Objective:</b> To get software editions that have a release, verison, and product.<br>
+
+    * To get the required information, you have to add relationships to the software release, software version, and software product nodes.<br>
+    * We use MATCH to select the software edtion node and then create relationships to the other nodes.<br>
+    * Add an alias to each node and relationship in the  query.<br>
+    * To return the data that you need, use the Return clause to refer to the specific aliases.<br>
+  <br>
+  `MATCH (e:SOFTWARE_EDITION)<-[x:HAS_A]-(r:SOFTWARE_RELEASE)-[y:HAS_A]->(v:SOFTWARE_VERSION)-[z:HAS_A]->(p:SOFTWARE_PRODUCT) RETURN r,e,v,p`
+
+  <br>
+  In this example, you match software editions that have  that have Adobe in the name fields are returned.<br>
+
+  <br>
+  <br>
+
+  <b>Objective:</b> To get software editions that have a release, verison, product, and manufacturer.
+  `MATCH (e:SOFTWARE_EDITION)<-[:HAS_A]-(r:SOFTWARE_RELEASE)-[:HAS_A]->(v:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_PRODUCT)<-[:HAS_A]-(m:MANUFACTURER) RETURN e,r,v,p,m LIMIT 1`
 
 
 
@@ -106,7 +132,7 @@ content_markdown: >-
   * DISTINCT <br>
   Return distinct records only. 
   `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name = "Microsoft Exchange Server Monitor" RETURN DISTINCT s` <br>
-  
+
   * COUNT <br>
   Return count of records. <br>
   `MATCH (s:SOFTWARE_PRODUCT) RETURN count(*)` <br>

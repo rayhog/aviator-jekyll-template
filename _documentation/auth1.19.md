@@ -11,7 +11,7 @@ content_markdown: |-
   <br>
   The following example shows the API key in a cURL request:<br>
   <br>
-  `curl -G -H "Authorization: Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode "q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.title"`<br>
+  `curl -G -H "Authorization: Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode "q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.name"`<br>
   
    {: .success}
 
@@ -38,16 +38,16 @@ content_markdown: |-
 
 left_code_blocks:
   - code_block: |-
-      curl -G -H "Authorization: Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode "q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.title"
+      curl -G -H "Authorization: Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode "q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.name"
 
-      curl -G -H "Authorization: Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode "q=MATCH (n:SOFTWARE_PRODUCT) WHERE n.title = "PDF Converter" RETURN n
+      curl -G -H "Authorization: Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode "q=MATCH (n:SOFTWARE_PRODUCT) WHERE n.name = "PDF Converter" RETURN n
     title: cURL examples
     language: bash
   - code_block: |-
-        GET: https://v6.technopedia.com/tql?q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.title
+        GET: https://v6.technopedia.com/tql?q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.name
 
-        GET: https://v6.technopedia.com/tql?q=MATCH (n:SOFTWARE_PRODUCT) WHERE n.title = "PDF Converter" RETURN n
-    title: GET examples
+        GET: https://v6.technopedia.com/tql?q=MATCH (n:SOFTWARE_PRODUCT) WHERE n.name = "PDF Converter" RETURN n
+    title: GET request examples
     language: bash
 right_code_blocks:
   - code_block: |2-
@@ -58,10 +58,7 @@ right_code_blocks:
 
 
 
-
-
-
-      
+ 
 
 
 
