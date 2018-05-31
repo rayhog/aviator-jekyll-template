@@ -10,8 +10,8 @@ content_markdown: >-
 
   ######
   You can use an API GET request for product information in Technopedia by referencing the Technopedia ID.
-  You specify the Technopedia ID as a parameter for the Technopedia-id TQL endpoint.
-  <br>
+  You specify the Technopedia ID as a parameter for the Technopedia-id TQL endpoint. <br>
+  
   #### About Nodes in Technopedia
   
   

@@ -14,7 +14,7 @@ content_markdown: |-
   <br> 
     
   
-  ![API Image](/images/apiEcon.PNG){:class="img-responsive"} <br>
+  ![API Image](/images/graph.PNG){:class="img-responsive"} <br>
   
   ###### Returns a specific hardware item from the Technopedia database.<br> 
   ![API Image](/images/tid.png){:class="img-responsive"} <br>
