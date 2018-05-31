@@ -14,8 +14,8 @@ content_markdown: >-
   <br>
   #### About Nodes in Technopedia
   <br>
-  ######
-  Nodes are the entities in the Technopedia graph that store specific categories of data. Nodes can have any
+  
+  ###### Nodes are the entities in the Technopedia graph that store specific categories of data. Nodes can have any
   number of attributes, which are represented by key-value-pairs.<br> 
    * Nodes are entities that store the Technopedia data.
    * Node names are surrounded by parentheses in a query, for example, (Node).
@@ -41,7 +41,7 @@ content_markdown: >-
    * To get information about a relationship that has attributes, we can assign it an alias for later reference. The alias is placed in front of the colon `-[anyAlias:Relationship_name]->(node)`
 
 
-  ###### The following diagram represents a simple representation of nodes and relationships:
+  ###### The following diagram is a simple representation of nodes and relationships:
 
 
   ![API Image](/images/node_ex.png)<br>&nbsp;
