@@ -23,7 +23,7 @@ content_markdown: |-
 
 left_code_blocks:
   - code_block: |
-      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
+      MATCH (n:HARDWARE_PRODUCT) RETURN n.product, n.create_date
 
       RESPONSE SAMPLE
       {
@@ -35,7 +35,7 @@ left_code_blocks:
 
     
   - code_block: >-
-      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.release_url n.ga_date
+      MATCH (n:HARDWARE_PRODUCT)<-[:HAS_A]-(m:HARDWARE_MODEL) RETURN n, m
 
 
       RESPONSE SAMPLE
@@ -46,7 +46,7 @@ left_code_blocks:
     title: Example 2
     language: javascript
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1
+      MATCH (n:HARDWARE_PRODUCT)-[a:BELONGS_TO]->(m:CATEGORY_2)-[e:BELONGS_TO]->(w:CATEGORY_1)-[y:BELONGS_TO]->(c:CATEGORY_GROUP) RETURN n, m, w, c
 
       RESPONSE SAMPLE
       {
@@ -56,7 +56,8 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1
+      MATCH (n:HARDWARE_PRODUCT)-[a:BELONGS_TO]->(m:CATEGORY_2)-[e:BELONGS_TO]->(w:VERTICAL) RETURN n, m, w
+
 
       RESPONSE SAMPLE
       {
@@ -66,8 +67,7 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1
-
+      MATCH (n:HARDWARE_PRODUCT)-[a:BELONGS_TO]->(m:CATEGORY_2)-[e:BELONGS_TO]->(w:VERTICAL) RETURN n, m, w
       RESPONSE SAMPLE
       {
           
@@ -91,9 +91,14 @@ right_code_blocks:
     title: Hardware Product Attributes
     language: bash
   - code_block: |2-
-      [:HAS_A]<-(MANUFACTURER)
-      [:HAS_A]->(CERTIFICATION)
-      [:BELONGS_TO]->(CATEGORY_2)
+      (HARDWARE_PRODUCT)-[:HAS_A]<-(MANUFACTURER)
+                
+      (HARDWARE_PRODUCT)-[:BELONGS_TO]->(CATEGORY_2)
+
+      (HARDWARE_PRODUCT)-[:HAS_A]->(SUPPORT_STAGE)
+      
+      (HARDWARE_PRODUCT)-[:HAS_A]->(CERTIFICATION)
+
 
       
       

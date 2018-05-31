@@ -6,8 +6,8 @@ description: The manufacturer is the creator of the product and in relationships
 content_markdown: |-
   The manufacturer node has many attributes; the following attributes are popular attributes: 
   * `manufacturer` provides the name of the manufacturer.
-  * `Technopedia_id` provides a unique ID.
-  * `cat_manufacturer_id` provides the ID of the manfacturer.
+  * `technopedia_id` provides a unique ID.
+  * `description` provides a description of the manfacturer.
   <br>
  
   The manufacturer has relationships to other nodes. The following MATCH query returns information about the manufactuer called Microsoft. 
@@ -29,7 +29,7 @@ left_code_blocks:
 
 
   - code_block: >-
-      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.release_url n.ga_date
+      MATCH (h:MANUFACTURER) RETURN h.manufacturer
 
 
       RESPONSE SAMPLE
@@ -40,7 +40,7 @@ left_code_blocks:
     title: Example 1
     language: javascript
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1
+      MATCH (h:MANUFACTURER) RETURN h.manufacturer
 
       RESPONSE SAMPLE
       {
@@ -50,7 +50,7 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:n:MANUFACTURER) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1
+      MATCH (n:MANUFACTURER)<-[:HAS_A]-(w:SOFTWARE_PRODUCT)-[BELONGS_TO]->(v:CATEGORY_2) RETURN n, w, v
 
       RESPONSE SAMPLE
       {

@@ -6,11 +6,12 @@ description:
 content_markdown: |-
   ###### The CPU node in the Technopedia database stores information that relates to the CPU, such as the model ID, number or cores, and model information. 
 
-  The CPU node is connected to the MANUFACTURER node by the `VENDOR_OF` relationship, which points toward the CPU node.
+  The CPU node is connected to the MANUFACTURER node by the `HAS_A` relationship, which points from the MANUFACTURER to the CPU node.
+
   Here's a simple query to return 25 results for CPU models:
 
   `MATCH (n:CPU_MODEL) RETURN n LIMIT 25`
-  {: .info}
+   {: .info}
   
   <br>
     
@@ -22,7 +23,7 @@ content_markdown: |-
 
 left_code_blocks:
   - code_block: |
-      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
+      MATCH (n:CPU) RETURN n.isa_bitmode, n.num_threads
 
       RESPONSE SAMPLE
       {
@@ -32,7 +33,7 @@ left_code_blocks:
     title: Example 1
     language: javascript
   - code_block: >-
-      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.release_url n.ga_date
+      MATCH (n:CPU) RETURN n.model, n.cores, n.clockrate
 
 
       RESPONSE SAMPLE
@@ -42,8 +43,9 @@ left_code_blocks:
           }
     title: Example 2
     language: javascript
+
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1
+      MATCH (n:CPU)<-[:HAS_A]->(x:MANUFACTURER) RETURN n, x
 
       RESPONSE SAMPLE
       {
@@ -53,7 +55,7 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1
+      MATCH (n:CPU)<-[:HAS_A]-(x:MANUFACTURER)<-[:HAS_A]- RETURN n.cores, x.manufacturer
 
       RESPONSE SAMPLE
       {
@@ -63,7 +65,7 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1
+      MATCH (n:HARDWARE_PRODUCT)<-[e:HAS_A]-(o:MANUFACTURER)-[u:HAS_A]-(y:CPU) RETURN n, o, y
 
       RESPONSE SAMPLE
       {
