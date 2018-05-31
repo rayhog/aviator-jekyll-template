@@ -13,7 +13,7 @@ content_markdown: >-
   You specify the Technopedia ID as a parameter for the Technopedia-id TQL endpoint.
   <br>
   #### About Nodes in Technopedia
-  <br>
+  
   
   ###### Nodes are the entities in the Technopedia graph that store specific categories of data. Nodes can have any
   number of attributes, which are represented by key-value-pairs.<br> 
