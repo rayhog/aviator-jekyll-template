@@ -10,29 +10,49 @@ content_markdown: |-
   Category nodes are linked by relationships from the software product node and the hardware product node.
   {: .info}
   
-  The following diagaram shows the nodes and relationships for categories:
+  The following diagram shows the nodes and relationships for categories:
 
   ![API Image](/images/cat_group.png){:class="img-responsive"} <br>
 
   <br>
-  ### Category 1
+  ### Category GROUP
   
-  This category node features 
-  `MATCH (n:CATEGORY_1) RETURN n LIMIT 25`
+  This category node features high-level classifications, such as Business Applications, Network Equipment, and Automatic Teller Machine (ATM). This categories parent is `CATEGORY_GROUP`, which features more global clasifications. 
+  
+  Get a list of CATEGORY_GROUP labels by running the following MATCH query with the TQL endpoint:
 
+  `MATCH (n:CATEGORY_2) RETURN n.label`
+  
+
+  ### Category 1
+
+
+  This category 1 node references classifications such as  Storage Area Networks (SAN), Collaboration", Cash/Coin Detector and Help and Service Desk.
+
+  Get a list of CATEGORY_GROUP labels by running the following MATCH query with the TQL endpoint:
+
+  `MATCH (n:CATEGORY_2) RETURN n.label`
 
 
   ### Category 2
 
-  This category node features 
-  `MATCH (n:CATEGORY_2) RETURN n LIMIT 25`
+  This category 2 node references classifications that are more granular than Categrory 1 or Category Group, such as Sound Masking, Retail Hardware, Diagnostic and Therapeutic Radiation/Imaging Devices", "Cheque Deposit Machine (CQM) and Handhelds.
+  Get a list of CATEGORY_2 labels by running the following MATCH query with the TQL endpoint:
+
+  `MATCH (n:CATEGORY_2) RETURN n.label`
   
 
+  ### VERTICAL
 
-  ### Category Group
+  The VERTICAL node is a high-level classification that features the following Verticals:
 
-  This category node features 
-  `MATCH (n:CATEGORY_1) RETURN n LIMIT 25`
+  * Cloud
+  * Building and Facilities
+  * Information and Technology
+  * Medical and Health Care
+  * Banking and Financial
+
+  `MATCH (n:VERTICAL) RETURN n LIMIT 25`
 
 
     
@@ -75,9 +95,9 @@ left_code_blocks:
     language: javascript
 
   - code_block: |- 
-      MATCH (n:CATEGORY_2)-[v:CHILD_OF]->(c:CATEGORY_1) RETURN c, n LIMIT 25
+      MATCH (n:CATEGORY_2)-[v:BELONGS_TO]->(c:CATEGORY_1) RETURN c, n LIMIT 25
       
-      Return records for CATEGORY_2 and CATEGORY_1 where CATEGORY_2 has a child of relationship with CATEGORY_1
+      Return records for CATEGORY_2 and CATEGORY_1 where CATEGORY_2 has a child relationship with CATEGORY_1
 
       RESPONSE SAMPLE
       {
@@ -126,5 +146,30 @@ right_code_blocks:
         cat_taxonomy2012_id
         cat_taxonomy2012_parent_id
     title: Category_2 Attributes
+    language: bash
+
+  - code_block: |2-
+        technopedia_id
+        name
+        short name
+        
+    title: Vertical
+    language: bash
+
+  - code_block: |2-
+        (CATEGORY_2)-[:BELONGS_TO]->(VERTICAL)
+
+        (CATEGORY_2)-[:BELONGS_TO]->(CATEGORY_1)
+
+        (CATEGORY_2)<-[:BELONGS_TO]-(HARDWARE_PRODUCT)
+
+        (CATEGORY_2)-[:BELONGS_TO]-(CATEGORY_1)
+
+        (CATEGORY_1)<-[:BELONGS_TO]-(CATEGORY_2)
+
+        
+
+        
+    title: Relationships
     language: bash
 ---
