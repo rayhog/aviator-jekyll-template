@@ -87,9 +87,9 @@ right_code_blocks:
 
       * SOFTWARE_PRODUCT
       * SOFTWARE_VERSION
-      * SOFTWARE_MAJOR_VERSION
+      * SOFTWARE_VERSION_GROUP
       * SOFTWARE_EDITION
-      * SOFTWARE RELEASE
+      * SOFTWARE_RELEASE
 
       Query specific software data by using the individual nodes, or use relationships to connect nodes.
 
@@ -109,13 +109,13 @@ right_code_blocks:
   - code_block: |2-
       SOFTWARE NODES RELATIONSHIPS
 
-      (SOFTWARE_PRODUCT)<-[:EDITION_OF]-(SOFTWARE_EDITION)
+      (SOFTWARE_PRODUCT)<-[:HAS_A]-(SOFTWARE_EDITION)
 
-      (MANUFACTURER)-[:VENDOR_OF]->(SOFTWARE_PRODUCT)
+      (MANUFACTURER)-[:HAS_A]->(SOFTWARE_PRODUCT)
 
-      (SOFTWARE_VERSION)<-[:RELEASE_OF]-(SOFTWARE_RELEASE)
+      (SOFTWARE_VERSION)<-[:HAS_A]-(SOFTWARE_RELEASE)
 
-      (SOFTWARE_VERSION)<-[:MAJOR_VERSION_OF]-(SOFTWARE_MAJOR_VERSION)
+      (SOFTWARE_VERSION)<-[:BELONGS_TO]-(SOFTWARE_VERSION_GROUP)
     title: Software Nodes Relationships
     language: bash
 ---

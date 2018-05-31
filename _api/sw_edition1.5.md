@@ -8,20 +8,20 @@ content_markdown: |-
   <br>
 
 
-  `MATCH (e:SOFTWARE_EDITION {cat_sw_edition_id: '24853332'})-[*1..3]->(b) RETURN b LIMIT 10`
+  `MATCH (e:SOFTWARE_EDITION {edition: '24853332'}) RETURN e`
   {: .success}
 
   <br>
   Here's an example of querying the release title "Advanced Partitioning Option" that is a release of a software version.<br>
   <br>
-  `MATCH (SOFTWARE_PRODUCT)<-[:EDITION_OF]-(SOFTWARE_EDITION) WHERE n.release_title = "Advanced Partitioning Option" RETURN n`
+  `MATCH (s.SOFTWARE_PRODUCT)<-[:HAS_A]-(n:SOFTWARE_EDITION) WHERE n.release_title = "Advanced Partitioning Option" RETURN n`
   <br>
 
   ![API Image](/images/sw_edition.png){:class="img-responsive"} <br>
 
 left_code_blocks:
   - code_block: |
-      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
+      MATCH (n:SOFTWARE_RELEASE) RETURN n.release, n.modified_at
 
       RESPONSE SAMPLE
       {
@@ -31,7 +31,7 @@ left_code_blocks:
     title: Example 1
     language: javascript
   - code_block: >-
-      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.release_url n.ga_date
+      MATCH (n:SOFTWARE_RELEASE) RETURN n.release, n.url, n.technopedia_id
 
 
       RESPONSE SAMPLE
@@ -42,7 +42,7 @@ left_code_blocks:
     title: Example 2
     language: javascript
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1
+      MATCH (n:SOFTWARE_RELEASE)-[p:HAS_A]->(a:SOFTWARE_VERSION)-[o:HAS_A]->(g:SOFTWARE_PRODUCT) RETURN n.name LIMIT 5
 
       RESPONSE SAMPLE
       {
@@ -52,7 +52,7 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1
+      MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(x:SOFTWARE_VERSION) RETURN x.version LIMIT 10
 
       RESPONSE SAMPLE
       {
@@ -62,7 +62,7 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1
+      MATCH (n:SOFTWARE_EDITION) -[:HAS_A]->(u:SOFTWARE_PRODUCT) RETURN n, u LIMIT 10
 
       RESPONSE SAMPLE
       {
@@ -72,7 +72,7 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:CPU) RETURN h.cores"
+      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:SOFTWARE_EDITION) RETURN h.edition"
 
       
     title: cURL
@@ -80,7 +80,6 @@ left_code_blocks:
 right_code_blocks:
   - code_block: |2
       technopedia_id
-      cat_sw_edition_id
       edition
       edition_desupported_flag
       edition_order
@@ -92,7 +91,21 @@ right_code_blocks:
     language: bash
   - code_block: |2-
       (SOFTWARE_EDITION)<-[:EDITION_OF]-(SOFTWARE_EDITION)
-      (SOFTWARE_EDITION)-[:EDITION_OF]->(SOFTWARE_PRODUCT) 
+
+      (SOFTWARE_EDITION)-[:HAS_A]->(SOFTWARE_RELEASE)
+
+      (SOFTWARE_EDITION)-[:HAS_A]->(SOFTWARE_PRODUCT)
+      
+      (SOFTWARE_EDITION)<-[:HAS_A]->(SOFTWARE_RELEASE)-[:HAS_A]->(SUPPORT_STAGE)
+
+      (SOFTWARE_EDITION)<-[:HAS_A]->(SOFTWARE_RELEASE)-[:HAS_A]->(COMPATIBLE_PLATFORM)
+
+      
+
+      
+
+
+
     title: Relationships
     language: bash
 ---
