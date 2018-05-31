@@ -16,7 +16,7 @@ content_markdown: |-
   `MATCH (a:MANUFACTURER) WHERE a.manufacturer = "Microsoft" RETURN a`
   {: .info}
 
-  The following diagram shows the the manufacturer node and nodes that are one hop away.
+  The following diagram shows the the manufacturer node and its connections to software, haredware, and CPU.
 
   ![API Image](/images/manu.PNG){:class="img-responsive"} <br>
   
