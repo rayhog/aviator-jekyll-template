@@ -106,9 +106,9 @@ content_markdown: >-
   * DISTINCT <br>
   Return distinct records only. 
   `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name = "Microsoft Exchange Server Monitor" RETURN DISTINCT s` <br>
-  * 'COUNT' <br>
+  * COUNT <br>
   Return count of records. <br>
-  `MATCH (s:SOFTWARE_PRODUCT) RETURN count(*)` < br>
+  `MATCH (s:SOFTWARE_PRODUCT) RETURN count(*)` <br>
 
   * Operators <br>
   `=` equals <br>
