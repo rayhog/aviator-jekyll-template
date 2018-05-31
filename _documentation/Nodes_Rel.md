@@ -11,9 +11,9 @@ content_markdown: >-
   ######
   You can use an API GET request for product information in Technopedia by referencing the Technopedia ID.
   You specify the Technopedia ID as a parameter for the Technopedia-id TQL endpoint.
-
+  <br>
   #### About Nodes in Technopedia
-  
+  <br>
   ######
   Nodes are the entities in the Technopedia graph that store specific categories of data. Nodes can have any
   number of attributes, which are represented by key-value-pairs.<br> 
@@ -45,7 +45,8 @@ content_markdown: >-
 
 
   ![API Image](/images/node_ex.png)<br>&nbsp;
-  
+  <br>
+
   In a query, nodes are surrounded by parenthesis and relationships are surrounded by square brackets as shown in the following example:
   <br>
   `Match (node)-[:RELATIONSHIP]-> (node)`
@@ -68,10 +69,10 @@ content_markdown: >-
   <br>
   ![API Image](/images/graph.png)<br>&nbsp;
   <br>
-
-  Note: You can only access and view data for the Technopedia nodes that inlcluded in your subscription.
   
-  {: .warning} 
+   Note: You can only access and view data for the Technopedia nodes that inlcluded in your subscription.
+  
+   {: .warning} 
 
 
 
