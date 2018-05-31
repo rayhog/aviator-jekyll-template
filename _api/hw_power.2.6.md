@@ -26,17 +26,17 @@ left_code_blocks:
     language: bash
 right_code_blocks:
   - code_block: |2
-      Technopedia_id
-      Edition
-      Edition_Desupported_Flag
-      Edition_Order
+      technopedia_id
+      edition
+      edition_desupported_flag
+      edition_order
       URL
-      Created_At
-      Modified_At
+      created_at
+      modified_at
     title: Software Product Attributes
     language: bash
   - code_block: |2-
-      [:VENDOR_OF]->(MANUFACTURER)
+    (:)<->(MANUFACTURER)
     title: Relationships
     language: bash
 ---

@@ -75,17 +75,16 @@ left_code_blocks:
 right_code_blocks:
   - code_block: |2
       technopedia_id
-      cat_sw_product_id
       name
       family
       component
-      alias
       is_suite
       product_desupported_flag
       product_discontinued_flag
       product_url
       created_at
       modified_at
+      "alias"
 
 
 
@@ -95,9 +94,13 @@ right_code_blocks:
     title: Software Product Attributes
     language: bash
   - code_block: |2-
-      (SOFTWARE_PRODUCT)<-[:EDITION_OF]-(SOFTWARE_EDITION)
-      (SOFTWARE_PRODUCT)<-[:VENDOR_OF]-(MANUFACTURER)
-      (SOFTWARE_PRODUCT)-[:CATEGORY]->(CATEGORY_2)
+      (SOFTWARE_PRODUCT)<-[:HAS_A]-(SOFTWARE_EDITION)
+
+      (SOFTWARE_PRODUCT)<-[:HAS_A]-(MANUFACTURER)
+
+      (SOFTWARE_PRODUCT)-[:HAS_A]->(SOFTWARE_VERSION)
+      
+      (SOFTWARE_PRODUCT)-[:BELONGS_TO]->(CATEGORY_2)
       
 
     title: Relationships

@@ -10,7 +10,7 @@ content_markdown: >-
 
   #### Get started with TQL<br>
 
-  To make a query with TQL, you must use a MATCH statement, which is like Select statement in SQL. You add the MATCH statement as a query parameter to the TQL endpoint.<br>
+  To make a query with TQL, you must use a MATCH statement, which is like Select statement in SQL. You add the MATCH statement as a query parameter to the TQL endpoint `https://v6.technopedia.com/tql` <br>
   For example, `https://v6.technopedia.com/tql?q=MATCH <query_parameters>`
   <br>
   
@@ -95,7 +95,7 @@ content_markdown: >-
 
   <br>
   <br>
-
+   
   <b>Objective:</b> To get software editions that have a release, verison, product, and manufacturer.<br>
   <br>
   `MATCH (e:SOFTWARE_EDITION)<-[:HAS_A]-(r:SOFTWARE_RELEASE)-[:HAS_A]->(v:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_PRODUCT)<-[:HAS_A]-(m:MANUFACTURER) RETURN e,r,v,p,m LIMIT 10`<br>
@@ -132,7 +132,7 @@ content_markdown: >-
   `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name CONTAINS "Microsoft" RETURN s` <br>
 
   * DISTINCT <br>
-  Return distinct records only. 
+  Return distinct records only. <br>
   `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name = "Microsoft Exchange Server Monitor" RETURN DISTINCT s` <br>
 
   * COUNT <br>
