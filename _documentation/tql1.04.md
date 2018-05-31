@@ -111,6 +111,15 @@ content_markdown: >-
   `MATCH (s:SOFTWARE_PRODUCT) RETURN count(*)` < br>
 
   * Operators <br>
+  `=` equals <br>
+  `<>` not equal to <br>
+  `>` greater than <br>
+  `<` less than <br>
+  `>=` greater than or equals <br>
+  `<=` less than or equals <br>
+
+
+
 
 
 
