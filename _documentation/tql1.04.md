@@ -90,7 +90,7 @@ content_markdown: >-
   Return software products where name is Office and the family is HealthMatics. <br>
 
   * OR <br>
-  Use the OR clause to  return one condition <br>
+  Use the OR clause to  return either one of two condtions. <br>
   `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name = "Office" OR s.family = "HealthMatics"  RETURN s` <br>
   Return software products where name is Office or the family is HealthMatics. <br>
   
@@ -100,17 +100,18 @@ content_markdown: >-
   `MATCH (s:SOFTWARE_PRODUCT) RETURN s LIMIT 5` <br>
 
   * CONTAINS <br>
-  MATCH (s:SOFTWARE_PRODUCT) WHERE s.name CONTAINS "Microsoft" RETURN s <br>
+  Use the CONTAINS clause to search for works that are contained within attribues. <br>
+  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name CONTAINS "Microsoft" RETURN s` <br>
 
   * DISTINCT <br>
   Return distinct records only. 
-  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name = "Microsoft Exchange Server Monitor" RETURN DISTINCT s`<br>
+  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name = "Microsoft Exchange Server Monitor" RETURN DISTINCT s` <br>
   * COUNT <br>
   Return count of records. <br>
   `MATCH (s:SOFTWARE_PRODUCT) RETURN count(*)` < br>
 
   * Operators <br>
-  
+
 
 
  
