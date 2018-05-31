@@ -88,16 +88,18 @@ content_markdown: >-
     * Add an alias to each node and relationship in the  query.<br>
     * To return the data that you need, use the Return clause to refer to the specific aliases.<br>
   <br>
-  `MATCH (e:SOFTWARE_EDITION)<-[x:HAS_A]-(r:SOFTWARE_RELEASE)-[y:HAS_A]->(v:SOFTWARE_VERSION)-[z:HAS_A]->(p:SOFTWARE_PRODUCT) RETURN r,e,v,p`
+  `MATCH (e:SOFTWARE_EDITION)<-[x:HAS_A]-(r:SOFTWARE_RELEASE)-[y:HAS_A]->(v:SOFTWARE_VERSION)-[z:HAS_A]->(p:SOFTWARE_PRODUCT) RETURN r,e,v,p`<br>
 
   <br>
-  In this example, you match software editions that have  that have Adobe in the name fields are returned.<br>
+  In this example, for any software editions in Technopedia, you get software editions that have a release, verison, and product. <br>
 
   <br>
   <br>
 
-  <b>Objective:</b> To get software editions that have a release, verison, product, and manufacturer.
-  `MATCH (e:SOFTWARE_EDITION)<-[:HAS_A]-(r:SOFTWARE_RELEASE)-[:HAS_A]->(v:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_PRODUCT)<-[:HAS_A]-(m:MANUFACTURER) RETURN e,r,v,p,m LIMIT 1`
+  <b>Objective:</b> To get software editions that have a release, verison, product, and manufacturer.<br>
+  <br>
+  `MATCH (e:SOFTWARE_EDITION)<-[:HAS_A]-(r:SOFTWARE_RELEASE)-[:HAS_A]->(v:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_PRODUCT)<-[:HAS_A]-(m:MANUFACTURER) RETURN e,r,v,p,m LIMIT 10`<br>
+  In this example, for any software editions in Technopedia, you get software editions that have a release, verison, product, and manufacturer.
 
 
 
