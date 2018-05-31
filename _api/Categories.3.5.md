@@ -4,10 +4,10 @@ position: 3.5
 type: 
 description: 
 content_markdown: |-
-  ###### Categories are divided into Category Group, Category_1 and Category_2.
+  ###### Categories are classified by Category Group, Category_1 and Category_2.
 
 
-  Category nodes are linked by relationships from the software product node.
+  Category nodes are linked by relationships from the software product node and the hardware product node.
   {: .info}
   
   The following diagaram shows the nodes and relationships for categories:
@@ -23,11 +23,15 @@ content_markdown: |-
 
 
   ### Category 2
+
+  This category node features 
   `MATCH (n:CATEGORY_2) RETURN n LIMIT 25`
   
 
 
   ### Category Group
+
+  This category node features 
   `MATCH (n:CATEGORY_1) RETURN n LIMIT 25`
 
 

@@ -2,19 +2,19 @@
 title: Hardware Product
 position: 2.2
 type: 
-description: Hardware information in Technopedia is 
+description: Hardware information in Technopedia is classified by product, model, and power. 
 content_markdown: |-
 
-  `MATCH (a:HW_MODEL) RETURN a.model`
+  `MATCH (n:HARDWARE_PRODUCT) RETURN n LIMIT 25`
   {: .info}
   
   <br>
 
 
   <br> 
-    
+  IMAGE LATER 
   
-  ![API Image](/images/apiEcon.PNG){:class="img-responsive"} <br>
+  ![API Image](/images/hardware.png){:class="img-responsive"} <br>
   
   ###### Returns a specific hardware item from the Technopedia database.<br> 
   ![API Image](/images/tid.png){:class="img-responsive"} <br>
@@ -76,7 +76,7 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:CPU) RETURN h.cores"
+      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:HARDWARE_PRODUCT) RETURN h.product"
 
       
     title: cURL
@@ -84,17 +84,16 @@ left_code_blocks:
 right_code_blocks:
   - code_block: |2
       technopedia_id
-      cat_manufacturer_id
       product
       desupported_flag
       create_date
       modified_at
-    title: Software Product Attributes
+    title: Hardware Product Attributes
     language: bash
   - code_block: |2-
-      [:VENDOR_OF]<-(MANUFACTURER)
-      [:CATEGORY]->(CATEGORY_2)
-      [:CERTIFICATIONS]->(CERTIFICATION)
+      [:HAS_A]<-(MANUFACTURER)
+      [:HAS_A]->(CERTIFICATION)
+      [:BELONGS_TO]->(CATEGORY_2)
 
       
       

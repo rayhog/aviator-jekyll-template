@@ -96,7 +96,7 @@ right_code_blocks:
     title: CPU Attributes
     language: bash
   - code_block: |2-
-      (MANUFACTURER)-[:VENDOR_OF]->(CPU)
+      (MANUFACTURER)-[:HAS_A]->(CPU)
     title: Relationships
     language: bash
 ---

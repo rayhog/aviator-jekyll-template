@@ -3,7 +3,9 @@ title: Software Version
 position: 1.2
 type: 
 description: >-
-  Software versions are represented by two nodes. The Software Version Group node represents the major or group version attributes and the software version node represents the attributes that are associated with child versions of the parent major version. The relationship bewtween the nodes is `HAS_A` which points from `SOFTWARE_VERSION` towards `SOFTWARE_VERSION_GROUP`.
+  Software versions are represented by three nodes. The Software Version Group node represents the group version attributes. 
+  The software version node represents the attributes that are associated with child versions of the parent major version or version group. 
+  The relationship bewtween the nodes is `HAS_A` which points from `SOFTWARE_VERSION` to `SOFTWARE_VERSION_GROUP` and `SOFTWARE_MAJOR_VERSION.
 content_markdown: >-
   Gets software version information
   <br>
@@ -22,10 +24,25 @@ content_markdown: >-
   ### Software Version Group
   
   ######
-  The node that represents the major version of software is `SOFTWARE_VERSION_GROUPN`.
-  Software versioning is used to categorize the unique states of software as it is developed and released. The version identifier might be a word, or a number, or inlcude both. For example, version 1.0 is often used to represent the initial release of a software product.
+  The node that represents the major version of software is `SOFTWARE_MAJOR_VERSION`.
+  Software versioning is used to categorize the unique states of software as it is developed and released. 
+  The version identifier might be a word, or a number, or inlcude both. For example, version 1.0 is often used to represent the initial release of a software product.
 
   Gets software version information
+
+  `MATCH (a:SOFTWARE_MAJOR_VERSION) RETURN a.version`
+
+  {: .success} 
+
+
+  <br>
+  ### Software Major Group
+  
+  ######
+  The node that represents the major version of software is `SOFTWARE_VERSION_GROUP`.
+  Software version group is used to categorize the software when the version is part of version group that may or may not have a major version.
+
+  Gets software version group information
 
   `MATCH (a:SOFTWARE_VERSION_GROUP) RETURN a.version`
 
@@ -33,7 +50,6 @@ content_markdown: >-
 
 
   <br>
-  
 
 
   
@@ -85,18 +101,24 @@ right_code_blocks:
   - code_block: |2
       VERSION ATTRIBUTES
       technopedia_id
-      cat_sw_version_id
       version
       version_patchlevel
       is_major
       version_order
       created_at
+      version_desupported_flag
+      modified_at
 
 
       MAJOR VERSION GROUP
       technopedia_id
       version
-      cat_sw_major_version_id
+      
+
+      MAJOR VERSION 
+      technopedia_id
+      version
+      
 
     title: Software Version Attributes
     language: bash
@@ -105,7 +127,11 @@ right_code_blocks:
 
       (SOFTWARE_VERSION)-[:HAS_A)]->(SOFTWARE_PRODUCT)
 
-      (SOFTWARE_VERSION)-[:BELONGS_TO]->(SOFTWARE_GROUP_VERSION)
+      (SOFTWARE_VERSION)-[:HAS_A]->(SOFTWARE_VERSION_GROUP)
+
+      (SOFTWARE_VERSION)-[:HAS_A]->(SOFTWARE_MAJOR_VERSION)
+
+
     title: Relationships
     language: bash
 ---

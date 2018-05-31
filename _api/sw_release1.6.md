@@ -36,7 +36,7 @@ left_code_blocks:
     title: Example 1
     language: javascript
   - code_block: >-
-      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.release_url n.ga_date
+      MATCH (n:SOFTWARE_RELEASE) RETURN n.release_url n.ga_date
 
 
       RESPONSE SAMPLE
@@ -85,6 +85,7 @@ left_code_blocks:
 right_code_blocks:
   - code_block: |-
       technopedia_id
+      release
       discontinued_flag
       desupported_flag
       url
