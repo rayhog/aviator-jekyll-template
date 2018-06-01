@@ -151,7 +151,7 @@ right_code_blocks:
         name
         short name
         
-    title: Vertical
+    title: Vertical Attributes
     language: bash
 
   - code_block: |2-

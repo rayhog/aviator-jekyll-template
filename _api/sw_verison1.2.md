@@ -111,12 +111,12 @@ right_code_blocks:
       modified_at
 
 
-      MAJOR VERSION GROUP
+      SOFTWARE VERSION GROUP
       technopedia_id
       version
       
 
-      MAJOR VERSION 
+      SOFTWARE MAJOR VERSION 
       technopedia_id
       version
       
