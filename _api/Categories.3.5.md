@@ -4,7 +4,7 @@ position: 3.5
 type: 
 description: 
 content_markdown: |-
-  ###### Categories are classified by Category Group, Category_1 and Category_2.
+  ###### Categories are split into CATEGORY_GROUP, CATEGORY_1 and CATEGORY_2, and `VERTICAL` is a high-level classification that is a parent of `CATEGORY_2`.
 
 
   Category nodes are linked by relationships from the software product node and the hardware product node.
@@ -15,11 +15,11 @@ content_markdown: |-
   ![API Image](/images/cat_group.png){:class="img-responsive"} <br>
 
   <br>
-  ### Category GROUP
+  ### Category Group
   
   This category node features high-level classifications, such as Business Applications, Network Equipment, and Automatic Teller Machine (ATM). This categories parent is `CATEGORY_GROUP`, which features more global clasifications. 
   
-  Get a list of CATEGORY_GROUP labels by running the following MATCH query with the TQL endpoint:
+  Get a list of `CATEGORY_GROUP` labels by running the following MATCH query with the TQL endpoint:
 
   `MATCH (n:CATEGORY_2) RETURN n.label`
   
@@ -28,19 +28,19 @@ content_markdown: |-
 
   This category 1 node references classifications such as  Storage Area Networks (SAN), Collaboration", Cash/Coin Detector and Help and Service Desk.
 
-  Get a list of CATEGORY_GROUP labels by running the following MATCH query with the TQL endpoint:
+  Get a list of `CATEGORY_GROUP` labels by running the following MATCH query with the TQL endpoint:
 
   `MATCH (n:CATEGORY_2) RETURN n.label`
 
   ### Category 2
 
   This category 2 node references classifications that are more granular than Categrory 1 or Category Group, such as Sound Masking, Retail Hardware, Diagnostic and Therapeutic Radiation/Imaging Devices", "Cheque Deposit Machine (CQM) and Handhelds.
-  Get a list of CATEGORY_2 labels by running the following MATCH query with the TQL endpoint:
+  Get a list of `CATEGORY_2` labels by running the following MATCH query with the TQL endpoint:
 
   `MATCH (n:CATEGORY_2) RETURN n.label`
   
 
-  ### VERTICAL
+  ### Vertical
 
   The VERTICAL node is a high-level classification that features the following Verticals:
 
