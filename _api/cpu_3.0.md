@@ -84,7 +84,6 @@ left_code_blocks:
 
 right_code_blocks:
   - code_block: |2
-      cat_cpu_model_id
       technopedia_id
       model
       url
