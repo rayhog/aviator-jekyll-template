@@ -103,17 +103,15 @@ right_code_blocks:
       VERSION ATTRIBUTES
       technopedia_id
       version
-      version_patchlevel
-      is_major
-      version_order
+      order
       created_at
-      version_desupported_flag
       modified_at
 
 
       SOFTWARE VERSION GROUP
       technopedia_id
-      version
+      version_group
+      modified_at
       
 
       SOFTWARE MAJOR VERSION 

@@ -19,7 +19,7 @@ content_markdown: |-
     * Software Release
   
   
-  Use a combination of the software nodes with relationships to get the data that you specify in your query.
+  Use a combination of the software nodes with relationships to get the data that you specify in your query. The following diagram shows the software nodes and relationships.
   <br>
   ![API Image](/images/node_ex.png){:class="img-responsive"} <br> 
  

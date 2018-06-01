@@ -1,19 +1,21 @@
 ---
-title: Other CAT
+title: Support
 position: 3.9
 type: 
 description: >-
-  Create Query for example query. In this example, we will pull data from
-  Technopedia that contains 'excel'.
+ You can access Support data from the SUPPORT_STAGE and SUPPORT_POLICY nodes, which are connected to Software and Hardware.
 
 content_markdown: >-
  ###### The CAT is  about CATS
   <br>
 
-  `MATCH (SOFTWARE_PRODUCT)<-[:EDITION_OF]-(SOFTWARE_EDITION) WHERE n.release_title = "Advanced Partitioning Option" RETURN n`
+  `MATCH (a:SUPPORT_STAGE)-[:HAS_A]-(SUPPORT_POLICY) RETURN a
   {: .info}
   {: .success}
 
+  The following diagram shows the support nodes and relationships.
+  <br>
+  ![API Image](/images/support.png){:class="img-responsive"} <br> 
 
   <br>
 
@@ -88,18 +90,24 @@ left_code_blocks:
     language:
 right_code_blocks:
   - code_block: |2
-      Technopedia_id
-      Edition
-      Edition_Desupported_Flag
-      Edition_Order
-      URL
-      Created_At
-      Modified_At
-    title: Software Edition Attributes
+      SUPPORT_STAGE
+      technopedia_id
+      support_stage
+      order
+      created_at
+      modified_at
+      
+      SUPPORT_POLICY
+      technopedia_id
+      support_policy
+      created_at
+      modified_at
+
+    title: Support Attributes
     language: bash
   - code_block: |2-
-      Edition_of Software Release
-      Edition of Software Product 
+      (SUPPORT_STAGE)-[HAS_A]->[SUPPORT_POLICY]
+      
     title: Relationships
     language: bash
 ---
