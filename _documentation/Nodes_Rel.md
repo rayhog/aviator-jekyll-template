@@ -41,7 +41,7 @@ content_markdown: >-
    * To get information about a relationship that has attributes, we can assign it an alias for later reference. The alias is placed in front of the colon `-[anyAlias:Relationship_name]->(node)`
 
 
-  ###### The following diagram is a simple representation of nodes and relationships:
+  ###### The following diagram is a basic representation of nodes and relationships:
 
 
   ![API Image](/images/node_ex.png)<br>&nbsp;

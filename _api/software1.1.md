@@ -4,10 +4,16 @@ position: 1.1
 type: 
 description: Get software data in Technopedia by using relationships between software nodes
 content_markdown: |-
-  The following query returns software releases by title:  
+  The following query returns software releases by release name:  
     
-  `MATCH (a:SOFTWARE_RELEASE) RETURN a.release.title`
+  `MATCH (a:SOFTWARE_RELEASE) RETURN a.release`
   {: .info}
+
+  
+  Use a combination of the software nodes with relationships to get the data that you specify in your query. 
+  The following diagram shows the software nodes, manufacturer node, and relationships.
+  <br>
+  ![API Image](/images/node_ex.png){:class="img-responsive"} <br> 
 
   <br>
   Software is a general classification that can be broken into the following classifications
@@ -17,11 +23,6 @@ content_markdown: |-
     * Software Major Version
     * Software Edition
     * Software Release
-  
-  
-  Use a combination of the software nodes with relationships to get the data that you specify in your query. The following diagram shows the software nodes and relationships.
-  <br>
-  ![API Image](/images/node_ex.png){:class="img-responsive"} <br> 
  
   
 left_code_blocks:
@@ -84,7 +85,7 @@ left_code_blocks:
     language: bash
 right_code_blocks:
   - code_block: |2
-      Software consists of the following 6 nodes:
+      Software consists of the following nodes:
 
       * SOFTWARE_PRODUCT
       * SOFTWARE_VERSION

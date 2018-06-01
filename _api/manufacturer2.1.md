@@ -10,13 +10,13 @@ content_markdown: |-
   * `description` provides a description of the manfacturer.
   <br>
  
-  The manufacturer has relationships to other nodes. The following MATCH query returns information about the manufactuer called Microsoft. 
+  The manufacturer has relationships to other nodes. The following MATCH query returns information about the manufacturer called Microsoft. 
 
 
   `MATCH (a:MANUFACTURER) WHERE a.manufacturer = "Microsoft" RETURN a`
   {: .info}
 
-  The following diagram shows the the manufacturer node and its connections to software, haredware, and CPU.
+  The following diagram shows the the manufacturer node and its connections to software, hardware, and CPU.
 
   ![API Image](/images/manu.png){:class="img-responsive"} <br>
   

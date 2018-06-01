@@ -21,7 +21,7 @@ content_markdown: >-
 
    <br>
 
-  The following diagram is an example of how Nodes and Relationships are connected:
+  The following diagram shows an example of nodes and relationships in Technopedia:
   <br>
   
 
