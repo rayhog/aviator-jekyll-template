@@ -25,69 +25,57 @@ content_markdown: >-
 
 left_code_blocks:
   - code_block: |-
-      {
-          "results": [
-              {
-                  "s": {
-                      "attributes": {
-                          "title": "Total Access 900 Series IP Business Gateway"
-                      },
-                      "created_at": "2017-11-17T13:29:54.555Z",
-                      "created_by": "00000000-0000-0000-0000-000000000000",
-                      "label": "HARDWARE",
-                      "owner": "00000000-0000-0000-0000-000000000000",
-                      "quality_grade": 3,
-                      "technopedia_id": "7f4f7044-e0de-4da9-87b1-817266df9684"
-                  }
-              },
-              {
-                  "s": {
-                      "attributes": {
-                          "title": "Total Access 900 Series IP Business Gateway"
-                      },
-                      "created_at": "2017-11-17T13:29:54.555Z",
-                      "created_by": "00000000-0000-0000-0000-000000000000",
-                      "label": "HARDWARE",
-                      "owner": "00000000-0000-0000-0000-000000000000",
-                      "quality_grade": 3,
-                      "technopedia_id": "f35c4a08-785e-4b3b-93c6-3588b298e976"
-                  }
-             
-    title: GET
-    language: json
-  - code_block: >
-      MATCH (<Node_Type>:<alias> {<attribute>: '<attribute_value>'}) RETURN
-      <alias>
-
-      MATCH (SOFTWARE:s {category: 'Web Browsers'}) RETURN s.title
-
-
-      SAMPLE RESPONSE
-
-      {
-          "version": "1.0.0",
-          "request-id": "a3505e21-8d91-40ff-b587-3f6731a1086b",
-          "results": [
-              {
-                  "s": {
-                      "attributes": {
-                          "end_of_life_str": "1/9/2007",
-                          "title": "Excel for Mac",
-                          "version": "10.0"
-                      },
-                      "created_at": "2017-11-17T12:15:47.158Z",
-                      "created_by": "00000000-0000-0000-0000-000000000000",
-                      "label": "SOFTWARE",
-                      "owner": "00000000-0000-0000-0000-000000000000",
-                      "quality_grade": 3,
-                      "technopedia_id": "2b0e74ee-b8c0-4a6d-a096-a892fbaed1fc"
-                  }
-              },
-    title: QUERY EXAMPLE
+      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:SUPPORT_STAGE) RETURN h.stage"
+    title: cURL Examples
     language: bash
-  - code_block:
-    title:
-    language:
+
+
+  - code_block: >-
+      MATCH (n:SUPPORT_STAGE) RETURN n LIMIT 25
+
+      RESPONSE SAMPLE
+
+      {
+          
+          }
+    title: Example 1
+    language: javascript
+  - code_block: |-
+      MATCH (n:SUPPORT_POLICY) RETURN n LIMIT 25
+      
+      RESPONSE SAMPLE
+      {
+          
+        }
+    title: Example 2
+    language: javascript
+
+  - code_block: |-
+      MATCH (n:MANUFACTURER)<-[:HAS_A]-(w:SOFTWARE_PRODUCT)-[BELONGS_TO]->(v:CATEGORY_2) RETURN n, w, v
+
+      RESPONSE SAMPLE
+      {
+          
+        }
+    title: Example 3
+    language: javascript
+
+  - code_block: |-
+      MATCH (n:MANUFACTURER)-[:HAS_A]->(p:SOFTWARE_PRODUCT)-[:HAS_A]->(my_alias:SOFTWARE_VERSION) RETURN n, p, my_alias
+
+      RESPONSE SAMPLE
+      {
+          
+        }
+    title: Example 4
+    language: javascript
+
+  - code_block: |-
+      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:MANUFACTURER) RETURN h.manufacturer"
+
+      
+    title: Example 5
+    language: bash
 right_code_blocks:
   - code_block: |2
       SUPPORT_STAGE
