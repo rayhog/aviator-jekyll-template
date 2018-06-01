@@ -1,6 +1,6 @@
 ---
 title: Hardware Model
-position: 2.5
+position: 2.3
 type: 
 description: The hardware model node defines information about the model, such as dimensions and other general specifications 
 content_markdown: |-
@@ -11,9 +11,9 @@ content_markdown: |-
   <br>
 
   <br> 
-    
+  The following diagram shows hardware nodes and related software nodes.  
   
-  ![API Image](/images/apiEcon.PNG){:class="img-responsive"} <br>
+  ![API Image](/images/hard_soft.png){:class="img-responsive"} <br>
   
   ###### Returns a specific hardware item from the Technopedia database.<br> 
   ![API Image](/images/tid.png){:class="img-responsive"} <br>
