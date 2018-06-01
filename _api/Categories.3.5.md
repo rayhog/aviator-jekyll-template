@@ -23,7 +23,6 @@ content_markdown: |-
 
   `MATCH (n:CATEGORY_2) RETURN n.label`
   
-
   ### Category 1
 
 
@@ -32,7 +31,6 @@ content_markdown: |-
   Get a list of CATEGORY_GROUP labels by running the following MATCH query with the TQL endpoint:
 
   `MATCH (n:CATEGORY_2) RETURN n.label`
-
 
   ### Category 2
 

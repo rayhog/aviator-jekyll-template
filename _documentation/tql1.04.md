@@ -105,7 +105,9 @@ content_markdown: >-
 
   <br>
 
-  #### TQL Clauses<br>
+  #### TQL Keywords<br>
+
+  You use the following keywords in your MATCH statements to filter data that is returned from your TQL query:
 
   * WHERE <br>
   Use the WHERE condition to filter results. <br>
