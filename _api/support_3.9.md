@@ -3,13 +3,15 @@ title: Support
 position: 3.9
 type: 
 description: >-
- You can access Support data from the SUPPORT_STAGE and SUPPORT_POLICY nodes, which are connected to Software and Hardware.
+ You can access support data from the SUPPORT_STAGE and SUPPORT_POLICY nodes, which are connected to Software and Hardware.
 
 content_markdown: >-
- ###### The CAT is  about CATS
+ ###### Much software and hardware is supported by the vendor or manufacturer. In Technopedia, this support is identified a `SUPPORT_STAGE`, which refers to the type of support and the definition attribute provides more detailed information about applicability and timelines.
+ 
+ Many `SUPPORT_STAGES have a `SUPPORT_POLICY` that defines the type of policy, such as standard or Open Source. 
   <br>
 
-  `MATCH (a:SUPPORT_STAGE)-[:HAS_A]-(SUPPORT_POLICY) RETURN a
+  `MATCH (a:SUPPORT_STAGE)-[:HAS_A]-(SUPPORT_POLICY) RETURN a`
   {: .info}
   {: .success}
 
@@ -36,6 +38,12 @@ left_code_blocks:
       RESPONSE SAMPLE
 
       {
+        "technopedia_id": "abc3378a-7eaa-4fa6-94b7-cf5e0b75c57b",
+        "created_at": "2010-11-08 10:58:22",
+        "modified_at": "2010-11-08 10:58:22",
+        "cat_support_policy_id": 16561748,
+        "policy": "Standard"
+      }
           
           }
     title: Example 1
