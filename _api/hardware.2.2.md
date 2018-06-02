@@ -5,16 +5,17 @@ type:
 description: Hardware information in Technopedia is classified by product, model, and power. 
 content_markdown: |-
 
-    `MATCH (n:HARDWARE_PRODUCT) RETURN n LIMIT 25`
+  `MATCH (n:HARDWARE_PRODUCT) RETURN n LIMIT 25`
      {: .info}
   
-   <br>
-    
-     ![API Image](/images/hardware.png){:class="img-responsive"} <br>
+  <br>
+  The following images shows the hardware nodes, relationships, and relevant connections.
+  <br>    
+  ![API Image](/images/hardware.png){:class="img-responsive"} <br>
   
    
-      To use the MATCH statements in the following examples, you append the MATCH statement to the following tql endpoint. 
-      https://v6-1.technopedia.com/tql?q=
+  To use the MATCH statements in the following examples, you append the MATCH statement to the following tql endpoint. 
+  `https://v6-1.technopedia.com/tql?q=<MATCH Statement>`
 
 
 
@@ -166,34 +167,34 @@ left_code_blocks:
       RESPONSE SAMPLE
       {
           
-    "results": [
-        {
-            "hw.cat_manufacturer_id": null,
-            "hw.create_date": null,
-            "hw.desupported_flag": null,
-            "hw.modified_at": "2011-03-16 09:46:45",
-            "hw.product": "Express5800/A1080a Series",
-            "hw.technopedia_id": "f6d32439-001b-4ca7-abb1-cd7627086ade",
-            "manu.manufacturer": "NEC"
-        },
-        {
-            "hw.cat_manufacturer_id": null,
-            "hw.create_date": null,
-            "hw.desupported_flag": null,
-            "hw.modified_at": "2011-03-21 11:22:10",
-            "hw.product": "Phaser 3125 (Networked)",
-            "hw.technopedia_id": "4d35ec28-0f16-4787-acca-885679265b59",
-            "manu.manufacturer": "Xerox"
-        },
-        {
-            "hw.cat_manufacturer_id": null,
-            "hw.create_date": null,
-            "hw.desupported_flag": null,
-            "hw.modified_at": "2017-06-01 11:29:10",
-            "hw.product": "Pro 3010 Desktop PC",
-            "hw.technopedia_id": "e2b8fab2-681f-48f5-8ac7-57cb7f36e97b",
-            "manu.manufacturer": "Hewlett-Packard Company"
-        }
+        "results": [
+            {
+                "hw.cat_manufacturer_id": null,
+                "hw.create_date": null,
+                "hw.desupported_flag": null,
+                "hw.modified_at": "2011-03-16 09:46:45",
+                "hw.product": "Express5800/A1080a Series",
+                "hw.technopedia_id": "f6d32439-001b-4ca7-abb1-cd7627086ade",
+                "manu.manufacturer": "NEC"
+            },
+            {
+                "hw.cat_manufacturer_id": null,
+                "hw.create_date": null,
+                "hw.desupported_flag": null,
+                "hw.modified_at": "2011-03-21 11:22:10",
+                "hw.product": "Phaser 3125 (Networked)",
+                "hw.technopedia_id": "4d35ec28-0f16-4787-acca-885679265b59",
+                "manu.manufacturer": "Xerox"
+            },
+            {
+                "hw.cat_manufacturer_id": null,
+                "hw.create_date": null,
+                "hw.desupported_flag": null,
+                "hw.modified_at": "2017-06-01 11:29:10",
+                "hw.product": "Pro 3010 Desktop PC",
+                "hw.technopedia_id": "e2b8fab2-681f-48f5-8ac7-57cb7f36e97b",
+                "manu.manufacturer": "Hewlett-Packard Company"
+            }
         
       
         

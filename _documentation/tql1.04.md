@@ -232,13 +232,25 @@ left_code_blocks:
         }
     title: Example 3
     language: javascript
-  - code_block: 'curl http://sampleapi.readme.com/orders?key=YOUR_APP_KEY'
+  - code_block: 
+      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
+
+      RESPONSE SAMPLE
+      {
     title: Example 4
     language: bash
-  - code_block: 'curl http://sampleapi.readme.com/orders?key=YOUR_APP_KEY'
+  - code_block: 
+      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
+
+      RESPONSE SAMPLE
+      {
     title: Example 5
     language: bash
-  - code_block: 'curl http://sampleapi.readme.com/orders?key=YOUR_APP_KEY'
+  - code_block: 
+      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
+
+      RESPONSE SAMPLE
+      {
     title: cURL
     language: bash
     
