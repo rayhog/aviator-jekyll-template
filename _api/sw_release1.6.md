@@ -5,7 +5,7 @@ type:
 description: Get software release data from the Technopedia database.
 
 content_markdown: >-
-  `MATCH (a:SOFTWARE_RELEASE) RETURN a.Release_Title`
+  `MATCH (a:SOFTWARE_RELEASE) RETURN a.release`
 
   {: .success} 
 
@@ -36,7 +36,7 @@ left_code_blocks:
     title: Example 1
     language: javascript
   - code_block: >-
-      MATCH (n:SOFTWARE_RELEASE) RETURN n.release_url n.ga_date
+      MATCH (n:SOFTWARE_RELEASE) RETURN n.release, n.created_at LIMIT 2
 
 
       RESPONSE SAMPLE
@@ -47,7 +47,9 @@ left_code_blocks:
     title: Example 2
     language: javascript
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1
+      MATCH (srelease:SOFTWARE_RELEASE) -[:HAS_A]->(sver:SOFTWARE_VERSION)-[:HAS_A]->(sprod:SOFTWARE_PRODUCT)-[:HAS_A]->(manu:MANUFACTURER) RETURN srelease.release, sver.version, sprod.product, manu.manufacturer LIMIT 200
+
+      Return release name, software version, software product name, manufacturer name for 200 software releases.
 
       RESPONSE SAMPLE
       {
@@ -57,7 +59,9 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1
+      MATCH (srelease:SOFTWARE_RELEASE) -[:HAS_A]->(sver:SOFTWARE_VERSION)-[HAS_A]->(smajor:SOFTWARE_VERSION_GROUP) RETURN srelease.release, sver.version, smajor.version_group LIMIT 20
+
+      Return release name, software version and software group version for 2 software releases that have a version and major version group.
 
       RESPONSE SAMPLE
       {
@@ -67,7 +71,10 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1
+      MATCH (srelease:SOFTWARE_RELEASE) -[:HAS_A]->(sver:SOFTWARE_VERSION)-[HAS_A]->(smajor:SOFTWARE_MAJOR_VERSION) RETURN srelease.release, sver.version, smajor.version_group LIMIT 20
+
+      Return release name, software version and software major version for 2 software releases that have a version and major version group.
+
 
       RESPONSE SAMPLE
       {
@@ -77,7 +84,7 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:CPU) RETURN h.cores"
+      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:software_release) RETURN h.release"
 
       
     title: cURL

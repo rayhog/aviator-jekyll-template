@@ -99,7 +99,8 @@ content_markdown: >-
   <b>Objective:</b> To get software editions that have a release, verison, product, and manufacturer.<br>
   <br>
   `MATCH (e:SOFTWARE_EDITION)<-[:HAS_A]-(r:SOFTWARE_RELEASE)-[:HAS_A]->(v:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_PRODUCT)<-[:HAS_A]-(m:MANUFACTURER) RETURN e,r,v,p,m LIMIT 10`<br>
-  In this example, for any software editions in Technopedia, you get software editions that have a release, verison, product, and manufacturer.
+
+  In this MATCH query example; for any software editions in Technopedia, you get the release, verison, product, and manufacturer data for that edition.
 
 
 

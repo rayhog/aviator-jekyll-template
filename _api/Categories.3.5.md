@@ -4,13 +4,18 @@ position: 3.5
 type: 
 description: 
 content_markdown: |-
-  ###### Categories are split into `CATEGORY_GROUP`, `CATEGORY_1` and `CATEGORY_2`, and `VERTICAL` is a high-level classification that is a parent of `CATEGORY_2`.
+  ###### Categories are split into `CATEGORY_GROUP`, `CATEGORY_1`, `CATEGORY_2`, and `VERTICAL` is a high-level classification that is a parent of `CATEGORY_2`.
 
 
   Category nodes are linked by relationships from the software product node and the hardware product node.
+
+  `MATCH (n:CATEGORY_2) RETURN n.label`
+  `MATCH (n:CATEGORY_1) RETURN n.label`
+  `MATCH (n:CATEGORY_GROUP) RETURN n.label
+  `MATCH (n:VERTICAL) RETURN n.label
   {: .info}
   
-  The following diagram shows the nodes and relationships for categories:
+  The following diagram shows the categories and vertical nodes, and relationships.
 
   ![API Image](/images/cat_group.png){:class="img-responsive"} <br>
 

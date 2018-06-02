@@ -75,7 +75,7 @@ left_code_blocks:
 right_code_blocks:
   - code_block: |2
       technopedia_id
-      name
+      product
       family
       component
       is_suite
@@ -96,7 +96,7 @@ right_code_blocks:
   - code_block: |2-
       (SOFTWARE_PRODUCT)<-[:HAS_A]-(SOFTWARE_EDITION)
 
-      (SOFTWARE_PRODUCT)<-[:HAS_A]-(MANUFACTURER)
+      (SOFTWARE_PRODUCT)-[:HAS_A]->(MANUFACTURER)
 
       (SOFTWARE_PRODUCT)-[:HAS_A]->(SOFTWARE_VERSION)
       
