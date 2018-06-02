@@ -35,15 +35,63 @@ left_code_blocks:
       RESPONSE SAMPLE
 
       {
-          
+        "results": [
+          {
+              "h.manufacturer": "Go Ahead Web"
+          },
+          {
+              "h.manufacturer": "State Administration of Foreign Exchange"
+          },
+          {
+              "h.manufacturer": "Callware Technologies"
+          },
+          {
+              "h.manufacturer": "SoundID"
+          },
+          {
+              "h.manufacturer": "Obian"
+          },
+          {
+              "h.manufacturer": "AnalogX"
           }
+      {    
     title: Example 1
     language: javascript
   - code_block: |-
-      MATCH (h:MANUFACTURER) RETURN h.manufacturer
+      https://v6-1.technopedia.com/tql?q=MATCH (n:MANUFACTURER) RETURN n 
 
       RESPONSE SAMPLE
       {
+        "results": [
+        {
+            "n.cat_manufacturer_id": 594345,
+            "n.city": null,
+            "n.country": null,
+            "n.created_at": null,
+            "n.description": null,
+            "n.email": null,
+            "n.employees": null,
+            "n.employees_date": null,
+            "n.fax": null,
+            "n.fiscal_end_date": null,
+            "n.known_as": null,
+            "n.legal": "Corporation",
+            "n.manufacturer": "Go Ahead Web",
+            "n.modified_at": null,
+            "n.phone": null,
+            "n.profits_date": null,
+            "n.profits_per_year": null,
+            "n.publicly_traded": null,
+            "n.revene_date": null,
+            "n.revenue": null,
+            "n.state": null,
+            "n.street": null,
+            "n.symbol": "Private",
+            "n.technopedia_id": "513a9c99-608f-4b36-b9b6-3b53dfa85625",
+            "n.tier": 3,
+            "n.website": "http://www.goaheadweb.co.uk/",
+            "n.zip": null
+        },
           
         }
     title: Example 2
