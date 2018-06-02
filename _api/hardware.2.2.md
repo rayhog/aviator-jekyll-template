@@ -9,7 +9,7 @@ content_markdown: |-
      {: .info}
   
   <br>
-  The following images shows the hardware nodes, relationships, and relevant connections.
+  The following image shows the hardware nodes, relationships, and relevant connections.
   <br>    
   ![API Image](/images/hardware.png){:class="img-responsive"} <br>
   
@@ -65,7 +65,7 @@ left_code_blocks:
               
       }
 
-    title: Example 1
+    title: Example one
     language: javascript
 
     
@@ -110,7 +110,7 @@ left_code_blocks:
             "product.technopedia_id": "f6d32439-001b-4ca7-abb1-cd7627086ade"
         },
       }
-    title: Example 2
+    title: Example two
     language: javascript
   - code_block: |-
       MATCH (hw:HARDWARE_PRODUCT)-[a:BELONGS_TO]->(cat_2:CATEGORY_2)-[e:BELONGS_TO]->(cat_1:CATEGORY_1)-[y:BELONGS_TO]->(cat_group:CATEGORY_GROUP) RETURN hw, cat_2, cat_1, cat_group LIMIT 2
@@ -158,7 +158,7 @@ left_code_blocks:
             "hw.technopedia_id": "b60dc2ae-c262-4cbc-9baa-6df87270745f"
         }     
         
-    title: Example 3
+    title: Example three
     language: javascript
 
   - code_block: |-
@@ -198,7 +198,7 @@ left_code_blocks:
         
       
         
-    title: Example 4
+    title: Example four
     language: javascript
 
   - code_block: |-
@@ -242,7 +242,7 @@ left_code_blocks:
           },
             
           }
-    title: Example 5
+    title: Example five
     language: javascript
 
   - code_block: |-
