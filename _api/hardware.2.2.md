@@ -165,13 +165,42 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:HARDWARE_PRODUCT)-[a:BELONGS_TO]->(m:CATEGORY_2)-[e:BELONGS_TO]->(w:VERTICAL) RETURN n, m, w
-
+      MATCH (hw:HARDWARE_PRODUCT)-[a:HAS_A]->(manu:MANUFACTURER) RETURN hw, manu.manufacturer
 
       RESPONSE SAMPLE
       {
           
+    "results": [
+        {
+            "hw.cat_manufacturer_id": null,
+            "hw.create_date": null,
+            "hw.desupported_flag": null,
+            "hw.modified_at": "2011-03-16 09:46:45",
+            "hw.product": "Express5800/A1080a Series",
+            "hw.technopedia_id": "f6d32439-001b-4ca7-abb1-cd7627086ade",
+            "manu.manufacturer": "NEC"
+        },
+        {
+            "hw.cat_manufacturer_id": null,
+            "hw.create_date": null,
+            "hw.desupported_flag": null,
+            "hw.modified_at": "2011-03-21 11:22:10",
+            "hw.product": "Phaser 3125 (Networked)",
+            "hw.technopedia_id": "4d35ec28-0f16-4787-acca-885679265b59",
+            "manu.manufacturer": "Xerox"
+        },
+        {
+            "hw.cat_manufacturer_id": null,
+            "hw.create_date": null,
+            "hw.desupported_flag": null,
+            "hw.modified_at": "2017-06-01 11:29:10",
+            "hw.product": "Pro 3010 Desktop PC",
+            "hw.technopedia_id": "e2b8fab2-681f-48f5-8ac7-57cb7f36e97b",
+            "manu.manufacturer": "Hewlett-Packard Company"
         }
+        
+      } 
+        
     title: Example 4
     language: javascript
 
