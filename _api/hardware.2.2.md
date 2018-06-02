@@ -16,17 +16,55 @@ content_markdown: |-
   
   ![API Image](/images/hardware.png){:class="img-responsive"} <br>
   
-  ###### Returns a specific hardware item from the Technopedia database.<br> 
-  ![API Image](/images/tid.png){:class="img-responsive"} <br>
+   
+   To use the MATCH statements in the following examples, you append the MATCH statement to the following tql endpoint. 
+   https://v6-1.technopedia.com/tql?q=
 
 
 
 left_code_blocks:
   - code_block: |
-      MATCH (n:HARDWARE_PRODUCT) RETURN n.product, n.create_date
+      MATCH (n:HARDWARE_PRODUCT) RETURN n.product, n.desupported_flag
 
       RESPONSE SAMPLE
-      {
+      { 
+
+    "results": [
+        {
+            "n.desupported_flag": null,
+            "n.product": "Express5800/A1080a Series"
+        },
+        {
+            "n.desupported_flag": null,
+            "n.product": "Phaser 3125 (Networked)"
+        {
+            "n.desupported_flag": "TRUE",
+            "n.product": "ProLiant BL460c G6 Server Blade"
+        },    
+        },
+        {
+            "n.desupported_flag": null,
+            "n.product": "Pro 3010 Desktop PC"
+        },
+        {
+            "n.desupported_flag": null,
+            "n.product": "Essentio Series"
+        },
+        {
+            "n.desupported_flag": null,
+            "n.product": "DX100 Series"
+        },
+        {
+            "n.desupported_flag": null,
+            "n.product": "500 Series Notebook PC"
+        },
+        {
+            "n.desupported_flag": null,
+            "n.product": "ThinkCentre A51"
+        },
+        {
+            "n.desupported_flag": null,
+            "n.product": "3Com OfficeConnect Cable/DSL Gateway"
           
           }
 
@@ -35,30 +73,64 @@ left_code_blocks:
 
     
   - code_block: >-
-      MATCH (n:HARDWARE_PRODUCT)<-[:HAS_A]-(m:HARDWARE_MODEL) RETURN n, m
+      MATCH (product:HARDWARE_PRODUCT)<-[:HAS_A]-(model:HARDWARE_MODEL) RETURN  product, model
 
 
       RESPONSE SAMPLE
 
-      {
-          
-          }
+      {  
+        "results": [
+        {
+            "model.cpu_sockets": 4,
+            "model.cpu_url": "http://www.necam.com/docs/?id=6ee81afc-8691-484e-9549-b21b83f6302e",
+            "model.created_at": "2010-04-23 11:31:47",
+            "model.date_introduced": "3/30/2010",
+            "model.desupported_flag": null,
+            "model.model": "A1080a-S",
+            "model.modified_at": "2013-10-18 16:54:07",
+            "model.technopedia_id": "807bd3dc-2100-4116-a4e2-cbf741e725d4",
+            "product.cat_manufacturer_id": null,
+            "product.create_date": null,
+            "product.desupported_flag": null,
+            "product.modified_at": "2011-03-16 09:46:45",
+            "product.product": "Express5800/A1080a Series",
+            "product.technopedia_id": "f6d32439-001b-4ca7-abb1-cd7627086ade"
+        },
+        {
+            "model.cpu_sockets": 8,
+            "model.cpu_url": "http://www.necam.com/docs/?id=6ee81afc-8691-484e-9549-b21b83f6302e",
+            "model.created_at": "2010-04-23 11:32:43",
+            "model.date_introduced": "3/30/2010",
+            "model.desupported_flag": null,
+            "model.model": "A1080a-E",
+            "model.modified_at": "2013-10-18 16:54:22",
+            "model.technopedia_id": "5cb93d0e-63d0-43eb-89d8-7d1d25ff4ce5",
+            "product.cat_manufacturer_id": null,
+            "product.create_date": null,
+            "product.desupported_flag": null,
+            "product.modified_at": "2011-03-16 09:46:45",
+            "product.product": "Express5800/A1080a Series",
+            "product.technopedia_id": "f6d32439-001b-4ca7-abb1-cd7627086ade"
+        },
+      }
     title: Example 2
     language: javascript
   - code_block: |-
-      https://v6-1.technopedia.com/tql?q=MATCH (hw:HARDWARE_PRODUCT)-[a:BELONGS_TO]->(cat_2:CATEGORY_2)-[e:BELONGS_TO]->(cat_1:CATEGORY_1)-[y:BELONGS_TO]->(cat_group:CATEGORY_GROUP) RETURN hw, cat_2, cat_1, cat_group LIMIT 2
+      MATCH (hw:HARDWARE_PRODUCT)-[a:BELONGS_TO]->(cat_2:CATEGORY_2)-[e:BELONGS_TO]->(cat_1:CATEGORY_1)-[y:BELONGS_TO]->(cat_group:CATEGORY_GROUP) RETURN hw, cat_2, cat_1, cat_group LIMIT 2
 
       RESPONSE SAMPLE
       {  
          "results": [
         {
             "cat_1.cat_taxonomy2012_id": null,
-            "cat_1.description": "The process of preserving the landscape clean, safe, and attractive.",
+            "cat_1.description": "The process of preserving the landscape clean, safe, and 
+             attractive.",
             "cat_1.label": "Landscape Maintenance",
             "cat_1.technopedia_id": "ef2864c2-4215-4ee7-b373-d6054560cca9",
             "cat_2.cat_taxonomy2012_id": null,
             "cat_2.cat_taxonomy2012_parent_id": null,
-            "cat_2.description": "A group of devices that is designed to maintain and protect the environment.",
+            "cat_2.description": "A group of devices that is designed to maintain and protect the 
+             environment.",
             "cat_2.label": "Environmental Monitoring and Protection",
             "cat_2.technopedia_id": "56974f54-ef68-48fa-871f-efbfb6144baa",
             "cat_group.label": "Building Maintenance",
@@ -76,7 +148,8 @@ left_code_blocks:
             "cat_1.technopedia_id": "ef2864c2-4215-4ee7-b373-d6054560cca9",
             "cat_2.cat_taxonomy2012_id": null,
             "cat_2.cat_taxonomy2012_parent_id": null,
-            "cat_2.description": "An irrigation control system is a device used to operate automatic watering systems such as drip irrigation systems or lawn sprinklers.",
+            "cat_2.description": "An irrigation control system is a device used to operate 
+             automatic watering systems such as drip irrigation systems or lawn sprinklers.",  
             "cat_2.label": "Irrigation System",
             "cat_2.technopedia_id": "6b727766-ac35-422b-8046-6c9f17d13160",
             "cat_group.label": "Building Maintenance",
