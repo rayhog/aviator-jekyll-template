@@ -5,20 +5,16 @@ type:
 description: Hardware information in Technopedia is classified by product, model, and power. 
 content_markdown: |-
 
-  `MATCH (n:HARDWARE_PRODUCT) RETURN n LIMIT 25`
-  {: .info}
+    `MATCH (n:HARDWARE_PRODUCT) RETURN n LIMIT 25`
+     {: .info}
   
-  <br>
-
-
-  <br> 
-  IMAGE LATER 
-  
-  ![API Image](/images/hardware.png){:class="img-responsive"} <br>
+   <br>
+    
+     ![API Image](/images/hardware.png){:class="img-responsive"} <br>
   
    
-   To use the MATCH statements in the following examples, you append the MATCH statement to the following tql endpoint. 
-   https://v6-1.technopedia.com/tql?q=
+      To use the MATCH statements in the following examples, you append the MATCH statement to the following tql endpoint. 
+      https://v6-1.technopedia.com/tql?q=
 
 
 
@@ -199,7 +195,7 @@ left_code_blocks:
             "manu.manufacturer": "Hewlett-Packard Company"
         }
         
-      } 
+      
         
     title: Example 4
     language: javascript
@@ -229,7 +225,8 @@ left_code_blocks:
           {
               "cat_2.cat_taxonomy2012_id": null,
               "cat_2.cat_taxonomy2012_parent_id": null,
-              "cat_2.description": "A common type of computer printer that rapidly produces high quality text and graphics on plain paper. It employs a xerographic printing process, where image is produced by the direct scanning of a laser beam across the printer's photoreceptor",
+              "cat_2.description": "A common type of computer printer that rapidly produces high  quality text and graphics on plain paper. It employs a xerographic printing 
+               process, where image is produced by the direct scanning of a laser beam across the printer's photoreceptor",  
               "cat_2.label": "Laser Printers",
               "cat_2.technopedia_id": "bcb655cc-b5ef-4915-838f-8ff68cb65cce",
               "hardware.cat_manufacturer_id": null,
@@ -268,7 +265,9 @@ right_code_blocks:
       (HARDWARE_PRODUCT)-[:BELONGS_TO]->(CATEGORY_2)
 
       (HARDWARE_PRODUCT)-[:HAS_A]->(SUPPORT_STAGE)
-      
+
+      (HARDWARE_PRODUCT)-[:HAS_A]->(SUPPORT_STAGE)-[:HAS_A]->(SUPPORT_POLICY)
+            
       (HARDWARE_PRODUCT)-[:HAS_A]->(CERTIFICATION)
 
 
