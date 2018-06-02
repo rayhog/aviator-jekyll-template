@@ -9,10 +9,13 @@ content_markdown: |-
 
   Category nodes are linked by relationships from the software product node and the hardware product node.
 
-  `MATCH (n:CATEGORY_2) RETURN n.label`
+  `MATCH (n:CATEGORY_2) RETURN n.label` 
+
   `MATCH (n:CATEGORY_1) RETURN n.label`
+
   `MATCH (n:CATEGORY_GROUP) RETURN n.label
-  `MATCH (n:VERTICAL) RETURN n.label
+  
+  `MATCH (n:VERTICAL) RETURN n.label`
   {: .info}
   
   The following diagram shows the categories and vertical nodes, and relationships.
