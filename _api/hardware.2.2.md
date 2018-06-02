@@ -29,44 +29,44 @@ left_code_blocks:
       RESPONSE SAMPLE
       { 
 
-    "results": [
-        {
-            "n.desupported_flag": null,
-            "n.product": "Express5800/A1080a Series"
-        },
-        {
-            "n.desupported_flag": null,
-            "n.product": "Phaser 3125 (Networked)"
-        {
-            "n.desupported_flag": "TRUE",
-            "n.product": "ProLiant BL460c G6 Server Blade"
-        },    
-        },
-        {
-            "n.desupported_flag": null,
-            "n.product": "Pro 3010 Desktop PC"
-        },
-        {
-            "n.desupported_flag": null,
-            "n.product": "Essentio Series"
-        },
-        {
-            "n.desupported_flag": null,
-            "n.product": "DX100 Series"
-        },
-        {
-            "n.desupported_flag": null,
-            "n.product": "500 Series Notebook PC"
-        },
-        {
-            "n.desupported_flag": null,
-            "n.product": "ThinkCentre A51"
-        },
-        {
-            "n.desupported_flag": null,
-            "n.product": "3Com OfficeConnect Cable/DSL Gateway"
-          
-          }
+        "results": [
+            {
+                "n.desupported_flag": null,
+                "n.product": "Express5800/A1080a Series"
+            },
+            {
+                "n.desupported_flag": null,
+                "n.product": "Phaser 3125 (Networked)"
+            {
+                "n.desupported_flag": "TRUE",
+                "n.product": "ProLiant BL460c G6 Server Blade"
+            },    
+            },
+            {
+                "n.desupported_flag": null,
+                "n.product": "Pro 3010 Desktop PC"
+            },
+            {
+                "n.desupported_flag": null,
+                "n.product": "Essentio Series"
+            },
+            {
+                "n.desupported_flag": null,
+                "n.product": "DX100 Series"
+            },
+            {
+                "n.desupported_flag": null,
+                "n.product": "500 Series Notebook PC"
+            },
+            {
+                "n.desupported_flag": null,
+                "n.product": "ThinkCentre A51"
+            },
+            {
+                "n.desupported_flag": null,
+                "n.product": "3Com OfficeConnect Cable/DSL Gateway"
+              
+      }
 
     title: Example 1
     language: javascript
