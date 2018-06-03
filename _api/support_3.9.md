@@ -3,12 +3,12 @@ title: Support
 position: 3.9
 type: 
 description: >-
- You can access support data from the SUPPORT_STAGE and SUPPORT_POLICY nodes, which are connected to Software and Hardware.
+  You can access support data from the SUPPORT_STAGE and SUPPORT_POLICY nodes, which are connected to Software and Hardware.
 
 content_markdown: >-
- ###### Much software and hardware is supported by the vendor or manufacturer. In Technopedia, this support is identified a `SUPPORT_STAGE`, which refers to the type of support and the definition attribute provides more detailed information about applicability and timelines.
+  ###### Much software and hardware is supported by the vendor or manufacturer. In Technopedia, this support is identified a `SUPPORT_STAGE`, which refers to the type of support and the definition attribute provides more detailed information about applicability and timelines.
  
- Many `SUPPORT_STAGES have a `SUPPORT_POLICY` that defines the type of policy, such as standard or Open Source. 
+  Many `SUPPORT_STAGES have a `SUPPORT_POLICY` that defines the type of policy, such as standard or Open Source. 
   <br>
 
   `MATCH (a:SUPPORT_STAGE)-[:HAS_A]-(SUPPORT_POLICY) RETURN a`
@@ -18,14 +18,12 @@ content_markdown: >-
   The following diagram shows the support nodes and relationships.
   <br>
   ![API Image](/images/support.png){:class="img-responsive"} <br> 
-
   <br>
-
-  
+    
  
   #### Query Examples <br>
     
-  To use the MATCH statements in the following examples, you append the MATCH statement to the following tql endpoint and run a GET request from a API client or use cURL.
+  To use the MATCH statements in the following examples, you append the MATCH statement to the following tql endpoint and run a GET request from a API client or use cURL. <br>
   `https://v6-1.technopedia.com/tql?q=<MATCH Statement>`
 
 left_code_blocks:

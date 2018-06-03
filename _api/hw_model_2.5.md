@@ -8,7 +8,7 @@ content_markdown: |-
    `MATCH (a:HARDWARE_MODEL) RETURN a.model`
    {: .info}
   
-   < br>
+   <br>
 
    <br> 
    The following diagram shows hardware nodes and related software nodes.  
@@ -17,7 +17,8 @@ content_markdown: |-
   
    #### Query Examples <br>
     
-   Run any of the MATCH query statements in the examples with the TQL enpoint <br> `https://v6.technopedia.com/tql` in an API client, or use cURL.
+   To use the MATCH statements in the following examples, you append the MATCH statement to the following tql endpoint and run a GET request from a API client or use cURL. <br>
+  `https://v6-1.technopedia.com/tql?q=<MATCH Statement>`
 
 left_code_blocks:
   - code_block: |
