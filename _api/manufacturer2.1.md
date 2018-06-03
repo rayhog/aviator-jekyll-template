@@ -19,6 +19,8 @@ content_markdown: |-
   The following diagram shows the the manufacturer node and its connections to software, hardware, and CPU.
 
   ![API Image](/images/manu.png){:class="img-responsive"} <br>
+
+  ![API Image](/images/query.ex.png){: .img-responsive}<br>&nbsp;
   
     
 left_code_blocks:
