@@ -24,7 +24,7 @@ content_markdown: |-
 left_code_blocks:
   - code_block: |-
       curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:MANUFACTURER) RETURN h.manufacturer"
-    title: cURL Examples
+    title: cURL 
     language: bash
 
 
@@ -34,33 +34,6 @@ left_code_blocks:
 
       RESPONSE SAMPLE
 
-      {
-        "results": [
-          {
-              "h.manufacturer": "Go Ahead Web"
-          },
-          {
-              "h.manufacturer": "State Administration of Foreign Exchange"
-          },
-          {
-              "h.manufacturer": "Callware Technologies"
-          },
-          {
-              "h.manufacturer": "SoundID"
-          },
-          {
-              "h.manufacturer": "Obian"
-          },
-          {
-              "h.manufacturer": "AnalogX"
-          }
-      {    
-    title: Example 1
-    language: javascript
-  - code_block: |-
-      https://v6-1.technopedia.com/tql?q=MATCH (n:MANUFACTURER) RETURN n 
-
-      RESPONSE SAMPLE
       {
         "results": [
         {
@@ -91,37 +64,123 @@ left_code_blocks:
             "n.tier": 3,
             "n.website": "http://www.goaheadweb.co.uk/",
             "n.zip": null
-        },
-          
         }
-    title: Example 2
+       ]
+      {    
+    title: Example one
+    language: javascript
+  - code_block: |-
+      MATCH (m:MANUFACTURER)<-[:HAS_A]-(s:SOFTWARE_PRODUCT) WHERE m.manufacturer = "Immedia Internet Solutions" RETURN m.manufacturer, s.product, s.created_at
+ 
+
+      RESPONSE SAMPLE
+
+      {
+        "results": [
+            {
+                "m.manufacturer": "Immedia Internet Solutions",
+                "s.created_at": "2015-03-03 16:51:26",
+                "s.product": "ActionBars"
+            }
+        ]
+      {    
+         
+        
+    title: Example two
     language: javascript
 
   - code_block: |-
       MATCH (n:MANUFACTURER)<-[:HAS_A]-(w:SOFTWARE_PRODUCT)-[BELONGS_TO]->(v:CATEGORY_2) RETURN n, w, v
 
       RESPONSE SAMPLE
+
       {
-          
-        }
-    title: Example 3
+        "results": [
+           {  
+                
+            
+           }
+        ]
+      {    
+    title: Example three
+    language: javascript
+
+  - code_block: |-
+      MATCH (n:MANUFACTURER)<-[:HAS_A]-(p:SOFTWARE_PRODUCT)<-[:HAS_A]-(my_alias:SOFTWARE_VERSION) RETURN n, p, my_alias LIMIT 1
+
+      RESPONSE SAMPLE
+
+      {
+        "results": [
+           {   
+               "my_alias.cat_sw_version_id": 124285141,
+                "my_alias.created_at": "2015-06-17 16:25:47",
+                "my_alias.desupported_flag": null,
+                "my_alias.modified_at": "2015-06-17 18:40:19",
+                "my_alias.order": "1",
+                "my_alias.patch_level": null,
+                "my_alias.technopedia_id": "6403acb4-c95b-4ce1-8b93-18218c66cc03",
+                "my_alias.version": "6.14",
+                "n.cat_manufacturer_id": 5068,
+                "n.city": null,
+                "n.country": null,
+                "n.created_at": null,
+                "n.description": null,
+                "n.email": null,
+                "n.employees": null,
+                "n.employees_date": null,
+                "n.fax": null,
+                "n.fiscal_end_date": null,
+                "n.known_as": null,
+                "n.legal": "Corporation",
+                "n.manufacturer": "Callware Technologies",
+                "n.modified_at": null,
+                "n.phone": null,
+                "n.profits_date": null,
+                "n.profits_per_year": null,
+                "n.publicly_traded": null,
+                "n.revene_date": null,
+                "n.revenue": null,
+                "n.state": null,
+                "n.street": null,
+                "n.symbol": "Private",
+                "n.technopedia_id": "6aacf387-f0cf-48dd-be9b-54eeb24f1dbe",
+                "n.tier": 3,
+                "n.website": "http://www.callware.com/",
+                "n.zip": null,
+                "p.alias": null,
+                "p.cat_sw_product_id": 1179972,
+                "p.component": null,
+                "p.created_at": "2007-08-28 00:32:35",
+                "p.desupported_flag": null,
+                "p.discontinued_flag": null,
+                "p.family": "Callegra .UC",
+                "p.is_suite": null,
+                "p.modified_at": "2011-09-01 10:11:30",
+                "p.product": "Callegra .UC",
+                "p.technopedia_id": "c9a1430d-242e-4370-a0ab-6300571fd6ba",
+                "p.url": "http://www.callware.com/pdfs/UC11/UC11scr.pdf"   
+           }
+        ]
+      {    
+    title: Example four
     language: javascript
 
   - code_block: |-
       MATCH (n:MANUFACTURER)-[:HAS_A]->(p:SOFTWARE_PRODUCT)-[:HAS_A]->(my_alias:SOFTWARE_VERSION) RETURN n, p, my_alias
 
       RESPONSE SAMPLE
-      {
-          
-        }
-    title: Example 4
-    language: javascript
 
-  - code_block: |-
-      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:MANUFACTURER) RETURN h.manufacturer"
+      {
+        "results": [
+           {   
+            
+           }
+        ]
+      {    
 
       
-    title: Example 5
+    title: Example five
     language: bash
 right_code_blocks:
   - code_block: |2
