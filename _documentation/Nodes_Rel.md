@@ -72,8 +72,7 @@ content_markdown: >-
 
   
    Note: You can only access and view data for the Technopedia nodes that inlcluded in your subscription.
-  
-   {: .warning} 
+    {: .warning} 
 
   #### Query Examples <br>
     
