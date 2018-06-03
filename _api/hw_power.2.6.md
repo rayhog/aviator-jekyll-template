@@ -4,7 +4,6 @@ position: 2.7
 type: 
 description: The power profile node represents harware power attributes.
 content_markdown: |-
-
   `MATCH (a:POWER_PROFILE) RETURN a.label`
   {: .info}
   

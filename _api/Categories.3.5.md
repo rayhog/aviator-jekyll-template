@@ -34,7 +34,7 @@ content_markdown: |-
   ### Category 1
 
 
-  This category 1 node references classifications such as  Storage Area Networks (SAN), Collaboration", Cash/Coin Detector and Help and Service Desk.
+  This category 1 node references classifications such as  Storage Area Networks (SAN), Collaboration", Cash/Coin Detector and Help and Service Desk. <br>
 
   Get a list of `CATEGORY_GROUP` labels by running the following MATCH query with the TQL endpoint:
 
@@ -65,7 +65,8 @@ content_markdown: |-
   
   #### Query Examples <br>
     
-  To use the MATCH statements in the following examples, you append the MATCH statement to the following tql endpoint and run a GET request from a API client or use cURL.
+  To use the MATCH statements in the following examples, you append the MATCH statement to the following tql endpoint and run a GET request from a API client or use cURL. <br>
+  
   `https://v6-1.technopedia.com/tql?q=<MATCH Statement>`
  
 left_code_blocks:

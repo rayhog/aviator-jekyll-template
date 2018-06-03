@@ -98,7 +98,7 @@ content_markdown: >-
    
   <b>Objective:</b> To get software editions that have a release, verison, product, and manufacturer.<br>
   <br>
-  In this query example, you get software editions in Technopedia, wiht release, verison, product, and manufacturer data for each edition that is listed.
+  In this query example, you get software editions in Technopedia, wiht release, verison, product, and manufacturer data for each edition that is listed. <br>
 
   `MATCH (e:SOFTWARE_EDITION)<-[:HAS_A]-(r:SOFTWARE_RELEASE)-[:HAS_A]->(v:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_PRODUCT)<-[:HAS_A]-(m:MANUFACTURER) RETURN e,r,v,p,m LIMIT 10`<br>
 
@@ -156,6 +156,7 @@ content_markdown: >-
 
  
   To use the MATCH statements in the following examples, you append the MATCH statement to the following tql endpoint and run a GET request from a API client or use cURL. <br>
+  
   `https://v6-1.technopedia.com/tql?q=<MATCH Statement>`
   
 
