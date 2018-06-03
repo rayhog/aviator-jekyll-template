@@ -55,7 +55,6 @@ left_code_blocks:
   - code_block: >-
       MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" AND s.family = "HealthMatics"  RETURN s
 
-
       RESPONSE SAMPLE
 
       {

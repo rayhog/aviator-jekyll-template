@@ -41,13 +41,8 @@ left_code_blocks:
     
   - code_block: >-
       MATCH (n:HARDWARE_MODEL)-[:HAS_A]->(m:HARDWARE_PRODUCT) RETURN n, m
-
-
+         
       RESPONSE SAMPLE
-
-      {
-          
-          }RESPONSE SAMPLE
 
       {
         "results": [
@@ -81,7 +76,6 @@ left_code_blocks:
 
   - code_block: |-
       MATCH (n:HARDWARE_MODEL)-[a:HAS_A]->(h:HARDWARE_PRODUCT)<-[HAS_A]-(y:MANUFACTURER RETURN n, h, y
-
 
       RESPONSE SAMPLE
 

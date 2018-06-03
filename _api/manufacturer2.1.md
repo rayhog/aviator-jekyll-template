@@ -31,7 +31,6 @@ left_code_blocks:
   - code_block: >-
       MATCH (h:MANUFACTURER) RETURN h.manufacturer
 
-
       RESPONSE SAMPLE
 
       {
@@ -72,7 +71,6 @@ left_code_blocks:
   - code_block: |-
       MATCH (m:MANUFACTURER)<-[:HAS_A]-(s:SOFTWARE_PRODUCT) WHERE m.manufacturer = "Immedia Internet Solutions" RETURN m.manufacturer, s.product, s.created_at
  
-
       RESPONSE SAMPLE
 
       {

@@ -29,7 +29,7 @@ left_code_blocks:
   - code_block: |
       MATCH (n:SOFTWARE_PRODUCT)<-[w:HAS_A]-(b:SOFTWARE_VERSION)<-[w:HAS_A]-(z:SOFTWARE_EDITION) RETURN n, b, z
 
-       RESPONSE SAMPLE
+      RESPONSE SAMPLE
 
       {
         "results": [

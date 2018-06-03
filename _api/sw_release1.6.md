@@ -38,7 +38,6 @@ left_code_blocks:
   - code_block: >-
       MATCH (n:SOFTWARE_RELEASE) RETURN n.release, n.created_at LIMIT 2
 
-
       RESPONSE SAMPLE
 
       {
@@ -96,7 +95,6 @@ left_code_blocks:
       MATCH (srelease:SOFTWARE_RELEASE) -[:HAS_A]->(sver:SOFTWARE_VERSION)-[HAS_A]->(smajor:SOFTWARE_MAJOR_VERSION) RETURN srelease.release, sver.version, smajor.version_group LIMIT 20
 
       Return release name, software version and software major version for 2 software releases that have a version and major version group.
-
 
       RESPONSE SAMPLE
 

@@ -73,7 +73,6 @@ left_code_blocks:
   - code_block: >-
       MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.release_url n.ga_date
 
-
       RESPONSE SAMPLE
 
       {

@@ -40,7 +40,6 @@ left_code_blocks:
   - code_block: >-
       MATCH (n:SOFTWARE_RELEASE) RETURN n.release, n.url, n.technopedia_id
 
-
       RESPONSE SAMPLE
 
       {
@@ -74,7 +73,7 @@ left_code_blocks:
   - code_block: |-
       MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(x:SOFTWARE_VERSION) RETURN x.version LIMIT 10
 
-     RESPONSE SAMPLE
+      RESPONSE SAMPLE
 
       {
         "results": [
