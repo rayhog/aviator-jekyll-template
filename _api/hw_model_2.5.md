@@ -4,7 +4,6 @@ position: 2.3
 type: 
 description: The hardware model node defines information about the model, such as dimensions and other general specifications 
 content_markdown: |-
-
    `MATCH (a:HARDWARE_MODEL) RETURN a.model`
    {: .info}
   

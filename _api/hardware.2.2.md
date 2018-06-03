@@ -4,14 +4,14 @@ position: 2.2
 type: 
 description: Hardware information in Technopedia is classified by product, model, and power. 
 content_markdown: |-
-
   `MATCH (n:HARDWARE_PRODUCT) RETURN n LIMIT 25`
-   {: .info}
+  {: .info}
   
   <br>
-  The following image shows the hardware nodes, relationships, and relevant connections.
+  The following image shows the hardware nodes, relationships, and relevant connections. <br>
     
   ![API Image](/images/hardware.png){:class="img-responsive"} <br>
+
   <br>
   ####
   Query Examples <br>
