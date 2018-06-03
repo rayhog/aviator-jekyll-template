@@ -79,19 +79,101 @@ content_markdown: >-
 
 
 left_code_blocks:
-  - code_block: |-
-      $.ajax({
-        "url": "http://api.myapp.com/books/3",
-        "type": "DELETE",
-        "data": {
-          "token": "YOUR_APP_KEY"
-        },
-        "success": function(data) {
-          alert(data);
-        }
-      });
-    title: Example
+  - code_block: |
+      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
+
+      RESPONSE SAMPLE
+
+      {
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
+    title: Example one
     language: javascript
+  - code_block: >-
+      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.release_url n.ga_date
+
+
+      RESPONSE SAMPLE
+
+      {
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+    title: Example two
+    language: javascript
+  - code_block: |-
+      MATCH (n:SOFTWARE_RELEASE) -[:HAS_A]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1
+
+      RESPONSE SAMPLE
+
+      {
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {   
+        }
+
+    title: Example 3
+    language: javascript
+
+  - code_block: |-
+      MATCH
+      
+      RESPONSE SAMPLE
+
+      {
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
+    title: Example 4
+    language: bash
+
+
+  - code_block: |-
+
+      MATCH
+      
+      RESPONSE SAMPLE
+
+      {
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
+    title: Example 5
+    language: bash
+
+  - code_block: |-
+    title: cURL
+    language: bash
+
 right_code_blocks:
   - code_block: |2
       

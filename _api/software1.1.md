@@ -29,52 +29,90 @@ left_code_blocks:
   - code_block: |
       MATCH (n:SOFTWARE_PRODUCT)<-[w:HAS_A]-(b:SOFTWARE_VERSION)<-[w:HAS_A]-(z:SOFTWARE_EDITION) RETURN n, b, z
 
-      RESPONSE SAMPLE
-      {
-          
-          }
+       RESPONSE SAMPLE
 
-    title: Example 1
+      {
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
+
+    title: Example one
     language: javascript
   - code_block: >-
       MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.release_url n.ga_date
 
-
       RESPONSE SAMPLE
 
       {
-          
-          }
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
     title: Example 2
     language: javascript
   - code_block: |-
       MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1
 
       RESPONSE SAMPLE
+
       {
-          
-        }
-    title: Example 3
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
+    title: Example three
     language: javascript
 
   - code_block: |-
       MATCH (n:SOFTWARE_VERSION)-[:HAS_A]->(j:SOFTWARE_PRODUCT)-[:BELONGS_TO]->(g:CATEGORY_2) RETURN n, j, g
 
       RESPONSE SAMPLE
+
       {
-          
-        }
-    title: Example 4
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
+    title: Example four
     language: javascript
 
   - code_block: |-
       MATCH (n:SOFTWARE_VERSION)-[:HAS_A]->(r:SOFTWARE_VERSION)-[:HAS_A]->(k:SOFTWARE_PRODUCT) RETURN n, r, k
 
       RESPONSE SAMPLE
+
       {
-          
-        }
-    title: Example 5
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
+    title: Example five
     language: javascript
 
   - code_block: |-

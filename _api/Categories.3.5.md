@@ -70,10 +70,18 @@ left_code_blocks:
   - code_block: |
       MATCH (n:CATEGORY_1) RETURN n.label LIMIT 5
 
-      RESPONSE SAMPLE
+       RESPONSE SAMPLE
+
       {
-          
-          }
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
 
     title: Category_1 Example
     language: javascript
@@ -87,17 +95,25 @@ left_code_blocks:
       {
          
           }
-    title: Example 1
+    title: Example one
     language: javascript
 
   - code_block: |-
       MATCH (n:CATEGORY_2) WHERE n.label = "Distributed Network Architecture" RETURN n LIMIT 2
 
-      RESPONSE SAMPLE
+       RESPONSE SAMPLE
+
       {
-         
-        }
-    title: Example 2 
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
+    title: Example two
     language: javascript
 
   - code_block: |- 
@@ -105,28 +121,54 @@ left_code_blocks:
       
       Return records for CATEGORY_2 and CATEGORY_1 where CATEGORY_2 has a child relationship with CATEGORY_1
 
-      RESPONSE SAMPLE
+       RESPONSE SAMPLE
+
       {
-         
-        }
-    title: Example 3
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
+    title: Example three
     language: javascript
 
   - code_block: |- 
       MATCH (n:CATEGORY_2) WHERE n.label = "Distributed Network Architecture" RETURN n LIMIT 2
-      RESPONSE SAMPLE
+      
+       RESPONSE SAMPLE
+
       {
-         
-        }
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
     title: Category_Group Example
     language: javascript
 
   - code_block: |- 
       MATCH (n:CATEGORY_2) WHERE n.label = "Distributed Network Architecture" RETURN n LIMIT 2
-      RESPONSE SAMPLE
+      
+       RESPONSE SAMPLE
+
       {
-         
-        }
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
     title: Category_Group Example
     language: javascript
 right_code_blocks:

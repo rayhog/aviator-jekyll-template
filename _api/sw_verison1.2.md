@@ -128,6 +128,7 @@ left_code_blocks:
   - code_block: |-
 
       MATCH
+      
       RESPONSE SAMPLE
 
       {
@@ -139,7 +140,7 @@ left_code_blocks:
             }
         ]
       {  
-        
+
     title: Example 5
     language: bash
 

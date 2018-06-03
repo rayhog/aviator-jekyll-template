@@ -23,11 +23,19 @@ left_code_blocks:
       MATCH (n:HARDWARE_MODEL) RETURN n.product, n.cpu_sockets
 
       RESPONSE SAMPLE
-      {
-          
-          }
 
-    title: Example 1
+      {
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
+
+    title: Example one
     language: javascript
 
     
@@ -39,17 +47,36 @@ left_code_blocks:
 
       {
           
-          }
-    title: Example 2
+          }RESPONSE SAMPLE
+
+      {
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
+    title: Example two
     language: javascript
   - code_block: |-
       MATCH (n:HARDWARE_MODEL)-[a:HAS_A]->(v:HARDWARE_PRODUCT)<-[a:HAS_A]-(m:MANUFACTURER) RETURN n, m, w, c
 
       RESPONSE SAMPLE
+
       {
-          
-        }
-    title: Example 3
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
+    title: Example three
     language: javascript
 
   - code_block: |-
@@ -57,24 +84,41 @@ left_code_blocks:
 
 
       RESPONSE SAMPLE
+
       {
-          
-        }
-    title: Example 4
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
+    title: Example four
     language: javascript
 
   - code_block: |-
       MATCH (n:HARDWARE_MODEL)-[a:HAS_A]->(h:HARDWARE_PRODUCT)-[e:BELONGS_TO]->(m:CATEGORY_2)-[e:BELONGS_TO]->(w:VERTICAL) RETURN n, h, m, W
       
       RESPONSE SAMPLE
+
       {
-          
-        }
-    title: Example 5
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
+    title: Example five
     language: javascript
+
   - code_block: |-
       curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:HARDWARE_MODEL) RETURN h.model"
-    title: cURL Examples
+    title: cURL 
     language: bash
 right_code_blocks:
   - code_block: |2

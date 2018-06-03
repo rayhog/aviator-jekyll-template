@@ -25,57 +25,111 @@ left_code_blocks:
   - code_block: |
       MATCH (n:CPU) RETURN n.isa_bitmode, n.num_threads
 
-      RESPONSE SAMPLE
-      {
-          
-          }
+       RESPONSE SAMPLE
 
-    title: Example 1
+      {
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
+
+    title: Example one
     language: javascript
   - code_block: >-
       MATCH (n:CPU) RETURN n.model, n.cores, n.clockrate
 
 
-      RESPONSE SAMPLE
+       RESPONSE SAMPLE
 
       {
-          
-          }
-    title: Example 2
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
+    title: Example two
     language: javascript
 
   - code_block: |-
       MATCH (n:CPU)<-[:HAS_A]->(x:MANUFACTURER) RETURN n, x
 
-      RESPONSE SAMPLE
+       RESPONSE SAMPLE
+
       {
-          
-        }
-    title: Example 3
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
+
+    title: Example three
     language: javascript
 
   - code_block: |-
       MATCH (n:CPU)<-[:HAS_A]-(x:MANUFACTURER)<-[:HAS_A]- RETURN n.cores, x.manufacturer
 
-      RESPONSE SAMPLE
+       RESPONSE SAMPLE
+
       {
-          
-        }
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
+
     title: Example 4
     language: javascript
 
   - code_block: |-
       MATCH (n:HARDWARE_PRODUCT)<-[e:HAS_A]-(o:MANUFACTURER)-[u:HAS_A]-(y:CPU) RETURN n, o, y
 
-      RESPONSE SAMPLE
+       RESPONSE SAMPLE
+
       {
-          
-        }
-    title: Example 5
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
+    title: Example five
     language: javascript
 
   - code_block: |-
       curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:CPU) RETURN h.cores"
+
+       RESPONSE SAMPLE
+
+      {
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
 
       
     title: cURL

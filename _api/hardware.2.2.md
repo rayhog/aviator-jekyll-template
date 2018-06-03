@@ -62,8 +62,10 @@ left_code_blocks:
             {
                 "n.desupported_flag": null,
                 "n.product": "3Com OfficeConnect Cable/DSL Gateway"
-              
-      }
+            }
+        ]
+      {    
+            
 
     title: Example one
     language: javascript
@@ -108,8 +110,9 @@ left_code_blocks:
             "product.modified_at": "2011-03-16 09:46:45",
             "product.product": "Express5800/A1080a Series",
             "product.technopedia_id": "f6d32439-001b-4ca7-abb1-cd7627086ade"
-        },
-      }
+        }
+       ]
+      {  
     title: Example two
     language: javascript
   - code_block: |-
@@ -156,7 +159,9 @@ left_code_blocks:
             "hw.modified_at": "2017-12-12 17:16:26",
             "hw.product": "SmartLine Controller",
             "hw.technopedia_id": "b60dc2ae-c262-4cbc-9baa-6df87270745f"
-        }     
+       }
+        ]
+      {       
         
     title: Example three
     language: javascript
@@ -194,7 +199,9 @@ left_code_blocks:
                 "hw.product": "Pro 3010 Desktop PC",
                 "hw.technopedia_id": "e2b8fab2-681f-48f5-8ac7-57cb7f36e97b",
                 "manu.manufacturer": "Hewlett-Packard Company"
-            }
+           }
+        ]
+      {  
         
       
         
@@ -239,9 +246,9 @@ left_code_blocks:
               "vertical.name": "Medical and Health Care",
               "vertical.short_name": "MD",
               "vertical.technopedia_id": "81520b3f-6ffc-42c7-afce-a25bbdc63385"
-          },
-            
           }
+        ]
+      {  
     title: Example five
     language: javascript
 

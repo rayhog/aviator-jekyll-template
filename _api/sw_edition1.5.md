@@ -52,7 +52,7 @@ left_code_blocks:
             }
         ]
       {  
-    title: Example 2
+    title: Example two
     language: javascript
   - code_block: |-
       MATCH (n:SOFTWARE_RELEASE)-[p:HAS_A]->(a:SOFTWARE_VERSION)-[o:HAS_A]->(g:SOFTWARE_PRODUCT) RETURN n.name LIMIT 5
@@ -68,7 +68,7 @@ left_code_blocks:
             }
         ]
       {  
-    title: Example 3
+    title: Example three
     language: javascript
 
   - code_block: |-
@@ -85,7 +85,7 @@ left_code_blocks:
             }
         ]
       {  
-    title: Example 4
+    title: Example four
     language: javascript
 
   - code_block: |-
@@ -102,7 +102,7 @@ left_code_blocks:
             }
         ]
       {  
-    title: Example 5
+    title: Example five
     language: javascript
 
   - code_block: |-

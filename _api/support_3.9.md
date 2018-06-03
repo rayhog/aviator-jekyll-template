@@ -44,17 +44,20 @@ left_code_blocks:
 
   - code_block: >-
       MATCH (n:SUPPORT_STAGE) RETURN n LIMIT 25
-
+        
       RESPONSE SAMPLE
 
       {
-        "technopedia_id": "abc3378a-7eaa-4fa6-94b7-cf5e0b75c57b",
-        "created_at": "2010-11-08 10:58:22",
-        "modified_at": "2010-11-08 10:58:22",
-        "cat_support_policy_id": 16561748,
-        "policy": "Standard"
-      }
-          
+        "results": [
+            {
+                "technopedia_id": "abc3378a-7eaa-4fa6-94b7-cf5e0b75c57b",
+                "created_at": "2010-11-08 10:58:22",
+                "modified_at": "2010-11-08 10:58:22",
+                "cat_support_policy_id": 16561748,
+                "policy": "Standard"
+            }
+        ]
+      {      
           
     title: Example 1
     language: javascript
@@ -62,37 +65,72 @@ left_code_blocks:
       MATCH (n:SUPPORT_POLICY) RETURN n LIMIT 25
       
       RESPONSE SAMPLE
+
       {
-          
-        }
-    title: Example 2
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
+    title: Example two
     language: javascript
 
   - code_block: |-
       MATCH (n:MANUFACTURER)<-[:HAS_A]-(w:SOFTWARE_PRODUCT)-[BELONGS_TO]->(v:CATEGORY_2) RETURN n, w, v
 
       RESPONSE SAMPLE
+
       {
-          
-        }
-    title: Example 3
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
+    title: Example three
     language: javascript
 
   - code_block: |-
       MATCH (n:MANUFACTURER)-[:HAS_A]->(p:SOFTWARE_PRODUCT)-[:HAS_A]->(my_alias:SOFTWARE_VERSION) RETURN n, p, my_alias
 
       RESPONSE SAMPLE
+
       {
-          
-        }
-    title: Example 4
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
+    title: Example four
     language: javascript
 
   - code_block: |-
       curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:MANUFACTURER) RETURN h.manufacturer"
 
-      
-    title: Example 5
+      RESPONSE SAMPLE
+
+      {
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {   
+
+    title: Example five
     language: bash
 right_code_blocks:
   - code_block: |2
