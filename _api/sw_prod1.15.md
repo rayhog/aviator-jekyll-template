@@ -7,13 +7,13 @@ description: >-
 content_markdown: >-
   `MATCH (n:SOFTWARE_PRODUCT) WHERE n.product = "PDF Converter" RETURN n` 
   
-  {: .success} 
+   {: .success} 
   
   The following diagram shows the software nodes and relationships.
 
    ![API Image](/images/NodeAndRel.png){: .img-responsive}<br>&nbsp;
 
-   #### Query Examples <br>
+  #### Query Examples <br>
     
   Run any of the MATCH query statements in the examples with the TQL enpoint <br> `https://v6.technopedia.com/tql` in an API client, or use cURL.
   
