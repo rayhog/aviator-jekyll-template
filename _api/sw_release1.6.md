@@ -17,13 +17,8 @@ content_markdown: >-
   <br>
   ![API Image](/images/sw_rel_to_ver.png){:class="img-responsive"} <br>
 
-  ###### You can paginate by using the parameters listed above.
-
-
-  <br>The Technopedia Version 6.0 API uses OAuth for
-  authentication. To authenticate a session, pass your key in the request
-  header. Your API key should have been provided to you by Flexera support. If
-  you do not have a key please contact support.
+  #### Query Examples
+  
 left_code_blocks:
   - code_block: |
       MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
