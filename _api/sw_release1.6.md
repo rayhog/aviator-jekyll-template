@@ -18,7 +18,8 @@ content_markdown: >-
   ![API Image](/images/sw_rel_to_ver.png){:class="img-responsive"} <br>
 
   #### Query Examples
-  ###### Run any of the MATCH query statement with the TQL enpoint: `https://v6.technopedia.com/tql` in an API client, or use cURL.
+  <br>
+  Run any of the MATCH query statement with the TQL enpoint: `https://v6.technopedia.com/tql` in an API client, or use cURL.
 left_code_blocks:
   - code_block: |
       MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
