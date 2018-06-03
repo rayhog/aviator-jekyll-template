@@ -24,11 +24,18 @@ left_code_blocks:
       MATCH (n:SOFTWARE_RELEASE) RETURN n.release, n.modified_at
 
       RESPONSE SAMPLE
-      {
-          
-          }
 
-    title: Example 1
+      {
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+
+    title: Example one
     language: javascript
   - code_block: >-
       MATCH (n:SOFTWARE_RELEASE) RETURN n.release, n.url, n.technopedia_id
@@ -37,27 +44,47 @@ left_code_blocks:
       RESPONSE SAMPLE
 
       {
-          
-          }
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
     title: Example 2
     language: javascript
   - code_block: |-
       MATCH (n:SOFTWARE_RELEASE)-[p:HAS_A]->(a:SOFTWARE_VERSION)-[o:HAS_A]->(g:SOFTWARE_PRODUCT) RETURN n.name LIMIT 5
 
       RESPONSE SAMPLE
+
       {
-          
-        }
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
     title: Example 3
     language: javascript
 
   - code_block: |-
       MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(x:SOFTWARE_VERSION) RETURN x.version LIMIT 10
 
-      RESPONSE SAMPLE
+     RESPONSE SAMPLE
+
       {
-          
-        }
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
     title: Example 4
     language: javascript
 
@@ -65,9 +92,16 @@ left_code_blocks:
       MATCH (n:SOFTWARE_EDITION) -[:HAS_A]->(u:SOFTWARE_PRODUCT) RETURN n, u LIMIT 10
 
       RESPONSE SAMPLE
+
       {
-          
-        }
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
     title: Example 5
     language: javascript
 

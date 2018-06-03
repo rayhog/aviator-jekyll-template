@@ -33,7 +33,7 @@ left_code_blocks:
           
           }
 
-    title: Example 1
+    title: Example one
     language: javascript
   - code_block: >-
       MATCH (n:SOFTWARE_RELEASE) RETURN n.release, n.created_at LIMIT 2
@@ -42,9 +42,15 @@ left_code_blocks:
       RESPONSE SAMPLE
 
       {
-          
-          }
-    title: Example 2
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+    title: Example two
     language: javascript
   - code_block: |-
       MATCH (srelease:SOFTWARE_RELEASE) -[:HAS_A]->(sver:SOFTWARE_VERSION)-[:HAS_A]->(sprod:SOFTWARE_PRODUCT)-[:HAS_A]->(manu:MANUFACTURER) RETURN srelease.release, sver.version, sprod.product, manu.manufacturer LIMIT 200
@@ -53,10 +59,17 @@ left_code_blocks:
       Return release name, software version, software product name,manufacturer name for 200 software releases
 
       RESPONSE SAMPLE
+
       {
-          
-        }
-    title: Example 3
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+    title: Example three
     language: javascript
 
   - code_block: |-
@@ -66,10 +79,17 @@ left_code_blocks:
       Return release name, software version and software group version for 2 software releases that have a version and major version group
 
       RESPONSE SAMPLE
+
       {
-          
-        }
-    title: Example 4
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+    title: Example four
     language: javascript
 
   - code_block: |-
@@ -79,10 +99,18 @@ left_code_blocks:
 
 
       RESPONSE SAMPLE
+
       {
-          
-        }
-    title: Example 5
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
+        
+    title: Example five
     language: javascript
 
   - code_block: |-

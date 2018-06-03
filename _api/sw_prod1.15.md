@@ -50,47 +50,74 @@ left_code_blocks:
         }   
          
 
-    title: Example 1
+    title: Example one
     language: javascript
   - code_block: >-
-      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.release_url n.ga_date
+      MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" AND s.family = "HealthMatics"  RETURN s
 
 
       RESPONSE SAMPLE
 
       {
-          
-          }
-    title: Example 2
+        "results": [
+            {
+                "m.manufacturer": "Immedia Internet Solutions",
+                "s.created_at": "2015-03-03 16:51:26",
+                "s.product": "ActionBars"
+            }
+        ]
+      {  
+    title: Example two
     language: javascript
   - code_block: |-
       MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1
 
       RESPONSE SAMPLE
+
       {
-          
-        }
-    title: Example 3
+        "results": [
+            {
+                "m.manufacturer": "Immedia Internet Solutions",
+                "s.created_at": "2015-03-03 16:51:26",
+                "s.product": "ActionBars"
+            }
+        ]
+      {  
+    title: Example three
     language: javascript
 
   - code_block: |-
       MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1
 
       RESPONSE SAMPLE
+
       {
-          
-        }
-    title: Example 4
+        "results": [
+            {
+                "m.manufacturer": "Immedia Internet Solutions",
+                "s.created_at": "2015-03-03 16:51:26",
+                "s.product": "ActionBars"
+            }
+        ]
+      {  
+    title: Example four
     language: javascript
 
   - code_block: |-
       MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1
 
       RESPONSE SAMPLE
+
       {
-          
-        }
-    title: Example 5
+        "results": [
+            {
+                "m.manufacturer": "Immedia Internet Solutions",
+                "s.created_at": "2015-03-03 16:51:26",
+                "s.product": "ActionBars"
+            }
+        ]
+      {  
+    title: Example five
     language: javascript
 
   - code_block: |-

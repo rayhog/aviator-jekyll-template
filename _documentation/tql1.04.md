@@ -51,7 +51,7 @@ content_markdown: >-
     * View the list of attributes that you can use on the Software Product page.<br>
     * Use the WHERE clause with the equals operator to specify condition `name = "Adobe"`.<br>
   <br>
-  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name = "Adobe" Return s`
+  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Adobe" Return s`
 
   <br>
   In this example, software products that have Adobe in the name fields are returned.<br>
@@ -111,12 +111,12 @@ content_markdown: >-
 
   * WHERE <br>
   Use the WHERE condition to filter results. <br>
-  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name = "Office"  RETURN s` <br>
+  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office"  RETURN s` <br>
   Return software products where the name field is equal to 'Office'. <br>
 
   * AND <br>
   Use the AND clause to add an addtional filter.<br>
-  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name = "Office" AND s.family = "HealthMatics"  RETURN s` <br>
+  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" AND s.family = "HealthMatics"  RETURN s` <br>
   Return software products where name is Office and the family is HealthMatics. <br>
 
   * OR <br>
