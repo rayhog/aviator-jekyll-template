@@ -38,8 +38,7 @@ left_code_blocks:
                 "n.desupported_flag": "TRUE",
                 "n.product": "ProLiant BL460c G6 Server Blade"
             },    
-            },
-            {
+                        {
                 "n.desupported_flag": null,
                 "n.product": "Pro 3010 Desktop PC"
             },

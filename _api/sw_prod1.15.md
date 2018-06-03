@@ -12,6 +12,10 @@ content_markdown: >-
   The following diagram shows the software nodes and relationships.
 
    ![API Image](/images/NodeAndRel.png){: .img-responsive}<br>&nbsp;
+
+   #### Query Examples <br>
+    
+  Run any of the MATCH query statements in the examples with the TQL enpoint <br> `https://v6.technopedia.com/tql` in an API client, or use cURL.
   
 left_code_blocks:
   - code_block: |

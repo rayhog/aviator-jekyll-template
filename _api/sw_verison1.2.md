@@ -50,7 +50,9 @@ content_markdown: >-
 
   <br>
 
-
+  #### Query Examples <br>
+    
+  Run any of the MATCH query statements in the examples with the TQL enpoint <br> `https://v6.technopedia.com/tql` in an API client, or use cURL.
   
 left_code_blocks:
   - code_block: |
