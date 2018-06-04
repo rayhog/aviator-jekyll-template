@@ -12,8 +12,9 @@ content_markdown: |-
   `MATCH (s:SOFTWARE_PRODUCT) WHERE product = "Microsoft" RETURN s.product`
   <br>
   The following diagram  shows an overview of the Technopedia API and how it queries the Technopedia database.
+  
   <br>
-  ![API Image](/images/get_tql.png){: .img-responsive}
+  ![API Image](/images/v6api.png){: .img-responsive}
   <br>
   ###### The following query is an example of a GET request with a graph query, which is like a `SELECT` statement in SQL, which selects the software node and then returns titles of software products.
   <br>
