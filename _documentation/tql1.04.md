@@ -25,7 +25,7 @@ content_markdown: >-
   <br>
   
 
-  ![API Image](/images/NodeAndRel.png)<br>&nbsp;
+  ![API Image](/images/examples.node.png)<br>&nbsp;
   <br>  
   To get data from a specific node or relationship, you use an alias or variable that you append to the node or relationship. That alias is bound to that node or relationship so you can use that alias in the Return clause of the MATCH query to get specific data from that node or alias. For example,<br>
   `Match (myalias:node)-[another_alias:RELATIONSHIP]`
