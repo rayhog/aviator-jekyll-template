@@ -15,7 +15,8 @@ content_markdown: |-
   
   <br>
     
-  
+  The following diagram shows the CPU node and other nodes.
+  <br>
   ![API Image](/images/cpu.png){:class="img-responsive"} <br>
   
   
@@ -28,7 +29,7 @@ content_markdown: |-
 
 left_code_blocks:
   - code_block: |
-      MATCH (n:CPU) RETURN n.isa_bitmode, n.num_threads
+      MATCH (n:CPU_MODEL) RETURN n.isa_bit_mode, n.num_threads
 
        RESPONSE SAMPLE
 
@@ -46,7 +47,7 @@ left_code_blocks:
     title: Example one
     language: javascript
   - code_block: >-
-      MATCH (n:CPU) RETURN n.model, n.cores, n.clockrate
+      MATCH (n:CPU_MODEL) RETURN n.model, n.cores, n.clockrate
 
 
        RESPONSE SAMPLE
@@ -65,7 +66,7 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:CPU)<-[:HAS_A]->(x:MANUFACTURER) RETURN n, x
+      MATCH (n:CPU_MODEL)<-[:HAS_A]->(x:MANUFACTURER) RETURN n, x
 
        RESPONSE SAMPLE
 
@@ -84,7 +85,7 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:CPU)<-[:HAS_A]-(x:MANUFACTURER)<-[:HAS_A]- RETURN n.cores, x.manufacturer
+      MATCH (n:CPU_MODEL)<-[:HAS_A]-(x:MANUFACTURER)<-[:HAS_A]- RETURN n.cores, x.manufacturer
 
        RESPONSE SAMPLE
 
@@ -103,7 +104,7 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:HARDWARE_PRODUCT)<-[e:HAS_A]-(o:MANUFACTURER)-[u:HAS_A]-(y:CPU) RETURN n, o, y
+      MATCH (n:HARDWARE_PRODUCT)<-[e:HAS_A]-(o:MANUFACTURER)-[u:HAS_A]-(y:CPU_MODEL) RETURN n, o, y
 
        RESPONSE SAMPLE
 
@@ -121,7 +122,7 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:CPU) RETURN h.cores"
+      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:CPU_MODEL) RETURN h.cores"
 
        RESPONSE SAMPLE
 
@@ -147,8 +148,8 @@ right_code_blocks:
       model
       url
       cores
-      clockrate
-      isa_bitmode
+      clock_rate
+      isa_bit_mode
       num_threads
       created_at
       modified_at
@@ -156,7 +157,7 @@ right_code_blocks:
     title: CPU Attributes
     language: bash
   - code_block: |2-
-      (MANUFACTURER)-[:HAS_A]->(CPU)
+      (MANUFACTURER)-[:HAS_A]->(CPU_MODEL)
     title: Relationships
     language: bash
 ---
