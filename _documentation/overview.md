@@ -9,11 +9,15 @@ content_markdown: |-
   <br>
   ###### You query the Technopedia database by using the graph-based Technopedia query language (TQL) to select nodes and attributes of those nodes to define the criteria for your query and return relevant data. For example, you might query the `SOFTWARE_PRODUCT` node in Technopedia and specify the title attribute because you want to return titles of software products. The following example is a TQL query that returns software titles:
   <br>
-  `MATCH (s:SOFTWARE_PRODUCT) WHERE title = "Microsoft" RETURN s.title`
+  `MATCH (s:SOFTWARE_PRODUCT) WHERE product = "Microsoft" RETURN s.product`
+  <br>
+  The following diagram  shows an overview of the Technopedia API and how it queries the Technopedia database.
+  <br>
+  ![API Image](/images/get_tql.png){: .img-responsive}
   <br>
   ###### The following query is an example of a GET request with a graph query, which is like a `SELECT` statement in SQL, which selects the software node and then returns titles of software products.
   <br>
-  `GET:` `https://v6.technopedia.com/tql?MATCH (n:SOFTWARE_PRODUCT) RETURN n.title`<br>
+  `GET:` `https://v6.technopedia.com/tql?=MATCH (n:SOFTWARE_PRODUCT) RETURN n.title`<br>
 
 
 
