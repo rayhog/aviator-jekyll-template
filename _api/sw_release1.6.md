@@ -13,9 +13,17 @@ content_markdown: >-
   &nbsp;
   
   <br>
-  The following diagram shows the nodes, attributes, and relationships that feature in the query example.
+  The following diagram shows the software nodes,relatinships, and the software release attributes.
   <br>
   ![API Image](/images/sw_rel_to_ver.png){:class="img-responsive"} <br>
+
+  The software release node connects to the software edtion, software nodes, and support stage nodes by the 'HAS_A` relationship.
+  The software release and support stage nodes are connected by the 'HAS_A' relationship, which has attributes.
+  To access information about a relationship, you assign it an alias, for later reference. It is placed in front of the colon `-[my_alias:HAS_A]->`
+
+  The following query returns data for the end date of of the software release's support stage.
+  <br>
+  `MATCH (:SOFTWARE_RELEASE)-[my_alias:HAS_A {end_date: "2013-12-10 00:00:00"}]->(:SUPPORT_STAGE) RETURN my_alias`
 
   #### Query Examples <br>
     
@@ -24,7 +32,7 @@ content_markdown: >-
   `https://v6-1.technopedia.com/tql?q=<MATCH Statement>`
 left_code_blocks:
   - code_block: |
-      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
+      MATCH (n:SOFTWARE_RELEASE) RETURN n.release_id, n.created_at
 
       RESPONSE SAMPLE
       {
@@ -34,26 +42,27 @@ left_code_blocks:
     title: Example one
     language: javascript
   - code_block: >-
-      MATCH (n:SOFTWARE_RELEASE) RETURN n.release, n.created_at LIMIT 2
+      MATCH (node)-[My_alias:relationship {relationship_attribute : value}]->(:node) Return My_alias
+      MATCH (:SOFTWARE_RELEASE)-[h:HAS_A {end_date: "2013-12-10 00:00:00"}]->(:SUPPORT_STAGE) RETURN h
 
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+                "end_date": "2013-12-10 00:00:00",
+                "modified_at": "2018-05-04 20:01:57",
+                "created_at": "2018-05-03 17:29:30"
             }
         ]
       {  
     title: Example two
     language: javascript
   - code_block: |-
-      MATCH (srelease:SOFTWARE_RELEASE) -[:HAS_A]->(sver:SOFTWARE_VERSION)-[:HAS_A]->(sprod:SOFTWARE_PRODUCT)-[:HAS_A]->(manu:MANUFACTURER) RETURN srelease.release, sver.version, sprod.product, manu.manufacturer LIMIT 200
+      MATCH (srelease:SOFTWARE_RELEASE) -[:HAS_A]->(sver:SOFTWARE_VERSION)-[:HAS_A]->(sprod:SOFTWARE_PRODUCT)-[:HAS_A]->(manu:MANUFACTURER) RETURN srelease.release, sver.version, sprod.product, manu.manufacturer LIMIT 2
 
       QUERY INTENT
-      Return release name, software version, software product name,manufacturer name for 200 software releases
+      Return release name, software version, software product name, and manufacturer name for 2 software releases
 
       RESPONSE SAMPLE
 
@@ -70,10 +79,10 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (srelease:SOFTWARE_RELEASE) -[:HAS_A]->(sver:SOFTWARE_VERSION)-[HAS_A]->(smajor:SOFTWARE_VERSION_GROUP) RETURN srelease.release, sver.version, smajor.version_group LIMIT 20
+      MATCH (srelease:SOFTWARE_RELEASE) -[:HAS_A]->(sver:SOFTWARE_VERSION)-[HAS_A]->(smajor:SOFTWARE_VERSION_GROUP) RETURN srelease.release, sver.version, smajor.version_group LIMIT 2
       
       QUERY INTENT
-      Return release name, software version and software group version for 2 software releases that have a version and major version group
+      Return release name, software version and software group version for 2 software releases.
 
       RESPONSE SAMPLE
 
@@ -90,9 +99,8 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (srelease:SOFTWARE_RELEASE) -[:HAS_A]->(sver:SOFTWARE_VERSION)-[HAS_A]->(smajor:SOFTWARE_MAJOR_VERSION) RETURN srelease.release, sver.version, smajor.version_group LIMIT 20
-
-      Return release name, software version and software major version for 2 software releases that have a version and major version group.
+      MATCH (srelease:SOFTWARE_RELEASE) -[:HAS_A]->(sver:SOFTWARE_VERSION)-[HAS_A]->(smajor:SOFTWARE_MAJOR_VERSION) RETURN srelease.release, sver.version, smajor.version LIMIT 2
+      Return release name, software version and software major version for 2 software releases.
 
       RESPONSE SAMPLE
 
@@ -109,9 +117,9 @@ left_code_blocks:
     title: Example five
     language: javascript
 
-  - code_block: |-
-      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:software_release) RETURN h.release"
+  - code_block: |-curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6-1.technopedia.com/tql" --data-urlencode' "q=MATCH (n:SOFTWARE_RELEASE) WHERE       n.release contains "studio" RETURN n
 
+      
       
     title: cURL
     language: bash

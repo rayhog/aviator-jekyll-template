@@ -141,6 +141,10 @@ content_markdown: >-
   Return count of records. <br>
   `MATCH (s:SOFTWARE_PRODUCT) RETURN count(*)` <br>
 
+  * AS <br>
+  Return output as another name. <br>
+  `MATCH (n:SOFTWARE_EDITION) RETURN n.edition as ED, n.modified_at as MOD` <br>
+
   * Operators <br>
   `=` equals <br>
   `<>` not equal to <br>
@@ -313,7 +317,8 @@ right_code_blocks:
       COUNT
       DISTINCT 
       CONTAINS
+      AS
       Operators =, <>, >, <, >=, <=
-    title: TQL Keywords
+    title: TQL Clauses and Operators
     language: bash
 ---

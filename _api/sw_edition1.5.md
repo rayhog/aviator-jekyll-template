@@ -8,13 +8,13 @@ content_markdown: |-
   <br>
 
 
-  `MATCH (e:SOFTWARE_EDITION {edition: '24853332'}) RETURN e`
+  `MATCH (e:SOFTWARE_EDITION {edition: 'Black'}) RETURN e`
   {: .success}
 
   <br>
   Here's an example of querying the release title "Advanced Partitioning Option" that is a release of a software version.<br>
   <br>
-  `MATCH (s.SOFTWARE_PRODUCT)<-[:HAS_A]-(n:SOFTWARE_EDITION) WHERE n.release_title = "Advanced Partitioning Option" RETURN n`
+  `MATCH (s.SOFTWARE_PRODUCT)<-[:HAS_A]-(n:SOFTWARE_EDITION) WHERE n.edition = "Advanced Partitioning Option" RETURN n`
   <br>
 
   ![API Image](/images/sw_edition.png){:class="img-responsive"} <br>
@@ -26,34 +26,75 @@ content_markdown: |-
   `https://v6-1.technopedia.com/tql?q=<MATCH Statement>`
 left_code_blocks:
   - code_block: |
-      MATCH (n:SOFTWARE_RELEASE) RETURN n.release, n.modified_at
+      https://v6-1.technopedia.com/tql?q=MATCH (n:SOFTWARE_EDITION) RETURN n.edition AS EDITION, n.modified_at AS MODIFIED 
 
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
-            }
+            "EDITION": "Server",
+            "MODIFIED": "2017-04-20 14:49:12"
+        },
+        {
+            "EDITION": "Personal",
+            "MODIFIED": "2011-03-11 11:16:48"
+        },
+        {
+            "EDITION": "Black",
+            "MODIFIED": "2017-05-10 17:45:22"
+        },
+        {
+            "EDITION": "Deluxe",
+            "MODIFIED": "2017-09-28 11:34:11"
+        },
+        {
+            "EDITION": "Java for Education",
+            "MODIFIED": "2016-09-12 09:48:23"
+        },
+        {
+            "EDITION": "Standard",
+            "MODIFIED": "2012-08-06 18:11:55"
+        },
+        {
+            "EDITION": "Lite",
+            "MODIFIED": "2015-10-23 14:31:44"
+        },
+        {
+            "EDITION": "Enterprise",
+            "MODIFIED": "2017-03-20 11:44:49"
+        }
         ]
       {  
 
     title: Example one
     language: javascript
   - code_block: >-
-      MATCH (n:SOFTWARE_RELEASE) RETURN n.release, n.url, n.technopedia_id
-
+      MATCH (e:SOFTWARE_EDITION {edition: 'Server'}) RETURN e
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
-            }
+            "e.cat_sw_edition_id": 1175193,
+            "e.created_at": "2007-08-23 15:47:19",
+            "e.desupported_flag": null,
+            "e.edition": "Server",
+            "e.modified_at": "2017-04-20 14:49:12",
+            "e.order": 5,
+            "e.technopedia_id": "fa5b79c1-8304-4604-bc70-f2e4f9469960",
+            "e.url": "https://en.wikipedia.org/wiki/List_of_Microsoft_Windows_versions"
+        },
+        {
+            "e.cat_sw_edition_id": 58734341,
+            "e.created_at": "2014-02-21 16:14:21",
+            "e.desupported_flag": null,
+            "e.edition": "Server",
+            "e.modified_at": "2014-02-21 16:14:21",
+            "e.order": 2,
+            "e.technopedia_id": "36caabb2-af3a-4591-9466-d854bad6cf3f",
+            "e.url": "http://www.ni.com/datafinder/"
+        }
         ]
       {  
     title: Example two
