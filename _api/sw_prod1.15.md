@@ -134,70 +134,70 @@ left_code_blocks:
 
   - code_block: |-
       MATCH (sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION) WHERE sp.product CONTAINS "Software Development Kit" RETURN sp.product, sv.version, sr, se LIMIT 5
+
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-            "se.cat_sw_edition_id": 899742,
-            "se.created_at": "2007-03-13 05:33:25",
-            "se.desupported_flag": null,
-            "se.edition": "Standard",
-            "se.modified_at": "2017-04-21 16:42:40",
-            "se.order": 1,
-            "se.technopedia_id": "95c26142-8dcf-4666-94e9-61f53fbc13e3",
-            "se.url": "https://www.ibm.com/support/knowledgecenter/ssw_i5_54/rzaat/rzaatj.htm",
-            "sp.product": "Java 2 Software Development Kit (J2SDK)",
-            "sr.cat_sw_release_id": 1175559,
-            "sr.created_at": "2007-08-23 20:00:43",
-            "sr.desupported_flag": true,
-            "sr.discontinued_flag": null,
-            "sr.modified_at": "2017-10-10 14:52:00",
-            "sr.technopedia_id": "e1f66998-8ce5-4051-a71a-c36c056f2f6f",
-            "sr.url": null,
-            "sv.version": "1.3.1_02"
-        },
-        {
-            "se.cat_sw_edition_id": 899742,
-            "se.created_at": "2007-03-13 05:33:25",
-            "se.desupported_flag": null,
-            "se.edition": "Standard",
-            "se.modified_at": "2017-04-21 16:42:40",
-            "se.order": 1,
-            "se.technopedia_id": "95c26142-8dcf-4666-94e9-61f53fbc13e3",
-            "se.url": "https://www.ibm.com/support/knowledgecenter/ssw_i5_54/rzaat/rzaatj.htm",
-            "sp.product": "Java 2 Software Development Kit (J2SDK)",
-            "sr.cat_sw_release_id": 1175635,
-            "sr.created_at": "2007-08-23 20:09:08",
-            "sr.desupported_flag": true,
-            "sr.discontinued_flag": null,
-            "sr.modified_at": "2017-10-10 14:52:00",
-            "sr.technopedia_id": "d3bffa93-34c4-49bd-8c81-01864cc7e11c",
-            "sr.url": null,
-            "sv.version": "1.3.1_15"
-        },
-        {
-            "se.cat_sw_edition_id": 899742,
-            "se.created_at": "2007-03-13 05:33:25",
-            "se.desupported_flag": null,
-            "se.edition": "Standard",
-            "se.modified_at": "2017-04-21 16:42:40",
-            "se.order": 1,
-            "se.technopedia_id": "95c26142-8dcf-4666-94e9-61f53fbc13e3",
-            "se.url": "https://www.ibm.com/support/knowledgecenter/ssw_i5_54/rzaat/rzaatj.htm",
-            "sp.product": "Java 2 Software Development Kit (J2SDK)",
-            "sr.cat_sw_release_id": 1074250,
-            "sr.created_at": "2007-04-22 22:19:12",
-            "sr.desupported_flag": true,
-            "sr.discontinued_flag": null,
-            "sr.modified_at": "2017-10-10 14:52:00",
-            "sr.technopedia_id": "3dca4671-f574-4a3e-bc8a-a6e8667a54dd",
-            "sr.url": null,
-            "sv.version": "1.5.0"
-        }
-      ]
-        }
-    {  
+                "se.cat_sw_edition_id": 899742,
+                "se.created_at": "2007-03-13 05:33:25",
+                "se.desupported_flag": null,
+                "se.edition": "Standard",
+                "se.modified_at": "2017-04-21 16:42:40",
+                "se.order": 1,
+                "se.technopedia_id": "95c26142-8dcf-4666-94e9-61f53fbc13e3",
+                "se.url": "https://www.ibm.com/support/knowledgecenter/ssw_i5_54/rzaat/rzaatj.htm",
+                "sp.product": "Java 2 Software Development Kit (J2SDK)",
+                "sr.cat_sw_release_id": 1175559,
+                "sr.created_at": "2007-08-23 20:00:43",
+                "sr.desupported_flag": true,
+                "sr.discontinued_flag": null,
+                "sr.modified_at": "2017-10-10 14:52:00",
+                "sr.technopedia_id": "e1f66998-8ce5-4051-a71a-c36c056f2f6f",
+                "sr.url": null,
+                "sv.version": "1.3.1_02"
+            },
+            {
+                "se.cat_sw_edition_id": 899742,
+                "se.created_at": "2007-03-13 05:33:25",
+                "se.desupported_flag": null,
+                "se.edition": "Standard",
+                "se.modified_at": "2017-04-21 16:42:40",
+                "se.order": 1,
+                "se.technopedia_id": "95c26142-8dcf-4666-94e9-61f53fbc13e3",
+                "se.url": "https://www.ibm.com/support/knowledgecenter/ssw_i5_54/rzaat/rzaatj.htm",
+                "sp.product": "Java 2 Software Development Kit (J2SDK)",
+                "sr.cat_sw_release_id": 1175635,
+                "sr.created_at": "2007-08-23 20:09:08",
+                "sr.desupported_flag": true,
+                "sr.discontinued_flag": null,
+                "sr.modified_at": "2017-10-10 14:52:00",
+                "sr.technopedia_id": "d3bffa93-34c4-49bd-8c81-01864cc7e11c",
+                "sr.url": null,
+                "sv.version": "1.3.1_15"
+            },
+            {
+                "se.cat_sw_edition_id": 899742,
+                "se.created_at": "2007-03-13 05:33:25",
+                "se.desupported_flag": null,
+                "se.edition": "Standard",
+                "se.modified_at": "2017-04-21 16:42:40",
+                "se.order": 1,
+                "se.technopedia_id": "95c26142-8dcf-4666-94e9-61f53fbc13e3",
+                "se.url": "https://www.ibm.com/support/knowledgecenter/ssw_i5_54/rzaat/rzaatj.htm",
+                "sp.product": "Java 2 Software Development Kit (J2SDK)",
+                "sr.cat_sw_release_id": 1074250,
+                "sr.created_at": "2007-04-22 22:19:12",
+                "sr.desupported_flag": true,
+                "sr.discontinued_flag": null,
+                "sr.modified_at": "2017-10-10 14:52:00",
+                "sr.technopedia_id": "3dca4671-f574-4a3e-bc8a-a6e8667a54dd",
+                "sr.url": null,
+                "sv.version": "1.5.0"
+            }
+        ]
+      {  
     title: Example five
     language: javascript
 

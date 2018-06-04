@@ -156,7 +156,7 @@ right_code_blocks:
       (SOFTWARE_RELEASE)-[:HAS_A]->(CERTIFICATION)
       Relationship attributes: 
       certified
-    title: Relationships
+      title: Relationships
     language: bash
 right_code_blocks:
   - code_block: |2
