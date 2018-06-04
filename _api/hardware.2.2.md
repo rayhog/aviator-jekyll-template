@@ -12,7 +12,6 @@ content_markdown: |-
     
   ![API Image](/images/hardware.png){:class="img-responsive"} <br>
 
-  <br>
   ####
   Query Examples <br>
       

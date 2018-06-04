@@ -16,7 +16,7 @@ content_markdown: |-
   <br>
     
   
-  ![API Image](/images/graph.png){:class="img-responsive"} <br>
+  ![API Image](/images/cpu.png){:class="img-responsive"} <br>
   
   
   #### Query Examples <br>

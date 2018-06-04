@@ -26,25 +26,24 @@ content_markdown: |-
   ### Category Group
   
   This category node features high-level classifications, such as Business Applications, Network Equipment, and Automatic Teller Machine (ATM). This categories parent is `CATEGORY_GROUP`, which features more global clasifications. 
-  
+  <br>
   Get a list of `CATEGORY_GROUP` labels by running the following MATCH query with the TQL endpoint:
-
+  <br>
   `MATCH (n:CATEGORY_2) RETURN n.label`
   
   ### Category 1
 
-
   This category 1 node references classifications such as  Storage Area Networks (SAN), Collaboration", Cash/Coin Detector and Help and Service Desk. <br>
-
+  <br>
   Get a list of `CATEGORY_GROUP` labels by running the following MATCH query with the TQL endpoint:
-
+  <br>
   `MATCH (n:CATEGORY_2) RETURN n.label`
 
   ### Category 2
 
   This category 2 node references classifications that are more granular than Categrory 1 or Category Group, such as Sound Masking, Retail Hardware, Diagnostic and Therapeutic Radiation/Imaging Devices", "Cheque Deposit Machine (CQM) and Handhelds.
   Get a list of `CATEGORY_2` labels by running the following MATCH query with the TQL endpoint:
-
+  <br>
   `MATCH (n:CATEGORY_2) RETURN n.label`
   
 
@@ -58,6 +57,8 @@ content_markdown: |-
   * Medical and Health Care
   * Banking and Financial
 
+  Get a list of the verticals by running the following MATCH query with the TQL endpoint:
+  <br>
   `MATCH (n:VERTICAL) RETURN n LIMIT 25`
 
 

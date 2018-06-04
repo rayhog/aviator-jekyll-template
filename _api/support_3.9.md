@@ -6,14 +6,14 @@ description: >-
   You can access support data from the SUPPORT_STAGE and SUPPORT_POLICY nodes, which are connected to Software and Hardware.
 
 content_markdown: >-
-  ###### Much software and hardware is supported by the vendor or manufacturer. In Technopedia, this support is identified a `SUPPORT_STAGE`, which refers to the type of support and the definition attribute provides more detailed information about applicability and timelines.
+  Typically, software and hardware are supported by the vendor or manufacturer. In Technopedia, this support is identified a `SUPPORT_STAGE`, which refers to the type of support and the definition attribute provides more detailed information about applicability and timelines.
  
-  Many `SUPPORT_STAGES have a `SUPPORT_POLICY` that defines the type of policy, such as standard or Open Source. 
+  Many support stages have a `SUPPORT_POLICY` that defines the type of policy, such as standard or Open Source. 
   <br>
 
   `MATCH (a:SUPPORT_STAGE)-[:HAS_A]-(SUPPORT_POLICY) RETURN a`
-  {: .info}
-  {: .success}
+   {: .info}
+   
 
   The following diagram shows the support nodes and relationships.
   <br>
