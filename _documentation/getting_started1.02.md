@@ -13,11 +13,11 @@ content_markdown: >-
 
   Make API requests by using cURL or a third-party API client.
   You can use cURL or a third-party API client to get data from the Technopedia database.
-  The base URL for all API queries is `https://v6.technopedia.com/`
+  The base URL for all API queries is `https://v6-1.technopedia.com/`
   <br>
   Typically, cURL is preinstalled on Mac and Linux computers, and Windows users most likely have to install cURL. 
   For example, the following example is a cURL query: <br>
-  `curl -G -H "Authorization: Bearer <API_KEY>" https://v6.technopedia.com/tql" --data-urlencode "q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.title"`<br>
+  `curl -G -H "Authorization: Bearer <API_KEY>" https://v6-1.technopedia.com/tql" --data-urlencode "q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.title"`<br>
   
   <br>
   Examples of API GET requests, and MATCH statements which are used to form the query statment are provided throughout this guide. 
@@ -43,43 +43,21 @@ content_markdown: >-
 
 left_code_blocks:
   - code_block: |-
-      {
-        "error": true,
-        "message": "error message here"
-      }
-    title: Response
-    language: json
-    right_code_blocks:
-  - code_block: "{\r\n  \"error\": true,\r\n  \"message\": \"error message here\"\r\n}\r\n\r\n{\r\n    \"message\": \"Internal Server Error\",\r\n    \"request-id\": \"4f6bfd02-e367-4a61-90c7-832d0226dd8c\"\r\n}"
-    title: Error Examples
-    language: json
-left_code_blocks:
-  - code_block: |-
-      $.ajax({
-        "url": "http://api.myapp.com/books/3",
-        "type": "DELETE",
-        "data": {
-          "token": "YOUR_APP_KEY"
-        },
-        "success": function(data) {
-          alert(data);
-        }
-      });
-    title: jQuery
-    language: javascript
+      curl -G -H "Authorization: Bearer <API_KEY>" https://v6-1.technopedia.com/tql" --data-urlencode "q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.product"
+
+      curl -G -H "Authorization: Bearer b93477a9-054b-4878-a16f-d7fdd1f27a7a" "https://v6-1.technopedia.com/tql" --data-urlencode "q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.product"
+        
+    title: Authentication example
+    language: bash
+    
 right_code_blocks:
   - code_block: |2-
-      {
-        "id": 3,
-        "status": "deleted"
-      }
-    title: Response
-    language: json
-  - code_block: |2-
-      {
-        "error": true,
-        "message": "Book doesn't exist"
-      }
-    title: Error
-    language: json
+      curl -G -H "Authorization: Bearer <API_KEY>" https://v6-1.technopedia.com/<endpoint>
+
+      Example:
+
+      curl -G -H "Authorization: Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a" "https://v6-1.technopedia.com/<endpoint>
+        
+    title: Authorization
+    language: bash
 ---

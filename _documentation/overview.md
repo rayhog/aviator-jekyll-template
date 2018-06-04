@@ -12,7 +12,7 @@ content_markdown: |-
   `MATCH (s:SOFTWARE_PRODUCT) WHERE product = "Microsoft" RETURN s.product`
   <br>
   The following diagram  shows an overview of the Technopedia API and how it queries the Technopedia database.
-  
+
   <br>
   ![API Image](/images/V6api.png){: .img-responsive}
   <br>
@@ -40,13 +40,13 @@ content_markdown: |-
   ###### To query the Technopedia database you use one of the following two endpoints:
 
 
-  * `https://v6.technopedia.com/tql?q=MATCH [Query Parameters]`
+  * `https://v6.technopedia.com/tql?q=MATCH <Query Parameters>`
 
     ###### You provide query parameters to the MATCH statement to generate the criteria for your query, as shown in the following example:
 
     ![API Image](/images/get_tql.png){: .img-responsive}
 
-  * `https://v6.technopedia.com/technopedia-id/[Technopedia ID]`
+  * `https://v6.technopedia.com/technopedia-id/<Technopedia ID.`
 
     ###### You provide the Technopedia ID for the product that you're querying to return data for that specific product, as in the following example:
 
@@ -74,9 +74,13 @@ content_markdown: |-
 
 left_code_blocks:
   - code_block: |-
+      GET  https://v6.technopedia.com/tql?q=MATCH <Query Parameters>
       GET: https://v6.technopedia.com/tql?MATCH (n:SOFTWARE_PRODUCT) RETURN name
+
+      GET  https://v6.technopedia.com/technopedia-id/<technopedia_id>
+      GET  https://v6.technopedia.com/technopedia-id/4d35ec28-0f16-4787-acca-885679265b59
       
-    title: API Query Example
+    title: API Query Examples
     language: bash
 right_code_blocks:
   - code_block: |2
@@ -90,4 +94,3 @@ right_code_blocks:
     language: bash
   
 ---
-
