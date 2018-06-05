@@ -26,7 +26,6 @@ left_code_blocks:
 
       RESPONSE SAMPLE
       { 
-
         "results": [
             {
                 "n.desupported_flag": null,

@@ -4,19 +4,18 @@ position: 2.3
 type: 
 description: The hardware model node defines information about the model, such as dimensions and other general specifications 
 content_markdown: |-
-   `MATCH (a:HARDWARE_MODEL) RETURN a.model`
-   {: .info}
+  `MATCH (a:HARDWARE_MODEL) RETURN a.model`
+  {: .info}
   
-   <br>
-
-   <br> 
-   The following diagram shows hardware nodes and related software nodes.  
+  <br>
+  <br> 
+  The following diagram shows hardware nodes and related software nodes.  
   
-   ![API Image](/images/hard_soft.png){:class="img-responsive"} <br>
+  ![API Image](/images/hard_soft.png){:class="img-responsive"} <br>
   
-   #### Query Examples <br>
+  #### Query Examples <br>
     
-   To use the MATCH statements in the following examples, you append the MATCH statement to the following tql endpoint and run a GET request from a API client or use cURL. <br>
+  To use the MATCH statements in the following examples, you append the MATCH statement to the following tql endpoint and run a GET request from a API client or use cURL. <br>
   <br>
   `https://v6-1.technopedia.com/tql?q=<MATCH Statement>`
 
@@ -24,11 +23,11 @@ left_code_blocks:
   - code_block: |
       MATCH (n:HARDWARE_MODEL) RETURN n.model, n.cpu_sockets
 
-      RESPONSE SAMPLE
+     RESPONSE SAMPLE
 
       {
-            "results": [
-             {
+        "results": [
+            {
                 "n.cpu_sockets": 1,
                 "n.model": "24663K0"
             },
@@ -59,7 +58,6 @@ left_code_blocks:
         ]
       {  
 
-
     title: Example one
     language: javascript
 
@@ -72,9 +70,32 @@ left_code_blocks:
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+                "n.cpu_sockets": 1,
+                "n.model": "24663K0"
+            },
+            {
+                "n.cpu_sockets": 1,
+                "n.model": "10AC002CUM"
+            },
+            {
+                "n.cpu_sockets": 1,
+                "n.model": "4284GQ5"
+            },
+            {
+                "n.cpu_sockets": 1,
+                "n.model": "4180D57"
+            },
+            {
+                "n.cpu_sockets": 1,
+                "n.model": "4177RL9"
+            },
+            {
+                "n.cpu_sockets": 1,
+                "n.model": "23943S3"
+            },
+            {
+                "n.cpu_sockets": 1,
+                "n.model": "17-f110nr"
             }
         ]
       {  
@@ -167,7 +188,7 @@ right_code_blocks:
       max_operating_humidity
       created_at
       modified_at
-      
+
     title: Hardware Model Attributes
     language: bash
   - code_block: |2-
