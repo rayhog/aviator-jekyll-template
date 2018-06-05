@@ -20,7 +20,7 @@ content_markdown: >-
   <br>
   The following diagram shows the nodes, attributes, and relationships that feature software nodes and their relationships.
   <br>
-  ![API Image](/images/sw_rel_to_ver.png){:class="img-responsive"} <br>
+  ![API Image](/images/sw_ver.png){:class="img-responsive"} <br>
 
   ### Software Version Group
   
