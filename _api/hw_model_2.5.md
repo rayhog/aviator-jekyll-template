@@ -23,7 +23,7 @@ left_code_blocks:
   - code_block: |
       MATCH (n:HARDWARE_MODEL) RETURN n.model, n.cpu_sockets
 
-     RESPONSE SAMPLE
+      RESPONSE SAMPLE
 
       {
         "results": [
@@ -63,7 +63,7 @@ left_code_blocks:
 
     
   - code_block: >-
-      MATCH (n:HARDWARE_MODEL)-[:HAS_A]->(m:HARDWARE_PRODUCT) RETURN n, m
+      MATCH (hw_mod:HARDWARE_MODEL)-[:HAS_A]->(hw_prod:HARDWARE_PRODUCT)[:HAS_A]->(manu:MANUFACTURER) RETURN hw_mod, hw_prod, manu
          
       RESPONSE SAMPLE
 

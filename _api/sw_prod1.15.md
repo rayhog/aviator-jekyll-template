@@ -9,8 +9,9 @@ content_markdown: >-
   
    {: .success} 
   
-  The following diagram shows the software nodes and relationships.
-
+ <br>
+ The following diagram shows the software nodes and relationships.
+  
   ![API Image](/images/NodeAndRel.png){: .img-responsive}<br>&nbsp;
 
   #### Query Examples <br>
