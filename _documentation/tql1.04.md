@@ -121,8 +121,8 @@ content_markdown: >-
 
   * OR <br>
   Use the OR clause to  return either one of two condtions. <br>
-  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name = "Office" OR s.family = "HealthMatics"  RETURN s` <br>
-  Return software products where name is Office or the family is HealthMatics. <br>
+  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" OR s.product = "HealthMatics" RETURN s ` <br>
+  Return software products where product name is Office or HealthMatics. <br>
   
   * LIMIT <br>
   Limit the number of results that are returned by specifiying a number with the LIMIT clause. <br>

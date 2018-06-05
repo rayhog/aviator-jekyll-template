@@ -202,6 +202,47 @@ left_code_blocks:
     title: Example five
     language: javascript
 
+     - code_block: |-
+      MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" OR s.product = "HealthMatics" RETURN s 
+
+      RESPONSE SAMPLE
+
+      {
+        "results": [
+            {
+                
+                "s.alias": null,
+                "s.cat_sw_product_id": 1074050,
+                "s.component": null,
+                "s.created_at": "2007-04-22 04:55:16",
+                "s.desupported_flag": null,
+                "s.discontinued_flag": null,
+                "s.family": "HealthMatics",
+                "s.is_suite": null,
+                "s.modified_at": "2017-06-01 10:44:00",
+                "s.product": "Office",
+                "s.technopedia_id": "141d9f85-66b2-40a6-8efa-450038c2700c",
+                "s.url": "http://investor.allscripts.com/phoenix.zhtml?c=112727&p=irol-newsArticle&ID=858912&highlight="
+            },
+            {
+                "s.alias": null,
+                "s.cat_sw_product_id": 38814600,
+                "s.component": null,
+                "s.created_at": "2013-01-09 10:00:34",
+                "s.desupported_flag": null,
+                "s.discontinued_flag": null,
+                "s.family": null,
+                "s.is_suite": "FALSE",
+                "s.modified_at": "2014-02-13 21:43:30",
+                "s.product": "Office",
+                "s.technopedia_id": "35785f94-d5e2-4e0b-b2f1-b7e59ecde968",
+                "s.url": "http://www.corel.com/corel/product/index.jsp?pid=prod3430104&cid=catalog50008&segid=692&storeKey=ca&languageCode=en"
+            }
+        ]
+      {  
+    title: Example six
+    language: javascript
+
   - code_block: |-
       curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:SOFTWARE_PRODUCT) RETURN h.product"
 

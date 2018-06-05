@@ -6,7 +6,7 @@ description: >-
   Software versions are represented by three nodes. The Software Version Group node represents the group version attributes. 
   The software version node represents the attributes that are associated with child versions of the parent major version or version group.
 
-  The relationship bewtween the nodes is `HAS_A` which points from `SOFTWARE_VERSION` to `SOFTWARE_VERSION_GROUP` and `SOFTWARE_MAJOR_VERSION.
+  The relationship bewtween the nodes is `HAS_A` which points from the `SOFTWARE_VERSION` to `SOFTWARE_VERSION_GROUP` and `SOFTWARE_MAJOR_VERSION.
 content_markdown: >-
   The highlighted query returns version information for software versions.
   <br>
