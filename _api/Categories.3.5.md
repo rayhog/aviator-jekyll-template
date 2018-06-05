@@ -110,11 +110,13 @@ left_code_blocks:
         "results": [
             {
                 
-                "n.description": "An electromechanical device designed to deal with body's musculoskeletal system. Use both surgical and nonsurgical means to treat musculoskeletal trauma, spine diseases, sports injuries, degenerative diseases, infections, tumors, and congenital disorders.",
+                "n.description": "An electromechanical device designed to deal with body's musculoskeletal
+                 system. Use both surgical and nonsurgical means to treat musculoskeletal trauma, spine diseases, sports injuries, degenerative diseases, infections, tumors, and congenital disorders.",
                 "n.label": "Electromechanical Orthopaedic Equipment"
             },
             {
-                "n.description": "Devices which help with performing emergency procedure for the purpose of reviving heart and lung function.",
+                "n.description": "Devices which help with performing emergency procedure for the purpose of
+                 reviving heart and lung function.",
                 "n.label": "Cardiopulmonary Resuscitation Devices"
             }
         ]
@@ -132,7 +134,8 @@ left_code_blocks:
             {
                 "n.cat_taxonomy2012_id": null,
                 "n.cat_taxonomy2012_parent_id": null,
-                "n.description": "The arrangement of a network computers in which several processors are located on scattered machines but are capable of working both independently and jointly",
+                "n.description": "The arrangement of a network computers in which several processors are
+                 located on scattered machines but are capable of working both independently and jointly",
                 "n.label": "Distributed Network Architecture",
                 "n.technopedia_id": "e87e4d7f-6990-4f31-b67d-ca2340a70fb4"
             }
@@ -153,23 +156,27 @@ left_code_blocks:
         "results": [
             {
                 " "c.cat_taxonomy2012_id": null,
-                "c.description": "Application software designed to enhance productivity within group of individuals, by which users can create a workspace and add workflow in order to achieve commmon goal",
+                "c.description": "Application software designed to enhance productivity within group of
+                 individuals, by which users can create a workspace and add workflow in order to achieve commmon goal",
                 "c.label": "Collaboration",
                 "c.technopedia_id": "3916d728-0401-43c2-a158-dcac6a0ffd0c",
                 "n.cat_taxonomy2012_id": null,
                 "n.cat_taxonomy2012_parent_id": null,
-                "n.description": "A status indicator that conveys ability and willingness of a potential communication partner",
+                "n.description": "A status indicator that conveys ability and willingness of a potential
+                 communication partner",
                 "n.label": "Presence",
                 "n.technopedia_id": "6b009946-ee6f-4821-bd0a-03a25a8710fe"
             },
             {
                 "c.cat_taxonomy2012_id": null,
-                "c.description": "Application software designed to enhance productivity within group of individuals, by which users can create a workspace and add workflow in order to achieve commmon goal",
+                "c.description": "Application software designed to enhance productivity within group of
+                 individuals, by which users can create a workspace and add workflow in order to achieve commmon goal",
                 "c.label": "Collaboration",
                 "c.technopedia_id": "3916d728-0401-43c2-a158-dcac6a0ffd0c",
                 "n.cat_taxonomy2012_id": null,
                 "n.cat_taxonomy2012_parent_id": null,
-                "n.description": "An online service, platform, or site that focuses on building and reflecting of social networks or social relations among people, who, for example, share interests and/or activities",
+                "n.description": "An online service, platform, or site that focuses on building and
+                  reflecting of social networks or social relations among people, who, for example, share interests and/or activities",
                 "n.label": "Social Networking",
                 "n.technopedia_id": "0869fc49-1870-41f5-801b-480238c60782"
             }
