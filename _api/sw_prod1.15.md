@@ -60,6 +60,7 @@ left_code_blocks:
     language: javascript
   - code_block: >-
       MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" AND s.family = "HealthMatics"  RETURN s
+      
 
       RESPONSE SAMPLE
 
