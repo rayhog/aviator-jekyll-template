@@ -28,9 +28,8 @@ content_markdown: |-
   #### Query Examples <br>
     
   To use the MATCH statements in the following examples, you append the MATCH statement to the following tql endpoint and run a GET request from a API client or use cURL.
-  
+  <br>
   `https://v6-1.technopedia.com/tql?q=<MATCH Statement>`
-
 left_code_blocks:
   - code_block: |
       MATCH (n:SOFTWARE_PRODUCT)<-[w:HAS_A]-(b:SOFTWARE_VERSION)<-[w:HAS_A]-(z:SOFTWARE_EDITION) RETURN n, b, z

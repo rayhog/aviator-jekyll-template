@@ -28,7 +28,7 @@ content_markdown: >-
   #### Query Examples <br>
     
   To use the MATCH statements in the following examples, you append the MATCH statement to the following tql endpoint and run a GET request from a API client or use cURL. <br>
-  
+  <br>
   `https://v6-1.technopedia.com/tql?q=<MATCH Statement>`
 left_code_blocks:
   - code_block: |
@@ -43,6 +43,7 @@ left_code_blocks:
     language: javascript
   - code_block: >-
       MATCH (node)-[My_alias:relationship {relationship_attribute : value}]->(:node) Return My_alias
+
       MATCH (:SOFTWARE_RELEASE)-[h:HAS_A {end_date: "2013-12-10 00:00:00"}]->(:SUPPORT_STAGE) RETURN h
 
       RESPONSE SAMPLE
@@ -118,7 +119,7 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6-1.technopedia.com/tql" --data-urlencode' "q=MATCH (n:SOFTWARE_RELEASE) WHERE       n.release contains "studio" RETURN n
+      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6-1.technopedia.com/tql" --data-urlencode' "q=MATCH (n:SOFTWARE_RELEASE) WHERE n.release contains "studio" RETURN n
 
       
       
