@@ -22,16 +22,39 @@ content_markdown: |-
 
 left_code_blocks:
   - code_block: |
-      MATCH (n:HARDWARE_MODEL) RETURN n.product, n.cpu_sockets
+      MATCH (n:HARDWARE_MODEL) RETURN n.model, n.cpu_sockets
 
       RESPONSE SAMPLE
 
       {
-        "results": [
+            "results": [
+             {
+                "n.cpu_sockets": 1,
+                "n.model": "24663K0"
+            },
             {
-                "test",
-                "s.test",
-                "s.anything"
+                "n.cpu_sockets": 1,
+                "n.model": "10AC002CUM"
+            },
+            {
+                "n.cpu_sockets": 1,
+                "n.model": "4284GQ5"
+            },
+            {
+                "n.cpu_sockets": 1,
+                "n.model": "4180D57"
+            },
+            {
+                "n.cpu_sockets": 1,
+                "n.model": "4177RL9"
+            },
+            {
+                "n.cpu_sockets": 1,
+                "n.model": "23943S3"
+            },
+            {
+                "n.cpu_sockets": 1,
+                "n.model": "17-f110nr"
             }
         ]
       {  
@@ -113,7 +136,7 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:HARDWARE_MODEL) RETURN h.model"
+      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql"  --data-urlencode' "q=MATCH (h:HARDWARE_MODEL) RETURN h.model"
     title: cURL 
     language: bash
 right_code_blocks:
@@ -144,6 +167,7 @@ right_code_blocks:
       max_operating_humidity
       created_at
       modified_at
+      
     title: Hardware Model Attributes
     language: bash
   - code_block: |2-

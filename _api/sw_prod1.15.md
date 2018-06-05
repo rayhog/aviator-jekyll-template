@@ -11,7 +11,7 @@ content_markdown: >-
   
   The following diagram shows the software nodes and relationships.
 
-   ![API Image](/images/NodeAndRel.png){: .img-responsive}<br>&nbsp;
+  ![API Image](/images/NodeAndRel.png){: .img-responsive}<br>&nbsp;
 
   #### Query Examples <br>
     
@@ -53,7 +53,9 @@ left_code_blocks:
             "n.product": "PDF Converter",
             "n.technopedia_id": "0714fbe6-04e0-482c-9669-0475c5e1f8d3",
             "n.url": "http://www.mp4converter.net/pdf-converter-pro.html"
-        }   
+          }
+        ]
+      {     
          
 
     title: Example one
@@ -61,7 +63,6 @@ left_code_blocks:
   - code_block: >-
       MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" AND s.family = "HealthMatics"  RETURN s
       
-
       RESPONSE SAMPLE
 
       {
@@ -202,7 +203,7 @@ left_code_blocks:
     title: Example five
     language: javascript
 
-     - code_block: |-
+  - code_block: |-
       MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" OR s.product = "HealthMatics" RETURN s 
 
       RESPONSE SAMPLE
