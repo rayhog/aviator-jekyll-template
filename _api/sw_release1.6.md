@@ -46,7 +46,9 @@ left_code_blocks:
   - code_block: >-
       MATCH (node)-[My_alias:relationship {relationship_attribute : value}]->(:node) Return My_alias
 
+
       MATCH (:SOFTWARE_RELEASE)-[h:HAS_A {end_date: "2013-12-10 00:00:00"}]->(:SUPPORT_STAGE) RETURN h
+      
 
       RESPONSE SAMPLE
 
