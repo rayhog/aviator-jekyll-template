@@ -149,16 +149,37 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH
+      MATCH (sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(n:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_MAJOR_VERSION) RETURN sp.product AS Product, n.version AS VERSION, p.version AS Major_Version  LIMIT 5
       
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+                
+                "Major_Version": "8.2",
+                "Product": "Common Management Information Protocol (CMIP)",
+                "VERSION": "8.2.1"
+            },
+            {
+                "Major_Version": "4.0",
+                "Product": "Web Proxy Server",
+                "VERSION": "4.0.9"
+            },
+            {
+                "Major_Version": "4.0",
+                "Product": "Web Proxy Server",
+                "VERSION": "4.0.8"
+            },
+            {
+                "Major_Version": "4.0",
+                "Product": "Web Proxy Server",
+                "VERSION": "4.0.6"
+            },
+            {
+                "Major_Version": "4.0",
+                "Product": "Web Proxy Server",
+                "VERSION": "4.0.7"
             }
         ]
       {  
@@ -169,16 +190,41 @@ left_code_blocks:
 
   - code_block: |-
 
-      MATCH
+      MATCH (manu:MANUFACTURER)<-[:HAS_A]-(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(n:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_MAJOR_VERSION) RETURN manu.manufacturer AS Manufacturer, sp.product AS Product, n.version AS VERSION, p.version AS Major_Version LIMIT 5
       
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+                "Major_Version": "8.2",
+                "Manufacturer": "Sun Microsystems",
+                "Product": "Common Management Information Protocol (CMIP)",
+                "VERSION": "8.2.1"
+            },
+            {
+                "Major_Version": "4.0",
+                "Manufacturer": "Sun Microsystems",
+                "Product": "Web Proxy Server",
+                "VERSION": "4.0.9"
+            },
+            {
+                "Major_Version": "4.0",
+                "Manufacturer": "Sun Microsystems",
+                "Product": "Web Proxy Server",
+                "VERSION": "4.0.8"
+            },
+            {
+                "Major_Version": "4.0",
+                "Manufacturer": "Sun Microsystems",
+                "Product": "Web Proxy Server",
+                "VERSION": "4.0.6"
+            },
+            {
+                "Major_Version": "4.0",
+                "Manufacturer": "Sun Microsystems",
+                "Product": "Web Proxy Server",
+                "VERSION": "4.0.7"
             }
         ]
       {  

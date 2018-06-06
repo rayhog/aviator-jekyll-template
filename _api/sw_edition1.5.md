@@ -101,16 +101,26 @@ left_code_blocks:
     title: Example two
     language: javascript
   - code_block: |-
-      MATCH (s:SOFTWARE_EDITION) WHERE s.edition = "Enterprise Developer" AND s.order <> "1" RETURN s.edition, s.order LIMIT 3
-
+      MATCH (p:SOFTWARE_PRODUCT)<-[:HAS_A]-(s:SOFTWARE_EDITION) WHERE s.order = 2 AND s.edition = "Enterprise Developer" RETURN p.product, s.edition, s.order LIMIT 3
+      
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+                "p.product": "JViews",
+                "s.edition": "Enterprise Developer",
+                "s.order": 2
+            },
+            {
+                "p.product": "Unwired Platform",
+                "s.edition": "Enterprise Developer",
+                "s.order": 2
+            },
+            {
+                "p.product": "Elixir",
+                "s.edition": "Enterprise Developer",
+                "s.order": 2
             }
         ]
       {  
@@ -118,16 +128,23 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (s:SOFTWARE_EDITION) WHERE s.edition = "Enterprise Developer" AND s.order <> "1" RETURN s.edition, s.order LIMIT 3
+      MATCH (s:SOFTWARE_EDITION) WHERE s.order = 2 AND s.edition = "Enterprise Developer" RETURN s.edition, s.order LIMIT 3
 
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+                "s.edition": "Enterprise Developer",
+                "s.order": 2
+            },
+            {
+                "s.edition": "Enterprise Developer",
+                "s.order": 2
+            },
+            {
+                "s.edition": "Enterprise Developer",
+                "s.order": 2
             }
         ]
       {  
@@ -135,16 +152,42 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:SOFTWARE_EDITION) -[:HAS_A]->(u:SOFTWARE_PRODUCT) RETURN n, u LIMIT 10
+     MATCH (n:SOFTWARE_EDITION) -[:HAS_A]->(u:SOFTWARE_PRODUCT) RETURN u.product AS Product, n.edition AS Edition, n.order AS Edition_order  LIMIT 10
 
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+                
+                "Edition": "Server",
+                "Edition_order": 5,
+                "Product": "Windows NT"
+            },
+            {
+                "Edition": "Personal",
+                "Edition_order": 1,
+                "Product": "Web Intelligence"
+            },
+            {
+                "Edition": "Black",
+                "Edition_order": 1,
+                "Product": "Need for Speed Most Wanted"
+            },
+            {
+                "Edition": "Deluxe",
+                "Edition_order": 2,
+                "Product": "ClientCare Contact Center"
+            },
+            {
+                "Edition": "Java for Education",
+                "Edition_order": 2,
+                "Product": "ArcExplorer"
+            },
+            {
+                "Edition": "Standard",
+                "Edition_order": 1,
+                "Product": "IT Change Manager"
             }
         ]
       {  
@@ -170,7 +213,7 @@ right_code_blocks:
     title: Software Edition Attributes
     language: bash
   - code_block: |2-
-      (SOFTWARE_EDITION)<-[:EDITION_OF]-(SOFTWARE_EDITION)
+      (SOFTWARE_EDITION)<-[:EDITION_OF]-(SOFTWARE_PRODUCT)
 
       (SOFTWARE_EDITION)-[:HAS_A]->(SOFTWARE_RELEASE)
 
