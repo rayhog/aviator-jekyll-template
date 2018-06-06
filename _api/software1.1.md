@@ -50,16 +50,39 @@ left_code_blocks:
     title: Example one
     language: javascript
   - code_block: >-
-      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.release_url n.ga_date
+      https://v6-1.technopedia.com/tql?q= MATCH (s:SOFTWARE_PRODUCT) WHERE s.product CONTAINS "Vagrant Manager" RETURN s
 
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+                "s.alias": null,
+                "s.cat_sw_product_id": 438693912,
+                "s.component": null,
+                "s.created_at": "2017-08-23 14:23:31",
+                "s.desupported_flag": null,
+                "s.discontinued_flag": null,
+                "s.family": null,
+                "s.is_suite": "FALSE",
+                "s.modified_at": "2017-12-18 16:44:19",
+                "s.product": "Vagrant Manager for OS X",
+                "s.technopedia_id": "895b9a9f-4484-437e-a8ba-528fc4ed6c70",
+                "s.url": "https://github.com/lanayotech/vagrant-manager"
+            },
+            {
+                "s.alias": null,
+                "s.cat_sw_product_id": 438693925,
+                "s.component": null,
+                "s.created_at": "2017-08-23 14:23:57",
+                "s.desupported_flag": null,
+                "s.discontinued_flag": null,
+                "s.family": null,
+                "s.is_suite": "FALSE",
+                "s.modified_at": "2017-08-23 18:30:03",
+                "s.product": "Vagrant Manager",
+                "s.technopedia_id": "db156f02-ba82-4c3b-bd68-d5eb29372c40",
+                "s.url": "http://vagrantmanager.com/windows/"
             }
         ]
       {  
@@ -103,16 +126,40 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:SOFTWARE_VERSION)-[:HAS_A]->(r:SOFTWARE_VERSION)-[:HAS_A]->(k:SOFTWARE_PRODUCT) RETURN n, r, k
+      MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(r:SOFTWARE_VERSION)-[:HAS_A]->(k:SOFTWARE_PRODUCT) RETURN n, r, k LIMIT 1
 
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+                "k.alias": null,
+                "k.cat_sw_product_id": 1280196,
+                "k.component": null,
+                "k.created_at": "2008-03-25 22:07:06",
+                "k.desupported_flag": null,
+                "k.discontinued_flag": null,
+                "k.family": "Windows Live",
+                "k.is_suite": "FALSE",
+                "k.modified_at": "2011-03-21 17:47:50",
+                "k.product": "ID Web Authentication Software Development Kit (SDK)",
+                "k.technopedia_id": "359e53c0-6cda-4e3b-aaa1-2b05537ca718",
+                "k.url": "http://www.microsoft.com/Downloads/details.aspx?familyid=E565FC92-D5F6-4F5F-8713-4DD1C90DE19F&displaylang=en",
+                "n.cat_sw_release_id": 8706909,
+                "n.created_at": "2010-01-08 21:17:49",
+                "n.desupported_flag": null,
+                "n.discontinued_flag": null,
+                "n.modified_at": "2014-04-01 14:52:04",
+                "n.technopedia_id": "4aa33382-7a99-4210-8e71-7b7680879acd",
+                "n.url": null,
+                "r.cat_sw_version_id": 8706842,
+                "r.created_at": "2010-01-08 21:04:11",
+                "r.desupported_flag": null,
+                "r.modified_at": "2012-05-17 18:24:50",
+                "r.order": "1",
+                "r.patch_level": null,
+                "r.technopedia_id": "154568f0-d0b3-4afd-9a4d-079dfc4ebe69",
+                "r.version": "1.0"
             }
         ]
       {  
@@ -121,7 +168,7 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:SOFTWARE_PRODUCT) RETURN h.name"
+      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:SOFTWARE_PRODUCT) RETURN h.product"
 
       
     title: cURL

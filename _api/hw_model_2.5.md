@@ -103,16 +103,32 @@ left_code_blocks:
     title: Example two
     language: javascript
   - code_block: |-
-      MATCH (n:HARDWARE_MODEL)-[a:HAS_A]->(v:HARDWARE_PRODUCT)<-[a:HAS_A]-(m:MANUFACTURER) RETURN n, m, w, c
+      MATCH (mod:HARDWARE_MODEL)-[:HAS_A]->(prod:HARDWARE_PRODUCT) WHERE prod.product CONTAINS "108" RETURN mod.model, prod.product LIMIT 5
 
+      
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+                "mod.model": "A1080a-S",
+                "prod.product": "Express5800/A1080a Series"
+            },
+            {
+                "mod.model": "A1080a-E",
+                "prod.product": "Express5800/A1080a Series"
+            },
+            {
+                "mod.model": "A1080a-D",
+                "prod.product": "Express5800/A1080a Series"
+            },
+            {
+                "mod.model": "WAP-4000A",
+                "prod.product": "54/108Mbps Wireless Access Point"
+            },
+            {
+                "mod.model": "FI9903P",
+                "prod.product": "Outdoor Waterproof IP66 H.264 1080P PnP IP Camera"
             }
         ]
       {  
@@ -121,16 +137,60 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:HARDWARE_MODEL)-[a:HAS_A]->(h:HARDWARE_PRODUCT)<-[HAS_A]-(y:MANUFACTURER RETURN n, h, y
+      MATCH (n:HARDWARE_MODEL)-[:HAS_A]->(h:HARDWARE_PRODUCT)-[:BELONGS_TO]->(m:CATEGORY_2)-[:BELONGS_TO]->(w:VERTICAL) RETURN n, h, m, w LIMIT 5
 
+      
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+                "h.cat_manufacturer_id": null,
+                "h.create_date": null,
+                "h.desupported_flag": null,
+                "h.modified_at": "2011-03-16 09:46:45",
+                "h.product": "Express5800/A1080a Series",
+                "h.technopedia_id": "f6d32439-001b-4ca7-abb1-cd7627086ade",
+                "m.cat_taxonomy2012_id": null,
+                "m.cat_taxonomy2012_parent_id": null,
+                "m.description": "A computer or device on a network that manages network resource",
+                "m.label": "Servers",
+                "m.technopedia_id": "195fa6b3-7d0f-4317-995f-d3c9f1ae08e7",
+                "n.cpu_sockets": 4,
+                "n.cpu_url": "http://www.necam.com/docs/?id=6ee81afc-8691-484e-9549-b21b83f6302e",
+                "n.created_at": "2010-04-23 11:31:47",
+                "n.date_introduced": "3/30/2010",
+                "n.desupported_flag": null,
+                "n.model": "A1080a-S",
+                "n.modified_at": "2013-10-18 16:54:07",
+                "n.technopedia_id": "807bd3dc-2100-4116-a4e2-cbf741e725d4",
+                "w.name": "Information and Technology",
+                "w.short_name": "IT",
+                "w.technopedia_id": "0be7a9ed-b538-4942-b6ce-b9243566305f"
+            },
+            {
+                "h.cat_manufacturer_id": null,
+                "h.create_date": null,
+                "h.desupported_flag": null,
+                "h.modified_at": "2011-03-16 09:46:45",
+                "h.product": "Express5800/A1080a Series",
+                "h.technopedia_id": "f6d32439-001b-4ca7-abb1-cd7627086ade",
+                "m.cat_taxonomy2012_id": null,
+                "m.cat_taxonomy2012_parent_id": null,
+                "m.description": "A computer or device on a network that manages network resource",
+                "m.label": "Servers",
+                "m.technopedia_id": "195fa6b3-7d0f-4317-995f-d3c9f1ae08e7",
+                "n.cpu_sockets": 8,
+                "n.cpu_url": "http://www.necam.com/docs/?id=6ee81afc-8691-484e-9549-b21b83f6302e",
+                "n.created_at": "2010-04-23 11:32:43",
+                "n.date_introduced": "3/30/2010",
+                "n.desupported_flag": null,
+                "n.model": "A1080a-E",
+                "n.modified_at": "2013-10-18 16:54:22",
+                "n.technopedia_id": "5cb93d0e-63d0-43eb-89d8-7d1d25ff4ce5",
+                "w.name": "Information and Technology",
+                "w.short_name": "IT",
+                "w.technopedia_id": "0be7a9ed-b538-4942-b6ce-b9243566305f"
             }
         ]
       {  
@@ -139,7 +199,7 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:HARDWARE_MODEL)-[a:HAS_A]->(h:HARDWARE_PRODUCT)-[e:BELONGS_TO]->(m:CATEGORY_2)-[e:BELONGS_TO]->(w:VERTICAL) RETURN n, h, m, W
+      MATCH (n:HARDWARE_MODEL)-[a:HAS_A]->(h:HARDWARE_PRODUCT)-[e:BELONGS_TO]->(m:CATEGORY_2)-[e:BELONGS_TO]->(w:VERTICAL) RETURN n, h, m, w
       
       RESPONSE SAMPLE
 
@@ -157,7 +217,7 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql"  --data-urlencode' "q=MATCH (h:HARDWARE_MODEL) RETURN h.model"
+      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6-1.technopedia.com/tql"  --data-urlencode' "q=MATCH (h:HARDWARE_MODEL) RETURN h.model"
     title: cURL 
     language: bash
 right_code_blocks:

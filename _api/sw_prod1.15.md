@@ -7,10 +7,10 @@ description: >-
 content_markdown: >-
   `MATCH (n:SOFTWARE_PRODUCT) WHERE n.product = "PDF Converter" RETURN n` 
   
-   {: .success} 
+  {: .success} 
   
- <br>
- The following diagram shows the software nodes and relationships.
+  <br>
+  The following diagram shows the software nodes and relationships.
   
   ![API Image](/images/NodeAndRel.png){: .img-responsive}<br>&nbsp;
 
@@ -202,7 +202,7 @@ left_code_blocks:
         ]
       {  
     title: Example five
-    language: javascript
+    language: json
 
   - code_block: |-
       MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" OR s.product = "HealthMatics" RETURN s 

@@ -97,7 +97,7 @@ left_code_blocks:
       {  
 
 
-    title: Category_1 Example
+    title: Example one
     language: javascript
 
   - code_block: >-
@@ -111,7 +111,8 @@ left_code_blocks:
             {
                 
                 "n.description": "An electromechanical device designed to deal with body's musculoskeletal
-                 system. Use both surgical and nonsurgical means to treat musculoskeletal trauma, spine diseases, sports injuries, degenerative diseases, infections, tumors, and congenital disorders.",
+                 system. Use both surgical and nonsurgical means to treat musculoskeletal trauma, spine diseases, 
+                 sports injuries, degenerative diseases, infections, tumors, and congenital disorders.",
                 "n.label": "Electromechanical Orthopaedic Equipment"
             },
             {
@@ -121,7 +122,7 @@ left_code_blocks:
             }
         ]
       {  
-    title: Example one
+    title: Example two
     language: javascript
 
   - code_block: |-
@@ -142,7 +143,7 @@ left_code_blocks:
         ]
       {  
 
-    title: Example two
+    title: Example three
     language: javascript
 
   - code_block: |- 
@@ -157,7 +158,8 @@ left_code_blocks:
             {
                 " "c.cat_taxonomy2012_id": null,
                 "c.description": "Application software designed to enhance productivity within group of
-                 individuals, by which users can create a workspace and add workflow in order to achieve commmon goal",
+                 individuals, by which users can create a workspace and add workflow in order 
+                 to achieve commmon goal",
                 "c.label": "Collaboration",
                 "c.technopedia_id": "3916d728-0401-43c2-a158-dcac6a0ffd0c",
                 "n.cat_taxonomy2012_id": null,
@@ -170,7 +172,8 @@ left_code_blocks:
             {
                 "c.cat_taxonomy2012_id": null,
                 "c.description": "Application software designed to enhance productivity within group of
-                 individuals, by which users can create a workspace and add workflow in order to achieve commmon goal",
+                 individuals, by which users can create a workspace and add workflow in order 
+                 to achieve commmon goal",
                 "c.label": "Collaboration",
                 "c.technopedia_id": "3916d728-0401-43c2-a158-dcac6a0ffd0c",
                 "n.cat_taxonomy2012_id": null,
@@ -183,7 +186,7 @@ left_code_blocks:
         ]
       {  
 
-    title: Example three
+    title: Example four
     language: javascript
 
   - code_block: |- 
@@ -220,7 +223,7 @@ left_code_blocks:
         ]
       {  
 
-    title: All categories example
+    title: Example five
     language: javascript
 
   - code_block: |- 
@@ -269,7 +272,7 @@ left_code_blocks:
         ]
       {  
 
-    title: Category_Group Example
+    title: Example six
     language: javascript
 right_code_blocks:
   - code_block: |2

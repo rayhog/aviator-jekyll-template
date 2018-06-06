@@ -55,9 +55,39 @@ left_code_blocks:
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+                "n.clockrate": null,
+                "n.cores": "1",
+                "n.model": "HyperSPARC Processor 125 MHz (Colorado 2)"
+            },
+            {
+                "n.clockrate": null,
+                "n.cores": "2",
+                "n.model": "Core 2 Duo Mobile Processor 1.50 GHz (Merom)"
+            },
+            {
+                "n.clockrate": null,
+                "n.cores": "8",
+                "n.model": "Opteron 6134 Processor 2.30 GHz (Magny-Cours)"
+            },
+            {
+                "n.clockrate": null,
+                "n.cores": "1",
+                "n.model": "Sempron 2200+ Processor 1.50 GHz (Thorton)"
+            },
+            {
+                "n.clockrate": null,
+                "n.cores": "1",
+                "n.model": "Itanium 2 Processor 9110N 1.60 GHz (Montvale)"
+            },
+            {
+                "n.clockrate": null,
+                "n.cores": "1",
+                "n.model": "Xeon 3.0E Processor 3.00 GHz (Irwindale)"
+            },
+            {
+                "n.clockrate": null,
+                "n.cores": "2",
+                "n.model": "Celeron Processor 2.60 GHz"
             }
         ]
       {  

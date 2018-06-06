@@ -93,16 +93,86 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:MANUFACTURER)<-[:HAS_A]-(w:SOFTWARE_PRODUCT)-[BELONGS_TO]->(v:CATEGORY_2) RETURN n, w, v
+      MATCH (n:MANUFACTURER)<-[:HAS_A]-(p:SOFTWARE_PRODUCT)<-[:HAS_A]-(my_alias:SOFTWARE_VERSION) RETURN n, my_alias LIMIT 2
 
       RESPONSE SAMPLE
 
       {
         "results": [
            {  
-                
-            
-           }
+              "my_alias.cat_sw_version_id": 124285141,
+              "my_alias.created_at": "2015-06-17 16:25:47",
+              "my_alias.desupported_flag": null,
+              "my_alias.modified_at": "2015-06-17 18:40:19",
+              "my_alias.order": "1",
+              "my_alias.patch_level": null,
+              "my_alias.technopedia_id": "6403acb4-c95b-4ce1-8b93-18218c66cc03",
+              "my_alias.version": "6.14",
+              "n.cat_manufacturer_id": 5068,
+              "n.city": null,
+              "n.country": null,
+              "n.created_at": null,
+              "n.description": null,
+              "n.email": null,
+              "n.employees": null,
+              "n.employees_date": null,
+              "n.fax": null,
+              "n.fiscal_end_date": null,
+              "n.known_as": null,
+              "n.legal": "Corporation",
+              "n.manufacturer": "Callware Technologies",
+              "n.modified_at": null,
+              "n.phone": null,
+              "n.profits_date": null,
+              "n.profits_per_year": null,
+              "n.publicly_traded": null,
+              "n.revene_date": null,
+              "n.revenue": null,
+              "n.state": null,
+              "n.street": null,
+              "n.symbol": "Private",
+              "n.technopedia_id": "6aacf387-f0cf-48dd-be9b-54eeb24f1dbe",
+              "n.tier": 3,
+              "n.website": "http://www.callware.com/",
+              "n.zip": null
+          },
+          {
+              "my_alias.cat_sw_version_id": 162129328,
+              "my_alias.created_at": "2016-01-08 14:24:01",
+              "my_alias.desupported_flag": null,
+              "my_alias.modified_at": "2016-01-08 14:24:01",
+              "my_alias.order": "2",
+              "my_alias.patch_level": null,
+              "my_alias.technopedia_id": "43d856b4-d761-448b-87d6-85e070b4ed4e",
+              "my_alias.version": "6.15",
+              "n.cat_manufacturer_id": 5068,
+              "n.city": null,
+              "n.country": null,
+              "n.created_at": null,
+              "n.description": null,
+              "n.email": null,
+              "n.employees": null,
+              "n.employees_date": null,
+              "n.fax": null,
+              "n.fiscal_end_date": null,
+              "n.known_as": null,
+              "n.legal": "Corporation",
+              "n.manufacturer": "Callware Technologies",
+              "n.modified_at": null,
+              "n.phone": null,
+              "n.profits_date": null,
+              "n.profits_per_year": null,
+              "n.publicly_traded": null,
+              "n.revene_date": null,
+              "n.revenue": null,
+              "n.state": null,
+              "n.street": null,
+              "n.symbol": "Private",
+              "n.technopedia_id": "6aacf387-f0cf-48dd-be9b-54eeb24f1dbe",
+              "n.tier": 3,
+              "n.website": "http://www.callware.com/",
+              "n.zip": null
+          }
         ]
       {    
     title: Example three
@@ -170,7 +240,7 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:MANUFACTURER)-[:HAS_A]->(p:SOFTWARE_PRODUCT)-[:HAS_A]->(my_alias:SOFTWARE_VERSION) RETURN n, p, my_alias
+      MATCH (n:MANUFACTURER)-[:HAS_A]->(p:SOFTWARE_PRODUCT)<-[:HAS_A]-(my_alias:SOFTWARE_VERSION) RETURN n, p, my_alias
 
       RESPONSE SAMPLE
 
