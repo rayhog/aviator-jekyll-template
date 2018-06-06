@@ -16,7 +16,6 @@ content_markdown: >-
   
   The TQL MATCH statement returns results from one or more nodes and relationships that are specified in the query. Typically, the data results are returned in key-value pairs, in a format that resembles the format in the following key-value pair:
   <br>
-   
   `{"Manufacturer": "Microsoft"}`
 
    <br>
@@ -347,7 +346,7 @@ left_code_blocks:
     
 
 right_code_blocks:
-  - code_block: |2
+  - code_block: |-
       
       MATCH (alias1.NODE) RETURN alias1 
       MATCH (n:SOFTWARE_PRODUCT) RETURN n 
