@@ -25,6 +25,7 @@ left_code_blocks:
       MATCH (n:HARDWARE_PRODUCT) RETURN n.product, n.desupported_flag
 
       RESPONSE SAMPLE
+      
       { 
         "results": [
             {

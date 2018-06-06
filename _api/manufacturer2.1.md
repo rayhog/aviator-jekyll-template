@@ -40,36 +40,36 @@ left_code_blocks:
 
       {
         "results": [
-        {
-            "n.cat_manufacturer_id": 594345,
-            "n.city": null,
-            "n.country": null,
-            "n.created_at": null,
-            "n.description": null,
-            "n.email": null,
-            "n.employees": null,
-            "n.employees_date": null,
-            "n.fax": null,
-            "n.fiscal_end_date": null,
-            "n.known_as": null,
-            "n.legal": "Corporation",
-            "n.manufacturer": "Go Ahead Web",
-            "n.modified_at": null,
-            "n.phone": null,
-            "n.profits_date": null,
-            "n.profits_per_year": null,
-            "n.publicly_traded": null,
-            "n.revene_date": null,
-            "n.revenue": null,
-            "n.state": null,
-            "n.street": null,
-            "n.symbol": "Private",
-            "n.technopedia_id": "513a9c99-608f-4b36-b9b6-3b53dfa85625",
-            "n.tier": 3,
-            "n.website": "http://www.goaheadweb.co.uk/",
-            "n.zip": null
-        }
-       ]
+            {
+                "n.cat_manufacturer_id": 594345,
+                "n.city": null,
+                "n.country": null,
+                "n.created_at": null,
+                "n.description": null,
+                "n.email": null,
+                "n.employees": null,
+                "n.employees_date": null,
+                "n.fax": null,
+                "n.fiscal_end_date": null,
+                "n.known_as": null,
+                "n.legal": "Corporation",
+                "n.manufacturer": "Go Ahead Web",
+                "n.modified_at": null,
+                "n.phone": null,
+                "n.profits_date": null,
+                "n.profits_per_year": null,
+                "n.publicly_traded": null,
+                "n.revene_date": null,
+                "n.revenue": null,
+                "n.state": null,
+                "n.street": null,
+                "n.symbol": "Private",
+                "n.technopedia_id": "513a9c99-608f-4b36-b9b6-3b53dfa85625",
+                "n.tier": 3,
+                "n.website": "http://www.goaheadweb.co.uk/",
+                "n.zip": null
+            }
+        ]
       {    
     title: Example one
     language: javascript
@@ -240,13 +240,60 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:MANUFACTURER)-[:HAS_A]->(p:SOFTWARE_PRODUCT)<-[:HAS_A]-(my_alias:SOFTWARE_VERSION) RETURN n, p, my_alias
+      MATCH (n:MANUFACTURER)-[:HAS_A]-(p:SOFTWARE_PRODUCT)<-[:HAS_A]-(my_alias:SOFTWARE_VERSION) RETURN n, p, my_alias LIMIT 10
 
       RESPONSE SAMPLE
 
       {
         "results": [
-           {   
+            { 
+                "my_alias.cat_sw_version_id": 124285141,
+                "my_alias.created_at": "2015-06-17 16:25:47",
+                "my_alias.desupported_flag": null,
+                "my_alias.modified_at": "2015-06-17 18:40:19",
+                "my_alias.order": "1",
+                "my_alias.patch_level": null,
+                "my_alias.technopedia_id": "6403acb4-c95b-4ce1-8b93-18218c66cc03",
+                "my_alias.version": "6.14",
+                "n.cat_manufacturer_id": 5068,
+                "n.city": null,
+                "n.country": null,
+                "n.created_at": null,
+                "n.description": null,
+                "n.email": null,
+                "n.employees": null,
+                "n.employees_date": null,
+                "n.fax": null,
+                "n.fiscal_end_date": null,
+                "n.known_as": null,
+                "n.legal": "Corporation",
+                "n.manufacturer": "Callware Technologies",
+                "n.modified_at": null,
+                "n.phone": null,
+                "n.profits_date": null,
+                "n.profits_per_year": null,
+                "n.publicly_traded": null,
+                "n.revene_date": null,
+                "n.revenue": null,
+                "n.state": null,
+                "n.street": null,
+                "n.symbol": "Private",
+                "n.technopedia_id": "6aacf387-f0cf-48dd-be9b-54eeb24f1dbe",
+                "n.tier": 3,
+                "n.website": "http://www.callware.com/",
+                "n.zip": null,
+                "p.alias": null,
+                "p.cat_sw_product_id": 1179972,
+                "p.component": null,
+                "p.created_at": "2007-08-28 00:32:35",
+                "p.desupported_flag": null,
+                "p.discontinued_flag": null,
+                "p.family": "Callegra .UC",
+                "p.is_suite": null,
+                "p.modified_at": "2011-09-01 10:11:30",
+                "p.product": "Callegra .UC",
+                "p.technopedia_id": "c9a1430d-242e-4370-a0ab-6300571fd6ba",
+                "p.url": "http://www.callware.com/pdfs/UC11/UC11scr.pdf"  
             
            }
         ]

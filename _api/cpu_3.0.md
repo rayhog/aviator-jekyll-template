@@ -31,7 +31,7 @@ left_code_blocks:
   - code_block: |
       MATCH (n:CPU_MODEL) RETURN n
 
-       RESPONSE SAMPLE
+      RESPONSE SAMPLE
 
       {
         "results": [
@@ -68,8 +68,7 @@ left_code_blocks:
   - code_block: >-
       MATCH (n:CPU_MODEL) RETURN n.model, n.cores, n.clockrate
 
-
-       RESPONSE SAMPLE
+      RESPONSE SAMPLE
 
       {
         "results": [
@@ -117,7 +116,7 @@ left_code_blocks:
   - code_block: |-
       MATCH (h:CPU_MODEL) RETURN h.cores, h.model LIMIT 10
 
-       RESPONSE SAMPLE
+      RESPONSE SAMPLE
 
       {
         "results": [
@@ -234,7 +233,7 @@ left_code_blocks:
   - code_block: |-
       MATCH (h:CPU_MODEL) WHERE h.model  <> "125 MHz"  AND h.model <> "3.00 GHz" RETURN h.cores, h.model LIMIT 10
 
-       RESPONSE SAMPLE
+      RESPONSE SAMPLE
 
       {
         "results": [

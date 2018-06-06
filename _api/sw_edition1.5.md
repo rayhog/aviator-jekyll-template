@@ -34,37 +34,37 @@ left_code_blocks:
       {
         "results": [
             {
-            "EDITION": "Server",
-            "MODIFIED": "2017-04-20 14:49:12"
-        },
-        {
-            "EDITION": "Personal",
-            "MODIFIED": "2011-03-11 11:16:48"
-        },
-        {
-            "EDITION": "Black",
-            "MODIFIED": "2017-05-10 17:45:22"
-        },
-        {
-            "EDITION": "Deluxe",
-            "MODIFIED": "2017-09-28 11:34:11"
-        },
-        {
-            "EDITION": "Java for Education",
-            "MODIFIED": "2016-09-12 09:48:23"
-        },
-        {
-            "EDITION": "Standard",
-            "MODIFIED": "2012-08-06 18:11:55"
-        },
-        {
-            "EDITION": "Lite",
-            "MODIFIED": "2015-10-23 14:31:44"
-        },
-        {
-            "EDITION": "Enterprise",
-            "MODIFIED": "2017-03-20 11:44:49"
-        }
+                "EDITION": "Server",
+                "MODIFIED": "2017-04-20 14:49:12"
+            },
+            {
+                "EDITION": "Personal",
+                "MODIFIED": "2011-03-11 11:16:48"
+            },
+            {
+                "EDITION": "Black",
+                "MODIFIED": "2017-05-10 17:45:22"
+            },
+            {
+                "EDITION": "Deluxe",
+                "MODIFIED": "2017-09-28 11:34:11"
+            },
+            {
+                "EDITION": "Java for Education",
+                "MODIFIED": "2016-09-12 09:48:23"
+            },
+            {
+                "EDITION": "Standard",
+                "MODIFIED": "2012-08-06 18:11:55"
+            },
+            {
+                "EDITION": "Lite",
+                "MODIFIED": "2015-10-23 14:31:44"
+            },
+            {
+                "EDITION": "Enterprise",
+                "MODIFIED": "2017-03-20 11:44:49"
+            }
         ]
       {  
 
@@ -96,12 +96,12 @@ left_code_blocks:
             "e.technopedia_id": "36caabb2-af3a-4591-9466-d854bad6cf3f",
             "e.url": "http://www.ni.com/datafinder/"
         }
-        ]
+       ]
       {  
     title: Example two
     language: javascript
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE)-[p:HAS_A]->(a:SOFTWARE_VERSION)-[o:HAS_A]->(g:SOFTWARE_PRODUCT) RETURN n.name LIMIT 5
+      MATCH (s:SOFTWARE_EDITION) WHERE s.edition = "Enterprise Developer" AND s.order <> "1" RETURN s.edition, s.order LIMIT 3
 
       RESPONSE SAMPLE
 
@@ -118,7 +118,7 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(x:SOFTWARE_VERSION) RETURN x.version LIMIT 10
+      MATCH (s:SOFTWARE_EDITION) WHERE s.edition = "Enterprise Developer" AND s.order <> "1" RETURN s.edition, s.order LIMIT 3
 
       RESPONSE SAMPLE
 

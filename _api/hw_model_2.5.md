@@ -105,7 +105,6 @@ left_code_blocks:
   - code_block: |-
       MATCH (mod:HARDWARE_MODEL)-[:HAS_A]->(prod:HARDWARE_PRODUCT) WHERE prod.product CONTAINS "108" RETURN mod.model, prod.product LIMIT 5
 
-      
       RESPONSE SAMPLE
 
       {
@@ -139,7 +138,6 @@ left_code_blocks:
   - code_block: |-
       MATCH (n:HARDWARE_MODEL)-[:HAS_A]->(h:HARDWARE_PRODUCT)-[:BELONGS_TO]->(m:CATEGORY_2)-[:BELONGS_TO]->(w:VERTICAL) RETURN n, h, m, w LIMIT 5
 
-      
       RESPONSE SAMPLE
 
       {
