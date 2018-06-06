@@ -98,7 +98,7 @@ content_markdown: >-
    
   <b>Objective:</b> To get software editions that have a release, verison, product, and manufacturer.<br>
   <br>
-  In this query example, you get software editions in Technopedia, wiht release, verison, product, and manufacturer data for each edition that is listed. <br>
+  In this query example, you get data for software editions in Technopedia, with release, version, product, and manufacturer data for each edition that is listed. <br>
 
   `MATCH (e:SOFTWARE_EDITION)<-[:HAS_A]-(r:SOFTWARE_RELEASE)-[:HAS_A]->(v:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_PRODUCT)<-[:HAS_A]-(m:MANUFACTURER) RETURN e,r,v,p,m LIMIT 10`<br>
 
@@ -166,97 +166,183 @@ content_markdown: >-
 
 left_code_blocks:
   - code_block: |
-      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
-
+      MATCH (n:MANUFACTURER) RETURN n LIMIT 1
+      
       RESPONSE SAMPLE
+
       {
-          "keys": [
-            "n.cat_sw_release_id",
-            "n.ga_date"
-          ],
-          "length": 2,
-          "_fields": [
+        "results": [
             {
-              "low": 55725913,
-              "high": 0
-            },
-            "Not Available"
-          ],
-          "_fieldLookup": {
-            "n.cat_sw_release_id": 0,
-            "n.ga_date": 1
-          }
+                
+                "n.cat_manufacturer_id": 594345,
+                "n.city": null,
+                "n.country": null,
+                "n.created_at": null,
+                "n.description": null,
+                "n.email": null,
+                "n.employees": null,
+                "n.employees_date": null,
+                "n.fax": null,
+                "n.fiscal_end_date": null,
+                "n.known_as": null,
+                "n.legal": "Corporation",
+                "n.manufacturer": "Go Ahead Web",
+                "n.modified_at": null,
+                "n.phone": null,
+                "n.profits_date": null,
+                "n.profits_per_year": null,
+                "n.publicly_traded": null,
+                "n.revene_date": null,
+                "n.revenue": null,
+                "n.state": null,
+                "n.street": null,
+                "n.symbol": "Private",
+                "n.technopedia_id": "513a9c99-608f-4b36-b9b6-3b53dfa85625",
+                "n.tier": 3,
+                "n.website": "http://www.goaheadweb.co.uk/",
+                "n.zip": null
+            }
+        ]
+      {  
 
     title: Example 1
     language: javascript
   - code_block: >-
-      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.release_url n.ga_date
-
+      MATCH (aliasx:HARDWARE_PRODUCT) RETURN aliasx.product, aliasx.modified_at LIMIT 10
       RESPONSE SAMPLE
 
       {
-          "keys": [
-            "n.cat_sw_release_id",
-            "n.release_url",
-            "n.ga_date"
-          ],
-          "length": 3,
-          "_fields": [
+        "results": [
             {
-              "low": 10427852,
-              "high": 0
+                "aliasx.modified_at": "2011-03-16 09:46:45",
+                "aliasx.product": "Express5800/A1080a Series"
             },
-            "www.nntest.com/files/import/Solutions%20Catalog%20Data.xls",
-            "Not Available"
-          ],
-          "_fieldLookup": {
-            "n.cat_sw_release_id": 0,
-            "n.release_url": 1,
-            "n.ga_date": 2
-          }
+            {
+                "aliasx.modified_at": "2011-03-21 11:22:10",
+                "aliasx.product": "Phaser 3125 (Networked)"
+            },
+            {
+                "aliasx.modified_at": "2017-06-01 11:29:10",
+                "aliasx.product": "Pro 3010 Desktop PC"
+            },
+            {
+                "aliasx.modified_at": "2011-03-16 09:50:28",
+                "aliasx.product": "Essentio Series"
+            },
+            {
+                "aliasx.modified_at": "2011-03-16 09:50:30",
+                "aliasx.product": "DX100 Series"
+            },
+            {
+                "aliasx.modified_at": "2017-06-01 11:29:10",
+                "aliasx.product": "500 Series Notebook PC"
+            },
+            {
+                "aliasx.modified_at": "2011-03-16 09:50:28",
+                "aliasx.product": "ThinkCentre A51"
+            },
+            {
+                "aliasx.modified_at": "2017-06-01 11:29:10",
+                "aliasx.product": "3Com OfficeConnect Cable/DSL Gateway"
+            },
+            {
+                "aliasx.modified_at": "2011-03-16 13:27:17",
+                "aliasx.product": "6000 Series"
+            },
+            {
+                "aliasx.modified_at": "2011-03-16 11:04:11",
+                "aliasx.product": "IdeaPad Z560"
+            }
+        ]
+      {  
     title: Example 2
     language: javascript
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1
+      MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" OR s.product="HealthMatics" RETURN s LIMIT 2 
 
       RESPONSE SAMPLE
+
       {
-          "keys": [
-            "n.cat_sw_release_id"
-          ],
-          "length": 1,
-          "_fields": [
+        "results": [
             {
-              "low": 55725913,
-              "high": 0
+                
+                "s.alias": null,
+                "s.cat_sw_product_id": 1074050,
+                "s.component": null,
+                "s.created_at": "2007-04-22 04:55:16",
+                "s.desupported_flag": null,
+                "s.discontinued_flag": null,
+                "s.family": "HealthMatics",
+                "s.is_suite": null,
+                "s.modified_at": "2017-06-01 10:44:00",
+                "s.product": "Office",
+                "s.technopedia_id": "141d9f85-66b2-40a6-8efa-450038c2700c",
+                "s.url": "http://investor.allscripts.com/phoenix.zhtml?c=112727&p=irol-newsArticle&ID=858912&highlight="
+            },
+            {
+                "s.alias": null,
+                "s.cat_sw_product_id": 38814600,
+                "s.component": null,
+                "s.created_at": "2013-01-09 10:00:34",
+                "s.desupported_flag": null,
+                "s.discontinued_flag": null,
+                "s.family": null,
+                "s.is_suite": "FALSE",
+                "s.modified_at": "2014-02-13 21:43:30",
+                "s.product": "Office",
+                "s.technopedia_id": "35785f94-d5e2-4e0b-b2f1-b7e59ecde968",
+                "s.url": "http://www.corel.com/corel/product/index.jsp?pid=prod3430104&cid=catalog50008&segid=692&storeKey=ca&languageCode=en"
             }
-          ],
-          "_fieldLookup": {
-            "n.cat_sw_release_id": 0
-          }
-        }
+        ]
+      {  
+
     title: Example 3
     language: javascript
   - code_block: 
-      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
+      MATCH (n:SOFTWARE_VERSION) WHERE n.version CONTAINS "1.4.2_05" RETURN n.version, n.order LIMIT 5
 
       RESPONSE SAMPLE
+
       {
+        "results": [
+            {
+                "n.order": "66",
+                "n.version": "1.4.2_05"
+            },
+            {
+                "n.order": "21",
+                "n.version": "1.4.2_05"
+            },
+            {
+                "n.order": "84",
+                "n.version": "1.4.2_05"
+            }
+        ]
+      {  
+
     title: Example 4
     language: bash
   - code_block: 
       MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
 
       RESPONSE SAMPLE
+
       {
+        "results": [
+            {
+                "test",
+                "s.test",
+                "s.anything"
+            }
+        ]
+      {  
     title: Example 5
     language: bash
   - code_block: 
       MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
 
-      RESPONSE SAMPLE
-      {
-    title: cURL
+      
+    title: cUrl
     language: bash
     
 right_code_blocks:
@@ -283,7 +369,7 @@ right_code_blocks:
         "message": "Invalid offset"
       }
     title: Error
-    language: json
+    language: bash
 right_code_blocks:
   - code_block: |2
       

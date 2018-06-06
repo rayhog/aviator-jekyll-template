@@ -71,7 +71,7 @@ left_code_blocks:
     title: Example one
     language: javascript
   - code_block: >-
-      https://v6-1.technopedia.com/tql?q= MATCH (s:SOFTWARE_PRODUCT) WHERE s.product CONTAINS "Vagrant Manager" RETURN s
+      MATCH (s:SOFTWARE_PRODUCT) WHERE s.product CONTAINS "Vagrant Manager" RETURN s
 
       RESPONSE SAMPLE
 
