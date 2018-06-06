@@ -6,7 +6,7 @@ description:
 content_markdown: |-
   ###### The CPU model node in the Technopedia database stores information about CPUs, such as the model ID, number or cores, and model information. 
 
-  The CPU_MODEL node is connected to the MANUFACTURER node by a `HAS_A` relationship, which points from the MANUFACTURER to the CPU node.
+  The CPU_MODEL node is connected to the MANUFACTURER node by the `HAS_A` relationship, which points from the MANUFACTURER to the CPU node.
 
   Here's a simple query to return 25 results for CPU models:
 
@@ -29,16 +29,35 @@ content_markdown: |-
 
 left_code_blocks:
   - code_block: |
-      MATCH (n:CPU_MODEL) RETURN n.isa_bit_mode, n.num_threads
+      MATCH (n:CPU_MODEL) RETURN n
 
        RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+                "n.cat_cpu_model_id": 6661614,
+                "n.clockrate": null,
+                "n.cores": "1",
+                "n.created_at": "2009-09-03 08:46:24",
+                "n.isa_bit_mode": null,
+                "n.model": "HyperSPARC Processor 125 MHz (Colorado 2)",
+                "n.modified_at": "2013-08-20 15:36:10",
+                "n.num_threads": "1",
+                "n.technopedia_id": "528bf55b-0127-456a-9da1-87ad36d28246",
+                "n.url": "http://www.sunstuff.org/hardware/mbus/hypersparc.shtml"
+            },
+            {
+                "n.cat_cpu_model_id": 28948499,
+                "n.clockrate": null,
+                "n.cores": "2",
+                "n.created_at": "2012-06-07 08:25:44",
+                "n.isa_bit_mode": null,
+                "n.model": "Core 2 Duo Mobile Processor 1.50 GHz (Merom)",
+                "n.modified_at": "2013-08-20 14:50:42",
+                "n.num_threads": "1",
+                "n.technopedia_id": "ebb37ac5-4ab0-42e6-9024-acff7b16ac28",
+                "n.url": "http://en.wikipedia.org/wiki/List_of_Intel_Core_2_microprocessors"
             }
         ]
       {  
@@ -96,16 +115,51 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:CPU_MODEL)<-[:HAS_A]->(x:MANUFACTURER) RETURN n, x
+      MATCH (h:CPU_MODEL) RETURN h.cores, h.model LIMIT 10
 
        RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+            "h.cores": "1",
+            "h.model": "HyperSPARC Processor 125 MHz (Colorado 2)"
+            },
+            {
+                "h.cores": "2",
+                "h.model": "Core 2 Duo Mobile Processor 1.50 GHz (Merom)"
+            },
+            {
+                "h.cores": "8",
+                "h.model": "Opteron 6134 Processor 2.30 GHz (Magny-Cours)"
+            },
+            {
+                "h.cores": "1",
+                "h.model": "Sempron 2200+ Processor 1.50 GHz (Thorton)"
+            },
+            {
+                "h.cores": "1",
+                "h.model": "Itanium 2 Processor 9110N 1.60 GHz (Montvale)"
+            },
+            {
+                "h.cores": "1",
+                "h.model": "Xeon 3.0E Processor 3.00 GHz (Irwindale)"
+            },
+            {
+                "h.cores": "2",
+                "h.model": "Celeron Processor 2.60 GHz"
+            },
+            {
+                "h.cores": "12",
+                "h.model": "Xeon E7-4830 v3 Processor 2.10 GHz (Haswell-EX)"
+            },
+            {
+                "h.cores": "2",
+                "h.model": "Pentium G860 Processor 3.00 GHz (Sandy Bridge)"
+            },
+            {
+                "h.cores": "4",
+                "h.model": "Core i7 Mobile Processor 1.73 Ghz (Clarksfield)"
             }
         ]
       {  
@@ -115,16 +169,60 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:CPU_MODEL)<-[:HAS_A]-(x:MANUFACTURER)<-[:HAS_A]- RETURN n.cores, x.manufacturer
+      MATCH (h:CPU_MODEL) WHERE h.model CONTAINS "125 MHz" AND h.isa_bit_mode = "32" RETURN h.cores, h.model, h.isa_bit_mode
 
-       RESPONSE SAMPLE
+      RESPONSE SAMPLE
 
       {
         "results": [
+            {   "h.cores": "1",
+                "h.model": "HyperSPARC Processor 125 MHz (Colorado 2)"
+                "h.isa_bit_mode" : "32"
+            },
             {
-                "test",
-                "s.test",
-                "s.anything"
+                "h.cores": "1",
+                "h.model": "HyperSPARC Processor 125 MHz (Colorado 3)"
+                "h.isa_bit_mode" : "32"
+            },
+            {
+                "h.cores": "1",
+                "h.model": "Pentium MMX Processor 125 MHz (P54CTB)"
+                "h.isa_bit_mode" : "32"
+            },
+            {
+                "h.cores": "1",
+                "h.model": "HyperSPARC Processor 125 MHz"
+                "h.isa_bit_mode" : "32"
+            },
+            {
+                "h.cores": "1",
+                "h.model": "RS64 Processor 125 MHz (Apache)"
+                "h.isa_bit_mode" : "32"
+            },
+            {
+                "h.cores": "1",
+                "h.model": "PA-7100 Processor 125 MHz (Thunderbird)"
+                "h.isa_bit_mode" : "32"
+            },
+            {
+                "h.cores": "1",
+                "h.model": "RS64 A25/30 Processor 125 MHz (Muskie)"
+                "h.isa_bit_mode" : "32"
+            },
+            {
+                "h.cores": "1",
+                "h.model": "PA-7150 Processor 125 MHz (Thunderbird)"
+                "h.isa_bit_mode" : "32"
+            },
+            {
+                "h.cores": "1",
+                "h.model": "PA-7150 Processor 125 MHz (Thunderbird)"
+                "h.isa_bit_mode" : "32"
+            },
+            {
+                "h.cores": "1",
+                "h.model": "PA-7100 Processor 125 MHz (Thunderbird)"
+                "h.isa_bit_mode" : "32"
             }
         ]
       {  
@@ -134,16 +232,51 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:HARDWARE_PRODUCT)<-[e:HAS_A]-(o:MANUFACTURER)-[u:HAS_A]-(y:CPU_MODEL) RETURN n, o, y
+      MATCH (h:CPU_MODEL) WHERE h.model  <> "125 MHz"  AND h.model <> "3.00 GHz" RETURN h.cores, h.model LIMIT 10
 
        RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+                "h.cores": "1",
+                "h.model": "HyperSPARC Processor 125 MHz (Colorado 2)"
+            },
+            {
+                "h.cores": "2",
+                "h.model": "Core 2 Duo Mobile Processor 1.50 GHz (Merom)"
+            },
+            {
+                "h.cores": "8",
+                "h.model": "Opteron 6134 Processor 2.30 GHz (Magny-Cours)"
+            },
+            {
+                "h.cores": "1",
+                "h.model": "Sempron 2200+ Processor 1.50 GHz (Thorton)"
+            },
+            {
+                "h.cores": "1",
+                "h.model": "Itanium 2 Processor 9110N 1.60 GHz (Montvale)"
+            },
+            {
+                "h.cores": "1",
+                "h.model": "Xeon 3.0E Processor 3.00 GHz (Irwindale)"
+            },
+            {
+                "h.cores": "2",
+                "h.model": "Celeron Processor 2.60 GHz"
+            },
+            {
+                "h.cores": "12",
+                "h.model": "Xeon E7-4830 v3 Processor 2.10 GHz (Haswell-EX)"
+            },
+            {
+                "h.cores": "2",
+                "h.model": "Pentium G860 Processor 3.00 GHz (Sandy Bridge)"
+            },
+            {
+                "h.cores": "4",
+                "h.model": "Core i7 Mobile Processor 1.73 Ghz (Clarksfield)"
             }
         ]
       {  

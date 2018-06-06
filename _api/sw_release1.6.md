@@ -19,6 +19,7 @@ content_markdown: >-
 
   The software release node connects to the software edtion, software nodes, and support stage nodes by the `HAS_A` relationship.
   The software release and support stage nodes are connected by the 'HAS_A' relationship, which has attributes.
+  <br>
   To access information about a relationship, you assign it an alias, for later reference. 
   You place the alias in front of the colon `-[my_alias:HAS_A]->`
 

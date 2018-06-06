@@ -202,7 +202,7 @@ left_code_blocks:
         ]
       {  
     title: Example five
-    language: json
+    language: javascript
 
   - code_block: |-
       MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" OR s.product = "HealthMatics" RETURN s 

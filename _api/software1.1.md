@@ -10,13 +10,13 @@ content_markdown: |-
   {: .info}
 
   
-  Use a combination of the software nodes with relationships to get the data that you specify in your query. 
+  Use a combination of the software nodes with relationships to query software data in Technopedia. 
   The following diagram shows the software nodes, manufacturer node, and relationships.
   <br>
   ![API Image](/images/node_ex.png){:class="img-responsive"} <br> 
 
   <br>
-  Software is a general classification that can be broken into the following classifications
+  Software is classified by the following nodes:
     * Software Product
     * Software Version
     * Software Version Group
@@ -32,16 +32,37 @@ content_markdown: |-
   `https://v6-1.technopedia.com/tql?q=<MATCH Statement>`
 left_code_blocks:
   - code_block: |
-      MATCH (n:SOFTWARE_PRODUCT)<-[w:HAS_A]-(b:SOFTWARE_VERSION)<-[w:HAS_A]-(z:SOFTWARE_EDITION) RETURN n, b, z
+      MATCH (n:SOFTWARE_PRODUCT)<-[:HAS_A]-(b:SOFTWARE_VERSION)<-[:HAS_A]-(x:SOFTWARE_RELEASE)-[:HAS_A]->(y:SOFTWARE_EDITION) RETURN n.product, b.version, y.edition LIMIT 5
 
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+                
+                "b.version": "4.0",
+                "n.product": "Windows NT",
+                "y.edition": "Server"
+            },
+            {
+                "b.version": "4.0",
+                "n.product": "Windows NT",
+                "y.edition": "Server"
+            },
+            {
+                "b.version": "4.0",
+                "n.product": "Windows NT",
+                "y.edition": "Server"
+            },
+            {
+                "b.version": "3.5",
+                "n.product": "Windows NT",
+                "y.edition": "Server"
+            },
+            {
+                "b.version": "3.51",
+                "n.product": "Windows NT",
+                "y.edition": "Server"
             }
         ]
       {  
@@ -90,34 +111,80 @@ left_code_blocks:
     title: Example 2
     language: javascript
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE) -[:RELEASE_OF]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1
+      MATCH (s:SOFTWARE_PRODUCT)-[:BELONGS_TO]->(cat2:CATEGORY_2) WHERE s.product CONTAINS "Tools" RETURN s.product, cat2.label LIMIT 5
 
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+                "cat2.label": "Accounting",
+                "s.product": "Estate Planning Tools"
+            },
+            {
+                "cat2.label": "PIM & Contact Managers",
+                "s.product": "FaxTools eXPert"
+            },
+            {
+                "cat2.label": "PIM & Contact Managers",
+                "s.product": "Password Recovery Tools"
+            },
+            {
+                "cat2.label": "PIM & Contact Managers",
+                "s.product": "OutlookTools"
+            },
+            {
+                "cat2.label": "PIM & Contact Managers",
+                "s.product": "Java Calendar Tools"
             }
-        ]
+       ]
       {  
 
     title: Example three
     language: javascript
 
   - code_block: |-
-      MATCH (n:SOFTWARE_VERSION)-[:HAS_A]->(j:SOFTWARE_PRODUCT)-[:BELONGS_TO]->(g:CATEGORY_2) RETURN n, j, g
+     MATCH (s:SOFTWARE_PRODUCT)-[:BELONGS_TO]->(b:CATEGORY_2)-[:BELONGS_TO]->(a:CATEGORY_1)-[:BELONGS_TO]->(c:CATEGORY_GROUP) WHERE s.product CONTAINS "Tools" RETURN s.product, b.label, a.label, c.label LIMIT 5
 
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+                "cat1.label": "Product Lifecycle Management (PLM)",
+                "cat2.label": "Product Data Management",
+                "catgroup.label": "Business Applications",
+                "s.product": "Service Desk Knowledge Tools"
+            },
+            {
+                "cat1.label": "Product Lifecycle Management (PLM)",
+                "cat2.label": "Product Data Management",
+                "catgroup.label": "Business Applications",
+                "s.product": "ServicePlus Knowledge Tools"
+            },
+            {
+                "cat1.label": "Product Lifecycle Management (PLM)",
+                "cat2.label": "Product Data Management",
+                "catgroup.label": "Business Applications",
+                "s.product": "Service Desk Knowledge Tools"
+            },
+            {
+                "cat1.label": "Product Lifecycle Management (PLM)",
+                "cat2.label": "Product Data Management",
+                "catgroup.label": "Business Applications",
+                "s.product": "JTB CAD Automation Tools"
+            },
+            {
+                "cat1.label": "Manufacturing Resource Planning (MRP)",
+                "cat2.label": "Plant/Shop Control",
+                "catgroup.label": "Business Applications",
+                "s.product": "PowerTools"
+            },
+            {
+                "cat1.label": "Manufacturing Resource Planning (MRP)",
+                "cat2.label": "Plant/Shop Control",
+                "catgroup.label": "Business Applications",
+                "s.product": "GEM4Tools"
             }
         ]
       {  
@@ -166,6 +233,43 @@ left_code_blocks:
 
     title: Example five
     language: javascript
+  - code_block: |-
+      MATCH (sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(se:SOFTWARE_EDITION)<-[:HAS_A]-(srelease:SOFTWARE_RELEASE) RETURN sp.product, se.edition, srelease.technopedia_id LIMIT 5
+
+      RESPONSE SAMPLE
+
+      {
+        "results": [
+            {
+                "se.edition": "Server",
+                "sp.product": "Windows NT",
+                "srelease.technopedia_id": "6f5a33e3-0cc4-4a39-90b4-4ca8c2d1e488"
+            },
+            {
+                "se.edition": "Server",
+                "sp.product": "Windows NT",
+                "srelease.technopedia_id": "42ec9c15-6fda-4ec4-97dd-a89d454c35a7"
+            },
+            {
+                "se.edition": "Server",
+                "sp.product": "Windows NT",
+                "srelease.technopedia_id": "cdb759aa-4ce7-49cf-b8ee-5a9c9f441d59"
+            },
+            {
+                "se.edition": "Server",
+                "sp.product": "Windows NT",
+                "srelease.technopedia_id": "5cdfbb2e-611f-4f50-abf1-26e7eee235f0"
+            },
+            {
+                "se.edition": "Server",
+                "sp.product": "Windows NT",
+                "srelease.technopedia_id": "9848e1a2-0116-4b62-91da-ee681da8ad1a"
+            }
+        ]
+      {  
+
+    title: Example six
+    language: javascript  
 
   - code_block: |-
       curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:SOFTWARE_PRODUCT) RETURN h.product"
