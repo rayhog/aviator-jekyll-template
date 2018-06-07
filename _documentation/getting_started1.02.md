@@ -9,8 +9,7 @@ content_markdown: >-
   
   
   #### Get an API key<br>
-  #### Get an API key<br>
-    
+     
   Before you can get data from data from the Technopedia database, you must get an API key from Flexera Technopedia support.<br>
   
   #### Making API Requests to Technopedia<br>
