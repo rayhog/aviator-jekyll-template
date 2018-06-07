@@ -58,11 +58,10 @@ content_markdown: |-
   * Nodes are Graph data records that are entities in the graph, such as
   software version or hardware.                 
     
-  * Nodes contain attributes, which are key-value
-  pairs. Attributes are properties of a node that store data in key-value pairs,
-  such as `{title: Excel}` or `{manufacturer: Microsoft}`.
+  * Nodes contain attributes, which provide data in key-value
+  pairs such as `{title: Excel}` or `{manufacturer: Microsoft}`.
 
-  * Nodes are connected by relationships, which help you to query multiple nodes in a single qeury. 
+  * Nodes are connected by relationships that you use to query multiple nodes in a single query. 
 
   ###### The following diagram shows the nodes and relationships in the Technopedia database:
   
@@ -71,7 +70,7 @@ content_markdown: |-
 left_code_blocks:
   - code_block: |-
       GET  https://v6.technopedia.com/tql?q=MATCH <Query Parameters>
-      GET: https://v6.technopedia.com/tql?MATCH (n:SOFTWARE_PRODUCT) RETURN name
+      GET: https://v6.technopedia.com/tql?MATCH (name:SOFTWARE_PRODUCT) RETURN name
 
       GET  https://v6.technopedia.com/technopedia-id/<technopedia_id>
       GET  https://v6.technopedia.com/technopedia-id/4d35ec28-0f16-4787-acca-885679265b59
