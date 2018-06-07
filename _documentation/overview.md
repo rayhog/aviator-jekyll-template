@@ -7,9 +7,7 @@ content_markdown: |-
   ###### The Technopedia version 6 API enables cloud-based access to asset data in Technopedia that provides you with a cloud-first, high-performance resource to manage your assets.
   ###### You can use the API with TQL (Technopedia query language), which is a graph-based query language that you use to query the Technopedia database. Graph databases are designed to process data by using a graph-based methodology, rather than the relational database model.
   <br>
-  ###### You query the Technopedia database by using the graph-based Technopedia query language (TQL) to select nodes and attributes of those nodes to define the criteria for your query and return relevant data. For example, you might query the `SOFTWARE_PRODUCT` node in Technopedia and specify the title attribute because you want to return titles of software products. The following example is a TQL query that returns software titles:
-  <br>
-  `MATCH (s:SOFTWARE_PRODUCT) WHERE product = "Microsoft" RETURN s.product`
+  ###### You query the Technopedia database by using the graph-based Technopedia query language (TQL) to select nodes and attributes of those nodes to define the criteria for your query and return relevant data. 
   <br>
   The following diagram  shows an overview of the Technopedia API and how it queries the Technopedia database.
 
@@ -46,7 +44,7 @@ content_markdown: |-
 
     ![API Image](/images/get_tql.png){: .img-responsive}
 
-  * `https://v6.technopedia.com/technopedia-id/<Technopedia ID.`
+  * `https://v6.technopedia.com/technopedia-id/<Technopedia ID>.`
 
     ###### You provide the Technopedia ID for the product that you're querying to return data for that specific product, as in the following example:
 
@@ -54,19 +52,17 @@ content_markdown: |-
 
   #### Technopedia query language (TQL) graph concepts
 
-  ###### The storage of data in Technopedia involves the following concepts:
+  ###### Data storage in Technopedia involves the following concepts:
 
 
   * Nodes are Graph data records that are entities in the graph, such as
   software version or hardware.                 
     
   * Nodes contain attributes, which are key-value
-  pairs. Attributes are properties of a node and they store data in key-value pairs,
+  pairs. Attributes are properties of a node that store data in key-value pairs,
   such as `{title: Excel}` or `{manufacturer: Microsoft}`.
 
-  * Relationships provide node to node connections. Relationships have a start
-  node, end node, a type, and a direction. For example, the nodes organization and employee
-  might have a relationship in the graph. An example of an relationship might be `Is_Employee_of`, which could be a relationship between employee and organization.
+  * Nodes are connected by relationships, which help you to query multiple nodes in a single qeury. 
 
   ###### The following diagram shows the nodes and relationships in the Technopedia database:
   

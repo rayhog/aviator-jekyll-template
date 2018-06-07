@@ -73,7 +73,7 @@ content_markdown: >-
   <br>
 
   
-   Note: You can only access data from Technopedia nodes that your subscription provides.
+   Note: You can only access data from Technopedia nodes that your subscription allows.
     {: .warning} 
 
   #### Query Examples <br>
