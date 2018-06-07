@@ -1,7 +1,7 @@
 ---
 image: /![API Image](/images/logo.png){:class="img-responsive"}
 title: Authentication
-position: 1.03
+position: 4.5
 description: You must authenticate before you can get data by using the API.
 content_markdown: |-
   ###### The Technopedia Version 6 API uses OAuth for authentication. To authenticate in a new session, you pass the API key in the request header. The API key is provided by Flexera Technopedia support.
@@ -44,9 +44,9 @@ left_code_blocks:
     title: cURL examples
     language: bash
   - code_block: |-
-        GET: https://v6.technopedia.com/tql?q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.name
+        GET: https://v6.technopedia.com/tql?q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.product
 
-        GET: https://v6.technopedia.com/tql?q=MATCH (n:SOFTWARE_PRODUCT) WHERE n.name = "PDF Converter" RETURN n
+        GET: https://v6.technopedia.com/tql?q=MATCH (n:SOFTWARE_PRODUCT) WHERE n.product = "PDF Converter" RETURN n
     title: GET request examples
     language: bash
 right_code_blocks:

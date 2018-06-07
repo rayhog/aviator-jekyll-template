@@ -27,7 +27,7 @@ content_markdown: |-
   `https://v6-1.technopedia.com/tql?q=<MATCH Statement>`
 left_code_blocks:
   - code_block: |
-      https://v6-1.technopedia.com/tql?q=MATCH (n:SOFTWARE_EDITION) RETURN n.edition AS EDITION, n.modified_at AS MODIFIED 
+      MATCH (n:SOFTWARE_EDITION) RETURN n.edition AS EDITION, n.modified_at AS MODIFIED 
 
       RESPONSE SAMPLE
 
@@ -76,7 +76,7 @@ left_code_blocks:
 
       {
         "results": [
-            {
+        {
             "e.cat_sw_edition_id": 1175193,
             "e.created_at": "2007-08-23 15:47:19",
             "e.desupported_flag": null,
