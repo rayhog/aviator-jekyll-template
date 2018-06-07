@@ -7,8 +7,7 @@ content_markdown: >-
   ###### Access Technopedia data by using the Technopedia API.
   Technopedia endpoints enable to you to use the Technopedia ID endpoint to get product information for a specific product by specifying the Technopedia ID, and to use the Technopedia query language (TQL) with the TQL endpoint to form custom queries that query data from the Technopedia database.<br>
   <br>
-  #### 
-  Get your API key<br>
+  #### Get your API key<br>
 
   Before you can get data from data from the Technopedia database, you must get an API key from Flexera Technopedia support.<br>
   
