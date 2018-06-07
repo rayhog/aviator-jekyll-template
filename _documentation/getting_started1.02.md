@@ -8,6 +8,9 @@ content_markdown: >-
   Technopedia endpoints enable to you to use the Technopedia ID endpoint to get product information for a specific product by specifying the Technopedia ID, and to use the Technopedia query language (TQL) with the TQL endpoint to form custom queries that query data from the Technopedia database.<br>
   <br>
   <br>
+  #### Get your API key<br>
+
+  Before you can get data from data from the Technopedia database, you must get an API key from Flexera Technopedia support.<br>
   
   #### Making API Requests to Technopedia<br>
 
@@ -15,7 +18,7 @@ content_markdown: >-
   The base URL for all API queries is `https://v6-1.technopedia.com/`
   <br>
   
-    Note: Typically, cURL is preinstalled on Mac and Linux computers, and Windows users must install cURL. <br>
+    Typically, cURL is preinstalled on Mac and Linux computers, and Windows users must install cURL. <br>
     {: .info}
 
   For example, the following example is a cURL query: <br>
@@ -29,10 +32,7 @@ content_markdown: >-
   ![API Image](/images/bearer_token.png){: .img-responsive}<br>
     
  
-  #### Get your API key<br>
-
-  Before you can get data from data from the Technopedia database, you must get an API key from Flexera Technopedia support.<br>
-
+  
   #### Methods<br>
 
   You can only make API GET requests to the Technopedia database.<br>
