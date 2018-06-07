@@ -204,7 +204,7 @@ left_code_blocks:
         ]
       {  
 
-    title: Example 1
+    title: Example one
     language: javascript
   - code_block: >-
       MATCH (aliasx:HARDWARE_PRODUCT) RETURN aliasx.product, aliasx.modified_at LIMIT 10
@@ -254,7 +254,7 @@ left_code_blocks:
             }
         ]
       {  
-    title: Example 2
+    title: Example two
     language: javascript
   - code_block: |-
       MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" OR s.product="HealthMatics" RETURN s LIMIT 2 
@@ -295,7 +295,7 @@ left_code_blocks:
         ]
       {  
 
-    title: Example 3
+    title: Example three
     language: javascript
   - code_block: 
       MATCH (n:SOFTWARE_VERSION) WHERE n.version CONTAINS "1.4.2_05" RETURN n.version, n.order LIMIT 5
@@ -319,7 +319,7 @@ left_code_blocks:
         ]
       {  
 
-    title: Example 4
+    title: Example four
     language: bash
   - code_block: 
       MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
@@ -335,18 +335,18 @@ left_code_blocks:
             }
         ]
       {  
-    title: Example 5
+    title: Example five
     language: bash
   - code_block: 
       MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
 
       
-    title: cUrl
+    title: cURL
     language: bash
     
 
 right_code_blocks:
-  - code_block: |-
+  - code_block: |2
       
       MATCH (alias1.NODE) RETURN alias1 
       MATCH (n:SOFTWARE_PRODUCT) RETURN n 
