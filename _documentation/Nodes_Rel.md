@@ -4,13 +4,15 @@ position: 1.04
 type:
 description: >-  
 content_markdown: >-
-  ###### You query data that is stored in Technopedia by referencing nodes, relationships, or Technopedia IDs.
+  ###### You access data in Technopedia by referencing nodes, relationships, or Technopedia IDs in the Technopedia graph.
 
   #### Technopedia ID
 
   ######
   You can use an API GET request for product information in Technopedia by referencing the Technopedia ID.
   You specify the Technopedia ID as a parameter for the Technopedia-id TQL endpoint. <br>
+  Here's an example:
+
   
   #### About Nodes in Technopedia
   
@@ -71,7 +73,7 @@ content_markdown: >-
   <br>
 
   
-   Note: You can only access and view data for the Technopedia nodes that inlcluded in your subscription.
+   Note: You can only access data from Technopedia nodes that your subscription provides.
     {: .warning} 
 
   #### Query Examples <br>
