@@ -6,8 +6,8 @@ description:
 content_markdown: >-
   ###### Access Technopedia data by using the Technopedia API.
   Technopedia endpoints enable to you to use the Technopedia ID endpoint to get product information for a specific product by specifying the Technopedia ID, and to use the Technopedia query language (TQL) with the TQL endpoint to form custom queries that query data from the Technopedia database.<br>
-  
-
+  <br>
+  <br>
   
   #### Making API Requests to Technopedia<br>
 
@@ -15,11 +15,11 @@ content_markdown: >-
   The base URL for all API queries is `https://v6-1.technopedia.com/`
   <br>
   
-    Note: Typically, cURL is preinstalled on Mac and Linux computers, and Windows users most likely have to install cURL. <br>
+    Note: Typically, cURL is preinstalled on Mac and Linux computers, and Windows users must install cURL. <br>
     {: .info}
 
   For example, the following example is a cURL query: <br>
-  `curl -G -H "Authorization: Bearer <API_KEY>" https://v6-1.technopedia.com/tql" --data-urlencode "q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.title"`<br>
+  `curl -G -H "Authorization: Bearer <API_KEY>" https://v6-1.technopedia.com/tql" --data-urlencode "q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.product"`<br>
   
   <br>
   Examples of API GET requests, and MATCH statements which are used to form the query statment are provided throughout this guide. 
