@@ -14,11 +14,11 @@ content_markdown: >-
   For example, `https://v6.technopedia.com/tql?q=MATCH <query_parameters>`
   <br>
   
-  The TQL MATCH statement returns results from one or more nodes and relationships that are specified in the query. Typically, the data results are returned in key-value pairs, in a format that resembles the format in the following key-value pair:
-  <br>
+  The TQL MATCH statement returns results from one or more nodes and relationships that are specified in the query. Typically, the data results are returned in key-value pairs, in a format that resembles the format in the following key-value pair: <br>
+  
   `{"Manufacturer": "Microsoft"}`
 
-   <br>
+  <br>
 
   The following diagram shows an example of nodes and relationships in Technopedia:
   <br>
@@ -164,7 +164,7 @@ content_markdown: >-
   
 
 left_code_blocks:
-  - code_block: |
+  - code_block: |-
       MATCH (n:MANUFACTURER) RETURN n LIMIT 1
       
       RESPONSE SAMPLE
