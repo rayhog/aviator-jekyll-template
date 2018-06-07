@@ -41,7 +41,9 @@ content_markdown: >-
 
   For the Technopedia-id endpoint, you provide the Technopedia ID parameter.<br>
   For the TQL endpoint, you provide MATCH statements with parameters that specify nodes, attributes, and relationships between nodes which are optional.
-
+  
+  #### Authentication<br>
+  
   ###### The Technopedia Version 6 API uses OAuth for authentication. To authenticate in a new session, you pass the API key in the request header. The API key is provided by Flexera Technopedia support.
 
   In the following examples, an API key example is used in a cURL example and in the Postman API client. The key `Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a` is used in both examples.
@@ -54,6 +56,7 @@ content_markdown: >-
    {: .success}
 
   Use the `--data-urlencode` option in the cURL command to encode spaces.<br>
+  
   
   The following example shows where you add the API key to the header of a GET request in the Postman API client:<br>
   <br>
