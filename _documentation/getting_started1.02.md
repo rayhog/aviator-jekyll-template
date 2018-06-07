@@ -11,11 +11,12 @@ content_markdown: >-
   
   #### API Requests to Technopedia<br>
 
-  Make API requests by using cURL or a third-party API client.
   You can use cURL or a third-party API client to get data from the Technopedia database.
   The base URL for all API queries is `https://v6-1.technopedia.com/`
   <br>
-  Typically, cURL is preinstalled on Mac and Linux computers, and Windows users most likely have to install cURL. 
+    Note: Typically, cURL is preinstalled on Mac and Linux computers, and Windows users most likely have to install cURL. <br>
+    {: .info}
+    
   For example, the following example is a cURL query: <br>
   `curl -G -H "Authorization: Bearer <API_KEY>" https://v6-1.technopedia.com/tql" --data-urlencode "q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.title"`<br>
   
