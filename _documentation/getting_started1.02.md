@@ -6,7 +6,7 @@ description:
 content_markdown: >-
   ###### Access Technopedia data by using the Technopedia API.
   Technopedia endpoints enable to you to use the Technopedia ID endpoint to get product information for a specific product by specifying the Technopedia ID, and to use the Technopedia query language (TQL) with the TQL endpoint to form custom queries that query data from the Technopedia database.<br>
-  
+  <br>
   
   #### Get an API key<br>
      
@@ -70,7 +70,7 @@ left_code_blocks:
 
       curl -G -H "Authorization: Bearer b93477a9-054b-4878-a16f-d7fdd1f27a7a" "https://v6-1.technopedia.com/tql" --data-urlencode "q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.product"
         
-    title: Authentication example
+    title: cURL authentication examples
     language: bash
     
 right_code_blocks:
@@ -79,7 +79,7 @@ right_code_blocks:
 
       Example:
 
-      curl -G -H "Authorization: Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a" "https://v6-1.technopedia.com/<endpoint>
+      curl -G -H "Authorization: Bearer b93477a9-054b-4878-a16f-d7f5d17a7a" "https://v6-1.technopedia.com/<endpoint>
         
     title: Authentication
     language: bash

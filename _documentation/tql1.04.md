@@ -32,6 +32,14 @@ content_markdown: |-
 
   #### Overview of creating a MATCH query<br>
 
+
+  The following diagram shows a basic overview of creating a query:
+  <br>
+  
+  ![API Image](/images/match.png)<br>&nbsp;
+  <br>  
+  
+
   <br>
   To create a MATCH statement you must identify the nodes that store the infromaiton you require, and use the following guide to help you to build your query:
 
