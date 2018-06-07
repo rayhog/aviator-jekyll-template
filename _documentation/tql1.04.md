@@ -206,7 +206,7 @@ left_code_blocks:
 
     title: Example one
     language: javascript
-  - code_block: >-
+  - code_block: |-
       MATCH (aliasx:HARDWARE_PRODUCT) RETURN aliasx.product, aliasx.modified_at LIMIT 10
       RESPONSE SAMPLE
 
@@ -297,7 +297,7 @@ left_code_blocks:
 
     title: Example three
     language: javascript
-  - code_block: 
+  - code_block: |-
       MATCH (n:SOFTWARE_VERSION) WHERE n.version CONTAINS "1.4.2_05" RETURN n.version, n.order LIMIT 5
 
       RESPONSE SAMPLE
@@ -320,8 +320,8 @@ left_code_blocks:
       {  
 
     title: Example four
-    language: bash
-  - code_block: 
+    language: javascript
+  - code_block: |-
       MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
 
       RESPONSE SAMPLE
@@ -337,7 +337,7 @@ left_code_blocks:
       {  
     title: Example five
     language: bash
-  - code_block: 
+  - code_block: |-
       MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
 
       
