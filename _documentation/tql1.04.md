@@ -14,21 +14,21 @@ content_markdown: |-
   For example, `https://v6.technopedia.com/tql?q=MATCH <query_parameters>`
   <br>
   
-  The TQL MATCH statement returns results from one or more nodes and relationships that are specified in the query. Typically, the data results are returned in key-value pairs, in a format that resembles the format in the following key-value pair: <br>
+  The TQL MATCH statement returns results from one or more nodes and relationships that are specified in the query. Typically, the data results are returned in key-value pairs, which is a format that resembles the folloiwng format: <br>
   
   `{"Manufacturer": "Microsoft"}`
 
   <br>
 
-  The following diagram shows an example of nodes and relationships in Technopedia:
+  The following TQL query shows the part of a MATCH statement that is used to query the database:
   <br>
   
-
-  ![API Image](/images/examples.node.png)<br>&nbsp;
+ ![API Image](/images/tql_query.png)<br>&nbsp;
   <br>  
   To get data from a specific node or relationship, you use an alias or variable that you append to the node or relationship. That alias is bound to that node or relationship so you can use that alias in the Return clause of the MATCH query to get specific data from that node or alias. For example,<br>
   `Match (myalias:node)-[another_alias:RELATIONSHIP]`
   <br>
+  
 
   #### Overview of creating a MATCH query<br>
 
@@ -166,7 +166,7 @@ content_markdown: |-
 
 
  
-  To use the MATCH statements in the following examples, you append the MATCH statement to the following tql endpoint and run a GET request from a API client or use cURL. <br>
+  To use the MATCH statements in the following examples, you append the MATCH statement to the following tql endpoint and make a GET request from a API client or use cURL. <br>
   <br>
   `https://v6-1.technopedia.com/tql?q=<MATCH Statement>`
   
@@ -357,22 +357,36 @@ right_code_blocks:
   - code_block: |2
       
       MATCH (alias1.NODE) RETURN alias1 
-      MATCH (n:SOFTWARE_PRODUCT) RETURN n 
 
-      MATCH (alias.NODE) RETURN alias.attribute 
-      MATCH (n:SOFTWARE_PRODUCT) RETURN n.name 
+      MATCH (s:SOFTWARE_PRODUCT) RETURN s
+      
 
-      MATCH (alias2.NODE) RETURN alias2 
+      MATCH (alias.NODE) RETURN alias.attribute
+      
+      MATCH (s:SOFTWARE_PRODUCT) RETURN s.product 
+      MATCH (s:SOFTWARE_PRODUCT) RETURN s.technopedia_id
+      MATCH (s:SOFTWARE_PRODUCT) RETURN s.technopedia_id, s.product
+      MATCH (s:SOFTWARE_PRODUCT) RETURN s.technopedia_id, s.is_suite    
+ 
+
+
+      MATCH (alias2.NODE) RETURN alias2
+
       MATCH (s:SOFTWARE_RELEASE) RETURN s 
+
 
       MATCH (alias.NODE) RETURN alias.attribute 
       MATCH (s:SOFTWARE_RELEASE) RETURN s.version 
       
+
       MATCH (alias3.NODE) RETURN alias3 
       MATCH (n:MANUFACTURER) RETURN n
 
+
       MATCH (alias4.NODE) RETURN alias4.attribute
       MATCH (n:MANUFACTURER) RETURN n.manufactuer 
+
+      MATCH (s:SOFTWARE_PRODUCT) RETURN s.technopedia_id, s.product
 
            
     title: MATCH statements
