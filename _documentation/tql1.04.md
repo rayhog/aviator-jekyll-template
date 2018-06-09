@@ -23,7 +23,7 @@ content_markdown: |-
   The following TQL query shows the part of a MATCH statement that is used to query the database:
   <br>
   
- ![API Image](/images/tql_query.png)<br>&nbsp;
+  ![API Image](/images/tql_query.png)<br>&nbsp;
   <br>  
   To get data from a specific node or relationship, you use an alias or variable that you append to the node or relationship. That alias is bound to that node or relationship so you can use that alias in the Return clause of the MATCH query to get specific data from that node or alias. For example,<br>
   `Match (myalias:node)-[another_alias:RELATIONSHIP]`
