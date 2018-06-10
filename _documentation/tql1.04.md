@@ -54,7 +54,7 @@ content_markdown: |-
 
    1.	Select the Nodes that you want to use in your query.<br>
    2.	Identify the node attributes that store the information you require.<br>
-   3.	Select any relationships to connect nodes that hold your required data.<br>
+   3.	Select any relationships to connect to nodes that hold your required data.<br>
    4.	Write your MATCH statement
 
   <br>
@@ -62,10 +62,13 @@ content_markdown: |-
   <br>
   <b>Objective:</b> To find software that is named Adobe.<br>
 
-    * The Software Product node has an attribute called name.<br>
-    * We use MATCH to select the `SOFTWARE_PRODUCT` node and the `name` attribute to filter for Adobe.<br>
-    * View the list of attributes that you can use on the Software Product page.<br>
-    * Use the WHERE clause with the equals operator to specify condition `name = "Adobe"`.<br>
+    * The Software Product node has an attribute called product.<br>
+    * We use MATCH to select the `SOFTWARE_PRODUCT` node and the `product` attribute to filter for Adobe.<br>
+    * View the list of attributes that you can use on the Software Product page, or you use the following MATCH statement 
+      with the `/tql` endpoint to view a list of attributes for the `SOFTWARE_PRODUCT` node.
+      `MATCH(x:SOFTWARE_PRODUCT) RETURN x`
+      <br>
+    * Use the WHERE clause with the equals operator to specify the condition `product = "Adobe"`.<br>
   <br>
   `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Adobe" Return s`
 
