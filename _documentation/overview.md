@@ -70,7 +70,7 @@ content_markdown: |-
 left_code_blocks:
   - code_block: |-
       GET  https://v6.technopedia.com/tql?q=MATCH <Query Parameters>
-      GET: https://v6.technopedia.com/tql?MATCH (name:SOFTWARE_PRODUCT) RETURN name
+      GET: https://v6.technopedia.com/tql?MATCH (abc:SOFTWARE_PRODUCT) RETURN abc
 
       GET  https://v6.technopedia.com/technopedia-id/<technopedia_id>
       GET  https://v6.technopedia.com/technopedia-id/4d35ec28-0f16-4787-acca-885679265b59

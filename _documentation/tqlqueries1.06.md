@@ -3,9 +3,9 @@ title: TQL Queries
 position: 1.06
 type:
 description:
-  For many TQL queries, the construction becomes more complex when you have to get data from multiple nodes by building relationships into the query.
+  TQL queries can be a simple query on a single node or you might need to add multiple relationships to get data from multiple nodes. For many TQL queries, you have to use relationships to query several Technopedia nodes. Relationships might seem complex but their function is mainly to connect nodes.
 content_markdown: |-
-  ###### Because TQL is a declarative query language, it allows you build your query criteria by using nodes, relationships, and attributes.
+  ###### Because TQL is a declarative query language, it allows you build your query with multiple nodes, relationships, and attributes.
 
 
   #### Building relationships in a query<br>

@@ -95,6 +95,7 @@ left_code_blocks:
   - code_block: |-
       MATCH (n:MANUFACTURER)<-[:HAS_A]-(p:SOFTWARE_PRODUCT)<-[:HAS_A]-(my_alias:SOFTWARE_VERSION) RETURN n, my_alias LIMIT 2
 
+      
       RESPONSE SAMPLE
 
       {
