@@ -3,7 +3,8 @@ title: TQL
 position: 1.05
 type:
 description:
-  The Technopedia query language (TQL) is used with the TQL endpoint to query data in the Technopedia database. TQL is the graph-query language that you use to query the database. The graph database stores connections between nodes as first-class citizens so it doesn't have to compute relationships at query time, which makes it more efficient than a relational database.
+  The Technopedia query language (TQL) is used with the TQL endpoint to query data in the Technopedia database. <br>
+  TQL is the graph-query language that you use to query the database. The graph database stores connections between nodes as first-class citizens so it doesn't have to compute relationships at query time, which makes it more efficient than a relational database.
 content_markdown: |-
   ###### TQL is a declarative query language that allows you to specify what data you want to retrieve by using the query language to query nodes and relationships in the Technopedia database.
 
@@ -14,13 +15,15 @@ content_markdown: |-
   For example, `https://v6.technopedia.com/tql?q=MATCH <query_parameters>`
   <br>
   
-  The TQL MATCH statement returns results from one or more nodes and relationships that are specified in the query. Typically, the data results are returned in key-value pairs, which is a format that resembles the folloiwng format: <br>
+  The TQL MATCH statement returns results from one or more nodes and relationships that are specified in the query. Typically, the query results are returned in key-value pairs, which resembles the following format: <br>
+   <br>
   
-  `{"Manufacturer": "Microsoft"}`
+  ![API Image](/images/results.png)<br>&nbsp;
+  <br>  
 
   <br>
 
-  The following TQL query shows the part of a MATCH statement that is used to query the database:
+  The following TQL query shows the parts of a MATCH statement that you use to query the database:
   <br>
   
   ![API Image](/images/tql_query.png)<br>&nbsp;
