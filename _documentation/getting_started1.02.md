@@ -24,9 +24,7 @@ content_markdown: >-
   For example, the following example is a cURL query: <br>
   `curl -G -H "Authorization: Bearer <API_KEY>" https://v6-1.technopedia.com/tql" --data-urlencode "q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.product"`<br>
   
-  <br>
-  Examples of API GET requests, and MATCH statements which are used to form the query statment are provided throughout this guide. 
-  
+   
   You can also use a third-party API client, such as Postman to send API requests as shown in the following image.<br>
   <br>
   ![API Image](/images/bearer_token.png){: .img-responsive}<br>

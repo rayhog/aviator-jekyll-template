@@ -22,11 +22,6 @@ content_markdown: |-
   <br>  
  
 
-  To get data from a specific node or relationship, you use an alias or variable that you append to the node or relationship. TQL binds the alias that you specify to that node or relationship so you can use that alias in the Return clause of the MATCH query to get your specific data.
-  <br>
-  `Match (myalias:node1)-[another_alias:RELATIONSHIP]->(other_alias:node2)`
-  <br>
-  `MATCH (aliasX:MANUFACTURER)-[aliasV:VENDOR_OF]->(aliasY:SOFTWARE_PRODUCT) RETURN aliasX, aliasY`
   
   <br>
   
@@ -34,11 +29,7 @@ content_markdown: |-
   #### Overview of creating a MATCH query<br>
 
 
-  The following diagram shows a basic overview of creating a query:
-  <br>
   
-  ![API Image](/images/match.png)<br>&nbsp;
-  <br>  
   
 
   <br>
@@ -118,51 +109,7 @@ content_markdown: |-
 
   #### TQL Keywords<br>
 
-  You use the following keywords in your MATCH statements to filter data that is returned from your TQL query:
-
-  * WHERE <br>
-  Use the WHERE condition to filter results. <br>
-  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office"  RETURN s` <br>
-  Return software products where the name field is equal to 'Office'. <br>
-
-  * AND <br>
-  Use the AND clause to add an addtional filter.<br>
-  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" AND s.family = "HealthMatics"  RETURN s` <br>
-  Return software products where name is Office and the family is HealthMatics. <br>
-
-  * OR <br>
-  Use the OR clause to  return either one of two condtions. <br>
-  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" OR s.product = "HealthMatics" RETURN s ` <br>
-  Return software products where product name is Office or HealthMatics. <br>
-  
-  * LIMIT <br>
-  Limit the number of results that are returned by specifiying a number with the LIMIT clause. <br>
-  
-  `MATCH (s:SOFTWARE_PRODUCT) RETURN s LIMIT 5` <br>
-
-  * CONTAINS <br>
-  Use the CONTAINS clause to search for works that are contained within attribues. <br>
-  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name CONTAINS "Microsoft" RETURN s` <br>
-
-  * DISTINCT <br>
-  Return distinct records only. <br>
-  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name = "Microsoft Exchange Server Monitor" RETURN DISTINCT s` <br>
-
-  * COUNT <br>
-  Return count of records. <br>
-  `MATCH (s:SOFTWARE_PRODUCT) RETURN count(*)` <br>
-
-  * AS <br>
-  Return output as another name. <br>
-  `MATCH (n:SOFTWARE_EDITION) RETURN n.edition as ED, n.modified_at as MOD` <br>
-
-  * Operators <br>
-  `=` equals <br>
-  `<>` not equal to <br>
-  `>` greater than <br>
-  `<` less than <br>
-  `>=` greater than or equals <br>
-  `<=` less than or equals <br>
+ 
 
 
 
@@ -393,18 +340,39 @@ right_code_blocks:
       MATCH (s:SOFTWARE_PRODUCT) RETURN s.technopedia_id, s.product
 
            
-    title: MATCH statements
+    title: MATCH Statements
     language: bash
   - code_block: |2-
-      MATCH
+      
       WHERE
+      Return software products where the name field is equal to ‘Office’.
+      MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office"  RETURN s
+
       AND
+      Return software products where name is Office and the family is HealthMatics. 
+      MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" AND s.family = "HealthMatics" RETURN s 
+           
       OR
+      Return software products where product name is Office or HealthMatics. 
+      MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" OR s.product = "HealthMatics" RETURN s 
+            
       COUNT
-      DISTINCT 
+      Return count of records. 
+      MATCH (s:SOFTWARE_PRODUCT) RETURN count(*) 
+
+      DISTINCT
+      Return distinct records only. 
+      MATCH (s:SOFTWARE_PRODUCT) WHERE s.name = "Microsoft Exchange Server Monitor" RETURN DISTINCT s 
+      
       CONTAINS
+      Use the CONTAINS clause to search for works that are contained within attribues. 
+      MATCH (s:SOFTWARE_PRODUCT) WHERE s.name CONTAINS "Microsoft" RETURN s 
+
       AS
+      Return output as another name. 
+      MATCH (n:SOFTWARE_EDITION) RETURN n.edition as ED, n.modified_at as MOD
+
       Operators =, <>, >, <, >=, <=
-    title: TQL Clauses and Operators
+    title: TQL Clauses and examples
     language: bash
 ---
