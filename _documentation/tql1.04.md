@@ -150,7 +150,6 @@ content_markdown: |-
   
   * LIMIT <br>
   Limit the number of results that are returned by specifiying a number with the LIMIT clause. <br>
-  
   `MATCH (s:SOFTWARE_PRODUCT) RETURN s LIMIT 5` <br>
 
   * CONTAINS <br>
@@ -373,36 +372,49 @@ left_code_blocks:
 right_code_blocks:
   - code_block: |2
       
-      MATCH (alias1.NODE) RETURN alias1 
-
-      MATCH (s:SOFTWARE_PRODUCT) RETURN s
+      Query syntax:
+      MATCH (alias.NODE) RETURN alias
       
-
+      Example:
+      MATCH (s:SOFTWARE_PRODUCT) RETURN s
+      ___________________________________
+      
+      Query syntax:
       MATCH (alias.NODE) RETURN alias.attribute
       
+      Examples:
       MATCH (s:SOFTWARE_PRODUCT) RETURN s.product 
       MATCH (s:SOFTWARE_PRODUCT) RETURN s.technopedia_id
       MATCH (s:SOFTWARE_PRODUCT) RETURN s.technopedia_id, s.product
-      MATCH (s:SOFTWARE_PRODUCT) RETURN s.technopedia_id, s.is_suite    
+      MATCH (s:SOFTWARE_PRODUCT) RETURN s.technopedia_id, s.is_suite  
+      ______________________________________________________________  
  
 
-
-      MATCH (alias2.NODE) RETURN alias2
-
-      MATCH (s:SOFTWARE_RELEASE) RETURN s 
-
-
-      MATCH (alias.NODE) RETURN alias.attribute 
-      MATCH (s:SOFTWARE_RELEASE) RETURN s.version 
+      Query syntax:
+      MATCH (alias.NODE) RETURN alias
       
+      Example:
+      MATCH (s:SOFTWARE_RELEASE) RETURN s
+      ___________________________________ 
 
-      MATCH (alias3.NODE) RETURN alias3 
-      MATCH (n:MANUFACTURER) RETURN n
+      Query syntax:
+      MATCH (alias.NODE) RETURN alias.attribute 
+      
+      Example:
+      MATCH (s:SOFTWARE_RELEASE) RETURN s.version 
+      ___________________________________________
+      
+      Query syntax:
+      MATCH (alias.NODE) RETURN alias
+      
+      Example:
+      MATCH (n:CPU_MODEL) RETURN n
+      ____________________________
 
-
-      MATCH (alias4.NODE) RETURN alias4.attribute
-      MATCH (n:MANUFACTURER) RETURN n.manufactuer 
-
+      Query syntax:
+      MATCH (alias.NODE) RETURN alias.attribute
+      
+      Example:
       MATCH (s:SOFTWARE_PRODUCT) RETURN s.technopedia_id, s.product
 
            
