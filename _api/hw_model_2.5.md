@@ -2,12 +2,21 @@
 title: Hardware Model
 position: 2.3
 type: 
-description: The hardware model node defines information about the model, such as dimensions and other general specifications 
+description: The hardware model node defines information about the model, such as dimensions and other general specifications. The hardware model
+  has a relationship with the hardware product, which you can use to get more information about hardware.
+   
 content_markdown: |-
+  The example qeury returns all hardware models.
+  
   `MATCH (a:HARDWARE_MODEL) RETURN a.model`
   {: .info}
   
   <br>
+  You can get manufacturer data for the hardware model by using the relationships to connect to that node.
+  For example, the following query returns five results that include the model, product, and manufacturer.
+  <br>
+  `MATCH (hw_mod:HARDWARE_MODEL)-[:HAS_A]->(hw_prod:HARDWARE_PRODUCT)-[:HAS_A]->(manu:MANUFACTURER) RETURN hw_mod.model, hw_prod.product, manu.manufacturer LIMIT 5`
+  
   <br> 
   The following diagram shows hardware nodes and related software nodes.  
   
@@ -63,39 +72,36 @@ left_code_blocks:
 
     
   - code_block: >-
-      MATCH (hw_mod:HARDWARE_MODEL)-[:HAS_A]->(hw_prod:HARDWARE_PRODUCT)[:HAS_A]->(manu:MANUFACTURER) RETURN hw_mod, hw_prod, manu
+      MATCH (hw_mod:HARDWARE_MODEL)-[:HAS_A]->(hw_prod:HARDWARE_PRODUCT)-[:HAS_A]->(manu:MANUFACTURER) RETURN hw_mod.model, hw_prod.product, manu.manufacturer LIMIT 5
          
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "n.cpu_sockets": 1,
-                "n.model": "24663K0"
+                "hw_mod.model": "A1080a-S",
+                "hw_prod.product": "Express5800/A1080a Series",
+                "manu.manufacturer": "NEC"
             },
             {
-                "n.cpu_sockets": 1,
-                "n.model": "10AC002CUM"
+                "hw_mod.model": "A1080a-E",
+                "hw_prod.product": "Express5800/A1080a Series",
+                "manu.manufacturer": "NEC"
             },
             {
-                "n.cpu_sockets": 1,
-                "n.model": "4284GQ5"
+                "hw_mod.model": "A1080a-D",
+                "hw_prod.product": "Express5800/A1080a Series",
+                "manu.manufacturer": "NEC"
             },
             {
-                "n.cpu_sockets": 1,
-                "n.model": "4180D57"
+                "hw_mod.model": "3125N",
+                "hw_prod.product": "Phaser 3125 (Networked)",
+                "manu.manufacturer": "Xerox"
             },
             {
-                "n.cpu_sockets": 1,
-                "n.model": "4177RL9"
-            },
-            {
-                "n.cpu_sockets": 1,
-                "n.model": "23943S3"
-            },
-            {
-                "n.cpu_sockets": 1,
-                "n.model": "17-f110nr"
+                "hw_mod.model": "3125V_N",
+                "hw_prod.product": "Phaser 3125 (Networked)",
+                "manu.manufacturer": "Xerox"
             }
         ]
       {  
@@ -109,26 +115,26 @@ left_code_blocks:
 
       {
         "results": [
-            {
-                "mod.model": "A1080a-S",
-                "prod.product": "Express5800/A1080a Series"
-            },
-            {
-                "mod.model": "A1080a-E",
-                "prod.product": "Express5800/A1080a Series"
-            },
-            {
-                "mod.model": "A1080a-D",
-                "prod.product": "Express5800/A1080a Series"
-            },
-            {
-                "mod.model": "WAP-4000A",
-                "prod.product": "54/108Mbps Wireless Access Point"
-            },
-            {
-                "mod.model": "FI9903P",
-                "prod.product": "Outdoor Waterproof IP66 H.264 1080P PnP IP Camera"
-            }
+                {
+                    "mod.model": "A1080a-S",
+                    "prod.product": "Express5800/A1080a Series"
+                },
+                {
+                    "mod.model": "A1080a-E",
+                    "prod.product": "Express5800/A1080a Series"
+                },
+                {
+                    "mod.model": "A1080a-D",
+                    "prod.product": "Express5800/A1080a Series"
+                },
+                {
+                    "mod.model": "WAP-4000A",
+                    "prod.product": "54/108Mbps Wireless Access Point"
+                },
+                {
+                    "mod.model": "FI9903P",
+                    "prod.product": "Outdoor Waterproof IP66 H.264 1080P PnP IP Camera"
+                }
         ]
       {  
 

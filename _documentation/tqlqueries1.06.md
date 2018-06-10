@@ -361,15 +361,15 @@ right_code_blocks:
       MATCH (s:SOFTWARE_PRODUCT) RETURN count(*) 
 
       DISTINCT
-      Return distinct records only. 
-      MATCH (s:SOFTWARE_PRODUCT) WHERE s.name = "Microsoft Exchange Server Monitor" RETURN DISTINCT s 
+      Return distinct records only, which don't show duplicates.
+      MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Microsoft Exchange Server Monitor" RETURN DISTINCT s 
       
       CONTAINS
-      Use the CONTAINS clause to search for works that are contained within attribues. 
-      MATCH (s:SOFTWARE_PRODUCT) WHERE s.name CONTAINS "Microsoft" RETURN s 
+      Use the CONTAINS clause to return results when an attribute word value is matched. 
+      MATCH (s:SOFTWARE_PRODUCT) WHERE s.product CONTAINS "Microsoft" RETURN s 
 
       AS
-      Return output as another name. 
+      Return output parameter as another name. 
       MATCH (n:SOFTWARE_EDITION) RETURN n.edition as ED, n.modified_at as MOD
 
       Operators =, <>, >, <, >=, <=

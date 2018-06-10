@@ -153,12 +153,12 @@ content_markdown: |-
   `MATCH (s:SOFTWARE_PRODUCT) RETURN s LIMIT 5` <br>
 
   * CONTAINS <br>
-  Use the CONTAINS clause to search for works that are contained within attribues. <br>
-  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name CONTAINS "Microsoft" RETURN s` <br>
+  Use the CONTAINS clause to search for words that are contained within an attribute field. <br>
+  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product CONTAINS "Microsoft" RETURN s` <br>
 
   * DISTINCT <br>
   Return distinct records only. <br>
-  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.name = "Microsoft Exchange Server Monitor" RETURN DISTINCT s` <br>
+  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Microsoft Exchange Server Monitor" RETURN DISTINCT s` <br>
 
   * COUNT <br>
   Return count of records. <br>

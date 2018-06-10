@@ -2,7 +2,7 @@
 title: Manufacturer
 position: 2.1
 type: 
-description: The manufacturer is the creator of the product and in relationships the manufacturer is referred as `HAS_A`, for example, Microsoft is the manufacturer of, or it `HAS_A` a software product called Microsoft Word, and Adobe is the manufacturer of, or it `HAS_A` software product called Adobe Photoshop.
+description: The manufacturer is the creator of the product and in relationships between nodes the manufacturer is referred by the `HAS_A` relationship, for example,  the software product known as Microsoft Word has a manufacturer called Microsoft.
 content_markdown: |-
   The manufacturer node has many attributes; the following attributes are popular attributes: 
   * `manufacturer` provides the name of the manufacturer.
@@ -95,7 +95,7 @@ left_code_blocks:
   - code_block: |-
       MATCH (n:MANUFACTURER)<-[:HAS_A]-(p:SOFTWARE_PRODUCT)<-[:HAS_A]-(my_alias:SOFTWARE_VERSION) RETURN n, my_alias LIMIT 2
 
-      
+
       RESPONSE SAMPLE
 
       {

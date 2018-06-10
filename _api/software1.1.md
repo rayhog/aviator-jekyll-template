@@ -2,7 +2,7 @@
 title: Software Nodes
 position: 1.1
 type: 
-description: Get software data in Technopedia by using relationships between software nodes
+description: Software in Technopedia is represented by six nodes. You can query individual nodes or you can use relationships to get data from all the software nodes in one query. The software product is a good starting point when you want to start with a product name reference and then build out your query to the other nodes.
 content_markdown: |-
   The following query returns software releases by release name:  
     

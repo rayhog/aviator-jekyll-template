@@ -4,7 +4,7 @@ position: 1.5
 type: 
 description: Matches the software edition from the Technopedia database.
 content_markdown: |-
-  Software edition represents the version of the product, such as Standard, Premium, or other version name for the product.
+  Software edition represents the version of the product, such as Standard, Premium, or other version name for the product. The edition is helpful in identifying versions of a product.
   <br>
 
 

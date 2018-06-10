@@ -7,20 +7,21 @@ content_markdown: >-
   ###### You access data in Technopedia by referencing nodes, relationships, or Technopedia IDs in the Technopedia graph.
 
   #### GET request with the Technopedia ID
+  <br>
 
   ######
   You can use an API GET request for product information in Technopedia by referencing the Technopedia ID.<br>
   You specify the Technopedia ID as a parameter for the Technopedia-id TQL endpoint. <br>
   For example,<br>
-  GET  `https://v6.technopedia.com/technopedia-id/4d35ec28-0f16-4787-acca-885679265b59`
-
+  GET  `https://v6.technopedia.com/technopedia-id/4d35ec28-0f16-4787-acca-885679265b59` <br>
+  <br>
   
   #### GET request by using the Technopedia query language (TQL)
 
   ######
   The main method for acessing information in Technopedia is by using the API with the Technopedia query language (TQL) to query nodes and relationships in the Technopedia database. <br>
-  
-  
+  <br>
+
   #### About Nodes in Technopedia
   
   
@@ -32,6 +33,7 @@ content_markdown: >-
    * Nodes are connected to other nodes by relationships.
    
   To get data from multiple nodes in one query, you use defined relationships to other nodes. 
+  <br>
 
   #### Relationships between Nodes in Technopedia 
 

@@ -3,14 +3,18 @@ title: Software Product
 position: 1.15
 type:
 description: >-
-  In the following query example, you get data from Technopedia that contains PDF Converter in the name of the software product name.
+The software product node features the product name and other important attributes. When you query any of the software nodes, it's likely that you will want to include the software product node to get back the product name in your results.
+  
 content_markdown: >-
+  In the following query example, you get data from Technopedia that contains PDF Converter in the name of the software product name.
+
+
   `MATCH (n:SOFTWARE_PRODUCT) WHERE n.product = "PDF Converter" RETURN n` 
   
   {: .success} 
   
   <br>
-  The following diagram shows the software nodes and relationships.
+  The following diagram shows the six software nodes and their relationships.
   
   ![API Image](/images/sw_prod.png){: .img-responsive}<br>&nbsp;
 
