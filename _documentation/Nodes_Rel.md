@@ -43,11 +43,11 @@ content_markdown: >-
 
    * Relationships are represented by an arrow `->` between two nodes, which represent the direction of the relationship.   Relationships often exist in a single direction, but they can be bidirectional.
 
-   * Relationships provide semantically relevant connections between the Technopedia database nodes, for example, the manufacturer node has the relationship: `[HAS_A]->` software product node.
+   * Relationships provide semantically relevant connections between the Technopedia database nodes, for example, the software product node has the relationship: `[HAS_A]->` to the manufacturer node.
 
    * Relationships allow you to traverse the Technopedia Nodes and by using the Technopedia query language, and to get data from the specified nodes.
 
-   * Like nodes, relationships can also have attributes. Typically, relationship attributed have quantitative attributes, such as time intervals.
+   * Like nodes, relationships can also have attributes. Typically, relationship have quantitative attributes, such as time intervals.
    * To get information about a relationship that has attributes, we can assign it an alias for later reference. The alias is placed in front of the colon `-[anyAlias:Relationship_name]->(node)`
 
 
@@ -91,112 +91,32 @@ content_markdown: >-
   `https://v6-1.technopedia.com/tql?q=<MATCH Statement>`
 
 
-left_code_blocks:
-  - code_block: |
-      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
 
-      RESPONSE SAMPLE
-
-      {
-        "results": [
-            {
-                "test",
-                "s.test",
-                "s.anything"
-            }
-        ]
-      {  
-
-    title: Example one
-    language: javascript
-  - code_block: >-
-      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.release_url n.ga_date
-
-      RESPONSE SAMPLE
-
-      {
-        "results": [
-            {
-                "test",
-                "s.test",
-                "s.anything"
-            }
-        ]
-      {  
-    title: Example two
-    language: javascript
-  - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE) -[:HAS_A]->(SOFTWARE_PRODUCT) RETURN n.cat_sw_release_id LIMIT 1
-
-      RESPONSE SAMPLE
-
-      {
-        "results": [
-            {
-                "test",
-                "s.test",
-                "s.anything"
-            }
-        ]
-      {   
-        }
-
-    title: Example 3
-    language: javascript
-
-  - code_block: |-
-      MATCH
-      
-      RESPONSE SAMPLE
-
-      {
-        "results": [
-            {
-                "test",
-                "s.test",
-                "s.anything"
-            }
-        ]
-      {  
-
-    title: Example 4
-    language: bash
-
-
-  - code_block: |-
-
-      MATCH
-      
-      RESPONSE SAMPLE
-
-      {
-        "results": [
-            {
-                "test",
-                "s.test",
-                "s.anything"
-            }
-        ]
-      {  
-
-    title: Example 5
-    language: bash
-
-  - code_block: |-
-    title: cURL
-    language: bash
 
 right_code_blocks:
-  - code_block: |2
+  - code_block: |
       
       MANUFACTURER
+
       SOFTWARE_PRODUCT
       SOFTWARE_VERSION
+      SOFTWARE_VERSION_GROUP
+      SOFTWARE_MAJOR_VERSION
       SOFTWARE_RELEASE
       SOFTWARE_EDITION
-      SOFTWARE_GROUP_VERSION
       CPU
-      HARDWARE
+      HARDWARE PRODUCT
+      HARDWARE MODEL
+
+      CATEGORY_2
+      CATEGORY_1
+      CATEGORY_GROUP
+      VERTICAL
+      SUPPORT_STAGE
+      SUPPORT_POLICY
+      CERTIFICATION
+      COMPATIBLE PLATFORM
+
 
 
            
