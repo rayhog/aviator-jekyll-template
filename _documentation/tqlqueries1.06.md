@@ -1,6 +1,6 @@
 ---
-title: TQL Overview
-position: 1.05
+title: TQL Queries
+position: 1.06
 type:
 description:
   The Technopedia query language (TQL) is used with the TQL endpoint to query data in the Technopedia database. <br>
