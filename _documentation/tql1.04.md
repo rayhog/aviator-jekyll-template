@@ -21,7 +21,30 @@ content_markdown: |-
   
   ![API Image](/images/results.png)<br>&nbsp;
   <br>  
+  
+  #### Components of a TQL MATCH query<br>
 
+  To create a MATCH statement, you need some or all of the following components:
+  
+  * MATCH
+    The MATCH clause introduces the statement and is the first input.
+    `MATCH`
+  * NODE
+    Typically, you refer to a node in some form as your source of data for the query.
+    'MATCH (node)`
+  * Alias
+    You append an alias to the node, for example, 'MATCH (alias:node)'. TQL binds the alias 
+    that you specify to that node so you can use that alias in the Return clause of the MATCH query to get your specific data. 
+    `MATCH (alias:node) RETURN alias
+    You can aslo use the alias to specify attributes to return. 
+    `MATCH (alias:node) RETURN alias.attribute1, alias.attribute2
+   * Relationship
+     To get data from more than one node in a query, you must use the relationship to connect the nodes.
+     You don't need to append an alias to the relationship, unless, you want to get data back from that relationship.
+     MATCH (aliasx:node1)-[RELATED_TO]->(aliasy:node2), RETURN aliasx, aliasy
+
+
+  
   <br>
   The following examples show some simple MATCH statements that you use to query the database:
   <br>

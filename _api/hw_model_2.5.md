@@ -6,14 +6,15 @@ description: The hardware model node defines information about the model, such a
   has a relationship with the hardware product, which you can use to get more information about hardware.
    
 content_markdown: |-
-  The example qeury returns all hardware models.
+  This query example returns all hardware models.
   
   `MATCH (a:HARDWARE_MODEL) RETURN a.model`
   {: .info}
   
   <br>
   You can get manufacturer data for the hardware model by using the relationships to connect to that node.
-  For example, the following query returns five results that include the model, product, and manufacturer.
+  For example, the following query returns five results that include the model, product, and manufacturer.<br>
+
   <br>
   `MATCH (hw_mod:HARDWARE_MODEL)-[:HAS_A]->(hw_prod:HARDWARE_PRODUCT)-[:HAS_A]->(manu:MANUFACTURER) RETURN hw_mod.model, hw_prod.product, manu.manufacturer LIMIT 5`
   

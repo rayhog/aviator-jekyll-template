@@ -13,13 +13,15 @@ content_markdown: >-
   You can use an API GET request for product information in Technopedia by referencing the Technopedia ID.<br>
   You specify the Technopedia ID as a parameter for the Technopedia-id TQL endpoint. <br>
   For example,<br>
-  GET  `https://v6.technopedia.com/technopedia-id/4d35ec28-0f16-4787-acca-885679265b59` <br>
+  GET  `https://v6-1.technopedia.com/technopedia-id/4d35ec28-0f16-4787-acca-885679265b59` <br>
   <br>
   
   #### GET request by using the Technopedia query language (TQL)
 
   ######
-  The main method for acessing information in Technopedia is by using the API with the Technopedia query language (TQL) to query nodes and relationships in the Technopedia database. <br>
+  The main method for acessing information in Technopedia is by using the API with the Technopedia query language (TQL) (`https://v6-1.technopedia.com/tql?q=MATCH <Query Parameters>`) to query nodes and relationships in the Technopedia database.
+  
+  <br>
   <br>
 
   #### About Nodes in Technopedia
