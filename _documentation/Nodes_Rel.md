@@ -49,7 +49,7 @@ content_markdown: >-
    * To get information about a relationship that has attributes, we can assign it an alias for later reference. The alias is placed in front of the colon `-[anyAlias:Relationship_name]->(node)`
 
 
-  ###### The following diagram is a basic representation of nodes and relationships:
+  ###### The following diagram is a simple representation of a few nodes and relationships:
 
 
   ![API Image](/images/nodes_simple.png)<br>&nbsp;
@@ -61,15 +61,6 @@ content_markdown: >-
   
   <br>
  
-
-  
-
-  To get data from a specific node or relationship, you use an alias or variable that you append to the node or relationship. TQL binds the alias that you specify to that node or relationship so you can use that alias in the Return clause of the MATCH query to get your specific data.
-  <br>
-  `Match (myalias:node1)-[another_alias:RELATIONSHIP]->(other_alias:node2)`
-  <br>
-  `MATCH (aliasX:MANUFACTURER)-[aliasV:VENDOR_OF]->(aliasY:SOFTWARE_PRODUCT) RETURN aliasX, aliasY`
-  
 
   
   

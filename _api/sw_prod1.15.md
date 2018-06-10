@@ -12,7 +12,7 @@ content_markdown: >-
   <br>
   The following diagram shows the software nodes and relationships.
   
-  ![API Image](/images/NodeAndRel.png){: .img-responsive}<br>&nbsp;
+  ![API Image](/images/sw_prod.png){: .img-responsive}<br>&nbsp;
 
   #### Query Examples <br>
     

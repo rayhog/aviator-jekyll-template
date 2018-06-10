@@ -11,7 +11,7 @@ content_markdown: |-
   <br> 
   The following diagram shows hardware nodes and related software nodes.  
   
-  ![API Image](/images/hard_soft.png){:class="img-responsive"} <br>
+  ![API Image](/images/hard_mod.png){:class="img-responsive"} <br>
   
   #### Query Examples <br>
     
