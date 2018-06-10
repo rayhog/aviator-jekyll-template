@@ -22,7 +22,11 @@ content_markdown: |-
   <br>  
 
   <br>
-
+  The following examples show some simple MATCH statements that you use to query the database:
+  <br>
+  
+  ![API Image](/images/simple_match.png)<br>&nbsp;
+  <br>  
   The following TQL query shows the parts of a MATCH statement that you use to query the database:
   <br>
   
