@@ -9,37 +9,35 @@ content_markdown: >-
   #### GET request with the Technopedia ID
 
   ######
-  You can use an API GET request for product information in Technopedia by referencing the Technopedia ID.
+  You can use an API GET request for product information in Technopedia by referencing the Technopedia ID.<br>
   You specify the Technopedia ID as a parameter for the Technopedia-id TQL endpoint. <br>
-  For example:
+  For example,<br>
   GET  `https://v6.technopedia.com/technopedia-id/4d35ec28-0f16-4787-acca-885679265b59`
 
   #### GET request by using the Technopedia query language (TQL)
 
   ######
-  The main method for acessing information in Technopedia is by using the API with the Technopedia query language (TQL) to query nodes and relationships in the Technopedia grpahcan use an API GET request for product information in Technopedia by referencing the Technopedia ID.
-  You specify the Technopedia ID as a parameter for the Technopedia-id TQL endpoint. <br>
-  For example:
-  GET  `https://v6.technopedia.com/technopedia-id/4d35ec28-0f16-4787-acca-885679265b59`
+  The main method for acessing information in Technopedia is by using the API with the Technopedia query language (TQL) to query nodes and relationships in the Technopedia grpah. <br>
   
   #### About Nodes in Technopedia
   
   
-  ###### Nodes are the entities in the Technopedia graph that store specific categories of data. Nodes can have any
-  number of attributes, which are represented by key-value-pairs.<br> 
+  ###### Nodes are the entities in the Technopedia graph that store specific categories of data. <br>
+  Nodes can have any number of attributes, which are represented by key-value-pairs.<br> 
    * Nodes are entities that store the Technopedia data.
    * Node names are surrounded by parentheses in a query, for example, (Node).
    * Nodes have attributes that show data in key-value pairs.
    * Nodes are connected to other nodes by relationships.
    
-  To get data from multiple nodes in one query, you use defined relationships to other nodes in your queries to connect the nodes and their attributes. 
+  To get data from multiple nodes in one query, you use defined relationships to other nodes. 
 
   #### Relationships between Nodes in Technopedia 
 
   ######
-  Relationships provide semantically relevant connections between the Technopedia nodes. Relationships might have a
-  type, such as `BELONGS_TO` and a direction from node x to node y. An arrow determines the direction of the relationship. For example `(node x)-[BELONGS_TO]->(node y)`
-  To get Technopedia data by connecting Nodes, You use relationships to traverse nodes and define the criteria for the data that you want to extract from the database.
+  Relationships provide semantically relevant connections between the Technopedia nodes. <br>
+  Relationships have a type, such as `BELONGS_TO` and a direction, such as node x to node y. <br>
+  An arrow determines the direction of the relationship. For example `(node x)-[BELONGS_TO]->(node y)`
+  To get Technopedia data from multiple nodes in one query, you use relationships to traverse nodes and define the criteria for the data that you want to extract from the database.
 
    * Relationships are represented by an arrow `->` between two nodes, which represent the direction of the relationship.   Relationships often exist in a single direction, but they can be bidirectional.
 
@@ -54,7 +52,7 @@ content_markdown: >-
   ###### The following diagram is a basic representation of nodes and relationships:
 
 
-  ![API Image](/images/node_ex.png)<br>&nbsp;
+  ![API Image](/images/nodes_simple.png)<br>&nbsp;
   <br>
 
   In a query, nodes are surrounded by parenthesis and relationships are surrounded by square brackets as shown in the following example:
@@ -84,11 +82,7 @@ content_markdown: >-
    Note: You can only access data from Technopedia nodes that your subscription allows.
     {: .warning} 
 
-  #### Query Examples <br>
-    
-  To use the MATCH statements in the following examples, you append the MATCH statement to the following tql endpoint and make a GET request from a API client or use cURL. <br>
-  <br>
-  `https://v6-1.technopedia.com/tql?q=<MATCH Statement>`
+  
 
 
 
@@ -97,7 +91,6 @@ right_code_blocks:
   - code_block: |
       
       MANUFACTURER
-
       SOFTWARE_PRODUCT
       SOFTWARE_VERSION
       SOFTWARE_VERSION_GROUP
@@ -107,7 +100,6 @@ right_code_blocks:
       CPU
       HARDWARE PRODUCT
       HARDWARE MODEL
-
       CATEGORY_2
       CATEGORY_1
       CATEGORY_GROUP
