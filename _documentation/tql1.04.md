@@ -405,7 +405,7 @@ right_code_blocks:
   - code_block: |2
       
       Query syntax:
-      MATCH (alias.NODE) RETURN alias
+      MATCH (alias_name.NODE) RETURN alias_name
       
       Example:
       MATCH (s:SOFTWARE_PRODUCT) RETURN s
