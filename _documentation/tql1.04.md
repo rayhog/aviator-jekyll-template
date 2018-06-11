@@ -33,7 +33,7 @@ content_markdown: |-
     `MATCH` <br>
   * Node <br>
     Typically, you refer to a node in the graph as your source of data for the query. Nodes in a query are predeced by a (:) colon. <br>
-    'MATCH (:node)` <br>
+    `MATCH (:node)` <br>
   * Alias <br>
     You append an alias to the node, for example, 'MATCH (alias:node)', so you can call that alias to return data.<br>
     TQL binds the alias that you specify to the node so that you can use that alias in the Return clause of <br>
@@ -44,15 +44,15 @@ content_markdown: |-
   * Relationship <br>
     To get data from more than one node in a query, you must use a relationship to connect the nodes. <br>
     You don't need to append an alias to the relationship, unless, you want to get data back from that relationship. <br>
-    `MATCH (aliasx:node1)-[RELATED_TO]->(aliasy:node2), RETURN aliasx, aliasy` <br>
+    `MATCH (aliasx:node1)-[:RELATED_TO]->(aliasy:node2), RETURN aliasx, aliasy` <br>
   * Relationship direction <br>
     The direction of the relationship shows the relationship from one node to another; <br> 
     it is shown by the direction of the arrow in the query. <br>
     For example, node_software is manufactured_by node_manufacturer <br>
-    `(:node_software)-[MANUFACTURED_BY]->(:node_manufacturer)` <br>
+    `(:node_software)-[:MANUFACTURED_BY]->(:node_manufacturer)` <br>
     Typically, relationships are unidirectional but they can be bidirectional. <br>
     A bidirectional relationship is represented without an arrow, for example, <br>
-    `(:node_software)-[MANUFACTURED_BY]-(:node_manufacturer)`<br>
+    `(:node_software)-[:MANUFACTURED_BY]-(:node_manufacturer)`<br>
   * RETURN <br>
     The RETURN clause defines the data that you want to get back by referring to the alias. <br>
     `MATCH (aliasx:node1) RETURN aliasx` to return all attributes for that node <br>
@@ -73,17 +73,9 @@ content_markdown: |-
   
   ![API Image](/images/tql_query.png)<br>&nbsp;
   <br>  
- 
-
-  To get data from a specific node or relationship, you use an alias or variable that you append to the node or relationship. TQL binds the alias that you specify to that node or relationship so you can use that alias in the Return clause of the MATCH query to get your specific data.
-  <br>
-  `Match (myalias:node1)-[another_alias:RELATIONSHIP]->(other_alias:node2)`
-  <br>
-  `MATCH (aliasX:MANUFACTURER)-[aliasV:VENDOR_OF]->(aliasY:SOFTWARE_PRODUCT) RETURN aliasX, aliasY`
-  
+    
   <br>
   
-
   #### Overview of creating a MATCH query<br>
 
 

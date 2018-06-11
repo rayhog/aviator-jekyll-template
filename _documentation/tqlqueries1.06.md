@@ -3,17 +3,15 @@ title: TQL Queries
 position: 1.06
 type:
 description:
-  TQL queries can be a simple query on a single node or you might need to add multiple relationships to get data from multiple nodes. For many TQL queries, you have to use relationships to query several Technopedia nodes. Relationships might seem complex but their function is mainly to connect nodes.
+  TQL queries can be based on a single node or multiple nodes where you need to include relationships to get data from multiple nodes. For many TQL queries, you have to use relationships to query several Technopedia nodes. Relationships might seem complex but their function is mainly to connect nodes.
 content_markdown: |-
-  ###### Because TQL is a declarative query language, it allows you build your query with multiple nodes, relationships, and attributes.
-
-
+  ###### Because TQL is a declarative query language, you can build your query with multiple nodes, relationships, attributes, and add multiple conditions to refine your query.
+  
+  To get data from a specific node or relationship, you use an alias or variable that you append to the node or relationship. TQL binds the alias that you specify to that node or relationship so you can use that alias in the Return clause of the MATCH query to get your specific data.
+  {: .info}
   #### Building relationships in a query<br>
 
-  To make a query with TQL, you must use a MATCH statement, which is like Select statement in SQL. You add the MATCH statement as a query parameter to the TQL endpoint `https://v6.technopedia.com/tql` <br>
-  For example, `https://v6.technopedia.com/tql?q=MATCH <query_parameters>`
-  <br>
-  
+   
   
   The following TQL query shows the parts of a MATCH statement that you use to query the database:
   <br>
@@ -64,11 +62,7 @@ content_markdown: |-
    You must add an alias before the colon in nodes and relationships in the MATCH statement. You refer to this alias in the return clause to specify the query ouput.
    {: .warning}
   
-  
-  
-
-  <br>
-  <br>
+      
   <br>
 
   The following diagram identifies the software nodes and the relationship directions.
@@ -79,7 +73,7 @@ content_markdown: |-
   <br>  
   <br>
 
-   Follow the relationship direction in the diagram.
+   When you write MATCH statements that use relationships, you must follow the relationship direction in the diagram.
    {: .warning}
 
   <br>
@@ -117,7 +111,7 @@ content_markdown: |-
 
 
  
-  To use the MATCH statements in the following examples, you append the MATCH statement to the following tql endpoint and make a GET request from a API client or use cURL. <br>
+  The following MATCH query examples show variations in constructions that use relationships and other conditions. To try out a query example, you append the MATCH statement to the following tql endpoint and make a GET request from a API client or use cURL. <br>
   <br>
   `https://v6-1.technopedia.com/tql?q=<MATCH Statement>`
   
