@@ -16,6 +16,7 @@ content_markdown: >-
 
   ![API Image](/images/tql_tid.png)<br>&nbsp;
   <br>
+  
   #### GET request by using the Technopedia query language (TQL)
 
   ######
@@ -23,6 +24,7 @@ content_markdown: >-
   For example, <br>
   ![API Image](/images/tql_match.png)<br>&nbsp;
   <br>
+
   #### About Nodes in Technopedia
   
   

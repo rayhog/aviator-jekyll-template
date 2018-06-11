@@ -79,7 +79,6 @@ left_code_blocks:
         "results": [
             {
                 "s.alias": null,
-                "s.cat_sw_product_id": 438693912,
                 "s.component": null,
                 "s.created_at": "2017-08-23 14:23:31",
                 "s.desupported_flag": null,
@@ -93,7 +92,6 @@ left_code_blocks:
             },
             {
                 "s.alias": null,
-                "s.cat_sw_product_id": 438693925,
                 "s.component": null,
                 "s.created_at": "2017-08-23 14:23:57",
                 "s.desupported_flag": null,
@@ -144,7 +142,7 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-     MATCH (s:SOFTWARE_PRODUCT)-[:BELONGS_TO]->(b:CATEGORY_2)-[:BELONGS_TO]->(a:CATEGORY_1)-[:BELONGS_TO]->(c:CATEGORY_GROUP) WHERE s.product CONTAINS "Tools" RETURN s.product, b.label, a.label, c.label LIMIT 5
+     MATCH (s:SOFTWARE_PRODUCT)-[:BELONGS_TO]->(cat2:CATEGORY_2)-[:BELONGS_TO]->(cat1:CATEGORY_1)-[:BELONGS_TO]->(catgrp:CATEGORY_GROUP) WHERE s.product CONTAINS "Tools" RETURN s.product, cat1.label, cat2.label, catgrp.label LIMIT 5
 
       RESPONSE SAMPLE
 
@@ -153,38 +151,32 @@ left_code_blocks:
             {
                 "cat1.label": "Product Lifecycle Management (PLM)",
                 "cat2.label": "Product Data Management",
-                "catgroup.label": "Business Applications",
+                "catgrp.label": "Business Applications",
                 "s.product": "Service Desk Knowledge Tools"
             },
             {
                 "cat1.label": "Product Lifecycle Management (PLM)",
                 "cat2.label": "Product Data Management",
-                "catgroup.label": "Business Applications",
+                "catgrp.label": "Business Applications",
                 "s.product": "ServicePlus Knowledge Tools"
             },
             {
                 "cat1.label": "Product Lifecycle Management (PLM)",
                 "cat2.label": "Product Data Management",
-                "catgroup.label": "Business Applications",
+                "catgrp.label": "Business Applications",
                 "s.product": "Service Desk Knowledge Tools"
             },
             {
                 "cat1.label": "Product Lifecycle Management (PLM)",
                 "cat2.label": "Product Data Management",
-                "catgroup.label": "Business Applications",
+                "catgrp.label": "Business Applications",
                 "s.product": "JTB CAD Automation Tools"
             },
             {
                 "cat1.label": "Manufacturing Resource Planning (MRP)",
                 "cat2.label": "Plant/Shop Control",
-                "catgroup.label": "Business Applications",
+                "catgrp.label": "Business Applications",
                 "s.product": "PowerTools"
-            },
-            {
-                "cat1.label": "Manufacturing Resource Planning (MRP)",
-                "cat2.label": "Plant/Shop Control",
-                "catgroup.label": "Business Applications",
-                "s.product": "GEM4Tools"
             }
         ]
       {  
@@ -201,7 +193,6 @@ left_code_blocks:
         "results": [
             {
                 "k.alias": null,
-                "k.cat_sw_product_id": 1280196,
                 "k.component": null,
                 "k.created_at": "2008-03-25 22:07:06",
                 "k.desupported_flag": null,
@@ -212,14 +203,12 @@ left_code_blocks:
                 "k.product": "ID Web Authentication Software Development Kit (SDK)",
                 "k.technopedia_id": "359e53c0-6cda-4e3b-aaa1-2b05537ca718",
                 "k.url": "http://www.microsoft.com/Downloads/details.aspx?familyid=E565FC92-D5F6-4F5F-8713-4DD1C90DE19F&displaylang=en",
-                "n.cat_sw_release_id": 8706909,
                 "n.created_at": "2010-01-08 21:17:49",
                 "n.desupported_flag": null,
                 "n.discontinued_flag": null,
                 "n.modified_at": "2014-04-01 14:52:04",
                 "n.technopedia_id": "4aa33382-7a99-4210-8e71-7b7680879acd",
                 "n.url": null,
-                "r.cat_sw_version_id": 8706842,
                 "r.created_at": "2010-01-08 21:04:11",
                 "r.desupported_flag": null,
                 "r.modified_at": "2012-05-17 18:24:50",

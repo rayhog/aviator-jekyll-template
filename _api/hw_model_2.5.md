@@ -150,14 +150,11 @@ left_code_blocks:
       {
         "results": [
             {
-                "h.cat_manufacturer_id": null,
                 "h.create_date": null,
                 "h.desupported_flag": null,
                 "h.modified_at": "2011-03-16 09:46:45",
                 "h.product": "Express5800/A1080a Series",
                 "h.technopedia_id": "f6d32439-001b-4ca7-abb1-cd7627086ade",
-                "m.cat_taxonomy2012_id": null,
-                "m.cat_taxonomy2012_parent_id": null,
                 "m.description": "A computer or device on a network that manages network resource",
                 "m.label": "Servers",
                 "m.technopedia_id": "195fa6b3-7d0f-4317-995f-d3c9f1ae08e7",
@@ -166,6 +163,12 @@ left_code_blocks:
                 "n.created_at": "2010-04-23 11:31:47",
                 "n.date_introduced": "3/30/2010",
                 "n.desupported_flag": null,
+                "n.max_non_operating_humidity": null,
+                "n.max_non_operating_temp": null,
+                "n.max_operating_temp": null,
+                "n.min_non_operating_humidity": null,
+                "n.min_non_operating_temp": null,
+                "n.min_operating_temp": null,
                 "n.model": "A1080a-S",
                 "n.modified_at": "2013-10-18 16:54:07",
                 "n.technopedia_id": "807bd3dc-2100-4116-a4e2-cbf741e725d4",
@@ -174,14 +177,11 @@ left_code_blocks:
                 "w.technopedia_id": "0be7a9ed-b538-4942-b6ce-b9243566305f"
             },
             {
-                "h.cat_manufacturer_id": null,
                 "h.create_date": null,
                 "h.desupported_flag": null,
                 "h.modified_at": "2011-03-16 09:46:45",
                 "h.product": "Express5800/A1080a Series",
                 "h.technopedia_id": "f6d32439-001b-4ca7-abb1-cd7627086ade",
-                "m.cat_taxonomy2012_id": null,
-                "m.cat_taxonomy2012_parent_id": null,
                 "m.description": "A computer or device on a network that manages network resource",
                 "m.label": "Servers",
                 "m.technopedia_id": "195fa6b3-7d0f-4317-995f-d3c9f1ae08e7",
@@ -190,6 +190,12 @@ left_code_blocks:
                 "n.created_at": "2010-04-23 11:32:43",
                 "n.date_introduced": "3/30/2010",
                 "n.desupported_flag": null,
+                "n.max_non_operating_humidity": null,
+                "n.max_non_operating_temp": null,
+                "n.max_operating_temp": null,
+                "n.min_non_operating_humidity": null,
+                "n.min_non_operating_temp": null,
+                "n.min_operating_temp": null,
                 "n.model": "A1080a-E",
                 "n.modified_at": "2013-10-18 16:54:22",
                 "n.technopedia_id": "5cb93d0e-63d0-43eb-89d8-7d1d25ff4ce5",
@@ -204,16 +210,65 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:HARDWARE_MODEL)-[a:HAS_A]->(h:HARDWARE_PRODUCT)-[e:BELONGS_TO]->(m:CATEGORY_2)-[e:BELONGS_TO]->(w:VERTICAL) RETURN n, h, m, w
+      MATCH (n:HARDWARE_MODEL)-[:HAS_A]->(h:HARDWARE_PRODUCT)-[e:BELONGS_TO]->(m:CATEGORY_2)-[:BELONGS_TO]->(w:VERTICAL) RETURN n, h, m, w
       
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+                "h.create_date": null,
+                "h.desupported_flag": null,
+                "h.modified_at": "2011-03-16 09:46:45",
+                "h.product": "Express5800/A1080a Series",
+                "h.technopedia_id": "f6d32439-001b-4ca7-abb1-cd7627086ade",
+                "m.description": "A computer or device on a network that manages network resource",
+                "m.label": "Servers",
+                "m.technopedia_id": "195fa6b3-7d0f-4317-995f-d3c9f1ae08e7",
+                "n.cpu_sockets": 4,
+                "n.cpu_url": "http://www.necam.com/docs/?id=6ee81afc-8691-484e-9549-b21b83f6302e",
+                "n.created_at": "2010-04-23 11:31:47",
+                "n.date_introduced": "3/30/2010",
+                "n.desupported_flag": null,
+                "n.max_non_operating_humidity": null,
+                "n.max_non_operating_temp": null,
+                "n.max_operating_temp": null,
+                "n.min_non_operating_humidity": null,
+                "n.min_non_operating_temp": null,
+                "n.min_operating_temp": null,
+                "n.model": "A1080a-S",
+                "n.modified_at": "2013-10-18 16:54:07",
+                "n.technopedia_id": "807bd3dc-2100-4116-a4e2-cbf741e725d4",
+                "w.name": "Information and Technology",
+                "w.short_name": "IT",
+                "w.technopedia_id": "0be7a9ed-b538-4942-b6ce-b9243566305f"
+            },
+            {
+                "h.create_date": null,
+                "h.desupported_flag": null,
+                "h.modified_at": "2011-03-16 09:46:45",
+                "h.product": "Express5800/A1080a Series",
+                "h.technopedia_id": "f6d32439-001b-4ca7-abb1-cd7627086ade",
+                "m.description": "A computer or device on a network that manages network resource",
+                "m.label": "Servers",
+                "m.technopedia_id": "195fa6b3-7d0f-4317-995f-d3c9f1ae08e7",
+                "n.cpu_sockets": 8,
+                "n.cpu_url": "http://www.necam.com/docs/?id=6ee81afc-8691-484e-9549-b21b83f6302e",
+                "n.created_at": "2010-04-23 11:32:43",
+                "n.date_introduced": "3/30/2010",
+                "n.desupported_flag": null,
+                "n.max_non_operating_humidity": null,
+                "n.max_non_operating_temp": null,
+                "n.max_operating_temp": null,
+                "n.min_non_operating_humidity": null,
+                "n.min_non_operating_temp": null,
+                "n.min_operating_temp": null,
+                "n.model": "A1080a-E",
+                "n.modified_at": "2013-10-18 16:54:22",
+                "n.technopedia_id": "5cb93d0e-63d0-43eb-89d8-7d1d25ff4ce5",
+                "w.name": "Information and Technology",
+                "w.short_name": "IT",
+                "w.technopedia_id": "0be7a9ed-b538-4942-b6ce-b9243566305f"
             }
         ]
       {  

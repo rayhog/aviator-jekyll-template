@@ -15,7 +15,7 @@ content_markdown: |-
   
   <br>
     
-  The following diagram shows the CPU node and other nodes.
+  The following diagram shows the CPU node and other nodes. <br>
   <br>
   ![API Image](/images/cpu.png){:class="img-responsive"} <br>
   

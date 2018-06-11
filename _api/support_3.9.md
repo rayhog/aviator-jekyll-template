@@ -46,18 +46,18 @@ left_code_blocks:
 
 
   - code_block: >-
-      MATCH (n:SUPPORT_STAGE) RETURN n LIMIT 25
+      MATCH (n:SUPPORT_STAGE) RETURN n LIMIT 1
         
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "technopedia_id": "abc3378a-7eaa-4fa6-94b7-cf5e0b75c57b",
-                "created_at": "2010-11-08 10:58:22",
-                "modified_at": "2010-11-08 10:58:22",
-                "cat_support_policy_id": 16561748,
-                "policy": "Standard"
+                "technopedia_id": "6a48269d-3f7b-41c5-964f-54a6b28e9882",
+                "created_at": "2007-03-11 23:45:17",
+                "modified_at": "2009-02-28 07:43:36",
+                "stage": "Technical Guidance (VI)",
+                "order": 3
             }
         ]
       {      
@@ -65,16 +65,23 @@ left_code_blocks:
     title: Example 1
     language: javascript
   - code_block: |-
-      MATCH (n:SUPPORT_POLICY) RETURN n LIMIT 25
+      MATCH (n:SUPPORT_POLICY) RETURN n LIMIT 2
       
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+                "policy": "Standard",
+                "n.created_at": "2010-01-22 15:52:48",
+                "n.modified_at": "2010-01-22 15:52:48",
+                "n.technopedia_id": "4ea21ae6-ba0c-4888-b18b-7e05c8a7ce52"
+            },
+            {
+                "policy": "Open Source Policy",
+                "n.created_at": "2010-05-26 09:58:44",
+                "n.modified_at": "2010-05-26 09:58:44",
+                "n.technopedia_id": "4ff06db9-7456-4f91-a7b9-ca189301079c"
             }
         ]
       {  
@@ -83,16 +90,39 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:MANUFACTURER)<-[:HAS_A]-(w:SOFTWARE_PRODUCT)-[BELONGS_TO]->(v:CATEGORY_2) RETURN n, w, v
+      MATCH (n:SOFTWARE_RELEASE)<-[:HAS_A]-(w:SUPPORT_STAGE) RETURN n, w LIMIT 2
 
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+                "n.created_at": "2008-09-18 22:19:41",
+                "n.desupported_flag": true,
+                "n.discontinued_flag": null,
+                "n.modified_at": "2018-05-03 18:27:17",
+                "n.technopedia_id": "503c2828-0f48-4b79-aaae-6795fb959230",
+                "n.url": null,
+                "w.created_at": "2007-03-11 23:45:17",
+                "w.definition": null,
+                "w.modified_at": "2009-02-28 07:43:36",
+                "w.order": 3,
+                "w.support_stage": null,
+                "w.technopedia_id": "6a48269d-3f7b-41c5-964f-54a6b28e9882"
+            },
+            {
+                "n.created_at": "2008-09-18 22:41:31",
+                "n.desupported_flag": null,
+                "n.discontinued_flag": null,
+                "n.modified_at": "2013-02-22 17:20:30",
+                "n.technopedia_id": "8627dc42-74b4-4f9e-9f36-33691250d484",
+                "n.url": null,
+                "w.created_at": "2007-03-11 23:45:17",
+                "w.definition": null,
+                "w.modified_at": "2009-02-28 07:43:36",
+                "w.order": 3,
+                "w.support_stage": null,
+                "w.technopedia_id": "6a48269d-3f7b-41c5-964f-54a6b28e9882"
             }
         ]
       {  
@@ -101,7 +131,7 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:MANUFACTURER)-[:HAS_A]->(p:SOFTWARE_PRODUCT)-[:HAS_A]->(my_alias:SOFTWARE_VERSION) RETURN n, p, my_alias
+      MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(w:SUPPORT_STAGE)-[:HAS_A]->(sp:SUPPORT_POLICY) RETURN n, w, sp LIMIT 2
 
       RESPONSE SAMPLE
 
@@ -135,6 +165,21 @@ left_code_blocks:
 
     title: Example five
     language: bash
+    - code_block: |-
+      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:SUPPORT_STAGE) RETURN h.stage"
+
+
+
+
+
+
+
+
+
+
+    title: cURL 
+    language: bash
+
 right_code_blocks:
   - code_block: |2
       SUPPORT_STAGE

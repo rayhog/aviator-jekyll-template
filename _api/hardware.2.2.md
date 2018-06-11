@@ -83,38 +83,48 @@ left_code_blocks:
 
       {  
         "results": [
-        {
-            "model.cpu_sockets": 4,
-            "model.cpu_url": "http://www.necam.com/docs/?id=6ee81afc-8691-484e-9549-b21b83f6302e",
-            "model.created_at": "2010-04-23 11:31:47",
-            "model.date_introduced": "3/30/2010",
-            "model.desupported_flag": null,
-            "model.model": "A1080a-S",
-            "model.modified_at": "2013-10-18 16:54:07",
-            "model.technopedia_id": "807bd3dc-2100-4116-a4e2-cbf741e725d4",
-            "product.cat_manufacturer_id": null,
-            "product.create_date": null,
-            "product.desupported_flag": null,
-            "product.modified_at": "2011-03-16 09:46:45",
-            "product.product": "Express5800/A1080a Series",
-            "product.technopedia_id": "f6d32439-001b-4ca7-abb1-cd7627086ade"
-        },
-        {
-            "model.cpu_sockets": 8,
-            "model.cpu_url": "http://www.necam.com/docs/?id=6ee81afc-8691-484e-9549-b21b83f6302e",
-            "model.created_at": "2010-04-23 11:32:43",
-            "model.date_introduced": "3/30/2010",
-            "model.desupported_flag": null,
-            "model.model": "A1080a-E",
-            "model.modified_at": "2013-10-18 16:54:22",
-            "model.technopedia_id": "5cb93d0e-63d0-43eb-89d8-7d1d25ff4ce5",
-            "product.cat_manufacturer_id": null,
-            "product.create_date": null,
-            "product.desupported_flag": null,
-            "product.modified_at": "2011-03-16 09:46:45",
-            "product.product": "Express5800/A1080a Series",
-            "product.technopedia_id": "f6d32439-001b-4ca7-abb1-cd7627086ade"
-        }
+            {
+                "model.cpu_sockets": 4,
+                "model.cpu_url": "http://www.necam.com/docs/?id=6ee81afc-8691-484e-9549-b21b83f6302e",
+                "model.created_at": "2010-04-23 11:31:47",
+                "model.date_introduced": "3/30/2010",
+                "model.desupported_flag": null,
+                "model.max_non_operating_humidity": null,
+                "model.max_non_operating_temp": null,
+                "model.max_operating_temp": null,
+                "model.min_non_operating_humidity": null,
+                "model.min_non_operating_temp": null,
+                "model.min_operating_temp": null,
+                "model.model": "A1080a-S",
+                "model.modified_at": "2013-10-18 16:54:07",
+                "model.technopedia_id": "807bd3dc-2100-4116-a4e2-cbf741e725d4",
+                "product.create_date": null,
+                "product.desupported_flag": null,
+                "product.modified_at": "2011-03-16 09:46:45",
+                "product.product": "Express5800/A1080a Series",
+                "product.technopedia_id": "f6d32439-001b-4ca7-abb1-cd7627086ade"
+            },
+            {
+                "model.cpu_sockets": 8,
+                "model.cpu_url": "http://www.necam.com/docs/?id=6ee81afc-8691-484e-9549-b21b83f6302e",
+                "model.created_at": "2010-04-23 11:32:43",
+                "model.date_introduced": "3/30/2010",
+                "model.desupported_flag": null,
+                "model.max_non_operating_humidity": null,
+                "model.max_non_operating_temp": null,
+                "model.max_operating_temp": null,
+                "model.min_non_operating_humidity": null,
+                "model.min_non_operating_temp": null,
+                "model.min_operating_temp": null,
+                "model.model": "A1080a-E",
+                "model.modified_at": "2013-10-18 16:54:22",
+                "model.technopedia_id": "5cb93d0e-63d0-43eb-89d8-7d1d25ff4ce5",
+                "product.create_date": null,
+                "product.desupported_flag": null,
+                "product.modified_at": "2011-03-16 09:46:45",
+                "product.product": "Express5800/A1080a Series",
+                "product.technopedia_id": "f6d32439-001b-4ca7-abb1-cd7627086ade"
+            }
        ]
       {  
     title: Example two
@@ -178,7 +188,6 @@ left_code_blocks:
           
         "results": [
             {
-                "hw.cat_manufacturer_id": null,
                 "hw.create_date": null,
                 "hw.desupported_flag": null,
                 "hw.modified_at": "2011-03-16 09:46:45",
@@ -187,7 +196,6 @@ left_code_blocks:
                 "manu.manufacturer": "NEC"
             },
             {
-                "hw.cat_manufacturer_id": null,
                 "hw.create_date": null,
                 "hw.desupported_flag": null,
                 "hw.modified_at": "2011-03-21 11:22:10",
@@ -196,14 +204,13 @@ left_code_blocks:
                 "manu.manufacturer": "Xerox"
             },
             {
-                "hw.cat_manufacturer_id": null,
                 "hw.create_date": null,
                 "hw.desupported_flag": null,
                 "hw.modified_at": "2017-06-01 11:29:10",
                 "hw.product": "Pro 3010 Desktop PC",
                 "hw.technopedia_id": "e2b8fab2-681f-48f5-8ac7-57cb7f36e97b",
                 "manu.manufacturer": "Hewlett-Packard Company"
-           }
+            }
         ]
       {  
         
@@ -213,44 +220,37 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      https://v6-1.technopedia.com/tql?q=MATCH (hardware:HARDWARE_PRODUCT)-[a:BELONGS_TO]->(cat_2:CATEGORY_2)-[e:BELONGS_TO]->(vertical:VERTICAL) RETURN hardware, cat_2, vertical
+      MATCH (hardware:HARDWARE_PRODUCT)-[a:BELONGS_TO]->(cat_2:CATEGORY_2)-[e:BELONGS_TO]->(vertical:VERTICAL) RETURN hardware, cat_2, vertical
       
       RESPONSE SAMPLE
       {
         "results": [
-          {
-              "cat_2.cat_taxonomy2012_id": null,
-              "cat_2.cat_taxonomy2012_parent_id": null,
-              "cat_2.description": "A computer or device on a network that manages network resource",
-              "cat_2.label": "Servers",
-              "cat_2.technopedia_id": "195fa6b3-7d0f-4317-995f-d3c9f1ae08e7",
-              "hardware.cat_manufacturer_id": null,
-              "hardware.create_date": null,
-              "hardware.desupported_flag": null,
-              "hardware.modified_at": "2011-03-16 09:46:45",
-              "hardware.product": "Express5800/A1080a Series",
-              "hardware.technopedia_id": "f6d32439-001b-4ca7-abb1-cd7627086ade",
-              "vertical.name": "Information and Technology",
-              "vertical.short_name": "IT",
-              "vertical.technopedia_id": "0be7a9ed-b538-4942-b6ce-b9243566305f"
-          },
-          {
-              "cat_2.cat_taxonomy2012_id": null,
-              "cat_2.cat_taxonomy2012_parent_id": null,
-              "cat_2.description": "A common type of computer printer that rapidly produces high  quality text and graphics on plain paper. It employs a xerographic printing 
-               process, where image is produced by the direct scanning of a laser beam across the printer's photoreceptor",  
-              "cat_2.label": "Laser Printers",
-              "cat_2.technopedia_id": "bcb655cc-b5ef-4915-838f-8ff68cb65cce",
-              "hardware.cat_manufacturer_id": null,
-              "hardware.create_date": null,
-              "hardware.desupported_flag": null,
-              "hardware.modified_at": "2011-03-21 11:22:10",
-              "hardware.product": "Phaser 3125 (Networked)",
-              "hardware.technopedia_id": "4d35ec28-0f16-4787-acca-885679265b59",
-              "vertical.name": "Medical and Health Care",
-              "vertical.short_name": "MD",
-              "vertical.technopedia_id": "81520b3f-6ffc-42c7-afce-a25bbdc63385"
-          }
+            {
+                "cat_2.description": "A computer or device on a network that manages network resource",
+                "cat_2.label": "Servers",
+                "cat_2.technopedia_id": "195fa6b3-7d0f-4317-995f-d3c9f1ae08e7",
+                "hardware.create_date": null,
+                "hardware.desupported_flag": null,
+                "hardware.modified_at": "2011-03-16 09:46:45",
+                "hardware.product": "Express5800/A1080a Series",
+                "hardware.technopedia_id": "f6d32439-001b-4ca7-abb1-cd7627086ade",
+                "vertical.name": "Information and Technology",
+                "vertical.short_name": "IT",
+                "vertical.technopedia_id": "0be7a9ed-b538-4942-b6ce-b9243566305f"
+            },
+            {
+                "cat_2.description": "A common type of computer printer that rapidly produces high quality text and graphics on plain paper. It employs a xerographic printing process, where image is produced by the direct scanning of a laser beam across the printer's photoreceptor",
+                "cat_2.label": "Laser Printers",
+                "cat_2.technopedia_id": "bcb655cc-b5ef-4915-838f-8ff68cb65cce",
+                "hardware.create_date": null,
+                "hardware.desupported_flag": null,
+                "hardware.modified_at": "2011-03-21 11:22:10",
+                "hardware.product": "Phaser 3125 (Networked)",
+                "hardware.technopedia_id": "4d35ec28-0f16-4787-acca-885679265b59",
+                "vertical.name": "Medical and Health Care",
+                "vertical.short_name": "MD",
+                "vertical.technopedia_id": "81520b3f-6ffc-42c7-afce-a25bbdc63385"
+            }
         ]
       {  
     title: Example five
@@ -272,7 +272,7 @@ right_code_blocks:
     title: Hardware Product Attributes
     language: bash
   - code_block: |2-
-      (HARDWARE_PRODUCT)-[:HAS_A]<-(MANUFACTURER)
+      (HARDWARE_PRODUCT)-[:HAS_A]->(MANUFACTURER)
                 
       (HARDWARE_PRODUCT)-[:BELONGS_TO]->(CATEGORY_2)
 
