@@ -22,8 +22,7 @@ content_markdown: >-
   The main method for acessing information in Technopedia is by using the API with the Technopedia query language (TQL) (`https://v6-1.technopedia.com/tql?q=MATCH <Query Parameters>`) to query nodes and relationships in the Technopedia database.
   
   <br>
-  <br>
-
+  
   #### About Nodes in Technopedia
   
   
@@ -55,7 +54,7 @@ content_markdown: >-
    * To get information about a relationship that has attributes, we can assign it an alias for later reference. The alias is placed in front of the colon `-[anyAlias:Relationship_name]->(node)`
 
 
-  ###### The following diagram is a simple representation of a few nodes and relationships:
+  ###### The following diagram is a basic representation of some nodes and relationships:
 
 
   ![API Image](/images/nodes_simple.png)<br>&nbsp;

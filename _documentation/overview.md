@@ -63,20 +63,20 @@ content_markdown: |-
 
   * Nodes are connected by relationships that you use to query multiple nodes in a single query. 
 
-  ###### The following diagram shows the nodes and relationships in the Technopedia database:
+  ###### The following graph shows the Technopedia nodes and relationships:
   
   ![API Image](/images/graph.png){: .img-responsive}<br>&nbsp;
 
 left_code_blocks:
   - code_block: |-
-      GET  https://v6.technopedia.com/tql?q=MATCH <Query Parameters>
+      GET:  https://v6.technopedia.com/tql?q=MATCH <Query Parameters>
       GET: https://v6.technopedia.com/tql?MATCH (abc:SOFTWARE_PRODUCT) RETURN abc
 
-      GET  https://v6.technopedia.com/technopedia-id/<technopedia_id>
-      GET  https://v6.technopedia.com/technopedia-id/4d35ec28-0f16-4787-acca-885679265b59
+      GET:  https://v6.technopedia.com/technopedia-id/<technopedia_id>
+      GET:  https://v6.technopedia.com/technopedia-id/4d35ec28-0f16-4787-acca-885679265b59
       
     title: API Query Examples
-    language: bash
+    language: javascript
 right_code_blocks:
   - code_block: |2
       https://v6.technopedia.com/tql
