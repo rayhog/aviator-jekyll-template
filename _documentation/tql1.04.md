@@ -87,7 +87,7 @@ content_markdown: |-
   
 
   <br>
-  To create a MATCH statement you must identify the nodes that store the infromaiton you require, and use the following guide to help you to build your query:
+  To create a MATCH statement you must identify the nodes that store the information you require, and use the following guidelines to help you to build your query:
 
    1.	Select the Nodes that you want to use in your query.<br>
    2.	Identify the node attributes that store the information you require.<br>
@@ -117,15 +117,10 @@ content_markdown: |-
 
    You must add an alias before the colon in nodes and relationships in the MATCH statement. You refer to this alias in the return clause to specify the query ouput.
    {: .warning}
-  
-  
-  
 
   <br>
-  <br>
-  <br>
 
-  The following diagram identifies the software nodes and the relationship directions.
+  The following diagram shows the software nodes and the relationship directions.
   <br>
   
   ![API Image](/images/sw_graph.png)<br>&nbsp;
@@ -133,33 +128,45 @@ content_markdown: |-
   <br>  
   <br>
 
-   Follow the relationship direction in the diagram.
+   For any queries that use relationships, follow the relationship direction in the node graph.
    {: .warning}
 
   <br>
-  <b>Objective:</b> To get software editions <br>
+  <b>Objective:</b> To get software editions that are called "Enterprise Developer" and the edition order is equal to two.  <br>
 
-    * To s.<br>
-    * We use MATCH to select the software edtion node and then create relationships to the other nodes.<br>
-    * Add.<br>
-    * To .<br>
+    * You only have to query the software edition node.<br>
+    * You use the attributes edition, and order to filter the output.<br>
+    * Use MATCH to select the software edtion node, and add an alias tto use in the RETURN clause.<br>
+    * Use the WHERE and AND clauses to add conditions that filter the output.<br>
+    
   <br>
-  In this query example, you return software editions in Technopedia with release, verison, and product information. <br>
+  In this query example, you return software editions in Technopedia by edition and order: <br>
 
-  `MATCH (e:SOFTWARE_EDITION)<-[x:HAS_A]-(r:SOFTWARE_RELEASE)-[y:HAS_A]->(v:SOFTWARE_VERSION)-[z:HAS_A]->(p:SOFTWARE_PRODUCT) RETURN r,e,v,p`<br>
+  ` MATCH (s:SOFTWARE_EDITION) WHERE s.order = 2 AND s.edition = "Enterprise Developer" RETURN s.edition, s.order`<br>
 
-  <br>
-  
   <br>
    
-  <b>Objective:</b> To get software editions 
+  <b>Objective:</b> To get five software editions and product name .
+    * You must query the software product and software edition nodes.<br>
+    * You use the attributes edition from software edition, and product from the software product node.<br>
+    * Use MATCH to select the software edtion node, and add an alias to use in the RETURN clause.<br>
+    * Add the `HAS_A` relationship from edition to product and note the direction of the relationship in the diagram.<br>
+    * Use the LIMIT clause to limit the results to five.<br>
+    
+   ![API Image](/images/ed_to_prod.png)<br>&nbsp;
+  <br>
+  In this query example, you return five software editions in Technopedia by edition and product name: <br>
+
+  `MATCH (s:SOFTWARE_EDITION)-[:HAS_A]->(p:SOFTWARE_PRODUCT) RETURN s.edition, p.product LIMIT 5`<br>
+
+  <br>
 
   
   <br>
 
   #### TQL Keywords<br>
 
-  You use the following keywords in your MATCH statements to filter data that is returned from your TQL query:
+  You use the following keywords in your MATCH statements to add conditions and filter data that is returned from your TQL query:
 
   * WHERE <br>
   Use the WHERE condition to filter results. <br>

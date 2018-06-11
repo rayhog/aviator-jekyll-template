@@ -30,10 +30,10 @@ content_markdown: >-
   The version identifier might be a word, or a number, or inlcude both. For example, version 1.0 is often used to represent the initial release of a software product.
 
   Gets software version information <br>
+   
+   `MATCH (a:SOFTWARE_MAJOR_VERSION) RETURN a.version`
 
-  `MATCH (a:SOFTWARE_MAJOR_VERSION) RETURN a.version`
-
-  {: .success} <br>
+   {: .success} <br>
 
   ### Software Major Group
   
@@ -43,9 +43,10 @@ content_markdown: >-
 
   Gets software version group information
 
-  `MATCH (a:SOFTWARE_VERSION_GROUP) RETURN a.version`
 
-  {: .success} 
+   `MATCH (a:SOFTWARE_VERSION_GROUP) RETURN a.version`
+
+   {: .success} 
 
 
   <br>

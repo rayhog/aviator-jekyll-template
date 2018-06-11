@@ -1,5 +1,5 @@
 ---
-title: TQL Queries
+title: More TQL
 position: 1.06
 type:
 description:
