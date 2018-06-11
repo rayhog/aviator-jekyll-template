@@ -101,7 +101,7 @@ content_markdown: |-
   
   <br>
 
-  #### TQL Keywords<br>
+  #### TQL extended relationships<br>
 
  
 

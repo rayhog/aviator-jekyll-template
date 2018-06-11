@@ -9,7 +9,7 @@ content_markdown: |-
   <br>
   ###### You query the Technopedia database by using the graph-based Technopedia query language (TQL) to select nodes and attributes of those nodes to define the criteria for your query and return relevant data. 
   <br>
-  The following diagram  shows an overview of the Technopedia API and how it queries the Technopedia database.
+  The following diagram shows an outline of the Technopedia APIs and some nodes from the Technopedia database.
 
   <br>
   ![API Image](/images/V6api.png){: .img-responsive}

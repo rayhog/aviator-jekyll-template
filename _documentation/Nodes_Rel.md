@@ -13,10 +13,10 @@ content_markdown: >-
   You can use an API GET request for product information in Technopedia by referencing the Technopedia ID.<br>
   You specify the Technopedia ID as a parameter for the Technopedia-id TQL endpoint. <br>
   For example,<br>
-  
+
   ![API Image](/images/tql_tid.png)<br>&nbsp;
   <br>
-  
+
   #### GET request by using the Technopedia query language (TQL)
 
   ######
@@ -24,9 +24,7 @@ content_markdown: >-
 
   ![API Image](/images/tql_match.png)<br>&nbsp;
   <br>
-  
-  <br>
-  
+
   #### About Nodes in Technopedia
   
   
@@ -36,6 +34,11 @@ content_markdown: >-
    * Node names are surrounded by parentheses in a query, for example, (Node).
    * Nodes have attributes that show data in key-value pairs.
    * Nodes are connected to other nodes by relationships.
+
+   Here's some examples of nodes in Technopedia:
+   
+   ![API Image](/images/nodes_few.png)<br>&nbsp;
+  <br>
    
   To get data from multiple nodes in one query, you use defined relationships to other nodes. 
   <br>

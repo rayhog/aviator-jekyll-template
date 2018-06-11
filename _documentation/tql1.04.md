@@ -12,9 +12,9 @@ content_markdown: |-
 
   #### Get started with TQL<br>
 
-  To create a query by using TQL, you must create a MATCH statement, which is similar to a Select statement in SQL.
+  To create a query by using TQL, you must create a MATCH statement, which is similar to a Select statement in SQL.<br>
   For example, `MATCH (software:SOFTWARE_RELEASE) RETURN software`<br>
-  You append the MATCH statement as a query parameter to the TQL endpoint `https://v6.technopedia.com/tql` <br>
+  You append the MATCH query statement as a query parameter to the TQL endpoint.<br>
   For example, `https://v6.technopedia.com/tql?q=<MATCH query statement>`
   <br>
   
@@ -35,8 +35,8 @@ content_markdown: |-
     Typically, you refer to a node in the graph as your source of data for the query. Nodes in a query are predeced by a (:) colon. <br>
     `MATCH (:node)` <br>
   * Alias <br>
-    You append an alias to the node, for example, 'MATCH (alias:node)', so you can call that alias to return data.<br>
-    TQL binds the alias that you specify to the node so that you can use that alias in the Return clause of <br>
+    You append an alias to the node, for example, 'MATCH (alias:node)', so you can call that alias with the RETURN clasue to return data.<br>
+    TQL binds the unique alias to the node so that you can refer to that alias in the Return clause of <br>
     the MATCH query to request specific data. <br>
     `MATCH (alias:node) RETURN alias` <br>
     You can aslo use the alias to specify attributes to return. <br>
@@ -137,12 +137,12 @@ content_markdown: |-
    {: .warning}
 
   <br>
-  <b>Objective:</b> To get software editions that have a release, verison, and product.<br>
+  <b>Objective:</b> To get software editions <br>
 
-    * To get the required information, you have to add relationships to the software release, software version, and software product nodes.<br>
+    * To s.<br>
     * We use MATCH to select the software edtion node and then create relationships to the other nodes.<br>
-    * Add an alias to each node and relationship in the  query.<br>
-    * To return the data that you need, use the Return clause to refer to the specific aliases.<br>
+    * Add.<br>
+    * To .<br>
   <br>
   In this query example, you return software editions in Technopedia with release, verison, and product information. <br>
 
@@ -152,11 +152,7 @@ content_markdown: |-
   
   <br>
    
-  <b>Objective:</b> To get software editions that have a release, verison, product, and manufacturer.<br>
-  <br>
-  In this query example, you get data for software editions in Technopedia, with release, version, product, and manufacturer data for each edition that is listed. <br>
-
-  `MATCH (e:SOFTWARE_EDITION)<-[:HAS_A]-(r:SOFTWARE_RELEASE)-[:HAS_A]->(v:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_PRODUCT)<-[:HAS_A]-(m:MANUFACTURER) RETURN e,r,v,p,m LIMIT 10`<br>
+  <b>Objective:</b> To get software editions 
 
   
   <br>
