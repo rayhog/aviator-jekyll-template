@@ -16,15 +16,13 @@ content_markdown: >-
 
   ![API Image](/images/tql_tid.png)<br>&nbsp;
   <br>
-
   #### GET request by using the Technopedia query language (TQL)
 
   ######
-  The main method for acessing information in Technopedia is by using the API with the Technopedia query language (TQL) (`https://v6-1.technopedia.com/tql?q=MATCH <Query Parameters>`) to query nodes and relationships in the Technopedia database.
-
+  The main method for acessing information in Technopedia is by using the API with the Technopedia query language (TQL) to query nodes and relationships in the Technopedia database.<br>
+  For example, <br>
   ![API Image](/images/tql_match.png)<br>&nbsp;
   <br>
-
   #### About Nodes in Technopedia
   
   
@@ -36,7 +34,7 @@ content_markdown: >-
    * Nodes are connected to other nodes by relationships.
 
    Here's some examples of nodes in Technopedia:
-   
+
    ![API Image](/images/nodes_few.png)<br>&nbsp;
   <br>
    
