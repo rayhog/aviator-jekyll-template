@@ -24,7 +24,8 @@ content_markdown: |-
   <br>
   
 
-  #### Overview of creating a MATCH query<br>
+  #### Overview............. query<br>
+  https://v6-1.technopedia.com/tql?q=MATCH (hw_mod:HARDWARE_MODEL)-[:HAS_A]->(hw_prod:HARDWARE_PRODUCT)<-[:HAS_A]-(manu:MANUFACTURER) RETURN hw_mod, hw_prod, manu
 
 
   
