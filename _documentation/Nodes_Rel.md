@@ -1,10 +1,10 @@
 ---
-title: Data
+title: Technopedia Data
 position: 1.04
 type:
 description: >-  
 content_markdown: >-
-  ###### You access data in Technopedia by referencing nodes, relationships, or Technopedia IDs in the Technopedia graph.
+  ###### You access Technopedia data by referencing nodes, attributes, relationships, or Technopedia IDs in the Technopedia graph.
 
   #### GET request with the Technopedia ID
   <br>
@@ -13,13 +13,15 @@ content_markdown: >-
   You can use an API GET request for product information in Technopedia by referencing the Technopedia ID.<br>
   You specify the Technopedia ID as a parameter for the Technopedia-id TQL endpoint. <br>
   For example,<br>
-  GET  `https://v6-1.technopedia.com/technopedia-id/4d35ec28-0f16-4787-acca-885679265b59` <br>
+  ![API Image](/images/tql_tid.png)<br>&nbsp;
   <br>
   
   #### GET request by using the Technopedia query language (TQL)
 
   ######
   The main method for acessing information in Technopedia is by using the API with the Technopedia query language (TQL) (`https://v6-1.technopedia.com/tql?q=MATCH <Query Parameters>`) to query nodes and relationships in the Technopedia database.
+  ![API Image](/images/tql_match.png)<br>&nbsp;
+  <br>
   
   <br>
   
