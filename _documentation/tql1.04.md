@@ -88,13 +88,18 @@ content_markdown: |-
   
 
   <br>
-  To create a MATCH statement you must identify the nodes that store the information you require, and use the following guidelines to help you to build your query:
+  Use the following guidelines to help you to build a basic query:
 
-   1.	Select the Nodes that you want to use in your query.<br>
-   2.	Identify the node attributes that store the information you require.<br>
-   3.	Select any relationships to connect to nodes that hold your required data.<br>
+   1.	Idendify the node that has the data you need.<br>
+   2.	Identify any node attributes that you want to target for your data, for example, you use the product
+        attribute on the software product node to get names of software products. <br>   
+   3.	Select any relationships to connect to nodes that you use in your query.<br>
    4.	Write your MATCH statement
 
+  To view a list of attributes for any node, you use the `MATCH (alias:NODE) RETURN alias` query with the TQL endpoint.
+  For example, `https://v6-1.technopedia.com/tql?q=MATCH (n:SOFTWARE_PRODUCT ) RETURN n LIMIT 1`
+  {: .info}
+  
   <br>
   Here’s some examples:
   <br>
@@ -103,7 +108,7 @@ content_markdown: |-
     * The Software Product node has an attribute called product.<br>
     * We use MATCH to select the `SOFTWARE_PRODUCT` node and the `product` attribute to filter for Adobe.<br>
     * View the list of attributes that you can use on the Software Product page, or you use the following MATCH statement 
-      with the `/tql` endpoint to view a list of attributes for the `SOFTWARE_PRODUCT` node.
+      with the `/tql` endpoint to view a list of attributes for the `SOFTWARE_PRODUCT` node. <br>
       `MATCH(x:SOFTWARE_PRODUCT) RETURN x`
       <br>
     * Use the WHERE clause with the equals operator to specify the condition `product = "Adobe"`.<br>
