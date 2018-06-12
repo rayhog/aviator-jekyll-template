@@ -4,18 +4,17 @@ title: Overview
 position: 1.01
 description: 
 content_markdown: |-
-  ###### The Technopedia version 6 API enables cloud-based access to asset data in Technopedia that provides you with a cloud-first, high-performance resource to manage your assets.
+  ###### The Technopedia version 6 API enables cloud-based access to asset data in Technopedia that provides you with a cloud-first and high-performance resource to manage your assets.
   ###### You can use the API with TQL (Technopedia query language), which is a graph-based query language that you use to query the Technopedia database. Graph databases are designed to process data by using a graph-based methodology, rather than a relational database model.
   <br>
   ###### You query the Technopedia database by using the graph-based Technopedia query language (TQL) to select nodes and attributes of those nodes to define the criteria for your query and return relevant data. 
   <br>
-  The following diagram shows an outline of the Technopedia APIs and some nodes from the Technopedia database.
-
+  The following diagram shows an outline of the Technopedia APIs, and some nodes from the Technopedia database.
   <br>
   ![API Image](/images/V6api.png){: .img-responsive}
   <br>
-  ###### The following query is an example of a GET request with a graph query, which is like a `SELECT` statement in SQL, which selects the software node and then returns software product names.
-  <br>
+  ###### The following query is an example of a GET request with a graph query, which is like a `SELECT` statement in SQL, which selects the software node and then returns software product names. <br>
+  
   `GET:` `https://v6.technopedia.com/tql?=MATCH (n:SOFTWARE_PRODUCT) RETURN n.product` <br>
 
 
@@ -69,18 +68,18 @@ content_markdown: |-
 
 left_code_blocks:
   - code_block: |-
-      GET:  https://v6.technopedia.com/tql?q=MATCH <Query Parameters>
-      GET: https://v6.technopedia.com/tql?MATCH (abc:SOFTWARE_PRODUCT) RETURN abc
+      GET:  https://v6-1.technopedia.com/tql?q=MATCH <Query Parameters>
+      GET: https://v6-1.technopedia.com/tql?MATCH (xx:SOFTWARE_PRODUCT) RETURN xx
 
-      GET:  https://v6.technopedia.com/technopedia-id/<technopedia_id>
-      GET:  https://v6.technopedia.com/technopedia-id/4d35ec28-0f16-4787-acca-885679265b59
+      GET:  https://v6-1.technopedia.com/technopedia-id/<technopedia_id>
+      GET:  https://v6-1.technopedia.com/technopedia-id/4d35ec28-0f16-4787-acca-885679265b59
       
     title: API Query Examples
-    language: javascript
+    language: bash
 right_code_blocks:
   - code_block: |2
-      https://v6.technopedia.com/tql
-      https://v6.technopedia.com/technopedia-id/
+      https://v6-1.technopedia.com/tql
+      https://v6-1.technopedia.com/technopedia-id/
       
       
 

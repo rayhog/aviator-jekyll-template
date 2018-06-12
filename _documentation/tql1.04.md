@@ -267,6 +267,7 @@ left_code_blocks:
     language: javascript
   - code_block: |-
       MATCH (aliasx:HARDWARE_PRODUCT) RETURN aliasx.product, aliasx.modified_at LIMIT 10
+      
       RESPONSE SAMPLE
 
       {
