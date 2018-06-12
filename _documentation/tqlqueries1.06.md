@@ -137,19 +137,17 @@ content_markdown: |-
 
   #### TQL extended relationships<br>
 
+
+  Here are some examples of extended relationships that connect multiple nodes:
+
+  <b>Query Intent:</b> 
+
  
-
-
-
-
-
-
  
   The following MATCH query examples show variations in constructions that use relationships and other conditions. To try out a query example, you append the MATCH statement to the following tql endpoint and make a GET request from a API client or use cURL. <br>
   <br>
   `https://v6-1.technopedia.com/tql?q=<MATCH Statement>`
   
-
 left_code_blocks:
   - code_block: |-
       MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(:SOFTWARE_VERSION)-[:HAS_A]->(sp:SOFTWARE_PRODUCT)-[:HAS_A]->(m:MANUFACTURER)<-[:HAS_A]-(:CPU_MODEL) WHERE m.manufacturer CONTAINS "TEL" RETURN n.release, sp.product, m.manufacturer LIMIT 5
@@ -188,8 +186,11 @@ left_code_blocks:
 
     title: Example one
     language: javascript
+    title: Example one
+    language: javascript
   - code_block: |-
       MATCH (aliasx:HARDWARE_PRODUCT) RETURN aliasx.product, aliasx.modified_at LIMIT 10
+
       RESPONSE SAMPLE
 
       {
@@ -245,10 +246,8 @@ left_code_blocks:
 
       {
         "results": [
-            {
-                
+            {                
                 "s.alias": null,
-                "s.cat_sw_product_id": 1074050,
                 "s.component": null,
                 "s.created_at": "2007-04-22 04:55:16",
                 "s.desupported_flag": null,
@@ -262,7 +261,6 @@ left_code_blocks:
             },
             {
                 "s.alias": null,
-                "s.cat_sw_product_id": 38814600,
                 "s.component": null,
                 "s.created_at": "2013-01-09 10:00:34",
                 "s.desupported_flag": null,
@@ -272,7 +270,8 @@ left_code_blocks:
                 "s.modified_at": "2014-02-13 21:43:30",
                 "s.product": "Office",
                 "s.technopedia_id": "35785f94-d5e2-4e0b-b2f1-b7e59ecde968",
-                "s.url": "http://www.corel.com/corel/product/index.jsp?pid=prod3430104&cid=catalog50008&segid=692&storeKey=ca&languageCode=en"
+                "s.url": "http://www.corel.com/corel/product/index.jsp?
+                 pid=prod3430104&cid=catalog50008&segid=692&storeKey=ca&languageCode=en"
             }
         ]
       {  
@@ -304,27 +303,81 @@ left_code_blocks:
     title: Example four
     language: javascript
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
+      MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(:SOFTWARE_VERSION)-[:HAS_A]->(sp:SOFTWARE_PRODUCT) WHERE n.release CONTAINS "23" RETURN n.release, sp.product LIMIT 5
 
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+                "n.release": "123 Audio MP3 Converter",
+                "sp.product": "123 Audio MP3 Converter"
+            },
+            {
+                "n.release": "5523 ADSL Work Station (AWS)",
+                "sp.product": "5523 ADSL Work Station (AWS)"
+            },
+            {
+                "n.release": "123Scan",
+                "sp.product": "123Scan"
+            },
+            {
+                "n.release": "123Scan",
+                "sp.product": "123Scan"
+            },
+            {
+                "n.release": "123Scan",
+                "sp.product": "123Scan"
             }
         ]
       {  
     title: Example five
     language: bash
   - code_block: |-
+      MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(:SOFTWARE_VERSION)-[:HAS_A]->(sp:SOFTWARE_PRODUCT)-[:HAS_A]->(m:MANUFACTURER) WHERE m.manufacturer CONTAINS "people" RETURN n.release, sp.product, m.manufacturer LIMIT 5
+
+      RESPONSE SAMPLE
+
+      {
+        "results": [
+            {
+                "m.manufacturer": "Peoplefluent",
+                "n.release": "AAPlanner",
+                "sp.product": "AAPlanner"
+            },
+            {
+                "m.manufacturer": "Peoplefluent",
+                "n.release": "AAPlanner",
+                "sp.product": "AAPlanner"
+            },
+            {
+                "m.manufacturer": "Peoplefluent",
+                "n.release": "AAPlanner",
+                "sp.product": "AAPlanner"
+            },
+            {
+                "m.manufacturer": "Peoplefluent",
+                "n.release": "AAPlanner",
+                "sp.product": "AAPlanner"
+            },
+            {
+                "m.manufacturer": "PeopleCube",
+                "n.release": "Scheduler Plus",
+                "sp.product": "Scheduler Plus"
+            }
+        ]
+      {  
+    
+
+    title: Example six
+    language: javascript
+  - code_block: |-
       MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
 
       
     title: cURL
     language: bash
+
     
 
 right_code_blocks:

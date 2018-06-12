@@ -13,7 +13,7 @@ content_markdown: >-
   ######
   You can use an API GET request for product information in Technopedia by referencing the Technopedia ID.<br>
   You specify the Technopedia ID as a parameter for the Technopedia-id TQL endpoint. <br>
-  For example,<br>
+  <br>
 
   ![API Image](/images/tql_tid.png)<br>&nbsp;
   
@@ -22,7 +22,7 @@ content_markdown: >-
 
   ######
   The main method for acessing information in Technopedia is by using the API with the Technopedia query language (TQL) to query nodes and relationships in the Technopedia database.<br>
-  For example, <br>
+  <br>
   ![API Image](/images/tql_match.png)<br>&nbsp;
   <br>
 
