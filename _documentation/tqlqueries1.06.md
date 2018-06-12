@@ -5,21 +5,24 @@ type:
 description:
   TQL queries can be based on a single node or multiple nodes where you need to include relationships to get data from multiple nodes. For many TQL queries, you have to use relationships to query several Technopedia nodes. Relationships might seem complex but their function is mainly to connect nodes.
 content_markdown: |-
-  ###### Because TQL is a declarative query language, you can build your query with multiple nodes, relationships, attributes, and add multiple conditions to refine your query.
+  ###### Because TQL is a declarative query language, you can build your query with multiple nodes, relationships, attributes, and add multiple conditions to refine your query.<br>
   
+
   You can use an alias or variable with a realtionship that has attributes when you want to return data for those attributes. TQL binds the alias that you specify to that relationship, which you can use with the Return clause of the MATCH query to get specific data.
   {: .info}
 
   #### Building relationships in a query<br>
 
-  ######
-  Relationships provide a way of getting related data from multiple nodes in one query. You connect the nodes by using the relationship that's shown in the database graph.
   
+  ###### Relationships provide a way of getting related data from multiple nodes in one query. You connect the nodes by using the relationship that's shown in the database graph. <br>
+  
+  {: .info}
+
   Note the direction of the relationship in the graph. If you specify an incorrect direction, you might not get data from the nodes that you want to connect with.
 
-  {: .info}
   
   
+
   The following image shows examples of types of relationships and their directions.
    
   ![API Image](/images/relat.png)<br>&nbsp;
@@ -31,10 +34,34 @@ content_markdown: |-
   
 
   #### Overview............. query<br>
-  https://v6-1.technopedia.com/tql?q=MATCH (hw_mod:HARDWARE_MODEL)-[:HAS_A]->(hw_prod:HARDWARE_PRODUCT)<-[:HAS_A]-(manu:MANUFACTURER) RETURN hw_mod, hw_prod, manu
+
+  `MATCH (hw_mod:HARDWARE_MODEL)-[:HAS_A]->(hw_prod:HARDWARE_PRODUCT)<-[:HAS_A]-(manu:MANUFACTURER) RETURN hw_mod, hw_prod, manu`
 
 
+  `MATCH (node)-[My_alias:relationship {relationship_attribute : value}]->(:node) Return My_alias
+
+
+      MATCH (:SOFTWARE_RELEASE)-[h:HAS_A {end_date: "2013-12-10 00:00:00"}]->(:SUPPORT_STAGE) RETURN h
+      
+
+      RESPONSE SAMPLE
+
+      {
+        "results": [
+            {
+                "end_date": "2013-12-10 00:00:00",
+                "modified_at": "2018-05-04 20:01:57",
+                "created_at": "2018-05-03 17:29:30"
+            }
+        ]
+      {  `
   
+  
+  
+  QUERY INTENT
+  Return release name, software version, software product name, and manufacturer name for 2 software releases
+  `MATCH (srelease:SOFTWARE_RELEASE) -[:HAS_A]->(sver:SOFTWARE_VERSION)-[:HAS_A]->(sprod:SOFTWARE_PRODUCT)-[:HAS_A]->(manu:MANUFACTURER) RETURN srelease.release, sver.version, sprod.product, manu.manufacturer LIMIT 2`
+
   
 
   <br>
@@ -125,41 +152,36 @@ content_markdown: |-
 
 left_code_blocks:
   - code_block: |-
-      MATCH (n:MANUFACTURER) RETURN n LIMIT 1
+      MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(:SOFTWARE_VERSION)-[:HAS_A]->(sp:SOFTWARE_PRODUCT)-[:HAS_A]->(m:MANUFACTURER)<-[:HAS_A]-(:CPU_MODEL) WHERE m.manufacturer CONTAINS "TEL" RETURN n.release, sp.product, m.manufacturer LIMIT 5
       
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                
-                "n.cat_manufacturer_id": 594345,
-                "n.city": null,
-                "n.country": null,
-                "n.created_at": null,
-                "n.description": null,
-                "n.email": null,
-                "n.employees": null,
-                "n.employees_date": null,
-                "n.fax": null,
-                "n.fiscal_end_date": null,
-                "n.known_as": null,
-                "n.legal": "Corporation",
-                "n.manufacturer": "Go Ahead Web",
-                "n.modified_at": null,
-                "n.phone": null,
-                "n.profits_date": null,
-                "n.profits_per_year": null,
-                "n.publicly_traded": null,
-                "n.revene_date": null,
-                "n.revenue": null,
-                "n.state": null,
-                "n.street": null,
-                "n.symbol": "Private",
-                "n.technopedia_id": "513a9c99-608f-4b36-b9b6-3b53dfa85625",
-                "n.tier": 3,
-                "n.website": "http://www.goaheadweb.co.uk/",
-                "n.zip": null
+                "m.manufacturer": "Intel",
+                "n.release": "C++ Composer XE",
+                "sp.product": "C++ Composer XE"
+            },
+            {
+                "m.manufacturer": "Intel",
+                "n.release": "C++ Composer XE",
+                "sp.product": "C++ Composer XE"
+            },
+            {
+                "m.manufacturer": "Intel",
+                "n.release": "C++ Composer XE",
+                "sp.product": "C++ Composer XE"
+            },
+            {
+                "m.manufacturer": "Intel",
+                "n.release": "C++ Composer XE",
+                "sp.product": "C++ Composer XE"
+            },
+            {
+                "m.manufacturer": "Intel",
+                "n.release": "C++ Composer XE",
+                "sp.product": "C++ Composer XE"
             }
         ]
       {  

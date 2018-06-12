@@ -34,12 +34,33 @@ content_markdown: >-
   `https://v6-1.technopedia.com/tql?q=<MATCH Statement>`
 left_code_blocks:
   - code_block: |
-      MATCH (n:SOFTWARE_RELEASE) RETURN n.release_id, n.created_at
+      MATCH (n:SOFTWARE_RELEASE) RETURN n.release, n.created_at LIMIT 5
 
       RESPONSE SAMPLE
       {
-          
-          }
+        "results": [
+            {
+                "n.created_at": "2014-04-25 15:20:43",
+                    "n.release": "WMSigner"
+            },
+            {
+                "n.created_at": "2016-02-11 11:18:47",
+                    "n.release": "Virtualenvwrapper"
+            },
+            {
+                "n.created_at": "2015-02-02 13:48:58",
+                "n.release": "File Master Plus"
+            },
+            {
+                "n.created_at": "2016-02-24 09:44:04",
+                "n.release": "WV-ASF900 Series"
+            },
+            {
+                "n.created_at": "2015-05-18 10:58:59",
+                "n.release": "Wise Plugin Manager"
+            }
+         ]
+      }
 
     title: Example one
     language: javascript
@@ -66,17 +87,21 @@ left_code_blocks:
   - code_block: |-
       MATCH (srelease:SOFTWARE_RELEASE) -[:HAS_A]->(sver:SOFTWARE_VERSION)-[:HAS_A]->(sprod:SOFTWARE_PRODUCT)-[:HAS_A]->(manu:MANUFACTURER) RETURN srelease.release, sver.version, sprod.product, manu.manufacturer LIMIT 2
 
-      QUERY INTENT
-      Return release name, software version, software product name, and manufacturer name for 2 software releases
-
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+                "manu.manufacturer": "Callware Technologies",
+                "sprod.product": "Callegra .UC",
+                "srelease.release": "Callegra .UC",
+                "sver.version": "6.14"
+            },
+            {
+                "manu.manufacturer": "Callware Technologies",
+                "sprod.product": "Callegra .UC",
+                "srelease.release": "Callegra .UC",
+                "sver.version": "6.15"
             }
         ]
       {  
@@ -86,9 +111,6 @@ left_code_blocks:
   - code_block: |-
       MATCH (srelease:SOFTWARE_RELEASE) -[:HAS_A]->(sver:SOFTWARE_VERSION)-[HAS_A]->(smajor:SOFTWARE_VERSION_GROUP) RETURN srelease.release, sver.version, smajor.version_group LIMIT 2
       
-      QUERY INTENT
-      Return release name, software version and software group version for 2 software releases.
-
       RESPONSE SAMPLE
 
       {
@@ -105,8 +127,7 @@ left_code_blocks:
 
   - code_block: |-
       MATCH (srelease:SOFTWARE_RELEASE) -[:HAS_A]->(sver:SOFTWARE_VERSION)-[HAS_A]->(smajor:SOFTWARE_MAJOR_VERSION) RETURN srelease.release, sver.version, smajor.version LIMIT 2
-      Return release name, software version and software major version for 2 software releases.
-
+      
       RESPONSE SAMPLE
 
       {

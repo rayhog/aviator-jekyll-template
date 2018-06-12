@@ -104,13 +104,12 @@ content_markdown: |-
   <br>
   Here’s some examples:
   <br>
-  <b>Objective:</b> To find software that is named Adobe.<br>
+  <b>Query Intent:</b> To find software that is named Adobe.<br>
 
     * The Software Product node has an attribute called product.<br>
     * We use MATCH to select the `SOFTWARE_PRODUCT` node and the `product` attribute to filter for Adobe.<br>
-    * View the list of attributes that you can use on the Software Product page, or you use the following MATCH statement 
-      with the `/tql` endpoint to view a list of attributes for the `SOFTWARE_PRODUCT` node. <br>
-      `MATCH(x:SOFTWARE_PRODUCT) RETURN x`
+    * View the list of attributes that you can use on the Software Product page, or you use <br>
+      `MATCH(x:SOFTWARE_PRODUCT) RETURN x` to view a list of attributes.
       <br>
     * Use the WHERE clause with the equals operator to specify the condition `product = "Adobe"`.<br>
   <br>
@@ -239,7 +238,6 @@ left_code_blocks:
         "results": [
             {
                 
-                "n.cat_manufacturer_id": 594345,
                 "n.city": null,
                 "n.country": null,
                 "n.created_at": null,
@@ -257,8 +255,8 @@ left_code_blocks:
                 "n.profits_date": null,
                 "n.profits_per_year": null,
                 "n.publicly_traded": null,
-                "n.revene_date": null,
                 "n.revenue": null,
+                "n.revenue_date": null,
                 "n.state": null,
                 "n.street": null,
                 "n.symbol": "Private",
@@ -330,10 +328,8 @@ left_code_blocks:
 
       {
         "results": [
-            {
-                
+            {                
                 "s.alias": null,
-                "s.cat_sw_product_id": 1074050,
                 "s.component": null,
                 "s.created_at": "2007-04-22 04:55:16",
                 "s.desupported_flag": null,
@@ -347,7 +343,6 @@ left_code_blocks:
             },
             {
                 "s.alias": null,
-                "s.cat_sw_product_id": 38814600,
                 "s.component": null,
                 "s.created_at": "2013-01-09 10:00:34",
                 "s.desupported_flag": null,
@@ -389,21 +384,74 @@ left_code_blocks:
     title: Example four
     language: javascript
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
+      MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(:SOFTWARE_VERSION)-[:HAS_A]->(sp:SOFTWARE_PRODUCT) WHERE n.release CONTAINS "23" RETURN n.release, sp.product LIMIT 5
 
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+                "n.release": "123 Audio MP3 Converter",
+                "sp.product": "123 Audio MP3 Converter"
+            },
+            {
+                "n.release": "5523 ADSL Work Station (AWS)",
+                "sp.product": "5523 ADSL Work Station (AWS)"
+            },
+            {
+                "n.release": "123Scan",
+                "sp.product": "123Scan"
+            },
+            {
+                "n.release": "123Scan",
+                "sp.product": "123Scan"
+            },
+            {
+                "n.release": "123Scan",
+                "sp.product": "123Scan"
             }
         ]
       {  
     title: Example five
     language: bash
+  - code_block: |-
+      MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(:SOFTWARE_VERSION)-[:HAS_A]->(sp:SOFTWARE_PRODUCT)-[:HAS_A]->(m:MANUFACTURER) WHERE m.manufacturer CONTAINS "people" RETURN n.release, sp.product, m.manufacturer LIMIT 5
+
+      RESPONSE SAMPLE
+
+      {
+        "results": [
+            {
+                "m.manufacturer": "Peoplefluent",
+                "n.release": "AAPlanner",
+                "sp.product": "AAPlanner"
+            },
+            {
+                "m.manufacturer": "Peoplefluent",
+                "n.release": "AAPlanner",
+                "sp.product": "AAPlanner"
+            },
+            {
+                "m.manufacturer": "Peoplefluent",
+                "n.release": "AAPlanner",
+                "sp.product": "AAPlanner"
+            },
+            {
+                "m.manufacturer": "Peoplefluent",
+                "n.release": "AAPlanner",
+                "sp.product": "AAPlanner"
+            },
+            {
+                "m.manufacturer": "PeopleCube",
+                "n.release": "Scheduler Plus",
+                "sp.product": "Scheduler Plus"
+            }
+        ]
+      {  
+    
+
+    title: Example six
+    language: javascript
   - code_block: |-
       MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
 
