@@ -5,7 +5,7 @@ position: 1.02
 description: 
 content_markdown: >-
   ###### Access Technopedia data by using the Technopedia API.
-  Technopedia endpoints enable to you to use the Technopedia ID endpoint to get product information for a specific product by specifying the Technopedia ID, and to use the Technopedia query language (TQL) with the TQL endpoint to form custom queries that query data from the Technopedia database.<br>
+  Technopedia endpoints enable to you to use the Technopedia ID endpoint to get product information for a specific product by specifying the Technopedia ID, and to use the Technopedia query language (TQL) with the TQL endpoint to form custom queries that query data in the Technopedia database.<br>
   <br>
   
   #### Get an API key<br>
@@ -42,7 +42,8 @@ content_markdown: >-
   
   #### Authentication<br>
   
-  ###### The Technopedia Version 6 API uses OAuth for authentication. To authenticate in a new session, you pass the API key in the request header. The API key is provided by Flexera Technopedia support.
+  ###### The Technopedia Version 6 API uses OAuth for authentication. To authenticate in a new session, you pass the API key in the request header. <br> 
+  The API key is provided by Flexera Technopedia support.
 
   In the following examples, an API key example is used in a cURL example and in the Postman API client. The key `Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a` is used in both examples.
   <br>
@@ -76,7 +77,6 @@ right_code_blocks:
       curl -G -H "Authorization: Bearer <API_KEY>" https://v6-1.technopedia.com/<endpoint>
 
       Example:
-
       curl -G -H "Authorization: Bearer b93477a9-054b-4878-a16f-d7f5d17a7a" "https://v6-1.technopedia.com/<endpoint>
         
     title: Authentication

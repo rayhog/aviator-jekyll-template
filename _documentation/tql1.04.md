@@ -14,11 +14,12 @@ content_markdown: |-
 
   To create a query by using TQL, you must create a MATCH statement, which is similar to a Select statement in SQL.<br>
   For example, `MATCH (software:SOFTWARE_RELEASE) RETURN software`<br>
+  
   You append the MATCH query statement as a query parameter to the TQL endpoint.<br>
   For example, `https://v6.technopedia.com/tql?q=<MATCH query statement>`
   <br>
   
-  The TQL MATCH statement returns results from one or more nodes and relationships that are specified in the query. Typically, the query results are returned in key-value pairs, which resembles the format in the following image: <br>
+  The TQL MATCH statement returns results from one or more nodes and relationships that you specify in the query. Typically, the query results are returned in key-value pairs, which resembles the format in the following image: <br>
    <br>
   
   ![API Image](/images/results.png)<br>&nbsp;
@@ -29,25 +30,25 @@ content_markdown: |-
   To create a MATCH statement, you need some or all of the following components:
   
   * MATCH <br>
-    The MATCH clause introduces the statement like SELECT in SQL and is the first input. <br>
+    The MATCH clause introduces the statement like SELECT in SQL and is the first input. You use MATCH to select a node in Technopedia.<br>
     `MATCH` <br>
   * Node <br>
     Typically, you refer to a node in the graph as your source of data for the query. Nodes in a query are predeced by a (:) colon. <br>
     `MATCH (:node)` <br>
   * Alias <br>
-    You append an alias to the node, for example, 'MATCH (alias:node)', so you can call that alias with the RETURN clasue to return data.<br>
+    You append an alias to the node, for example, 'MATCH (alias:node)', so you can call that alias with the RETURN clause to return data.<br>
     TQL binds the unique alias to the node so that you can refer to that alias in the Return clause of <br>
     the MATCH query to request specific data. <br>
     `MATCH (alias:node) RETURN alias` <br>
-    You can aslo use the alias to specify attributes to return. <br>
+    You can use the alias to specify specific node attributes that you want to return. <br>
     `MATCH (alias:node) RETURN alias.attribute1, alias.attribute2` <br>
   * Relationship <br>
     To get data from more than one node in a query, you must use a relationship to connect the nodes. <br>
     You don't need to append an alias to the relationship, unless, you want to get data back from that relationship. <br>
     `MATCH (aliasx:node1)-[:RELATED_TO]->(aliasy:node2), RETURN aliasx, aliasy` <br>
   * Relationship direction <br>
-    The direction of the relationship shows the relationship from one node to another; <br> 
-    it is shown by the direction of the arrow in the query. <br>
+    The direction of the relationship is shows the relationship from node to node. <br> 
+    An arrow in the query shows a unidirectional relationship, and no arrows indicate a birdirectional relationship. <br>
     For example, node_software is manufactured_by node_manufacturer <br>
     `(:node_software)-[:MANUFACTURED_BY]->(:node_manufacturer)` <br>
     Typically, relationships are unidirectional but they can be bidirectional. <br>
@@ -267,7 +268,7 @@ left_code_blocks:
     language: javascript
   - code_block: |-
       MATCH (aliasx:HARDWARE_PRODUCT) RETURN aliasx.product, aliasx.modified_at LIMIT 10
-      
+
       RESPONSE SAMPLE
 
       {

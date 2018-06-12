@@ -5,6 +5,7 @@ type:
 description: >-  
 content_markdown: >-
   ###### You access Technopedia data by referencing nodes, attributes, relationships, or Technopedia IDs in the Technopedia graph.
+  <br>
 
   #### GET request with the Technopedia ID
   <br>
@@ -16,7 +17,6 @@ content_markdown: >-
 
   ![API Image](/images/tql_tid.png)<br>&nbsp;
   <br>
-  
   #### GET request by using the Technopedia query language (TQL)
 
   ######
@@ -48,20 +48,22 @@ content_markdown: >-
   ######
   Relationships provide semantically relevant connections between the Technopedia nodes. <br>
   Relationships have a type, such as `BELONGS_TO` and a direction, such as node x to node y. <br>
-  An arrow determines the direction of the relationship. For example `(node x)-[BELONGS_TO]->(node y)`
+  An arrow determines the direction of the relationship. <br>
+  For example `(node x)-[BELONGS_TO]->(node y)` <br>
   To get Technopedia data from multiple nodes in one query, you use relationships to traverse nodes and define the criteria for the data that you want to extract from the database.
 
-   * Relationships are represented by an arrow `->` between two nodes, which represent the direction of the relationship.   Relationships often exist in a single direction, but they can be bidirectional.
+   * Relationships are represented by an arrow `->` between two nodes, which represents the direction of the relationship. 
+     Relationships often exist in a single direction but they can be bidirectional.
 
    * Relationships provide semantically relevant connections between the Technopedia database nodes, for example, the software product node has the relationship: `[HAS_A]->` to the manufacturer node.
 
-   * Relationships allow you to traverse the Technopedia Nodes and by using the Technopedia query language, and to get data from the specified nodes.
+   * Relationships allow you to traverse the Technopedia Nodes and by using the Technopedia query language, and to get data from the specified nodes in one query.
 
    * Like nodes, relationships can also have attributes. Typically, relationship have quantitative attributes, such as time intervals.
    * To get information about a relationship that has attributes, we can assign it an alias for later reference. The alias is placed in front of the colon `-[anyAlias:Relationship_name]->(node)`
 
 
-  ###### The following diagram is a basic representation of some nodes and relationships:
+  ###### The following diagram is a simple overview of nodes and relationships:
 
 
   ![API Image](/images/nodes_simple.png)<br>&nbsp;
@@ -69,12 +71,10 @@ content_markdown: >-
 
   In a query, nodes are surrounded by parenthesis and relationships are surrounded by square brackets as shown in the following example:
   <br>
-  `Match (node)-[:RELATIONSHIP]-> (node)`
+  `Match (:node)-[:RELATIONSHIP]-> (:node)`
   
   <br>
  
-
-  
   
   The following diagram shows the nodes and relationships in the Technopedia database. <br>
   <br>
