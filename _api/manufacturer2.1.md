@@ -28,12 +28,6 @@ content_markdown: |-
     
 left_code_blocks:
   - code_block: |-
-      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:MANUFACTURER) RETURN h.manufacturer"
-    title: cURL 
-    language: bash
-
-
-  - code_block: >-
       MATCH (h:MANUFACTURER) RETURN h.manufacturer
 
       RESPONSE SAMPLE
@@ -268,6 +262,11 @@ left_code_blocks:
       
     title: Example five
     language: bash
+  - code_block: >-
+      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:MANUFACTURER) RETURN h.manufacturer"
+    title: cURL 
+    language: bash
+    
 right_code_blocks:
   - code_block: |2
       technopedia_id

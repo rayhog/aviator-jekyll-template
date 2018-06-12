@@ -96,10 +96,11 @@ content_markdown: |-
    3.	Select any relationships to connect to nodes that you use in your query.<br>
    4.	Write your MATCH statement
 
-  To view a list of attributes for any node, you use the `MATCH (alias:NODE) RETURN alias` query with the TQL endpoint.
-  For example, `https://v6-1.technopedia.com/tql?q=MATCH (n:SOFTWARE_PRODUCT ) RETURN n LIMIT 1`
+  To view a list of attributes for any node, you use the 
+  `MATCH (alias:NODE) RETURN alias` query with the TQL endpoint.
+  For example, `https://v6-1.technopedia.com/tql?q=MATCH (n:SOFTWARE_PRODUCT) RETURN n LIMIT 1`
   {: .info}
-  
+
   <br>
   Here’s some examples:
   <br>

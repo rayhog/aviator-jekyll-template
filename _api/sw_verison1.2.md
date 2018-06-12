@@ -32,7 +32,6 @@ content_markdown: >-
   Gets software version information <br>
    
    `MATCH (a:SOFTWARE_MAJOR_VERSION) RETURN a.version`
-
    {: .success} <br>
 
   ### Software Major Group
