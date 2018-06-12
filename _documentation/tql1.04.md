@@ -109,14 +109,14 @@ content_markdown: |-
     * The Software Product node has an attribute called product.<br>
     * We use MATCH to select the `SOFTWARE_PRODUCT` node and the `product` attribute to filter for Adobe.<br>
     * View the list of attributes that you can use on the Software Product page, or you use <br>
-      `MATCH(x:SOFTWARE_PRODUCT) RETURN x` to view a list of attributes.
+      `MATCH(x:SOFTWARE_PRODUCT) RETURN x` query to view a list of attributes.
       <br>
     * Use the WHERE clause with the equals operator to specify the condition `product = "Adobe"`.<br>
   <br>
   `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Adobe" Return s`
 
   <br>
-  In this example, software products that have Adobe in the name fields are returned.<br>
+  In this example, software products that have Adobe in the product fields are returned.<br>
   <br>
  
    You must add an alias before the colon for nodes that you reference with the RETURN clause in the MATCH statement. The return clause references the alias to generate the query ouput.
@@ -129,18 +129,17 @@ content_markdown: |-
   
   ![API Image](/images/sw_graph.png)<br>&nbsp;
   <br>  
-  <br>  
-  <br>
-
+  
+  
    For any queries that use relationships, follow the relationship direction in the node graph.
    {: .warning}
 
   <br>
-  <b>Objective:</b> To get software editions that are called "Enterprise Developer" and the edition order is equal to two.  <br>
+  <b>Query Intent:</b> To get software editions called "Enterprise Developer" and where the edition order is equal to two.  <br>
 
     * You only have to query the software edition node.<br>
     * You use the attributes edition, and order to filter the output.<br>
-    * Use MATCH to select the software edtion node, and add an alias tto use in the RETURN clause.<br>
+    * Use MATCH to select the software edtion node, and add an alias to the node that you refer to in the RETURN clause.<br>
     * Use the WHERE and AND clauses to add conditions that filter the output.<br>
     
   <br>
@@ -150,7 +149,8 @@ content_markdown: |-
 
   <br>
    
-  <b>Objective:</b> To get five software editions and product name .
+  <b>Query Intent:</b> To get five software editions and product names that are associated with those editions.
+
     * You must query the software product and software edition nodes.<br>
     * You use the attributes edition from software edition, and product from the software product node.<br>
     * Use MATCH to select the software edtion node, and add an alias to use in the RETURN clause.<br>
