@@ -7,14 +7,21 @@ description:
 content_markdown: |-
   ###### Because TQL is a declarative query language, you can build your query with multiple nodes, relationships, attributes, and add multiple conditions to refine your query.
   
-  To get data from a specific node or relationship, you use an alias or variable that you append to the node or relationship. TQL binds the alias that you specify to that node or relationship so you can use that alias in the Return clause of the MATCH query to get your specific data.
+  You can use an alias or variable with a realtionship that has attributes when you want to return data for those attributes. TQL binds the alias that you specify to that relationship, which you can use with the Return clause of the MATCH query to get specific data.
   {: .info}
+
   #### Building relationships in a query<br>
 
+  ######
+  Relationships provide a way of getting related data from multiple nodes in one query. You connect the nodes by using the relationship that's shown in the database graph.
+  
+  Note the direction of the relationship in the graph. If you specify an incorrect direction, you might not get data from the nodes that you want to connect with.
+
+  {: .info}
+  
+  
   The following image shows examples of types of relationships and their directions.
-  
-  <br>
-  
+   
   ![API Image](/images/relat.png)<br>&nbsp;
   <br>  
  

@@ -29,10 +29,11 @@ content_markdown: >-
   Software versioning is used to categorize the unique states of software as it is developed and released. 
   The version identifier might be a word, or a number, or inlcude both. For example, version 1.0 is often used to represent the initial release of a software product.
 
-  Gets software version information <br>
+  Returns software version information. <br>
    
    `MATCH (a:SOFTWARE_MAJOR_VERSION) RETURN a.version`
-   {: .success} <br>
+    
+    {: .success} <br>
 
   ### Software Major Group
   
@@ -40,10 +41,10 @@ content_markdown: >-
   The node that represents the major version of software is `SOFTWARE_VERSION_GROUP`.
   Software version group is used to categorize the software when the version is part of version group that may or may not have a major version.
 
-  Gets software version group information
+  Returns software version group information
 
 
-   `MATCH (a:SOFTWARE_VERSION_GROUP) RETURN a.version`
+  `MATCH (a:SOFTWARE_VERSION_GROUP) RETURN a.version`
 
    {: .success} 
 
