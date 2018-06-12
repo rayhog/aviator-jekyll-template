@@ -11,12 +11,11 @@ content_markdown: |-
   {: .info}
   #### Building relationships in a query<br>
 
-   
+  The following image shows examples of types of relationships and their directions.
   
-  The following TQL query shows the parts of a MATCH statement that you use to query the database:
   <br>
   
-  ![API Image](/images/tql_query.png)<br>&nbsp;
+  ![API Image](/images/relat.png)<br>&nbsp;
   <br>  
  
 
