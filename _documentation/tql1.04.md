@@ -150,12 +150,12 @@ content_markdown: |-
     * Use the WHERE and AND clauses to add conditions that filter the output.<br>
       `MATCH (alias:SOFTWARE_EDITION) WHERE s.order = 2 AND s.edition = "Enterprise Developer"`
     * You use the `RETURN` clause to select the query output by referring to the alias and attributes.
-      `RETURN s.edition, s.order`  
+      `RETURN s.edition, s.order, s.technopedia_id`  
     
   <br>
-  In this query example, you return software editions in Technopedia by edition and order: <br>
+  In this query example, you return software editions in Technopedia by edition, order, and Technopedia ID: <br>
 
-  `MATCH (s:SOFTWARE_EDITION) WHERE s.order = 2 AND s.edition = "Enterprise Developer" RETURN s.edition, s.order`<br>
+  `MATCH (s:SOFTWARE_EDITION) WHERE s.order = 2 AND s.edition = "Enterprise Developer" RETURN s.edition, s.order, s.technopedia_id`<br>
   <br>
   ![API Image](/images/edition_query.png)<br>&nbsp;
   <br>  
@@ -167,8 +167,8 @@ content_markdown: |-
     * Use `MATCH` to select the software edtion node, and add node aliases to use in the RETURN clause.<br>
     * Add the `HAS_A` relationship from edition to product and note the direction of the relationship in the diagram.<br>
       `MATCH (s:SOFTWARE_EDITION)-[:HAS_A]->(p:SOFTWARE_PRODUCT)`<br>
-    * You use the RETURN clause to select the query output by referring to the alias and attributes.
-      `RETURN s.edition`, p.product` or you can return all attributes by using `RETURN s, p`
+    * You use the RETURN clause to select the query output by referring to the alias and attributes.<br>
+      `RETURN s.edition`, p.product` or you can return all attributes by using `RETURN s, p` <br>
     * Use the LIMIT clause to limit the results to five.<br>
     
    ![API Image](/images/ed_to_prod.png)<br>&nbsp;

@@ -33,28 +33,7 @@ content_markdown: |-
   <br>
   
 
-  #### Overview............. query<br>
-
-  `MATCH (hw_mod:HARDWARE_MODEL)-[:HAS_A]->(hw_prod:HARDWARE_PRODUCT)<-[:HAS_A]-(manu:MANUFACTURER) RETURN hw_mod, hw_prod, manu`
-
-
-  `MATCH (node)-[My_alias:relationship {relationship_attribute : value}]->(:node) Return My_alias
-
-
-      MATCH (:SOFTWARE_RELEASE)-[h:HAS_A {end_date: "2013-12-10 00:00:00"}]->(:SUPPORT_STAGE) RETURN h
-      
-
-      RESPONSE SAMPLE
-
-      {
-        "results": [
-            {
-                "end_date": "2013-12-10 00:00:00",
-                "modified_at": "2018-05-04 20:01:57",
-                "created_at": "2018-05-03 17:29:30"
-            }
-        ]
-      {  `
+  #### Overview............. query<br> 
   
   
   
@@ -62,7 +41,6 @@ content_markdown: |-
   Return release name, software version, software product name, and manufacturer name for 2 software releases
   `MATCH (srelease:SOFTWARE_RELEASE) -[:HAS_A]->(sver:SOFTWARE_VERSION)-[:HAS_A]->(sprod:SOFTWARE_PRODUCT)-[:HAS_A]->(manu:MANUFACTURER) RETURN srelease.release, sver.version, sprod.product, manu.manufacturer LIMIT 2`
 
-  
 
   <br>
   To create a MATCH statement you must identify the nodes that store the infromaiton you require, and use the following guide to help you to build your query:
@@ -75,7 +53,7 @@ content_markdown: |-
   <br>
   Here’s some examples:
   <br>
-  <b>Objective:</b> To find software that is named Adobe.<br>
+  <b>Query Intent:</b> To find software that is named Adobe.<br>
 
     * The Software Product node has an attribute called product.<br>
     * We use MATCH to select the `SOFTWARE_PRODUCT` node and the `product` attribute to filter for Adobe.<br>
