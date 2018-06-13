@@ -29,7 +29,8 @@ content_markdown: |-
   <br>
   Get a list of `CATEGORY_GROUP` labels by running the following MATCH query with the TQL endpoint:
   <br>
-  `MATCH (n:CATEGORY_2) RETURN n.label`
+  `MATCH (n:CATEGORY_2) 
+  RETURN n.label`
   
   ### Category 1
 
@@ -37,7 +38,8 @@ content_markdown: |-
   <br>
   Get a list of `CATEGORY_GROUP` labels by running the following MATCH query with the TQL endpoint:
   <br>
-  `MATCH (n:CATEGORY_2) RETURN n.label`
+  `MATCH (n:CATEGORY_2) 
+  RETURN n.label`
 
   ### Category 2
 
@@ -72,7 +74,9 @@ content_markdown: |-
  
 left_code_blocks:
   - code_block: |
-      MATCH (n:CATEGORY_1) RETURN n.label LIMIT 5
+      MATCH (n:CATEGORY_1) 
+      RETURN n.label 
+      LIMIT 5
 
        RESPONSE SAMPLE
 
@@ -101,7 +105,9 @@ left_code_blocks:
     language: javascript
 
   - code_block: >-
-      MATCH (n:CATEGORY_2) RETURN n.label, n.description LIMIT 2
+      MATCH (n:CATEGORY_2) 
+      RETURN n.label, n.description 
+      LIMIT 2
 
 
       RESPONSE SAMPLE
@@ -126,7 +132,9 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:CATEGORY_2) WHERE n.label = "Distributed Network Architecture" RETURN n LIMIT 2
+      MATCH (n:CATEGORY_2) 
+      WHERE n.label = "Distributed Network Architecture" 
+      RETURN n LIMIT 2
 
        RESPONSE SAMPLE
 
@@ -147,11 +155,11 @@ left_code_blocks:
     language: javascript
 
   - code_block: |- 
-      MATCH (n:CATEGORY_2)-[v:BELONGS_TO]->(c:CATEGORY_1) RETURN c, n LIMIT 2
+      MATCH (n:CATEGORY_2)-[v:BELONGS_TO]->(c:CATEGORY_1) 
+      RETURN c, n 
+      LIMIT 2
       
-      Return records for CATEGORY_2 and CATEGORY_1 where CATEGORY_2 has a child relationship with CATEGORY_1
-
-       RESPONSE SAMPLE
+      RESPONSE SAMPLE
 
       {
         "results": [
@@ -190,7 +198,9 @@ left_code_blocks:
     language: javascript
 
   - code_block: |- 
-      MATCH (sp:SOFTWARE_PRODUCT)-[:BELONGS_TO]->(cat2:CATEGORY_2)-[:BELONGS_TO]->(cat1:CATEGORY_1)-[:BELONGS_TO]->(catgrp:CATEGORY_GROUP) RETURN sp.product, cat2.label, cat1.label, catgrp.label LIMIT 2
+      MATCH (sp:SOFTWARE_PRODUCT)-[:BELONGS_TO]->(cat2:CATEGORY_2)-[:BELONGS_TO]->(cat1:CATEGORY_1)-[:BELONGS_TO]->(catgrp:CATEGORY_GROUP) 
+      RETURN sp.product, cat2.label, cat1.label, catgrp.label 
+      LIMIT 4
       
        RESPONSE SAMPLE
 
@@ -227,7 +237,9 @@ left_code_blocks:
     language: javascript
 
   - code_block: |- 
-      MATCH (hardware:HARDWARE_PRODUCT)-[:BELONGS_TO]->(cat2:CATEGORY_2)-[:BELONGS_TO]->(cat1:CATEGORY_1)-[:BELONGS_TO]->(catgrp:CATEGORY_GROUP) RETURN hardware.product, cat2.label, cat1.label, catgrp.label LIMIT 6
+      MATCH (hardware:HARDWARE_PRODUCT)-[:BELONGS_TO]->(cat2:CATEGORY_2)-[:BELONGS_TO]->(cat1:CATEGORY_1)-[:BELONGS_TO]->(catgrp:CATEGORY_GROUP) 
+      RETURN hardware.product, cat2.label, cat1.label, catgrp.label 
+      LIMIT 6
       
        RESPONSE SAMPLE
 

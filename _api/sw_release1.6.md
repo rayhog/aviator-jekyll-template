@@ -34,7 +34,9 @@ content_markdown: >-
   `https://v6-1.technopedia.com/tql?q=<MATCH Statement>`
 left_code_blocks:
   - code_block: |
-      MATCH (n:SOFTWARE_RELEASE) RETURN n.release, n.created_at LIMIT 5
+      MATCH (n:SOFTWARE_RELEASE) 
+      RETURN n.release, n.created_at 
+      LIMIT 5
 
       RESPONSE SAMPLE
 
@@ -66,10 +68,12 @@ left_code_blocks:
     title: Example one
     language: javascript
   - code_block: >-
-      MATCH (node)-[My_alias:relationship {relationship_attribute : value}]->(:node) Return My_alias
+      MATCH (node)-[My_alias:relationship {relationship_attribute : value}]->(:node) 
+      RETURN My_alias
 
 
-      MATCH (:SOFTWARE_RELEASE)-[h:HAS_A {end_date: "2013-12-10 00:00:00"}]->(:SUPPORT_STAGE) RETURN h
+      MATCH (:SOFTWARE_RELEASE)-[h:HAS_A {end_date: "2013-12-10 00:00:00"}]->(:SUPPORT_STAGE) 
+      RETURN h
       
 
       RESPONSE SAMPLE
@@ -86,7 +90,9 @@ left_code_blocks:
     title: Example two
     language: javascript
   - code_block: |-
-      MATCH (srelease:SOFTWARE_RELEASE) -[:HAS_A]->(sver:SOFTWARE_VERSION)-[:HAS_A]->(sprod:SOFTWARE_PRODUCT)-[:HAS_A]->(manu:MANUFACTURER) RETURN srelease.release, sver.version, sprod.product, manu.manufacturer LIMIT 2
+      MATCH (srelease:SOFTWARE_RELEASE)-[:HAS_A]->(sver:SOFTWARE_VERSION)-[:HAS_A]->(sprod:SOFTWARE_PRODUCT)-[:HAS_A]->(manu:MANUFACTURER) 
+      RETURN srelease.release, sver.version, sprod.product, manu.manufacturer 
+      LIMIT 2
 
       RESPONSE SAMPLE
 
@@ -110,7 +116,9 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (srelease:SOFTWARE_RELEASE)-[:HAS_A]->(sver:SOFTWARE_VERSION)-[:HAS_A]->(smajor:SOFTWARE_VERSION_GROUP) RETURN srelease.release, sver.version, smajor.version_group LIMIT 5
+      MATCH (srelease:SOFTWARE_RELEASE)-[:HAS_A]->(sver:SOFTWARE_VERSION)-[:HAS_A]->(smajor:SOFTWARE_VERSION_GROUP) 
+      RETURN srelease.release, sver.version, smajor.version_group 
+      LIMIT 5
       
       RESPONSE SAMPLE
 
@@ -147,7 +155,9 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (srelease:SOFTWARE_RELEASE)-[:HAS_A]->(sver:SOFTWARE_VERSION)-[:HAS_A]->(smajor:SOFTWARE_MAJOR_VERSION) RETURN srelease.release, sver.version, smajor.version LIMIT 2
+      MATCH (srelease:SOFTWARE_RELEASE)-[:HAS_A]->(sver:SOFTWARE_VERSION)-[:HAS_A]->(smajor:SOFTWARE_MAJOR_VERSION) 
+      RETURN srelease.release, sver.version, smajor.version 
+      LIMIT 2
       
       RESPONSE SAMPLE
 

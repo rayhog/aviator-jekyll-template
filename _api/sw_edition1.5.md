@@ -27,7 +27,8 @@ content_markdown: |-
   `https://v6-1.technopedia.com/tql?q=<MATCH Statement>`
 left_code_blocks:
   - code_block: |
-      MATCH (n:SOFTWARE_EDITION) RETURN n.edition AS EDITION, n.modified_at AS MODIFIED 
+      MATCH (n:SOFTWARE_EDITION) 
+      RETURN n.edition AS EDITION, n.modified_at AS MODIFIED 
 
       RESPONSE SAMPLE
 
@@ -71,7 +72,9 @@ left_code_blocks:
     title: Example one
     language: javascript
   - code_block: >-
-      MATCH (e:SOFTWARE_EDITION {edition: 'Server'}) RETURN e
+      MATCH (e:SOFTWARE_EDITION {edition: 'Server'}) 
+      RETURN e
+
       RESPONSE SAMPLE
 
       {
@@ -101,7 +104,10 @@ left_code_blocks:
     title: Example two
     language: javascript
   - code_block: |-
-      MATCH (p:SOFTWARE_PRODUCT)<-[:HAS_A]-(s:SOFTWARE_EDITION) WHERE s.order = 2 AND s.edition = "Enterprise Developer" RETURN p.product, s.edition, s.order LIMIT 3
+      MATCH (p:SOFTWARE_PRODUCT)<-[:HAS_A]-(s:SOFTWARE_EDITION) 
+      WHERE s.order = 2 AND s.edition = "Enterprise Developer" 
+      RETURN p.product, s.edition, s.order 
+      LIMIT 3
       
       RESPONSE SAMPLE
 
@@ -128,7 +134,9 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (s:SOFTWARE_EDITION) WHERE s.order = 2 AND s.edition = "Enterprise Developer" RETURN s.edition, s.order LIMIT 3
+      MATCH (s:SOFTWARE_EDITION) 
+      WHERE s.order = 2 AND s.edition = "Enterprise Developer" 
+      RETURN s.edition, s.order LIMIT 3
 
       RESPONSE SAMPLE
 
@@ -152,7 +160,9 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-     MATCH (n:SOFTWARE_EDITION) -[:HAS_A]->(u:SOFTWARE_PRODUCT) RETURN u.product AS Product, n.edition AS Edition, n.order AS Edition_order  LIMIT 10
+     MATCH (n:SOFTWARE_EDITION) -[:HAS_A]->(u:SOFTWARE_PRODUCT) 
+     RETURN u.product AS Product, n.edition AS Edition, n.order AS Edition_order  
+     LIMIT 10
 
       RESPONSE SAMPLE
 

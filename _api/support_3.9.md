@@ -30,7 +30,9 @@ content_markdown: >-
 
 left_code_blocks:
   - code_block: |-
-      MATCH (n:SUPPORT_STAGE) RETURN n LIMIT 1
+      MATCH (n:SUPPORT_STAGE) 
+      RETURN n 
+      LIMIT 1
         
       RESPONSE SAMPLE
 
@@ -49,7 +51,9 @@ left_code_blocks:
     title: Example 1
     language: javascript
   - code_block: |-
-      MATCH (n:SUPPORT_POLICY) RETURN n LIMIT 2
+      MATCH (n:SUPPORT_POLICY) 
+      RETURN n 
+      LIMIT 2
       
       RESPONSE SAMPLE
 
@@ -74,7 +78,9 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE)<-[:HAS_A]-(w:SUPPORT_STAGE) RETURN n, w LIMIT 2
+      MATCH (n:SOFTWARE_RELEASE)<-[:HAS_A]-(w:SUPPORT_STAGE) 
+      RETURN n, w 
+      LIMIT 2
 
       RESPONSE SAMPLE
 
@@ -115,16 +121,52 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(w:SUPPORT_STAGE)-[:HAS_A]->(sp:SUPPORT_POLICY) RETURN n, w, sp LIMIT 2
+      MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(w:SUPPORT_STAGE)-[:HAS_A]->(sp:SUPPORT_POLICY) 
+      RETURN n, w, sp 
+      LIMIT 2
 
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+                
+                "n.created_at": "2012-02-23 16:23:35",
+                "n.desupported_flag": null,
+                "n.discontinued_flag": null,
+                "n.modified_at": "2012-02-23 16:23:35",
+                "n.release": "AxBase",
+                "n.technopedia_id": "6af1422f-d82d-4a18-a63e-fa9d90b6c57a",
+                "n.url": null,
+                "sp.created_at": "2009-12-31 11:05:23",
+                "sp.modified_at": "2009-12-31 11:05:23",
+                "sp.support_policy": null,
+                "sp.technopedia_id": "47f7f6c1-e6ae-4334-886b-f983f073af91",
+                "w.created_at": "2009-12-31 11:06:56",
+                "w.definition": "Download is provided. Cannot find any end date.\r\n\r\nSee http://axbase.sourceforge.net/",
+                "w.modified_at": "2011-06-07 11:44:59",
+                "w.order": 1,
+                "w.support_stage": null,
+                "w.technopedia_id": "c3510b06-2eed-4df4-a815-699424a7cefe"
+            },
+            {
+                "n.created_at": "2010-01-11 16:31:42",
+                "n.desupported_flag": null,
+                "n.discontinued_flag": null,
+                "n.modified_at": "2014-11-12 14:30:55",
+                "n.release": "AxBase",
+                "n.technopedia_id": "e439d6b8-fe4a-4ce5-b012-dd681d4fc7bf",
+                "n.url": null,
+                "sp.created_at": "2009-12-31 11:05:23",
+                "sp.modified_at": "2009-12-31 11:05:23",
+                "sp.support_policy": null,
+                "sp.technopedia_id": "47f7f6c1-e6ae-4334-886b-f983f073af91",
+                "w.created_at": "2009-12-31 11:06:56",
+                "w.definition": "Download is provided. Cannot find any end date.\r\n\r\nSee http://axbase.sourceforge.net/",
+                "w.modified_at": "2011-06-07 11:44:59",
+                "w.order": 1,
+                "w.support_stage": null,
+                "w.technopedia_id": "c3510b06-2eed-4df4-a815-699424a7cefe"
             }
         ]
       {  
@@ -133,16 +175,37 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:MANUFACTURER) RETURN h.manufacturer"
+      MATCH (n:SUPPORT_STAGE) 
+      RETURN n LIMIT 3
 
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+               
+                "n.created_at": "2007-03-11 23:45:17",
+                "n.definition": null,
+                "n.modified_at": "2009-02-28 07:43:36",
+                "n.order": 3,
+                "n.support_stage": null,
+                "n.technopedia_id": "6a48269d-3f7b-41c5-964f-54a6b28e9882"
+            },
+            {
+                "n.created_at": "2010-08-12 15:07:29",
+                "n.definition": "Customers can contact to get support via phone, fax and email. Cannot find any end date.\r\n\r\nSee http://icapp.ch/2.Ebene/3menue/ekontak.html",
+                "n.modified_at": "2011-06-07 14:59:21",
+                "n.order": 1,
+                "n.support_stage": null,
+                "n.technopedia_id": "b74083ec-a632-42e8-a9b8-dd17d5f5d5b5"
+            },
+            {
+                "n.created_at": "2010-11-18 11:36:56",
+                "n.definition": "FAQs and download are provided. Cannot find any support date.\r\n\r\nSee http://www.dicksondata.com/info/support.php",
+                "n.modified_at": "2011-06-07 13:49:42",
+                "n.order": 1,
+                "n.support_stage": null,
+                "n.technopedia_id": "1fe51238-3c45-42bd-845d-67cd44eb0e35"
             }
         ]
       {   

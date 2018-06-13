@@ -71,7 +71,9 @@ left_code_blocks:
     title: Example one
     language: javascript
   - code_block: >-
-      MATCH (s:SOFTWARE_PRODUCT) WHERE s.product CONTAINS "Vagrant Manager" RETURN s
+      MATCH (s:SOFTWARE_PRODUCT) 
+      WHERE s.product CONTAINS "Vagrant Manager" 
+      RETURN s
       
       
       RESPONSE SAMPLE
@@ -110,7 +112,9 @@ left_code_blocks:
     title: Example 2
     language: javascript
   - code_block: |-
-      MATCH (s:SOFTWARE_PRODUCT)-[:BELONGS_TO]->(cat2:CATEGORY_2) WHERE s.product CONTAINS "Tools" RETURN s.product, cat2.label LIMIT 5
+      MATCH (s:SOFTWARE_PRODUCT)-[:BELONGS_TO]->(cat2:CATEGORY_2) 
+      WHERE s.product CONTAINS "Tools" 
+      RETURN s.product, cat2.label LIMIT 5
 
       RESPONSE SAMPLE
 
@@ -143,7 +147,9 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-     MATCH (s:SOFTWARE_PRODUCT)-[:BELONGS_TO]->(cat2:CATEGORY_2)-[:BELONGS_TO]->(cat1:CATEGORY_1)-[:BELONGS_TO]->(catgrp:CATEGORY_GROUP) WHERE s.product CONTAINS "Tools" RETURN s.product, cat1.label, cat2.label, catgrp.label LIMIT 5
+     MATCH (s:SOFTWARE_PRODUCT)-[:BELONGS_TO]->(cat2:CATEGORY_2)-[:BELONGS_TO]->(cat1:CATEGORY_1)-[:BELONGS_TO]->(catgrp:CATEGORY_GROUP) 
+     WHERE s.product CONTAINS "Tools" RETURN s.product, cat1.label, cat2.label, catgrp.label 
+     LIMIT 5
 
       RESPONSE SAMPLE
 
@@ -186,7 +192,9 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(r:SOFTWARE_VERSION)-[:HAS_A]->(k:SOFTWARE_PRODUCT) RETURN n, r, k LIMIT 1
+      MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(r:SOFTWARE_VERSION)-[:HAS_A]->(k:SOFTWARE_PRODUCT) 
+      RETURN n, r, k 
+      LIMIT 1
 
       RESPONSE SAMPLE
 
@@ -224,7 +232,9 @@ left_code_blocks:
     title: Example five
     language: javascript
   - code_block: |-
-      MATCH (sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(se:SOFTWARE_EDITION)<-[:HAS_A]-(srelease:SOFTWARE_RELEASE) RETURN sp.product, se.edition, srelease.technopedia_id LIMIT 5
+      MATCH (sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(se:SOFTWARE_EDITION)<-[:HAS_A]-(srelease:SOFTWARE_RELEASE) 
+      RETURN sp.product, se.edition, srelease.technopedia_id 
+      LIMIT 5
 
       RESPONSE SAMPLE
 

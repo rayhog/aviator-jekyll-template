@@ -50,7 +50,9 @@ content_markdown: >-
   
 left_code_blocks:
   - code_block: |
-      MATCH (s:SOFTWARE_PRODUCT)<-[:HAS_A]-(n:SOFTWARE_VERSION) WHERE s.product = "Advanced Partitioning Option" RETURN n, s
+      MATCH (s:SOFTWARE_PRODUCT)<-[:HAS_A]-(n:SOFTWARE_VERSION) 
+      WHERE s.product = "Advanced Partitioning Option" 
+      RETURN n, s
 
       RESPONSE SAMPLE
 
@@ -106,7 +108,8 @@ left_code_blocks:
     title: Example one
     language: javascript
   - code_block: >-
-      MATCH (n:SOFTWARE_RELEASE) WHERE n.release contains "studio" RETURN n 
+      MATCH (n:SOFTWARE_RELEASE) WHERE n.release contains "studio" 
+      RETURN n 
       
       RESPONSE SAMPLE
 
@@ -136,7 +139,9 @@ left_code_blocks:
     title: Example two
     language: javascript
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(v:SOFTWARE_VERSION)-[:HAS_A]-(pr:SOFTWARE_PRODUCT) WHERE n.release = "WMSigner" RETURN n.release, pr.product, v.version
+      MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(v:SOFTWARE_VERSION)-[:HAS_A]-(pr:SOFTWARE_PRODUCT) 
+      WHERE n.release = "WMSigner" 
+      RETURN n.release, pr.product, v.version
       
       RESPONSE SAMPLE
 
@@ -179,7 +184,9 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(n:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_MAJOR_VERSION) RETURN sp.product AS Product, n.version AS VERSION, p.version AS Major_Version  LIMIT 5
+      MATCH (sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(n:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_MAJOR_VERSION) 
+      RETURN sp.product AS Product, n.version AS VERSION, p.version AS Major_Version  
+      LIMIT 5
       
       RESPONSE SAMPLE
 

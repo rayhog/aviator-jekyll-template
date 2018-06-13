@@ -26,7 +26,8 @@ content_markdown: |-
 
 left_code_blocks:
   - code_block: |
-      MATCH (n:HARDWARE_PRODUCT) RETURN n.product, n.desupported_flag
+      MATCH (n:HARDWARE_PRODUCT) 
+      RETURN n.product, n.desupported_flag
 
       RESPONSE SAMPLE
       
@@ -76,7 +77,8 @@ left_code_blocks:
 
     
   - code_block: >-
-      MATCH (product:HARDWARE_PRODUCT)<-[:HAS_A]-(model:HARDWARE_MODEL) RETURN  product, model
+      MATCH (product:HARDWARE_PRODUCT)<-[:HAS_A]-(model:HARDWARE_MODEL) 
+      RETURN  product, model
 
 
       RESPONSE SAMPLE
@@ -130,7 +132,9 @@ left_code_blocks:
     title: Example two
     language: javascript
   - code_block: |-
-      MATCH (hw:HARDWARE_PRODUCT)-[a:BELONGS_TO]->(cat_2:CATEGORY_2)-[e:BELONGS_TO]->(cat_1:CATEGORY_1)-[y:BELONGS_TO]->(cat_group:CATEGORY_GROUP) RETURN hw, cat_2, cat_1, cat_group LIMIT 2
+      MATCH (hw:HARDWARE_PRODUCT)-[a:BELONGS_TO]->(cat_2:CATEGORY_2)-[e:BELONGS_TO]->(cat_1:CATEGORY_1)-[y:BELONGS_TO]->(cat_group:CATEGORY_GROUP) 
+      RETURN hw, cat_2, cat_1, cat_group 
+      LIMIT 2
 
       RESPONSE SAMPLE
       {  
@@ -181,7 +185,8 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (hw:HARDWARE_PRODUCT)-[a:HAS_A]->(manu:MANUFACTURER) RETURN hw, manu.manufacturer
+      MATCH (hw:HARDWARE_PRODUCT)-[a:HAS_A]->(manu:MANUFACTURER) 
+      RETURN hw, manu.manufacturer
 
       RESPONSE SAMPLE
       {
@@ -220,7 +225,8 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (hardware:HARDWARE_PRODUCT)-[a:BELONGS_TO]->(cat_2:CATEGORY_2)-[e:BELONGS_TO]->(vertical:VERTICAL) RETURN hardware, cat_2, vertical
+      MATCH (hardware:HARDWARE_PRODUCT)-[a:BELONGS_TO]->(cat_2:CATEGORY_2)-[e:BELONGS_TO]->(vertical:VERTICAL) 
+      RETURN hardware, cat_2, vertical
       
       RESPONSE SAMPLE
       {

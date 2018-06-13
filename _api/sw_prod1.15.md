@@ -26,7 +26,9 @@ content_markdown: >-
   
 left_code_blocks:
   - code_block: |
-      MATCH (n:SOFTWARE_PRODUCT) WHERE n.product = "PDF Converter" RETURN n
+      MATCH (n:SOFTWARE_PRODUCT) 
+      WHERE n.product = "PDF Converter" 
+      RETURN n
 
       RESPONSE SAMPLE
       {
@@ -66,7 +68,9 @@ left_code_blocks:
     title: Example one
     language: javascript
   - code_block: >-
-      MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" AND s.family = "HealthMatics"  RETURN s
+      MATCH (s:SOFTWARE_PRODUCT) 
+      WHERE s.product = "Office" AND s.family = "HealthMatics"  
+      RETURN s
       
       
       RESPONSE SAMPLE
@@ -106,7 +110,9 @@ left_code_blocks:
     title: Example two
     language: javascript
   - code_block: |-
-      MATCH (sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(st:SUPPORT_STAGE) RETURN sp.product, sv.version, sr, st LIMIT 5
+      MATCH (sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(st:SUPPORT_STAGE) 
+      RETURN sp.product, sv.version, sr, st 
+      LIMIT 5
 
       RESPONSE SAMPLE
 
@@ -124,7 +130,10 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(st:SUPPORT_STAGE) WHERE sr.release = "ID Web Authentication Software Development Kit (SDK)" RETURN sp.product, sv.version, sr, st LIMIT 5
+      MATCH (sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(st:SUPPORT_STAGE) 
+      WHERE sr.release = "ID Web Authentication Software Development Kit (SDK)" 
+      RETURN sp.product, sv.version, sr, st 
+      LIMIT 5
 
       RESPONSE SAMPLE
 
@@ -210,7 +219,9 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" OR s.product = "HealthMatics" RETURN s 
+      MATCH (s:SOFTWARE_PRODUCT) 
+      WHERE s.product = "Office" OR s.product = "HealthMatics" 
+      RETURN s 
 
       RESPONSE SAMPLE
 

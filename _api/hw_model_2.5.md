@@ -31,7 +31,8 @@ content_markdown: |-
 
 left_code_blocks:
   - code_block: |
-      MATCH (n:HARDWARE_MODEL) RETURN n.model, n.cpu_sockets
+      MATCH (n:HARDWARE_MODEL) 
+      RETURN n.model, n.cpu_sockets
 
       RESPONSE SAMPLE
 
@@ -73,7 +74,9 @@ left_code_blocks:
 
     
   - code_block: >-
-      MATCH (hw_mod:HARDWARE_MODEL)-[:HAS_A]->(hw_prod:HARDWARE_PRODUCT)-[:HAS_A]->(manu:MANUFACTURER) RETURN hw_mod.model, hw_prod.product, manu.manufacturer LIMIT 5
+      MATCH (hw_mod:HARDWARE_MODEL)-[:HAS_A]->(hw_prod:HARDWARE_PRODUCT)-[:HAS_A]->(manu:MANUFACTURER) 
+      RETURN hw_mod.model, hw_prod.product, manu.manufacturer 
+      LIMIT 5
          
       RESPONSE SAMPLE
 
@@ -110,7 +113,9 @@ left_code_blocks:
     title: Example two
     language: javascript
   - code_block: |-
-      MATCH (mod:HARDWARE_MODEL)-[:HAS_A]->(prod:HARDWARE_PRODUCT) WHERE prod.product CONTAINS "108" RETURN mod.model, prod.product LIMIT 5
+      MATCH (mod:HARDWARE_MODEL)-[:HAS_A]->(prod:HARDWARE_PRODUCT) 
+      WHERE prod.product CONTAINS "108" RETURN mod.model, prod.product 
+      LIMIT 5
 
       RESPONSE SAMPLE
 
@@ -143,7 +148,8 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:HARDWARE_MODEL)-[:HAS_A]->(h:HARDWARE_PRODUCT)-[:BELONGS_TO]->(m:CATEGORY_2)-[:BELONGS_TO]->(w:VERTICAL) RETURN n, h, m, w LIMIT 5
+      MATCH (n:HARDWARE_MODEL)-[:HAS_A]->(h:HARDWARE_PRODUCT)-[:BELONGS_TO]->(m:CATEGORY_2)-[:BELONGS_TO]->(w:VERTICAL) 
+      RETURN n, h, m, w LIMIT 5
 
       RESPONSE SAMPLE
 
@@ -210,7 +216,8 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:HARDWARE_MODEL)-[:HAS_A]->(h:HARDWARE_PRODUCT)-[e:BELONGS_TO]->(m:CATEGORY_2)-[:BELONGS_TO]->(w:VERTICAL) RETURN n, h, m, w
+      MATCH (n:HARDWARE_MODEL)-[:HAS_A]->(h:HARDWARE_PRODUCT)-[e:BELONGS_TO]->(m:CATEGORY_2)-[:BELONGS_TO]->(w:VERTICAL) 
+      RETURN n, h, m, w
       
       RESPONSE SAMPLE
 

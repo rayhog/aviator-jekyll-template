@@ -29,7 +29,8 @@ content_markdown: |-
 
 left_code_blocks:
   - code_block: |
-      MATCH (n:CPU_MODEL) RETURN n
+      MATCH (n:CPU_MODEL) 
+      RETURN n
 
       RESPONSE SAMPLE
 
@@ -66,8 +67,9 @@ left_code_blocks:
     title: Example one
     language: javascript
   - code_block: >-
-      MATCH (n:CPU_MODEL) RETURN n.model, n.cores, n.clockrate
-      
+      MATCH (n:CPU_MODEL) 
+      RETURN n.model, n.cores, n.clockrate
+
 
       RESPONSE SAMPLE
 
@@ -115,7 +117,8 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (h:CPU_MODEL) RETURN h.cores, h.model LIMIT 10
+      MATCH (h:CPU_MODEL) 
+      RETURN h.cores, h.model LIMIT 10
 
       RESPONSE SAMPLE
 
@@ -169,7 +172,9 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (h:CPU_MODEL) WHERE h.model CONTAINS "125 MHz" AND h.isa_bit_mode = "32" RETURN h.cores, h.model, h.isa_bit_mode
+      MATCH (h:CPU_MODEL) 
+      WHERE h.model CONTAINS "125 MHz" AND h.isa_bit_mode = "32" 
+      RETURN h.cores, h.model, h.isa_bit_mode
 
       RESPONSE SAMPLE
 
@@ -232,7 +237,10 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (h:CPU_MODEL) WHERE h.model  <> "125 MHz"  AND h.model <> "3.00 GHz" RETURN h.cores, h.model LIMIT 10
+      MATCH (h:CPU_MODEL) 
+      WHERE h.model  <> "125 MHz"  AND h.model <> "3.00 GHz" 
+      RETURN h.cores, h.model 
+      LIMIT 10
 
       RESPONSE SAMPLE
 

@@ -241,7 +241,8 @@ content_markdown: |-
 
 left_code_blocks:
   - code_block: |-
-      MATCH (n:MANUFACTURER) RETURN n LIMIT 1
+      MATCH (n:MANUFACTURER) RETURN n 
+      LIMIT 1
       
       RESPONSE SAMPLE
 
@@ -282,7 +283,9 @@ left_code_blocks:
     title: Example one
     language: javascript
   - code_block: |-
-      MATCH (aliasx:HARDWARE_PRODUCT) RETURN aliasx.product, aliasx.modified_at LIMIT 10
+      MATCH (aliasx:HARDWARE_PRODUCT) 
+      RETURN aliasx.product, aliasx.modified_at 
+      LIMIT 10
 
       RESPONSE SAMPLE
 
@@ -333,7 +336,9 @@ left_code_blocks:
     title: Example two
     language: javascript
   - code_block: |-
-      MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" OR s.product="HealthMatics" RETURN s LIMIT 2 
+      MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" OR s.product="HealthMatics" 
+      RETURN s 
+      LIMIT 2 
 
       RESPONSE SAMPLE
 
@@ -372,7 +377,9 @@ left_code_blocks:
     title: Example three
     language: javascript
   - code_block: |-
-      MATCH (n:SOFTWARE_VERSION) WHERE n.version CONTAINS "1.4.2_05" RETURN n.version, n.order LIMIT 5
+      MATCH (n:SOFTWARE_VERSION) WHERE n.version CONTAINS "1.4.2_05" 
+      RETURN n.version, n.order 
+      LIMIT 5
 
       RESPONSE SAMPLE
 
@@ -396,7 +403,10 @@ left_code_blocks:
     title: Example four
     language: javascript
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(:SOFTWARE_VERSION)-[:HAS_A]->(sp:SOFTWARE_PRODUCT) WHERE n.release CONTAINS "23" RETURN n.release, sp.product LIMIT 5
+      MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(:SOFTWARE_VERSION)-[:HAS_A]->(sp:SOFTWARE_PRODUCT) 
+      WHERE n.release CONTAINS "23" 
+      RETURN n.release, sp.product 
+      LIMIT 5
 
       RESPONSE SAMPLE
 
@@ -427,7 +437,10 @@ left_code_blocks:
     title: Example five
     language: bash
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(:SOFTWARE_VERSION)-[:HAS_A]->(sp:SOFTWARE_PRODUCT)-[:HAS_A]->(m:MANUFACTURER) WHERE m.manufacturer CONTAINS "people" RETURN n.release, sp.product, m.manufacturer LIMIT 5
+      MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(:SOFTWARE_VERSION)-[:HAS_A]->(sp:SOFTWARE_PRODUCT)-[:HAS_A]->(m:MANUFACTURER) 
+      WHERE m.manufacturer CONTAINS "people" 
+      RETURN n.release, sp.product, m.manufacturer 
+      LIMIT 5
 
       RESPONSE SAMPLE
 

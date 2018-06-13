@@ -28,7 +28,8 @@ content_markdown: |-
     
 left_code_blocks:
   - code_block: |-
-      MATCH (h:MANUFACTURER) RETURN h.manufacturer
+      MATCH (h:MANUFACTURER) 
+      RETURN h.manufacturer
 
       RESPONSE SAMPLE
 
@@ -68,7 +69,9 @@ left_code_blocks:
     title: Example one
     language: javascript
   - code_block: |-
-      MATCH (m:MANUFACTURER)<-[:HAS_A]-(s:SOFTWARE_PRODUCT) WHERE m.manufacturer = "Immedia Internet Solutions" RETURN m.manufacturer, s.product, s.created_at
+      MATCH (m:MANUFACTURER)<-[:HAS_A]-(s:SOFTWARE_PRODUCT) 
+      WHERE m.manufacturer = "Immedia Internet Solutions" 
+      RETURN m.manufacturer, s.product, s.created_at
  
       RESPONSE SAMPLE
 
@@ -87,7 +90,9 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:MANUFACTURER)<-[:HAS_A]-(p:SOFTWARE_PRODUCT)<-[:HAS_A]-(my_alias:SOFTWARE_VERSION) RETURN n, my_alias LIMIT 2
+      MATCH (n:MANUFACTURER)<-[:HAS_A]-(p:SOFTWARE_PRODUCT)<-[:HAS_A]-(my_alias:SOFTWARE_VERSION) 
+      RETURN n, my_alias 
+      LIMIT 2
 
 
       RESPONSE SAMPLE
@@ -170,7 +175,9 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (manuf:MANUFACTURER)<-[:HAS_A]-(sw_prod:SOFTWARE_PRODUCT)<-[:HAS_A]-(sft_ver:SOFTWARE_VERSION) RETURN manuf.manufacturer, sw_prod.product, sft_ver.version LIMIT 5
+      MATCH (manuf:MANUFACTURER)<-[:HAS_A]-(sw_prod:SOFTWARE_PRODUCT)<-[:HAS_A]-(sft_ver:SOFTWARE_VERSION) 
+      RETURN manuf.manufacturer, sw_prod.product, sft_ver.version 
+      LIMIT 5
 
       RESPONSE SAMPLE
 
@@ -207,7 +214,9 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (n:MANUFACTURER)-[:HAS_A]-(product:SOFTWARE_PRODUCT)<-[:HAS_A]-(version:SOFTWARE_VERSION) RETURN n.manufacturer, product, version LIMIT 2
+      MATCH (n:MANUFACTURER)-[:HAS_A]-(product:SOFTWARE_PRODUCT)<-[:HAS_A]-(version:SOFTWARE_VERSION) 
+      RETURN n.manufacturer, product, version 
+      LIMIT 2
 
       RESPONSE SAMPLE
 
