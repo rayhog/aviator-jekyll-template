@@ -9,14 +9,14 @@ content_markdown: |-
 
   Category nodes are linked by relationships from the software product node and the hardware product node. Run the following queries with the TQL endpoint to list the node labels:
 
-  `MATCH (n:CATEGORY_2) RETURN n.label` 
-   {: .info}
-  `MATCH (n:CATEGORY_1) RETURN n.label`
-   {: .info}  
-  `MATCH (n:CATEGORY_GROUP) RETURN n.label`
-   {: .info}
-  `MATCH (n:VERTICAL) RETURN n.label`
-   {: .info}
+  * `MATCH (n:CATEGORY_2) RETURN n.label` 
+ 
+  * `MATCH (n:CATEGORY_1) RETURN n.label`
+ 
+  * `MATCH (n:CATEGORY_GROUP) RETURN n.label`
+  
+  * `MATCH (n:VERTICAL) RETURN n.label`
+  
   
   The following diagram shows the categories and vertical nodes, and relationships.
 

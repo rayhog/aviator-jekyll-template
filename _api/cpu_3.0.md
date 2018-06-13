@@ -67,6 +67,7 @@ left_code_blocks:
     language: javascript
   - code_block: >-
       MATCH (n:CPU_MODEL) RETURN n.model, n.cores, n.clockrate
+      
 
       RESPONSE SAMPLE
 

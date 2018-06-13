@@ -73,6 +73,7 @@ left_code_blocks:
   - code_block: >-
       MATCH (s:SOFTWARE_PRODUCT) WHERE s.product CONTAINS "Vagrant Manager" RETURN s
       
+      
       RESPONSE SAMPLE
 
       {

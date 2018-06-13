@@ -1,5 +1,5 @@
 ---
-title: More TQL
+title: TQL Queries
 position: 1.06
 type:
 description:
@@ -27,16 +27,12 @@ content_markdown: |-
    
   ![API Image](/images/relat.png)<br>&nbsp;
   <br>  
- 
-
-  
-  <br>
   
 
-  #### Examples of building relationshipsR<br>   
+  #### Examples of building relationships<br>   
 
   <br>
-  To incoporate multiple nodes in a MATCH statement you must use the realations to connect the nodes and then use the RETURN clause to get data from any of the nodes in the query. Use the following guide to help you to build your query:
+  To incoporate multiple nodes in a MATCH statement you must use relationships to connect the nodes and then use the `RETURN` clause to get data from the nodes in the query. Use the following guide to help you to build your query:
 
    1.	Select the Nodes that you want to use in your query.<br>
    2.	Identify the node attributes that store the information you require.<br>
@@ -52,38 +48,34 @@ content_markdown: |-
   <b>Query Intent:</b> Get software that is manufactured by Oracle and return manufactuer, product name, version, releasea, and edition.br>
 
     * The start node is manufacturer.<br>
-    * Use MATCH to select the `MANUFACTURER` node and then connect to the software product, software `product`  <br>
-      by using relationships.
+    * Use MATCH to select the `MANUFACTURER` node and then connect to the software product, software version,     software version, software release, and software edition by using relationships as shown in the following   query:<br>
+      Note the relatioship directions in the node graph.
     ![API Image](/images/relat_overview.png)<br>&nbsp;
     * Return data by using the aliases in that are assigned to the nodes in the MATCH statement.<br>
+    * .<br>
     <br>  
     Here's the query that you use:
     `MATCH (m:MANUFACTURER)<-[:HAS_A]-(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION) WHERE m.manufacturer = "Oracle" RETURN m.manufacturer, sp.product, sv.version, sr.release, se.edition LIMIT 5`
+
+    The following results represent a sample of the output from the query:
+    <br>
+    ![API Image](/images/manu_to_se.png)<br>&nbsp;
     
-    
-  <br>
-  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Adobe" Return s`
 
-  <br>
-  In this example, software products that have Adobe in the name fields are returned.<br>
-
-  <br>
-  <br>
-
+  
    You must add an alias before the colon in nodes that you want to get data from statement so that you can  refer to this alias in the return clause to specify the query ouput.
    {: .warning}
   
    
   <br>  
-  <br>
-
+  
    When you write MATCH statements that use relationships, you must follow the relationship direction in the diagram.
    {: .warning}
 
   <br>
-  <b>Objective:</b> To get software editions that have a release, verison, and product.<br>
+  <b>Query Intent:</b> To get software editions that have a release, verison, and product.<br>
 
-    * To get the required information, you have to add relationships to the software release, software version, and software product nodes.<br>
+    * To get the required information, you have to add relationships to the software release, software version,   and software product nodes.<br>
     * We use MATCH to select the software edtion node and then create relationships to the other nodes.<br>
     * Add an alias to each node and relationship in the  query.<br>
     * To return the data that you need, use the Return clause to refer to the specific aliases.<br>
@@ -94,25 +86,18 @@ content_markdown: |-
 
   <br>
   
-  <br>
+  
    
   <b>Query Intent:</b> Get software editions and include the release, verison, product, and manufacturer.<br>
   <br>
   In this query example, you get data for software editions in Technopedia, and include the release, version, product, and manufacturer data for each edition that is listed. <br>
 
-  `MATCH (e:SOFTWARE_EDITION)<-[:HAS_A]-(r:SOFTWARE_RELEASE)-[:HAS_A]->(v:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_PRODUCT)<-[:HAS_A]-(m:MANUFACTURER) RETURN e,r,v,p,m LIMIT 10`<br>
-
+  `MATCH (e:SOFTWARE_EDITION)<-[:HAS_A]-(r:SOFTWARE_RELEASE)-[:HAS_A]->(v:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_PRODUCT)-[:HAS_A]->(m:MANUFACTURER) RETURN e.edition,r.release,v.version,p.product, m.manufacturer LIMIT 10`<br>
+  The following results are a sample of the output from the query:<br>
+    <br>
+    ![API Image](/images/edtomanu.png)<br>&nbsp;
   
-  <br>
-
-  #### TQL extended relationships<br>
-
-
-  Here are some examples of extended relationships that connect multiple nodes:
-
-  <b>Query Intent:</b> 
-
- 
+  
  
   The following MATCH query examples show variations in constructions that use relationships and other conditions. To try out a query example, you append the MATCH statement to the following tql endpoint and make a GET request from a API client or use cURL. <br>
   <br>
