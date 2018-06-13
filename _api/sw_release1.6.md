@@ -37,15 +37,16 @@ left_code_blocks:
       MATCH (n:SOFTWARE_RELEASE) RETURN n.release, n.created_at LIMIT 5
 
       RESPONSE SAMPLE
+
       {
         "results": [
             {
                 "n.created_at": "2014-04-25 15:20:43",
-                    "n.release": "WMSigner"
+                "n.release": "WMSigner"
             },
             {
                 "n.created_at": "2016-02-11 11:18:47",
-                    "n.release": "Virtualenvwrapper"
+                "n.release": "Virtualenvwrapper"
             },
             {
                 "n.created_at": "2015-02-02 13:48:58",
@@ -109,16 +110,36 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (srelease:SOFTWARE_RELEASE) -[:HAS_A]->(sver:SOFTWARE_VERSION)-[HAS_A]->(smajor:SOFTWARE_VERSION_GROUP) RETURN srelease.release, sver.version, smajor.version_group LIMIT 2
+      MATCH (srelease:SOFTWARE_RELEASE)-[:HAS_A]->(sver:SOFTWARE_VERSION)-[:HAS_A]->(smajor:SOFTWARE_VERSION_GROUP) RETURN srelease.release, sver.version, smajor.version_group LIMIT 5
       
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+            "smajor.version_group": "7",
+            "srelease.release": "Archive Services for SAP",
+            "sver.version": "7.2"
+            },
+            {
+                "smajor.version_group": "7",
+                "srelease.release": "Archive Services for SAP",
+                "sver.version": "7.0"
+            },
+            {
+                "smajor.version_group": "6",
+                "srelease.release": "ECI (Enterprise Content Integration) Services",
+                "sver.version": "6.5"
+            },
+            {
+                "smajor.version_group": "6",
+                "srelease.release": "ECI (Enterprise Content Integration) Services",
+                "sver.version": "6.0"
+            },
+            {
+                "smajor.version_group": "6",
+                "srelease.release": "ECI (Enterprise Content Integration) Services",
+                "sver.version": "6.5"
             }
         ]
       {  
@@ -126,16 +147,36 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-      MATCH (srelease:SOFTWARE_RELEASE) -[:HAS_A]->(sver:SOFTWARE_VERSION)-[HAS_A]->(smajor:SOFTWARE_MAJOR_VERSION) RETURN srelease.release, sver.version, smajor.version LIMIT 2
+      MATCH (srelease:SOFTWARE_RELEASE)-[:HAS_A]->(sver:SOFTWARE_VERSION)-[:HAS_A]->(smajor:SOFTWARE_MAJOR_VERSION) RETURN srelease.release, sver.version, smajor.version LIMIT 2
       
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+                "smajor.version": "8.2",
+                "srelease.release": "Common Management Information Protocol (CMIP)",
+                "sver.version": "8.2.1"
+            },
+            {
+                "smajor.version": "4.0",
+                "srelease.release": "Web Proxy Server",
+                "sver.version": "4.0.9"
+            },
+            {
+                "smajor.version": "4.0",
+                "srelease.release": "Web Proxy Server",
+                "sver.version": "4.0.8"
+            },
+            {
+                "smajor.version": "4.0",
+                "srelease.release": "Web Proxy Server",
+                "sver.version": "4.0.6"
+            },
+            {
+                "smajor.version": "4.0",
+                "srelease.release": "Web Proxy Server",
+                "sver.version": "4.0.7"
             }
         ]
       {  
@@ -183,7 +224,7 @@ right_code_blocks:
       (SOFTWARE_RELEASE)-[:HAS_A]->(CERTIFICATION)
       Relationship attributes: 
       certified
-      title: Relationships
+    title: Relationships
     language: bash
 right_code_blocks:
   - code_block: |2

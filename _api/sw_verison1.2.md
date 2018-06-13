@@ -8,31 +8,27 @@ description: >-
 
   The relationship bewtween the nodes is `HAS_A` which points from the `SOFTWARE_VERSION` to `SOFTWARE_VERSION_GROUP` and `SOFTWARE_MAJOR_VERSION.
 content_markdown: >-
-  The highlighted query returns version information for software versions.
+  The highlighted query returns version information for software.
   <br>
-  
-
   `MATCH (a:SOFTWARE_VERSION) RETURN a.version`
-  {: .success} 
-  
   <br>
   The following diagram shows the nodes, attributes, and relationships that feature software nodes and their relationships.
   <br>
   ![API Image](/images/sw_ver.png){:class="img-responsive"} <br>
 
-  ### Software Version Group
+  ### Software Major Version
   
   ######
   The node that represents the major version of software is `SOFTWARE_MAJOR_VERSION`.
   Software versioning is used to categorize the unique states of software as it is developed and released. 
   The version identifier might be a word, or a number, or inlcude both. For example, version 1.0 is often used to represent the initial release of a software product.
 
-  Returns software version information. <br>
+  The following query returns software major version information. <br>
    
   `MATCH (a:SOFTWARE_MAJOR_VERSION) RETURN a.version`
-  {: .success} 
+  
 
-  ### Software Major Group
+  ### Software Version Group
   
   ######
   The node that represents the major version of software is `SOFTWARE_VERSION_GROUP`.
@@ -112,8 +108,8 @@ left_code_blocks:
     title: Example one
     language: javascript
   - code_block: >-
-      MATCH (n:SOFTWARE_RELEASE) WHERE n.release contains "studio" RETURN n
-
+      MATCH (n:SOFTWARE_RELEASE) WHERE n.release contains "studio" RETURN n 
+      
       RESPONSE SAMPLE
 
       {
