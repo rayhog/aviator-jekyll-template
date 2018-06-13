@@ -11,10 +11,8 @@ content_markdown: >-
   The highlighted query returns version information for software versions.
   <br>
   
-  
 
   `MATCH (a:SOFTWARE_VERSION) RETURN a.version`
-
   {: .success} 
   
   <br>
@@ -31,9 +29,8 @@ content_markdown: >-
 
   Returns software version information. <br>
    
-   `MATCH (a:SOFTWARE_MAJOR_VERSION) RETURN a.version`
-    
-    {: .success} <br>
+  `MATCH (a:SOFTWARE_MAJOR_VERSION) RETURN a.version`
+  {: .success} 
 
   ### Software Major Group
   
@@ -122,30 +119,68 @@ left_code_blocks:
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+                
+                "n.created_at": "2015-11-03 16:53:59",
+                "n.desupported_flag": null,
+                "n.discontinued_flag": null,
+                "n.modified_at": "2017-12-07 09:20:33",
+                "n.release": "Math Resource Studio",
+                "n.technopedia_id": "4b4c9a40-3f64-4536-b719-d2e95e277481",
+                "n.url": null
+            },
+            {
+                "n.created_at": "2009-08-24 07:02:45",
+                "n.desupported_flag": null,
+                "n.discontinued_flag": null,
+                "n.modified_at": "2009-11-13 10:30:42",
+                "n.release": "DriverStudio",
+                "n.technopedia_id": "e243f07f-ff85-4e08-8839-965f20a13808",
+                "n.url": null
             }
         ]
       {  
     title: Example two
     language: javascript
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(V:SOFTWARE_VERSION)-[:HAS_A]-(Product:SOFTWARE_PRODUCT) WHERE n.release = "WMSigner" RETURN n, Product
+      MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(v:SOFTWARE_VERSION)-[:HAS_A]-(pr:SOFTWARE_PRODUCT) WHERE n.release = "WMSigner" RETURN n.release, pr.product, v.version
       
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "test",
-                "s.test",
-                "s.anything"
+            "n.release": "WMSigner",
+            "pr.product": "WMSigner",
+            "v.version": "1.3"
+            },
+            {
+                "n.release": "WMSigner",
+                "pr.product": "WMSigner",
+                "v.version": "1.0"
+            },
+            {
+                "n.release": "WMSigner",
+                "pr.product": "WMSigner",
+                "v.version": "1.2"
+            },
+            {
+                "n.release": "WMSigner",
+                "pr.product": "WMSigner",
+                "v.version": "1.1"
+            },
+            {
+                "n.release": "WMSigner",
+                "pr.product": "WMSigner",
+                "v.version": "2.0"
+            },
+            {
+                "n.release": "WMSigner",
+                "pr.product": "WMSigner",
+                "v.version": "0.1"
             }
         ]
       {   
-        }
-
+        
     title: Example 3
     language: javascript
 
