@@ -119,34 +119,11 @@ content_markdown: |-
   `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product CONTAINS "Adobe" Return s`
 
   <br>
-  In this example, software products that have Adobe in the product field are returned. The following sample return shows two results for Adobe.<br>
-  `{
-            "s.alias": null,
-            "s.component": null,
-            "s.created_at": "2015-12-11 15:00:32",
-            "s.desupported_flag": null,
-            "s.discontinued_flag": null,
-            "s.family": null,
-            "s.is_suite": "FALSE",
-            "s.modified_at": "2015-12-11 15:00:32",
-            "s.product": "Adobe Content Server (ACS)",
-            "s.technopedia_id": "45450920-f7bf-4ce1-b06c-face9c363375",
-            "s.url": "http://www.datalogics.com/products/ebook/acs/"
-        },
-        {
-            "s.alias": null,
-            "s.component": null,
-            "s.created_at": "2015-12-11 14:55:05",
-            "s.desupported_flag": null,
-            "s.discontinued_flag": null,
-            "s.family": null,
-            "s.is_suite": "FALSE",
-            "s.modified_at": "2015-12-11 14:55:05",
-            "s.product": "Adobe PDF Print Engine (APPE)",
-            "s.technopedia_id": "aa0f9625-686a-49af-98a3-9ff109274c2a",
-            "s.url": "http://www.datalogics.com/products/pdf/pdfprintengine/"
-        }`
+  In this example, software products that have Adobe in the product field are returned. The following sample return shows one result for Adobe.<br>
   <br>
+  ![API Image](/images/abobe_contains.png)<br>&nbsp;
+  <br>  
+  
  
    You must add an alias before the colon for nodes that you reference with the RETURN clause in the MATCH statement. The return clause references the alias to generate the query ouput.
    {: .warning}
@@ -164,26 +141,34 @@ content_markdown: |-
    {: .warning}
 
   <br>
-  <b>Query Intent:</b> To get software editions called "Enterprise Developer" and where the edition order is equal to two.  <br>
+  <b>Query Intent:</b> To get software editions named "Enterprise Developer" and where the edition order is equal to two.  <br>
 
     * You only have to query the software edition node.<br>
-    * You use the attributes edition, and order to filter the output.<br>
+    * You use the attributes `edition` and `order` to filter the query output.<br>
     * Use MATCH to select the software edtion node, and add an alias to the node that you refer to in the RETURN clause.<br>
+      `MATCH (alias:SOFTWARE_EDITION)`
     * Use the WHERE and AND clauses to add conditions that filter the output.<br>
+      `MATCH (alias:SOFTWARE_EDITION) WHERE s.order = 2 AND s.edition = "Enterprise Developer"`
+    * You use the RETURN clause to select the query output by referring to the alias and attributes.
+      `RETURN s.edition, s.order`  
     
   <br>
   In this query example, you return software editions in Technopedia by edition and order: <br>
 
-  ` MATCH (s:SOFTWARE_EDITION) WHERE s.order = 2 AND s.edition = "Enterprise Developer" RETURN s.edition, s.order`<br>
-
+  `MATCH (s:SOFTWARE_EDITION) WHERE s.order = 2 AND s.edition = "Enterprise Developer" RETURN s.edition, s.order`<br>
   <br>
-   
+  ![API Image](/images/edition_query.png)<br>&nbsp;
+  <br>  
+
   <b>Query Intent:</b> To get five software editions and product names that are associated with those editions.
 
     * You must query the software product and software edition nodes.<br>
     * You use the attributes edition from software edition, and product from the software product node.<br>
-    * Use MATCH to select the software edtion node, and add an alias to use in the RETURN clause.<br>
+    * Use MATCH to select the software edtion node, and add node aliases to use in the RETURN clause.<br>
     * Add the `HAS_A` relationship from edition to product and note the direction of the relationship in the diagram.<br>
+      `MATCH (s:SOFTWARE_EDITION)-[:HAS_A]->(p:SOFTWARE_PRODUCT)`<br>
+    * You use the RETURN clause to select the query output by referring to the alias and attributes.
+      `RETURN s.edition`, p.product` or you can return all attributes by using `RETURN s, p`
     * Use the LIMIT clause to limit the results to five.<br>
     
    ![API Image](/images/ed_to_prod.png)<br>&nbsp;
@@ -193,10 +178,9 @@ content_markdown: |-
   `MATCH (s:SOFTWARE_EDITION)-[:HAS_A]->(p:SOFTWARE_PRODUCT) RETURN s.edition, p.product LIMIT 5`<br>
 
   <br>
-
-  
-  <br>
-
+  ![API Image](/images/prod_ed.png)<br>&nbsp;
+  <br>  
+    
   #### TQL Clauses and Operators<br>
 
   Use the following clauses and operators in your MATCH statements to filter Technopedia data:
