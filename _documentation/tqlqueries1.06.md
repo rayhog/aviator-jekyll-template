@@ -45,11 +45,11 @@ content_markdown: |-
   ![API Image](/images/sw_relat.png)<br>&nbsp;
   <br>  
 
-  <b>Query Intent:</b> Get software that is manufactured by Oracle and return manufactuer, product name, version, releasea, and edition.br>
+  <b>Query Intent:</b> Get software that is manufactured by Oracle and return the manufactuer, product name, version, releasea, and edition.br>
 
     * The start node is manufacturer.<br>
-    * Use MATCH to select the `MANUFACTURER` node and then connect to the software product, software version,     software version, software release, and software edition by using relationships as shown in the following   query:<br>
-      Note the relatioship directions in the node graph.
+    * Use MATCH to select the `MANUFACTURER` node and then connect to the software product, software version,     software version, software release, and software    edition by using relationships as shown in the following   query:<br>
+    Note the relationship directions in the node graph.
     ![API Image](/images/relat_overview.png)<br>&nbsp;
     * Return data by using the aliases in that are assigned to the nodes in the MATCH statement.<br>
     * .<br>
@@ -75,9 +75,9 @@ content_markdown: |-
   <br>
   <b>Query Intent:</b> To get software editions that have a release, verison, and product.<br>
 
-    * To get the required information, you have to add relationships to the software release, software version,   and software product nodes.<br>
-    * We use MATCH to select the software edtion node and then create relationships to the other nodes.<br>
-    * Add an alias to each node and relationship in the  query.<br>
+    * To get the required information, you add relationships to the software release, software version, and software product nodes.<br>
+    * Use MATCH to select the software edtion node and then create relationships to the other nodes.<br>
+    * Add an alias to each node and relationship in the query.<br>
     * To return the data that you need, use the Return clause to refer to the specific aliases.<br>
   <br>
   In this query example, you return software editions in Technopedia with release, verison, and product information. <br>
@@ -92,10 +92,11 @@ content_markdown: |-
   <br>
   In this query example, you get data for software editions in Technopedia, and include the release, version, product, and manufacturer data for each edition that is listed. <br>
 
-  `MATCH (e:SOFTWARE_EDITION)<-[:HAS_A]-(r:SOFTWARE_RELEASE)-[:HAS_A]->(v:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_PRODUCT)-[:HAS_A]->(m:MANUFACTURER) RETURN e.edition,r.release,v.version,p.product, m.manufacturer LIMIT 10`<br>
+  `MATCH (e:SOFTWARE_EDITION)<-[:HAS_A]-(r:SOFTWARE_RELEASE)-[:HAS_A]->(v:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_PRODUCT)-[:HAS_A]->(m:MANUFACTURER) 
+  RETURN   e.edition,r.release,v.version,p.product, m.manufacturer LIMIT 10`<br>
   The following results are a sample of the output from the query:<br>
-    <br>
-    ![API Image](/images/edtomanu.png)<br>&nbsp;
+  <br>
+  ![API Image](/images/edtomanu.png)<br>&nbsp;
   
   
  
@@ -144,8 +145,7 @@ left_code_blocks:
 
     title: Example one
     language: javascript
-    title: Example one
-    language: javascript
+    
   - code_block: |-
       MATCH (m:MANUFACTURER)<-[:HAS_A]-(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION) 
       WHERE m.manufacturer = "Oracle" 
@@ -197,7 +197,10 @@ left_code_blocks:
     title: Example two
     language: javascript
   - code_block: |-
-      MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" OR s.product="HealthMatics" RETURN s LIMIT 2 
+      MATCH (s:SOFTWARE_PRODUCT) 
+      WHERE s.product = "Office" OR s.product="HealthMatics" 
+      RETURN s 
+      LIMIT 2 
 
       RESPONSE SAMPLE
 
@@ -293,7 +296,7 @@ left_code_blocks:
         ]
       {  
     title: Example five
-    language: bash
+    language: javascript
   - code_block: |-
       MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(:SOFTWARE_VERSION)-[:HAS_A]->(sp:SOFTWARE_PRODUCT)-[:HAS_A]->(m:MANUFACTURER) 
       WHERE m.manufacturer CONTAINS "people" 
