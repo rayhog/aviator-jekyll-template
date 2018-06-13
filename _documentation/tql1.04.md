@@ -109,19 +109,19 @@ content_markdown: |-
 
     * The Software Product node has an attribute called product.<br>
     * Use the MATCH to select the `SOFTWARE_PRODUCT` node and the `product` attribute to filter for Adobe.<br>
-      MATCH (:SOFTWARE_PRODUCT)
+      `MATCH (:SOFTWARE_PRODUCT)`
     * Add an alias to the node , so that you can use it with the RETURN clause to get data from that node.
-      MATCH (s:SOFTWARE_PRODUCT)  
+      `MATCH (s:SOFTWARE_PRODUCT)`  
     * View the list of attributes that you can use on the Software Product page, or you can use <br>
       `MATCH(x:SOFTWARE_PRODUCT) RETURN x` to get a list of attributes. <br>
-    * Use the WHERE clause with the CONTAINS clause to specify the condition `product CONTAINS "Adobe"`.<br>
+    * Use the `WHERE` clause with the `CONTAINS` clause to specify the condition `product CONTAINS "Adobe"`.<br>
   <br>
   `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product CONTAINS "Adobe" Return s`
 
   <br>
   In this example, software products that have Adobe in the product field are returned. The following sample return shows one result for Adobe.<br>
   <br>
-  ![API Image](/images/abobe_contains.png)<br>&nbsp;
+  ![API Image](/images/adobe_contains.png)<br>&nbsp;
   <br>  
   
  
@@ -145,11 +145,11 @@ content_markdown: |-
 
     * You only have to query the software edition node.<br>
     * You use the attributes `edition` and `order` to filter the query output.<br>
-    * Use MATCH to select the software edtion node, and add an alias to the node that you refer to in the RETURN clause.<br>
+    * Use `MATCH` to select the software edtion node, and add an alias to the node that you refer to in the RETURN clause.<br>
       `MATCH (alias:SOFTWARE_EDITION)`
     * Use the WHERE and AND clauses to add conditions that filter the output.<br>
       `MATCH (alias:SOFTWARE_EDITION) WHERE s.order = 2 AND s.edition = "Enterprise Developer"`
-    * You use the RETURN clause to select the query output by referring to the alias and attributes.
+    * You use the `RETURN` clause to select the query output by referring to the alias and attributes.
       `RETURN s.edition, s.order`  
     
   <br>
@@ -164,7 +164,7 @@ content_markdown: |-
 
     * You must query the software product and software edition nodes.<br>
     * You use the attributes edition from software edition, and product from the software product node.<br>
-    * Use MATCH to select the software edtion node, and add node aliases to use in the RETURN clause.<br>
+    * Use `MATCH` to select the software edtion node, and add node aliases to use in the RETURN clause.<br>
     * Add the `HAS_A` relationship from edition to product and note the direction of the relationship in the diagram.<br>
       `MATCH (s:SOFTWARE_EDITION)-[:HAS_A]->(p:SOFTWARE_PRODUCT)`<br>
     * You use the RETURN clause to select the query output by referring to the alias and attributes.
@@ -185,8 +185,8 @@ content_markdown: |-
 
   Use the following clauses and operators in your MATCH statements to filter Technopedia data:
 
-  * WHERE <br>
-  Use the WHERE condition to filter results. <br>
+  * WHERE, <br>
+  Use the `WHERE` clause to filter results. <br>
   `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office"  RETURN s` <br>
   Return software products where the product field is equal to 'Office'. <br>
 
