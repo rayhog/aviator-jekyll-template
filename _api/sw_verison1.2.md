@@ -234,6 +234,7 @@ left_code_blocks:
     language: bash
 
   - code_block: |-
+      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6-1.technopedia.com/tql" --data-urlencode' "q=MATCH (s:SOFTWARE_PRODUCT)<-[:HAS_A]-(n:SOFTWARE_VERSION) WHERE s.product = "Advanced Partitioning Option" RETURN n, s
     title: cURL
     language: bash
 

@@ -64,12 +64,12 @@ content_markdown: |-
 
   
   <br>
-  The following examples show some simple MATCH statements that you use to query the database:
+  The following examples show some basic MATCH statements:
   <br>
   
   ![API Image](/images/simple_match.png)<br>&nbsp;
   <br>  
-  The following TQL query shows the most common parts of a MATCH statement:
+  The following TQL query shows the most common elements in a MATCH statement:
   <br>
   
   ![API Image](/images/tql_query.png)<br>&nbsp;
@@ -80,7 +80,7 @@ content_markdown: |-
   #### Overview of creating a MATCH query<br>
 
 
-  The following diagram shows a basic overview of creating a query:
+  The following diagram shows a broad outline of creating a query:
   <br>
   
   ![API Image](/images/match.png)<br>&nbsp;
@@ -90,11 +90,12 @@ content_markdown: |-
   <br>
   Use the following guidelines to help you to build a basic query:
 
-   1.	Idendify the node that has the data you need.<br>
+   1.	Idendify the relevant node for the data you want to retrieve.<br>
    2.	Identify any node attributes that you want to target for your data, for example, you use the product
-        attribute on the software product node to get names of software products. <br>   
+        attribute of the software product node to get names of software products. <br>   
    3.	Select any relationships to connect to nodes that you use in your query.<br>
-   4.	Write your MATCH statement
+   4.   Note any conditions that you want to apply to filter the data.
+   5.	Write your MATCH statement
 
   To view a list of attributes for any node, you use the 
   `MATCH (alias:NODE) RETURN alias` query with the TQL endpoint.
@@ -104,19 +105,47 @@ content_markdown: |-
   <br>
   Here’s some examples:
   <br>
-  <b>Query Intent:</b> To find software that is named Adobe.<br>
+  <b>Query Intent:</b> To find software products that have Adobe in their product name.<br>
 
     * The Software Product node has an attribute called product.<br>
-    * We use MATCH to select the `SOFTWARE_PRODUCT` node and the `product` attribute to filter for Adobe.<br>
-    * View the list of attributes that you can use on the Software Product page, or you use <br>
-      `MATCH(x:SOFTWARE_PRODUCT) RETURN x` query to view a list of attributes.
-      <br>
-    * Use the WHERE clause with the equals operator to specify the condition `product = "Adobe"`.<br>
+    * Use the MATCH to select the `SOFTWARE_PRODUCT` node and the `product` attribute to filter for Adobe.<br>
+      MATCH (:SOFTWARE_PRODUCT)
+    * Add an alias to the node , so that you can use it with the RETURN clause to get data from that node.
+      MATCH (s:SOFTWARE_PRODUCT)  
+    * View the list of attributes that you can use on the Software Product page, or you can use <br>
+      `MATCH(x:SOFTWARE_PRODUCT) RETURN x` to get a list of attributes. <br>
+    * Use the WHERE clause with the CONTAINS clause to specify the condition `product CONTAINS "Adobe"`.<br>
   <br>
-  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Adobe" Return s`
+  `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product CONTAINS "Adobe" Return s`
 
   <br>
-  In this example, software products that have Adobe in the product fields are returned.<br>
+  In this example, software products that have Adobe in the product field are returned. The following sample return shows two results for Adobe.<br>
+  `{
+            "s.alias": null,
+            "s.component": null,
+            "s.created_at": "2015-12-11 15:00:32",
+            "s.desupported_flag": null,
+            "s.discontinued_flag": null,
+            "s.family": null,
+            "s.is_suite": "FALSE",
+            "s.modified_at": "2015-12-11 15:00:32",
+            "s.product": "Adobe Content Server (ACS)",
+            "s.technopedia_id": "45450920-f7bf-4ce1-b06c-face9c363375",
+            "s.url": "http://www.datalogics.com/products/ebook/acs/"
+        },
+        {
+            "s.alias": null,
+            "s.component": null,
+            "s.created_at": "2015-12-11 14:55:05",
+            "s.desupported_flag": null,
+            "s.discontinued_flag": null,
+            "s.family": null,
+            "s.is_suite": "FALSE",
+            "s.modified_at": "2015-12-11 14:55:05",
+            "s.product": "Adobe PDF Print Engine (APPE)",
+            "s.technopedia_id": "aa0f9625-686a-49af-98a3-9ff109274c2a",
+            "s.url": "http://www.datalogics.com/products/pdf/pdfprintengine/"
+        }`
   <br>
  
    You must add an alias before the colon for nodes that you reference with the RETURN clause in the MATCH statement. The return clause references the alias to generate the query ouput.
@@ -168,19 +197,19 @@ content_markdown: |-
   
   <br>
 
-  #### TQL Keywords<br>
+  #### TQL Clauses and Operators<br>
 
-  You use the following keywords in your MATCH statements to add conditions and filter data that is returned from your TQL query:
+  Use the following clauses and operators in your MATCH statements to filter Technopedia data:
 
   * WHERE <br>
   Use the WHERE condition to filter results. <br>
   `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office"  RETURN s` <br>
-  Return software products where the name field is equal to 'Office'. <br>
+  Return software products where the product field is equal to 'Office'. <br>
 
   * AND <br>
   Use the AND clause to add an addtional filter.<br>
   `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" AND s.family = "HealthMatics"  RETURN s` <br>
-  Return software products where name is Office and the family is HealthMatics. <br>
+  Return software products where product name is Office and the family is HealthMatics. <br>
 
   * OR <br>
   Use the OR clause to  return either one of two condtions. <br>
@@ -452,7 +481,7 @@ left_code_blocks:
     title: Example six
     language: javascript
   - code_block: |-
-      MATCH (n:SOFTWARE_RELEASE) RETURN n.cat_sw_release_id, n.ga_date
+      curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6-1.technopedia.com/tql" --data-urlencode' "q=MATCH (n:SOFTWARE_RELEASE) RETURN n.release
 
       
     title: cURL
