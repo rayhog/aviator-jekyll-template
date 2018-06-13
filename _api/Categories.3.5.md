@@ -156,7 +156,7 @@ left_code_blocks:
       {
         "results": [
             {
-                " "c.cat_taxonomy2012_id": null,
+                "c.cat_taxonomy2012_id": null,
                 "c.description": "Application software designed to enhance productivity within group of
                  individuals, by which users can create a workspace and add workflow in order 
                  to achieve commmon goal",

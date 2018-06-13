@@ -72,7 +72,7 @@ left_code_blocks:
     language: javascript
   - code_block: >-
       MATCH (s:SOFTWARE_PRODUCT) WHERE s.product CONTAINS "Vagrant Manager" RETURN s
-
+      
       RESPONSE SAMPLE
 
       {

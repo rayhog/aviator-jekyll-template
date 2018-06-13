@@ -33,17 +33,10 @@ content_markdown: |-
   <br>
   
 
-  #### Overview............. query<br> 
-  
-  
-  
-  QUERY INTENT
-  Return release name, software version, software product name, and manufacturer name for 2 software releases
-  `MATCH (srelease:SOFTWARE_RELEASE) -[:HAS_A]->(sver:SOFTWARE_VERSION)-[:HAS_A]->(sprod:SOFTWARE_PRODUCT)-[:HAS_A]->(manu:MANUFACTURER) RETURN srelease.release, sver.version, sprod.product, manu.manufacturer LIMIT 2`
-
+  #### Examples of building relationshipsR<br>   
 
   <br>
-  To create a MATCH statement you must identify the nodes that store the infromaiton you require, and use the following guide to help you to build your query:
+  To incoporate multiple nodes in a MATCH statement you must use the realations to connect the nodes and then use the RETURN clause to get data from any of the nodes in the query. Use the following guide to help you to build your query:
 
    1.	Select the Nodes that you want to use in your query.<br>
    2.	Identify the node attributes that store the information you require.<br>
@@ -51,17 +44,23 @@ content_markdown: |-
    4.	Write your MATCH statement
 
   <br>
-  Here’s some examples:
+  Here’s some examples that are based on the software nodes and manufacturer node:
   <br>
-  <b>Query Intent:</b> To find software that is named Adobe.<br>
+  ![API Image](/images/sw_relat.png)<br>&nbsp;
+  <br>  
 
-    * The Software Product node has an attribute called product.<br>
-    * We use MATCH to select the `SOFTWARE_PRODUCT` node and the `product` attribute to filter for Adobe.<br>
-    * View the list of attributes that you can use on the Software Product page, or you use the following MATCH statement 
-      with the `/tql` endpoint to view a list of attributes for the `SOFTWARE_PRODUCT` node.
-      `MATCH(x:SOFTWARE_PRODUCT) RETURN x`
-      <br>
-    * Use the WHERE clause with the equals operator to specify the condition `product = "Adobe"`.<br>
+  <b>Query Intent:</b> Get software that is manufactured by Oracle and return manufactuer, product name, version, releasea, and edition.br>
+
+    * The start node is manufacturer.<br>
+    * Use MATCH to select the `MANUFACTURER` node and then connect to the software product, software `product`  <br>
+      by using relationships.
+    ![API Image](/images/relat_overview.png)<br>&nbsp;
+    * Return data by using the aliases in that are assigned to the nodes in the MATCH statement.<br>
+    <br>  
+    Here's the query that you use:
+    `MATCH (m:MANUFACTURER)<-[:HAS_A]-(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION) WHERE m.manufacturer = "Oracle" RETURN m.manufacturer, sp.product, sv.version, sr.release, se.edition LIMIT 5`
+    
+    
   <br>
   `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Adobe" Return s`
 
@@ -71,17 +70,10 @@ content_markdown: |-
   <br>
   <br>
 
-   You must add an alias before the colon in nodes and relationships in the MATCH statement. You refer to this alias in the return clause to specify the query ouput.
+   You must add an alias before the colon in nodes that you want to get data from statement so that you can  refer to this alias in the return clause to specify the query ouput.
    {: .warning}
   
-      
-  <br>
-
-  The following diagram identifies the software nodes and the relationship directions.
-  <br>
-  
-  ![API Image](/images/sw_graph.png)<br>&nbsp;
-  <br>  
+   
   <br>  
   <br>
 
@@ -167,51 +159,47 @@ left_code_blocks:
     title: Example one
     language: javascript
   - code_block: |-
-      MATCH (aliasx:HARDWARE_PRODUCT) RETURN aliasx.product, aliasx.modified_at LIMIT 10
+      MATCH (m:MANUFACTURER)<-[:HAS_A]-(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION) WHERE m.manufacturer = "Go Ahead Web" RETURN m.manufacturer, sp.product, sv.version, sr.release, se.edition LIMIT 5
 
       RESPONSE SAMPLE
 
       {
         "results": [
-            {
-                "aliasx.modified_at": "2011-03-16 09:46:45",
-                "aliasx.product": "Express5800/A1080a Series"
+        {
+                    
+                "m.manufacturer": "Oracle",
+                "se.edition": "Web",
+                "sp.product": "AutoVue",
+                "sr.release": "AutoVue",
+                "sv.version": "21.0"
             },
             {
-                "aliasx.modified_at": "2011-03-21 11:22:10",
-                "aliasx.product": "Phaser 3125 (Networked)"
+                "m.manufacturer": "Oracle",
+                "se.edition": "Desktop",
+                "sp.product": "AutoVue",
+                "sr.release": "AutoVue",
+                "sv.version": "21.0"
             },
             {
-                "aliasx.modified_at": "2017-06-01 11:29:10",
-                "aliasx.product": "Pro 3010 Desktop PC"
+                "m.manufacturer": "Oracle",
+                "se.edition": "Web",
+                "sp.product": "AutoVue",
+                "sr.release": "AutoVue",
+                "sv.version": "15.0"
             },
             {
-                "aliasx.modified_at": "2011-03-16 09:50:28",
-                "aliasx.product": "Essentio Series"
+                "m.manufacturer": "Oracle",
+                "se.edition": "Desktop",
+                "sp.product": "AutoVue",
+                "sr.release": "AutoVue",
+                "sv.version": "15.0"
             },
             {
-                "aliasx.modified_at": "2011-03-16 09:50:30",
-                "aliasx.product": "DX100 Series"
-            },
-            {
-                "aliasx.modified_at": "2017-06-01 11:29:10",
-                "aliasx.product": "500 Series Notebook PC"
-            },
-            {
-                "aliasx.modified_at": "2011-03-16 09:50:28",
-                "aliasx.product": "ThinkCentre A51"
-            },
-            {
-                "aliasx.modified_at": "2017-06-01 11:29:10",
-                "aliasx.product": "3Com OfficeConnect Cable/DSL Gateway"
-            },
-            {
-                "aliasx.modified_at": "2011-03-16 13:27:17",
-                "aliasx.product": "6000 Series"
-            },
-            {
-                "aliasx.modified_at": "2011-03-16 11:04:11",
-                "aliasx.product": "IdeaPad Z560"
+                "m.manufacturer": "Oracle",
+                "se.edition": "Web",
+                "sp.product": "AutoVue",
+                "sr.release": "AutoVue",
+                "sv.version": "15.1"
             }
         ]
       {  
