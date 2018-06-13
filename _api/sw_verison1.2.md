@@ -108,7 +108,8 @@ left_code_blocks:
     title: Example one
     language: javascript
   - code_block: >-
-      MATCH (n:SOFTWARE_RELEASE) WHERE n.release contains "studio" 
+      MATCH (n:SOFTWARE_RELEASE) 
+      WHERE n.release contains "studio" 
       RETURN n 
       
       RESPONSE SAMPLE
@@ -227,7 +228,9 @@ left_code_blocks:
 
   - code_block: |-
 
-      MATCH (manu:MANUFACTURER)<-[:HAS_A]-(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(n:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_MAJOR_VERSION) RETURN manu.manufacturer AS Manufacturer, sp.product AS Product, n.version AS VERSION, p.version AS Major_Version LIMIT 5
+      MATCH (manu:MANUFACTURER)<-[:HAS_A]-(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(n:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_MAJOR_VERSION) 
+      RETURN manu.manufacturer AS Manufacturer, sp.product AS Product, n.version AS VERSION, p.version AS Major_Version 
+      LIMIT 5
       
       RESPONSE SAMPLE
 

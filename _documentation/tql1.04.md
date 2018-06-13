@@ -25,7 +25,7 @@ content_markdown: |-
   ![API Image](/images/results.png)<br>&nbsp;
   <br>  
   
-  #### Parts of a TQL MATCH query<br>
+  #### Components of a TQL MATCH query<br>
 
   To create a MATCH statement, you need some or all of the following components:
   
