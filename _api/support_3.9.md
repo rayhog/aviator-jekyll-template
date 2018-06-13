@@ -193,7 +193,8 @@ left_code_blocks:
             },
             {
                 "n.created_at": "2010-08-12 15:07:29",
-                "n.definition": "Customers can contact to get support via phone, fax and email. Cannot find any end date.\r\n\r\nSee http://icapp.ch/2.Ebene/3menue/ekontak.html",
+                "n.definition": "Customers can contact to get support via phone, fax and email. 
+                 Cannot find any end date.\r\n\r\nSee http://icapp.ch/2.Ebene/3menue/ekontak.html",
                 "n.modified_at": "2011-06-07 14:59:21",
                 "n.order": 1,
                 "n.support_stage": null,
@@ -201,7 +202,8 @@ left_code_blocks:
             },
             {
                 "n.created_at": "2010-11-18 11:36:56",
-                "n.definition": "FAQs and download are provided. Cannot find any support date.\r\n\r\nSee http://www.dicksondata.com/info/support.php",
+                "n.definition": "FAQs and download are provided. Cannot find any support date.\r\n\r\n
+                 See http://www.dicksondata.com/info/support.php",
                 "n.modified_at": "2011-06-07 13:49:42",
                 "n.order": 1,
                 "n.support_stage": null,

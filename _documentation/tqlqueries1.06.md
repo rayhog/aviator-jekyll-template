@@ -59,7 +59,7 @@ content_markdown: |-
 
     The following results represent a sample of the output from the query:
     <br>
-    ![API Image](/images/manu_to_se.png)<br>&nbsp;
+    ![API Image](/images/manu_to_se.png) <br> &nbsp;
     
 
   
@@ -96,7 +96,7 @@ content_markdown: |-
   RETURN   e.edition,r.release,v.version,p.product, m.manufacturer LIMIT 10`<br>
   The following results are a sample of the output from the query:<br>
   <br>
-  ![API Image](/images/edtomanu.png)<br>&nbsp;
+  ![API Image](/images/edtomanu.png) <br> &nbsp;
   
   
  
