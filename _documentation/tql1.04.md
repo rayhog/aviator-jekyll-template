@@ -66,12 +66,20 @@ content_markdown: |-
 
   
   <br>
-  The following examples show some basic MATCH statements:
+  The following examples are based on the nodes and relationship in the diagram:
   <br>
   
   ![API Image](/images/simple_match.png)<br>&nbsp;
   <br>  
-  The following TQL query shows the most common elements in a MATCH statement:
+  `MATCH (alias:SOFTWARE_EDITON) RETURN alias` <br>
+  `MATCH (x:SOFTWARE_EDITON) RETURN x.edition` <br>
+  `MATCH (y:SOFTWARE_PRODUCT) RETURN y` <br>
+  `MATCH (sp:SOFTWARE_PRODUCT) RETURN sp.product` <br>
+
+  `MATCH (z:SOFTWARE_EDITON)-[HAS_A]->(k:SOFTWARE_PRODUCT) RETURN z, k.product` <br>
+  Returns all attributes for software editon and related products by product name. <br>
+  <br>
+  The following TQL query shows the most common components of a MATCH statement:
   <br>
   
   ![API Image](/images/tql_query.png)<br>&nbsp;
