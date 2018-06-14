@@ -8,7 +8,7 @@ content_markdown: |-
   Because TQL is a declarative query language, you can build your query with multiple nodes, relationships, attributes, and add multiple conditions to refine your query.<br>
   
 
-  Like nodes, relationships can have attributes. You can use an alias with the realtionship that has attributes when you want to return data for those relationship attributes. TQL binds the alias that you specify to that relationship, which you can use with the Return clause of the MATCH query to get specific data.
+  Like nodes, relationships can have attributes. You can use an alias with the relationship that has attributes when you want to return data for those relationship attributes. TQL binds the alias that you specify to that relationship, which you can use with the Return clause of the MATCH query to get specific data.
   {: .info}
 
   #### Building relationships in a query<br>
@@ -40,12 +40,13 @@ content_markdown: |-
    4.	Write your MATCH statement
 
   <br>
-  Here’s some examples that are based on the software nodes and manufacturer node:
+  
+  The following diagram shows the nodes and relationships that are used in the query examples that follow:
   <br>
   ![API Image](/images/sw_relat.png)<br>&nbsp;
   <br>  
 
-  <b>Query Intent:</b> Get software that is manufactured by Oracle and return the manufactuer, product name, version, releasea, and edition.br>
+  <b>Query Intent:</b> Get software that is manufactured by Oracle and return the manufactuer, product name, version, releasea, and edition.<br>
 
     * The first node to reference is the `MANUFACTURER` and you use relationships to connect the other nodes.<br>
     * Use MATCH to select the `MANUFACTURER` node and then connect to the software product, software version, software version, software release, and software edition by using relationships as shown in the following query:<br>
@@ -54,7 +55,7 @@ content_markdown: |-
     * Return data by using the aliases in that are assigned to the nodes in the MATCH statement.<br>
     <br>  
     Here's the query that you use:<br>
-    `MATCH (m:MANUFACTURER)<-[:HAS_A]-(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION) 
+    `MATCH (m:MANUFACTURER)`<-[:HAS_A]-`(sp:SOFTWARE_PRODUCT)`<-[:HAS_A]-`(sv:SOFTWARE_VERSION)`<-[:HAS_A]-`(sr:SOFTWARE_RELEASE)`-[:HAS_A]->`(se:SOFTWARE_EDITION)` 
     WHERE m.manufacturer = "Oracle" 
     RETURN m.manufacturer, sp.product, sv.version, sr.release, se.edition 
     LIMIT 5`
