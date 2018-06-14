@@ -56,8 +56,8 @@ content_markdown: |-
     <br>  
     Here's the query that you use:<br>
     `MATCH (m:MANUFACTURER)`<-[:HAS_A]-`(sp:SOFTWARE_PRODUCT)`<-[:HAS_A]-`(sv:SOFTWARE_VERSION)`<-[:HAS_A]-`(sr:SOFTWARE_RELEASE)`-[:HAS_A]->`(se:SOFTWARE_EDITION)` 
-    WHERE m.manufacturer = "Oracle" 
-    RETURN m.manufacturer, sp.product, sv.version, sr.release, se.edition 
+    `WHERE m.manufacturer = "Oracle"` 
+    `RETURN m.manufacturer, sp.product, sv.version, sr.release, se.edition` 
     LIMIT 5`
 
     The following results represent a sample of the output from the query:<br>
@@ -355,6 +355,8 @@ left_code_blocks:
 right_code_blocks:
   - code_block: |2
       
+      MATCH Node and Attribute Examples:
+
       MATCH (alias1.NODE) RETURN alias1 
 
       MATCH (s:SOFTWARE_PRODUCT) RETURN s
@@ -367,56 +369,60 @@ right_code_blocks:
       MATCH (s:SOFTWARE_PRODUCT) RETURN s.technopedia_id, s.product
       MATCH (s:SOFTWARE_PRODUCT) RETURN s.technopedia_id, s.is_suite    
  
+      MATCH Relationship Examples:
+       
+      MATCH (s:NODEx)-[:PART_OF]->(t:NODEy) RETURN s, t
+
+      MATCH (sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION) RETURN sp, sv
+
+      MATCH (s:SOFTWARE_EDITION)-[:HAS_A]->(p:SOFTWARE_PRODUCT) RETURN s, p
+
+      MATCH (e:SOFTWARE_EDITION)<-[x:HAS_A]-(r:SOFTWARE_RELEASE) RETURN e, r
+
+      MATCH (e:SOFTWARE_EDITION)<-[x:HAS_A]-(r:SOFTWARE_PRODUCT)-[HAS_A]->(m:MANUFACTURER) RETURN e, r, m
 
 
-      MATCH (alias2.NODE) RETURN alias2
-
-      MATCH (s:SOFTWARE_RELEASE) RETURN s 
 
 
-      MATCH (alias.NODE) RETURN alias.attribute 
-      MATCH (s:SOFTWARE_RELEASE) RETURN s.version 
+
       
-
-      MATCH (alias3.NODE) RETURN alias3 
-      MATCH (n:MANUFACTURER) RETURN n
-
-
-      MATCH (alias4.NODE) RETURN alias4.attribute
-      MATCH (n:MANUFACTURER) RETURN n.manufactuer 
-
-      MATCH (s:SOFTWARE_PRODUCT) RETURN s.technopedia_id, s.product
-
            
     title: MATCH Statements
     language: bash
   - code_block: |2-
       WHERE
-      Return software products where the name field is equal to ‘Office’.
+      Return software products where the name field is equal to ‘Office’. 
+
       MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office"  RETURN s
 
       AND
       Return software products where name is Office and the family is HealthMatics. 
+
       MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" AND s.family = "HealthMatics" RETURN s 
            
       OR
       Return software products where product name is Office or HealthMatics. 
+
       MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" OR s.product = "HealthMatics" RETURN s 
             
       COUNT
       Return count of records. 
+
       MATCH (s:SOFTWARE_PRODUCT) RETURN count(*) 
 
       DISTINCT
       Return distinct records only, which do not show duplicates.
+
       MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Microsoft Exchange Server Monitor" RETURN DISTINCT s 
       
       CONTAINS
       Use the CONTAINS clause to return results when an attribute word value is matched. 
+
       MATCH (s:SOFTWARE_PRODUCT) WHERE s.product CONTAINS "Microsoft" RETURN s 
 
       AS
       Return output parameter as another name. 
+
       MATCH (n:SOFTWARE_EDITION) RETURN n.edition as ED, n.modified_at as MOD
 
       Operators =, <>, >, <, >=, <=

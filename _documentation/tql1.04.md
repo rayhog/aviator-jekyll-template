@@ -30,17 +30,19 @@ content_markdown: |-
   To create a MATCH statement, you need some or all of the following components:
   
   * MATCH <br>
-    The MATCH clause introduces the statement like SELECT in SQL and is the first input. You use MATCH to select a node in Technopedia.<br>
+    The MATCH clause introduces the statement like SELECT in SQL and is the first input.<br> 
+    You use MATCH to select a node in Technopedia.<br>
     `MATCH` <br>
   * Node <br>
-    Typically, you refer to a node in the graph as your source of data for the query. Nodes in a query are predeced by a (:) colon. <br>
+    Typically, you refer to a node in the graph as your source of data for the query.<br> 
+    Nodes in a query are predeced by a (:) colon. <br>
     `MATCH (:node)` <br>
   * Alias <br>
-    You append an alias to the node, for example, 'MATCH (alias:node)', so you can call that alias with the RETURN clause to return data.<br>
+    To enable the `RETURN` clause to return data from a node, you append an alias to the node, for example, 'MATCH (alias:node)'. <br>
     TQL binds the unique alias to the node so that you can refer to that alias in the Return clause of <br>
     the MATCH query to request specific data. <br>
     `MATCH (alias:node) RETURN alias` <br>
-    You can use the alias to specify specific node attributes that you want to return. <br>
+    You can also use the alias to specify specific node attributes that you want to return. <br>
     `MATCH (alias:node) RETURN alias.attribute1, alias.attribute2` <br>
   * Relationship <br>
     To get data from more than one node in a query, you must use a relationship to connect the nodes. <br>
