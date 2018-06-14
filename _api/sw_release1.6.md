@@ -125,9 +125,9 @@ left_code_blocks:
       {
         "results": [
             {
-            "smajor.version_group": "7",
-            "srelease.release": "Archive Services for SAP",
-            "sver.version": "7.2"
+                "smajor.version_group": "7",
+                "srelease.release": "Archive Services for SAP",
+                "sver.version": "7.2"
             },
             {
                 "smajor.version_group": "7",

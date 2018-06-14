@@ -118,7 +118,8 @@ left_code_blocks:
 
   - code_block: |-
       MATCH (h:CPU_MODEL) 
-      RETURN h.cores, h.model LIMIT 10
+      RETURN h.cores, h.model 
+      LIMIT 10
 
       RESPONSE SAMPLE
 

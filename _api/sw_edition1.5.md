@@ -73,8 +73,8 @@ left_code_blocks:
     language: javascript
   - code_block: >-
       MATCH (e:SOFTWARE_EDITION {edition: 'Server'}) 
-      RETURN e
-
+      RETURN e 
+      
       RESPONSE SAMPLE
 
       {

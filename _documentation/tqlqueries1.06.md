@@ -8,7 +8,7 @@ content_markdown: |-
   Because TQL is a declarative query language, you can build your query with multiple nodes, relationships, attributes, and add multiple conditions to refine your query.<br>
   
 
-  You can use an alias or variable with a realtionship that has attributes when you want to return data for those attributes. TQL binds the alias that you specify to that relationship, which you can use with the Return clause of the MATCH query to get specific data.
+  Like nodes, relationships can have attributes. You can use an alias with the realtionship that has attributes when you want to return data for those relationship attributes. TQL binds the alias that you specify to that relationship, which you can use with the Return clause of the MATCH query to get specific data.
   {: .info}
 
   #### Building relationships in a query<br>
@@ -47,53 +47,52 @@ content_markdown: |-
 
   <b>Query Intent:</b> Get software that is manufactured by Oracle and return the manufactuer, product name, version, releasea, and edition.br>
 
-    * The start node is manufacturer.<br>
-    * Use MATCH to select the `MANUFACTURER` node and then connect to the software product, software version,     software version, software release, and software    edition by using relationships as shown in the following   query:<br>
-    Note the relationship directions in the node graph.
+    * The first node to reference is the `MANUFACTURER` and you use relationships to connect the other nodes.<br>
+    * Use MATCH to select the `MANUFACTURER` node and then connect to the software product, software version, software version, software release, and software edition by using relationships as shown in the following query:<br>
+    Note the relationship direction in the node graph.
     ![API Image](/images/relat_overview.png)<br>&nbsp;
     * Return data by using the aliases in that are assigned to the nodes in the MATCH statement.<br>
-    * .<br>
     <br>  
-    Here's the query that you use:
-    `MATCH (m:MANUFACTURER)<-[:HAS_A]-(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION) WHERE m.manufacturer = "Oracle" RETURN m.manufacturer, sp.product, sv.version, sr.release, se.edition LIMIT 5`
+    Here's the query that you use:<br>
+    `MATCH (m:MANUFACTURER)<-[:HAS_A]-(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION) 
+    WHERE m.manufacturer = "Oracle" 
+    RETURN m.manufacturer, sp.product, sv.version, sr.release, se.edition 
+    LIMIT 5`
 
-    The following results represent a sample of the output from the query:
+    The following results represent a sample of the output from the query:<br>
     <br>
     ![API Image](/images/manu_to_se.png) <br> &nbsp;
-    
-
-  
-   You must add an alias before the colon in nodes that you want to get data from statement so that you can  refer to this alias in the return clause to specify the query ouput.
-   {: .warning}
-  
    
   <br>  
-  
-   When you write MATCH statements that use relationships, you must follow the relationship direction in the diagram.
+
+   When you include relationships in  MATCH statements, you must use the relationship direction in the graph diagram.
    {: .warning}
 
   <br>
-  <b>Query Intent:</b> To get software editions that have a release, verison, and product.<br>
+  <b>Query Intent:</b> To get data for software editions, and include the release, verison, and product information.<br>
 
-    * To get the required information, you add relationships to the software release, software version, and software product nodes.<br>
-    * Use MATCH to select the software edtion node and then create relationships to the other nodes.<br>
-    * Add an alias to each node and relationship in the query.<br>
-    * To return the data that you need, use the Return clause to refer to the specific aliases.<br>
+  1. To get the required information, you start with the software edition and then add relationships to the software release, software version,     and software product nodes.<br>
+  2. Use MATCH to select the software edtion node and then create relationships to the other nodes.<br>
+      `MATCH (e:SOFTWARE_EDITION)`
+  3. Add the release, version, and product nodes by adding relationships.
+      `MATCH (e:SOFTWARE_EDITION)<-[x:HAS_A]-(r:SOFTWARE_RELEASE)-[y:HAS_A]->(v:SOFTWARE_VERSION)-[z:HAS_A]->(p:SOFTWARE_PRODUCT)`  
+  4. Add an alias to each node in the query that you want to get data from.<br>
+  5. To return the data that you need, use the Return clause to refer to the specific aliases.<br>
+      `RETURN r,e,v,p`
   <br>
   In this query example, you return software editions in Technopedia with release, verison, and product information. <br>
 
   `MATCH (e:SOFTWARE_EDITION)<-[x:HAS_A]-(r:SOFTWARE_RELEASE)-[y:HAS_A]->(v:SOFTWARE_VERSION)-[z:HAS_A]->(p:SOFTWARE_PRODUCT) RETURN r,e,v,p`<br>
 
   <br>
-  
-  
    
   <b>Query Intent:</b> Get software editions and include the release, verison, product, and manufacturer.<br>
   <br>
-  In this query example, you get data for software editions in Technopedia, and include the release, version, product, and manufacturer data for each edition that is listed. <br>
+  In this query example, you get data for software editions in Technopedia, and include the release, version, product, and manufacturer data for each edition that is listed. This <br>
 
   `MATCH (e:SOFTWARE_EDITION)<-[:HAS_A]-(r:SOFTWARE_RELEASE)-[:HAS_A]->(v:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_PRODUCT)-[:HAS_A]->(m:MANUFACTURER) 
-  RETURN   e.edition,r.release,v.version,p.product, m.manufacturer LIMIT 10`<br>
+  RETURN e.edition,r.release,v.version,p.product, m.manufacturer LIMIT 10`<br>
+  <br>
   The following results are a sample of the output from the query:<br>
   <br>
   ![API Image](/images/edtomanu.png) <br> &nbsp;
@@ -389,7 +388,7 @@ right_code_blocks:
 
            
     title: MATCH Statements
-    language: bas
+    language: bash
   - code_block: |2-
       WHERE
       Return software products where the name field is equal to ‘Office’.
@@ -408,7 +407,7 @@ right_code_blocks:
       MATCH (s:SOFTWARE_PRODUCT) RETURN count(*) 
 
       DISTINCT
-      Return distinct records only, which don't show duplicates.
+      Return distinct records only, which do not show duplicates.
       MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Microsoft Exchange Server Monitor" RETURN DISTINCT s 
       
       CONTAINS
@@ -421,5 +420,5 @@ right_code_blocks:
 
       Operators =, <>, >, <, >=, <=
     title: TQL Clauses and examples
-    language: bash
+    language: text
 ---

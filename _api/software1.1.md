@@ -151,11 +151,11 @@ left_code_blocks:
      WHERE s.product CONTAINS "Tools" RETURN s.product, cat1.label, cat2.label, catgrp.label 
      LIMIT 5
 
-      RESPONSE SAMPLE
+    RESPONSE SAMPLE
 
-      {
-        "results": [
-            {
+    {
+      "results": [
+           {
                 "cat1.label": "Product Lifecycle Management (PLM)",
                 "cat2.label": "Product Data Management",
                 "catgrp.label": "Business Applications",
@@ -186,7 +186,7 @@ left_code_blocks:
                 "s.product": "PowerTools"
             }
         ]
-      {  
+    {  
 
     title: Example four
     language: javascript
