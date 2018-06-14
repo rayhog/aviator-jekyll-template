@@ -11,11 +11,10 @@ content_markdown: >-
   Many support stages have a `SUPPORT_POLICY` that defines the type of policy, such as standard or Open Source. 
   <br>
 
-
-  `MATCH (a:SUPPORT_STAGE)-[:HAS_A]-(SUPPORT_POLICY) RETURN a`
-  {: .info}
+  The following query returns five results for support stages with associated support policies.
+  `MATCH (a:SUPPORT_STAGE)-[:HAS_A]-(sp:SUPPORT_POLICY) RETURN a, sp LIMIT 5`
+  
    
-
   The following diagram shows the support nodes and relationships.
   <br>
   ![API Image](/images/support.png){:class="img-responsive"} <br> 

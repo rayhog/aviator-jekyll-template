@@ -16,10 +16,8 @@ content_markdown: >-
   The following diagram shows the software nodes,relatinships, and the software release attributes.
   <br>
   ![API Image](/images/sw_release.png){:class="img-responsive"} <br>
-
   <br>
-  ![API Image](/images/test.png){:class="img-responsive"} <br>
-
+ 
   The software release node connects to the software edtion, software nodes, and support stage nodes by the `HAS_A` relationship.
   The software release and support stage nodes are connected by the 'HAS_A' relationship, which has attributes.
   <br>

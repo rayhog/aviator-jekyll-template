@@ -17,7 +17,7 @@ content_markdown: >-
   GET `https://v6-1.technopedia.com/technopedia-id/<technopedia-id>`
   
   #### 
- <b>GET</b> request by using the Technopedia query language (TQL)
+  <b>GET</b> request by using the Technopedia query language (TQL)
 
   ######
   The main method for acessing information in Technopedia is by using the API with the Technopedia query language (TQL) to query nodes and relationships in the Technopedia database.<br>
