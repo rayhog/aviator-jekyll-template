@@ -288,18 +288,7 @@ right_code_blocks:
       * SOFTWARE_EDITION
       * SOFTWARE_RELEASE
 
-      Query specific software data by using the individual nodes, or use relationships to connect nodes.
-
-
-
-
-
-
-
-
-
-
-      
+      Query specific software data by using the individual nodes, or use relationships to connect nodes.      
 
     title: Software Nodes
     language: bash
