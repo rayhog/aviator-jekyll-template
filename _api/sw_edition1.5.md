@@ -29,6 +29,7 @@ left_code_blocks:
   - code_block: |
       MATCH (n:SOFTWARE_EDITION) 
       RETURN n.edition AS EDITION, n.modified_at AS MODIFIED 
+      LIMIT 8
 
       RESPONSE SAMPLE
 
@@ -79,26 +80,24 @@ left_code_blocks:
 
       {
         "results": [
-        {
-            "e.cat_sw_edition_id": 1175193,
-            "e.created_at": "2007-08-23 15:47:19",
-            "e.desupported_flag": null,
-            "e.edition": "Server",
-            "e.modified_at": "2017-04-20 14:49:12",
-            "e.order": 5,
-            "e.technopedia_id": "fa5b79c1-8304-4604-bc70-f2e4f9469960",
-            "e.url": "https://en.wikipedia.org/wiki/List_of_Microsoft_Windows_versions"
-        },
-        {
-            "e.cat_sw_edition_id": 58734341,
-            "e.created_at": "2014-02-21 16:14:21",
-            "e.desupported_flag": null,
-            "e.edition": "Server",
-            "e.modified_at": "2014-02-21 16:14:21",
-            "e.order": 2,
-            "e.technopedia_id": "36caabb2-af3a-4591-9466-d854bad6cf3f",
-            "e.url": "http://www.ni.com/datafinder/"
-        }
+            {
+                "e.created_at": "2014-02-21 16:14:21",
+                "e.desupported_flag": null,
+                "e.edition": "Server",
+                "e.modified_at": "2014-02-21 16:14:21",
+                "e.order": 2,
+                "e.technopedia_id": "36caabb2-af3a-4591-9466-d854bad6cf3f",
+                "e.url": "http://www.ni.com/datafinder/"
+            },
+            {
+                "e.created_at": "2011-01-06 11:39:43",
+                "e.desupported_flag": null,
+                "e.edition": "Server",
+                "e.modified_at": "2016-08-19 15:39:58",
+                "e.order": 2,
+                "e.technopedia_id": "672fb073-536b-4a6b-9279-9a646bb9dcbb",
+                "e.url": "http://www.crestron.com/downloads/pdf/product_misc/gs_sw-roomvw-server.pdf"
+            }
        ]
       {  
     title: Example two
@@ -136,7 +135,8 @@ left_code_blocks:
   - code_block: |-
       MATCH (s:SOFTWARE_EDITION) 
       WHERE s.order = 2 AND s.edition = "Enterprise Developer" 
-      RETURN s.edition, s.order LIMIT 3
+      RETURN s.edition, s.order 
+      LIMIT 3
 
       RESPONSE SAMPLE
 
@@ -162,7 +162,7 @@ left_code_blocks:
   - code_block: |-
      MATCH (n:SOFTWARE_EDITION) -[:HAS_A]->(u:SOFTWARE_PRODUCT) 
      RETURN u.product AS Product, n.edition AS Edition, n.order AS Edition_order  
-     LIMIT 10
+     LIMIT 6
 
       RESPONSE SAMPLE
 
@@ -215,7 +215,7 @@ right_code_blocks:
       technopedia_id
       edition
       edition_desupported_flag
-      edition_order
+      order
       url
       created_at
       modified_at
@@ -223,9 +223,9 @@ right_code_blocks:
     title: Software Edition Attributes
     language: bash
   - code_block: |2-
-      (SOFTWARE_EDITION)<-[:EDITION_OF]-(SOFTWARE_PRODUCT)
+      (SOFTWARE_EDITION)-[:HAS_A]->(SOFTWARE_PRODUCT)
 
-      (SOFTWARE_EDITION)-[:HAS_A]->(SOFTWARE_RELEASE)
+      (SOFTWARE_EDITION)<-[:HAS_A]-(SOFTWARE_RELEASE)
 
       (SOFTWARE_EDITION)-[:HAS_A]->(SOFTWARE_PRODUCT)
       

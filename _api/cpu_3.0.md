@@ -31,17 +31,17 @@ left_code_blocks:
   - code_block: |
       MATCH (n:CPU_MODEL) 
       RETURN n
+      LIMIT 2
 
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-                "n.cat_cpu_model_id": 6661614,
                 "n.clockrate": null,
                 "n.cores": "1",
                 "n.created_at": "2009-09-03 08:46:24",
-                "n.isa_bit_mode": null,
+                "n.isa_bit_mode": "32",
                 "n.model": "HyperSPARC Processor 125 MHz (Colorado 2)",
                 "n.modified_at": "2013-08-20 15:36:10",
                 "n.num_threads": "1",
@@ -49,11 +49,10 @@ left_code_blocks:
                 "n.url": "http://www.sunstuff.org/hardware/mbus/hypersparc.shtml"
             },
             {
-                "n.cat_cpu_model_id": 28948499,
                 "n.clockrate": null,
                 "n.cores": "2",
                 "n.created_at": "2012-06-07 08:25:44",
-                "n.isa_bit_mode": null,
+                "n.isa_bit_mode": "64",
                 "n.model": "Core 2 Duo Mobile Processor 1.50 GHz (Merom)",
                 "n.modified_at": "2013-08-20 14:50:42",
                 "n.num_threads": "1",
@@ -69,6 +68,7 @@ left_code_blocks:
   - code_block: >-
       MATCH (n:CPU_MODEL) 
       RETURN n.model, n.cores, n.clockrate
+      LIMIT 7
 
 
       RESPONSE SAMPLE
@@ -126,8 +126,8 @@ left_code_blocks:
       {
         "results": [
             {
-            "h.cores": "1",
-            "h.model": "HyperSPARC Processor 125 MHz (Colorado 2)"
+                "h.cores": "1",
+                "h.model": "HyperSPARC Processor 125 MHz (Colorado 2)"
             },
             {
                 "h.cores": "2",
@@ -176,6 +176,7 @@ left_code_blocks:
       MATCH (h:CPU_MODEL) 
       WHERE h.model CONTAINS "125 MHz" AND h.isa_bit_mode = "32" 
       RETURN h.cores, h.model, h.isa_bit_mode
+      LIMIT 10
 
       RESPONSE SAMPLE
 

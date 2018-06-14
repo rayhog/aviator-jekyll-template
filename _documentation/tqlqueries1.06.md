@@ -54,11 +54,11 @@ content_markdown: |-
     ![API Image](/images/relat_overview.png)<br>&nbsp;
     * Return data by using the aliases in that are assigned to the nodes in the MATCH statement.<br>
     <br>  
-    Here's the query that you use:<br>
+    Note that the relationships in this query are more prominent in the query syntax for visibility: <br>
     `MATCH (m:MANUFACTURER)`<-[:HAS_A]-`(sp:SOFTWARE_PRODUCT)`<-[:HAS_A]-`(sv:SOFTWARE_VERSION)`<-[:HAS_A]-`(sr:SOFTWARE_RELEASE)`-[:HAS_A]->`(se:SOFTWARE_EDITION)` 
     `WHERE m.manufacturer = "Oracle"` 
     `RETURN m.manufacturer, sp.product, sv.version, sr.release, se.edition` 
-    LIMIT 5`
+    `LIMIT 5`
 
     The following results represent a sample of the output from the query:<br>
     <br>
@@ -365,7 +365,7 @@ right_code_blocks:
       MATCH (s:SOFTWARE_PRODUCT) RETURN s.product 
       MATCH (s:SOFTWARE_PRODUCT) RETURN s.technopedia_id
       MATCH (s:SOFTWARE_PRODUCT) RETURN s.technopedia_id, s.product
-      
+
       MATCH (s:SOFTWARE_PRODUCT) RETURN s.technopedia_id, s.is_suite    
  
       MATCH Relationship Examples:

@@ -53,56 +53,53 @@ left_code_blocks:
       MATCH (s:SOFTWARE_PRODUCT)<-[:HAS_A]-(n:SOFTWARE_VERSION) 
       WHERE s.product = "Advanced Partitioning Option" 
       RETURN n, s
+      LIMIT 2
 
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-            "n.cat_sw_version_id": 10427776,
-            "n.created_at": "2010-04-12 16:04:13",
-            "n.desupported_flag": null,
-            "n.modified_at": "2014-02-13 21:44:41",
-            "n.order": "2",
-            "n.patch_level": null,
-            "n.technopedia_id": "72321748-1173-4f2d-9f50-48c069b1a0eb",
-            "n.version": "8.0",
-            "s.alias": null,
-            "s.cat_sw_product_id": 1013435,
-            "s.component": null,
-            "s.created_at": "2006-12-04 18:04:27",
-            "s.desupported_flag": null,
-            "s.discontinued_flag": null,
-            "s.family": "HiRDB",
-            "s.is_suite": null,
-            "s.modified_at": "2014-11-26 09:29:51",
-            "s.product": "Advanced Partitioning Option",
-            "s.technopedia_id": "5e36c7f2-ed15-4fb4-b816-d29696738c13",
-            "s.url": "http://www.hitachi.co.jp/Prod/comp/soft1/manual/hirdben/v8/d635100e/W3510016.HTM"
-        },
-        {
-            "n.cat_sw_version_id": 10427777,
-            "n.created_at": "2010-04-12 16:04:18",
-            "n.desupported_flag": null,
-            "n.modified_at": "2014-02-13 21:44:41",
-            "n.order": "1",
-            "n.patch_level": null,
-            "n.technopedia_id": "ad8131bd-e80e-48ad-8aaa-985bab95f06d",
-            "n.version": "7.0",
-            "s.alias": null,
-            "s.cat_sw_product_id": 1013435,
-            "s.component": null,
-            "s.created_at": "2006-12-04 18:04:27",
-            "s.desupported_flag": null,
-            "s.discontinued_flag": null,
-            "s.family": "HiRDB",
-            "s.is_suite": null,
-            "s.modified_at": "2014-11-26 09:29:51",
-            "s.product": "Advanced Partitioning Option",
-            "s.technopedia_id": "5e36c7f2-ed15-4fb4-b816-d29696738c13",
-            "s.url": "http://www.hitachi.co.jp/Prod/comp/soft1/manual/hirdben/v8/d635100e/W3510016.HTM"
-        }
-       ]
+                "n.created_at": "2010-04-12 16:04:13",
+                "n.desupported_flag": null,
+                "n.modified_at": "2014-02-13 21:44:41",
+                "n.order": "2",
+                "n.patch_level": null,
+                "n.technopedia_id": "72321748-1173-4f2d-9f50-48c069b1a0eb",
+                "n.version": "8.0",
+                "s.alias": null,
+                "s.component": null,
+                "s.created_at": "2006-12-04 18:04:27",
+                "s.desupported_flag": null,
+                "s.discontinued_flag": null,
+                "s.family": "HiRDB",
+                "s.is_suite": null,
+                "s.modified_at": "2014-11-26 09:29:51",
+                "s.product": "Advanced Partitioning Option",
+                "s.technopedia_id": "5e36c7f2-ed15-4fb4-b816-d29696738c13",
+                "s.url": "http://www.hitachi.co.jp/Prod/comp/soft1/manual/hirdben/v8/d635100e/W3510016.HTM"
+            },
+            {
+                "n.created_at": "2010-04-12 16:04:18",
+                "n.desupported_flag": null,
+                "n.modified_at": "2014-02-13 21:44:41",
+                "n.order": "1",
+                "n.patch_level": null,
+                "n.technopedia_id": "ad8131bd-e80e-48ad-8aaa-985bab95f06d",
+                "n.version": "7.0",
+                "s.alias": null,
+                "s.component": null,
+                "s.created_at": "2006-12-04 18:04:27",
+                "s.desupported_flag": null,
+                "s.discontinued_flag": null,
+                "s.family": "HiRDB",
+                "s.is_suite": null,
+                "s.modified_at": "2014-11-26 09:29:51",
+                "s.product": "Advanced Partitioning Option",
+                "s.technopedia_id": "5e36c7f2-ed15-4fb4-b816-d29696738c13",
+                "s.url": "http://www.hitachi.co.jp/Prod/comp/soft1/manual/hirdben/v8/d635100e/W3510016.HTM"
+            }
+        ]
       {  
 
     title: Example one
@@ -111,6 +108,7 @@ left_code_blocks:
       MATCH (n:SOFTWARE_RELEASE) 
       WHERE n.release contains "studio" 
       RETURN n 
+      LIMIT 2
       
       RESPONSE SAMPLE
 
@@ -143,15 +141,16 @@ left_code_blocks:
       MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(v:SOFTWARE_VERSION)-[:HAS_A]-(pr:SOFTWARE_PRODUCT) 
       WHERE n.release = "WMSigner" 
       RETURN n.release, pr.product, v.version
+      LIMIT 6
       
       RESPONSE SAMPLE
 
       {
         "results": [
             {
-            "n.release": "WMSigner",
-            "pr.product": "WMSigner",
-            "v.version": "1.3"
+                "n.release": "WMSigner",
+                "pr.product": "WMSigner",
+                "v.version": "1.3"
             },
             {
                 "n.release": "WMSigner",
@@ -194,7 +193,6 @@ left_code_blocks:
       {
         "results": [
             {
-                
                 "Major_Version": "8.2",
                 "Product": "Common Management Information Protocol (CMIP)",
                 "VERSION": "8.2.1"

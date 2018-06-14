@@ -147,9 +147,9 @@ left_code_blocks:
     language: javascript
 
   - code_block: |-
-     MATCH (s:SOFTWARE_PRODUCT)-[:BELONGS_TO]->(cat2:CATEGORY_2)-[:BELONGS_TO]->(cat1:CATEGORY_1)-[:BELONGS_TO]->(catgrp:CATEGORY_GROUP) 
-     WHERE s.product CONTAINS "Tools" RETURN s.product, cat1.label, cat2.label, catgrp.label 
-     LIMIT 5
+      MATCH (s:SOFTWARE_PRODUCT)-[:BELONGS_TO]->(cat2:CATEGORY_2)-[:BELONGS_TO]->(cat1:CATEGORY_1)-[:BELONGS_TO]->(catgrp:CATEGORY_GROUP) 
+      WHERE s.product CONTAINS "Tools" RETURN s.product, cat1.label, cat2.label, catgrp.label 
+      LIMIT 5
 
     RESPONSE SAMPLE
 

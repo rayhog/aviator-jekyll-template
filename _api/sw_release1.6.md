@@ -158,7 +158,7 @@ left_code_blocks:
   - code_block: |-
       MATCH (srelease:SOFTWARE_RELEASE)-[:HAS_A]->(sver:SOFTWARE_VERSION)-[:HAS_A]->(smajor:SOFTWARE_MAJOR_VERSION) 
       RETURN srelease.release, sver.version, smajor.version 
-      LIMIT 2
+      LIMIT 5
       
       RESPONSE SAMPLE
 

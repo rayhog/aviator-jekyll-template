@@ -29,13 +29,14 @@ left_code_blocks:
       MATCH (n:SOFTWARE_PRODUCT) 
       WHERE n.product = "PDF Converter" 
       RETURN n
+      LIMIT 2
 
       RESPONSE SAMPLE
       {
          "results": [
             {
+                
                 "n.alias": null,
-                "n.cat_sw_product_id": 29714096,
                 "n.component": null,
                 "n.created_at": "2012-08-08 14:49:44",
                 "n.desupported_flag": null,
@@ -49,7 +50,6 @@ left_code_blocks:
             },
             {
                 "n.alias": null,
-                "n.cat_sw_product_id": 524445392,
                 "n.component": null,
                 "n.created_at": "2018-01-24 10:03:20",
                 "n.desupported_flag": null,
@@ -71,6 +71,7 @@ left_code_blocks:
       MATCH (s:SOFTWARE_PRODUCT) 
       WHERE s.product = "Office" AND s.family = "HealthMatics"  
       RETURN s
+      LIMIT 2
       
       
       RESPONSE SAMPLE
@@ -78,159 +79,7 @@ left_code_blocks:
       {
         "results": [
             {
-            "s.alias": null,
-            "s.cat_sw_product_id": 1074050,
-            "s.component": null,
-            "s.created_at": "2007-04-22 04:55:16",
-            "s.desupported_flag": null,
-            "s.discontinued_flag": null,
-            "s.family": "HealthMatics",
-            "s.is_suite": null,
-            "s.modified_at": "2017-06-01 10:44:00",
-            "s.product": "Office",
-            "s.technopedia_id": "141d9f85-66b2-40a6-8efa-450038c2700c",
-            "s.url": "http://investor.allscripts.com/phoenix.zhtml?c=112727&p=irol-newsArticle&ID=858912&highlight="
-        },
-        {
-            "s.alias": null,
-            "s.cat_sw_product_id": 922470,
-            "s.component": null,
-            "s.created_at": "2007-11-06 01:01:57",
-            "s.desupported_flag": null,
-            "s.discontinued_flag": null,
-            "s.family": "HealthMatics",
-            "s.is_suite": null,
-            "s.modified_at": "2017-06-01 15:32:17",
-            "s.product": "Office",
-            "s.technopedia_id": "918cadd3-b2fc-4733-8f0f-7a141234037c",
-            "s.url": "http://investor.allscripts.com/phoenix.zhtml?c=112727&p=irol-newsArticle&ID=858912&highlight="
-        }
-       ]
-      {  
-    title: Example two
-    language: javascript
-  - code_block: |-
-      MATCH (sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(st:SUPPORT_STAGE) 
-      RETURN sp.product, sv.version, sr, st 
-      LIMIT 5
-
-      RESPONSE SAMPLE
-
-      {
-        "results": [
-            {
-                "m.manufacturer": "Immedia Internet Solutions",
-                "s.created_at": "2015-03-03 16:51:26",
-                "s.product": "ActionBars"
-            }
-        ]
-      {  
-          
-    title: Example three
-    language: javascript
-
-  - code_block: |-
-      MATCH (sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(st:SUPPORT_STAGE) 
-      WHERE sr.release = "ID Web Authentication Software Development Kit (SDK)" 
-      RETURN sp.product, sv.version, sr, st 
-      LIMIT 5
-
-      RESPONSE SAMPLE
-
-      {
-        "results": [
-            {
-                "m.manufacturer": "Immedia Internet Solutions",
-                "s.created_at": "2015-03-03 16:51:26",
-                "s.product": "ActionBars"
-            }
-        ]
-      {  
-    title: Example four
-    language: javascript
-
-  - code_block: |-
-      MATCH (sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION) WHERE sp.product CONTAINS "Software Development Kit" RETURN sp.product, sv.version, sr, se LIMIT 5
-
-      RESPONSE SAMPLE
-
-      {
-        "results": [
-            {
-                "se.cat_sw_edition_id": 899742,
-                "se.created_at": "2007-03-13 05:33:25",
-                "se.desupported_flag": null,
-                "se.edition": "Standard",
-                "se.modified_at": "2017-04-21 16:42:40",
-                "se.order": 1,
-                "se.technopedia_id": "95c26142-8dcf-4666-94e9-61f53fbc13e3",
-                "se.url": "https://www.ibm.com/support/knowledgecenter/ssw_i5_54/rzaat/rzaatj.htm",
-                "sp.product": "Java 2 Software Development Kit (J2SDK)",
-                "sr.cat_sw_release_id": 1175559,
-                "sr.created_at": "2007-08-23 20:00:43",
-                "sr.desupported_flag": true,
-                "sr.discontinued_flag": null,
-                "sr.modified_at": "2017-10-10 14:52:00",
-                "sr.technopedia_id": "e1f66998-8ce5-4051-a71a-c36c056f2f6f",
-                "sr.url": null,
-                "sv.version": "1.3.1_02"
-            },
-            {
-                "se.cat_sw_edition_id": 899742,
-                "se.created_at": "2007-03-13 05:33:25",
-                "se.desupported_flag": null,
-                "se.edition": "Standard",
-                "se.modified_at": "2017-04-21 16:42:40",
-                "se.order": 1,
-                "se.technopedia_id": "95c26142-8dcf-4666-94e9-61f53fbc13e3",
-                "se.url": "https://www.ibm.com/support/knowledgecenter/ssw_i5_54/rzaat/rzaatj.htm",
-                "sp.product": "Java 2 Software Development Kit (J2SDK)",
-                "sr.cat_sw_release_id": 1175635,
-                "sr.created_at": "2007-08-23 20:09:08",
-                "sr.desupported_flag": true,
-                "sr.discontinued_flag": null,
-                "sr.modified_at": "2017-10-10 14:52:00",
-                "sr.technopedia_id": "d3bffa93-34c4-49bd-8c81-01864cc7e11c",
-                "sr.url": null,
-                "sv.version": "1.3.1_15"
-            },
-            {
-                "se.cat_sw_edition_id": 899742,
-                "se.created_at": "2007-03-13 05:33:25",
-                "se.desupported_flag": null,
-                "se.edition": "Standard",
-                "se.modified_at": "2017-04-21 16:42:40",
-                "se.order": 1,
-                "se.technopedia_id": "95c26142-8dcf-4666-94e9-61f53fbc13e3",
-                "se.url": "https://www.ibm.com/support/knowledgecenter/ssw_i5_54/rzaat/rzaatj.htm",
-                "sp.product": "Java 2 Software Development Kit (J2SDK)",
-                "sr.cat_sw_release_id": 1074250,
-                "sr.created_at": "2007-04-22 22:19:12",
-                "sr.desupported_flag": true,
-                "sr.discontinued_flag": null,
-                "sr.modified_at": "2017-10-10 14:52:00",
-                "sr.technopedia_id": "3dca4671-f574-4a3e-bc8a-a6e8667a54dd",
-                "sr.url": null,
-                "sv.version": "1.5.0"
-            }
-        ]
-      {  
-    title: Example five
-    language: javascript
-
-  - code_block: |-
-      MATCH (s:SOFTWARE_PRODUCT) 
-      WHERE s.product = "Office" OR s.product = "HealthMatics" 
-      RETURN s 
-
-      RESPONSE SAMPLE
-
-      {
-        "results": [
-            {
-                
                 "s.alias": null,
-                "s.cat_sw_product_id": 1074050,
                 "s.component": null,
                 "s.created_at": "2007-04-22 04:55:16",
                 "s.desupported_flag": null,
@@ -244,7 +93,198 @@ left_code_blocks:
             },
             {
                 "s.alias": null,
-                "s.cat_sw_product_id": 38814600,
+                "s.component": null,
+                "s.created_at": "2007-11-06 01:01:57",
+                "s.desupported_flag": null,
+                "s.discontinued_flag": null,
+                "s.family": "HealthMatics",
+                "s.is_suite": null,
+                "s.modified_at": "2017-06-01 15:32:17",
+                "s.product": "Office",
+                "s.technopedia_id": "918cadd3-b2fc-4733-8f0f-7a141234037c",
+                "s.url": "http://investor.allscripts.com/phoenix.zhtml?c=112727&p=irol-newsArticle&ID=858912&highlight="
+            }
+        ]
+      {  
+    title: Example two
+    language: javascript
+  - code_block: |-
+      MATCH (sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(st:SUPPORT_STAGE) 
+      RETURN sp.product, sv.version, sr, st 
+      LIMIT 2
+
+      RESPONSE SAMPLE
+
+      {
+        "results": [
+                "sp.product": "ID Web Authentication Software Development Kit (SDK)",
+                "sr.created_at": "2010-01-08 21:17:49",
+                "sr.desupported_flag": null,
+                "sr.discontinued_flag": null,
+                "sr.modified_at": "2014-04-01 14:52:04",
+                "sr.release": "ID Web Authentication Software Development Kit (SDK)",
+                "sr.technopedia_id": "4aa33382-7a99-4210-8e71-7b7680879acd",
+                "sr.url": null,
+                "st.created_at": "2005-09-09 15:00:46",
+                "st.definition": "Self-Help Online Support is available throughout a product's lifecycle and for a minimum of 12 months after the product
+                 reaches the end of its support. By using the Microsoft online Knowledge Base articles, FAQs, troubleshooting tools, and other resources, many customers can quickly resolve their issues without needing to contact Microsoft directly.\r\nSee http://support.microsoft.com/lifecycle/",
+                "st.modified_at": "2016-07-15 14:49:36",
+                "st.order": 3,
+                "st.support_stage": null,
+                "st.technopedia_id": "9af71bf0-55c5-46ca-9bf5-b2790a31c384",
+                "sv.version": "1.0"
+            },
+            {
+                "sp.product": "ID Web Authentication Software Development Kit (SDK)",
+                "sr.created_at": "2010-01-08 21:17:49",
+                "sr.desupported_flag": null,
+                "sr.discontinued_flag": null,
+                "sr.modified_at": "2014-04-01 14:52:04",
+                "sr.release": "ID Web Authentication Software Development Kit (SDK)",
+                "sr.technopedia_id": "4aa33382-7a99-4210-8e71-7b7680879acd",
+                "sr.url": null,
+                "st.created_at": "2005-09-09 15:00:46",
+                "st.definition": "Extended Support phase follows Mainstream Support for Business and Developer products. \r\nAt the supported service pack
+                 level, Extended Support includes:\r\nPaid support\r\nSecurity update support at no additional cost\r\nNon-security related hotfix support requires a separate Extended Hotfix Support Agreement to be purchased (per-fix fees also apply)\r\nMicrosoft will not accept requests for warranty support, design changes, or new features during the Extended Support phase\r\nExtended Support is not available for Consumer, Hardware, Multimedia, and Microsoft Dynamics products\r\nSee http://support.microsoft.com/lifecycle/",
+                "st.modified_at": "2016-07-15 14:49:36",
+                "st.order": 2,
+                "st.support_stage": null,
+                "st.technopedia_id": "6ad733c9-8997-4efd-821b-d76592774476",
+                "sv.version": "1.0"
+            }
+        ]
+      {  
+          
+    title: Example three
+    language: javascript
+
+  - code_block: |-
+      MATCH (sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(st:SUPPORT_STAGE) 
+      WHERE sr.release = "ID Web Authentication Software Development Kit (SDK)" 
+      RETURN sp.product, sv.version, sr, st 
+      LIMIT 2
+
+      RESPONSE SAMPLE
+
+      {
+        "results": [
+            {
+                "sp.product": "ID Web Authentication Software Development Kit (SDK)",
+                "sr.created_at": "2010-01-08 21:17:28",
+                "sr.desupported_flag": null,
+                "sr.discontinued_flag": null,
+                "sr.modified_at": "2014-04-01 14:51:55",
+                "sr.release": "ID Web Authentication Software Development Kit (SDK)",
+                "sr.technopedia_id": "734576e8-8ef4-4707-be61-3c5ecd133802",
+                "sr.url": null,
+                "st.created_at": "2005-09-09 15:00:46",
+                "st.definition": "Self-Help Online Support is available throughout a product's lifecycle and for a minimum of 12 months after the product
+                 reaches the end of its support. By using the Microsoft online Knowledge Base articles, FAQs, troubleshooting tools, and other resources, many customers can quickly resolve their issues without needing to contact Microsoft directly.\r\nSee http://support.microsoft.com/lifecycle/",
+                "st.modified_at": "2016-07-15 14:49:36",
+                "st.order": 3,
+                "st.support_stage": null,
+                "st.technopedia_id": "9af71bf0-55c5-46ca-9bf5-b2790a31c384",
+                "sv.version": "1.2"
+            },
+            {
+                "sp.product": "ID Web Authentication Software Development Kit (SDK)",
+                "sr.created_at": "2010-01-08 21:17:28",
+                "sr.desupported_flag": null,
+                "sr.discontinued_flag": null,
+                "sr.modified_at": "2014-04-01 14:51:55",
+                "sr.release": "ID Web Authentication Software Development Kit (SDK)",
+                "sr.technopedia_id": "734576e8-8ef4-4707-be61-3c5ecd133802",
+                "sr.url": null,
+                "st.created_at": "2005-09-09 15:00:46",
+                "st.definition": "Extended Support phase follows Mainstream Support for Business and Developer products. \r\nAt the supported service pack
+                 level, Extended Support includes:\r\nPaid support\r\nSecurity update support at no additional cost\r\nNon-security related hotfix support  requires a separate Extended Hotfix Support Agreement to be purchased (per-fix fees also apply)\r\nMicrosoft will not accept requests for warranty support, design changes, or new features during the Extended Support phase\r\nExtended Support is not available for Consumer, Hardware, Multimedia, and Microsoft Dynamics products\r\nSee http://support.microsoft.com/lifecycle/",
+                "st.modified_at": "2016-07-15 14:49:36",
+                "st.order": 2,
+                "st.support_stage": null,
+                "st.technopedia_id": "6ad733c9-8997-4efd-821b-d76592774476",
+                "sv.version": "1.2"
+            }
+        ]
+      {  
+    title: Example four
+    language: javascript
+
+  - code_block: |-
+      MATCH (sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION) 
+      WHERE sp.product CONTAINS "Software Development Kit" 
+      RETURN sp.product, sv.version, sr, se 
+      LIMIT 2
+
+      RESPONSE SAMPLE
+
+      {
+        "results": [
+            {
+            "se.created_at": "2007-03-13 05:33:25",
+            "se.desupported_flag": null,
+            "se.edition": "Standard",
+            "se.modified_at": "2017-04-21 16:42:40",
+            "se.order": 1,
+            "se.technopedia_id": "95c26142-8dcf-4666-94e9-61f53fbc13e3",
+            "se.url": "https://www.ibm.com/support/knowledgecenter/ssw_i5_54/rzaat/rzaatj.htm",
+            "sp.product": "Java 2 Software Development Kit (J2SDK)",
+            "sr.created_at": "2007-08-23 20:09:08",
+            "sr.desupported_flag": true,
+            "sr.discontinued_flag": null,
+            "sr.modified_at": "2017-10-10 14:52:00",
+            "sr.release": "Java 2 Software Development Kit (J2SDK)",
+            "sr.technopedia_id": "d3bffa93-34c4-49bd-8c81-01864cc7e11c",
+            "sr.url": null,
+            "sv.version": "1.3.1_15"
+        },
+        {
+            "se.created_at": "2007-03-13 05:33:25",
+            "se.desupported_flag": null,
+            "se.edition": "Standard",
+            "se.modified_at": "2017-04-21 16:42:40",
+            "se.order": 1,
+            "se.technopedia_id": "95c26142-8dcf-4666-94e9-61f53fbc13e3",
+            "se.url": "https://www.ibm.com/support/knowledgecenter/ssw_i5_54/rzaat/rzaatj.htm",
+            "sp.product": "Java 2 Software Development Kit (J2SDK)",
+            "sr.created_at": "2007-04-22 22:19:12",
+            "sr.desupported_flag": true,
+            "sr.discontinued_flag": null,
+            "sr.modified_at": "2017-10-10 14:52:00",
+            "sr.release": "Java 2 Software Development Kit (J2SDK)",
+            "sr.technopedia_id": "3dca4671-f574-4a3e-bc8a-a6e8667a54dd",
+            "sr.url": null,
+            "sv.version": "1.5.0"
+        }
+      ]
+    {  
+    title: Example five
+    language: javascript
+
+  - code_block: |-
+      MATCH (s:SOFTWARE_PRODUCT) 
+      WHERE s.product = "Office" OR s.product = "HealthMatics" 
+      RETURN s 
+      LIMIT 2
+
+      RESPONSE SAMPLE
+
+      {
+        "results": [
+            {
+                "s.alias": null,
+                "s.component": null,
+                "s.created_at": "2007-04-22 04:55:16",
+                "s.desupported_flag": null,
+                "s.discontinued_flag": null,
+                "s.family": "HealthMatics",
+                "s.is_suite": null,
+                "s.modified_at": "2017-06-01 10:44:00",
+                "s.product": "Office",
+                "s.technopedia_id": "141d9f85-66b2-40a6-8efa-450038c2700c",
+                "s.url": "http://investor.allscripts.com/phoenix.zhtml?c=112727&p=irol-newsArticle&ID=858912&highlight="
+            },
+            {
+                "s.alias": null,
                 "s.component": null,
                 "s.created_at": "2013-01-09 10:00:34",
                 "s.desupported_flag": null,
@@ -294,7 +334,10 @@ right_code_blocks:
 
       (SOFTWARE_PRODUCT)-[:HAS_A]->(MANUFACTURER)
 
-      (SOFTWARE_PRODUCT)-[:HAS_A]->(SOFTWARE_VERSION)
+      (SOFTWARE_PRODUCT)<-[:HAS_A]-(SOFTWARE_VERSION)
+
+      (SOFTWARE_PRODUCT)<-[:HAS_A]-(SOFTWARE_VERSION)<-[:HAS_A]-(SOFTWARE_RELEASE)
+
       
       (SOFTWARE_PRODUCT)-[:BELONGS_TO]->(CATEGORY_2)
       

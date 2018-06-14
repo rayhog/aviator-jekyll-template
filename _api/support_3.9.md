@@ -13,7 +13,10 @@ content_markdown: >-
 
   The following query returns five results for support stages with associated support policies.
   `MATCH (a:SUPPORT_STAGE)-[:HAS_A]-(sp:SUPPORT_POLICY) RETURN a, sp LIMIT 5`
-  
+  The following result sample shows one result from this query:<br>
+  <br>
+  ![API Image](/images/sup_stage.png){:class="img-responsive"} <br> 
+  <br>
    
   The following diagram shows the support nodes and relationships.
   <br>
@@ -175,7 +178,8 @@ left_code_blocks:
 
   - code_block: |-
       MATCH (n:SUPPORT_STAGE) 
-      RETURN n LIMIT 3
+      RETURN n 
+      LIMIT 3
 
       RESPONSE SAMPLE
 
