@@ -356,20 +356,19 @@ right_code_blocks:
   - code_block: |2
       
       MATCH Node and Attribute Examples:
-
+      _________________________________
+      
       MATCH (alias1.NODE) RETURN alias1 
-
       MATCH (s:SOFTWARE_PRODUCT) RETURN s
       
-
       MATCH (alias.NODE) RETURN alias.attribute
-      
       MATCH (s:SOFTWARE_PRODUCT) RETURN s.product 
       MATCH (s:SOFTWARE_PRODUCT) RETURN s.technopedia_id
       MATCH (s:SOFTWARE_PRODUCT) RETURN s.technopedia_id, s.product
       MATCH (s:SOFTWARE_PRODUCT) RETURN s.technopedia_id, s.is_suite    
  
       MATCH Relationship Examples:
+      ___________________________
        
       MATCH (s:NODEx)-[:PART_OF]->(t:NODEy) RETURN s, t
 
