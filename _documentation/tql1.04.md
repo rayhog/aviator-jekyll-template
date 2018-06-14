@@ -435,7 +435,7 @@ left_code_blocks:
         ]
       {  
     title: Example five
-    language: bash
+    language: javascript
   - code_block: |-
       MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(:SOFTWARE_VERSION)-[:HAS_A]->(sp:SOFTWARE_PRODUCT)-[:HAS_A]->(m:MANUFACTURER) 
       WHERE m.manufacturer CONTAINS "people" 

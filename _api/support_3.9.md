@@ -213,7 +213,7 @@ left_code_blocks:
       {   
 
     title: Example five
-    language: bash
+    language: javascript
   - code_block: |-
       curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6.technopedia.com/tql" --data-urlencode' "q=MATCH (h:SUPPORT_STAGE) RETURN h.stage"
 

@@ -5,7 +5,7 @@ type:
 description:
   TQL queries can be based on a single node or multiple nodes where you need to include relationships to get data from multiple nodes. For many TQL queries, you have to use relationships to query several Technopedia nodes. Relationships might seem complex but their function is mainly to connect nodes.
 content_markdown: |-
-  ###### Because TQL is a declarative query language, you can build your query with multiple nodes, relationships, attributes, and add multiple conditions to refine your query.<br>
+  Because TQL is a declarative query language, you can build your query with multiple nodes, relationships, attributes, and add multiple conditions to refine your query.<br>
   
 
   You can use an alias or variable with a realtionship that has attributes when you want to return data for those attributes. TQL binds the alias that you specify to that relationship, which you can use with the Return clause of the MATCH query to get specific data.
@@ -14,7 +14,7 @@ content_markdown: |-
   #### Building relationships in a query<br>
 
   
-  ###### Relationships provide a way of getting related data from multiple nodes in one query. You connect the nodes by using the relationship that's shown in the database graph. <br>
+  Relationships provide a way of getting related data from multiple nodes in one query. You connect the nodes by using the relationship that's shown in the database graph. <br>
   
   {: .info}
 
@@ -196,6 +196,7 @@ left_code_blocks:
       {  
     title: Example two
     language: javascript
+
   - code_block: |-
       MATCH (s:SOFTWARE_PRODUCT) 
       WHERE s.product = "Office" OR s.product="HealthMatics" 
@@ -238,6 +239,7 @@ left_code_blocks:
 
     title: Example three
     language: javascript
+
   - code_block: |-
       MATCH (n:SOFTWARE_VERSION) WHERE n.version CONTAINS "1.4.2_05" 
       RETURN n.version, n.order 
@@ -264,6 +266,7 @@ left_code_blocks:
 
     title: Example four
     language: javascript
+
   - code_block: |-
       MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(:SOFTWARE_VERSION)-[:HAS_A]->(sp:SOFTWARE_PRODUCT) 
       WHERE n.release CONTAINS "23" 
@@ -297,6 +300,7 @@ left_code_blocks:
       {  
     title: Example five
     language: javascript
+
   - code_block: |-
       MATCH (n:SOFTWARE_RELEASE)-[:HAS_A]->(:SOFTWARE_VERSION)-[:HAS_A]->(sp:SOFTWARE_PRODUCT)-[:HAS_A]->(m:MANUFACTURER) 
       WHERE m.manufacturer CONTAINS "people" 
@@ -338,43 +342,11 @@ left_code_blocks:
 
     title: Example six
     language: javascript
+
   - code_block: |-
       curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6-1.technopedia.com/tql" --data-urlencode' "q=MATCH (n:SOFTWARE_RELEASE) WHERE n.modified_at = "2017-05-26 13:59:45" RETURN n LIMIT 5
 
-      RESPONSE SAMPLE
-
-      {
-        "results": [
-            {
-                "n.created_at": "2014-04-25 15:20:43",
-                "n.desupported_flag": null,
-                "n.discontinued_flag": null,
-                "n.modified_at": "2017-05-26 13:59:45",
-                "n.release": "WMSigner",
-                "n.technopedia_id": "569fdc7b-e0c2-4f77-8f26-c42d77655736",
-                "n.url": null
-            },
-            {
-                "n.created_at": "2016-08-24 09:44:17",
-                "n.desupported_flag": null,
-                "n.discontinued_flag": null,
-                "n.modified_at": "2017-05-26 13:59:45",
-                "n.release": "Accumark Reinspection",
-                "n.technopedia_id": "87cf489d-a9df-4c13-97b5-a708754926c2",
-                "n.url": null
-            },
-            {
-                "n.created_at": "2015-06-29 14:12:03",
-                "n.desupported_flag": null,
-                "n.discontinued_flag": null,
-                "n.modified_at": "2017-05-26 13:59:45",
-                "n.release": "Estimating",
-                "n.technopedia_id": "60a8900c-3539-4cb3-8914-2e722c19a69b",
-                "n.url": null
-            }
-      ]
-    {  
-      
+            
     title: cURL
     language: bash
 
@@ -417,9 +389,8 @@ right_code_blocks:
 
            
     title: MATCH Statements
-    language: bash
+    language: bas
   - code_block: |2-
-      
       WHERE
       Return software products where the name field is equal to ‘Office’.
       MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office"  RETURN s
