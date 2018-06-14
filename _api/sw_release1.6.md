@@ -17,6 +17,9 @@ content_markdown: >-
   <br>
   ![API Image](/images/sw_release.png){:class="img-responsive"} <br>
 
+  <br>
+  ![API Image](/images/test.png){:class="img-responsive"} <br>
+
   The software release node connects to the software edtion, software nodes, and support stage nodes by the `HAS_A` relationship.
   The software release and support stage nodes are connected by the 'HAS_A' relationship, which has attributes.
   <br>
@@ -68,8 +71,8 @@ left_code_blocks:
     title: Example one
     language: javascript
   - code_block: >-
-      MATCH (node)-[My_alias:relationship {relationship_attribute : value}]->(:node) 
-      RETURN My_alias
+      MATCH (nodeX)-[an_alias:relationship {relationship_attribute : value}]->(:nodeY) 
+      RETURN an_alias
 
 
       MATCH (:SOFTWARE_RELEASE)-[h:HAS_A {end_date: "2013-12-10 00:00:00"}]->(:SUPPORT_STAGE) 
