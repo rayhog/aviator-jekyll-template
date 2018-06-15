@@ -46,37 +46,37 @@ content_markdown: |-
   ![API Image](/images/sw_relat.png)<br>&nbsp;
   <br>  
 
-  <b>Query Intent:</b> Get software that is manufactured by Oracle and return the manufactuer, product name, version, releasea, and edition.<br>
+  <b>Query Intent:</b> Get software that is manufactured by Oracle and return data for the manufactuer, product name, version, release, and edition.<br>
   The first node that you reference is the `MANUFACTURER` node, and then you use relationships to connect the other nodes.<br>
     1. Write the first part your query by using `MATCH` to select the `MANUFACTURER` node, and add an alias to the node. <br>
-      `MATCH (m:MANUFACTURER)<br>
+      `MATCH (m:MANUFACTURER)`<br>
     2. You must add the following relationships to connect with the product, version, release, and edtion nodes.<br>
-       For each node, you must add an alias so that you can data from that node with the `RETURN` clause.
-    * `(m:MANUFACTURER)`<-[:HAS_A]-`(sp:SOFTWARE_PRODUCT)` <br>
+       For each node, you must add an alias so that you can get data from that node by using the `RETURN` clause.
+    * `(m:MANUFACTURER)<-[:HAS_A]-(sp:SOFTWARE_PRODUCT)` <br>
     * `(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)` <br>
     * `(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)` <br>
     * `(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION)` <br>
        Note the relationship direction in the node graph.<br>
        
-       `MATCH (m:MANUFACTURER)<-[:HAS_A]-(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION)'<br>
+       `MATCH (m:MANUFACTURER)<-[:HAS_A]-(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION)`<br>
     3. Add the `WHERE` clause to specify the condition to return "Oracle".<br>
       `WHERE m.manufacturer = "Oracle"` <br>
-    4. Return data by using the aliases in that are assigned to the nodes in the MATCH statement.<br>
+    4. Return data by using the aliases in that are assigned to the nodes in the `MATCH` statement.<br>
        `RETURN m.manufacturer, sp.product, sv.version, sr.release, se.edition` <br>
     5. Limit the number of results that are returned by using the `LIMIT` clause. <br>
-       `LIMIT 5` <br>
+       `LIMIT 2` <br>
     Here's the complete query: <br>
      `MATCH (m:MANUFACTURER)<-[:HAS_A]-(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION) <br>
       WHERE m.manufacturer = "Oracle"` <br>
      `RETURN m.manufacturer, sp.product, sv.version, sr.release, se.edition` <br>
-     `LIMIT 5` <br>  <br>
+     `LIMIT 2` <br>  <br>
 
     
     Note the relationship direction in the node graph. <br>
     ![API Image](/images/relat_overview.png)<br>&nbsp; <br>
    
 
-    The following results represent a sample of the output from the query:<br>
+    The following result sample represents output from the query:<br>
     <br>
     ![API Image](/images/manu_to_se.png) <br> &nbsp;
    
@@ -97,7 +97,7 @@ content_markdown: |-
   5. To return the data that you need, use the Return clause to refer to the specific aliases.<br>
       `RETURN r,e,v,p`
   <br>
-  In this query example, you return software editions in Technopedia with release, verison, and product information. <br>
+  In this query example, you return software editions in Technopedia that include release, verison, and product information. <br>
 
   `MATCH (e:SOFTWARE_EDITION)<-[x:HAS_A]-(r:SOFTWARE_RELEASE)-[y:HAS_A]->(v:SOFTWARE_VERSION)-[z:HAS_A]->(p:SOFTWARE_PRODUCT) RETURN r,e,v,p`<br>
 
