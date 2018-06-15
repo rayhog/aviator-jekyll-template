@@ -121,13 +121,14 @@ content_markdown: |-
   View the list of attributes that you can use on the Software Product page, or you can use <br>
   `MATCH(x:SOFTWARE_PRODUCT) RETURN x` to get a list of attributes. <br>
 
-    1. Use the MATCH clause to select the `SOFTWARE_PRODUCT` node and the `product` attribute to filter for Adobe.<br>
+    1. Use the MATCH clause to select the `SOFTWARE_PRODUCT` because it
+       has the `product` attribute with a product (name) field.<br>
        `MATCH (:SOFTWARE_PRODUCT)`
     2. Add an alias to the node, so that you can use it with the RETURN clause to get data from that node. <br>
-       You place the alias befor the colon.
+       You place the alias before the colon.
        `MATCH (s:SOFTWARE_PRODUCT)`  
     3. Use the `WHERE` clause with the `CONTAINS` clause to specify the condition `product CONTAINS "Adobe"`.<br>
-       WHERE s.product CONTAINS "Adobe"
+       `WHERE s.product CONTAINS "Adobe"`
     4. Refer to the alias in the RETURN clause to list software products that contain Adobe in the product name.  <br>
        `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product CONTAINS "Adobe" Return s`
 
@@ -175,15 +176,15 @@ content_markdown: |-
   <b>Query Intent:</b> To get any five software editions and product names that are associated with those editions.<br>
   You must query the software product and software edition nodes.<br>
 
-    1. Use `MATCH` to select the software edtion node, and add node aliases to use in the RETURN clause.<br>
-       MATCH (s:SOFTWARE_EDITION)
+    1. Use `MATCH` to select the software edtion node, and add node aliases to use in the `RETURN` clause.<br>
+       `MATCH (s:SOFTWARE_EDITION)`
     2. Add the `HAS_A` relationship from edition to product and note the direction of the relationship in the diagram.<br>
       `MATCH (s:SOFTWARE_EDITION)-[:HAS_A]->(p:SOFTWARE_PRODUCT)`<br>
        You must add an alias for software product becuause you use the alias (p) in the return clause to return the product name.  
-    3. You use the RETURN clause to select the query output by referring to the alias and attributes.<br>
+    3. You use the `RETURN` clause to select the query output by referring to the alias and attributes.<br>
        You use the attributes edition from software edition and product from the software product node.<br> 
-       `RETURN s.edition`, p.product` or you can return all attributes by using `RETURN s, p` <br>  
-    4. To limit the number of results, you use the LIMIT clause to limit the results to five or any number that you want.<br>   
+       `RETURN s.edition, p.product` or you can return all attributes by using `RETURN s, p` <br>  
+    4. To limit the number of results, you use the `LIMIT` clause to limit the results to five or any number that you want.<br>   
 
         
    ![API Image](/images/ed_to_prod.png)<br>&nbsp;
