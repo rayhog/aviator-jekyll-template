@@ -54,17 +54,17 @@ content_markdown: |-
     ![API Image](/images/relat_overview.png)<br>&nbsp;
     * Return data by using the aliases in that are assigned to the nodes in the MATCH statement.<br>
     <br>  
-    Use the following `MATCH` statment and note the relationships that are used to connect five nodes and get data from each one: <br>
-    `MATCH (m:MANUFACTURER)<-[:HAS_A]-(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION)` 
+    Use the following `MATCH` statment and note the relationships that are used to connect five nodes to get data from each one: <br>
+    `MATCH (m:MANUFACTURER)<-[:HAS_A]-(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION) 
     WHERE m.manufacturer = "Oracle"` 
     `RETURN m.manufacturer, sp.product, sv.version, sr.release, se.edition` 
-    `LIMIT 5`
+    `LIMIT 5` <br>
 
-    Note the `HAS_A` relationships and directions of those relationships that make up the query:
-    `(m:MANUFACTURER)`<-[:HAS_A]-`(sp:SOFTWARE_PRODUCT)` <br>
-    `(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)` <br>
-    `(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)` <br>
-    `(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION)` <br>
+    Note the `[:HAS_A]` relationships and directions (`->` or `<-`) of those relationships that make up the query: <br>
+    * `(m:MANUFACTURER)`<-[:HAS_A]-`(sp:SOFTWARE_PRODUCT)` <br>
+    * `(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)` <br>
+    * `(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)` <br>
+    * `(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION)` <br>
 
     The following results represent a sample of the output from the query:<br>
     <br>
