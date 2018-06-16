@@ -17,12 +17,14 @@ content_markdown: |-
   <br>
   The following diagram shows an overview of the Technopedia API enpoints, and examples of nodes and relationships in the Technopedia database.
   <br>
+  <br>
   ![API Image](/images/V6api.png){: .img-responsive}
   <br>
 
-  The following query example is an API GET request that uses the Technopedia query language (TQL). <br>
-  TQL uses `MATCH` to select nodes, attributes, and relationships in the Technopedia graph, which is like a `SELECT` statement in SQL. <br>
-  The query selects the software product node and then returns software product names. <br>
+  The following query example is an API GET request that uses the TQL endpoint. <br>
+  The query selects the software product node and then returns software product names.
+  TQL uses a `MATCH`statement to select nodes in the Technopedia graph, which is like a `SELECT` statement in SQL. <br>
+  <br>
   
   `GET:` `https://v6.technopedia.com/tql?=MATCH (n:SOFTWARE_PRODUCT) RETURN n.product` <br>
 
