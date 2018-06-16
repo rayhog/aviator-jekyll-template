@@ -52,16 +52,13 @@ content_markdown: |-
 
 
   * `https://v6-1.technopedia.com/tql?q=MATCH <Query Parameters>`
-
-    ###### You provide query parameters to the MATCH statement to generate the criteria for your query, as shown in the following example:
-
-    ![API Image](/images/get_tql.png){: .img-responsive}
+    ###### You provide query parameters to the MATCH statement to generate the criteria for your query, as shown in the following example:<br>
+    GET: `https://v6-1.technopedia.com/tql?q=MATCH (sft:SOFTWARE_PRODUCT) RETURN sft`<br>
 
   * `https://v6-1.technopedia.com/technopedia-id/<Technopedia ID>.`
-
-    ###### You provide the Technopedia ID for the product that you're querying to return data for that specific product, as in the following example:
-
-    ![API Image](/images/tid.png){: .img-responsive}
+    ###### You provide the Technopedia ID for the product that you're querying to return data for that specific product, as in the following example: <br>
+    GET: `https://v6-1.technopedia.com/technopedia-id/86-7ytdf89jdjhjsdh87`
+   
 
   #### Technopedia graph concepts
 
