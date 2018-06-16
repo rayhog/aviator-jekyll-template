@@ -6,9 +6,11 @@ description:
 content_markdown: |-
   ###### Technopedia version 6 API enables cloud-based access to asset data in Technopedia that provides you with a cloud-first and high-performance resource to manage your assets.<br>
   Technopedia is a Graph database that is designed to process data by using a graph-based methodology, rather than a relational database model.<br>
-
   <br>
-  ###### You query the Technopedia database by using the graph-based Technopedia query language (TQL) to select nodes and attributes of those nodes to define the criteria for your query and return relevant data. 
+  You query the Technopedia database by either the following methods:
+
+  * By using the graph-based Technopedia query language (TQL) endpoint and you select nodes and attributes of those nodes to define the criteria for your query to return relevant data. 
+  * By using the Techopedia-ID endpoint to reference an entity in the database and return relevant data for that entity. For example; the entity might be a product or it might be specific node attribute that returns relevant data.
   <br>
   The following diagram shows an overview of the Technopedia API enpoints, and examples of nodes and relationships in the Technopedia database.
   <br>
