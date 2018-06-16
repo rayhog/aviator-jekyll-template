@@ -56,12 +56,13 @@ content_markdown: |-
     * `(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)` <br>
     * `(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)` <br>
     * `(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION)` <br>
-       Note the relationship direction in the node graph.<br>
+    
+    Note the relationship direction in the node graph.<br>
        
        `MATCH (m:MANUFACTURER)<-[:HAS_A]-(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION)`<br>
     3. Add the `WHERE` clause to specify the condition to return "Oracle".<br>
       `WHERE m.manufacturer = "Oracle"` <br>
-    4. Return data by using the aliases in that are assigned to the nodes in the `MATCH` statement.<br>
+    4. Return data by using the aliases that are assigned to the nodes in the `MATCH` statement.<br>
        `RETURN m.manufacturer, sp.product, sv.version, sr.release, se.edition` <br>
     5. Limit the number of results that are returned by using the `LIMIT` clause. <br>
        `LIMIT 2` <br>
