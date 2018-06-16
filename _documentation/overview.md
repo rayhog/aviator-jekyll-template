@@ -18,7 +18,9 @@ content_markdown: |-
   <br>
   ![API Image](/images/V6api.png){: .img-responsive}
   <br>
-  ###### The following query is an example of a GET request by using the Technopedia query language (TQL). TQL uses `MATCH` to select nodes, attributes, and relationships in the Technopedia graph, which is like a `SELECT` statement in SQL. The query selects the software product node and then returns software product names. <br>
+
+  The following query example is an API GET request that uses the Technopedia query language (TQL). <br>
+  TQL uses `MATCH` to select nodes, attributes, and relationships in the Technopedia graph, which is like a `SELECT` statement in SQL. The query selects the software product node and then returns software product names. <br>
   
   `GET:` `https://v6.technopedia.com/tql?=MATCH (n:SOFTWARE_PRODUCT) RETURN n.product` <br>
 
