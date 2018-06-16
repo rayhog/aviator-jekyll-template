@@ -4,7 +4,7 @@ title: Overview
 position: 1.01
 description: 
 content_markdown: |-
-  ###### Technopedia version 6 API enables cloud-based access to asset data in Technopedia that provides you with a cloud-first and high-performance resource to manage your assets.<br>
+  ###### Technopedia version 6 API enables cloud-based access to asset data in Technopedia, which provides you with a cloud-first and high-performance resource to manage your assets.<br>
   Technopedia is a Graph database that is designed to process data by using a graph-based methodology, rather than a relational database model.<br>
   <br>
   You query the Technopedia database by either the following methods:
@@ -22,11 +22,11 @@ content_markdown: |-
   <br>
 
   The following query example is an API GET request that uses the TQL endpoint. <br>
-  The query selects the software product node and then returns software product names.
+  `GET:` `https://v6.technopedia.com/tql?=MATCH (n:SOFTWARE_PRODUCT) RETURN n.product` <br>
+  The query selects the software product node and then returns software product names.<br>
   TQL uses a `MATCH`statement to select nodes in the Technopedia graph, which is like a `SELECT` statement in SQL. <br>
   <br>
   
-  `GET:` `https://v6.technopedia.com/tql?=MATCH (n:SOFTWARE_PRODUCT) RETURN n.product` <br>
 
 
 
@@ -69,7 +69,7 @@ content_markdown: |-
   software version or hardware.                 
     
   * Nodes contain attributes, which provide data in key-value
-  pairs such as `{title: Excel}` or `{manufacturer: Microsoft}`.
+  pairs such as `{product: Excel}` or `{manufacturer: Microsoft}`.
 
   * Nodes are connected by relationships that you use to query multiple nodes in a single query. 
 
