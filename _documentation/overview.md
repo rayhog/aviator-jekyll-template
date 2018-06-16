@@ -23,7 +23,9 @@ content_markdown: |-
   <br>
 
   The following query example is an API GET request that uses the TQL endpoint. <br>
+  <br>
   `GET:` `https://v6-1.technopedia.com/tql?=MATCH (n:SOFTWARE_PRODUCT) RETURN n.product` <br>
+
   The query selects the software product node and then returns software product names.<br>
   TQL uses a `MATCH` statement to select nodes in the Technopedia graph, which is like a `SELECT` statement in SQL. <br>
   <br>
