@@ -5,17 +5,25 @@ position: 1.02
 description: 
 content_markdown: >-
   ###### Access Technopedia data by using the Technopedia API.
-  Technopedia endpoints enable to you to use the Technopedia ID endpoint to get product information for a specific product by specifying the Technopedia ID, and to use the Technopedia query language (TQL) with the TQL endpoint to form custom queries that query data in the Technopedia database.<br>
+  Access data in Technopedia by using the TQL endpoint or the TID endpoint.
+  * Technopedia endpoints enable to you to use the Technopedia ID endpoint to get information about an entity in the graph, such as product information or a node attribute by specifying the Technopedia ID.
+  * Use the Technopedia query language (TQL) with the TQL endpoint to form custom queries that query data in the Technopedia database.<br>
   <br>
   
   #### Get an API key<br>
      
-  Before you can get data from data from the Technopedia database, you must get an API key from Flexera Technopedia support.<br>
+  Before you can get data from data from the Technopedia database, you must get an API key from Flexera Technopedia support.
+  The API key authorizes you to access the data that is available with your subscription.
+
+    You might not be able to access data from all nodes in the Technopedia graph if your Technopedia subscription doesn't permit access to that data.
+    {: .info}
+  <br>
   
   #### Making API Requests to Technopedia<br>
 
-  You can use cURL or a third-party API client to get data from the Technopedia database.
-  The base URL for all API queries is `https://v6-1.technopedia.com/`
+  You can use cURL or a third-party API client to get data from the Technopedia database.<br>
+  The base URL for all API queries is <br>
+  `https://v6-1.technopedia.com/`
   <br>
   
     Typically, cURL is preinstalled on Mac and Linux computers, and Windows users must install cURL. <br>
@@ -25,12 +33,11 @@ content_markdown: >-
   `curl -G -H "Authorization: Bearer <API_KEY>" https://v6-1.technopedia.com/tql" --data-urlencode "q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.product"`<br>
   
    
-  You can also use a third-party API client, such as Postman to send API requests as shown in the following image.<br>
+  You can also use a third-party API client, such as Postman to make API requests as shown in the following image.<br>
   <br>
   ![API Image](/images/bearer_token.png){: .img-responsive}<br>
     
  
-  
   #### Methods<br>
 
   You can only make API GET requests to the Technopedia database.<br>
@@ -38,7 +45,10 @@ content_markdown: >-
   #### Parameters<br>
 
   For the Technopedia-id endpoint, you provide the Technopedia ID parameter.<br>
-  For the TQL endpoint, you provide MATCH statements with parameters that specify nodes, attributes, and relationships between nodes which are optional.
+  For example; `https://v6-1.technopedia.com/technopedia-id/<Technopedia ID>`<br>
+  For the TQL endpoint, you provide MATCH statements with parameters that specify nodes, attributes, and relationships between nodes which are optional. <br>
+  `https://v6-1.technopedia.com/tql?q=<TQL_query>`
+
   
   #### Authentication<br>
   

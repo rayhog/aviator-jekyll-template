@@ -4,27 +4,28 @@ title: Overview
 position: 1.01
 description: 
 content_markdown: |-
-  ###### Technopedia version 6 API enables cloud-based access to asset data in Technopedia, which provides you with a cloud-first and high-performance resource to manage your assets.<br>
+  ###### Technopedia version 6.1 API enables cloud-based access to asset data in Technopedia, which provides you with a cloud-first and high-performance resource to manage your assets.<br>
   Technopedia is a Graph database that is designed to process data by using a graph-based methodology, rather than a relational database model.<br>
   <br>
-  You query the Technopedia database by either the following methods:
+  You query the Technopedia database by using either of the following methods:
 
   * By using the graph-based Technopedia query language (TQL) endpoint. <br>
   You select nodes, node relationships to other nodes, and node attributes to define the criteria for your query to return relevant data. 
   * By using the Techopedia-ID endpoint to reference an entity in the database and return relevant data for that entity. <br>
   The Technopedia ID record stores information about a Technopedia entity. <br>
-  For example; the entity might be a product or it might be specific node attribute that returns relevant data.
+  For example; the entity might be a product or it might be specific node attribute that returns relevant data.<br>
+  <br>
   <br>
   The following diagram shows an overview of the Technopedia API enpoints, and examples of nodes and relationships in the Technopedia database.
   <br>
-  <br>
+  
   ![API Image](/images/V6api.png){: .img-responsive}
   <br>
 
   The following query example is an API GET request that uses the TQL endpoint. <br>
-  `GET:` `https://v6.technopedia.com/tql?=MATCH (n:SOFTWARE_PRODUCT) RETURN n.product` <br>
+  `GET:` `https://v6-1.technopedia.com/tql?=MATCH (n:SOFTWARE_PRODUCT) RETURN n.product` <br>
   The query selects the software product node and then returns software product names.<br>
-  TQL uses a `MATCH`statement to select nodes in the Technopedia graph, which is like a `SELECT` statement in SQL. <br>
+  TQL uses a `MATCH` statement to select nodes in the Technopedia graph, which is like a `SELECT` statement in SQL. <br>
   <br>
   
 
@@ -66,9 +67,9 @@ content_markdown: |-
 
 
   * Nodes are Graph data records that are entities in the graph, such as
-  software version or hardware.                 
+  software version or hardware product.                 
     
-  * Nodes contain attributes, which provide data in key-value
+  * Nodes contain one or more attributes, which provide data in key-value
   pairs such as `{product: Excel}` or `{manufacturer: Microsoft}`.
 
   * Nodes are connected by relationships that you use to query multiple nodes in a single query. 
