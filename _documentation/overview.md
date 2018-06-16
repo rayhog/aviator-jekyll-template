@@ -72,9 +72,10 @@ content_markdown: |-
   software version or hardware product.                 
     
   * Nodes contain one or more attributes, which provide data in key-value
-  pairs such as `{product: Excel}` or `{manufacturer: Microsoft}`.
+  pairs such as the following examples: <br>
+  `{product: Excel}` or `{manufacturer: Microsoft}`.
 
-  * Nodes are connected by relationships that you use to query multiple nodes in a single query. 
+  * Nodes are connected by relationships that you use to connect multiple nodes in a single query. 
 
   ###### The following graph shows the Technopedia nodes and relationships:
   
