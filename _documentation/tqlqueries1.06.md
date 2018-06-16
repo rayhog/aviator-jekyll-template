@@ -105,7 +105,7 @@ content_markdown: |-
    
   <b>Query Intent:</b> Get software editions and include the release, verison, product, and manufacturer.<br>
   <br>
-  In this query example, you get data for software editions in Technopedia, and include the release, version, product, and manufacturer data for each edition that is listed. This <br>
+  In this query example, you get data for software editions in Technopedia, and include the release, version, product, and manufacturer data for each edition that is listed. This example is an extension of the previous example whrere we add manufacturer data. <br>
 
   `MATCH (e:SOFTWARE_EDITION)<-[:HAS_A]-(r:SOFTWARE_RELEASE)-[:HAS_A]->(v:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_PRODUCT)-[:HAS_A]->(m:MANUFACTURER) 
   RETURN e.edition,r.release,v.version,p.product, m.manufacturer LIMIT 10`<br>
