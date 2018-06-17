@@ -10,9 +10,9 @@ content_markdown: >-
  
   In Technopedia software versions are represented by the following three nodes:
     
-  * The software version node represents the software versions.  <br>
-  * The Software Version Group node represents software version groups.  <br>
-  * The Software Major Version represents major software versions.  <br>
+  Software version node represents the software versions.  <br>
+  Software Version Group node represents software version groups.  <br>
+  Software Major Version represents major software versions.  <br>
   <br>
 
   The relationship bewtween the nodes is labeled as `HAS_A` which points from:<br>
