@@ -299,7 +299,7 @@ right_code_blocks:
 
       SOFTWARE VERSION GROUP
       technopedia_id
-      version_group
+      version
       modified_at
       
 
