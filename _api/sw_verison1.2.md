@@ -27,14 +27,14 @@ content_markdown: >-
 
   <br>
   ![API Image](/images/sw_ver.png){:class="img-responsive"} <br>
+  <br>
 
   ### Software Major Version
   
   ######
   The node that represents the major version of software is `SOFTWARE_MAJOR_VERSION`.
   Software versioning is used to categorize the unique states of software as it is developed and released. 
-  The version identifier might be a word, or a number, or inlcude both. For example, version 1.0 is often used to represent the initial release of a software product.
-
+  <br>
   The following query returns software major version information. <br>
    
   `MATCH (a:SOFTWARE_MAJOR_VERSION) RETURN a.version`
@@ -43,7 +43,7 @@ content_markdown: >-
   ### Software Version Group
   
   ######
-  The node that represents the major version of software is `SOFTWARE_VERSION_GROUP`.
+  The node that represents the version group that software belongs to is `SOFTWARE_VERSION_GROUP`.
   Software version group is used to categorize the software when the version is part of version group that may or may not have a major version.
 
   Returns software version group information
