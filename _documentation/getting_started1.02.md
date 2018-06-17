@@ -4,8 +4,8 @@ title: Getting Started
 position: 1.02
 description: 
 content_markdown: >-
-  ###### Access Technopedia data by using the Technopedia API.
-  You retrieve data from the Technopedia database by using the TQL endpoint or the TID endpoint:<br>
+  Access Technopedia data by using the Technopedia API.
+  You retrieve data from the Technopedia database by using the TQL endpoint or the TID endpoint.<br>
 
   Use the Technopedia ID (`/tid`) endpoint to get information about an entity in the graph, such as product information or a node attribute by specifying the Technopedia ID.<br>
   <br>
@@ -13,7 +13,6 @@ content_markdown: >-
   <br>
 
   Your Technopedia subscription determines your level of access to Technopedia data outside of the core Technopedia data.
-  
     {: .info}
   
   #### Get an API key<br>
