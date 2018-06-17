@@ -15,16 +15,16 @@ content_markdown: >-
   * The Software Major Version represents the major software version. <br>
   
   <br>
-  The relationship bewtween the nodes is labeled as `HAS_A` which points from the:<br>
+  The relationship bewtween the nodes is labeled as `HAS_A` which points from:<br>
   `SOFTWARE_VERSION` to `SOFTWARE_VERSION_GROUP` and `SOFTWARE_MAJOR_VERSION`.<br>
   <br>
-  The following query returns software version information.
+  The following query returns software version information.<br>
   <br>
-  `MATCH (a:SOFTWARE_VERSION) RETURN a.version`
+  `MATCH (a:SOFTWARE_VERSION) RETURN a.version`<br>
   <br>
 
   The following diagram shows the nodes, attributes, and relationships that feature software nodes and their relationships.
-  
+
   <br>
   ![API Image](/images/sw_ver.png){:class="img-responsive"} <br>
 
