@@ -8,12 +8,10 @@ content_markdown: >-
   Software versioning is used to categorize the unique states of software as it is developed and released. The version identifier might be a word, or a number, or inlcude both. For example, version 1.0 is often used to represent the initial release of a software product. <br>
   <br>
   In Technopedia software versions are represented by the following three nodes:
-  
-  In Technopedia software versions are represented by the following three nodes:
-  
-  * The software version node represents the software versions.
-  * The Software Version Group node represents software version groups.<br>
-  * The Software Major Version represents major software versions. <br>
+    
+  *The software version node represents the software versions.<br>
+  *The Software Version Group node represents software version groups.<br>
+  *The Software Major Version represents major software versions. <br>
   <br>
   <br>
   <br>
