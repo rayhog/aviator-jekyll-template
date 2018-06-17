@@ -14,10 +14,9 @@ content_markdown: |-
   <br>
  
   The following MATCH query returns information about the manufacturer called Microsoft. 
-
-
-  `MATCH (a:MANUFACTURER) WHERE a.manufacturer = "Microsoft" RETURN a`
-  {: .info}
+  <br>
+  `MATCH (a:MANUFACTURER) WHERE a.manufacturer = "Microsoft" RETURN a` <br>
+  <br>
 
   The following diagram shows the the manufacturer node and its connections to software, hardware, and CPU.
 

@@ -52,7 +52,6 @@ content_markdown: >-
 
   `MATCH (a:SOFTWARE_VERSION_GROUP) RETURN a.version`
 
-
   <br>
 
   #### Query Examples <br>

@@ -11,7 +11,6 @@ content_markdown: |-
   
   `MATCH (a:HARDWARE_MODEL) RETURN a.model`
   
-  
   <br>
   You can get manufacturer data for the hardware model by using the relationships to connect to that node.
   For example, the following query returns five results that include the model, product, and manufacturer.<br>
