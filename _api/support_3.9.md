@@ -3,9 +3,11 @@ title: Support
 position: 3.9
 type: 
 description: >-
-  You can access support data from the `SUPPORT_STAGE` and `SUPPORT_POLICY` nodes, which are connected to software and hardware.
+  
 
 content_markdown: >-
+  You can access support data from the `SUPPORT_STAGE` and `SUPPORT_POLICY` nodes, which are connected to software and hardware.<br>
+  <br>
   Typically, software and hardware are supported by the vendor or manufacturer. In Technopedia, this support is identified in the `SUPPORT_STAGE` node, which refers to the type of support. The definition attribute provides more detailed information about applicability and timelines.
  
   Many support stages have a `SUPPORT_POLICY` that defines the type of policy, such as standard or Open Source. 

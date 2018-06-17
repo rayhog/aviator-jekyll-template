@@ -3,15 +3,15 @@ title: Software Product
 position: 1.15
 type:
 description: >-
-  The software product node features the product name and other important attributes. When you query any of the software nodes, it's likely that you will want to include the software product node to get back the product name in your results.
+  
   
 content_markdown: >-
-  In the following query example, you get data from Technopedia that contains PDF Converter in the name of the software product name.
-
-
-  `MATCH (n:SOFTWARE_PRODUCT) WHERE n.product = "PDF Converter" RETURN n` 
+  The software product node features the product name and other important attributes. When you query any of the software nodes, it's likely that you will want to include the software product node to get back the product name in your results.
   
-  {: .success} 
+  In the following query example, you get data for software products that have "PDF Converter" in the product name.
+  <br>
+  
+  `MATCH (n:SOFTWARE_PRODUCT) WHERE n.product = "PDF Converter" RETURN n` 
   
   <br>
   The following diagram shows the six software nodes and their relationships.
@@ -320,7 +320,7 @@ right_code_blocks:
       product_url
       created_at
       modified_at
-      "alias"
+      alias
 
 
 
@@ -328,7 +328,7 @@ right_code_blocks:
 
       
     title: Software Product Attributes
-    language: bash
+    language: text
   - code_block: |2-
       (SOFTWARE_PRODUCT)<-[:HAS_A]-(SOFTWARE_EDITION)
 

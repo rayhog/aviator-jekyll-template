@@ -2,17 +2,19 @@
 title: Software Edition
 position: 1.5
 type: 
-description: Matches the software edition from the Technopedia database.
+description: 
 content_markdown: |-
-  Software edition represents the version of the product, such as Standard, Premium, or other version name for the product. The edition is helpful in identifying versions of a product.
+  The software edition node provides edition data from the Technopedia database.
+  Software edition represents the version of the product, such as Standard, Premium, or other version name for the product. The edition is helpful for identifying versions of a product.
   <br>
 
-
+  The following query returns data for the software edition that is named 'Black': <br>
+  
   `MATCH (e:SOFTWARE_EDITION {edition: 'Black'}) RETURN e`
-  {: .success}
+  
 
   <br>
-  Here's an example of querying the release title "Advanced Partitioning Option" that is a release of a software version.<br>
+  The following example is a query to find an edition that is named: "Advanced Partitioning Option":<br>
   <br>
   `MATCH (s.SOFTWARE_PRODUCT)<-[:HAS_A]-(n:SOFTWARE_EDITION) WHERE n.edition = "Advanced Partitioning Option" RETURN n`
   <br>

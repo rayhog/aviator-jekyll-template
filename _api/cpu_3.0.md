@@ -8,11 +8,9 @@ content_markdown: |-
 
   The CPU_MODEL node is connected to the MANUFACTURER node by the `HAS_A` relationship, which points from the MANUFACTURER to the CPU node.
 
-  Here's a simple query to return 25 results for CPU models:
-
+  The following simple query returns 25 results for CPU models:<br>
+  <br>
   `MATCH (n:CPU_MODEL) RETURN n LIMIT 25`
-   {: .info}
-  
   <br>
     
   The following diagram shows the CPU node and other nodes. <br>
