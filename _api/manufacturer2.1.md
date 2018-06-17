@@ -2,9 +2,11 @@
 title: Manufacturer
 position: 2.1
 type: 
-description: The manufacturer is the creator or producer of the product. In relationships, CPU model, software product, and hardware product nodes have a manufacturer, which is referred to by the `HAS_A` relationship.
-For example, the Microsoft Word software product has a manufacturer named Microsoft.
+description: 
 content_markdown: |-
+  The manufacturer is the creator or producer of the product. In relationships, CPU model, software product, and hardware product nodes have a manufacturer, which is referred to by the `HAS_A` relationship.
+  For example, the Microsoft Word software product has a manufacturer named Microsoft.<br>
+  <br>
   The following attributes are examples of the manufactuer node attributes: 
   * `manufacturer` provides the name of the manufacturer.
   * `technopedia_id` provides a unique ID.
