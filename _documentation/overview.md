@@ -13,10 +13,10 @@ content_markdown: |-
   You select nodes, node relationships to other nodes, and node attributes to define the criteria for your query to return relevant data. 
   * By using the Techopedia-ID endpoint to reference an entity in the database and return relevant data for that entity. <br>
   The Technopedia ID record stores information about a Technopedia entity. <br>
-  For example; the entity might be a product or it might be specific node attribute that returns relevant data.<br>
+  For example; the entity might be a product or it might be specific node attribute that returns relevant data.  
+
   <br>
-  <br>
-  ######
+    
   The following diagram shows an overview of the Technopedia API enpoints, and examples of nodes and relationships in the Technopedia database.
   <br>
   
