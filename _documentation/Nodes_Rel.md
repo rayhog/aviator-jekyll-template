@@ -61,11 +61,12 @@ content_markdown: >-
    * Relationships allow you to traverse the Technopedia Nodes and by using the Technopedia query language, and to get data from the specified nodes in one query.
 
    * Like nodes, relationships can also have attributes. Typically, relationship have quantitative attributes, such as time intervals.
-   * To get information about a relationship that has attributes, we can assign it an alias for later reference. The alias is placed in front of the colon `-[anyAlias:Relationship_name]->(node)`
+   * To get information about a relationship that has attributes, we can assign it an alias for later reference. The  alias is placed in front of the colon:
+    `-[anyAlias:Relationship_name]->(node)`
 
 
-  ###### The following diagram is a simple overview of nodes and relationships:
-
+  The following diagram is a simple overview of nodes and relationships:
+  <br>
 
   ![API Image](/images/nodes_simple.png)<br>&nbsp;
   <br>
