@@ -14,7 +14,7 @@ content_markdown: >-
   
 
   Your Technopedia subscription determines your level of access to Technopedia data outside of the core Technopedia data.
-    {: .info}
+    {: .warning}
   
   #### Get an API key<br>
      
@@ -32,7 +32,7 @@ content_markdown: >-
   <br>
   
     Typically, cURL is preinstalled on Mac and Linux computers, and Windows users must install cURL. <br>
-    {: .info}
+    {: .warning}
 
   For example, the following example is a cURL query: <br>
   `curl -G -H "Authorization: Bearer <API_KEY>" https://v6-1.technopedia.com/tql" --data-urlencode "q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.product"`<br>

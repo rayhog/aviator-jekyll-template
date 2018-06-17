@@ -45,19 +45,20 @@ content_markdown: >-
   To get data from multiple nodes in one query, you use defined relationships to other nodes. 
   <br>
 
-  #### Relationships between Nodes in Technopedia 
+  #### Relationships connect Nodes in Technopedia 
 
   ######
   Relationships provide semantically relevant connections between the Technopedia nodes. <br>
-  Relationships have a type, such as `BELONGS_TO` and a direction, such as node x to node y. <br>
-  An arrow determines the direction of the relationship. <br>
-  For example `(node x)-[BELONGS_TO]->(node y)` <br>
+  
   To get Technopedia data from multiple nodes in one query, you use relationships to traverse nodes and define the criteria for the data that you want to extract from the database.
 
-   * Relationships are represented by an arrow `->` between two nodes, which represents the direction of the relationship. 
-     Relationships often exist in a single direction but they can be bidirectional, in which case, there's no arrow.
+   * Relationships have a type, such as `BELONGS_TO` and a direction, such as node x to node y. <br>
+     An arrow determines the direction of the relationship. <br>
+     For example `(node x)-[BELONGS_TO]->(node y)` <br>
+   * Relationships often exist in a single direction but they can be bidirectional, in which case, there's no arrow.
+     For example `(node x)-[BELONGS_TO]-(node y)` <br>    
 
-   * Relationships provide semantically relevant connections between the Technopedia database nodes, for example, the software product node has the relationship: `[HAS_A]->` to the manufacturer node.
+   * Relationships connect the Technopedia database nodes, for example, the software product node has the relationship: `[HAS_A]->` to the manufacturer node.
 
    * Relationships allow you to traverse the Technopedia Nodes and by using the Technopedia query language, and to get data from the specified nodes in one query.
 
