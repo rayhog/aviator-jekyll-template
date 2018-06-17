@@ -9,14 +9,15 @@ content_markdown: >-
   <br>
   In Technopedia software versions are represented by three nodes:
   
-  * The software version node represents the software versions, which might be a child version of the major version or  version group. 
-  * The Software Version Group node represents the group version attributes.
-  * The Software Major Version represents the major software version.
+  * The software version node represents the software versions, which might be a child version of the major version or  version group. <br>
+  * The Software Version Group node represents the group version attributes.<br>
+  * The Software Major Version represents the major software version. <br>
   
   <br>
-  The relationship bewtween the nodes is `HAS_A` which points from the `SOFTWARE_VERSION` to `SOFTWARE_VERSION_GROUP` and `SOFTWARE_MAJOR_VERSION.<br>
+  The relationship bewtween the nodes is `HAS_A` which points from the:<br>
+  `SOFTWARE_VERSION` to `SOFTWARE_VERSION_GROUP` and `SOFTWARE_MAJOR_VERSION.<br>
   <br>
-  The highlighted query returns version information for software.
+  The following query returns software version information.
   <br>
   `MATCH (a:SOFTWARE_VERSION) RETURN a.version`
   <br>
