@@ -5,17 +5,17 @@ position: 1.02
 description: 
 content_markdown: >-
   ###### Access Technopedia data by using the Technopedia API.
-  Access data in Technopedia by using the TQL endpoint or the TID endpoint.
+  You access data in Technopedia by using the TQL endpoint or the TID endpoint.<br>
   * Technopedia endpoints enable to you to use the Technopedia ID endpoint to get information about an entity in the graph, such as product information or a node attribute by specifying the Technopedia ID.
-  * Use the Technopedia query language (TQL) with the TQL endpoint to form custom queries that query data in the Technopedia database.<br>
+  * Use the Technopedia query language (TQL) with the TQL endpoint to form custom queries that you use to query the Technopedia database.<br>
   <br>
   
   #### Get an API key<br>
      
   Before you can get data from data from the Technopedia database, you must get an API key from Flexera Technopedia support.
-  The API key authorizes you to access the data that is available with your subscription.
+  The API key authorizes you to access the data that you are permitted to access with your subscription.
 
-    You might not be able to access data from all nodes in the Technopedia graph if your Technopedia subscription doesn't permit access to that data.
+    Your Technopedia subscription determines your level of access to Technopedia data outside of the core Technopedia data.
     {: .info}
   <br>
   
@@ -46,16 +46,18 @@ content_markdown: >-
 
   For the Technopedia-id endpoint, you provide the Technopedia ID parameter.<br>
   For example; `https://v6-1.technopedia.com/technopedia-id/<Technopedia ID>`<br>
+  <br>
   For the TQL endpoint, you provide MATCH statements with parameters that specify nodes, attributes, and relationships between nodes which are optional. <br>
   `https://v6-1.technopedia.com/tql?q=<TQL_query>`
 
   
   #### Authentication<br>
   
-  ###### The Technopedia Version 6 API uses OAuth for authentication. To authenticate in a new session, you pass the API key in the request header. <br> 
+  ###### The Technopedia Version 6.1 API uses OAuth for authentication. To authenticate in a new session, you pass the API key in the request header. <br> 
   The API key is provided by Flexera Technopedia support.
 
-  In the following examples, an API key example is used in a cURL example and in the Postman API client. The key `Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a` is used in both examples.
+  In the following examples, an API key example is used with cURL and in the Postman API client. <br>
+  The key `Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a` is used in both examples.
   <br>
   <br>
   The following example shows the API key in a cURL request:<br>

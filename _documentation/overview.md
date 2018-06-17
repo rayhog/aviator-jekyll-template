@@ -42,7 +42,7 @@ content_markdown: |-
   * TQL (Technopedia Query Language) endpoint that you use for graph-based
   querying of the Technopedia database.
 
-  * Technopedia-id endpoint that you use to query any Technopedia product by its ID.
+  * Technopedia-id endpoint that you use to query any Technopedia entity by its ID.
 
 
   #### What are the V6 API Endpoints?
@@ -52,11 +52,14 @@ content_markdown: |-
 
 
   * `https://v6-1.technopedia.com/tql?q=MATCH <Query Parameters>`
-    ###### You provide query parameters to the MATCH statement to generate the criteria for your query, as shown in the following example:<br>
+    ###### You provide query parameters in the TQL MATCH statement to generate the criteria for your query, as shown in the following example:<br>
+    
     GET: `https://v6-1.technopedia.com/tql?q=MATCH (sft:SOFTWARE_PRODUCT) RETURN sft`<br>
 
   * `https://v6-1.technopedia.com/technopedia-id/<Technopedia ID>.`
-    ###### You provide the Technopedia ID for the product that you're querying to return data for that specific product, as in the following example: <br>
+    ###### You provide the Technopedia ID for the entity that you're querying to return data for that specific entity. 
+    The following example shows a dummy Technopedia ID: <br>
+    
     GET: `https://v6-1.technopedia.com/technopedia-id/86-7ytdf89jdjhjsdh87`
    
 
@@ -72,7 +75,7 @@ content_markdown: |-
   pairs such as the following examples: <br>
   `{product: Excel}` or `{manufacturer: Microsoft}`.
 
-  * Nodes are connected by relationships that you use to connect multiple nodes in a single query. 
+  * Nodes are connected by relationships that you use to query multiple nodes in a single query. 
 
   ###### The following graph shows the Technopedia nodes and relationships:
   
