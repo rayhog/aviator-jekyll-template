@@ -51,6 +51,9 @@ content_markdown: >-
   Relationships provide semantically relevant connections between the Technopedia nodes. <br>
   
   To get Technopedia data from multiple nodes in one query, you use relationships to traverse nodes and define the criteria for the data that you want to extract from the database.
+  For example, you might want data for manufacturer, software edtion, and software product in a single query. To get data from these nodes, you must use relationships in your query to connect the nodes when you create the query.
+
+  The following information provides an overview of relationships in the Technopedia database:
 
    * Relationships have a type, such as `BELONGS_TO` and a direction, such as node x to node y. <br>
      An arrow determines the direction of the relationship. <br>
@@ -60,7 +63,7 @@ content_markdown: >-
    * Relationships connect the Technopedia database nodes, for example, the software product node has the relationship: `[HAS_A]->` to the manufacturer node.
    * Relationships allow you to traverse the Technopedia Nodes and by using the Technopedia query language, and to get data from the specified nodes in one query.
    * Like nodes, relationships can also have attributes. Typically, relationship have quantitative attributes, such as time intervals.
-   * To get information about a relationship that has attributes, we can assign it an alias for later reference. The  alias is placed in front of the colon:
+   * To get information about a relationship that has attributes, we can assign it an alias for later reference. The  alias is placed in front of the colon that precedes the relationship:<br>
     `-[anyAlias:Relationship_name]->(node)`
 
 
