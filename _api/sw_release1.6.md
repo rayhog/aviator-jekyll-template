@@ -29,7 +29,6 @@ content_markdown: >-
 
   The following query returns data for the end date of the software release's support stage.<br>
   <br>
-
   `MATCH (:SOFTWARE_RELEASE)-[my_alias:HAS_A {end_date: "2013-12-10 00:00:00"}]->(:SUPPORT_STAGE) RETURN my_alias`
 
   #### Query Examples <br>
