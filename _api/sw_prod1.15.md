@@ -17,12 +17,12 @@ content_markdown: >-
   <br>
   The following diagram shows the six software nodes and their relationships.
   <br>
-  
+
   ![API Image](/images/sw_prod.png){: .img-responsive}<br>&nbsp;
 
   #### Query Examples <br>
     
-  To use the MATCH statements in the following examples, you append the MATCH statement to the following tql endpoint and make a GET request from a API client or use cURL. <br>
+  To use the `MATCH` statements in the following examples, you append the `MATCH` statement to the following `/tql` endpoint and make a GET request from a API client or use cURL. <br>
   <br>
   `https://v6-1.technopedia.com/tql?q=<MATCH Statement>`
   

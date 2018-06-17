@@ -36,7 +36,7 @@ content_markdown: >-
   The node that represents the major version of software is `SOFTWARE_MAJOR_VERSION`.
   Software versioning is used to categorize the unique states of software as it is developed and released. 
   <br>
-  The following query returns software major version information. <br>
+  The following query returns software major version information: <br>
    
   `MATCH (a:SOFTWARE_MAJOR_VERSION) RETURN a.version`
   
@@ -47,7 +47,7 @@ content_markdown: >-
   The node that represents the version group that software belongs to is `SOFTWARE_VERSION_GROUP`.
   Software version group is used to categorize the software when the version is part of version group that may or may not have a major version.
 
-  Returns software version group information
+  The following query returns software version group information:
 
 
   `MATCH (a:SOFTWARE_VERSION_GROUP) RETURN a.version`
@@ -57,7 +57,7 @@ content_markdown: >-
 
   #### Query Examples <br>
     
-  To use the MATCH statements in the following examples, you append the MATCH statement to the following tql endpoint and make a GET request from a API client or use cURL. <br>
+  To use the `MATCH` statements in the following examples, you append the `MATCH` statement to the following `/tql` endpoint and make a GET request from a API client or use cURL. <br>
   <br>
   `https://v6-1.technopedia.com/tql?q=<MATCH Statement>`
   
