@@ -89,10 +89,10 @@ content_markdown: |-
     
   <br>
   
-  #### Overview of creating a MATCH query<br>
+  #### Overview of creating a TQL query<br>
 
 
-  The following diagram shows a broad outline of creating a query:
+  The following diagram shows a basic overview of creating a query with TQL:
   <br>
   
   ![API Image](/images/match.png)<br>&nbsp;
@@ -112,7 +112,7 @@ content_markdown: |-
   To view a list of attributes for any node, you use the 
   `MATCH (alias:NODE) RETURN alias` query with the TQL endpoint.
   For example, `https://v6-1.technopedia.com/tql?q=MATCH (n:SOFTWARE_PRODUCT) RETURN n LIMIT 1`
-  {: .info}
+  {: .warning}
 
   <br>
   Here’s some examples:
