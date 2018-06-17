@@ -10,8 +10,8 @@ content_markdown: |-
   Because TQL is a declarative query language, you can build your query with multiple nodes, relationships, attributes,and add multiple conditions to refine your query.<br>
   
 
-  Like nodes, relationships can have attributes. Add an alias to the relationship when you want to return data for those relationship attributes. TQL binds the alias that you specify to that relationship, which you can refer to in the `RETURN` clause of the `MATCH` statement to get specific data.
-  {: .info}
+  Like nodes, relationships can have attributes. Add an alias to the relationship when you want to return data for those relationship attributes. TQL binds the alias that you specify to the relationship, which you can refer to in the `RETURN` clause of the `MATCH` statement to retrieve your queried data.
+  {: .warning}
 
   #### Building relationships in a query<br>
 

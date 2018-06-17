@@ -24,7 +24,7 @@ content_markdown: >-
   The software release and support stage nodes are connected by the `HAS_A` relationship, which has its own attributes.
   <br>
   To retrieve information about a relationship, you assign it an alias for later reference. <br>
-  You place the alias in front of the colon: <br>
+  You place the alias in front of the colon that precedes the relationship: <br>
    `-[my_alias:HAS_A]->` <br>
 
   The following query returns data for the end date of the software release's support stage.<br>
