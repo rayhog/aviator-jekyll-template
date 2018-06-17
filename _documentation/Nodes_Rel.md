@@ -30,7 +30,8 @@ content_markdown: >-
   
   
   ###### Nodes are the entities in the Technopedia graph that store specific categories of data. <br>
-  Nodes can have any number of attributes, which are represented by key-value-pairs.<br> 
+  Nodes can have any number of attributes, which are represented by key-value-pairs, <br>
+  for example, `{"edition" : "server"}`<br> 
    * Nodes are entities that store the Technopedia data.
    * Node names are surrounded by parentheses in a query, for example, (Node).
    * Nodes have attributes that show data in key-value pairs.
@@ -54,7 +55,7 @@ content_markdown: >-
   To get Technopedia data from multiple nodes in one query, you use relationships to traverse nodes and define the criteria for the data that you want to extract from the database.
 
    * Relationships are represented by an arrow `->` between two nodes, which represents the direction of the relationship. 
-     Relationships often exist in a single direction but they can be bidirectional.
+     Relationships often exist in a single direction but they can be bidirectional, in which case, there's no arrow.
 
    * Relationships provide semantically relevant connections between the Technopedia database nodes, for example, the software product node has the relationship: `[HAS_A]->` to the manufacturer node.
 
