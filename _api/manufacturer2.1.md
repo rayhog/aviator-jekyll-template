@@ -2,15 +2,16 @@
 title: Manufacturer
 position: 2.1
 type: 
-description: The manufacturer is the creator of the product and in relationships between nodes the manufacturer is referred by the `HAS_A` relationship, for example,  the software product known as Microsoft Word has a manufacturer called Microsoft.
+description: The manufacturer is the creator or producer of the product. In relationships, CPU model, software product, and hardware product nodes have a manufacturer, which is referred to by the `HAS_A` relationship.
+For example, the Microsoft Word software product has a manufacturer named Microsoft.
 content_markdown: |-
-  The manufacturer node has many attributes; the following attributes are popular attributes: 
+  The following attributes are examples of the manufactuer node attributes: 
   * `manufacturer` provides the name of the manufacturer.
   * `technopedia_id` provides a unique ID.
   * `description` provides a description of the manfacturer.
   <br>
  
-  The manufacturer has relationships to other nodes. The following MATCH query returns information about the manufacturer called Microsoft. 
+  The following MATCH query returns information about the manufacturer called Microsoft. 
 
 
   `MATCH (a:MANUFACTURER) WHERE a.manufacturer = "Microsoft" RETURN a`
@@ -36,7 +37,6 @@ left_code_blocks:
       {
         "results": [
             {
-                "n.cat_manufacturer_id": 594345,
                 "n.city": null,
                 "n.country": null,
                 "n.created_at": null,

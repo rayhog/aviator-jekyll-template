@@ -16,6 +16,7 @@ content_markdown: |-
   <br>
   `MATCH (s.SOFTWARE_PRODUCT)<-[:HAS_A]-(n:SOFTWARE_EDITION) WHERE n.edition = "Advanced Partitioning Option" RETURN n`
   <br>
+  
   The following diagram shows the sofware editon node and its related software nodes.
   <br>
   ![API Image](/images/sw_edition.png){:class="img-responsive"} <br>
