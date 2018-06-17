@@ -9,17 +9,18 @@ content_markdown: >-
   <br>
   The following query returns all software release data:<br>
 
-  `MATCH (a:SOFTWARE_RELEASE) RETURN a.release`
-
-  &nbsp;
-  
+  `MATCH (a:SOFTWARE_RELEASE) RETURN a.release`<br>
   <br>
+
+  
   The following diagram shows the software nodes, relationships, and the software release attributes.<br>
   <br>
+
   ![API Image](/images/sw_release.png){:class="img-responsive"} <br>
   <br>
  
   The software release node connects to the software edtion, software nodes, and support stage nodes by the `HAS_A` relationship. <br>
+  <br>
   The software release and support stage nodes are connected by the `HAS_A` relationship, which has its onw attributes.
   <br>
   To retrieve information about a relationship, you assign it an alias for later reference. <br>

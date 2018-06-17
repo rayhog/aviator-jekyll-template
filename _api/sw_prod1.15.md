@@ -12,11 +12,11 @@ content_markdown: >-
   In the following query example, you get data for software products that have "PDF Converter" in the product name.
   <br>
   
-  `MATCH (n:SOFTWARE_PRODUCT) WHERE n.product = "PDF Converter" RETURN n` 
+  `MATCH (n:SOFTWARE_PRODUCT) WHERE n.product = "PDF Converter" RETURN n` <br>
   
   <br>
   The following diagram shows the six software nodes and their relationships.
-  
+  <br>
   ![API Image](/images/sw_prod.png){: .img-responsive}<br>&nbsp;
 
   #### Query Examples <br>

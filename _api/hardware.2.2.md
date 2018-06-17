@@ -10,7 +10,7 @@ content_markdown: |-
   To get information about specifications for the harware model, you must query the hardware model node.<br>
   You use the `HAS_A` relationship between the nodes to get a combination of product and model data.
   
-  The following query returns 25 harwdware products from the Technopedia database:<br>
+  The following query returns 25 hardware products from the Technopedia database:<br>
 
   `MATCH (n:HARDWARE_PRODUCT) RETURN n LIMIT 25`
   
