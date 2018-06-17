@@ -4,7 +4,7 @@ title: Overview
 position: 1.01
 description: 
 content_markdown: |-
-  ###### Technopedia version 6.1 API enables cloud-based access to asset data in Technopedia, which provides you with a cloud-first and high-performance resource to manage your assets.<br>
+  Technopedia version 6.1 API enables cloud-based access to asset data in Technopedia, which provides you with a cloud-first and high-performance resource to manage your assets.<br>
   Technopedia is a Graph database that is designed to process data by using a graph-based methodology, rather than a relational database model.<br>
   <br>
   You query the Technopedia database by using either of the following methods:

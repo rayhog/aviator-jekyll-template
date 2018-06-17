@@ -3,12 +3,14 @@ title: TQL Queries
 position: 1.06
 type:
 description:
-  TQL queries can be based on a single node or multiple nodes where you need to include relationships to get data from multiple nodes. For many TQL queries, you have to use relationships to query several Technopedia nodes. Relationships might seem complex but their function is mainly to connect nodes.
+  
 content_markdown: |-
-  Because TQL is a declarative query language, you can build your query with multiple nodes, relationships, attributes, and add multiple conditions to refine your query.<br>
+  TQL queries can be based on a single node or multiple nodes where you need to include relationships to get data from multiple nodes. For many TQL queries, you have to use relationships to query several Technopedia nodes. Relationships might seem complex but their function is mainly to connect nodes. <br>
+  <br>
+  Because TQL is a declarative query language, you can build your query with multiple nodes, relationships, attributes,and add multiple conditions to refine your query.<br>
   
 
-  Like nodes, relationships can have attributes. You can use an alias with the relationship that has attributes when you want to return data for those relationship attributes. TQL binds the alias that you specify to that relationship, which you can use with the Return clause of the MATCH query to get specific data.
+  Like nodes, relationships can have attributes. Add an alias to the relationship when you want to return data for those relationship attributes. TQL binds the alias that you specify to that relationship, which you can refer to in the `RETURN` clause of the `MATCH` statement to get specific data.
   {: .info}
 
   #### Building relationships in a query<br>
@@ -16,7 +18,7 @@ content_markdown: |-
   
   Relationships provide a way of getting related data from multiple nodes in one query. You connect the nodes by using the relationship that's shown in the database graph. <br>
   
-  {: .info}
+  {: .warning}
 
   Note the direction of the relationship in the graph. If you specify an incorrect direction, you might not get data from the nodes that you want to connect with.
 

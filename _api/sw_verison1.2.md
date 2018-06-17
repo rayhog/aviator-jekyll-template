@@ -15,11 +15,12 @@ content_markdown: >-
   * The Software Version Group node represents the group version attributes.<br>
 
   * The Software Major Version represents the major software version. <br>
-  
+  <br>
   <br>
   The relationship bewtween the nodes is labeled as `HAS_A` which points from:<br>
   `SOFTWARE_VERSION` to `SOFTWARE_VERSION_GROUP` and `SOFTWARE_MAJOR_VERSION`.<br>
   <br>
+
   The following query returns software version information.<br>
   <br>
   `MATCH (a:SOFTWARE_VERSION) RETURN a.version`<br>

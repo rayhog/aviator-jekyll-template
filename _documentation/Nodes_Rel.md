@@ -4,7 +4,7 @@ position: 1.04
 type:
 description: >-  
 content_markdown: >-
-  ###### You access Technopedia data by referencing nodes, attributes, relationships, or Technopedia IDs in the Technopedia graph.<br>
+  You access Technopedia data by referencing nodes, attributes, relationships, or Technopedia IDs in the Technopedia graph.<br>
   <br>
   
   #### GET request with the Technopedia ID

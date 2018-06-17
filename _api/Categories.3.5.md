@@ -4,7 +4,7 @@ position: 3.5
 type: 
 description: 
 content_markdown: |-
-  ###### Categories are split into `CATEGORY_GROUP`, `CATEGORY_1`, `CATEGORY_2`, and `VERTICAL` is a high-level classification that is a parent of `CATEGORY_2`.
+  Categories are split into `CATEGORY_GROUP`, `CATEGORY_1`, `CATEGORY_2`, and `VERTICAL` is a high-level classification that is a parent of `CATEGORY_2`.
 
 
   Category nodes are linked by relationships from the software product node and the hardware product node. Run the following queries with the TQL endpoint to list the node labels:
