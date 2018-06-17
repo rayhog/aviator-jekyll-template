@@ -30,7 +30,7 @@ content_markdown: >-
   
   
   ###### Nodes are the entities in the Technopedia graph that store specific categories of data. <br>
-  Nodes can have any number of attributes, which are represented by key-value-pairs, <br>
+  Nodes can have any number of attributes that store data as key-value-pairs, <br>
   for example, `{"edition" : "server"}`<br> 
    * Nodes are entities that store the Technopedia data.
    * Node names are surrounded by parentheses in a query, for example, (Node).

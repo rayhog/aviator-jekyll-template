@@ -32,7 +32,7 @@ content_markdown: >-
   ![API Image](/images/sw_ver.png){:class="img-responsive"} <br>
   <br>
 
-  ### Software Major Version
+  #### Software Major Version
   
   ######
   The node that represents the major version of software is `SOFTWARE_MAJOR_VERSION`.
@@ -43,7 +43,7 @@ content_markdown: >-
   `MATCH (a:SOFTWARE_MAJOR_VERSION) RETURN a.version`
   
 
-  ### Software Version Group
+  #### Software Version Group
   
   ######
   The node that represents the version group that software belongs to is `SOFTWARE_VERSION_GROUP`.
