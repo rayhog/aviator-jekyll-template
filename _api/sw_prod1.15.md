@@ -6,7 +6,8 @@ description: >-
   
   
 content_markdown: >-
-  The software product node features the product name and other important attributes. When you query any of the software nodes, it's likely that you will want to include the software product node to get back the product name in your results.
+  The software product node features the product name and other important attributes. When you query any of the software nodes, it's likely that you will want to include the software product node to get back the product name in your results.<br>
+  <br>
   
   In the following query example, you get data for software products that have "PDF Converter" in the product name.
   <br>

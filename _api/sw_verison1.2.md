@@ -11,7 +11,6 @@ content_markdown: >-
   
   * The software version node represents the software versions, which might 
     be a child version of the major version or version group.<br>
-    
   * The Software Version Group node represents the group version attributes.<br>
 
   * The Software Major Version represents the major software version. <br>

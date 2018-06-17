@@ -5,7 +5,8 @@ type:
 description: 
 
 content_markdown: >-
-  You reference the software release node for software release data in Technopedia.<br>
+  You reference the software release node to get software release data in Technopedia.<br>
+  <br>
   The following query returns all software release data:<br>
 
   `MATCH (a:SOFTWARE_RELEASE) RETURN a.release`
@@ -21,12 +22,13 @@ content_markdown: >-
   The software release node connects to the software edtion, software nodes, and support stage nodes by the `HAS_A` relationship. <br>
   The software release and support stage nodes are connected by the `HAS_A` relationship, which has its onw attributes.
   <br>
-  To retrieve information about a relationship, you assign it an alias for later reference. 
-  You place the alias in front of the colon: <br
+  To retrieve information about a relationship, you assign it an alias for later reference. <br>
+  You place the alias in front of the colon: <br>
    `-[my_alias:HAS_A]->` <br>
 
-  The following query returns data for the end date of the software release's support stage.
+  The following query returns data for the end date of the software release's support stage.<br>
   <br>
+
   `MATCH (:SOFTWARE_RELEASE)-[my_alias:HAS_A {end_date: "2013-12-10 00:00:00"}]->(:SUPPORT_STAGE) RETURN my_alias`
 
   #### Query Examples <br>
