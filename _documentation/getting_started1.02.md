@@ -26,6 +26,7 @@ content_markdown: >-
   #### Making API Requests to Technopedia<br>
 
   You can use cURL or a third-party API client to get data from the Technopedia database.<br>
+  <br>
   The base URL for all API queries is <br>
   `https://v6-1.technopedia.com/`
   <br>
@@ -49,9 +50,11 @@ content_markdown: >-
   #### Parameters<br>
 
   For the Technopedia-id endpoint, you provide the Technopedia ID parameter.<br>
-  For example; `https://v6-1.technopedia.com/technopedia-id/<Technopedia ID>`<br>
+
+  `https://v6-1.technopedia.com/technopedia-id/<Technopedia ID>`<br>
   <br>
   For the TQL endpoint, you provide MATCH statements with parameters that specify nodes, attributes, and relationships between nodes which are optional. <br>
+
   `https://v6-1.technopedia.com/tql?q=<TQL_query>`
 
   
@@ -61,7 +64,7 @@ content_markdown: >-
   The API key is provided by Flexera Technopedia support.
 
   In the following examples, an API key example is used with cURL and in the Postman API client. <br>
-  The key `Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a` is used in both examples.
+  The key `Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a` is used in both of the following examples.
   <br>
   <br>
   The following example shows the API key in a cURL request:<br>

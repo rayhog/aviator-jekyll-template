@@ -67,7 +67,9 @@ content_markdown: |-
        `RETURN m.manufacturer, sp.product, sv.version, sr.release, se.edition` <br>
     5. Limit the number of results that are returned by using the `LIMIT` clause. <br>
        `LIMIT 2` <br>
+
     Here's the complete query: <br>
+    <br>
      `MATCH (m:MANUFACTURER)<-[:HAS_A]-(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION) <br>
       WHERE m.manufacturer = "Oracle"` <br>
      `RETURN m.manufacturer, sp.product, sv.version, sr.release, se.edition` <br>

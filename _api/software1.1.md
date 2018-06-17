@@ -27,7 +27,9 @@ content_markdown: |-
   `https://v6-1.technopedia.com/tql?q=<MATCH Statement>`
 left_code_blocks:
   - code_block: |
-      MATCH (n:SOFTWARE_PRODUCT)<-[:HAS_A]-(b:SOFTWARE_VERSION)<-[:HAS_A]-(x:SOFTWARE_RELEASE)-[:HAS_A]->(y:SOFTWARE_EDITION) RETURN n.product, b.version, y.edition LIMIT 5
+      MATCH (n:SOFTWARE_PRODUCT)<-[:HAS_A]-(b:SOFTWARE_VERSION)<-[:HAS_A]-(x:SOFTWARE_RELEASE)-[:HAS_A]->(y:SOFTWARE_EDITION) 
+      RETURN n.product, b.version, y.edition 
+      LIMIT 5
 
       RESPONSE SAMPLE
 
@@ -109,7 +111,8 @@ left_code_blocks:
   - code_block: |-
       MATCH (s:SOFTWARE_PRODUCT)-[:BELONGS_TO]->(cat2:CATEGORY_2) 
       WHERE s.product CONTAINS "Tools" 
-      RETURN s.product, cat2.label LIMIT 5
+      RETURN s.product, cat2.label 
+      LIMIT 5
 
       RESPONSE SAMPLE
 

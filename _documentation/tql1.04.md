@@ -160,9 +160,9 @@ content_markdown: |-
   <b>Query Intent:</b> To get software editions named "Enterprise Developer" and where the edition order is equal to two.  <br>
   In this query, you only have to query the software edition node.
     
-    1. Use `MATCH` to select the software edtion node, and add an alias (se) to the node that you refer to in the `RETURN` clause.<br>
+    1. Use `MATCH` to select the software edtion node, and add the alias `se` to the node that you refer to in the `RETURN` clause.<br>
       `MATCH (se:SOFTWARE_EDITION)`
-    2. Use the WHERE and AND clauses to add conditions that filter the output.<br>
+    2. Use the `WHERE` and `AND` clauses to add conditions that filter the output.<br>
       `MATCH (alias:SOFTWARE_EDITION) WHERE s.order = 2 AND s.edition = "Enterprise Developer"`<br>
     3. You use the `RETURN` clause to select the query output by referring to the alias and attributes.<br>
       `RETURN s.edition, s.order, s.technopedia_id`  

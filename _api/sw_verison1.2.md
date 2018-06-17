@@ -9,11 +9,11 @@ content_markdown: >-
   <br>
   In Technopedia software versions are represented by the following three nodes:
   
-    In Technopedia software versions are represented by the following three nodes:
+  In Technopedia software versions are represented by the following three nodes:
   
-  * The software version node represents the software versions, which might be a child version of the major version or version group.<br>
-  * The Software Version Group node represents the group version attributes.<br>
-  * The Software Major Version represents the major software version. <br>
+  * The software version node represents the software versions.
+  * The Software Version Group node represents software version groups.<br>
+  * The Software Major Version represents major software versions. <br>
   <br>
   <br>
   <br>
