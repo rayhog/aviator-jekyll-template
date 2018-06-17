@@ -2,30 +2,30 @@
 title: Software Release
 position: 1.6
 type:
-description: Get software release data from the Technopedia database.
+description: 
 
 content_markdown: >-
+  You reference the software release node for software release data in Technopedia.<br>
+  The following query returns all software release data:<br>
+
   `MATCH (a:SOFTWARE_RELEASE) RETURN a.release`
-
-  {: .success} 
-
 
   &nbsp;
   
   <br>
-  The following diagram shows the software nodes, relationships, and the software release attributes.
+  The following diagram shows the software nodes, relationships, and the software release attributes.<br>
   <br>
   ![API Image](/images/sw_release.png){:class="img-responsive"} <br>
   <br>
  
-  The software release node connects to the software edtion, software nodes, and support stage nodes by the `HAS_A` relationship.
-  The software release and support stage nodes are connected by the 'HAS_A' relationship, which has attributes.
+  The software release node connects to the software edtion, software nodes, and support stage nodes by the `HAS_A` relationship. <br>
+  The software release and support stage nodes are connected by the `HAS_A` relationship, which has its onw attributes.
   <br>
-  To access information about a relationship, you assign it an alias, for later reference. 
-  You place the alias in front of the colon: <br:
+  To retrieve information about a relationship, you assign it an alias for later reference. 
+  You place the alias in front of the colon: <br
    `-[my_alias:HAS_A]->` <br>
 
-  The following query returns data for the end date of of the software release's support stage.
+  The following query returns data for the end date of the software release's support stage.
   <br>
   `MATCH (:SOFTWARE_RELEASE)-[my_alias:HAS_A {end_date: "2013-12-10 00:00:00"}]->(:SUPPORT_STAGE) RETURN my_alias`
 
