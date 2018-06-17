@@ -2,11 +2,12 @@
 title: Hardware Model
 position: 2.3
 type: 
-description: The hardware model node defines information about the model, such as dimensions and other general specifications. The hardware model
-  has a relationship with the hardware product, which you can use to get more information about hardware.
+description: 
    
 content_markdown: |-
-  This query example returns all hardware models.
+  The hardware model node defines information about the model, such as dimensions and other general specifications.The hardware model has a relationship with the hardware product, which you can use to get more information about hardware.<br>
+  <br>
+  This following query example returns all hardware models.
   
   `MATCH (a:HARDWARE_MODEL) RETURN a.model`
   {: .info}

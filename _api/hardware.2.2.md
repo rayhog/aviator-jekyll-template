@@ -2,11 +2,15 @@
 title: Hardware Product
 position: 2.2
 type: 
-description: Hardware information in Technopedia is classified by product and model. 
+description: 
 content_markdown: |-
+  Hardware information in Technopedia is classified by product and model.<br>
+  <br>
   You query the hardware product to get the product name and other details.
-  To get information about specifications for the harware model, you must query the hardware model node.
+  To get information about specifications for the harware model, you must query the hardware model node.<br>
   You use the `HAS_A` relationship between the nodes to get a combination of product and model data.
+  
+  The following query returns 25 harwdware products:<br>
 
   `MATCH (n:HARDWARE_PRODUCT) RETURN n LIMIT 25`
   {: .info}
