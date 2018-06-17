@@ -7,19 +7,14 @@ description: >-
 content_markdown: >-
   Software versioning is used to categorize the unique states of software as it is developed and released. The version identifier might be a word, or a number, or inlcude both. For example, version 1.0 is often used to represent the initial release of a software product. <br>
   <br>
-  The following attributes are examples of the manufactuer node attributes: 
-  * `manufacturer` provides the name of the manufacturer.
-  * `technopedia_id` provides a unique ID.
-  * `description` provides a description of the manfacturer.
-  <br>
  
-  The following MATCH query returns information about the manufacturer called Microsoft.
   In Technopedia software versions are represented by the following three nodes:
     
-  - The software version node represents the software versions.<br>
-  - The Software Version Group node represents software version groups.<br>
-  - The Software Major Version represents major software versions. <br>
+  * The software version node represents the software versions.  <br>
+  * The Software Version Group node represents software version groups.  <br>
+  * The Software Major Version represents major software versions.  <br>
   <br>
+
   The relationship bewtween the nodes is labeled as `HAS_A` which points from:<br>
   `SOFTWARE_VERSION` to `SOFTWARE_VERSION_GROUP` and `SOFTWARE_MAJOR_VERSION`.<br>
   <br>
