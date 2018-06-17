@@ -11,14 +11,16 @@ content_markdown: >-
 
   * Use the Technopedia query language (TQL) with the TQL endpoint (`/tql`) to create custom queries that you use to query the Technopedia database.<br>
   <br>
+
+  Your Technopedia subscription determines your level of access to Technopedia data outside of the core Technopedia data.
+    {: .info}
   
   #### Get an API key<br>
      
   Before you can get data from data from the Technopedia database, you must get an API key from Flexera Technopedia support.
   The API key authorizes you to access the data that you are permitted to access with your subscription.
 
-    Your Technopedia subscription determines your level of access to Technopedia data outside of the core Technopedia data.
-    {: .info}
+    
     
   #### Making API Requests to Technopedia<br>
 
