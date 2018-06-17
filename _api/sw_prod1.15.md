@@ -17,6 +17,7 @@ content_markdown: >-
   <br>
   The following diagram shows the six software nodes and their relationships.
   <br>
+  
   ![API Image](/images/sw_prod.png){: .img-responsive}<br>&nbsp;
 
   #### Query Examples <br>

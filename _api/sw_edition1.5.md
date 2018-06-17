@@ -12,7 +12,6 @@ content_markdown: |-
   
   `MATCH (e:SOFTWARE_EDITION {edition: 'Black'}) RETURN e`
   
-
   <br>
   The following example is a query to find an edition that is named: "Advanced Partitioning Option":<br>
   <br>
@@ -20,6 +19,7 @@ content_markdown: |-
   <br>
   
   The following diagram shows the sofware editon node and its related software nodes.
+  
   <br>
   ![API Image](/images/sw_edition.png){:class="img-responsive"} <br>
 
