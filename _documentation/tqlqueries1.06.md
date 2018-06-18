@@ -106,6 +106,10 @@ content_markdown: |-
   `MATCH (e:SOFTWARE_EDITION)<-[x:HAS_A]-(r:SOFTWARE_RELEASE)-[y:HAS_A]->(v:SOFTWARE_VERSION)-[z:HAS_A]->(p:SOFTWARE_PRODUCT) RETURN r,e,v,p`<br>
 
   <br>
+  The following result is a sample of the output from the query:<br>
+  <br>
+  ![API Image](/images/4byattrib.png) <br> &nbsp;
+  
    
   <b>Query Intent:</b> Get software editions and include the release, verison, product, and manufacturer.<br>
   <br>
