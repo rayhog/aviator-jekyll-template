@@ -103,17 +103,17 @@ content_markdown: |-
   <br>
   In this query example, you return software editions in Technopedia that include release, verison, and product information. <br>
 
-  `MATCH (e:SOFTWARE_EDITION)<-[x:HAS_A]-(r:SOFTWARE_RELEASE)-[y:HAS_A]->(v:SOFTWARE_VERSION)-[z:HAS_A]->(p:SOFTWARE_PRODUCT) RETURN r,e,v,p`<br>
+  `MATCH (e:SOFTWARE_EDITION)<-[x:HAS_A]-(r:SOFTWARE_RELEASE)-[y:HAS_A]->(v:SOFTWARE_VERSION)-[z:HAS_A]->(p:SOFTWARE_PRODUCT) RETURN r,e,v,p LIMIT 1`<br>
 
   <br>
-  The following result is a sample of the output from the query:<br>
+  The following image shows a single result that shows all attributes for edition, release, version and product:<br>
   <br>
   ![API Image](/images/4byattrib.png) <br> &nbsp;
   
    
   <b>Query Intent:</b> Get software editions and include the release, verison, product, and manufacturer.<br>
   <br>
-  In this query example, you get data for software editions in Technopedia, and include the release, version, product, and manufacturer data for each edition that is listed. This example is an extension of the previous example whrere we add manufacturer data. <br>
+  In this query example, you get data for software editions in Technopedia, and include the release, version, product, and manufacturer data for each edition that is listed. This example is an extension of the previous example where we add manufacturer data but we only return one attribute from each of the five nodes. <br>
 
   `MATCH (e:SOFTWARE_EDITION)<-[:HAS_A]-(r:SOFTWARE_RELEASE)-[:HAS_A]->(v:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_PRODUCT)-[:HAS_A]->(m:MANUFACTURER) 
   RETURN e.edition,r.release,v.version,p.product, m.manufacturer LIMIT 10`<br>
