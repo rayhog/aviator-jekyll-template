@@ -78,9 +78,9 @@ content_markdown: |-
 
   * Nodes are connected by relationships that you use to query multiple nodes in a single query. 
 
-  ###### The following graph shows the Technopedia nodes and relationships:
+  ###### The following graph shows the core Technopedia nodes and relationships:
   
-  ![API Image](/images/graph.png){: .img-responsive}<br>&nbsp;
+  ![API Image](/images/graph1.png){: .img-responsive}<br>&nbsp;
 
 left_code_blocks:
   - code_block: |-
