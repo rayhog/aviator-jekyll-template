@@ -321,4 +321,51 @@ right_code_blocks:
       (MANUFACTURER)-[:HAS_A]->(CPU_MODEL)
     title: Relationships
     language: bash
+    
+  - code_block: |2-
+      WHERE
+      Return software products where the name field is equal to ‘Office’. 
+
+      MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office"  RETURN s
+
+      AND
+      Return software products where name is Office and the family is HealthMatics. 
+
+      MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" AND s.family = "HealthMatics" RETURN s 
+           
+      OR
+      Return software products where product name is Office or HealthMatics. 
+
+      MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" OR s.product = "HealthMatics" RETURN s 
+            
+      COUNT
+      Return count of records. 
+
+      MATCH (s:SOFTWARE_PRODUCT) RETURN count(*) 
+
+      DISTINCT
+      Return distinct records only, which do not show duplicates.
+
+      MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Microsoft Exchange Server Monitor" RETURN DISTINCT s 
+      
+      CONTAINS
+      Use the CONTAINS clause to return results when an attribute word value is matched. 
+
+      MATCH (s:SOFTWARE_PRODUCT) WHERE s.product CONTAINS "Microsoft" RETURN s 
+
+      AS
+      Return output parameter as another name. 
+
+      MATCH (n:SOFTWARE_EDITION) RETURN n.edition as ED, n.modified_at as MOD
+
+      ORDER BY
+      Return list of products in descending order.
+      
+      MATCH (n:SOFTWARE_PRODUCT) RETURN n.product ORDER BY n.product  DESC 
+
+      Operators =, <>, >, <, >=, <=
+    title: TQL Clauses and examples
+    language: text  
+
+      
 ---

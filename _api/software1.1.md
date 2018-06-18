@@ -355,7 +355,12 @@ right_code_blocks:
 
       MATCH (n:SOFTWARE_EDITION) RETURN n.edition as ED, n.modified_at as MOD
 
+      ORDER BY
+      Return list of products in descending order.
+      
+      MATCH (n:SOFTWARE_PRODUCT) RETURN n.product ORDER BY n.product  DESC 
+
       Operators =, <>, >, <, >=, <=
     title: TQL Clauses and examples
-    language: text    
+    language: text
 ---

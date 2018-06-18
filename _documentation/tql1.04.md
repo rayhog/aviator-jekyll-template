@@ -18,7 +18,7 @@ content_markdown: |-
   For example, `MATCH (software:SOFTWARE_RELEASE) RETURN software`<br>
   
   You append the MATCH query statement as a query parameter to the TQL endpoint.<br>
-  For example, `https://v6.technopedia.com/tql?q=<MATCH statement>`
+  For example, `https://v6-1.technopedia.com/tql?q=<MATCH statement>`
   <br>
   
   The TQL MATCH statement returns results from one or more nodes and relationships that you specify in the query. Typically, the query results are returned in key-value pairs, which resembles the format in the following image: <br>
@@ -29,10 +29,10 @@ content_markdown: |-
   
   #### Components of a TQL MATCH query<br>
 
-  To create a MATCH statement, you need some or all of the following components:
+  To create a TQL MATCH statement, you need some or all of the following components:
   
   * MATCH <br>
-    The MATCH clause introduces the statement like SELECT in SQL and is the first input.<br> 
+    The MATCH clause introduces the statement like SELECT in SQL and is the first part of any query.<br> 
     You use MATCH to select a node in Technopedia.<br>
     `MATCH` <br>
   * Node <br>
@@ -237,6 +237,10 @@ content_markdown: |-
   * AS <br>
   Return output as another name. <br>
   `MATCH (n:SOFTWARE_EDITION) RETURN n.edition as ED, n.modified_at as MOD` <br>
+
+  * ORDER BY
+  Return list of products in descending order.
+   `MATCH (n:SOFTWARE_PRODUCT) RETURN n.product ORDER BY n.product DESC`   
 
   * Operators <br>
   `=` equals <br>
@@ -493,6 +497,34 @@ left_code_blocks:
 
     title: Example six
     language: javascript
+
+  - code_block: |-
+      MATCH (a:SOFTWARE_PRODUCT{product:"e1ns.output"}) 
+      RETURN a
+
+      RESPONSE SAMPLE
+
+      {
+        "results": [
+            {
+                "a.alias": null,
+                "a.component": null,
+                "a.created_at": "2017-05-19 10:24:33",
+                "a.desupported_flag": null,
+                "a.discontinued_flag": null,
+                "a.family": null,
+                "a.is_suite": "FALSE",
+                "a.modified_at": "2017-06-01 13:50:16",
+                "a.product": "e1ns.output",
+                "a.technopedia_id": "408dd3bb-c935-444e-b756-c7d431a589f7",
+                "a.url": "http://www.plato.de/e1nsoutput-687.html"
+            }
+        ]
+      {  
+    
+
+    title: Example seven
+    language: javascript  
   - code_block: |-
       curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6-1.technopedia.com/tql" --data-urlencode' "q=MATCH (n:SOFTWARE_RELEASE) RETURN n.release
 
@@ -561,6 +593,7 @@ right_code_blocks:
       DISTINCT 
       CONTAINS
       AS
+      ORDER BY
       Operators =, <>, >, <, >=, <=
     title: TQL Clauses and Operators
     language: bash
