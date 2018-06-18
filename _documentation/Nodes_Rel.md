@@ -12,7 +12,7 @@ content_markdown: >-
 
   ######
   You can use an API GET request for product information in Technopedia by referencing the Technopedia ID.<br>
-  You specify the Technopedia ID as a parameter for the Technopedia-id TQL endpoint. <br>
+  You specify the Technopedia ID as a parameter for the Technopedia-id endpoint. <br>
   <br>
   GET `https://v6-1.technopedia.com/technopedia-id/<technopedia-id>` <br>
   <br>
@@ -50,8 +50,8 @@ content_markdown: >-
   ######
   Relationships provide semantically relevant connections between the Technopedia nodes. <br>
   
-  To get Technopedia data from multiple nodes in one query, you use relationships to traverse nodes and define the criteria for the data that you want to extract from the database.
-  For example, you might want data for manufacturer, software edtion, and software product in a single query. To get data from these nodes, you must use relationships in your query to connect the nodes when you create the query.
+  To get Technopedia data from multiple nodes in one query, you must use relationships to connect nodes and define the criteria for the data that you want to extract from Technopedia.
+  For example, you might want data for manufacturer, software edtion, and software product in a single query. To get data from these nodes, you must add relationships in your query to connect the nodes.
 
   The following information provides an overview of relationships in the Technopedia database:
 
