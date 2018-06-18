@@ -17,9 +17,9 @@ content_markdown: |-
   
   * `MATCH (n:VERTICAL) RETURN n.label`
 
-  The following images shows an example of the output for CATEGORY_1 labels:
+  The following images shows an example of the output for `CATEGORY_1` labels:
 
-  ![API Image](/images/cat_one.png){:class="img-responsive"} <br>
+  ![API Image](/images/cat1.png){:class="img-responsive"} <br>
   <br>
   
   The following diagram shows the categories and vertical nodes, and relationships.
