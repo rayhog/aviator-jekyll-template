@@ -4,27 +4,11 @@ position: 1.04
 type:
 description: >-  
 content_markdown: >-
+  The Technopedia database is a graph database that is based on nodes and relationships that connect those nodes.
   You access Technopedia data by referencing nodes, attributes, relationships, or Technopedia IDs in the Technopedia graph.<br>
   <br>
+  The graph database stores connections between nodes as first-class citizens so it doesn’t have to compute relationships at query time, which makes it more efficient than a relational database.
   
-  #### GET request with the Technopedia ID
-  <br>
-
-  ######
-  You can use an API GET request for product information in Technopedia by referencing the Technopedia ID.<br>
-  You specify the Technopedia ID as a parameter for the Technopedia-id endpoint. <br>
-  <br>
-  GET `https://v6-1.technopedia.com/technopedia-id/<technopedia-id>` <br>
-  <br>
-  
-  #### 
-  GET request by using the Technopedia query language (TQL)
-
-  ######
-  The main method for acessing information in Technopedia is by using the API with the Technopedia query language (TQL) to query nodes and relationships in the Technopedia database.<br>
-  <br>
-  GET `https://v6-1.technopedia.com/tql?q=<TQL_query>`<br>
-  <br>
 
   #### About Nodes in Technopedia
   

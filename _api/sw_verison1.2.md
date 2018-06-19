@@ -305,7 +305,7 @@ right_code_blocks:
 
       SOFTWARE MAJOR VERSION 
       technopedia_id
-      version
+      version_group
       
 
     title: Software Version Attributes

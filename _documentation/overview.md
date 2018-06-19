@@ -76,7 +76,8 @@ content_markdown: |-
   pairs such as the following examples: <br>
   `{product: Excel}` or `{manufacturer: Microsoft}`.
 
-  * Nodes are connected by relationships that you use to query multiple nodes in a single query. 
+  * Nodes are connected by relationships that you use to connect nodes in a single query.
+   
 
   ###### The following graph shows the core Technopedia nodes and relationships:
   
