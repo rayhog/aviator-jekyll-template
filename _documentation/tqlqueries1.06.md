@@ -125,6 +125,7 @@ content_markdown: |-
   To get information about a relationship that has attributes, we can assign it an alias for later reference. 
   The  alias is placed in front of the colon that precedes the relationship:<br>
   `-[anyAlias:Relationship_name]->(node)` <br>
+  <br>
   Here's an example: <br>
   `MATCH (:SOFTWARE_RELEASE)-[h:HAS_A {end_date: "2013-12-10 00:00:00"}]->(:SUPPORT_STAGE) RETURN h`  
   

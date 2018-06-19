@@ -47,7 +47,7 @@ content_markdown: >-
    * Relationships connect the Technopedia database nodes, for example, the software product node has the relationship: `[HAS_A]->` to the manufacturer node.
    * Relationships allow you to traverse the Technopedia Nodes and by using the Technopedia query language, and to get data from the specified nodes in one query.
    * Like nodes, relationships can also have attributes. 
-     Typically, relationship have quantitative attributes, such as time intervals.
+     Typically, relationships have quantitative attributes, such as time intervals.
 
 
   The following diagram is a simple overview of nodes and relationships:

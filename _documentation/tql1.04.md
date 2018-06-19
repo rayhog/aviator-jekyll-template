@@ -67,7 +67,7 @@ content_markdown: |-
 
   
   <br>
-  The following qeury examples are based on the nodes and relationship in the diagram:
+  The following query examples are based on the nodes and relationship in the diagram:
   <br>
   
   ![API Image](/images/simple_match.png)<br>&nbsp;

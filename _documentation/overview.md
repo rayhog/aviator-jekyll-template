@@ -7,7 +7,7 @@ content_markdown: |-
   Technopedia version 6.1 API enables cloud-based access to asset data in Technopedia, which provides you with a cloud-first and high-performance resource to manage your assets.<br>
   <br>
   In the Technopedia graph database, nodes represent entities such as software or hardware. 
-  Nodes in Technopedia are somewhat equivalent to a category of records such as CPU or manufacturer.
+  Nodes in Technopedia are somewhat equivalent to a records classification such as CPU or manufacturer.
   In Technopedia graph database relationships directly store the connections between nodes, whereas, in relational databases 
   related data is linked by using a record's unique key in another record's data. <br>
 
@@ -16,8 +16,13 @@ content_markdown: |-
   
   ![API Image](/images/ovr.png){: .img-responsive}
   <br>
-
+    
+  The following diagram shows an overview of the Technopedia API enpoints, and examples of nodes and relationships in the Technopedia database.
   <br>
+  
+  ![API Image](/images/V6api.png){: .img-responsive}
+  <br>
+  
   You query the Technopedia database by using either of the following methods:
 
   * By using the graph-based Technopedia query language (TQL) endpoint. <br>
@@ -26,13 +31,6 @@ content_markdown: |-
   The Technopedia ID record stores information about a Technopedia entity. <br>
   For example; the entity might be a product or it might be specific node attribute that returns relevant data.  
 
-  <br>
-    
-  The following diagram shows an overview of the Technopedia API enpoints, and examples of nodes and relationships in the Technopedia database.
-  <br>
-  
-  ![API Image](/images/V6api.png){: .img-responsive}
-  <br>
 
   The following query example is an API GET request that uses the TQL endpoint. <br>
   <br>
