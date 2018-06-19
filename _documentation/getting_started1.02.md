@@ -91,10 +91,11 @@ content_markdown: >-
   <br>
   GET `https://v6-1.technopedia.com/technopedia-id/<technopedia-id>` <br>
   <br>
-  
-  {: .success}
 
   Tip: You can view Technopedia IDs by querying a node, for example, `MATCH (alias:NODE) RETURN alias`
+
+  {: .warning}
+
   
   #### 
   GET request by using the Technopedia query language (TQL)
