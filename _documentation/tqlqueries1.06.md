@@ -122,6 +122,11 @@ content_markdown: |-
   <br>
   ![API Image](/images/edtomanu.png) <br> &nbsp;
   
+  To get information about a relationship that has attributes, we can assign it an alias for later reference. 
+  The  alias is placed in front of the colon that precedes the relationship:<br>
+  `-[anyAlias:Relationship_name]->(node)` <br>
+  Here's an example: <br>
+  `MATCH (:SOFTWARE_RELEASE)-[h:HAS_A {end_date: "2013-12-10 00:00:00"}]->(:SUPPORT_STAGE) RETURN h`  
   
  
   The following `MATCH` query examples show variations in constructions that use relationships and other conditions. To try out a query example, you append the `MATCH` statement to the following `/tql` endpoint and make a GET request from a API client or use cURL. <br>

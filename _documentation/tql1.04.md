@@ -16,7 +16,7 @@ content_markdown: |-
   To create a query by using TQL, you must create a MATCH statement, which is similar to a Select statement in SQL.<br>
   For example, `MATCH (software:SOFTWARE_RELEASE) RETURN software`<br>
   
-  You append the MATCH query statement as a query parameter to the TQL endpoint.<br>
+  You add the MATCH query statement as a query parameter to the TQL endpoint.<br>
   For example, `https://v6-1.technopedia.com/tql?q=<MATCH statement>`
   <br>
   
