@@ -5,7 +5,11 @@ position: 1.01
 description: 
 content_markdown: |-
   Technopedia version 6.1 API enables cloud-based access to asset data in Technopedia, which provides you with a cloud-first and high-performance resource to manage your assets.<br>
-  Technopedia is a Graph database that is designed to process data by using a graph-based methodology, rather than a relational database model.<br>
+  In Technopedia, nodes represent entities such as software or hardware. 
+  Nodes in Technopedia are somewhat equivalent to a table in a Technopedia relational database .
+  In Technopedia relationships directly store the relationships between nodes, whereas, in relational databases 
+  related data is linked by using a record's unique key in another record's data. <br>
+
   <br>
   You query the Technopedia database by using either of the following methods:
 
