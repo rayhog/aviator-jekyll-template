@@ -18,7 +18,7 @@ content_markdown: |-
   `MATCH (s.SOFTWARE_PRODUCT)<-[:HAS_A]-(n:SOFTWARE_EDITION) WHERE n.edition = "Advanced Partitioning Option" RETURN n`
   <br>
   
-  The following diagram shows the sofware editon node and its related software nodes.
+  The following diagram shows attributes for the sofware editon node, and its related software nodes.
   
   <br>
   ![API Image](/images/sw_edition.png){:class="img-responsive"} <br>
@@ -78,6 +78,7 @@ left_code_blocks:
   - code_block: >-
       MATCH (e:SOFTWARE_EDITION {edition: 'Server'}) 
       RETURN e 
+      
       
       RESPONSE SAMPLE
 
@@ -172,7 +173,6 @@ left_code_blocks:
       {
         "results": [
             {
-                
                 "Edition": "Server",
                 "Edition_order": 5,
                 "Product": "Windows NT"

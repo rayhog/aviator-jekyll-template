@@ -248,7 +248,10 @@ left_code_blocks:
                 "vertical.technopedia_id": "0be7a9ed-b538-4942-b6ce-b9243566305f"
             },
             {
-                "cat_2.description": "A common type of computer printer that rapidly produces high quality text and graphics on plain paper. It employs a xerographic printing process, where image is produced by the direct scanning of a laser beam across the printer's photoreceptor",
+                "cat_2.description": "A common type of computer printer that rapidly produces high 
+                quality text and graphics on plain paper. It employs a xerographic printing process, 
+                where image is produced by the direct scanning of a laser beam 
+                across the printer's photoreceptor",
                 "cat_2.label": "Laser Printers",
                 "cat_2.technopedia_id": "bcb655cc-b5ef-4915-838f-8ff68cb65cce",
                 "hardware.create_date": null,

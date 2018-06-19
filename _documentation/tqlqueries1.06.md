@@ -5,15 +5,15 @@ type:
 description:
   
 content_markdown: |-
-  TQL queries can be based on a single node or multiple nodes where you need to include relationships to get data from multiple nodes in one  query. For many TQL queries, you have to use relationships to query several Technopedia nodes. Relationships might seem complex but one of their main functions is to connect nodes. <br>
+  TQL queries can be based on a single node, or multiple nodes where you need to include relationships to get data from multiple nodes in one  query. For many TQL queries, you have to use relationships to query several Technopedia nodes. Relationships might seem complex but one of their main functions is to connect nodes. <br>
   <br>
-  Because TQL is a declarative query language, you can build your query with multiple nodes, relationships, attributes,and add multiple conditions to refine your query.<br>
+  Because TQL is a declarative query language, you can build your query with multiple nodes, relationships, attributes, and add multiple conditions to refine your query.<br>
   
 
   Like nodes, relationships can have attributes. Add an alias to the relationship when you want to return data for those relationship attributes. TQL binds the alias that you specify to the relationship, which you can refer to in the `RETURN` clause of the `MATCH` statement to retrieve your queried data.
   {: .warning}
 
-  #### Building relationships in a query<br>
+  #### Building relationships to connect nodes in a query<br>
 
   
   Relationships provide connections to other nodes, which enables you to get data from multiple nodes in one query. You connect the nodes by using the relationship that's shown in the database graph. <br>
@@ -95,7 +95,7 @@ content_markdown: |-
   1. To get the required information, you start with the software edition and then add relationships to the software release, software version,     and software product nodes.<br>
   2. Use MATCH to select the software edtion node and then create relationships to the other nodes.<br>
       `MATCH (e:SOFTWARE_EDITION)`
-  3. Add the release, version, and product nodes by adding relationships.
+  3. Add the release, version, and product nodes by adding relationships.<br>
       `MATCH (e:SOFTWARE_EDITION)<-[x:HAS_A]-(r:SOFTWARE_RELEASE)-[y:HAS_A]->(v:SOFTWARE_VERSION)-[z:HAS_A]->(p:SOFTWARE_PRODUCT)`  
   4. Add an alias to each node in the query that you want to get data from.<br>
   5. To return the data that you need, use the Return clause to refer to the specific aliases.<br>
@@ -113,10 +113,10 @@ content_markdown: |-
    
   <b>Query Intent:</b> Get software editions and include the release, verison, product, and manufacturer.<br>
   <br>
-  In this query example, you get data for software editions in Technopedia, and include the release, version, product, and manufacturer data for each edition that is listed. This example is an extension of the previous example where we add manufacturer data but we only return one attribute from each of the five nodes. <br>
+  In this query example, you get data for software editions in Technopedia, and include the release, version, product, and manufacturer data for each edition that is listed. This example is an extension of the previous example where we add manufacturer data but we only return one attribute from each of the five nodes. You return a single attribute by appending the alias to that attribute folloiwng the `RETURN` clause, for example, `RETURN e.edition` to return the edition attribute only.  <br>
 
   `MATCH (e:SOFTWARE_EDITION)<-[:HAS_A]-(r:SOFTWARE_RELEASE)-[:HAS_A]->(v:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_PRODUCT)-[:HAS_A]->(m:MANUFACTURER) 
-  RETURN e.edition,r.release,v.version,p.product, m.manufacturer LIMIT 10`<br>
+  RETURN e.edition,r.release,v.version,p.product, m.manufacturer LIMIT 3`<br>
   <br>
   The following results are a sample of the output from the query:<br>
   <br>
@@ -186,7 +186,7 @@ left_code_blocks:
 
       {
         "results": [
-        {
+            {
                     
                 "m.manufacturer": "Oracle",
                 "se.edition": "Web",
@@ -455,10 +455,10 @@ right_code_blocks:
 
       MATCH (n:SOFTWARE_EDITION) RETURN n.edition as ED, n.modified_at as MOD
 
-      ORDER BY
+      ORDER BY ascending (ASC) or decending (DESC) order
       Return list of products in descending order.
       
-      MATCH (n:SOFTWARE_PRODUCT) RETURN n.product ORDER BY n.product  DESC 
+      MATCH (n:SOFTWARE_PRODUCT) RETURN n.product ORDER BY n.product DESC 
 
       Operators =, <>, >, <, >=, <=
     title: TQL Clauses and examples

@@ -19,7 +19,7 @@ content_markdown: >-
   ![API Image](/images/sw_release.png){:class="img-responsive"} <br>
   <br>
  
-  The software release node connects to the software edtion, software nodes, and support stage nodes by the `HAS_A` relationship. <br>
+  The software release node connects to the software edtion, software version, and support stage nodes by the `HAS_A` relationship. <br>
   <br>
   The software release and support stage nodes are connected by the `HAS_A` relationship, which has its own attributes.
   <br>

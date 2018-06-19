@@ -15,8 +15,9 @@ content_markdown: >-
   `MATCH (n:SOFTWARE_PRODUCT) WHERE n.product = "PDF Converter" RETURN n` <br>
   
   <br>
-  The following diagram shows the six software nodes and their relationships.
+  The following diagram shows attributes for the software product node with the other software nodes and their relationships.<br>
   <br>
+
 
   ![API Image](/images/sw_prod.png){: .img-responsive}<br>&nbsp;
 

@@ -26,7 +26,7 @@ content_markdown: >-
   `MATCH (a:SOFTWARE_VERSION) RETURN a.version`<br>
   <br>
 
-  The following diagram shows the nodes, attributes, and relationships that feature software nodes and their relationships.
+  The following diagram shows the attributes for the software version node, the other software nodes.
 
   <br>
   ![API Image](/images/sw_ver.png){:class="img-responsive"} <br>
@@ -52,7 +52,7 @@ content_markdown: >-
   The following query returns software version group information:
 
 
-  `MATCH (a:SOFTWARE_VERSION_GROUP) RETURN a.version`
+  `MATCH (a:SOFTWARE_VERSION_GROUP) RETURN a.version_group`
 
   <br>
 
@@ -301,13 +301,13 @@ right_code_blocks:
 
       SOFTWARE VERSION GROUP
       technopedia_id
-      version
+      version_group
       modified_at
       
 
       SOFTWARE MAJOR VERSION 
       technopedia_id
-      version_group
+      version
       
 
     title: Software Version Attributes

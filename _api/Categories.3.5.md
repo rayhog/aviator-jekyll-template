@@ -29,25 +29,26 @@ content_markdown: |-
   <br>
   ### Category Group
   
-  This category node features high-level classifications, such as Business Applications, Network Equipment, and Automatic Teller Machine (ATM). This categories parent is `CATEGORY_GROUP`, which features more global clasifications. 
+  The category group node features high-level classifications, such as Business Applications, Network Equipment, and Automatic Teller Machine (ATM). 
   <br>
   Get a list of `CATEGORY_GROUP` labels by running the following MATCH query with the TQL endpoint:
   <br>
-  `MATCH (n:CATEGORY_2) 
+  `MATCH (n:CATEGORY_GROUP) 
   RETURN n.label`
   
   ### Category 1
 
   This category 1 node references classifications such as  Storage Area Networks (SAN), Collaboration", Cash/Coin Detector and Help and Service Desk. <br>
   <br>
-  Get a list of `CATEGORY_GROUP` labels by running the following MATCH query with the TQL endpoint:
+  Get a list of `CATEGORY_1` labels by running the following MATCH query with the TQL endpoint:
   <br>
-  `MATCH (n:CATEGORY_2) 
+  `MATCH (n:CATEGORY_1) 
   RETURN n.label`
 
   ### Category 2
 
-  This category 2 node references classifications that are more granular than Categrory 1 or Category Group, such as Sound Masking, Retail Hardware, Diagnostic and Therapeutic Radiation/Imaging Devices", "Cheque Deposit Machine (CQM) and Handhelds.
+  This category 2 node references classifications that are more granular than Categrory 1 or Category Group, such as Sound Masking, Retail Hardware, Diagnostic and Therapeutic Radiation/Imaging Devices", "Cheque Deposit Machine (CQM) and Handhelds.<br>
+  <br>
   Get a list of `CATEGORY_2` labels by running the following MATCH query with the TQL endpoint:
   <br>
   `MATCH (n:CATEGORY_2) RETURN n.label`
@@ -173,7 +174,8 @@ left_code_blocks:
                 users can create a workspace and add workflow in order to achieve commmon goal",
                 "c.label": "Collaboration",
                 "c.technopedia_id": "3916d728-0401-43c2-a158-dcac6a0ffd0c",
-                "n.description": "A status indicator that conveys ability and willingness of a potential communication partner",
+                "n.description": "A status indicator that conveys ability and willingness of a 
+                potential communication partner",
                 "n.label": "Presence",
                 "n.technopedia_id": "6b009946-ee6f-4821-bd0a-03a25a8710fe"
             },
@@ -182,8 +184,8 @@ left_code_blocks:
                 users can create a workspace and add workflow in order to achieve commmon goal",
                 "c.label": "Collaboration",
                 "c.technopedia_id": "3916d728-0401-43c2-a158-dcac6a0ffd0c",
-                "n.description": "An online service, platform, or site that focuses on building and reflecting of social networks or 
-                social relations among people, who, for example, share interests and/or activities",
+                "n.description": "An online service, platform, or site that focuses on building and reflecting of 
+                social networks or social relations among people, who, for example, share interests and/or activities",
                 "n.label": "Social Networking",
                 "n.technopedia_id": "0869fc49-1870-41f5-801b-480238c60782"
             }
