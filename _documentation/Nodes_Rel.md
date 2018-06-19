@@ -34,8 +34,8 @@ content_markdown: >-
   ######
   Relationships provide semantically relevant connections between the Technopedia nodes. <br>
   
-  To get Technopedia data from multiple nodes in one query, you must use relationships to connect nodes and define the criteria for the data that you want to retrieve from Technopedia.
-  For example, you might want data for manufacturer, software edtion, and software product in a single query. To get data from these nodes, you must add relationships in your query to connect the nodes.
+  To get Technopedia data from multiple nodes in one query, you must use relationships in the query to connect the nodes that you want to get data from.
+  For example, you might want data for manufacturer, software edtion, and software product in a single query.
 
   The following information provides an overview of relationships in the Technopedia database:
 
