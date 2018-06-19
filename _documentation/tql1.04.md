@@ -67,18 +67,27 @@ content_markdown: |-
 
   
   <br>
-  The following examples are based on the nodes and relationship in the diagram:
+  The following qeury examples are based on the nodes and relationship in the diagram:
   <br>
   
   ![API Image](/images/simple_match.png)<br>&nbsp;
   <br>  
-  `MATCH (alias:SOFTWARE_EDITON) RETURN alias` <br>
-  `MATCH (x:SOFTWARE_EDITON) RETURN x.edition` <br>
-  `MATCH (y:SOFTWARE_PRODUCT) RETURN y` <br>
-  `MATCH (sp:SOFTWARE_PRODUCT) RETURN sp.product` <br>
+   *  `MATCH (alias:SOFTWARE_EDITON) RETURN alias` <br>
+       Return all software editions and attributes <br>
 
-  `MATCH (z:SOFTWARE_EDITON)-[HAS_A]->(k:SOFTWARE_PRODUCT) RETURN z, k.product` <br>
-  Returns all attributes for software editon and related products by product name. <br>
+   *  `MATCH (x:SOFTWARE_EDITON) RETURN x.edition` <br>
+       Return all software editions with only the edition attribute <br>
+
+   *  `MATCH (y:SOFTWARE_PRODUCT) RETURN y` <br>
+       Return all software products and attributes <br>
+
+   *  `MATCH (sp:SOFTWARE_PRODUCT) RETURN sp.product` <br>
+       Return all software products with only the product attribute <br>
+
+   *  `MATCH (z:SOFTWARE_EDITON)-[HAS_A]->(k:SOFTWARE_PRODUCT) RETURN z, k.product` <br>
+       Returns all attributes for software editon and related products by product name. <br>    
+
+    
   <br>
   The following TQL query shows the most common components of a MATCH statement:
   <br>
