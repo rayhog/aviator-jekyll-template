@@ -14,17 +14,6 @@ content_markdown: >-
    * Software Version Group node represents software version groups.  <br>
    * Software Major Version represents major software versions.  <br>
 
-  The following information provides an overview of relationships in the Technopedia database:
-
-   * Relationships have a type, such as `BELONGS_TO` and a direction, such as node x to node y. <br>
-     An arrow determines the direction of the relationship. <br>
-     For example `(node x)-[BELONGS_TO]->(node y)` <br>
-   * Relationships often exist in a single direction but they can be bidirectional, in which case, there's no arrow.
-     For example `(node x)-[BELONGS_TO]-(node y)` <br>    
-   * Relationships connect the Technopedia database nodes, for example, the software product node has the relationship: `[HAS_A]->` to the manufacturer node.
-   * Relationships allow you to traverse the Technopedia Nodes and by using the Technopedia query language, and to get data from the specified nodes in one query.
-   * Like nodes, relationships can also have attributes. 
-     Typically, relationship have quantitative attributes, such as time intervals.
   
   <br>
 
