@@ -5,9 +5,10 @@ position: 1.01
 description: 
 content_markdown: |-
   Technopedia version 6.1 API enables cloud-based access to asset data in Technopedia, which provides you with a cloud-first and high-performance resource to manage your assets.<br>
-  In Technopedia, nodes represent entities such as software or hardware. 
-  Nodes in Technopedia are somewhat equivalent to a table in a Technopedia relational database .
-  In Technopedia relationships directly store the relationships between nodes, whereas, in relational databases 
+  <br>
+  In the Technopedia graph database, nodes represent entities such as software or hardware. 
+  Nodes in Technopedia are somewhat equivalent to a category of records such as CPU or manufacturer.
+  In Technopedia graph database relationships directly store the connections between nodes, whereas, in relational databases 
   related data is linked by using a record's unique key in another record's data. <br>
 
   <br>
