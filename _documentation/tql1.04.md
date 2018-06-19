@@ -35,7 +35,7 @@ content_markdown: |-
     You use MATCH to select a node in Technopedia.<br>
     `MATCH` <br>
   * Node <br>
-    Typically, you refer to a node in the graph as your source of data for the query.<br> 
+    Typically, you refer to a node or nodes in the graph as your source of data for the query.<br> 
     Nodes in a query are predeced by a (:) colon. <br>
     `MATCH (:node)` <br>
   * Alias <br>
@@ -50,7 +50,7 @@ content_markdown: |-
     You don't need to append an alias to the relationship, unless, you want to get data back from that relationship. <br>
     `MATCH (aliasx:node1)-[:RELATED_TO]->(aliasy:node2), RETURN aliasx, aliasy` <br>
   * Relationship direction <br>
-    The direction of the relationship is shows the relationship from node to node. <br> 
+    The direction of the relationship shows the relationship from node to node. <br> 
     An arrow in the query shows a unidirectional relationship, and no arrows indicate a birdirectional relationship. <br>
     For example, node_software is manufactured_by node_manufacturer <br>
     `(:node_software)-[:MANUFACTURED_BY]->(:node_manufacturer)` <br>
@@ -100,7 +100,7 @@ content_markdown: |-
   #### Overview of creating a TQL query<br>
 
 
-  The following diagram shows a basic overview of creating a query with TQL:
+  The following diagram shows a basic overview of the initial steps you take to create a query with TQL:
   <br>
   
   ![API Image](/images/match.png)<br>&nbsp;
@@ -108,7 +108,7 @@ content_markdown: |-
   
 
   <br>
-  Use the following guidelines to help you to build a basic query:
+  Use the following guidelines to help you get started with building a basic query:
 
    1.	Identify the relevant node or nodes that store the data you want to retrieve.<br>
    2.	Identify any node attributes that you want to target for your data, for example, you use the product
@@ -128,7 +128,7 @@ content_markdown: |-
   <b>Query Intent:</b> To find software products that contain Adobe in their product name.<br>
 
   The Software Product node has an attribute named product that lists the product name.<br>
-  View the list of attributes that you can use on the Software Product page, or you can use <br>
+  View the list of attributes that you can use on the Software Product page, or you can use the query: <br>
   `MATCH(x:SOFTWARE_PRODUCT) RETURN x` to get a list of attributes. <br>
 
     1. Use the MATCH clause to select the `SOFTWARE_PRODUCT` because it
@@ -140,10 +140,14 @@ content_markdown: |-
     3. Use the `WHERE` clause with the `CONTAINS` clause to specify the condition `product CONTAINS "Adobe"`.<br>
        `WHERE s.product CONTAINS "Adobe"`
     4. Refer to the alias in the RETURN clause to list software products that contain Adobe in the product name.  <br>
-       `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product CONTAINS "Adobe" Return s`
+       `Return s`
+
+    The following query is the completed query:<br>
+    `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product CONTAINS "Adobe" Return s`<br>
 
   <br>
-  In this example, software products that have Adobe in the product field are returned. The following sample return shows two results for Adobe.<br>
+  In this example, software products that have Adobe in the product field are returned. <br>
+  The following sample return shows two results for software products that have Adobe in their product name.<br>
   <br>
   ![API Image](/images/adobe_contains.png)<br>&nbsp;
   <br>  
@@ -154,21 +158,21 @@ content_markdown: |-
 
   <br>
 
-  The following diagram shows the software nodes and the relationship directions.
+  The following diagram shows the software nodes and the relationships directions.
   <br>
   
   ![API Image](/images/sw_graph.png)<br>&nbsp;
   <br>  
   
   
-   For any queries that use relationships, follow the relationship direction in the node graph.
+   For any queries that use relationships, follow the relationship direction that's shown in the node graph.
    {: .warning}
 
   <br>
-  <b>Query Intent:</b> To get software editions named "Enterprise Developer" and where the edition order is equal to two.  <br>
+  <b>Query Intent:</b> To get software editions named "Enterprise Developer" and add the condition where the edition order is equal to two.  <br>
   In this query, you only have to query the software edition node.
     
-    1. Use `MATCH` to select the software edtion node, and add the alias `se` to the node that you refer to in the `RETURN` clause.<br>
+    1. Use `MATCH` to select the software edtion node, and add the alias `se`or any other alias to the node that you refer to in the `RETURN` clause.<br>
       `MATCH (se:SOFTWARE_EDITION)`
     2. Use the `WHERE` and `AND` clauses to add conditions that filter the output.<br>
       `MATCH (alias:SOFTWARE_EDITION) WHERE s.order = 2 AND s.edition = "Enterprise Developer"`<br>
@@ -179,6 +183,8 @@ content_markdown: |-
   In this query example, you return software editions in Technopedia by edition, order, and Technopedia ID: <br>
 
   `MATCH (s:SOFTWARE_EDITION) WHERE s.order = 2 AND s.edition = "Enterprise Developer" RETURN s.edition, s.order, s.technopedia_id`<br>
+  <br>
+  The following image shows the data that is returned for the query:<br>
   <br>
   ![API Image](/images/edition_query.png)<br>&nbsp;
   <br>  
@@ -192,18 +198,20 @@ content_markdown: |-
       `MATCH (s:SOFTWARE_EDITION)-[:HAS_A]->(p:SOFTWARE_PRODUCT)`<br>
        You must add an alias for software product becuause you use the alias (p) in the return clause to return the product name.  
     3. You use the `RETURN` clause to select the query output by referring to the alias and attributes.<br>
-       You use the attributes edition from software edition and product from the software product node.<br> 
+       You use the attributes `edition` from software edition and `product` from the software product node.<br> 
        `RETURN s.edition, p.product` or you can return all attributes by using `RETURN s, p` <br>  
     4. To limit the number of results, you use the `LIMIT` clause to limit the results to five or any number that you want.<br>   
 
         
    ![API Image](/images/ed_to_prod.png)<br>&nbsp;
   <br>
-  In this query example, you return five software editions in Technopedia by edition and product name: <br>
+  In this query example, you return five software editions from Technopedia by edition and product name: <br>
 
   `MATCH (s:SOFTWARE_EDITION)-[:HAS_A]->(p:SOFTWARE_PRODUCT) RETURN s.edition, p.product LIMIT 5`<br>
-
   <br>
+  The following image shows the data that is returned for the query:<br>
+  <br>
+
   ![API Image](/images/prod_ed.png)<br>&nbsp;
   <br>  
     
@@ -246,8 +254,8 @@ content_markdown: |-
   Return output as another name. <br>
   `MATCH (n:SOFTWARE_EDITION) RETURN n.edition as ED, n.modified_at as MOD` <br>
 
-  * ORDER BY
-  Return list of products in descending order.
+  * ORDER BY in DESC or ASC order <br>
+  Return list of products in ascending or descending order.<br>
    `MATCH (n:SOFTWARE_PRODUCT) RETURN n.product ORDER BY n.product DESC`   
 
   * Operators <br>
