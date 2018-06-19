@@ -11,6 +11,12 @@ content_markdown: |-
   In Technopedia graph database relationships directly store the connections between nodes, whereas, in relational databases 
   related data is linked by using a record's unique key in another record's data. <br>
 
+  Here's a basic overview of the Technopedia graph database that shows a few nodes and relationships:
+  <br>
+  
+  ![API Image](/images/ovr.png){: .img-responsive}
+  <br>
+
   <br>
   You query the Technopedia database by using either of the following methods:
 
