@@ -64,8 +64,8 @@ content_markdown: >-
   The API key is provided by Flexera Technopedia support.
 
   In the following examples, an API key example is used with cURL and in the Postman API client. <br>
+
   The key `Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a` is used in both of the following examples.
-  <br>
   <br>
   The following example shows the API key in a cURL request:<br>
   <br>
@@ -85,11 +85,16 @@ content_markdown: >-
   <br>
 
   ######
-  You can use an API GET request for product information in Technopedia by referencing the Technopedia ID.<br>
+  You can make an API GET request to any entity in Technopedia by referencing the Technopedia ID. 
+  For example, you can get details for a product item, or any entity such as an attribute in the Technopedia database. <br>
   You specify the Technopedia ID as a parameter for the Technopedia-id endpoint. <br>
   <br>
   GET `https://v6-1.technopedia.com/technopedia-id/<technopedia-id>` <br>
   <br>
+  
+  {: .success}
+
+  Tip: You can view Technopedia IDs by querying a node, for example, `MATCH (alias:NODE) RETURN alias`
   
   #### 
   GET request by using the Technopedia query language (TQL)

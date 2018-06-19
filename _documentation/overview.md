@@ -62,11 +62,13 @@ content_markdown: |-
 
 
   * `https://v6-1.technopedia.com/tql?q=MATCH <Query Parameters>`
+    
     ###### You provide query parameters in the TQL MATCH statement to generate the criteria for your query, as shown in the following example:<br>
     
     GET: `https://v6-1.technopedia.com/tql?q=MATCH (sft:SOFTWARE_PRODUCT) RETURN sft`<br>
 
   * `https://v6-1.technopedia.com/technopedia-id/<Technopedia ID>.`
+    
     ###### You provide the Technopedia ID for the entity that you're querying to return data for that specific entity. 
     The following example shows a dummy Technopedia ID: <br>
     

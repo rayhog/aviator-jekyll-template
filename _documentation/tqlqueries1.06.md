@@ -38,8 +38,8 @@ content_markdown: |-
 
    1.	Select the Nodes that you want to use in your query.<br>
    2.	Identify the node attributes that store the information you require.<br>
-   3.	Select any relationships to connect to nodes that hold your required data.<br>
-   4.	Write your MATCH statement
+   3.	Identify any relationships that are required to connect nodes that hold your targeted data.<br>
+   4.	Write your MATCH statement.
 
   <br>
   
