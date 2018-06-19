@@ -4,7 +4,7 @@ position: 3.2
 type: 
 description: 
 content_markdown: |-
-  The CPU model node in the Technopedia database stores information about CPUs, such as the model ID, number or cores, and model information. 
+  The `CPU_MODEL` node in the Technopedia database stores information about CPUs, such as the model ID, number or cores, and model information. 
 
   The `CPU_MODEL` node is connected to the `MANUFACTURER` node by the `HAS_A` relationship, which points from the `MANUFACTURER` to the `CPU_MODEL` node.
 
@@ -13,7 +13,7 @@ content_markdown: |-
   `MATCH (n:CPU_MODEL) RETURN n LIMIT 25`
   <br>
     
-  The following diagram shows the CPU node and other nodes. <br>
+  The following diagram shows the `CPU_MODEL` node and other nodes. <br>
   <br>
   ![API Image](/images/cpu.png){:class="img-responsive"} <br>
   
