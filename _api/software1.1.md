@@ -14,7 +14,8 @@ content_markdown: |-
   `MATCH (a:SOFTWARE_RELEASE) RETURN a.release`
   <br>
 
-  Use a combination of the software nodes with relationships to query software data in Technopedia. 
+  Use a combination of the software nodes with relationships to query software data in Technopedia. <br>
+  
   The following diagram shows the software nodes, manufacturer node, and relationships.
   <br>
   ![API Image](/images/node_ex.png){:class="img-responsive"} <br> 
