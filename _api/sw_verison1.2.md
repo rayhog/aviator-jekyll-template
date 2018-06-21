@@ -17,7 +17,7 @@ content_markdown: >-
   
   <br>
 
-  The relationship bewtween the nodes is labeled as `HAS_A` which points from:<br>
+  The relationship between the nodes is labeled as `HAS_A` which points from:<br>
   `SOFTWARE_VERSION` to `SOFTWARE_VERSION_GROUP` and `SOFTWARE_MAJOR_VERSION`.<br>
   <br>
 
@@ -26,7 +26,7 @@ content_markdown: >-
   `MATCH (a:SOFTWARE_VERSION) RETURN a.version`<br>
   <br>
 
-  The following diagram shows the attributes for the software version node, the other software nodes.
+  The following diagram shows the attributes for the software version node, and showe the other related software nodes.
 
   <br>
   ![API Image](/images/sw_ver.png){:class="img-responsive"} <br>

@@ -7,17 +7,18 @@ content_markdown: |-
   Technopedia version 6.1 API enables cloud-based access to asset data in Technopedia, which provides you with a cloud-first and high-performance resource to manage your assets.<br>
   <br>
   In the Technopedia graph database, nodes represent entities such as software or hardware. 
-  Nodes in Technopedia are somewhat equivalent to a records classification such as CPU or manufacturer.
-  In Technopedia graph database relationships directly store the connections between nodes, whereas, in relational databases 
+  Nodes in Technopedia are somewhat equivalent to a records category such as CPU or manufacturer.
+  In the Technopedia graph database relationships store the connections between nodes, whereas, in relational databases 
   related data is linked by using a record's unique key in another record's data. <br>
 
-  Here's a basic overview of the Technopedia graph database that shows a few nodes and relationships:
+  The following diagram shows an example of some nodes and relationships in the Technopedia graph database.
   <br>
   
   ![API Image](/images/ovr.png){: .img-responsive}
+
   <br>
-    
-  The following diagram shows an overview of the Technopedia API enpoints, and examples of nodes and relationships in the Technopedia database.
+  <br>
+  The following diagram shows an overview of the Technopedia API endpoints, and some nodes and relationships in the Technopedia database.
   <br>
   
   ![API Image](/images/V6api.png){: .img-responsive}
@@ -43,11 +44,13 @@ content_markdown: |-
 
 
 
-  #### What’s included in Technopedia V6 API?
+  #### What’s included in Technopedia V6.1 API?
 
 
   * Graph store organization model that enables Technopedia to store asset data
   from any entity.
+
+  * High performance data retrieval.
 
   * TQL (Technopedia Query Language) endpoint that you use for graph-based
   querying of the Technopedia database.
@@ -55,7 +58,7 @@ content_markdown: |-
   * Technopedia-id endpoint that you use to query any Technopedia entity by its ID.
 
 
-  #### What are the V6 API Endpoints?
+  #### What are the V6.1 API Endpoints?
 
 
   ###### To query the Technopedia database you use one of the following two endpoints:

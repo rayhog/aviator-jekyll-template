@@ -64,7 +64,7 @@ content_markdown: >-
   The API key is provided by Flexera Technopedia support.
 
   In the following examples, an API key example is used with cURL and in the Postman API client. <br>
-
+  <br>
   The key `Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a` is used in both of the following examples.
   <br>
   The following example shows the API key in a cURL request:<br>

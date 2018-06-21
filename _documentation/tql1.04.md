@@ -7,8 +7,8 @@ description:
 content_markdown: |-
   You create queries by using the Technopedia query language (TQL), which you use with the TQL endpoint to retrieve data from the Technopedia database. <br>
   <br>
-  TQL is the graph-query language that you use to query the database. 
-  TQL is a declarative query language that allows you to specify what data you want to retrieve by using the query language to query nodes and relationships in the Technopedia database.
+  TQL is the graph-query language that you use to query the Technopedia database. 
+  TQL is a declarative query language that allows you to specify the data you want to retrieve by using the query language to query nodes, relationships, and attributes in the Technopedia database.
 
 
   #### Get started with TQL<br>
@@ -123,7 +123,8 @@ content_markdown: |-
   {: .warning}
 
   <br>
-  Here’s some examples:
+  Here’s some query examples:
+
   <br>
   <b>Query Intent:</b> To find software products that contain Adobe in their product name.<br>
 
@@ -142,7 +143,7 @@ content_markdown: |-
     4. Refer to the alias in the RETURN clause to list software products that contain Adobe in the product name.  <br>
        `Return s`
 
-    The following query is the completed query:<br>
+    The following query is the complete query:<br>
     `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product CONTAINS "Adobe" Return s`<br>
 
   <br>
@@ -169,10 +170,10 @@ content_markdown: |-
    {: .warning}
 
   <br>
-  <b>Query Intent:</b> To get software editions named "Enterprise Developer" and add the condition where the edition order is equal to two.  <br>
-  In this query, you only have to query the software edition node.
+  <b>Query Intent:</b> To get software editions named "Enterprise Developer" where the edition order is equal to two.  <br>
+  In this query, you query the software edition node.
     
-    1. Use `MATCH` to select the software edtion node, and add the alias `se`or any other alias to the node that you refer to in the `RETURN` clause.<br>
+    1. Use `MATCH` to select the software edtion node, and add the alias `se` or any other alias to the node that you refer to in the `RETURN` clause.<br>
       `MATCH (se:SOFTWARE_EDITION)`
     2. Use the `WHERE` and `AND` clauses to add conditions that filter the output.<br>
       `MATCH (alias:SOFTWARE_EDITION) WHERE s.order = 2 AND s.edition = "Enterprise Developer"`<br>
@@ -181,7 +182,7 @@ content_markdown: |-
 
   <br>
   In this query example, you return software editions in Technopedia by edition, order, and Technopedia ID: <br>
-
+  
   `MATCH (s:SOFTWARE_EDITION) WHERE s.order = 2 AND s.edition = "Enterprise Developer" RETURN s.edition, s.order, s.technopedia_id`<br>
   <br>
   The following image shows the data that is returned for the query:<br>
@@ -205,11 +206,12 @@ content_markdown: |-
         
    ![API Image](/images/ed_to_prod.png)<br>&nbsp;
   <br>
-  In this query example, you return five software editions from Technopedia by edition and product name: <br>
+  In this query example, you use a relationship to connect nodes, and you return five software editions and corresponding product names: <br>
+  The `HAS_A` relationship connects the software edtiion and software product nodes, which allows you to get data from both nodes.
 
   `MATCH (s:SOFTWARE_EDITION)-[:HAS_A]->(p:SOFTWARE_PRODUCT) RETURN s.edition, p.product LIMIT 5`<br>
   <br>
-  The following image shows the data that is returned for the query:<br>
+  The following image shows the data that is returned by the query:<br>
   <br>
 
   ![API Image](/images/prod_ed.png)<br>&nbsp;
@@ -239,7 +241,7 @@ content_markdown: |-
   `MATCH (s:SOFTWARE_PRODUCT) RETURN s LIMIT 5` <br>
 
   * CONTAINS <br>
-  Use the CONTAINS clause to search for words that are contained within an attribute field. <br>
+  Use the CONTAINS clause to match words that are contained within an attribute field. <br>
   `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product CONTAINS "Microsoft" RETURN s` <br>
 
   * DISTINCT <br>
@@ -541,6 +543,33 @@ left_code_blocks:
 
     title: Example seven
     language: javascript  
+
+  title: Example six
+    language: javascript
+
+  - code_block: |-
+      MATCH (:HARDWARE_PRODUCT)-[H:HAS_A]-(m:MANUFACTURER {symbol:'NTAP'}) 
+      RETURN 
+      m.manufacturer AS manu_name, 
+      m.description AS desc 
+      LIMIT 1
+
+      RESPONSE SAMPLE
+
+      {
+        "results": [
+            {
+                "desc": "NetApp, Inc. (NetApp), formerly Network Appliance, Inc., 
+                is a provider of storage and data management solutions. 
+                (Google Finance: http://www.google.com/finance?q=netapp)",
+                "manu_name": "NetApp"
+            }
+        ]
+      {  
+    
+
+    title: Example eight
+    language: javascript    
   - code_block: |-
       curl -G -H "Authorization: Bearer b93477a9-057b-4878-a16b93477a9-057b-4878-a16f-d7f7d1f27a7af-d7f7d1f27a7a" "https://v6-1.technopedia.com/tql" --data-urlencode' "q=MATCH (n:SOFTWARE_RELEASE) RETURN n.release
 

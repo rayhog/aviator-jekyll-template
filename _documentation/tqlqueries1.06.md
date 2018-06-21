@@ -23,9 +23,10 @@ content_markdown: |-
   Note the direction of the relationship in the graph. If you specify an incorrect direction, you might not get data from the nodes that you want to connect with.
 
   
-  
+  <br>
 
   The following image shows examples of types of relationships and their directions.
+  <br>
    
   ![API Image](/images/relat.png)<br>&nbsp;
   <br>  
@@ -61,7 +62,7 @@ content_markdown: |-
          
        `MATCH (m:MANUFACTURER)<-[:HAS_A]-(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION)` <br>
 
-    3. Add the `WHERE` clause to return "Oracle".<br>
+    3. Add the `WHERE` clause to filter the manufacturer attribute for "Oracle".<br>
       `WHERE m.manufacturer = "Oracle"` <br>
     4. Return data by using the aliases that are assigned to the nodes in the `MATCH` statement.<br>
        `RETURN m.manufacturer, sp.product, sv.version, sr.release, se.edition` <br>
@@ -96,14 +97,14 @@ content_markdown: |-
   2. Use MATCH to select the software edtion node and then create relationships to the other nodes.<br>
       `MATCH (e:SOFTWARE_EDITION)`
   3. Add the release, version, and product nodes by adding relationships.<br>
-      `MATCH (e:SOFTWARE_EDITION)<-[x:HAS_A]-(r:SOFTWARE_RELEASE)-[y:HAS_A]->(v:SOFTWARE_VERSION)-[z:HAS_A]->(p:SOFTWARE_PRODUCT)`  
+      `MATCH (e:SOFTWARE_EDITION)<-[:HAS_A]-(r:SOFTWARE_RELEASE)-[:HAS_A]->(v:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_PRODUCT)`  
   4. Add an alias to each node in the query that you want to get data from.<br>
   5. To return the data that you need, use the Return clause to refer to the specific aliases.<br>
       `RETURN r,e,v,p`
   <br>
   In this query example, you return software editions in Technopedia that include release, verison, and product information. <br>
 
-  `MATCH (e:SOFTWARE_EDITION)<-[x:HAS_A]-(r:SOFTWARE_RELEASE)-[y:HAS_A]->(v:SOFTWARE_VERSION)-[z:HAS_A]->(p:SOFTWARE_PRODUCT) RETURN r,e,v,p LIMIT 1`<br>
+  `MATCH (e:SOFTWARE_EDITION)<-[:HAS_A]-(r:SOFTWARE_RELEASE)-[:HAS_A]->(v:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_PRODUCT) RETURN r,e,v,p LIMIT 1`<br>
 
   <br>
   The following image shows a single result that shows all attributes for edition, release, version and product:<br>
