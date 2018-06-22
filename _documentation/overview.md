@@ -19,7 +19,7 @@ content_markdown: |-
 
   <br>
   <br>
-  You use the API endpoints with the Technopedia query language to query the Technopedia database.
+  You use the API endpoints with the Technopedia query language to query the Technopedia database. <br>
   The following diagram shows an overview of the Technopedia API endpoints, and some nodes and relationships in the Technopedia database.
   
   <br>
