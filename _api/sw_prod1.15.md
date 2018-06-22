@@ -147,8 +147,16 @@ left_code_blocks:
                 "sr.technopedia_id": "4aa33382-7a99-4210-8e71-7b7680879acd",
                 "sr.url": null,
                 "st.created_at": "2005-09-09 15:00:46",
-                "st.definition": "Extended Support phase follows Mainstream Support for Business and Developer products. \r\nAt the supported service pack
-                 level, Extended Support includes:\r\nPaid support\r\nSecurity update support at no additional cost\r\nNon-security related hotfix support requires a separate Extended Hotfix Support Agreement to be purchased (per-fix fees also apply)\r\nMicrosoft will not accept requests for warranty support, design changes, or new features during the Extended Support phase\r\nExtended Support is not available for Consumer, Hardware, Multimedia, and Microsoft Dynamics products\r\nSee http://support.microsoft.com/lifecycle/",
+                "st.definition": "Extended Support phase follows Mainstream Support for Business and Developer products. 
+                 At the supported service pack level, Extended Support includes: 
+                 Paid support\r\nSecurity update support at no additional cost 
+                 Non-security related hotfix support requires a separate Extended Hotfix Support Agreement 
+                 to be purchased (per-fix fees also apply)
+                 Microsoft will not accept requests for warranty support, design changes, 
+                 or new features during the Extended Support phase 
+                 Extended Support is not available for Consumer, Hardware, 
+                 Multimedia, and Microsoft Dynamics products
+                 See http://support.microsoft.com/lifecycle/",
                 "st.modified_at": "2016-07-15 14:49:36",
                 "st.order": 2,
                 "st.support_stage": null,
@@ -181,8 +189,12 @@ left_code_blocks:
                 "sr.technopedia_id": "734576e8-8ef4-4707-be61-3c5ecd133802",
                 "sr.url": null,
                 "st.created_at": "2005-09-09 15:00:46",
-                "st.definition": "Self-Help Online Support is available throughout a product's lifecycle and for a minimum of 12 months after the product
-                 reaches the end of its support. By using the Microsoft online Knowledge Base articles, FAQs, troubleshooting tools, and other resources, many customers can quickly resolve their issues without needing to contact Microsoft directly.\r\nSee http://support.microsoft.com/lifecycle/",
+                "st.definition": "Self-Help Online Support is available throughout a product's lifecycle 
+                 and for a minimum of 12 months after the product
+                 reaches the end of its support. By using the Microsoft online Knowledge Base articles, 
+                 FAQs, troubleshooting tools, and other resources, many customers can quickly 
+                 resolve their issues without needing to contact Microsoft directly.
+                 See http://support.microsoft.com/lifecycle/",
                 "st.modified_at": "2016-07-15 14:49:36",
                 "st.order": 3,
                 "st.support_stage": null,
@@ -199,8 +211,16 @@ left_code_blocks:
                 "sr.technopedia_id": "734576e8-8ef4-4707-be61-3c5ecd133802",
                 "sr.url": null,
                 "st.created_at": "2005-09-09 15:00:46",
-                "st.definition": "Extended Support phase follows Mainstream Support for Business and Developer products. \r\nAt the supported service pack
-                 level, Extended Support includes:\r\nPaid support\r\nSecurity update support at no additional cost\r\nNon-security related hotfix support  requires a separate Extended Hotfix Support Agreement to be purchased (per-fix fees also apply)\r\nMicrosoft will not accept requests for warranty support, design changes, or new features during the Extended Support phase\r\nExtended Support is not available for Consumer, Hardware, Multimedia, and Microsoft Dynamics products\r\nSee http://support.microsoft.com/lifecycle/",
+                "st.definition": "Extended Support phase follows Mainstream Support for Business and Developer products. 
+                 At the supported service pack
+                 level, Extended Support includes:
+                 Paid support\r\nSecurity update support at no additional cost 
+                 Non-security related hotfix support  requires a separate 
+                 Extended Hotfix Support Agreement to be purchased (per-fix fees also apply) 
+                 Microsoft will not accept requests for warranty support, design changes, or new features 
+                 during the Extended Support phase Extended Support is not available for Consumer, 
+                 Hardware, Multimedia, and Microsoft Dynamics products. 
+                 See http://support.microsoft.com/lifecycle/",
                 "st.modified_at": "2016-07-15 14:49:36",
                 "st.order": 2,
                 "st.support_stage": null,
