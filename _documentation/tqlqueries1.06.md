@@ -147,14 +147,12 @@ content_markdown: |-
       `RETURN sv.product`
   <br>
   Here's the complete query:
-  `MATCH (:SOFTWARE_EDITION {edition:\ 'Black'})-[:HAS_A]-(sv:SOFTWARE_PRODUCT) RETURN sv.product`
-  In this query example, you return the product name for the software edition named 'Black'. <br>
-
-  `"results": [ `<br>
-       ` {`<br>
-           ` "sv.product": "Need for Speed Most Wanted"` <br>
-       ` }`<br>
-  
+  `MATCH (:SOFTWARE_EDITION {edition: 'Black'})-[:HAS_A]-(sv:SOFTWARE_PRODUCT) RETURN sv.product` <br>
+  In this query example, the product name for the software edition named 'Black' is returned. <br>
+  The output from this query returns the following data, which is the product name only for the 'Black' software edtion: <br>
+  <br>
+   `"sv.product": "Need for Speed Most Wanted"` <br>
+   <br>    
  
   The following `MATCH` query examples show variations in constructions that use relationships and other conditions. To try out a query example, you append the `MATCH` statement to the following `/tql` endpoint and make a GET request from a API client or use cURL. <br>
   <br>
