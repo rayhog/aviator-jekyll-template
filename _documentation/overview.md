@@ -16,9 +16,12 @@ content_markdown: |-
   
   ![API Image](/images/ovr.png){: .img-responsive}
 
+
   <br>
   <br>
+  You use the API endpoints with the Technopedia query language to query the Technopedia database.
   The following diagram shows an overview of the Technopedia API endpoints, and some nodes and relationships in the Technopedia database.
+  
   <br>
   
   ![API Image](/images/V6api.png){: .img-responsive}
