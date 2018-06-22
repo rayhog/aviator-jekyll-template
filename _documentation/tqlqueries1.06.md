@@ -37,10 +37,10 @@ content_markdown: |-
   <br>
   To incoporate multiple nodes in a MATCH statement you must use relationships to connect the nodes and then use the `RETURN` clause to get data from the nodes in the query. Use the following guide to help you to build your query:
 
-   1.	Select the Nodes that you want to use in your query.<br>
-   2.	Identify the node attributes that store the information you require.<br>
-   3.	Identify any relationships that are required to connect nodes that hold your targeted data.<br>
-   4.	Write your MATCH statement.
+   1. Select the Nodes that you want to use in your query.<br>
+   2. Identify the node attributes that store the information you require.<br>
+   3. Identify any relationships that are required to connect nodes that hold your targeted data.<br>
+   4. Write your MATCH statement.
 
   <br>
   
@@ -93,13 +93,13 @@ content_markdown: |-
   <br>
   <b>Query Intent:</b> To get data for software editions, and include the release, verison, and product information.<br>
 
-  1. To get the required information, you start with the software edition and then add relationships to the software release, software version,     and software product nodes.<br>
-  2. Use MATCH to select the software edtion node and then create relationships to the other nodes.<br>
+    1. To get the required information, you start with the software edition and then add relationships to the software release, software version,     and software product nodes.<br>
+    2. Use MATCH to select the software edtion node and then create relationships to the other nodes.<br>
       `MATCH (e:SOFTWARE_EDITION)`
-  3. Add the release, version, and product nodes by adding relationships.<br>
+    3. Add the release, version, and product nodes by adding relationships.<br>
       `MATCH (e:SOFTWARE_EDITION)<-[:HAS_A]-(r:SOFTWARE_RELEASE)-[:HAS_A]->(v:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_PRODUCT)`  
-  4. Add an alias to each node in the query that you want to get data from.<br>
-  5. To return the data that you need, use the Return clause to refer to the specific aliases.<br>
+    4. Add an alias to each node in the query that you want to get data from.<br>
+    5. To return the data that you need, use the Return clause to refer to the specific aliases.<br>
       `RETURN r,e,v,p`
   <br>
   In this query example, you return software editions in Technopedia that include release, verison, and product information. <br>
@@ -137,20 +137,20 @@ content_markdown: |-
   <br>
   <b>Query Intent:</b> To get product name for a software edition named "Black".<br>
 
-  1. To get the required information, you start with the software edition and then add a relationship to the software product because you want to return the product name.<br>
-  2. Use `MATCH` to select the software edtion node, and then you specify the edition attribute inside the curly braces. <br>
+    1. To get the required information, you start with the software edition and then add a relationship to the software product because you want to return the product name.<br>
+    2. Use `MATCH` to select the software edtion node, and then you specify the edition attribute inside the curly braces. <br>
      `MATCH (SOFTWARE_EDITION {edition:\ 'Black'})`     
-  3. Add a relationship from software editon to the software product node, and add an alias to the software product node. <br>
+    3. Add a relationship from software editon to the software product node, and add an alias to the software product node. <br>
      `-[:HAS_A]->(sfw_prod:SOFTWARE_PRODUCT)` 
-  4. Add an alias to each node in the query that you want to get data from.<br>
-  5. To return the product name data that you need, use the Return clause to refer the alias that you assigned to the product node.<br>
+    4. Add an alias to each node in the query that you want to get data from.<br>
+    5. To return the product name data that you need, use the Return clause to refer the alias that you assigned to the product node.<br>
       `RETURN sv.product`
   <br>
-  Here's the complete query:\
+  Here's the complete query:
   `MATCH (:SOFTWARE_EDITION {edition:\ 'Black'})-[:HAS_A]-(sv:SOFTWARE_PRODUCT) RETURN sv.product`
   In this query example, you return the product name for the software edition named 'Black'. <br>
 
- `"results": [ `<br>
+  `"results": [ `<br>
        ` {`<br>
            ` "sv.product": "Need for Speed Most Wanted"` <br>
        ` }`<br>

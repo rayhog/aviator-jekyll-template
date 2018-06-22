@@ -30,26 +30,26 @@ content_markdown: |-
 
   To create a TQL MATCH statement, you need some or all of the following components:
   
-  * MATCH <br>
+   * MATCH <br>
     The MATCH clause introduces the statement like SELECT in SQL and is the first part of any query.<br> 
     You use MATCH to select a node in Technopedia.<br>
     `MATCH` <br>
-  * Node <br>
+   * Node <br>
     Typically, you refer to a node or nodes in the graph as your source of data for the query.<br> 
     Nodes in a query are predeced by a (:) colon. <br>
     `MATCH (:node)` <br>
-  * Alias <br>
+   * Alias <br>
     To enable the `RETURN` clause to return data from a node, you append an alias to the node, for example, 'MATCH (alias:node)'. <br>
     TQL binds the unique alias to the node so that you can refer to that alias in the Return clause of <br>
     the MATCH query to request specific data. <br>
     `MATCH (alias:node) RETURN alias` <br>
     You can also use the alias to specify specific node attributes that you want to return. <br>
     `MATCH (alias:node) RETURN alias.attribute1, alias.attribute2` <br>
-  * Relationship <br>
+   * Relationship <br>
     To get data from more than one node in a query, you must use a relationship to connect the nodes. <br>
     You don't need to append an alias to the relationship, unless, you want to get data back from that relationship. <br>
     `MATCH (aliasx:node1)-[:RELATED_TO]->(aliasy:node2), RETURN aliasx, aliasy` <br>
-  * Relationship direction <br>
+   * Relationship direction <br>
     The direction of the relationship shows the relationship from node to node. <br> 
     An arrow in the query shows a unidirectional relationship, and no arrows indicate a birdirectional relationship. <br>
     For example, node_software is manufactured_by node_manufacturer <br>
@@ -57,7 +57,7 @@ content_markdown: |-
     Typically, relationships are unidirectional but they can be bidirectional. <br>
     A bidirectional relationship is represented without an arrow, for example, <br>
     `(:node_software)-[:MANUFACTURED_BY]-(:node_manufacturer)`<br>
-  * RETURN <br>
+   * RETURN <br>
     The RETURN clause defines the data that you want to get back by referring to the alias. <br>
     `MATCH (aliasx:node1) RETURN aliasx` to return all attributes for that node <br>
     `MATCH (aliasx:node1) RETURN aliasx.attribute_xyz` to return only data for `attribute_xyz` from `node1` <br>
@@ -221,38 +221,38 @@ content_markdown: |-
 
   Use the following clauses and operators in your MATCH statements to filter Technopedia data:
 
-  * WHERE, <br>
+   * WHERE, <br>
   Use the `WHERE` clause to filter results. <br>
   `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office"  RETURN s` <br>
   Return software products where the product field is equal to 'Office'. <br>
 
-  * AND <br>
+   * AND <br>
   Use the AND clause to add an addtional filter.<br>
   `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" AND s.family = "HealthMatics"  RETURN s` <br>
   Return software products where product name is Office and the family is HealthMatics. <br>
 
-  * OR <br>
+   * OR <br>
   Use the OR clause to  return either one of two condtions. <br>
   `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Office" OR s.product = "HealthMatics" RETURN s ` <br>
   Return software products where product name is Office or HealthMatics. <br>
   
-  * LIMIT <br>
+   * LIMIT <br>
   Limit the number of results that are returned by specifiying a number with the LIMIT clause. <br>
   `MATCH (s:SOFTWARE_PRODUCT) RETURN s LIMIT 5` <br>
 
-  * CONTAINS <br>
+   * CONTAINS <br>
   Use the CONTAINS clause to match words that are contained within an attribute field. <br>
   `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product CONTAINS "Microsoft" RETURN s` <br>
 
-  * DISTINCT <br>
+   * DISTINCT <br>
   Return distinct records only. <br>
   `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product = "Microsoft Exchange Server Monitor" RETURN DISTINCT s` <br>
 
-  * COUNT <br>
+   * COUNT <br>
   Return count of records. <br>
   `MATCH (s:SOFTWARE_PRODUCT) RETURN count(*)` <br>
 
-  * AS <br>
+   * AS <br>
   Return output as another name. <br>
   `MATCH (n:SOFTWARE_EDITION) RETURN n.edition as ED, n.modified_at as MOD` <br>
 
