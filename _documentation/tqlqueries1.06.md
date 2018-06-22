@@ -111,6 +111,10 @@ content_markdown: |-
   <br>
   ![API Image](/images/4byattrib.png) <br> &nbsp;
   
+
+
+
+  <br>
    
   <b>Query Intent:</b> Get software editions and include the release, verison, product, and manufacturer.<br>
   <br>
@@ -129,6 +133,27 @@ content_markdown: |-
   <br>
   Here's an example: <br>
   `MATCH (:SOFTWARE_RELEASE)-[h:HAS_A {end_date: "2013-12-10 00:00:00"}]->(:SUPPORT_STAGE) RETURN h`  
+
+  <br>
+  <b>Query Intent:</b> To get product name for a software edition named "Black".<br>
+
+  1. To get the required information, you start with the software edition and then add a relationship to the software product because you want to return the product name.<br>
+  2. Use `MATCH` to select the software edtion node, and then you specify the edition attribute inside the curly braces. <br>
+     `MATCH (SOFTWARE_EDITION {edition:\ 'Black'})`     
+  3. Add a relationship from software editon to the software product node, and add an alias to the software product node. <br>
+     `-[:HAS_A]->(sfw_prod:SOFTWARE_PRODUCT)` 
+  4. Add an alias to each node in the query that you want to get data from.<br>
+  5. To return the product name data that you need, use the Return clause to refer the alias that you assigned to the product node.<br>
+      `RETURN sv.product`
+  <br>
+  Here's the complete query:\
+  `MATCH (:SOFTWARE_EDITION {edition:\ 'Black'})-[:HAS_A]-(sv:SOFTWARE_PRODUCT) RETURN sv.product`
+  In this query example, you return the product name for the software edition named 'Black'. <br>
+
+ `"results": [ `<br>
+       ` {`<br>
+           ` "sv.product": "Need for Speed Most Wanted"` <br>
+       ` }`<br>
   
  
   The following `MATCH` query examples show variations in constructions that use relationships and other conditions. To try out a query example, you append the `MATCH` statement to the following `/tql` endpoint and make a GET request from a API client or use cURL. <br>
