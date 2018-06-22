@@ -544,8 +544,6 @@ left_code_blocks:
     title: Example seven
     language: javascript  
 
-  title: Example six
-    language: javascript
 
   - code_block: |-
       MATCH (:HARDWARE_PRODUCT)-[H:HAS_A]-(m:MANUFACTURER {symbol:'NTAP'}) 

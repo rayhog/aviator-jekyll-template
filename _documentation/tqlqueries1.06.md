@@ -139,7 +139,7 @@ content_markdown: |-
 
     1. To get the required information, you start with the software edition and then add a relationship to the software product because you want to return the product name.<br>
     2. Use `MATCH` to select the software edtion node, and then you specify the edition attribute inside the curly braces. <br>
-     `MATCH (SOFTWARE_EDITION {edition:\ 'Black'})`     
+     `MATCH (SOFTWARE_EDITION {edition: 'Black'})`     
     3. Add a relationship from software editon to the software product node, and add an alias to the software product node. <br>
      `-[:HAS_A]->(sfw_prod:SOFTWARE_PRODUCT)` 
     4. Add an alias to each node in the query that you want to get data from.<br>
@@ -147,11 +147,11 @@ content_markdown: |-
       `RETURN sv.product`
   <br>
   Here's the complete query:
-  `MATCH (:SOFTWARE_EDITION {edition: 'Black'})-[:HAS_A]-(sv:SOFTWARE_PRODUCT) RETURN sv.product` <br>
-  In this query example, the product name for the software edition named 'Black' is returned. <br>
+  `MATCH (:SOFTWARE_EDITION {edition: 'Black'})-[:HAS_A]-(sv:SOFTWARE_PRODUCT) RETURN sfw_prod.product` <br>
+  <br>
   The output from this query returns the following data, which is the product name only for the 'Black' software edtion: <br>
   <br>
-   `"sv.product": "Need for Speed Most Wanted"` <br>
+   `"sfw_prod.product": "Need for Speed Most Wanted"` <br>
    <br>    
  
   The following `MATCH` query examples show variations in constructions that use relationships and other conditions. To try out a query example, you append the `MATCH` statement to the following `/tql` endpoint and make a GET request from a API client or use cURL. <br>
