@@ -8,7 +8,7 @@ content_markdown: |-
   <br>   
   
     
-  #### Data Retrieval from Technopedia
+  #### You use the API to retrieve asset data in JSON format
 
   The Technopedia version 6.1 API provides you with read access to the Technopedia database by using an API GET request to retreive asset data.
     * To get access to the Technopedia database, all you require is an API key that you get from Flexera technial support.<br>
