@@ -21,8 +21,8 @@ content_markdown: |-
   `GET:` `https://v6-1.technopedia.com/tql?=MATCH (n:SOFTWARE_PRODUCT) RETURN n.product` <br>
 
   The query returns software product names.<br>
-
-  The following image shows a result for one software product.
+  The following image shows results for one software product.
+  
   <br>
   
   ![API Image](/images/ov_ex.png){: .img-responsive}
