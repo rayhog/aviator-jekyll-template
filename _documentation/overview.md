@@ -25,7 +25,7 @@ content_markdown: |-
      [Technopedia queries](../#documentationtql104)
   
   To retrieve data from Technopedia, the most common practice you'll undertake is to write queries to use with the API.
-  You use the Technopedia query language (TQL) to write structured queries that are similar to SQL in structure. <br>
+  You use the Technopedia query language (TQL) to write queries that are similar to SQL in structure. <br>
     
   #### Making API GET requests to retrieve asset data 
   <br>
@@ -101,7 +101,7 @@ left_code_blocks:
               "sft_prod.product": "ID Web Authentication Software Development Kit (SDK)",
               "sft_prod.technopedia_id": "359e53c0-6cda-4e3b-aaa1-2b05537ca718",
               "sft_prod.url": "http://www.microsoft.com/Downloads/details.aspx?
-               familyid=E565FC92-D5F6-4F5F-8713-4DD1C90DE19F&displaylang=en"
+               familyid=E565FC92-D5F6-4F5F-8713-4DD1C90DE19F&displaylang=en" 
           }
         ]
       {  
