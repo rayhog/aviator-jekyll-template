@@ -49,10 +49,12 @@ content_markdown: >-
   For the Technopedia-id endpoint, you provide the Technopedia ID parameter.<br>
 
   `https://v6-1.technopedia.com/technopedia-id/<Technopedia ID>`<br>
+  For example, `https://v6-1.technopedia.com/technopedia-id/359e53c0-6cda-4e3b-aaa1-2b05537ca718`
   <br>
   For the TQL endpoint, you provide MATCH statements with parameters that specify nodes, attributes, and relationships between nodes which are optional. <br>
 
-  `https://v6-1.technopedia.com/tql?q=<TQL_query>`
+  `https://v6-1.technopedia.com/tql?q=<TQL_query>`<br>
+  For example, `https://v6-1.technopedia.com/tql?q=MATCH (a:HARDWARE_MODEL) RETURN a.model`
 
   
   #### Authentication<br>
@@ -108,7 +110,7 @@ content_markdown: >-
   <br>
   GET `https://v6-1.technopedia.com/technopedia-id/<technopedia-id>` <br>
 
-  ##### Try out a query by maing a GET request<br>
+  #### Try out a query by maing a GET request<br>
   <br>
   In the following query example, you return data for Technopedia ID: `359e53c0-6cda-4e3b-aaa1-2b05537ca718`<br>
   `https://v6-1.technopedia.com/technopedia-id/359e53c0-6cda-4e3b-aaa1-2b05537ca718` <br>
@@ -119,8 +121,11 @@ content_markdown: >-
 
   {: .warning}
 
-  
-  
+  To learn more about Technopedia nodes and writing TQL queries, take the following steps:
+  1. Learn about Technopedia nodes and graph database. <br>
+     [Technopedia data structure](../#documentationNodes_Rel)
+  2. Learn about writing queries with the Technopedia query language to use with the API. <br>
+     [Technopedia query language](../#documentationtql104)
 
 
 

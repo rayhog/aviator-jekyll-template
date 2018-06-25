@@ -5,9 +5,9 @@ type:
 description:
   
 content_markdown: |-
-  The Technopedia query language (TQL) is the language that you uset to make requests and retrieve data from the Technopedia database by sending the TQL queries to the `/tql` endpoint. 
+  The Technopedia query language (TQL) is the language that you use to create and make requests that you use to retrieve data from the Technopedia database by sending the TQL query to the `/tql` endpoint. 
   <br>
-  TQL is a declarative query language that allows you to specify the data you want to retrieve by using the query language to query nodes, relationships, and attributes in the Technopedia database.
+  TQL is a declarative query language that allows you to specify the data that you want to retrieve by using the query language to query nodes, relationships, and attributes in the Technopedia database.
 
 
   #### Get started with TQL<br>
@@ -19,7 +19,7 @@ content_markdown: |-
   For example, `https://v6-1.technopedia.com/tql?q=<MATCH statement>`
   <br>
   
-  The TQL MATCH statement returns results from one or more nodes and relationships that you specify in the query. Typically, the query results are returned in key-value pairs, which resembles the format in the following image: <br>
+  The TQL MATCH statement returns results from one or more nodes and relationships that you specify in the query. Typically, the query results are returned as key-value pairs, which resembles the format in the following image: <br>
    <br>
   
   ![API Image](/images/results.png)<br>&nbsp;
@@ -27,7 +27,7 @@ content_markdown: |-
   
   #### Components of a TQL MATCH query<br>
 
-  To create a TQL MATCH statement, you need some or all of the following components:
+  To create a TQL MATCH statement, you use some or all of the following components:
   
    * MATCH <br>
     The MATCH clause introduces the statement like SELECT in SQL and is the first part of any query.<br> 

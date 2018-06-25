@@ -11,13 +11,13 @@ content_markdown: |-
   
   #### How to use this documentation
   <br>
-  The objective of this API documentation is to help you retrieve asset data from Technopedia.
-  The first section of this documentation is about getting started with the API and about using the Technopedia query language.
-  The API section references several nodes in Technopedia and provides relevant examples on how to retrive data.
+  The objective of this API documentation is to help you use the Technopedia API and Technopedia query language to retrieve data from the the Technopedia database.
+  The first section of this documentation is about getting started with the API and using the Technopedia query language.
+  The API section references several nodes in Technopedia and provides mulitiple examples on how to retrive data.
 
   To prepare yourself for retrieving data from Technopedia, contiue reading this overview; then take the following steps:
   
-   1. Get set up an API key and try out some queries. <br>
+   1. Get an API key and try out some queries. <br>
      [Get started](../#documentationgetting_started102)
    2. Learn about Technopedia nodes and graph database. <br>
      [Technopedia data](../#documentationNodes_Rel)
@@ -107,7 +107,7 @@ left_code_blocks:
 
       
     title: Technopedia query language (TQL) endpoint
-    language: text
+    language: javascript
   - code_block: |-
       GET:  https://v6-1.technopedia.com/technopedia-id/<technopedia_id>
 
