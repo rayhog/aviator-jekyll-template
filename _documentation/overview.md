@@ -9,21 +9,24 @@ content_markdown: |-
   
   #### How to use this documentation
   <br>
-  The objective of this API guide is to help you get asset data from Technopedia.
-  To achieve this objective, you take the following steps:
+  The objective of this API documentation is to help you retrieve asset data from Technopedia.
+  The first section of this documentation is about how to use the API and TQL.
+  The API section references several nodes in Technopedia and provides relevant examples on how to retrive data.
+
+  To make it easy to retrive data from Technopedia, you take the following steps:
   
    1. Get set up an API key and try out some queries. <br>
-     [Get started with using the API and try out some queries](../#documentationgetting_started102)
-   2. Learn about the node data structure of the Technopedia graph database. <br>
-     [Learn about the Technopedia data structure](../#documentationNodes_Rel)
+     [Get started](../#documentationgetting_started102)
+   2. Learn about Technopedia nodes and graph database. <br>
+     [Technopedia data structure](../#documentationNodes_Rel)
    3. Learn about writing queries with the Technopedia query language to use the API. <br>
-     [Learn about the Technopedia query language](../#documentationtql104)
+     [Technopedia query language](../#documentationtql104)
   
   To retrieve data from Technopedia, the most common practice you'll undertake is to write queries that you use the API.
   You use the Technopedia query language (TQL) to write structured queries that are similar to SQL in structure.
     
   #### You use the API to retrieve asset data in JSON format
-
+  <br>
   The Technopedia version 6.1 API provides you with read access to the Technopedia database by using an API GET request to retreive asset data.
     * To get access to the Technopedia database, all you require is an API key that you get from Flexera technial support.<br>
     * You make an API GET request by using cURL or an API client to the `/tql` or `/technopedia-id` endpoint. <br>
@@ -94,11 +97,35 @@ left_code_blocks:
         ]
       {  
 
-      GET:  https://v6-1.technopedia.com/technopedia-id/<technopedia_id>
-      GET:  https://v6-1.technopedia.com/technopedia-id/4d35ec28-0f16-4787-acca-885679265b59
       
     title: API Query Examples
     language: text
+  - code_block: |-
+      GET:  https://v6-1.technopedia.com/technopedia-id/<technopedia_id>
+      GET:  https://v6-1.technopedia.com/technopedia-id/4d35ec28-0f16-4787-acca-885679265b59
+      
+
+      RESPONSE SAMPLE
+
+      {
+        "results": [
+            {
+                "n.order": "66",
+                "n.version": "1.4.2_05"
+            },
+            {
+                "n.order": "21",
+                "n.version": "1.4.2_05"
+            },
+            {
+                "n.order": "84",
+                "n.version": "1.4.2_05"
+            }
+        ]
+      {  
+
+    title: Technopedia ID endpoint
+    language: javascript  
 right_code_blocks:
   - code_block: |2
       https://v6-1.technopedia.com/tql
