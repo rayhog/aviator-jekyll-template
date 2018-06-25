@@ -24,7 +24,7 @@ content_markdown: |-
    3. Learn about writing queries with the Technopedia query language to use with the API. <br>
      [Technopedia queries](../#documentationtql104)
   
-  To retrieve data from Technopedia, the most common practice you'll undertake is to write queries that you use the API.
+  To retrieve data from Technopedia, the most common practice you'll undertake is to write queries to use with the API.
   You use the Technopedia query language (TQL) to write structured queries that are similar to SQL in structure. <br>
     
   #### Making API GET requests to retrieve asset data 
@@ -46,13 +46,13 @@ content_markdown: |-
   ![API Image](/images/ov_ex.png){: .img-responsive}
   <br>  
     
-  #### Technopedia data structure
+  #### Nodes in the Technopedia graph database
 
   In the Technopedia graph database, data categories are represented by nodes, which represent entities such as software or hardware. Nodes are somewhat equivalent to a records classification that stores a specific data category such as hardware. 
   <br>
   <br>
  
-  The following diagram shows an overview of the Technopedia API endpoints, and some nodes and relationships in the Technopedia database.
+  The following diagram shows an overview of the Technopedia API endpoints, some nodes, and relationships between nodes in the Technopedia database.
   
   <br>
   
