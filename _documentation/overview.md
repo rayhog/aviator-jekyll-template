@@ -8,7 +8,7 @@ content_markdown: |-
   <br>   
   
  
-  [Technopedia query language](../documentationoverview)
+  [Technopedia query language](../#documentationtql104)
     
   #### You use the API to retrieve asset data in JSON format
 
