@@ -19,13 +19,13 @@ content_markdown: |-
      [Get started](../#documentationgetting_started102)
    2. Learn about Technopedia nodes and graph database. <br>
      [Technopedia data structure](../#documentationNodes_Rel)
-   3. Learn about writing queries with the Technopedia query language to use the API. <br>
+   3. Learn about writing queries with the Technopedia query language to use with the API. <br>
      [Technopedia query language](../#documentationtql104)
   
   To retrieve data from Technopedia, the most common practice you'll undertake is to write queries that you use the API.
   You use the Technopedia query language (TQL) to write structured queries that are similar to SQL in structure. <br>
     
-  #### You use the API to retrieve asset data in JSON format
+  #### Make an API GET request to retrieve asset data in JSON format
   <br>
   The Technopedia version 6.1 API provides you with read access to the Technopedia database by using an API GET request to retreive asset data.
     * To get access to the Technopedia database, all you require is an API key that you get from Flexera technial support.<br>
