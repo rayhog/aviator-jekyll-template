@@ -7,8 +7,20 @@ content_markdown: |-
   Technopedia version 6.1 API enables cloud-based access to asset data in Technopedia, which you use to manage your IT assets with respect to risk, control, governance, costs and business compliance. Technopedia's structured database catalog categorizes more than 170,000 software releases and 200,000 hardware models, and includes data from mulitiple business categories.
   <br>   
   
- 
-  [Technopedia query language](../#documentationtql104)
+  #### How to use this documentation
+  <br>
+  The objective of this API guide is to help you get asset data from Technopedia.
+  To achieve this objective, you'll need to do the following 
+  
+   * Get set up an API key and try out some queries.
+     [Get started with using the API and try out some queries](../#documentationgetting_started102)
+   * Get acquainted with the node structure of the Technopedia graph database.
+     [Learn about the Technopedia data structure](../#documentationNodes_Rel)
+   * Learn about writing queries with the Technopedia query language to use the API.
+     [Learn about the Technopedia query language](../#documentationtql104)
+  
+  To retrieve data from Technopedia, the most common practice you'll undertake is to write queries that you use the API.
+  You use the Technopedia query language (TQL) to write structured queries that are similar to SQL in structure.
     
   #### You use the API to retrieve asset data in JSON format
 
