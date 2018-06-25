@@ -4,18 +4,18 @@ title: Overview
 position: 1.01
 description: 
 content_markdown: |-
-  Technopedia version 6.1 API enables cloud-based access to asset data in Technopedia that you use to manage your IT assets with respect to risk, control, governance, costs and business compliance. Technopedia's structured database catalog categorizes more than 170,000 software releases and 200,000 hardware models, and includes data from mulitiple business categories.
-  <br>     
+  Technopedia version 6.1 API enables cloud-based access to asset data in Technopedia, which you use to manage your IT assets with respect to risk, control, governance, costs and business compliance. Technopedia's structured database catalog categorizes more than 170,000 software releases and 200,000 hardware models, and includes data from mulitiple business categories.
+  <br>   
   
-   #### Data Retrieval from Technopedia
+  To 
+  
+  #### Data Retrieval from Technopedia
 
   The Technopedia version 6.1 API provides you with read access to the Technopedia database by using an API GET request to retreive data from the database.
-    * To get access to the Technopedia database, all you require is an API key that you get from Flexera technial support. 
-
+    * To get access to the Technopedia database, all you require is an API key that you get from Flexera technial support.<br>
     * You make an API GET request by using cURL or an API client to the `/tql` or `/technopedia-id` endpoint. <br>
-      The `/tql` endpoint requires a Technopedia query languge query statement to describe the data that you want to retrieve.
- 
-    * Data is returned in JSON format.
+      The `/tql` endpoint requires a Technopedia query languge query statement to describe the data that you want to retrieve.<br>
+    * Data is returned in JSON format. <br>
 
   The following query example is an API GET request that uses the TQL endpoint. <br>
   <br>
@@ -23,12 +23,14 @@ content_markdown: |-
 
   The query returns software product names.<br>
 
-  The following image shows a sample of the result from the query.
+  The following image shows a sample of the results from the query.
   <br>
   
-  ![API Image](/images/ovr_ex.png){: .img-responsive}
+  ![API Image](/images/ov_ex.png){: .img-responsive}
   <br>  
     
+  #### Technopedia data structure
+
   In the Technopedia graph database, data categories are represented by nodes and the node attributes contain more specific data.
   Nodes represent entities such as software or hardware. Nodes in Technopedia are somewhat equivalent to a records category such as CPU or manufacturer. 
   <br>
