@@ -89,11 +89,13 @@ content_markdown: >-
   
   ##### Try out some queries by making a GET request to Technopedia
 
-  Return 10 software products that contain Microsoft in their name. <br>
-  `https://v6-1.technopedia.com/tql?q=MATCH (s:SOFTWARE_PRODUCT) WHERE s.product  CONTAINS "Microsoft" Return s.product LIMIT 10` <br>
   <br>
-  Return software editions that are named Enterprise Developer and include the Technopedia ID. <br>
+  `https://v6-1.technopedia.com/tql?q=MATCH (s:SOFTWARE_PRODUCT) WHERE s.product  CONTAINS "Microsoft" Return s.product LIMIT 10` <br>
+  This query returns 10 software products that contain Microsoft in their name. <br>
+  <br>
+  
   `https://v6-1.technopedia.com/tql?q=MATCH (s:SOFTWARE_EDITION) WHERE s.edition = "Enterprise Developer" RETURN s.edition, s.technopedia_id LIMIT 3` <br>
+  This qeury returns software editions that are named Enterprise Developer with the Technopedia ID. <br>
 
 
   #### GET request with the Technopedia ID
@@ -102,14 +104,14 @@ content_markdown: >-
   ######
   You can make an API GET request to any entity in Technopedia by referencing the Technopedia ID. 
   For example, you can get details for a product item, or any entity such as an attribute in the Technopedia database. <br>
-  You specify the Technopedia ID as a parameter for the Technopedia-id endpoint. <br>
+  You specify the Technopedia ID as a parameter for the `Technopedia-id` endpoint. <br>
   <br>
   GET `https://v6-1.technopedia.com/technopedia-id/<technopedia-id>` <br>
 
   ##### Try out some queries by making a GET request to the Technopedia ID endpoint <br>
-
-  Return data for Technopedia ID: `359e53c0-6cda-4e3b-aaa1-2b05537ca718`<br>
-  ` https://v6-1.technopedia.com/technopedia-id/359e53c0-6cda-4e3b-aaa1-2b05537ca718` <br>
+  <br>
+  `https://v6-1.technopedia.com/technopedia-id/359e53c0-6cda-4e3b-aaa1-2b05537ca718` <br>
+    Returns data for Technopedia ID: `359e53c0-6cda-4e3b-aaa1-2b05537ca718`<br>
 
   
   <br>
