@@ -11,17 +11,17 @@ content_markdown: |-
   
   #### How to use this documentation
   <br>
-  The objective of this API documentation is to help you use the Technopedia API and Technopedia query language to retrieve data from the the Technopedia database.
-  The first section of this documentation is about getting started with the API and using the Technopedia query language.
+  The objective of this API documentation is to enable you use the Technopedia API and Technopedia query language to retrieve data from the the Technopedia database.
+  The first section of this documentation is about getting started with the API and creating qeuries with the Technopedia query language.
   The API section references several nodes in Technopedia and provides mulitiple examples on how to retrive data.
 
-  To prepare yourself for retrieving data from Technopedia, contiue reading this overview; then take the following steps:
+  To learn about using the API and the Technopedia qeury language, read this overviiew, and then take the following steps:
   
    1. Get an API key and try out some queries. <br>
      [Get started](../#documentationgetting_started102)
    2. Learn about Technopedia nodes and graph database. <br>
      [Technopedia data](../#documentationNodes_Rel)
-   3. Learn about writing queries with the Technopedia query language to use with the API. <br>
+   3. Learn about using the Technopedia query language to write queries that you use with the API. <br>
      [Technopedia queries](../#documentationtql104)
   
   To retrieve data from Technopedia, the most common practice you'll undertake is to write queries to use with the API.
@@ -33,7 +33,7 @@ content_markdown: |-
     * To get access to the Technopedia database, all you require is an API key that you get from Flexera technial support.<br>
     * You make an API GET request by using cURL or an API client to the `/tql` or `/technopedia-id` endpoint. <br>
       The `/tql` endpoint requires a Technopedia query languge query statement to describe the data that you want to retrieve.<br>
-    * Data is returned in JSON format. <br>
+    * Data is returned as key-value pairs in JSON format. <br>
 
   The following query example is an API GET request that uses the TQL endpoint to retrieve software product names from Technopedia. <br>
   <br>
@@ -45,9 +45,10 @@ content_markdown: |-
   
   ![API Image](/images/ov_ex.png){: .img-responsive}
   <br>  
+  <br>
     
   #### Nodes in the Technopedia graph database
-
+  <br>
   In the Technopedia graph database, data categories are represented by nodes, which represent entities such as software or hardware. Nodes are somewhat equivalent to a records classification that stores a specific data category such as hardware. 
   <br>
   <br>
