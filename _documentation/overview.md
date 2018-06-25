@@ -7,6 +7,7 @@ content_markdown: |-
   Technopedia version 6.1 API enables cloud-based access to asset data in Technopedia, which you use to manage your IT assets with respect to risk, control, governance, costs and business compliance. Technopedia's structured database catalog categorizes more than 170,000 software releases and 200,000 hardware models, and includes data from mulitiple business categories.
   <br>   
   
+  Link to [documentationoverview][Arbitrary case-insensitive reference text]
     
   #### You use the API to retrieve asset data in JSON format
 
@@ -22,7 +23,6 @@ content_markdown: |-
 
   The query returns software product names.<br>
   The following image shows results for one software product.
-  
   <br>
   
   ![API Image](/images/ov_ex.png){: .img-responsive}
