@@ -4,112 +4,87 @@ title: Overview
 position: 1.01
 description: 
 content_markdown: |-
-  Technopedia version 6.1 API enables cloud-based access to asset data in Technopedia, which provides you with a cloud-first and high-performance resource to manage your assets.<br>
-  <br>
-  In the Technopedia graph database, nodes represent entities such as software or hardware. 
-  Nodes in Technopedia are somewhat equivalent to a records category such as CPU or manufacturer.
-  In the Technopedia graph database relationships store the connections between nodes, whereas, in relational databases 
-  related data is linked by using a record's unique key in another record's data. <br>
-
-  The following diagram shows an example of some nodes and relationships in the Technopedia graph database.
-  <br>
+  Technopedia version 6.1 API enables cloud-based access to asset data in Technopedia that you use to manage your IT assets with respect to risk, control, governance, costs and business compliance. Technopedia's structured database catalog categorizes more than 170,000 software releases and 200,000 hardware models, and includes data from mulitiple business categories.
+  <br>     
   
-  ![API Image](/images/ovr.png){: .img-responsive}
+   #### Data Retrieval from Technopedia
 
+  The Technopedia version 6.1 API provides you with read access to the Technopedia database by using an API GET request to retreive data from the database.
+    * To get access to the Technopedia database, all you require is an API key that you get from Flexera technial support. 
 
-  <br>
-  <br>
-  You use the API endpoints with the Technopedia query language to query the Technopedia database. <br>
-  The following diagram shows an overview of the Technopedia API endpoints, and some nodes and relationships in the Technopedia database.
-  
-  <br>
-  
-  ![API Image](/images/V6api.png){: .img-responsive}
-  <br>
-  
-  You query the Technopedia database by using either of the following methods:
-
-  * By using the graph-based Technopedia query language (TQL) endpoint. <br>
-  You select nodes, node relationships to other nodes, and node attributes to define the criteria for your query to return relevant data. 
-  * By using the Techopedia-ID endpoint to reference an entity in the database and return relevant data for that entity. <br>
-  The Technopedia ID record stores information about a Technopedia entity. <br>
-  For example; the entity might be a product or it might be specific node attribute that returns relevant data.  
-
+    * You make an API GET request by using cURL or an API client to the `/tql` or `/technopedia-id` endpoint. <br>
+      The `/tql` endpoint requires a Technopedia query languge query statement to describe the data that you want to retrieve.
+ 
+    * Data is returned in JSON format.
 
   The following query example is an API GET request that uses the TQL endpoint. <br>
   <br>
   `GET:` `https://v6-1.technopedia.com/tql?=MATCH (n:SOFTWARE_PRODUCT) RETURN n.product` <br>
 
-  The query selects the software product node and then returns software product names.<br>
-  TQL uses a `MATCH` statement to select nodes in the Technopedia graph, which is like a `SELECT` statement in SQL. <br>
+  The query returns software product names.<br>
+
+  The following image shows a sample of the result from the query.
   <br>
   
-
-
-
-  #### What’s included in Technopedia V6.1 API?
-
-
-  * Graph store organization model that enables Technopedia to store asset data
-  from any entity.
-
-  * High performance data retrieval.
-
-  * TQL (Technopedia Query Language) endpoint that you use for graph-based
-  querying of the Technopedia database.
-
-  * Technopedia-id endpoint that you use to query any Technopedia entity by its ID.
-
-
-  #### What are the V6.1 API Endpoints?
-
-
-  ###### To query the Technopedia database you use one of the following two endpoints:
-
-
-  * `https://v6-1.technopedia.com/tql?q=MATCH <Query Parameters>`
+  ![API Image](/images/ovr_ex.png){: .img-responsive}
+  <br>  
     
-    ###### You provide query parameters in the TQL MATCH statement to generate the criteria for your query, as shown in the following example:<br>
-    
-    GET: `https://v6-1.technopedia.com/tql?q=MATCH (sft:SOFTWARE_PRODUCT) RETURN sft`<br>
-
-  * `https://v6-1.technopedia.com/technopedia-id/<Technopedia ID>.`
-    
-    ###### You provide the Technopedia ID for the entity that you're querying to return data for that specific entity. 
-    The following example shows a dummy Technopedia ID: <br>
-    
-    GET: `https://v6-1.technopedia.com/technopedia-id/86-7ytdf89jdjhjsdh87`
-   
-
-  #### Technopedia graph concepts
-
-  ###### Data storage in Technopedia involves the following concepts:
-
-
-  * Nodes are Graph data records that are entities in the graph, such as
-  software version or hardware product.                 
-    
-  * Nodes contain one or more attributes, which provide data in key-value
-  pairs such as the following examples: <br>
-  `{product: Excel}` or `{manufacturer: Microsoft}`.
-
-  * Nodes are connected by relationships that you use to connect nodes in a single query.
-   
-
-  ###### The following graph shows the core Technopedia nodes and relationships:
+  In the Technopedia graph database, data categories are represented by nodes and the node attributes contain more specific data.
+  Nodes represent entities such as software or hardware. Nodes in Technopedia are somewhat equivalent to a records category such as CPU or manufacturer. 
+  <br>
+  <br>
+ 
+  The following diagram shows an overview of the Technopedia API endpoints, and some nodes and relationships in the Technopedia database.
   
-  ![API Image](/images/graph1.png){: .img-responsive}<br>&nbsp;
+  <br>
+  
+  ![API Image](/images/V6api.png){: .img-responsive}
+  
+ 
 
 left_code_blocks:
   - code_block: |-
       GET:  https://v6-1.technopedia.com/tql?q=MATCH <Query Parameters>
-      GET: https://v6-1.technopedia.com/tql?MATCH (xx:SOFTWARE_PRODUCT) RETURN xx
+      GET:  https://v6-1.technopedia.com/tql?MATCH (sft_prod:SOFTWARE_PRODUCT) RETURN sft_prod LIMIT 2
+
+      RESPONSE SAMPLE
+
+      {
+      "results": [
+          {
+              "sft_prod.alias": null,
+              "sft_prod.component": null,
+              "sft_prod.created_at": "2017-05-19 10:24:33",
+              "sft_prod.desupported_flag": null,
+              "sft_prod.discontinued_flag": null,
+              "sft_prod.family": null,
+              "sft_prod.is_suite": "FALSE",
+              "sft_prod.modified_at": "2017-06-01 13:50:16",
+              "sft_prod.product": "e1ns.output",
+              "sft_prod.technopedia_id": "408dd3bb-c935-444e-b756-c7d431a589f7",
+              "sft_prod.url": "http://www.plato.de/e1nsoutput-687.html"
+          },
+          {
+              "sft_prod.alias": null,
+              "sft_prod.component": null,
+              "sft_prod.created_at": "2008-03-25 22:07:06",
+              "sft_prod.desupported_flag": null,
+              "sft_prod.discontinued_flag": null,
+              "sft_prod.family": "Windows Live",
+              "sft_prod.is_suite": "FALSE",
+              "sft_prod.modified_at": "2011-03-21 17:47:50",
+              "sft_prod.product": "ID Web Authentication Software Development Kit (SDK)",
+              "sft_prod.technopedia_id": "359e53c0-6cda-4e3b-aaa1-2b05537ca718",
+              "sft_prod.url": "http://www.microsoft.com/Downloads/details.aspx?familyid=E565FC92-D5F6-4F5F-8713-4DD1C90DE19F&displaylang=en"
+          }
+        ]
+      {  
 
       GET:  https://v6-1.technopedia.com/technopedia-id/<technopedia_id>
       GET:  https://v6-1.technopedia.com/technopedia-id/4d35ec28-0f16-4787-acca-885679265b59
       
     title: API Query Examples
-    language: bash
+    language: text
 right_code_blocks:
   - code_block: |2
       https://v6-1.technopedia.com/tql
@@ -119,6 +94,6 @@ right_code_blocks:
 
 
     title: Technopedia Endpoints
-    language: bash
+    language: text
   
 ---

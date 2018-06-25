@@ -43,9 +43,6 @@ content_markdown: >-
   ![API Image](/images/bearer_token.png){: .img-responsive}<br>
     
  
-  #### Methods<br>
-
-  You can only make API GET requests to the Technopedia database.<br>
 
   #### Parameters<br>
 
@@ -81,6 +78,20 @@ content_markdown: >-
   ![API Image](/images/bearer_token.png){: .img-responsive}<br>
 
 
+  #### 
+  GET request by using the Technopedia query language (TQL)
+
+  ######
+  The main method for acessing information in Technopedia is by using the API with the Technopedia query language (TQL) to query nodes and relationships in the Technopedia database.<br>
+  <br>
+  GET `https://v6-1.technopedia.com/tql?q=<TQL_query>`<br>
+  <br>
+  
+  ##### Try out some queries
+  
+  
+
+
   #### GET request with the Technopedia ID
   <br>
 
@@ -97,14 +108,11 @@ content_markdown: >-
   {: .warning}
 
   
-  #### 
-  GET request by using the Technopedia query language (TQL)
+  #### Try out some queries
+  <br>
+  Here's some queries that you can try out:
 
-  ######
-  The main method for acessing information in Technopedia is by using the API with the Technopedia query language (TQL) to query nodes and relationships in the Technopedia database.<br>
-  <br>
-  GET `https://v6-1.technopedia.com/tql?q=<TQL_query>`<br>
-  <br>
+
 
 
 

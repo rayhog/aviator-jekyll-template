@@ -4,8 +4,8 @@ position: 1.06
 type:
 description:
   
-content_markdown: |-
-  TQL queries can be based on a single node, or multiple nodes where you need to include relationships to get data from multiple nodes in one  query. For many TQL queries, you have to use relationships to query several Technopedia nodes. Relationships might seem complex but one of their main functions is to connect nodes. <br>
+content_markdown: |- 
+  You use the Technopedia query language to query a single node, or multiple nodes where you must add relationship to other nodes to get data from multiple nodes in one  query. For many TQL queries, you have to use relationships to query several Technopedia nodes. Relationships might seem complex but one of their main functions is to connect nodes. <br>
   <br>
   Because TQL is a declarative query language, you can build your query with multiple nodes, relationships, attributes, and add multiple conditions to refine your query.<br>
   
@@ -71,8 +71,8 @@ content_markdown: |-
 
     Here's the complete query: <br>
     <br>
-     `MATCH (m:MANUFACTURER)<-[:HAS_A]-(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION) <br>
-      WHERE m.manufacturer = "Oracle"` <br>
+     `MATCH (m:MANUFACTURER)<-[:HAS_A]-(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION)` <br>
+      `WHERE m.manufacturer = "Oracle"` <br>
      `RETURN m.manufacturer, sp.product, sv.version, sr.release, se.edition` <br>
      `LIMIT 2` <br>  <br>
 
@@ -479,10 +479,12 @@ right_code_blocks:
 
       MATCH (n:SOFTWARE_EDITION) RETURN n.edition as ED, n.modified_at as MOD
 
-      ORDER BY ascending (ASC) or decending (DESC) order
-      Return list of products in descending order.
+      ORDER BY  <br>
+      Sort in ascending (ASC) or descending (DESC) order
       
-      MATCH (n:SOFTWARE_PRODUCT) RETURN n.product ORDER BY n.product DESC 
+      MATCH (n:SOFTWARE_PRODUCT) RETURN n.product ORDER BY n.product ASC
+      MATCH (n:SOFTWARE_PRODUCT) RETURN n.product ORDER BY n.product DESC
+
 
       Operators =, <>, >, <, >=, <=
     title: TQL Clauses and examples

@@ -5,9 +5,8 @@ type:
 description:
   
 content_markdown: |-
-  You create queries by using the Technopedia query language (TQL), which you use with the TQL endpoint to retrieve data from the Technopedia database. <br>
+  The Technopedia query language (TQL) is the language that you uset to make requests and retrieve data from the Technopedia database by sending the TQL queries to the `/tql` endpoint. 
   <br>
-  TQL is the graph-query language that you use to query the Technopedia database. 
   TQL is a declarative query language that allows you to specify the data you want to retrieve by using the query language to query nodes, relationships, and attributes in the Technopedia database.
 
 
@@ -257,9 +256,12 @@ content_markdown: |-
   Return output as another name. <br>
   `MATCH (n:SOFTWARE_EDITION) RETURN n.edition as ED, n.modified_at as MOD` <br>
 
-  * ORDER BY in DESC or ASC order <br>
-  Return list of products in ascending or descending order.<br>
-   `MATCH (n:SOFTWARE_PRODUCT) RETURN n.product ORDER BY n.product DESC`   
+  * ORDER BY  <br>
+  Sort in ascending (ASC) or descending (DESC) order.<br>
+  `MATCH (n:SOFTWARE_PRODUCT) RETURN n.product ORDER BY n.product ASC` <br>
+  `MATCH (n:SOFTWARE_PRODUCT) RETURN n.product ORDER BY n.product DESC` <br>
+
+  
 
   * Operators <br>
   `=` equals <br>
