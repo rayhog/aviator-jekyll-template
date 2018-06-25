@@ -23,7 +23,7 @@ content_markdown: |-
      [Technopedia query language](../#documentationtql104)
   
   To retrieve data from Technopedia, the most common practice you'll undertake is to write queries that you use the API.
-  You use the Technopedia query language (TQL) to write structured queries that are similar to SQL in structure.
+  You use the Technopedia query language (TQL) to write structured queries that are similar to SQL in structure. <br>
     
   #### You use the API to retrieve asset data in JSON format
   <br>
@@ -46,8 +46,7 @@ content_markdown: |-
     
   #### Technopedia data structure
 
-  In the Technopedia graph database, data categories are represented by nodes and the node attributes contain more specific data.
-  Nodes represent entities such as software or hardware, which are somewhat equivalent to a records classification that stores a specific data category. 
+  In the Technopedia graph database, data categories are represented by nodes, which represent entities such as software or hardware. Nodes are somewhat equivalent to a records classification that stores a specific data category such as hardware. 
   <br>
   <br>
  
@@ -62,7 +61,13 @@ content_markdown: |-
 left_code_blocks:
   - code_block: |-
       GET:  https://v6-1.technopedia.com/tql?q=MATCH <Query Parameters>
-      GET:  https://v6-1.technopedia.com/tql?MATCH (sft_prod:SOFTWARE_PRODUCT) RETURN sft_prod LIMIT 2
+
+      EXAMPLE:
+
+      GET:  https://v6-1.technopedia.com/tql?q=MATCH (sft_prod:SOFTWARE_PRODUCT) RETURN sft_prod LIMIT 2
+
+      Returns data based on the Technopedia query language that starts with MATCH
+
 
       RESPONSE SAMPLE
 
@@ -98,28 +103,39 @@ left_code_blocks:
       {  
 
       
-    title: API Query Examples
+    title: Technopedia query language (TQL) endpoint
     language: text
   - code_block: |-
       GET:  https://v6-1.technopedia.com/technopedia-id/<technopedia_id>
-      GET:  https://v6-1.technopedia.com/technopedia-id/4d35ec28-0f16-4787-acca-885679265b59
+
+      EXAMPLE:
+
+      GET:  https://v6-1.technopedia.com/technopedia-id/359e53c0-6cda-4e3b-aaa1-2b05537ca718
+
+      Returns data based on the Technopedia ID
       
 
       RESPONSE SAMPLE
 
       {
-        "results": [
-            {
-                "n.order": "66",
-                "n.version": "1.4.2_05"
-            },
-            {
-                "n.order": "21",
-                "n.version": "1.4.2_05"
-            },
-            {
-                "n.order": "84",
-                "n.version": "1.4.2_05"
+          "result": {
+              "attributes": {
+                  "alias": null,
+                  "component": null,
+                  "desupported_flag": null,
+                  "discontinued_flag": null,
+                  "family": "Windows Live",
+                  "is_suite": "FALSE",
+                  "modified_at": "2011-03-21 17:47:50",
+                  "product": "ID Web Authentication Software Development Kit (SDK)",
+                  "url": "http://www.microsoft.com/Downloads/details.aspx?familyid=E565FC92-D5F6-4F5F-8713-4DD1C90DE19F&displaylang=en"
+              },
+              "created_at": "2008-03-25 22:07:06",
+              "created_by": "",
+              "owner": "",
+              "quality_grade": 0,
+              "technopedia_id": "359e53c0-6cda-4e3b-aaa1-2b05537ca718",
+              "label": "SOFTWARE_PRODUCT"
             }
         ]
       {  
@@ -128,7 +144,13 @@ left_code_blocks:
     language: javascript  
 right_code_blocks:
   - code_block: |2
+      Technopedia query language (tql) endpoint
+
       https://v6-1.technopedia.com/tql
+
+
+      Technopedia ID (tid) endpoint
+      
       https://v6-1.technopedia.com/technopedia-id/
       
       

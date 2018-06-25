@@ -87,9 +87,13 @@ content_markdown: >-
   GET `https://v6-1.technopedia.com/tql?q=<TQL_query>`<br>
   <br>
   
-  ##### Try out some queries
-  
-  
+  ##### Try out some queries by making a GET request to Technopedia
+
+  Return 10 software products that contain Microsoft in their name.
+  `https://v6-1.technopedia.com/tql?q=MATCH (s:SOFTWARE_PRODUCT) WHERE s.product  CONTAINS "Microsoft" Return s.product LIMIT 10`
+
+  Return software editions that are named Enterprise Developer and include the Technopedia ID.
+  `https://v6-1.technopedia.com/tql?q=MATCH (s:SOFTWARE_EDITION) WHERE s.edition = "Enterprise Developer" RETURN s.edition, s.technopedia_id LIMIT 3`
 
 
   #### GET request with the Technopedia ID
@@ -101,6 +105,12 @@ content_markdown: >-
   You specify the Technopedia ID as a parameter for the Technopedia-id endpoint. <br>
   <br>
   GET `https://v6-1.technopedia.com/technopedia-id/<technopedia-id>` <br>
+
+  ##### Try out some queries by making a GET request to the Technopedia ID endpoint
+
+  Return data for Technopedia ID: `359e53c0-6cda-4e3b-aaa1-2b05537ca718`
+  ` https://v6-1.technopedia.com/technopedia-id/359e53c0-6cda-4e3b-aaa1-2b05537ca718`
+
   <br>
 
   Tip: You can view Technopedia IDs by querying a node, for example, `MATCH (alias:NODE) RETURN alias`
@@ -108,10 +118,7 @@ content_markdown: >-
   {: .warning}
 
   
-  #### Try out some queries
-  <br>
-  Here's some queries that you can try out:
-
+  
 
 
 
