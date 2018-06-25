@@ -10,13 +10,13 @@ content_markdown: |-
   #### How to use this documentation
   <br>
   The objective of this API guide is to help you get asset data from Technopedia.
-  To achieve this objective, you'll need to do the following 
+  To achieve this objective, you take the following steps:
   
-   * Get set up an API key and try out some queries.
+   1. Get set up an API key and try out some queries. <br>
      [Get started with using the API and try out some queries](../#documentationgetting_started102)
-   * Get acquainted with the node structure of the Technopedia graph database.
+   2. Learn about the node data structure of the Technopedia graph database. <br>
      [Learn about the Technopedia data structure](../#documentationNodes_Rel)
-   * Learn about writing queries with the Technopedia query language to use the API.
+   3. Learn about writing queries with the Technopedia query language to use the API. <br>
      [Learn about the Technopedia query language](../#documentationtql104)
   
   To retrieve data from Technopedia, the most common practice you'll undertake is to write queries that you use the API.
