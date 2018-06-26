@@ -6,7 +6,7 @@ description:
 content_markdown: |-
   Technopedia version 6.1 API enables access to asset data in Technopedia, which you use to manage your IT assets with respect to risk, control, governance, costs and business compliance. 
   <br>
-  Technopedia's structured database catalog categorizes more than 170,000 software releases and 200,000 hardware models, and includes data from mulitiple business categories.
+  Technopedia's database catalog categorizes more than 170,000 software releases and 200,000 hardware models, and includes data from mulitiple business categories.
   <br>   
   
   #### How to use this documentation
@@ -15,7 +15,7 @@ content_markdown: |-
   The first section of this documentation is about getting started with the API and creating queries by using TQL.
   The API section references several nodes in Technopedia and provides mulitiple examples about retrieving data.
 
-  To learn about using the API and the Technopedia query language, read this overview, and then take the following steps:
+  To learn about using the API and TQL, read this overview, and then take the following steps:
   
    1. Get an API key and try out some queries. <br>
      [Get started](../#documentationgetting_started102)
@@ -55,7 +55,7 @@ content_markdown: |-
    * Nodes have attributes that represent and store data as key-value pairs.
    * Nodes connect to other nodes by using relationships.
  
-  The following diagram shows an overview of the Technopedia API endpoints, some nodes, and node relationships.
+  The following diagram shows the TQL endpoint, some nodes, and node relationships.
   
   <br>
   
@@ -108,7 +108,8 @@ left_code_blocks:
         ]
       {  
 
-      
+    title: TQL Endpoint
+    language: text
     
 right_code_blocks:
   - code_block: |2

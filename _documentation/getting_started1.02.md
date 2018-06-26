@@ -5,10 +5,9 @@ position: 1.02
 description: 
 content_markdown: >-
   Access Technopedia data by using the Technopedia API.
-  You retrieve data from the Technopedia database by using the TQL endpoint or the TID endpoint.<br>
+  You retrieve data from the Technopedia database by using the TQL endpoint.<br>
   
-   * Use the Technopedia ID (`/tid`) endpoint to get information about an entity in the graph, such as product information or a node attribute by specifying the Technopedia ID.<br>
-   * Use the Technopedia query language (TQL) with the TQL endpoint (`/tql`) to create custom queries that you use to query the Technopedia database.<br>
+  Use the Technopedia query language (TQL) with the TQL endpoint (`/tql`) to create custom queries that you use to query the Technopedia database.<br>
   <br>
 
 
@@ -45,15 +44,10 @@ content_markdown: >-
 
   #### Parameters<br>
 
-  You provide the Technopedia ID parameter for the Technopedia-id endpoint, <br>
-
-  `https://v6-1.technopedia.com/technopedia-id/<Technopedia ID>`<br>
-  For example, `https://v6-1.technopedia.com/technopedia-id/359e53c0-6cda-4e3b-aaa1-2b05537ca718`
-  <br>
-  <br>
-  For the TQL endpoint, you provide MATCH statements with parameters that specify nodes, attributes, and relationships between nodes which are optional. <br>
+  For the TQL endpoint, you provide MATCH statements that specify nodes, attributes, and relationships between nodes are optional. <br>
 
   `https://v6-1.technopedia.com/tql?q=<TQL_query>`<br>
+
   For example, `https://v6-1.technopedia.com/tql?q=MATCH (a:HARDWARE_MODEL) RETURN a.model`
 
   
@@ -101,22 +95,6 @@ content_markdown: >-
   `https://v6-1.technopedia.com/tql?q=MATCH (s:SOFTWARE_EDITION) WHERE s.edition = "Enterprise Developer" RETURN s.edition, s.technopedia_id LIMIT 3` <br>
   
 
-
-  #### GET request with the Technopedia ID
-  <br>
-  
-  You can make an API GET request to any entity in Technopedia by referencing the Technopedia ID. 
-  For example, you can get details for a product item, or any entity such as an attribute in the Technopedia database. <br>
-  You specify the Technopedia ID as a parameter for the `Technopedia-id` endpoint. <br>
-  <br>
-  GET `https://v6-1.technopedia.com/technopedia-id/<technopedia-id>` <br>
-
-  Try out the following query example to return data for a Technopedia ID.<br>
-  <br>
-  `https://v6-1.technopedia.com/technopedia-id/359e53c0-6cda-4e3b-aaa1-2b05537ca718` <br>
-  
-  <br>
-
   
   Tip: You can view Technopedia IDs by querying a node, for example, `MATCH (alias:NODE) RETURN alias`
 
@@ -139,7 +117,7 @@ left_code_blocks:
       curl -G -H "Authorization: Bearer b93477a9-054b-4878-a16f-d7fdd1f27a7a" "https://v6-1.technopedia.com/tql" --data-urlencode "q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.product"
         
     title: cURL authentication examples
-    language: bash
+    language: text
     
 right_code_blocks:
   - code_block: |2-
@@ -149,5 +127,5 @@ right_code_blocks:
       curl -G -H "Authorization: Bearer b93477a9-054b-4878-a16f-d7f5d17a7a" "https://v6-1.technopedia.com/<endpoint>
         
     title: Authentication
-    language: bash
+    language: text
 ---

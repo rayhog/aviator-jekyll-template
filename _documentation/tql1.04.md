@@ -5,9 +5,9 @@ type:
 description:
   
 content_markdown: |-
-  The Technopedia query language (TQL) is the language that you use to create and make requests that you use to retrieve data from the Technopedia database by sending the TQL query to the `/tql` endpoint. 
+  You create queries by using the Technopedia query language (TQL) to use with the `/tql` endpoint to retrieve data from the Technopedia database. 
   <br>
-  TQL is a declarative query language that allows you to specify the data that you want to retrieve by using the query language to query nodes, relationships, and attributes in the Technopedia database.
+  TQL is a declarative query language that allows you to specify the data that you want to retrieve by referring to nodes, relationships, and attributes in the Technopedia database.
 
 
   #### Get started with TQL<br>
@@ -15,7 +15,7 @@ content_markdown: |-
   To create a query by using TQL, you must create a MATCH statement, which is similar to a Select statement in SQL.<br>
   For example, `MATCH (software:SOFTWARE_RELEASE) RETURN software`<br>
   
-  You add the MATCH query statement as a query parameter to the TQL endpoint.<br>
+  You add the MATCH query statement as a query parameter to the `/tql` endpoint.<br>
   For example, `https://v6-1.technopedia.com/tql?q=<MATCH statement>`
   <br>
   
@@ -30,30 +30,26 @@ content_markdown: |-
   To create a TQL MATCH statement, you use some or all of the following components:
   
    * MATCH <br>
-    The MATCH clause introduces the statement like SELECT in SQL and is the first part of any query.<br> 
-    You use MATCH to select a node in Technopedia.<br>
+     You use `MATCH` to select a node in Technopedia.<br> 
     `MATCH` <br>
    * Node <br>
-    Typically, you refer to a node or nodes in the graph as your source of data for the query.<br> 
-    Nodes in a query are predeced by a (:) colon. <br>
+     Place a (:) colon before the node and place them inside parentheses. 
     `MATCH (:node)` <br>
    * Alias <br>
-    To enable the `RETURN` clause to return data from a node, you append an alias to the node, for example, 'MATCH (alias:node)'. <br>
+    Append an alias to the node, for example, 'MATCH (alias:node)', if you want to use the 'RETURN' clause to return data for that alias. <br>
     TQL binds the unique alias to the node so that you can refer to that alias in the Return clause of <br>
-    the MATCH query to request specific data. <br>
+    
     `MATCH (alias:node) RETURN alias` <br>
+
     You can also use the alias to specify specific node attributes that you want to return. <br>
     `MATCH (alias:node) RETURN alias.attribute1, alias.attribute2` <br>
    * Relationship <br>
-    To get data from more than one node in a query, you must use a relationship to connect the nodes. <br>
-    You don't need to append an alias to the relationship, unless, you want to get data back from that relationship. <br>
+    Use a relationship to connect nodes. <br>
     `MATCH (aliasx:node1)-[:RELATED_TO]->(aliasy:node2), RETURN aliasx, aliasy` <br>
    * Relationship direction <br>
-    The direction of the relationship shows the relationship from node to node. <br> 
     An arrow in the query shows a unidirectional relationship, and no arrows indicate a birdirectional relationship. <br>
     For example, node_software is manufactured_by node_manufacturer <br>
     `(:node_software)-[:MANUFACTURED_BY]->(:node_manufacturer)` <br>
-    Typically, relationships are unidirectional but they can be bidirectional. <br>
     A bidirectional relationship is represented without an arrow, for example, <br>
     `(:node_software)-[:MANUFACTURED_BY]-(:node_manufacturer)`<br>
    * RETURN <br>
@@ -96,15 +92,7 @@ content_markdown: |-
     
   <br>
   
-  #### Overview of creating a TQL query<br>
-
-
-  The following diagram shows a basic overview of the initial steps you take to create a query with TQL:
-  <br>
-  
-  ![API Image](/images/match.png)<br>&nbsp;
-  <br>  
-  
+  #### Overview of creating a TQL query<br>  
 
   <br>
   Use the following guidelines to help you get started with building a basic query:
@@ -114,10 +102,11 @@ content_markdown: |-
         attribute of the software product node to get names of software products. <br>   
    3.	For queries that involve more than one node, identify any relationships that connect the nodes.<br>
    4.   Note any conditions that you want to apply to filter the data.
-   5.	Write your MATCH statement
+   5.   Decide on any aliases that you need to add to nodes so you use them in with the `RETURN` clause.
+   6.	Write your MATCH statement
 
   To view a list of attributes for any node, you use the 
-  `MATCH (alias:NODE) RETURN alias` query with the TQL endpoint.
+  `MATCH (alias:NODE) RETURN alias` query with the `/tql` endpoint.
   For example, `https://v6-1.technopedia.com/tql?q=MATCH (n:SOFTWARE_PRODUCT) RETURN n LIMIT 1`
   {: .warning}
 
@@ -128,21 +117,22 @@ content_markdown: |-
   <b>Query Intent:</b> To find software products that contain Adobe in their product name.<br>
 
   The Software Product node has an attribute named product that lists the product name.<br>
-  View the list of attributes that you can use on the Software Product page, or you can use the query: <br>
+  View the list of attributes that you can use on the Software Product page, or you can use the following query: <br>
   `MATCH(x:SOFTWARE_PRODUCT) RETURN x` to get a list of attributes. <br>
 
-    1. Use the MATCH clause to select the `SOFTWARE_PRODUCT` because it
+    1. Use `MATCH` to select `SOFTWARE_PRODUCT` because it
        has the `product` attribute with a product (name) field.<br>
        `MATCH (:SOFTWARE_PRODUCT)`
     2. Add an alias to the node, so that you can use it with the RETURN clause to get data from that node. <br>
        You place the alias before the colon.
        `MATCH (s:SOFTWARE_PRODUCT)`  
     3. Use the `WHERE` clause with the `CONTAINS` clause to specify the condition `product CONTAINS "Adobe"`.<br>
-       `WHERE s.product CONTAINS "Adobe"`
+       `WHERE s.product CONTAINS "Adobe"`<br>
+       `product` is the attribute that stores the name of the product.<br>
     4. Refer to the alias in the RETURN clause to list software products that contain Adobe in the product name.  <br>
        `Return s`
 
-    The following query is the complete query:<br>
+    Here's the complete query:<br>
     `MATCH (s:SOFTWARE_PRODUCT) WHERE s.product CONTAINS "Adobe" Return s`<br>
 
   <br>
