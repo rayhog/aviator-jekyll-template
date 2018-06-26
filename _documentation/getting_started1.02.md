@@ -45,10 +45,11 @@ content_markdown: >-
 
   #### Parameters<br>
 
-  For the Technopedia-id endpoint, you provide the Technopedia ID parameter.<br>
+  You provide the Technopedia ID parameter for the Technopedia-id endpoint, <br>
 
   `https://v6-1.technopedia.com/technopedia-id/<Technopedia ID>`<br>
   For example, `https://v6-1.technopedia.com/technopedia-id/359e53c0-6cda-4e3b-aaa1-2b05537ca718`
+  <br>
   <br>
   For the TQL endpoint, you provide MATCH statements with parameters that specify nodes, attributes, and relationships between nodes which are optional. <br>
 
