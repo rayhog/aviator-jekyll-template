@@ -11,17 +11,17 @@ content_markdown: |-
   
   #### How to use this documentation
   <br>
-  The objective of this API documentation is to enable you use the Technopedia API and Technopedia query language to retrieve data from the the Technopedia database.
+  The objective of this API documentation is to enable you use Technopedia API and Technopedia query language to retrieve data from the the Technopedia database.
   The first section of this documentation is about getting started with the API and creating qeuries with the Technopedia query language.
   The API section references several nodes in Technopedia and provides mulitiple examples on how to retrive data.
 
-  To learn about using the API and the Technopedia qeury language, read this overviiew, and then take the following steps:
+  To learn about using the API and the Technopedia query language, read this overviiew, and then take the following steps:
   
    1. Get an API key and try out some queries. <br>
      [Get started](../#documentationgetting_started102)
    2. Learn about Technopedia nodes and graph database. <br>
      [Technopedia data](../#documentationNodes_Rel)
-   3. Learn about using the Technopedia query language to write queries that you use with the API. <br>
+   3. Learn about using the Technopedia query language to write queries that you use with the API to query Technopedia database. <br>
      [Technopedia queries](../#documentationtql104)
   
   To retrieve data from Technopedia, the most common practice you'll undertake is to write queries to use with the API.
