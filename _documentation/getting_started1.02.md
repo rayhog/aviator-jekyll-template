@@ -4,13 +4,9 @@ title: Getting Started
 position: 1.02
 description: 
 content_markdown: >-
-  Access Technopedia data by using the Technopedia API.
-  You retrieve data from the Technopedia database by using the TQL endpoint.<br>
+  You retrieve data from the Technopedia database by using the `/tql` endpoint.<br>
   
-  Use the Technopedia query language (TQL) with the TQL endpoint (`/tql`) to create custom queries that you use to query the Technopedia database.<br>
-  <br>
-
-
+  
   Your Technopedia subscription determines your level of access to Technopedia data outside of the core Technopedia data.
     {: .warning}
   
@@ -44,7 +40,7 @@ content_markdown: >-
 
   #### Parameters<br>
 
-  For the TQL endpoint, you provide MATCH statements that specify nodes, attributes, and relationships between nodes are optional. <br>
+  For the TQL endpoint, you provide MATCH statements that specifies at least one node in the query. Attributes and relationships between nodes are optional. <br>
 
   `https://v6-1.technopedia.com/tql?q=<TQL_query>`<br>
 
