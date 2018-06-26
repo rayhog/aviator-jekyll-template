@@ -16,9 +16,9 @@ content_markdown: |-
 
   Use a combination of the software nodes with relationships to query software data in Technopedia. <br>
   
-  The following diagram shows the software nodes, manufacturer node, and relationships.
+  The following diagram shows the software nodes, manufacturer node, and node relationships.
   <br>
-  ![API Image](/images/node_ex.png){:class="img-responsive"} <br> 
+  ![API Image](/images/sw_graph.png){:class="img-responsive"} <br> 
   <br>
  
   #### Query Examples <br>
