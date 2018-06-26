@@ -46,7 +46,7 @@ content_markdown: |-
   
   The following diagram shows the nodes and relationships that are used in the query examples that follow:
   <br>
-  ![API Image](/images/sw_relat.png)<br>&nbsp;
+  ![API Image](/images/sw_graph.png)<br>&nbsp;
   <br>  
 
   <b>Query Intent:</b> Get software that is manufactured by Oracle and return data for the manufactuer, product name, version, release, and edition.<br>
@@ -118,7 +118,7 @@ content_markdown: |-
    
   <b>Query Intent:</b> Get software editions and include the release, verison, product, and manufacturer.<br>
   <br>
-  In this query example, you get data for software editions in Technopedia, and include the release, version, product, and manufacturer data for each edition that is listed. This example is an extension of the previous example where we add manufacturer data but we only return one attribute from each of the five nodes. You return a single attribute by appending the alias to that attribute folloiwng the `RETURN` clause, for example, `RETURN e.edition` to return the edition attribute only.  <br>
+  In this query example, you get data for software editions in Technopedia, and include the release, version, product, and manufacturer data for each edition that is listed. This example is an extension of the previous example where we add manufacturer data but we only return one attribute from each of the five nodes. You return a single attribute by appending the alias to that attribute following the `RETURN` clause, for example, `RETURN e.edition` to return the edition attribute only.  <br>
 
   `MATCH (e:SOFTWARE_EDITION)<-[:HAS_A]-(r:SOFTWARE_RELEASE)-[:HAS_A]->(v:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_PRODUCT)-[:HAS_A]->(m:MANUFACTURER) 
   RETURN e.edition,r.release,v.version,p.product, m.manufacturer LIMIT 3`<br>
