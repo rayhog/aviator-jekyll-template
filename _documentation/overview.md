@@ -4,16 +4,16 @@ title: Overview
 position: 1.01
 description: 
 content_markdown: |-
-  Technopedia version 6.1 API enables cloud-based access to asset data in Technopedia, which you use to manage your IT assets with respect to risk, control, governance, costs and business compliance. 
+  Technopedia version 6.1 API enables access to asset data in Technopedia, which you use to manage your IT assets with respect to risk, control, governance, costs and business compliance. 
   <br>
   Technopedia's structured database catalog categorizes more than 170,000 software releases and 200,000 hardware models, and includes data from mulitiple business categories.
   <br>   
   
   #### How to use this documentation
   <br>
-  The objective of this API documentation is to enable you use Technopedia API and Technopedia query language to retrieve data from the the Technopedia database.
-  The first section of this documentation is about getting started with the API and creating queries with the Technopedia query language.
-  The API section references several nodes in Technopedia and provides mulitiple examples on how to retrive data.
+  The objective of this API documentation is to enable you use Technopedia version 6 API and Technopedia query language (TQL) to retrieve data from the Technopedia database.
+  The first section of this documentation is about getting started with the API and creating queries by using TQL.
+  The API section references several nodes in Technopedia and provides mulitiple examples about retrieving data.
 
   To learn about using the API and the Technopedia query language, read this overview, and then take the following steps:
   
@@ -24,15 +24,14 @@ content_markdown: |-
    3. Learn about using the Technopedia query language to write queries that you use with the API to query Technopedia database. <br>
      [Technopedia queries](../#documentationtql104)
   
-  To retrieve data from Technopedia, the most common practice you'll undertake is to write queries to use with the API.
-  You use the Technopedia query language (TQL) to write queries that are similar to SQL in structure. <br>
-    
+  To retrieve data from Technopedia, the most common practice you'll undertake is to write TQL queries to use with the API.
+  
+
   #### Making API GET requests to retrieve asset data 
   <br>
   The Technopedia version 6.1 API provides you with read access to the Technopedia database by using an API GET request to retreive asset data.
     * To get access to the Technopedia database, all you require is an API key that you get from Flexera technial support.<br>
-    * You make an API GET request by using cURL or an API client to the `/tql` or `/technopedia-id` endpoint. <br>
-      The `/tql` endpoint requires a Technopedia query languge query statement to describe the data that you want to retrieve.<br>
+    * You make an API GET request to the `/tql` endpoint, which requires a TQL query statement to describe the data that you want to retrieve.<br>
     * Data is returned as key-value pairs in JSON format. <br>
 
   The following query example is an API GET request that uses the TQL endpoint to retrieve software product names from Technopedia. <br>
@@ -49,7 +48,7 @@ content_markdown: |-
     
   #### Technopedia Graph Database
   <br>
-  Technopedia graph database is a data model that consists of a collection of nodes that are joined together by relationships.
+  The Technopedia graph database is a data model that consists of a collection of nodes that are joined together by relationships.
   <br>
 
    * Nodes represent entities that are equivalent to a records classification that store a specific data category such as hardware or software. 
@@ -110,45 +109,7 @@ left_code_blocks:
       {  
 
       
-    title: TQL endpoint
-    language: javascript
-  - code_block: |-
-      GET:  https://v6-1.technopedia.com/technopedia-id/<technopedia_id>
-
-      EXAMPLE:
-
-      GET:  https://v6-1.technopedia.com/technopedia-id/359e53c0-6cda-4e3b-aaa1-2b05537ca718
-
-      Returns data based on the Technopedia ID
-      
-
-      RESPONSE SAMPLE
-
-      {
-          "result": {
-              "attributes": {
-                  "alias": null,
-                  "component": null,
-                  "desupported_flag": null,
-                  "discontinued_flag": null,
-                  "family": "Windows Live",
-                  "is_suite": "FALSE",
-                  "modified_at": "2011-03-21 17:47:50",
-                  "product": "ID Web Authentication Software Development Kit (SDK)",
-                  "url": "http://www.microsoft.com/Downloads/details.aspx?familyid=E565FC92-D5F6-4F5F-8713-4DD1C90DE19F&displaylang=en"
-              },
-              "created_at": "2008-03-25 22:07:06",
-              "created_by": "",
-              "owner": "",
-              "quality_grade": 0,
-              "technopedia_id": "359e53c0-6cda-4e3b-aaa1-2b05537ca718",
-              "label": "SOFTWARE_PRODUCT"
-            }
-        ]
-      {  
-
-    title: Technopedia ID endpoint
-    language: javascript  
+    
 right_code_blocks:
   - code_block: |2
       Technopedia query language (tql) endpoint
