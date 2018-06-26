@@ -5,6 +5,7 @@ type:
 description: >-  
 content_markdown: >-
   The Technopedia database is a graph database that is based on nodes, and relationships that connect those nodes.
+  Graph databases use graph structures for semantic qeuries with nodes, relationships, and attributes to represent the data.
   You access Technopedia data by querying nodes, attributes, relationships, or Technopedia IDs in the Technopedia graph.<br>
   <br>
   The graph database stores connections between nodes as first-class citizens so it doesn’t have to compute relationships at query time, which makes it more efficient than a relational database.
@@ -16,7 +17,7 @@ content_markdown: >-
   Nodes are the entities in the Technopedia graph that store specific categories of data. <br>
   Nodes can have any number of attributes that store data as key-value-pairs, <br>
   for example, `{"edition" : "server"}`<br> 
-   * Nodes are entities that store categories of date in Technopedia.
+   * Nodes are entities that store categories of data in Technopedia.
    * Nodes have attributes that store data in key-value pairs.
    * Nodes are connected to other nodes by relationships.
    * Node names are surrounded by parentheses in a query, for example, (Node).
@@ -28,6 +29,18 @@ content_markdown: >-
    
   To get data from multiple nodes in one query, you use defined relationships to other nodes. 
   <br>
+  
+  #### About Atributes in Technopedia graph database
+  
+  Attribues belong to nodes and they represent and store data.
+  Attributes store data as (key-value-pairs). <br>
+  for example, `{"product" : "Excel"}`<br> 
+
+  The following list shows some attributes of the manufacturer node: <br>
+
+   * technopedia_id
+   * manufacturer
+   * symbol
 
   #### Relationships connect nodes in Technopedia 
 
