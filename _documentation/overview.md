@@ -15,7 +15,7 @@ content_markdown: |-
   The first section of this documentation is about getting started with the API and creating qeuries with the Technopedia query language.
   The API section references several nodes in Technopedia and provides mulitiple examples on how to retrive data.
 
-  To learn about using the API and the Technopedia query language, read this overviiew, and then take the following steps:
+  To learn about using the API and the Technopedia query language, read this overview, and then take the following steps:
   
    1. Get an API key and try out some queries. <br>
      [Get started](../#documentationgetting_started102)
@@ -56,7 +56,7 @@ content_markdown: |-
    * Nodes have attributes that represent and store data as key-value pairs.
    * Nodes connect to other nodes by using relationships.
  
-  The following diagram shows an overview of the Technopedia API endpoints, some nodes, and relationships between nodes in the Technopedia database.
+  The following diagram shows an overview of the Technopedia API endpoints, some nodes, and node relationships.
   
   <br>
   
