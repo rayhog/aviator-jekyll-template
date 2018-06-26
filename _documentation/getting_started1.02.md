@@ -93,9 +93,11 @@ content_markdown: >-
 
   <br>
   Try the following query that returns 10 software products that contain Microsoft in their name. <br>
+  <br>
   `https://v6-1.technopedia.com/tql?q=MATCH (s:SOFTWARE_PRODUCT) WHERE s.product  CONTAINS "Microsoft" Return s.product LIMIT 10` <br>
   <br>
-  Try the following query that returns software editions that are named Enterprise Developer with the Technopedia ID. <br>
+  Try the following query that returns software editions named Enterprise Developer with their Technopedia IDs. <br>
+  <br>
   `https://v6-1.technopedia.com/tql?q=MATCH (s:SOFTWARE_EDITION) WHERE s.edition = "Enterprise Developer" RETURN s.edition, s.technopedia_id LIMIT 3` <br>
   
 
@@ -109,7 +111,8 @@ content_markdown: >-
   <br>
   GET `https://v6-1.technopedia.com/technopedia-id/<technopedia-id>` <br>
 
-  Try out the following query example to return data for Technopedia ID: `359e53c0-6cda-4e3b-aaa1-2b05537ca718`<br>
+  Try out the following query example to return data for a Technopedia ID.<br>
+  <br>
   `https://v6-1.technopedia.com/technopedia-id/359e53c0-6cda-4e3b-aaa1-2b05537ca718` <br>
   
   <br>
