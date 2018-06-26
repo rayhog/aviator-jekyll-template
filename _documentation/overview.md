@@ -12,7 +12,7 @@ content_markdown: |-
   #### How to use this documentation
   <br>
   The objective of this API documentation is to enable you use Technopedia API and Technopedia query language to retrieve data from the the Technopedia database.
-  The first section of this documentation is about getting started with the API and creating qeuries with the Technopedia query language.
+  The first section of this documentation is about getting started with the API and creating queries with the Technopedia query language.
   The API section references several nodes in Technopedia and provides mulitiple examples on how to retrive data.
 
   To learn about using the API and the Technopedia query language, read this overview, and then take the following steps:
@@ -40,7 +40,7 @@ content_markdown: |-
   `GET:` `https://v6-1.technopedia.com/tql?=MATCH (n:SOFTWARE_PRODUCT) RETURN n.product` <br>
 
   The query returns software product names.<br>
-  The following image shows results for one software product.
+  The following image shows a result for one software product.
   <br>
   
   ![API Image](/images/ov_ex.png){: .img-responsive}
@@ -110,7 +110,7 @@ left_code_blocks:
       {  
 
       
-    title: Technopedia query language (TQL) endpoint
+    title: TQL endpoint
     language: javascript
   - code_block: |-
       GET:  https://v6-1.technopedia.com/technopedia-id/<technopedia_id>

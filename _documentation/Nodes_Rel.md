@@ -30,13 +30,13 @@ content_markdown: >-
   To get data from multiple nodes in one query, you use defined relationships to other nodes. 
   <br>
   
-  #### About Atributes in Technopedia graph database
+  #### About Attributes in Technopedia graph database
   
-  Attribues belong to nodes and they represent and store data.
+  Attributes belong to nodes and they represent and store data.<br>
   Attributes store data as (key-value-pairs). <br>
   for example, `{"product" : "Excel"}`<br> 
 
-  The following list shows some attributes of the manufacturer node: <br>
+  The following list shows some attributes that belong to the manufacturer node: <br>
 
    * technopedia_id
    * manufacturer
