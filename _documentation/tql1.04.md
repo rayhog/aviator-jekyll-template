@@ -32,26 +32,29 @@ content_markdown: |-
    * MATCH <br>
      You use `MATCH` to select a node in Technopedia.<br> 
     `MATCH` <br>
+    <br>
    * Node <br>
      Place a (:) colon before the node and place them inside parentheses. 
     `MATCH (:node)` <br>
+    <br>
    * Alias <br>
-    Append an alias to the node, for example, 'MATCH (alias:node)', if you want to use the 'RETURN' clause to return data for that alias. <br>
+    Append an alias to the node, for example, 'MATCH (alias:node) to use with the 'RETURN' clause. <br>
     TQL binds the unique alias to the node so that you can refer to that alias in the Return clause of <br>
-    
-    `MATCH (alias:node) RETURN alias` <br>
-
+    `MATCH (alias:node) RETURN alias` returns all attributes for the node.<br>
     You can also use the alias to specify specific node attributes that you want to return. <br>
     `MATCH (alias:node) RETURN alias.attribute1, alias.attribute2` <br>
+    <br>
    * Relationship <br>
     Use a relationship to connect nodes. <br>
     `MATCH (aliasx:node1)-[:RELATED_TO]->(aliasy:node2), RETURN aliasx, aliasy` <br>
+    <br>
    * Relationship direction <br>
     An arrow in the query shows a unidirectional relationship, and no arrows indicate a birdirectional relationship. <br>
     For example, node_software is manufactured_by node_manufacturer <br>
     `(:node_software)-[:MANUFACTURED_BY]->(:node_manufacturer)` <br>
     A bidirectional relationship is represented without an arrow, for example, <br>
     `(:node_software)-[:MANUFACTURED_BY]-(:node_manufacturer)`<br>
+    <br>
    * RETURN <br>
     The RETURN clause defines the data that you want to get back by referring to the alias. <br>
     `MATCH (aliasx:node1) RETURN aliasx` to return all attributes for that node <br>

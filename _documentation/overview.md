@@ -21,7 +21,7 @@ content_markdown: |-
      [Get started](../#documentationgetting_started102)
    2. Learn about Technopedia nodes and graph database. <br>
      [Technopedia data](../#documentationNodes_Rel)
-   3. Learn about using the Technopedia query language to write queries that you use with the API to query Technopedia database. <br>
+   3. Learn about writng queries with TQL. <br>
      [Technopedia queries](../#documentationtql104)
   
   To retrieve data from Technopedia, the most common practice you'll undertake is to write TQL queries to use with the API.
@@ -34,7 +34,7 @@ content_markdown: |-
     * You make an API GET request to the `/tql` endpoint, which requires a TQL query statement to describe the data that you want to retrieve.<br>
     * Data is returned as key-value pairs in JSON format. <br>
 
-  The following query example is an API GET request that uses the TQL endpoint to retrieve software product names from Technopedia. <br>
+  The following query example is an API GET request that uses the `/tql` endpoint to retrieve software product names from Technopedia. <br>
   <br>
   `GET:` `https://v6-1.technopedia.com/tql?=MATCH (n:SOFTWARE_PRODUCT) RETURN n.product` <br>
 
@@ -55,7 +55,7 @@ content_markdown: |-
    * Nodes have attributes that represent and store data as key-value pairs.
    * Nodes connect to other nodes by using relationships.
  
-  The following diagram shows the TQL endpoint, some nodes, and node relationships.
+  The following diagram shows the `/tql` endpoint, some nodes, and node relationships.
   
   <br>
   

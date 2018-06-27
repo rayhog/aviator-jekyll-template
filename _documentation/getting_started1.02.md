@@ -100,7 +100,7 @@ content_markdown: >-
   To learn more about Technopedia nodes and writing TQL queries, take the following steps: <br>
    1. Learn about Technopedia nodes and graph database. <br>
       [Technopedia data structure](../#documentationNodes_Rel) <br>
-   2. Learn about writing queries with the Technopedia query language to qeury the database. <br>
+   2. Learn about writing TQL queries. <br>
       [Technopedia query language](../#documentationtql104)
 
 
