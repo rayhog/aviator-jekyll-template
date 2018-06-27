@@ -1,0 +1,31 @@
+#### Components of a TQL MATCH query<br>
+
+  To create a TQL MATCH statement, you use some or all of the following components:
+  
+   * MATCH <br>
+     You use `MATCH` to select a node in Technopedia.<br> 
+     `MATCH` <br>
+   * Node <br>
+     Place a (:) colon before the node and place them inside parentheses. <br>
+     `MATCH (:node)` <br>
+   * Alias <br>
+     Append an alias to the node, for example, 'MATCH (alias:node)', if you want to use the 'RETURN' clause to return data for that alias. <br>
+         
+    `MATCH (alias:node) RETURN alias` <br>
+    <br>
+    You can also use the alias to specify specific node attributes that you want to return. <br>
+    `MATCH (alias:node) RETURN alias.attribute1, alias.attribute2` <br>
+   * Relationship <br>
+    Use a relationship to connect nodes. <br>
+    `MATCH (aliasx:node1)-[:RELATED_TO]->(aliasy:node2), RETURN aliasx, aliasy` <br>
+   * Relationship direction <br>
+     A unidirectional relationship is indicated by an arrow and no arrows indicate a birdirectional relationship. <br>
+    For example, node_software is manufactured_by node_manufacturer <br>
+    `(:node_software)-[:MANUFACTURED_BY]->(:node_manufacturer)` <br>
+    <br>
+    A bidirectional relationship is represented without an arrow, for example, <br>
+    `(:node_software)-[:MANUFACTURED_BY]-(:node_manufacturer)`<br>
+   * RETURN <br>
+    The RETURN clause defines the data that you want to get back by referring to the alias. <br>
+    `MATCH (aliasx:node1) RETURN aliasx` to return all attributes for that node <br>
+    `MATCH (aliasx:node1) RETURN aliasx.attribute_xyz` to return only data for `attribute_xyz` from `node1` <br>

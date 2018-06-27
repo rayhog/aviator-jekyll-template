@@ -18,7 +18,7 @@ content_markdown: |-
   `MATCH (hw_mod:HARDWARE_MODEL)-[:HAS_A]->(hw_prod:HARDWARE_PRODUCT)-[:HAS_A]->(manu:MANUFACTURER) RETURN hw_mod.model, hw_prod.product, manu.manufacturer LIMIT 5`
   
   <br> 
-  The following diagram shows hardware nodes and related software nodes.  
+  The following diagram shows hardware nodes and other connected nodes.  
   
   ![API Image](/images/hard_mod.png){:class="img-responsive"} <br>
   

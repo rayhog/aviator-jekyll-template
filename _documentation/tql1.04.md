@@ -30,17 +30,20 @@ content_markdown: |-
   To create a TQL MATCH statement, you use some or all of the following components:
   
    * MATCH <br>
-     You use `MATCH` to select a node in Technopedia.<br> 
+     Use `MATCH` to select a node in Technopedia.<br> 
     `MATCH` <br>
     <br>
    * Node <br>
-     Place a (:) colon before the node and place them inside parentheses. 
+     Nodes are preceded by a colon (:) and both items are surrounded by parentheses.<br>
     `MATCH (:node)` <br>
     <br>
    * Alias <br>
-    Append an alias to the node, for example, 'MATCH (alias:node) to use with the 'RETURN' clause. <br>
-    TQL binds the unique alias to the node so that you can refer to that alias in the Return clause of <br>
+    Append an alias to the node
+    'MATCH (alias:node) <br>
+    TQL binds the unique alias to the node so that you can refer to that alias with the Return clause. <br>
+    <br>
     `MATCH (alias:node) RETURN alias` returns all attributes for the node.<br>
+    <br>
     You can also use the alias to specify specific node attributes that you want to return. <br>
     `MATCH (alias:node) RETURN alias.attribute1, alias.attribute2` <br>
     <br>
@@ -49,9 +52,10 @@ content_markdown: |-
     `MATCH (aliasx:node1)-[:RELATED_TO]->(aliasy:node2), RETURN aliasx, aliasy` <br>
     <br>
    * Relationship direction <br>
-    An arrow in the query shows a unidirectional relationship, and no arrows indicate a birdirectional relationship. <br>
+    A unidirectional relationship is indicated by an arrow and a birdirectional relationship has no arrow. <br>
     For example, node_software is manufactured_by node_manufacturer <br>
     `(:node_software)-[:MANUFACTURED_BY]->(:node_manufacturer)` <br>
+    <br>
     A bidirectional relationship is represented without an arrow, for example, <br>
     `(:node_software)-[:MANUFACTURED_BY]-(:node_manufacturer)`<br>
     <br>

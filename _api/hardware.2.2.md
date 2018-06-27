@@ -16,7 +16,7 @@ content_markdown: |-
   
   
   <br>
-  The following image shows the hardware nodes, relationships, and relevant connections. <br>
+  The following image shows the hardware nodes, relationships, and node connections. <br>
     
   ![API Image](/images/hardware.png){:class="img-responsive"} <br>
 

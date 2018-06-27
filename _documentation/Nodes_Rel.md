@@ -61,7 +61,7 @@ content_markdown: >-
      Typically, relationships have quantitative attributes, such as time intervals.
 
 
-  The following diagram is a simple overview of nodes and relationships:
+  The following diagram is a basic overview of nodes and relationships:
   <br>
 
   ![API Image](/images/nodes_simple.png)<br>&nbsp;
