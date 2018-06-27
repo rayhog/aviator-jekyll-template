@@ -86,7 +86,7 @@ content_markdown: >-
   <br>
   `https://v6-1.technopedia.com/tql?q=MATCH (s:SOFTWARE_PRODUCT) WHERE s.product  CONTAINS "Microsoft" Return s.product LIMIT 10` <br>
   <br>
-  Try the following query that returns software editions named Enterprise Developer with their Technopedia IDs. <br>
+  Try the following query that returns a maximum of three software editions named Enterprise Developer with their Technopedia IDs. <br>
   <br>
   `https://v6-1.technopedia.com/tql?q=MATCH (s:SOFTWARE_EDITION) WHERE s.edition = "Enterprise Developer" RETURN s.edition, s.technopedia_id LIMIT 3` <br>
   

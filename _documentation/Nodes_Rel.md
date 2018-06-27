@@ -13,7 +13,7 @@ content_markdown: >-
   #### About Nodes in Technopedia
   
   
-  Nodes are entities that store categories of data in Technopedia. <br>
+  Nodes have the following characteristics: <br>
   <br> 
    * Nodes are entities that store categories of data in Technopedia.
    * Nodes have attributes that store data in key-value pairs, for example, `{"edition" : "server"}`.
@@ -41,14 +41,14 @@ content_markdown: >-
   #### Relationships connect nodes in Technopedia 
 
   ######
-  Relationships provide semantically relevant connections between the Technopedia nodes.
+  Relationships provide semantically relevant connections between the Technopedia nodes.<br>
   <br>  
   To get Technopedia data from multiple nodes in one query, you must use relationships to connect the nodes that you want to retrieve data from.
   For example, you might want to retrieve data for manufacturer, software edtion, and software product by making one query.
 
   The following information provides an overview of relationships in the Technopedia database:
 
-   * Relationships connect nodes, for example, the software product node has the relationship: `[HAS_A]->` to the manufacturer node.
+   * Relationships connect nodes, for example, the software product node connects by the relationship: `HAS_A` to the manufacturer node.
    * Relationships have a type, such as `BELONGS_TO` and a direction, such as node x to node y. <br>
      An arrow determines the direction of the relationship. <br>
      For example `(node x)-[BELONGS_TO]->(node y)` but node y does not belong to node x. <br>

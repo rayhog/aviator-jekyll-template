@@ -109,7 +109,7 @@ content_markdown: |-
         attribute of the software product node to get names of software products. <br>   
    3.	For queries that involve more than one node, identify any relationships that connect the nodes.<br>
    4.   Note any conditions that you want to apply to filter the data.
-   5.   Decide on any aliases that you need to add to nodes so you use them in with the `RETURN` clause.
+   5.   Decide on any aliases that you need to add to nodes so you can use them in the `RETURN` clause.
    6.	Write your MATCH statement
 
   To view a list of attributes for any node, you use the 
@@ -131,12 +131,12 @@ content_markdown: |-
        has the `product` attribute with a product (name) field.<br>
        `MATCH (:SOFTWARE_PRODUCT)`
     2. Add an alias to the node, so that you can use it with the RETURN clause to get data from that node. <br>
-       You place the alias before the colon.
+       You place the alias before the colon.<br>
        `MATCH (s:SOFTWARE_PRODUCT)`  
     3. Use the `WHERE` clause with the `CONTAINS` clause to specify the condition `product CONTAINS "Adobe"`.<br>
        `WHERE s.product CONTAINS "Adobe"`<br>
        `product` is the attribute that stores the name of the product.<br>
-    4. Refer to the alias in the RETURN clause to list software products that contain Adobe in the product name.  <br>
+    4. Use the RETURN clause to list software products that contain Adobe in the product name by referencing the alias `s`.  <br>
        `Return s`
 
     Here's the complete query:<br>

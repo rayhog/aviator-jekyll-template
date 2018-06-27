@@ -30,7 +30,7 @@ content_markdown: |-
   #### Making API GET requests to retrieve asset data 
   <br>
   The Technopedia version 6.1 API provides you with read access to the Technopedia database by using an API GET request to retreive asset data.
-    * To get access to the Technopedia database, all you require is an API key that you get from Flexera technial support.<br>
+    * To get access to the Technopedia database, all you require is an API key that you get from Flexera technical support.<br>
     * You make an API GET request to the `/tql` endpoint, which requires a TQL query statement to describe the data that you want to retrieve.<br>
     * Data is returned as key-value pairs in JSON format. <br>
 
@@ -53,7 +53,7 @@ content_markdown: |-
 
    * Nodes represent entities that are equivalent to a records classification, which store a specific data category such as hardware or software. 
    * Nodes have attributes that represent and store data as key-value pairs.
-   * Nodes connect to other nodes by using relationships.
+   * Nodes connect to other nodes by relationships.
  
   The following diagram shows the `/tql` endpoint that is used to query nodes in the Technopedia database.
   
@@ -118,10 +118,7 @@ right_code_blocks:
       https://v6-1.technopedia.com/tql
 
 
-      Technopedia ID (tid) endpoint
-      
-      https://v6-1.technopedia.com/technopedia-id/
-      
+            
       
 
 
