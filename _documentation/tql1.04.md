@@ -112,7 +112,6 @@ content_markdown: |-
 
   To view a list of attributes for any node, you use the 
   `MATCH (alias:NODE) RETURN alias` query with the `/tql` endpoint.
-  
   For example, `https://v6-1.technopedia.com/tql?q=MATCH (n:SOFTWARE_PRODUCT) RETURN n LIMIT 1`
   {: .warning}
 
