@@ -11,7 +11,7 @@ content_markdown: |-
   
   #### How to use this documentation
   <br>
-  The objective of this API documentation is to enable you use Technopedia version 6 API and Technopedia query language (TQL) to retrieve data from the Technopedia database.
+  The objective of this API documentation is to enable you use the API and Technopedia query language (TQL) to retrieve data from the Technopedia database.
   The first section of this documentation is about getting started with the API and creating queries by using TQL.
   The API section references several nodes in Technopedia and provides mulitiple examples about retrieving data.
 
@@ -39,7 +39,7 @@ content_markdown: |-
   `GET:` `https://v6-1.technopedia.com/tql?=MATCH (n:SOFTWARE_PRODUCT) RETURN n.product` <br>
 
   The query returns software product names.<br>
-  The following image shows a result for one software product.
+  The following image shows data for one software product.
   <br>
   
   ![API Image](/images/ov_ex.png){: .img-responsive}
@@ -48,14 +48,14 @@ content_markdown: |-
     
   #### Technopedia Graph Database
   <br>
-  The Technopedia graph database is a data model that consists of a collection of nodes that are joined together by relationships.
+  The Technopedia graph database is a data model that consists of a collection of nodes that are connected by relationships.
   <br>
 
-   * Nodes represent entities that are equivalent to a records classification that store a specific data category such as hardware or software. 
+   * Nodes represent entities that are equivalent to a records classification, which store a specific data category such as hardware or software. 
    * Nodes have attributes that represent and store data as key-value pairs.
    * Nodes connect to other nodes by using relationships.
  
-  The following diagram shows the `/tql` endpoint, some nodes, and node relationships.
+  The following diagram shows the `/tql` endpoint that is used to query nodes in the Technopedia database.
   
   <br>
   

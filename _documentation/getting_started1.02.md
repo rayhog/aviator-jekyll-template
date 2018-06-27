@@ -40,7 +40,7 @@ content_markdown: >-
 
   #### Parameters<br>
 
-  For the TQL endpoint, you provide MATCH statements that specifies at least one node in the query. Attributes and relationships between nodes are optional. <br>
+  For the TQL endpoint, you provide a TQL MATCH statements that specifies at least one node in the query. Attributes and relationships between nodes are optional parameters in the query. <br>
 
   `https://v6-1.technopedia.com/tql?q=<TQL_query>`<br>
 
@@ -74,7 +74,7 @@ content_markdown: >-
   GET request by using the Technopedia query language (TQL)
 
   ######
-  The main method for acessing information in Technopedia is by using the API with the Technopedia query language (TQL) to query nodes and relationships in the Technopedia database.<br>
+  The main method for acessing information in Technopedia is by using the API with the Technopedia query language (TQL) to query nodes, relationships, and attributes in the Technopedia database.<br>
   <br>
   GET `https://v6-1.technopedia.com/tql?q=<TQL_query>`<br>
   <br>

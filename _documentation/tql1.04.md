@@ -38,9 +38,9 @@ content_markdown: |-
     `MATCH (:node)` <br>
     <br>
    * Alias <br>
-    Append an alias to the node
+     You append an unique alias to a node so that TQL can bind that alias to the node; then, you can refer to that alias in the Return clause to return data. <br>
     'MATCH (alias:node) <br>
-    TQL binds the unique alias to the node so that you can refer to that alias with the Return clause. <br>
+     <br>
     <br>
     `MATCH (alias:node) RETURN alias` returns all attributes for the node.<br>
     <br>
@@ -59,9 +59,12 @@ content_markdown: |-
     
    * RETURN <br>
     The RETURN clause defines the data that you want to get back by referring to the alias. <br>
-    `MATCH (aliasx:node1) RETURN aliasx` to return all attributes for that node <br>
-    `MATCH (aliasx:node1) RETURN aliasx.attribute_xyz` to return only data for `attribute_xyz` from `node1` <br>
-
+    <br>
+    `MATCH (aliasx:node1) RETURN aliasx` 
+     All node1 attributes are returned <br>
+     <br>
+    `MATCH (aliasx:node1) RETURN aliasx.attribute_xyz` 
+     Data for attribute_xyz only is returned for `node1` <br>
 
 
 
