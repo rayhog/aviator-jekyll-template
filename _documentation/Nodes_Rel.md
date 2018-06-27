@@ -72,9 +72,10 @@ content_markdown: >-
   `Match (:node)-[:RELATIONSHIP]-> (:node)`
   
   <br>
- 
+  <br>
   
   The following diagram shows the nodes and relationships in the Technopedia database. <br>
+  <br>
   <br>
   ![API Image](/images/graph.png)<br>&nbsp;
   <br>
