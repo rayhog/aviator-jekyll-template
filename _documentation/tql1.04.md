@@ -56,9 +56,7 @@ content_markdown: |-
     For example, node_software is manufactured_by node_manufacturer <br>
     `(:node_software)-[:MANUFACTURED_BY]->(:node_manufacturer)` <br>
     <br>
-    A bidirectional relationship is represented without an arrow, for example, <br>
-    `(:node_software)-[:MANUFACTURED_BY]-(:node_manufacturer)`<br>
-    <br>
+    
    * RETURN <br>
     The RETURN clause defines the data that you want to get back by referring to the alias. <br>
     `MATCH (aliasx:node1) RETURN aliasx` to return all attributes for that node <br>
@@ -114,6 +112,7 @@ content_markdown: |-
 
   To view a list of attributes for any node, you use the 
   `MATCH (alias:NODE) RETURN alias` query with the `/tql` endpoint.
+  
   For example, `https://v6-1.technopedia.com/tql?q=MATCH (n:SOFTWARE_PRODUCT) RETURN n LIMIT 1`
   {: .warning}
 
