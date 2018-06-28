@@ -89,7 +89,7 @@ content_markdown: >-
 
 right_code_blocks:
   - code_block: |2
-      Technopedia Nodes
+      Nodes
 
       MANUFACTURER
       SOFTWARE_PRODUCT
@@ -117,7 +117,7 @@ right_code_blocks:
     language: tex
   - code_block: |2-
 
-      SOFTWARE_PRODUCT Attributes Examples
+      SOFTWARE_PRODUCT Attributes Example
 
       "s.alias": null,
       "s.component": null,
@@ -128,7 +128,7 @@ right_code_blocks:
       "s.is_suite": null,
       "s.modified_at": "2017-06-01 10:44:00",
       "s.product": "Office",
-      "s.technopedia_id": "141d9f85-66b2-40a6-8...",
+      "s.technopedia_id": "141d985-66......",
       "s.url": "http://investor.allscripts.com/"
 
       
