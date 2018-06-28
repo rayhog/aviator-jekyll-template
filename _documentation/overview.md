@@ -45,7 +45,8 @@ content_markdown: |-
   
   ![API Image](/images/V6api.png){: .img-responsive}
 
-   #### How to use this documentation
+  #### How to use this documentation
+  
   <br>
   The objective of this API documentation is to enable you use the API and Technopedia query language (TQL) to retrieve data from the Technopedia database. 
 

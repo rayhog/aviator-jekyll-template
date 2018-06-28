@@ -8,17 +8,20 @@ content_markdown: >-
   You access Technopedia data by querying nodes, attributes, relationships, or Technopedia IDs in the Technopedia graph.<br>
   <br>
   The graph database stores connections between nodes as first-class citizens so it doesn’t have to compute relationships at query time, which makes it more efficient than a relational database.
+
+  Before you start using the Technopedia query language (TQL), it's important to understand the node and relationship infrastructure of the Technopedia database.
   
 
   #### About Nodes in Technopedia
   
-  
-  Nodes have the following characteristics: <br>
+  Nodes are the main entity or data category that you refer to when you query the Technopedia database. For example, you query the manufacturer node to get manufacturer data, or the software product node to get software product data, which you can think of as a data category.
+
+  Nodes can do the following things:
+
   <br> 
-   * Nodes are entities that store categories of data in Technopedia.
-   * Nodes have attributes that store data in key-value pairs, for example, `{"edition" : "server"}`.
-   * Nodes are connected to other nodes by relationships.
-   * Node names are surrounded by parentheses in a query, for example, (Node).
+   * Represent and store categories of data in Technopedia.
+   * Have attributes that store data in key-value pairs, for example, `{"edition" : "server"}`.
+   * Connect to other nodes through relationships.
 
    Here's some examples of nodes in Technopedia:
 
@@ -28,8 +31,7 @@ content_markdown: >-
   
   #### About Attributes in Technopedia graph database
   
-  Attributes belong to nodes and they represent and store data.<br>
-  Attributes store data as (key-value-pairs). <br>
+  An Attribute is an named value that is stored in a node but can be also be in a relationship. <br>
   For example, `{"product" : "Excel"}`<br> 
 
   The following list shows some attributes that belong to the manufacturer node: <br>
@@ -42,10 +44,9 @@ content_markdown: >-
 
   ######
   Relationships provide semantically relevant connections between the Technopedia nodes.<br>
-  <br>  
-  To get Technopedia data from multiple nodes in one query, you must use relationships to connect the nodes that you want to retrieve data from.
+  The real power of TQL is its ability to create very specific queries that traverse nodes in the database by using relationships.<br>
   For example, you might want to retrieve data for manufacturer, software edtion, and software product by making one query.
-
+  <br>
   The following information provides an overview of relationships in the Technopedia database:
 
    * Relationships connect nodes, for example, the software product node connects by the relationship: `HAS_A` to the manufacturer node.
