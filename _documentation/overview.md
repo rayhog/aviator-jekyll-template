@@ -9,29 +9,13 @@ content_markdown: |-
   Technopedia's database catalog categorizes more than 170,000 software releases and 200,000 hardware models, and includes data from mulitiple business categories.
   <br>   
   
-  #### How to use this documentation
-  <br>
-  The objective of this API documentation is to enable you use the API and Technopedia query language (TQL) to retrieve data from the Technopedia database.
-  The first section of this documentation is about getting started with the API and creating queries by using TQL.
-  The API section references several nodes in Technopedia and provides mulitiple examples about retrieving data.
+ 
 
-  To learn about using the API and TQL, read this overview, and then take the following steps:
-  
-   1. Get an API key and try out some queries. <br>
-     [Get started](../#documentationgetting_started102)
-   2. Learn about Technopedia nodes and graph database. <br>
-     [Technopedia data](../#documentationNodes_Rel)
-   3. Learn about writng queries with TQL. <br>
-     [Technopedia queries](../#documentationtql104)
-  
-  To retrieve data from Technopedia, the most common practice you'll undertake is to write TQL queries to use with the API.
-  
-
-  #### Making API GET requests to retrieve asset data 
+  #### Retrieve asset data by making HTTP GET requests
   <br>
-  The Technopedia version 6.1 API provides you with read access to the Technopedia database by using an API GET request to retreive asset data.
+  The Technopedia version 6.1 API provides you with read access to the Technopedia database by using an HTTP GET request to retreive asset data.
     * To get access to the Technopedia database, all you require is an API key that you get from Flexera technical support.<br>
-    * You make an API GET request to the `/tql` endpoint, which requires a TQL query statement to describe the data that you want to retrieve.<br>
+    * You make an HTTP GET request to the `/tql` endpoint, which requires a TQL query statement to describe the data that you want to retrieve.<br>
     * Data is returned as key-value pairs in JSON format. <br>
 
   The following query example is an API GET request that uses the `/tql` endpoint to retrieve software product names from Technopedia. <br>
@@ -52,14 +36,30 @@ content_markdown: |-
   <br>
 
    * Nodes represent entities that are equivalent to a records classification, which store a specific data category such as hardware or software. 
-   * Nodes have attributes that represent and store data as key-value pairs.
-   * Nodes connect to other nodes by relationships.
+   * Attributes belong to nodes and they represent and store data as key-value pairs.
+   * Relationships connect nodes in the database, so you include multiple nodes in query by adding a relationship.
  
   The following diagram shows the `/tql` endpoint that is used to query nodes in the Technopedia database.
   
   <br>
   
   ![API Image](/images/V6api.png){: .img-responsive}
+
+   #### How to use this documentation
+  <br>
+  The objective of this API documentation is to enable you use the API and Technopedia query language (TQL) to retrieve data from the Technopedia database. 
+
+  Do the following tasks to get up and running with retrieving data from Technopedia:
+  
+   1. Get an API key and try out some TQL queries. <br>
+     [Get started](../#documentationgetting_started102)
+   2. Learn about Technopedia nodes and relationships. <br>
+     [Technopedia data](../#documentationNodes_Rel)
+   3. Learn to write queries with TQL. <br>
+     [Technopedia queries](../#documentationtql104)
+  
+  
+  
   
  
 
