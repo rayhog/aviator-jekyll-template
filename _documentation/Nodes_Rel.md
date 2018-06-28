@@ -1,23 +1,23 @@
 ---
-title: Technopedia Data Overview
+title: Data Overview
 position: 1.04
 type:
 description: >-  
 content_markdown: >-
   The Technopedia database is a graph database that uses graph structures for semantic queries with nodes, relationships, and attributes to represent the data.
-  You access Technopedia data by querying nodes, attributes, relationships, or Technopedia IDs in the Technopedia graph.<br>
+  You access Technopedia data by querying nodes, attributes, or relationships in the Technopedia graph.<br>
   <br>
   The graph database stores connections between nodes as first-class citizens so it doesn’t have to compute relationships at query time, which makes it more efficient than a relational database.
 
-  Before you start using the Technopedia query language (TQL), it's important to understand the node and relationship infrastructure of the Technopedia database.
+  Before you start using the Technopedia query language (TQL), it's important to be familiar with the node and relationship infrastructure of the Technopedia database.
   
 
   #### About Nodes in Technopedia
   
   Nodes are the main entity or data category that you target when you query the Technopedia database. <br>
-  For example, you query the manufacturer node to get manufacturer data, or the software product node to get software product data, which you can think of as a data category. <br>
+  For example, you query the manufacturer node to get manufacturer data, or the software product node to get software product data, which you can think of as a data category that stores specific data. <br>
   <br>
-  Nodes can do the following things:
+  The following list describes what nodes can do:
 
   <br> 
    * Represent and store categories of data in Technopedia.
@@ -89,7 +89,8 @@ content_markdown: >-
 
 right_code_blocks:
   - code_block: |2
-      
+      Technopedia Nodes
+
       MANUFACTURER
       SOFTWARE_PRODUCT
       SOFTWARE_VERSION
@@ -116,7 +117,7 @@ right_code_blocks:
     language: text
   - code_block: |2-
 
-      Examples of Software Product Attributes
+      SOFTWARE_PRODUCT Attribures Examples
 
       "s.alias": null,
       "s.component": null,
@@ -127,13 +128,13 @@ right_code_blocks:
       "s.is_suite": null,
       "s.modified_at": "2017-06-01 10:44:00",
       "s.product": "Office",
-      "s.technopedia_id": "141d9f85-66b2-40a6-8",
+      "s.technopedia_id": "141d9f85-66b2-40a6-8...",
       "s.url": "http://investor.allscripts.com/"
 
       
 
            
     title: Attributes
-    language: text
+    language: bash
 ---
 
