@@ -88,7 +88,7 @@ content_markdown: >-
 
 
 right_code_blocks:
-  - code_block: |
+  - code_block: |2
       
       MANUFACTURER
       SOFTWARE_PRODUCT
@@ -114,6 +114,8 @@ right_code_blocks:
            
     title: Nodes in Technopedia
     language: text
+  - code_block: |2-
+
       Examples of Software Product Attributes
 
       "s.alias": null,
