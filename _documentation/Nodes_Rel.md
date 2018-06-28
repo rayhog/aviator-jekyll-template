@@ -1,5 +1,5 @@
 ---
-title: Technopedia Data
+title: Technopedia Data Overview
 position: 1.04
 type:
 description: >-  
@@ -14,8 +14,9 @@ content_markdown: >-
 
   #### About Nodes in Technopedia
   
-  Nodes are the main entity or data category that you refer to when you query the Technopedia database. For example, you query the manufacturer node to get manufacturer data, or the software product node to get software product data, which you can think of as a data category.
-
+  Nodes are the main entity or data category that you target when you query the Technopedia database. <br>
+  For example, you query the manufacturer node to get manufacturer data, or the software product node to get software product data, which you can think of as a data category. <br>
+  <br>
   Nodes can do the following things:
 
   <br> 
@@ -23,18 +24,18 @@ content_markdown: >-
    * Have attributes that store data in key-value pairs, for example, `{"edition" : "server"}`.
    * Connect to other nodes through relationships.
 
-   Here's some examples of nodes in Technopedia:
+   Here's some examples of nodes and relationships:
 
    ![API Image](/images/nodes_few.png)<br>&nbsp;
   <br>
    
   
-  #### About Attributes in Technopedia graph database
+  #### About Attributes 
   
   An attribute is an named value that is stored in a node but can be also be in a relationship. <br>
   For example, `{"product" : "Excel"}`<br> 
 
-  The node’s attributes, for example, the edition attribute that belongs to software edition attribute are represented as key-value pairs within a pair of braces, for example: {edition: "Server"}. 
+  The node’s attributes, for example, the edition attribute that belongs to software edition node are represented as key-value pairs within a pair of braces, for example: {edition: "Server"}. 
 
   The following list shows some attributes that belong to the manufacturer node: <br>
 
@@ -112,6 +113,25 @@ right_code_blocks:
 
            
     title: Nodes in Technopedia
-    language: bash
+    language: text
+      Examples of Software Product Attributes
+
+      "s.alias": null,
+      "s.component": null,
+      "s.created_at": "2007-04-22 04:55:16",
+      "s.desupported_flag": null,
+      "s.discontinued_flag": null,
+      "s.family": "HealthMatics",
+      "s.is_suite": null,
+      "s.modified_at": "2017-06-01 10:44:00",
+      "s.product": "Office",
+      "s.technopedia_id": "141d9f85-66b2-40a6-8",
+      "s.url": "http://investor.allscripts.com/"
+
+      
+
+           
+    title: Attributes
+    language: text
 ---
 

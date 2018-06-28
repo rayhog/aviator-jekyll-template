@@ -1,5 +1,5 @@
 ---
-title: TQL Queries
+title: TQL Relationships
 position: 1.06
 type:
 description:

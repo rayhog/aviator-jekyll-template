@@ -35,7 +35,7 @@ content_markdown: |-
   The Technopedia graph database is a data model that consists of a collection of nodes that are connected by relationships.
   <br>
 
-   * Nodes represent entities that are equivalent to a records classification, which store a specific data category such as hardware or software. 
+   * Nodes represent entities that are equivalent to a records classification that represents a specific data category such as hardware or software. 
    * Attributes belong to nodes and they represent and store data as key-value pairs.
    * Relationships connect nodes in the database, so you include multiple nodes in query by adding a relationship.
  
