@@ -13,11 +13,16 @@ content_markdown: |-
   #### Get started with TQL<br>
 
   To create a query by using TQL, you must create a MATCH statement, which is similar to a Select statement in SQL.<br>
-  For example, `MATCH (software:SOFTWARE_RELEASE) RETURN software`<br>
+  The `MATCH` statement enables you to specify the query parameters to use to search the database.
+  See the following example: <br>
+  <br>
+  `MATCH (software:SOFTWARE_RELEASE) RETURN software`<br>
   
   You add the MATCH query statement as a query parameter to the `/tql` endpoint.<br>
-  For example, `https://v6-1.technopedia.com/tql?q=<MATCH statement>`
+   See the following example: <br>
   <br>
+  `https://v6-1.technopedia.com/tql?q=<MATCH statement>`
+  <b>
   
   The TQL MATCH statement returns results from one or more nodes and relationships that you specify in the query. Typically, the query results are returned as key-value pairs, which resembles the format in the following image: <br>
    <br>
@@ -30,7 +35,7 @@ content_markdown: |-
   To create a TQL MATCH statement, you use some or all of the following components:
   
    * MATCH <br>
-     Use `MATCH` to select a node and specify the search the query parameters.<br> 
+     Use `MATCH` to select a node and specify the query search parameters.<br> 
     `MATCH` <br>
     <br>
    * Node <br>
@@ -38,14 +43,14 @@ content_markdown: |-
     `MATCH (:node)` <br>
     <br>
    * Alias <br>
-     You append an unique alias to a node that TQL binds to the node. The `RETURN` clause references the alias to retrieve data. <br>
+     You append an unique alias to a node, which TQL binds to the node. The `RETURN` clause references the alias to retrieve data. <br>
     'MATCH (alias:node) <br>
      <br>
     `MATCH (alias:node) RETURN alias` <br>
     Returns all attributes for the node.<br>
     <br>
     `MATCH (alias:node) RETURN alias.attribute1, alias.attribute2` <br>
-    Retruns data for attribute1 and attribute2, which are specific attributes. <br>
+    Retruns data for attribute1 and attribute2, which are the specified attributes. <br>
     <br>
    * Relationship <br>
     Use a relationship to connect nodes. <br>
@@ -92,7 +97,7 @@ content_markdown: |-
 
     
   <br>
-  The following TQL query shows the most common components of a MATCH statement:
+  The following TQL query example shows the most common components of a MATCH statement:
   <br>
   
   ![API Image](/images/tql_query.png)<br>&nbsp;
@@ -124,7 +129,7 @@ content_markdown: |-
   <br>
   <b>Query Intent:</b> To find software products that contain Adobe in their product name.<br>
 
-  The Software Product node has an attribute named product that lists the product name.<br>
+  The `SOFTWARE_PRODUCT` node has an attribute named `product` that stores the product name.<br>
   View the list of attributes that you can use on the Software Product page, or you can use the following query: <br>
   `MATCH(x:SOFTWARE_PRODUCT) RETURN x` to get a list of attributes. <br>
 
@@ -156,7 +161,7 @@ content_markdown: |-
 
   <br>
 
-  The following diagram shows the software nodes and the relationships directions.
+  The following diagram shows the software nodes, manufactuer node, and the relationships.
   <br>
   
   ![API Image](/images/sw_graph.png)<br>&nbsp;
@@ -176,6 +181,7 @@ content_markdown: |-
       `MATCH (alias:SOFTWARE_EDITION) WHERE s.order = 2 AND s.edition = "Enterprise Developer"`<br>
     3. You use the `RETURN` clause to select the query output by referring to the alias and attributes.<br>
       `RETURN s.edition, s.order, s.technopedia_id`  
+      In this example, you return the `edition`, `order` and `technopedia-id
 
   <br>
   In this query example, you return software editions in Technopedia by edition, order, and Technopedia ID: <br>
@@ -193,13 +199,13 @@ content_markdown: |-
 
     1. Use `MATCH` to select the software edtion node, and add node aliases to use in the `RETURN` clause.<br>
        `MATCH (s:SOFTWARE_EDITION)`
-    2. Add the `HAS_A` relationship from edition to product and note the direction of the relationship in the diagram.<br>
+    2. Add the `HAS_A` relationship from `SOFTWARE_EDITION` to `SOFTWARE_PRODUCT` and note the direction of the relationship in the diagram.<br>
       `MATCH (s:SOFTWARE_EDITION)-[:HAS_A]->(p:SOFTWARE_PRODUCT)`<br>
        You must add an alias for software product becuause you use the alias (p) in the return clause to return the product name.  
-    3. You use the `RETURN` clause to select the query output by referring to the alias and attributes.<br>
+    3. You use the `RETURN` clause to define the query output by referring to the alias and attributes.<br>
        You use the attributes `edition` from software edition and `product` from the software product node.<br> 
        `RETURN s.edition, p.product` or you can return all attributes by using `RETURN s, p` <br>  
-    4. To limit the number of results, you use the `LIMIT` clause to limit the results to five or any number that you want.<br>   
+    4. To limit the number of results, you use the `LIMIT` clause to limit the results to five or any number that you define.<br>   
 
         
    ![API Image](/images/ed_to_prod.png)<br>&nbsp;

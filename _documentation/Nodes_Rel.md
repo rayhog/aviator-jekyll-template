@@ -12,7 +12,7 @@ content_markdown: >-
   Before you start using the Technopedia query language (TQL), it's important to be familiar with the node and relationship infrastructure of the Technopedia database.
   
 
-  #### About Nodes in Technopedia
+  #### Nodes in Technopedia
   
   Nodes are the main entity or data category that you target when you query the Technopedia database. <br>
   For example, you query the manufacturer node to get manufacturer data, or the software product node to get software product data, which you can think of as a data category that stores specific data. <br>
@@ -35,30 +35,30 @@ content_markdown: >-
   An attribute is an named value that is stored in a node but can be also be in a relationship. <br>
   For example, `{"product" : "Excel"}`<br> 
 
-  The node’s attributes, for example, the edition attribute that belongs to software edition node are represented as key-value pairs within a pair of braces, for example: {edition: "Server"}. 
-
+  The node’s attributes, for example, the edition attribute that belongs to software edition node are represented as key-value pairs within a pair of braces, for example: {edition: "Server"}. <br>
+  <br>
   The following list shows some attributes that belong to the manufacturer node: <br>
 
    * technopedia_id
    * manufacturer
    * symbol
 
-  #### Relationships connect nodes in Technopedia 
+  #### Relationships connect nodes  
 
   ######
   Relationships provide semantically relevant connections between the Technopedia nodes.<br>
-  The real power of TQL is its ability to create very specific queries that traverse nodes in the database by using relationships.<br>
+  Relationships enable you query several nodes in one query.<br>
   For example, you might want to retrieve data for manufacturer, software edtion, and software product by making one query.
   <br>
   The following information provides an overview of relationships in the Technopedia database:
 
    * Relationships connect nodes, for example, the software product node connects by the relationship: `HAS_A` to the manufacturer node.
    * Relationships have a type, such as `BELONGS_TO` and a direction, such as node x to node y. <br>
-     An arrow determines the direction of the relationship. <br>
+     An arrowhead (`.>`) determines the direction of the relationship. <br>
      For example `(node x)-[BELONGS_TO]->(node y)` but node y does not belong to node x. <br>
-   * Typically, relationships  are unidirectional but they can be bidirectional, in which case, there's no arrow.
+   * Typically, relationships  are unidirectional but they can be bidirectional, in which case, there's no arrowhead.
      For example `(node x)-[BELONGS_TO]-(node y)` <br>    
-   * Relationships allow you to traverse the Technopedia nodes and retreive data from multiple nodes in one query by using TQL.
+   * Relationships allow you to use a a single query to traverse the Technopedia nodes and retreive data from multiple nodes.
    * Like nodes, relationships can have attributes. 
      Typically, relationships have quantitative attributes, such as time intervals.
 
@@ -119,17 +119,17 @@ right_code_blocks:
 
       SOFTWARE_PRODUCT Attributes Example
 
-      "s.alias": null,
-      "s.component": null,
-      "s.created_at": "2007-04-22 04:55:16",
-      "s.desupported_flag": null,
-      "s.discontinued_flag": null,
-      "s.family": "HealthMatics",
-      "s.is_suite": null,
-      "s.modified_at": "2017-06-01 10:44:00",
-      "s.product": "Office",
-      "s.technopedia_id": "141d985-66......",
-      "s.url": "http://investor.allscripts.com/"
+      "alias": null,
+      "component": null,
+      "created_at": "2007-04-22 04:55:16",
+      "desupported_flag": null,
+      "discontinued_flag": null,
+      "family": "HealthMatics",
+      "is_suite": null,
+      "modified_at": "2017-06-01 10:44:00",
+      "product": "Office",
+      "technopedia_id": "141d985-66......",
+      "url": "http://investor.allscripts.com/"
 
       
 

@@ -6,7 +6,7 @@ description:
 content_markdown: |-
   Technopedia version 6.1 API enables access to asset data in Technopedia, which you use to manage your IT assets with respect to risk, control, governance, costs and business compliance. 
   <br>
-  Technopedia's database catalog categorizes more than 170,000 software releases and 200,000 hardware models, and includes data from mulitiple business categories.
+  Technopedia's database catalog categorizes millions of assets and includes data from mulitiple business categories.
   <br>   
   
  
@@ -18,12 +18,12 @@ content_markdown: |-
     * You make an HTTP GET request to the `/tql` endpoint, which requires a TQL query statement to describe the data that you want to retrieve.<br>
     * Data is returned as key-value pairs in JSON format. <br>
 
-  The following query example is an API GET request that uses the `/tql` endpoint to retrieve software product names from Technopedia. <br>
+  The following query example is an HTTP GET request that uses the `/tql` endpoint to retrieve software product names from Technopedia. <br>
   <br>
   `GET:` `https://v6-1.technopedia.com/tql?=MATCH (n:SOFTWARE_PRODUCT) RETURN n.product` <br>
 
-  The query returns software product names.<br>
-  The following image shows data for one software product.
+  
+  The following image shows data that is returned for one software product.
   <br>
   
   ![API Image](/images/ov_ex.png){: .img-responsive}
@@ -35,9 +35,9 @@ content_markdown: |-
   The Technopedia graph database is a data model that consists of a collection of nodes that are connected by relationships.
   <br>
 
-   * Nodes represent entities that are equivalent to a records classification that represents a specific data category such as hardware or software. 
+   * Nodes represent entities that are equivalent to a data category such as hardware or software. 
    * Attributes belong to nodes and they represent and store data as key-value pairs.
-   * Relationships connect nodes in the database, so you include multiple nodes in query by adding a relationship.
+   * Relationships connect nodes in the database, which enables you to include multiple nodes in a query by adding a node-to-node relationship.
  
   The following diagram shows the `/tql` endpoint that is used to query nodes in the Technopedia database.
   
@@ -46,11 +46,11 @@ content_markdown: |-
   ![API Image](/images/V6api.png){: .img-responsive}
 
   #### How to use this documentation
-  
+
   <br>
   The objective of this API documentation is to enable you use the API and Technopedia query language (TQL) to retrieve data from the Technopedia database. 
 
-  Do the following tasks to get up and running with retrieving data from Technopedia:
+  Do the following tasks to enable you to retrieving data from Technopedia:
   
    1. Get an API key and try out some TQL queries. <br>
      [Get started](../#documentationgetting_started102)
