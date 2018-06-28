@@ -114,10 +114,10 @@ right_code_blocks:
 
            
     title: Nodes in Technopedia
-    language: text
+    language: tex
   - code_block: |2-
 
-      SOFTWARE_PRODUCT Attribures Examples
+      SOFTWARE_PRODUCT Attributes Examples
 
       "s.alias": null,
       "s.component": null,
@@ -135,6 +135,6 @@ right_code_blocks:
 
            
     title: Attributes
-    language: bash
+    language: bas
 ---
 
