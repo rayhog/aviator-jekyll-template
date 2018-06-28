@@ -89,7 +89,7 @@ content_markdown: >-
 
 right_code_blocks:
   - code_block: |2
-      Nodes
+      Technopedia Nodes
 
       MANUFACTURER
       SOFTWARE_PRODUCT
@@ -113,7 +113,7 @@ right_code_blocks:
 
 
            
-    title: Nodes in Technopedia
+    title: Nodes
     language: tex
   - code_block: |2-
 
