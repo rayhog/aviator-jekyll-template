@@ -52,7 +52,7 @@ content_markdown: |-
     `MATCH (aliasx:node1)-[:RELATED_TO]->(aliasy:node2), RETURN aliasx, aliasy` <br>
     <br>
    * Relationship direction <br>
-    A unidirectional relationship is indicated by an arrow and a birdirectional relationship has no arrow. <br>
+    A unidirectional relationship is indicated by an arrowhead and a birdirectional relationship has no arrowhead. <br>
     For example, node_software is manufactured_by node_manufacturer <br>
     `(:node_software)-[:MANUFACTURED_BY]->(:node_manufacturer)` <br>
     <br>
@@ -60,11 +60,11 @@ content_markdown: |-
    * RETURN <br>
     The RETURN clause defines the data that you want to get back by referring to the alias. <br>
     <br>
-    `MATCH (aliasx:node1) RETURN aliasx` 
+    `MATCH (aliasx:node1) RETURN aliasx` <br>
      All node1 attributes are returned <br>
      <br>
-    `MATCH (aliasx:node1) RETURN aliasx.attribute_xyz` 
-     Data for attribute_xyz only is returned for `node1` <br>
+    `MATCH (aliasx:node1) RETURN aliasx.attribute_xyz` <br>
+     Data for attribute_xyz is returned for `node1` <br>
 
 
 
