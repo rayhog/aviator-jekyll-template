@@ -30,15 +30,15 @@ content_markdown: |-
   To create a TQL MATCH statement, you use some or all of the following components:
   
    * MATCH <br>
-     Use `MATCH` to select a node in Technopedia.<br> 
+     Use `MATCH` to select a node and specify the search the query parameters.<br> 
     `MATCH` <br>
     <br>
    * Node <br>
-     Nodes are preceded by a colon (:) and both items are surrounded by parentheses.<br>
+     Nodes are prefixed with a colon (:) and surrounded by parentheses.<br>
     `MATCH (:node)` <br>
     <br>
    * Alias <br>
-     You append an unique alias to a node so that TQL can bind that alias to the node; then, you can refer to that alias in the Return clause to return data. <br>
+     You append an unique alias to a node that TQL binds to the node. The `RETURN` clause references the alias to retrieve data. <br>
     'MATCH (alias:node) <br>
      <br>
     `MATCH (alias:node) RETURN alias` <br>
