@@ -22,7 +22,8 @@ content_markdown: |-
    See the following example: <br>
   <br>
   `https://v6-1.technopedia.com/tql?q=<MATCH statement>`
-  <b>
+  `https://v6-1.technopedia.com/tql?q=MATCH (software:SOFTWARE_RELEASE) RETURN software
+  <br>
   
   The TQL MATCH statement returns results from one or more nodes and relationships that you specify in the query. Typically, the query results are returned as key-value pairs, which resembles the format in the following image: <br>
    <br>

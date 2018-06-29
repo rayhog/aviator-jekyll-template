@@ -45,11 +45,12 @@ content_markdown: |-
   #### Examples of building relationships<br>   
 
   <br>
-  To incoporate multiple nodes in a MATCH statement you must use relationships to connect the nodes and then use the `RETURN` clause to get data from the nodes in the query. Use the following guide to help you to build your query:
+  To include multiple nodes in a TQL MATCH statement, you must use relationships to connect the nodes and then use the `RETURN` clause to reference the aliases with nodes and attributes to return data.<b>
+   Use the following guidelines to help you to build your query:
 
    1. Select the Nodes that you want to use in your query.<br>
-   2. Identify the node attributes that store the information you require.<br>
-   3. Identify any relationships that are required to connect nodes that hold your targeted data.<br>
+   2. Identify the node attributes that you want data from.<br>
+   3. Identify relationships to connect nodes that hold your targeted data.<br>
    4. Write your MATCH statement.
 
   <br>
@@ -70,11 +71,11 @@ content_markdown: |-
     * `(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)` <br>
     * `(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION)` <br>
          <br>
-       `MATCH (m:MANUFACTURER)<-[:HAS_A]-(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION)` <br>
+    `MATCH (m:MANUFACTURER)<-[:HAS_A]-(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION)` <br>
 
     3. Add the `WHERE` clause to filter the manufacturer attribute for "Oracle".<br>
       `WHERE m.manufacturer = "Oracle"` <br>
-    4. Return data by using the aliases that are assigned to the nodes in the `MATCH` statement.<br>
+    4. Return data by referencing the aliases that are assigned to the nodes in the `MATCH` statement.<br>
        `RETURN m.manufacturer, sp.product, sv.version, sr.release, se.edition` <br>
     5. Limit the number of results that are returned by using the `LIMIT` clause. <br>
        `LIMIT 2` <br>
