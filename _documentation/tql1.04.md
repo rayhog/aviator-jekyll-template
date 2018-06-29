@@ -21,8 +21,8 @@ content_markdown: |-
   You add the MATCH query statement as a query parameter to the `/tql` endpoint.<br>
    See the following example: <br>
   <br>
-  `https://v6-1.technopedia.com/tql?q=<MATCH statement>`
-  `https://v6-1.technopedia.com/tql?q=MATCH (software:SOFTWARE_RELEASE) RETURN software
+  `https://v6-1.technopedia.com/tql?q=<MATCH statement>` <br>
+  `https://v6-1.technopedia.com/tql?q=MATCH (software:SOFTWARE_RELEASE) RETURN software` <br>
   <br>
   
   The TQL MATCH statement returns results from one or more nodes and relationships that you specify in the query. Typically, the query results are returned as key-value pairs, which resembles the format in the following image: <br>
