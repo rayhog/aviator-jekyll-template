@@ -17,7 +17,7 @@ content_markdown: >-
 
     
     
-  #### Making API Requests to Technopedia<br>
+  #### Making HTTP Requests to Technopedia<br>
 
   You can use cURL or a third-party API client to get data from the Technopedia database.<br>
   <br>
@@ -97,8 +97,8 @@ content_markdown: >-
   {: .warning}
 
   <br>
-  To learn more about Technopedia nodes and writing TQL queries, take the following steps: <br>
-   1. Learn about Technopedia nodes and graph database. <br>
+  To learn more about Technopedia nodes and to start writing TQL queries, take the following steps: <br>
+   1. Learn about Technopedia nodes and relationships. <br>
       [Technopedia data structure](../#documentationNodes_Rel) <br>
    2. Learn about writing TQL queries. <br>
       [Technopedia query language](../#documentationtql104)

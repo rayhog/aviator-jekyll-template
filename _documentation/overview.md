@@ -50,7 +50,7 @@ content_markdown: |-
   <br>
   The objective of this API documentation is to enable you use the API and Technopedia query language (TQL) to retrieve data from the Technopedia database. 
 
-  Do the following tasks to enable you to retrieving data from Technopedia:
+  Do the following tasks to start retrieveing the data you need from Technopedia:
   
    1. Get an API key and try out some TQL queries. <br>
      [Get started](../#documentationgetting_started102)
