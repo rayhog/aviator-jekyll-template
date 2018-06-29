@@ -31,7 +31,7 @@ content_markdown: |-
   ![API Image](/images/results.png)<br>&nbsp;
   <br>  
   
-  #### Components of a TQL MATCH query<br>
+  #### Components of a TQL MATCH query  <br>
 
   To create a TQL MATCH statement, you use some or all of the following components:
   
@@ -44,15 +44,15 @@ content_markdown: |-
     `MATCH (:node)` <br>
     <br>
    * Alias <br>
-     You append an unique alias to a node, and TQL binds it to that node. <br>
+     You append an unique alias to a node, and TQL binds the alias to that node. <br>
      The `RETURN` clause references the alias to retrieve data from the associated node or relationship. <br>
-    'MATCH (alias:node)` <br>
+    'MATCH (alias:node)`  <br>
      <br>
-    `MATCH` `(alias:node) RETURN alias` <br>
-     Returns all attributes for the node.<br>
+    `MATCH (alias:node) RETURN alias`  <br>
+     Returns all attributes for the node.  <br>
     <br>
-    `MATCH (alias:node) RETURN alias.attribute1, alias.attribute2` <br>
-    Retruns data for `attribute1` and `attribute2`, which are the specified attributes. <br>
+    `MATCH (alias:node) RETURN alias.attribute1, alias.attribute2`  <br>
+     Returns data for `attribute1` and `attribute2`, which are the specified attributes. <br>
     <br>
    * Relationship <br>
     Use a relationship to connect nodes. <br>
