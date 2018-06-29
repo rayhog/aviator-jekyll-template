@@ -5,6 +5,7 @@ position: 1.02
 description: 
 content_markdown: >-
   You retrieve data from the Technopedia database by using the `/tql` endpoint.<br>
+  Get set up with an API key, learn about the requirements to access data, and try some sample HTTP GET requests.
   
   
   Your Technopedia subscription determines your level of access to Technopedia data outside of the core Technopedia data.

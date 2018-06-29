@@ -6,7 +6,7 @@ description:
 content_markdown: |-
   Technopedia version 6.1 API enables access to asset data in Technopedia, which you use to manage your IT assets with respect to risk, control, governance, costs and business compliance. 
   <br>
-  Technopedia's database catalog categorizes millions of assets and includes data from mulitiple business categories.
+  Technopedia's is the world’s largest and most comprehensive repository of enterprise software and hardware. 
   <br>   
   
  

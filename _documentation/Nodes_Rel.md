@@ -9,12 +9,12 @@ content_markdown: >-
   <br>
   The graph database stores connections between nodes as first-class citizens so it doesn’t have to compute relationships at query time, which makes it more efficient than a relational database.
 
-  Before you start using the Technopedia query language (TQL), it's important to be familiar with the node and relationship infrastructure of the Technopedia database.
+  Before you start using the Technopedia query language (TQL), it's important to be familiar with nodes, attributes, and relationships in the Technopedia database.
   
 
   #### Nodes in Technopedia
   
-  Nodes are the main entity or data category that you target when you query the Technopedia database. <br>
+  Nodes represent entities that are equivalent to a data category such as hardware or software, and they are the main entity that you target when you query the Technopedia database. <br>
   For example, you query the manufacturer node to get manufacturer data, or the software product node to get software product data, which you can think of as a data category that stores specific data. <br>
   <br>
   The following list describes what nodes can do:
@@ -46,8 +46,8 @@ content_markdown: >-
   #### Relationships connect nodes  
 
   ######
-  Relationships provide semantically relevant connections between the Technopedia nodes.<br>
-  Relationships enable you query several nodes in one query.<br>
+ 
+  Relationships connect nodes in the database, which enables you to include multiple nodes in a query by adding a node-to-node relationship. <br>
   For example, you might want to retrieve data for manufacturer, software edtion, and software product by making one query.
   <br>
   The following information provides an overview of relationships in the Technopedia database:
@@ -72,7 +72,7 @@ content_markdown: >-
   <br>
   <br>
   
-  The following diagram shows all the nodes and relationships in the Technopedia database. <br>
+  The following diagram shows all of the nodes and relationships in the Technopedia database. <br>
   <br>
   <br>
   ![API Image](/images/graph.png)<br>&nbsp;
