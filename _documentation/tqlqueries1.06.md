@@ -65,13 +65,14 @@ content_markdown: |-
   The first node that you reference is the `MANUFACTURER` node, and then you use relationships to connect the other nodes.<br>
     1. Write the first part your query by using `MATCH` to select the `MANUFACTURER` node, and add an alias to the node. <br>
       `MATCH (m:MANUFACTURER)`<br>
-    2. You must add the following relationships to connect with the product, version, release, and edtion nodes.<br>
+    2. You must add the following node-to_node relationships to connect with the product, version, release, and edtion nodes.<br>
        For each node, you must add an alias so that you can get data from that node by using the `RETURN` clause.
     * `(m:MANUFACTURER)<-[:HAS_A]-(sp:SOFTWARE_PRODUCT)` <br>
     * `(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)` <br>
     * `(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)` <br>
     * `(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION)` <br>
          <br>
+     Here's the combined relationships for this query:    
     `MATCH (m:MANUFACTURER)<-[:HAS_A]-(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)<-[:HAS_A]-(sr:SOFTWARE_RELEASE)-[:HAS_A]->(se:SOFTWARE_EDITION)` <br>
 
     3. Add the `WHERE` clause to filter the manufacturer attribute for "Oracle".<br>
