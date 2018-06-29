@@ -19,9 +19,9 @@ content_markdown: >-
   The following list describes node charactertistics:
 
   <br> 
-   * Represent and store categories of data in Technopedia.
+   * Represents data categories in Technopedia.
    * Have attributes that store data in key-value pairs, for example, `{"edition" : "server"}`.
-   * Connect to other nodes through relationships.
+   * Connect to other nodes through defined relationships.
 
    Here's some examples of nodes and relationships:
 

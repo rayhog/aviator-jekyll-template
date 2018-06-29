@@ -27,7 +27,7 @@ content_markdown: |-
   ![API Image](/images/cat_group.png){:class="img-responsive"} <br>
 
   <br>
-  ### Category Group
+  #### Category Group
   
   The category group node features high-level classifications, such as Business Applications, Network Equipment, and Automatic Teller Machine (ATM). 
   <br>
@@ -36,7 +36,7 @@ content_markdown: |-
   `MATCH (n:CATEGORY_GROUP) 
   RETURN n.label`
   
-  ### Category 1
+  #### Category 1
 
   This category 1 node references classifications such as  Storage Area Networks (SAN), Collaboration", Cash/Coin Detector and Help and Service Desk. <br>
   <br>
@@ -45,7 +45,7 @@ content_markdown: |-
   `MATCH (n:CATEGORY_1) 
   RETURN n.label`
 
-  ### Category 2
+  #### Category 2
 
   This category 2 node references classifications that are more granular than Categrory 1 or Category Group, such as Sound Masking, Retail Hardware, Diagnostic and Therapeutic Radiation/Imaging Devices", "Cheque Deposit Machine (CQM) and Handhelds.<br>
   <br>
@@ -54,7 +54,7 @@ content_markdown: |-
   `MATCH (n:CATEGORY_2) RETURN n.label`
   
 
-  ### Vertical
+  #### Vertical
 
   The VERTICAL node is a high-level classification that features the following Verticals:
 
