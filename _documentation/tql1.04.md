@@ -48,11 +48,11 @@ content_markdown: |-
      The `RETURN` clause references the alias to retrieve data from the associated node or relationship. <br>
     'MATCH (alias:node)` <br>
      <br>
-    `MATCH (alias:node) RETURN alias` <br>
-    Returns all attributes for the node.<br>
+    `MATCH` `(alias:node) RETURN alias` <br>
+     Returns all attributes for the node.<br>
     <br>
     `MATCH (alias:node) RETURN alias.attribute1, alias.attribute2` <br>
-    Retruns data for attribute1 and attribute2, which are the specified attributes. <br>
+    Retruns data for `attribute1` and `attribute2`, which are the specified attributes. <br>
     <br>
    * Relationship <br>
     Use a relationship to connect nodes. <br>
@@ -60,19 +60,19 @@ content_markdown: |-
     <br>
    * Relationship direction <br>
     A unidirectional relationship is indicated by an arrowhead and a birdirectional relationship has no arrowhead. <br>
-    For example, node_software is manufactured_by node_manufacturer <br>
+    For example, `node_software` is manufactured_by `node_manufacturer` <br>
     `(:node_software)-[:MANUFACTURED_BY]->(:node_manufacturer)` <br>
     `-[:MANUFACTURED_BY]-` indicates a bidirectional relationship
     <br>
     
    * RETURN <br>
-    The RETURN clause defines the data that you want to get back by referring to the alias. <br>
+    The `RETURN` clause defines the data that you want to get back by referring to the alias. <br>
     <br>
     `MATCH (aliasx:node1) RETURN aliasx` <br>
-     All node1 attributes are returned <br>
+     All `node1` attributes are returned <br>
      <br>
     `MATCH (aliasx:node1) RETURN aliasx.attribute_xyz` <br>
-     Data for attribute_xyz is returned for `node1` <br>
+     Data for `attribute_xyz` is returned for `node1` <br>
 
 
 

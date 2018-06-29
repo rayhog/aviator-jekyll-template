@@ -38,7 +38,7 @@ content_markdown: |-
   Relationships are used to define connections between nodes that you use when you query multiple nodes.<br>
   <br>
 
-  The following diagram shows the `/tql` endpoint that is used to query nodes in the Technopedia database.
+  The following diagram shows the endpoint that is used to query nodes in the Technopedia database.
   
   <br>
   
