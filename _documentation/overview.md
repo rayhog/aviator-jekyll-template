@@ -31,11 +31,11 @@ content_markdown: |-
     
   #### Technopedia Graph Database
   <br>
-  The Technopedia graph database is a data model that consists of nodes that represent data categories such as software product, or hardware.
+  The Technopedia graph database is a data model that consists of nodes that represent data categories such as software product, or hardware.<br>
   <br>
-  Attributes belong to nodes and they store data as key-value pairs.
+  Attributes belong to nodes and they store data as key-value pairs.<br>
   <br>
-  Relationships are used to define connections between nodes that you use when you query multiple nodes.
+  Relationships are used to define connections between nodes that you use when you query multiple nodes.<br>
   <br>
 
   The following diagram shows the `/tql` endpoint that is used to query nodes in the Technopedia database.
