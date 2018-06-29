@@ -13,7 +13,7 @@ content_markdown: |-
   Like nodes, relationships can have attributes. Add an alias to the relationship when you want to return data for those relationship attributes. TQL binds the alias that you specify to the relationship, which you can refer to with the `RETURN` clause.
   {: .warning}
 
-  #### Building relationships to connect nodes in a query<br>
+  #### Using relationships to connect nodes in a query<br>
 
   
   Relationships provide connections to other nodes, which enables you to get data from multiple nodes in one query. You connect the nodes by using the relationship that's shown in the database graph. <br>
@@ -22,7 +22,17 @@ content_markdown: |-
 
   Note the direction of the relationship in the graph. If you specify an incorrect direction, you might not get data from the nodes that you want to connect with.
 
-  
+  The following information outlines the makeup of relationships in the Technopedia database:
+
+   * Relationships connect nodes, for example, the software product node connects by the relationship: `HAS_A` to the manufacturer node.
+   * Relationships have a type, such as `BELONGS_TO` and a direction, such as node x to node y. <br>
+     An arrowhead (`.>`) determines the direction of the relationship. <br>
+     For example `(node x)-[BELONGS_TO]->(node y)` but node y does not belong to node x. <br>
+   * Typically, relationships  are unidirectional but they can be bidirectional, in which case, there's no arrowhead.
+     For example `(node x)-[BELONGS_TO]-(node y)` <br>    
+   * Relationships allow you to use a a single query to traverse the Technopedia nodes and retreive data from multiple nodes.
+   * Like nodes, relationships can have attributes. 
+     Typically, relationships have quantitative attributes, such as time intervals.
   <br>
 
   The following image shows examples of types of relationships and their directions.
