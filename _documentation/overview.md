@@ -4,9 +4,9 @@ title: Overview
 position: 1.01
 description: 
 content_markdown: |-
-  Technopedia version 6.1 API enables access to asset data in Technopedia, which you use to manage your IT assets with respect to risk, control, governance, costs and business compliance. 
+  Technopedia version 6.1 API enables access to asset data in Technopedia, which you use to manage your IT assets with respect to risk, control, governance, costs and business compliance. <br>
   <br>
-  Technopedia's is the world’s largest and most comprehensive repository of enterprise software and hardware. 
+  Technopedia is the world’s largest and most comprehensive repository of enterprise software and hardware. 
   <br>   
  
 
