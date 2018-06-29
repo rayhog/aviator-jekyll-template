@@ -1,5 +1,5 @@
 ---
-title: TQL Queries
+title: Building Queries
 position: 1.06
 type:
 description:
