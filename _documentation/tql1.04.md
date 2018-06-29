@@ -46,8 +46,7 @@ content_markdown: |-
    * Alias <br>
      You append an unique alias to a node, and TQL binds the alias to that node. <br>
      The `RETURN` clause references the alias to retrieve data from the associated node or relationship. <br>
-    'MATCH (alias:node)`  <br>
-    <br>
+    `MATCH (alias:node)` <br>     
     `MATCH (alias:node) RETURN alias` <br>
      Returns all attributes for the node.  <br>
     <br>
