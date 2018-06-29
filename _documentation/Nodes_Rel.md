@@ -44,8 +44,6 @@ content_markdown: >-
 
   #### Relationships connect nodes  
 
-  ######
- 
   Relationships connect nodes in the database, which enables you to include multiple nodes in a query by adding a node-to-node relationship. <br>
   For example, you might want to retrieve data for manufacturer, software edtion, and software product by making one query.
   <br>
@@ -62,7 +60,7 @@ content_markdown: >-
      Typically, relationships have quantitative attributes, such as time intervals.
 
 
-  The following diagram shows a basic overview of nodes and relationships:
+  The following diagram shows a basic overview of some nodes and relationships in Technopedia:
   <br>
 
   ![API Image](/images/nodes_simple.png)<br>&nbsp;
