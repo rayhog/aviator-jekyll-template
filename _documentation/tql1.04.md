@@ -47,20 +47,20 @@ content_markdown: |-
      You append an unique alias to a node, and TQL binds the alias to that node. <br>
      The `RETURN` clause references the alias to retrieve data from the associated node or relationship. <br>
     'MATCH (alias:node)`  <br>
-     <br>
-    `MATCH (alias:node) RETURN alias`  <br>
+    <br>
+    `MATCH (alias:node) RETURN alias` <br>
      Returns all attributes for the node.  <br>
     <br>
     `MATCH (alias:node) RETURN alias.attribute1, alias.attribute2`  <br>
      Returns data for `attribute1` and `attribute2`, which are the specified attributes. <br>
     <br>
    * Relationship <br>
-    Use a relationship to connect nodes. <br>
+     Use a relationship to connect nodes. <br>
     `MATCH (aliasx:node1)-[:RELATED_TO]->(aliasy:node2), RETURN aliasx, aliasy` <br>
     <br>
    * Relationship direction <br>
-    A unidirectional relationship is indicated by an arrowhead and a birdirectional relationship has no arrowhead. <br>
-    For example, `node_software` is manufactured_by `node_manufacturer` <br>
+     A unidirectional relationship is indicated by an arrowhead and a birdirectional relationship has no arrowhead. <br>
+     For example, `node_software` is manufactured_by `node_manufacturer` <br>
     `(:node_software)-[:MANUFACTURED_BY]->(:node_manufacturer)` <br>
     `-[:MANUFACTURED_BY]-` indicates a bidirectional relationship
     <br>
