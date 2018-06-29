@@ -182,7 +182,7 @@ content_markdown: |-
       `MATCH (alias:SOFTWARE_EDITION) WHERE s.order = 2 AND s.edition = "Enterprise Developer"`<br>
     3. You use the `RETURN` clause to select the query output by referring to the alias and attributes.<br>
       `RETURN s.edition, s.order, s.technopedia_id`  
-      In this example, you return the `edition`, `order` and `technopedia-id
+      In this example, you return the `edition`, `order` and `technopedia-id`
 
   <br>
   In this query example, you return software editions in Technopedia by edition, order, and Technopedia ID: <br>

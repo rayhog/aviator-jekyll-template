@@ -25,7 +25,7 @@ content_markdown: |-
   The following information outlines the makeup of relationships in the Technopedia database:
 
    * Relationships connect nodes, for example, the software product node connects by the relationship: `HAS_A` to the manufacturer node.
-   * You prefix relationships with a colon (:) and nest inside square brackets, for example `[:HAS_A]
+   * You prefix relationships with a colon (:) and nest inside square brackets, for example `[:HAS_A]`
    * Relationships have a type, such as `BELONGS_TO` and a direction, such as node x to node y. <br>
      An arrowhead (`>`) determines the direction of the relationship. <br>
      For example `(node x)-[BELONGS_TO]->(node y)` but node y does not belong to node x. <br>
