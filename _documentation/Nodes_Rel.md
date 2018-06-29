@@ -7,17 +7,16 @@ content_markdown: >-
   The Technopedia database is a graph database that uses graph structures for semantic queries with nodes, relationships, and attributes to represent the data.
   You access Technopedia data by querying nodes, attributes, or relationships in the Technopedia graph.<br>
   <br>
-  The graph database stores connections between nodes as first-class citizens so it doesn’t have to compute relationships at query time, which makes it more efficient than a relational database.
-
+  
   Before you start using the Technopedia query language (TQL), it's important to be familiar with nodes, attributes, and relationships in the Technopedia database.
   
 
   #### Nodes in Technopedia
   
   Nodes represent entities that are equivalent to a data category such as hardware or software, and they are the main entity that you target when you query the Technopedia database. <br>
-  For example, you query the manufacturer node to get manufacturer data, or the software product node to get software product data, which you can think of as a data category that stores specific data. <br>
+  For example, you query the manufacturer node to get manufacturer data, or the software product node to get software product data. <br>
   <br>
-  The following list describes what nodes can do:
+  The following list describes node charactertistics:
 
   <br> 
    * Represent and store categories of data in Technopedia.
