@@ -31,8 +31,11 @@ content_markdown: |-
     
   #### Technopedia Graph Database
   <br>
-  The Technopedia graph database is a data model that consists of a collection of nodes that are connected by relationships.
-  You use the Technopedia query language (TQL) to query nodes, whch are like data categrories such as software product, hardware, or CPU.
+  The Technopedia graph database is a data model that consists of nodes that represent data categories such as software product, or hardware.
+  <br>
+  Attributes belong to nodes and they store data as key-value pairs.
+  <br>
+  Relationships are used to define connections between nodes that you use when you query multiple nodes.
   <br>
 
   The following diagram shows the `/tql` endpoint that is used to query nodes in the Technopedia database.
