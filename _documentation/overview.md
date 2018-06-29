@@ -8,10 +8,9 @@ content_markdown: |-
   <br>
   Technopedia's is the world’s largest and most comprehensive repository of enterprise software and hardware. 
   <br>   
-  
  
 
-  #### Retrieve asset data by making HTTP GET requests
+  #### Make HTTP GET requests to retrieve asset data
   <br>
   The Technopedia version 6.1 API provides you with read access to the Technopedia database by using an HTTP GET request to retreive asset data.
     * To get access to the Technopedia database, all you require is an API key that you get from Flexera technical support.<br>
@@ -33,12 +32,9 @@ content_markdown: |-
   #### Technopedia Graph Database
   <br>
   The Technopedia graph database is a data model that consists of a collection of nodes that are connected by relationships.
+  You use the Technopedia query language (TQL) to query nodes, whch are like data categrories such as software product, hardware, or CPU.
   <br>
 
-   * Nodes represent entities that are equivalent to a data category such as hardware or software. 
-   * Attributes belong to nodes and they represent and store data as key-value pairs.
-   * Relationships connect nodes in the database, which enables you to include multiple nodes in a query by adding a node-to-node relationship.
- 
   The following diagram shows the `/tql` endpoint that is used to query nodes in the Technopedia database.
   
   <br>
