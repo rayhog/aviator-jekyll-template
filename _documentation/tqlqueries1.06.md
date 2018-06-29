@@ -26,9 +26,9 @@ content_markdown: |-
 
    * Relationships connect nodes, for example, the software product node connects by the relationship: `HAS_A` to the manufacturer node.
    * Relationships have a type, such as `BELONGS_TO` and a direction, such as node x to node y. <br>
-     An arrowhead (`.>`) determines the direction of the relationship. <br>
+     An arrowhead (`>`) determines the direction of the relationship. <br>
      For example `(node x)-[BELONGS_TO]->(node y)` but node y does not belong to node x. <br>
-   * Typically, relationships  are unidirectional but they can be bidirectional, in which case, there's no arrowhead.
+   * Typically, relationships  are unidirectional but they can be bidirectional, in which case, there's no arrowhead.<br>
      For example `(node x)-[BELONGS_TO]-(node y)` <br>    
    * Relationships allow you to use a a single query to traverse the Technopedia nodes and retreive data from multiple nodes.
    * Like nodes, relationships can have attributes. 
@@ -39,6 +39,7 @@ content_markdown: |-
   <br>
    
   ![API Image](/images/relat.png)<br>&nbsp;
+  
   <br>  
   
 

@@ -68,7 +68,7 @@ left_code_blocks:
 
       GET:  https://v6-1.technopedia.com/tql?q=MATCH (sft_prod:SOFTWARE_PRODUCT) RETURN sft_prod LIMIT 2
 
-      Returns data based on the Technopedia query language that starts with MATCH
+      This query example returns data for two software products in Technopedia.
 
 
       RESPONSE SAMPLE
