@@ -82,12 +82,22 @@ content_markdown: >-
   
   #### Try out some queries by making a GET request
 
+  <b>Try the following query to return twenty software products. <br>
   <br>
-  Try the following query that returns 10 software products that contain Microsoft in their name. <br>
+  `https://v6-1.technopedia.com/tql?q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.product LIMIT 20` <br>
   <br>
-  `https://v6-1.technopedia.com/tql?q=MATCH (s:SOFTWARE_PRODUCT) WHERE s.product  CONTAINS "Microsoft" Return s.product LIMIT 10` <br>
+  <b>Try the following query to return fifteen harwware models. <br>
   <br>
-  Try the following query that returns a maximum of three software editions named Enterprise Developer with their Technopedia IDs. <br>
+  `https://v6-1.technopedia.com/tql?q=MATCH (s:HARDWARE_MODEL) RETURN s.product LIMIT 15` <br>
+  <br>
+  <b>Try the following query to return 10 manufacturers. <br>
+  <br>
+  `https://v6-1.technopedia.com/tql?q=MATCH (u:MANUFACTURER) RETURN u LIMIT 10` <br>
+  <b>Try the following query to return 10 software products that contain Microsoft in their name. <br>
+  <br>
+  `https://v6-1.technopedia.com/tql?q=MATCH (s:SOFTWARE_PRODUCT) WHERE s.product  CONTAINS "Microsoft" RETURN s.product LIMIT 10` <br>
+  <br>
+  Try the following query to return up to three software editions named Enterprise Developer with their Technopedia IDs. <br>
   <br>
   `https://v6-1.technopedia.com/tql?q=MATCH (s:SOFTWARE_EDITION) WHERE s.edition = "Enterprise Developer" RETURN s.edition, s.technopedia_id LIMIT 3` <br>
   
@@ -99,7 +109,7 @@ content_markdown: >-
 
   <br>
   To learn more about Technopedia nodes and to start writing TQL queries, take the following steps: <br>
-   1. Learn about Technopedia nodes and relationships. <br>
+   1. Learn about the nodes and relationships that you use in Technopedia queries. <br>
       [Technopedia data structure](../#documentationNodes_Rel) <br>
    2. Learn about writing TQL queries. <br>
       [Technopedia query language](../#documentationtql104)

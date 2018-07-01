@@ -51,15 +51,12 @@ content_markdown: |-
 
   Do the following tasks to start retrieveing the data you need from Technopedia:
   
-   1. Get an API key and try out some TQL queries. <br>
+   1. Get an API key and try out some TQL query examples. <br>
      [Get started](../#documentationgetting_started102)
-   2. Learn about Technopedia nodes and relationships. <br>
+   2. Learn about the nodes and relationships that you use in Technopedia queries. <br>
      [Technopedia data](../#documentationNodes_Rel)
    3. Learn to write queries with TQL. <br>
      [Technopedia queries](../#documentationtql104)
-  
-  
-  
   
  
 
