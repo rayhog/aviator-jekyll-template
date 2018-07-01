@@ -81,19 +81,21 @@ content_markdown: >-
   <br>
   
   #### Try out some queries by making a GET request
-
-  <b>Try the following query to return twenty software products. <br>
+  
+  <br>
+  Try the following query to return twenty software products. <br>
   <br>
   `https://v6-1.technopedia.com/tql?q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.product LIMIT 20` <br>
   <br>
-  <b>Try the following query to return fifteen harwware models. <br>
+  Try the following query to return fifteen harwware models. <br>
   <br>
   `https://v6-1.technopedia.com/tql?q=MATCH (s:HARDWARE_MODEL) RETURN s.product LIMIT 15` <br>
   <br>
   <b>Try the following query to return 10 manufacturers. <br>
   <br>
   `https://v6-1.technopedia.com/tql?q=MATCH (u:MANUFACTURER) RETURN u LIMIT 10` <br>
-  <b>Try the following query to return 10 software products that contain Microsoft in their name. <br>
+   <br>
+  Try the following query to return 10 software products that contain Microsoft in their name. <br>
   <br>
   `https://v6-1.technopedia.com/tql?q=MATCH (s:SOFTWARE_PRODUCT) WHERE s.product  CONTAINS "Microsoft" RETURN s.product LIMIT 10` <br>
   <br>
