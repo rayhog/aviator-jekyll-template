@@ -40,7 +40,7 @@ content_markdown: |-
    * Relationships enable you to query several nodes in one query by connecting nodes.<br>
   <br>
 
-  The following diagram shows the endpoint that is used to query nodes in the Technopedia database.
+  The following diagram shows the endpoint that is used to query the Technopedia database.
   
   <br>
   
@@ -53,10 +53,10 @@ content_markdown: |-
 
   Do the following tasks to start retrieveing the data you need from Technopedia:
   
-   1. Get an API key and try out some TQL query examples. <br>
-     [Get started](../#documentationgetting_started102)
-   2. Learn about the nodes and relationships that you use in Technopedia queries. <br>
+   1. Learn more about the nodes and relationships in Technopedia. <br>
      [Technopedia data](../#documentationNodes_Rel)
+   2. Get an API key and try out some TQL query examples. <br>
+     [Get started](../#documentationgetting_started102)  
    3. Learn to write queries with TQL. <br>
      [Technopedia queries](../#documentationtql104)
   

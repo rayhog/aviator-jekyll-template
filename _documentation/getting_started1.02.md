@@ -1,7 +1,7 @@
 ---
 image: /images/NodeAndRel.png
 title: Getting Started 
-position: 1.02
+position: 1.04
 description: 
 content_markdown: >-
   You retrieve data from the Technopedia database by using the `/tql` endpoint.<br>
@@ -110,11 +110,8 @@ content_markdown: >-
   {: .warning}
 
   <br>
-  To learn more about Technopedia nodes and to start writing TQL queries, take the following steps: <br>
-   1. Learn about the nodes and relationships that you use in Technopedia queries. <br>
-      [Technopedia data structure](../#documentationNodes_Rel) <br>
-   2. Learn about writing TQL queries. <br>
-      [Technopedia query language](../#documentationtql104)
+  Learn to start writing TQL queries.<br>
+  [Technopedia query language](../#documentationtql104)
 
 
 
