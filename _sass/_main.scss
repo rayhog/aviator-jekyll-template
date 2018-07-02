@@ -38,10 +38,10 @@ img {
 }
 
 body {
-	font-size: 1.5em;
+	font-size: 1.6em;
 	line-height: 1.4;
-	font-weight: 400;
-	font-family: system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", sans-serif;
+	font-weight: 250;
+	font-family: system, -apple-system, "Source Sans Pro", BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", sans-serif;
 	background: #fff;
 
 	&.nav-open {
@@ -164,7 +164,7 @@ dl dd:after {
 	font-size: 1.5rem;
 	letter-spacing: 1.3px;
 	color: rgb(115,115,115);
-	font-weight: bold;
+	font-weight: 600;
 }
 
 .sidebar {
