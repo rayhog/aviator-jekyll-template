@@ -26,7 +26,7 @@ content_markdown: >-
   `MATCH (a:SOFTWARE_VERSION) RETURN a.version`<br>
   <br>
 
-  The following diagram shows the attributes for the software version node, and showe the other related software nodes.
+  The following diagram shows the attributes for the software version node, and showe the other related software nodes.<br>
 
   <br>
   ![API Image](/images/sw_ver.png){:class="img-responsive"} <br>
