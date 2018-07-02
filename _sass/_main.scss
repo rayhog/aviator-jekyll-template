@@ -305,10 +305,10 @@ hr {
 	background: #ffffff; /* Old browsers */
 	background: -moz-linear-gradient(left,	#ffffff 0%, #ffffff 70%, #c9b8b8 70%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffffff), color-stop(70%,#ffffff), color-stop(70%,#232323)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(left,	#ffffff 0%,#ffffff 70%,#E1E1E1 70%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(left,	#ffffff 0%,#ffffff 70%,#e1e1e1 70%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(left,	#ffffff 0%,#ffffff 70%,#e1e1e1 70%); /* IE10+ */
-	background: linear-gradient(to right,	#ffffff 0%,#ffffff 70%,#e1e1e1 70%); /* W3C */
+	background: -webkit-linear-gradient(left,	#ffffff 0%,#ffffff 70%,#f3f3f3 70%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,	#ffffff 0%,#ffffff 70%,#f3f3f3 70%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,	#ffffff 0%,#ffffff 70%,#f3f3f3 70%); /* IE10+ */
+	background: linear-gradient(to right,	#ffffff 0%,#ffffff 70%,#f3f3f3 70%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#232323',GradientType=1 ); /* IE6-9 */
 }
 

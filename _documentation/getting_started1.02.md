@@ -85,15 +85,15 @@ content_markdown: >-
   <br>
    * Try the following query to return twenty software products. <br>
   <br>
-    `https://v6-1.technopedia.com/tql?q=MATCH (s:SOFTWARE_PRODUCT) RETURN s.product LIMIT 20` <br>
+    `https://v6-1.technopedia.com/tql?q=MATCH (s:SOFTWARE_PRODUCT) RETURN s LIMIT 20` <br>
   <br>
    *  Try the following query to return fifteen harwware models. <br>
   <br>
-  `https://v6-1.technopedia.com/tql?q=MATCH (s:HARDWARE_MODEL) RETURN s.product LIMIT 15` <br>
+  `https://v6-1.technopedia.com/tql?q=MATCH (e:HARDWARE_MODEL) RETURN e LIMIT 15` <br>
   <br>
    *  Try the following query to return 10 manufacturers. <br>
   <br>
-   *  `https://v6-1.technopedia.com/tql?q=MATCH (u:MANUFACTURER) RETURN u LIMIT 10` <br>
+     `https://v6-1.technopedia.com/tql?q=MATCH (u:MANUFACTURER) RETURN u LIMIT 10` <br>
    <br>
    *  Try the following query to return 10 software products that contain Microsoft in their name. <br>
   <br>
