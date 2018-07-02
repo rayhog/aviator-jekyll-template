@@ -6,11 +6,11 @@ description:
 content_markdown: |-
   Technopedia version 6.1 API enables access to asset data in Technopedia, which you use to manage your IT assets with respect to risk, control, governance, costs and business compliance. <br>
   <br>
-  Technopedia is the world’s largest and most comprehensive repository of enterprise software and hardware. 
+  Technopedia is the world’s largest and most comprehensive repository of enterprise software and hardware data.
   <br>   
  
 
-  #### Make HTTP GET requests to retrieve asset data
+  #### Retrieve asset data by making HTTP GET requests
   <br>
   The Technopedia version 6.1 API provides you with read access to the Technopedia database by using an HTTP GET request to retreive asset data.
     * To get access to the Technopedia database, all you require is an API key that you get from Flexera technical support.<br>
@@ -31,14 +31,15 @@ content_markdown: |-
     
   #### Technopedia Graph Database
   <br>
-  The Technopedia graph database is a data model that consists of nodes that represent data categories such as software product, or hardware.<br>
+  The Technopedia graph database is a data model that consists of <br>
+  
+   * Nodes represent data categories such as software product or hardware.
   <br>
-  Attributes belong to nodes and they store data as key-value pairs.<br>
+   * Attributes belong to nodes and they store data as key-value pairs.<br>
   <br>
-  Relationships are used to define connections between nodes that you use when you query multiple nodes.<br>
+   * Relationships are used to define connections between nodes that you use when you query multiple nodes.<br>
   <br>
-
-  The following diagram shows the endpoint that is used to query nodes in the Technopedia database.
+  * The following diagram shows the endpoint that is used to query nodes in the Technopedia database.
   
   <br>
   

@@ -84,8 +84,8 @@ right_code_blocks:
       SOFTWARE_RELEASE
       SOFTWARE_EDITION
       CPU_MODEL
-      HARDWARE PRODUCT
-      HARDWARE MODEL
+      HARDWARE_PRODUCT
+      HARDWARE_MODEL
       CATEGORY_2
       CATEGORY_1
       CATEGORY_GROUP
@@ -102,19 +102,19 @@ right_code_blocks:
     language: tex
   - code_block: |2-
 
-      SOFTWARE_PRODUCT Attributes Example
+      SOFTWARE_PRODUCT Attributes
 
-      "alias": null,
-      "component": null,
-      "created_at": "2007-04-22 04:55:16",
-      "desupported_flag": null,
-      "discontinued_flag": null,
-      "family": "HealthMatics",
-      "is_suite": null,
-      "modified_at": "2017-06-01 10:44:00",
-      "product": "Office",
-      "technopedia_id": "141d985-66......",
-      "url": "http://investor.allscripts.com/"
+      alias
+      component
+      created_at
+      desupported_flag
+      discontinued_flag
+      family
+      is_suite
+      modified_at
+      product
+      technopedia_id
+      url
 
       
 
