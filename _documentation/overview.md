@@ -33,13 +33,13 @@ content_markdown: |-
   <br>
   The internal structure of the Technopedia database is based on graph, which consists of nodes and relationships. <br>
 
-   * Nodes represent data categories such as software product or hardware.
+   * Nodes represent data categories such as software product or hardware.<br>
   <br>
    * Attributes belong to nodes and they store data as key-value pairs.<br>
   <br>
-   * Relationships connects nodes.<br>
+   * Relationships enable you to query several nodes in one query by connecting nodes.<br>
   <br>
-  
+
   The following diagram shows the endpoint that is used to query nodes in the Technopedia database.
   
   <br>

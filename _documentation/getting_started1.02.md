@@ -80,26 +80,26 @@ content_markdown: >-
   GET `https://v6-1.technopedia.com/tql?q=<TQL_query>`<br>
   <br>
   
-  #### Try out some queries by making a GET request
+  #### Try out some of the following queries by making a GET request:
 
   <br>
-   * Try the following query to return twenty software products. <br>
+   * Return twenty software products. <br>
   <br>
     `https://v6-1.technopedia.com/tql?q=MATCH (s:SOFTWARE_PRODUCT) RETURN s LIMIT 20` <br>
   <br>
-   *  Try the following query to return fifteen hardware models. <br>
+   * Return fifteen hardware models. <br>
   <br>
   `https://v6-1.technopedia.com/tql?q=MATCH (e:HARDWARE_MODEL) RETURN e LIMIT 15` <br>
   <br>
-   *  Try the following query to return 10 manufacturers. <br>
+   *  Return 10 manufacturers. <br>
   <br>
      `https://v6-1.technopedia.com/tql?q=MATCH (u:MANUFACTURER) RETURN u LIMIT 10` <br>
    <br>
-   *  Try the following query to return 10 software products that contain Microsoft in their name. <br>
+   *  Return 10 software products that contain Microsoft in their name. <br>
   <br>
   `https://v6-1.technopedia.com/tql?q=MATCH (s:SOFTWARE_PRODUCT) WHERE s.product  CONTAINS "Microsoft" RETURN s.product LIMIT 10` <br>
   <br>
-   *  Try the following query to return up to three software editions named Enterprise Developer with their Technopedia IDs. <br>
+   *  Return up to three software editions named Enterprise Developer with their Technopedia IDs. <br>
   <br>
   `https://v6-1.technopedia.com/tql?q=MATCH (s:SOFTWARE_EDITION) WHERE s.edition = "Enterprise Developer" RETURN s.edition, s.technopedia_id LIMIT 3` <br>
   
