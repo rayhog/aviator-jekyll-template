@@ -39,7 +39,8 @@ content_markdown: |-
   <br>
    * Relationships connects nodes.<br>
   <br>
-  * The following diagram shows the endpoint that is used to query nodes in the Technopedia database.
+  
+  The following diagram shows the endpoint that is used to query nodes in the Technopedia database.
   
   <br>
   

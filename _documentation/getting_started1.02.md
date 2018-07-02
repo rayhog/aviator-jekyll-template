@@ -87,7 +87,7 @@ content_markdown: >-
   <br>
     `https://v6-1.technopedia.com/tql?q=MATCH (s:SOFTWARE_PRODUCT) RETURN s LIMIT 20` <br>
   <br>
-   *  Try the following query to return fifteen harwware models. <br>
+   *  Try the following query to return fifteen hardware models. <br>
   <br>
   `https://v6-1.technopedia.com/tql?q=MATCH (e:HARDWARE_MODEL) RETURN e LIMIT 15` <br>
   <br>
