@@ -51,8 +51,9 @@ content_markdown: |-
   #### Examples of using relationships in queries<br>   
 
   <br>
-  To include multiple nodes in a TQL MATCH statement, you must use relationships to connect the nodes and then use the `RETURN` clause to reference the aliases with nodes and attributes to return data.<b>
-   Use the following guidelines to help you to build your query:
+  To include multiple nodes in a TQL MATCH statement, you must use relationships to connect the nodes and then use the `RETURN` clause to reference the aliases with nodes and attributes to return data.<br>
+  <br>
+  Use the following guidelines to help you to create your query:
 
    1. Select the Nodes that you want to use in your query.<br>
    2. Identify the node attributes that you want data from.<br>
