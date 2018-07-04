@@ -280,17 +280,17 @@ right_code_blocks:
   - code_block: |2
       Software consists of the following nodes:
 
-      * SOFTWARE_PRODUCT
-      * SOFTWARE_VERSION
-      * SOFTWARE_VERSION_GROUP
-      * SOFTWARE_MAJOR_VERSION
-      * SOFTWARE_EDITION
-      * SOFTWARE_RELEASE
+      SOFTWARE_PRODUCT
+      SOFTWARE_VERSION
+      SOFTWARE_VERSION_GROUP
+      SOFTWARE_MAJOR_VERSION
+      SOFTWARE_EDITION
+      SOFTWARE_RELEASE
 
       Query specific software data by using the individual nodes, or use relationships to connect nodes.      
 
     title: Software Nodes
-    language: bash
+    language: text
   - code_block: |2-
       SOFTWARE NODES RELATIONSHIPS
 
@@ -319,7 +319,7 @@ right_code_blocks:
 
 
     title: Software Nodes Relationships
-    language: bash
+    language: text
   - code_block: |2-
       WHERE
       Return software products where the name field is equal to ‘Office’. 

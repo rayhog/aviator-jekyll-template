@@ -13,7 +13,7 @@ content_markdown: |-
   #### Get started with TQL<br>
 
   To create a query by using TQL, you must create a MATCH statement, which is similar to a Select statement in SQL.<br>
-  The `MATCH` statement enables you to specify the query parameters to use to search the database.
+  The `MATCH` statement enables you to specify the query parameters that you use to search the database.
   See the following example: <br>
   <br>
   `MATCH (software:SOFTWARE_RELEASE) RETURN software`<br>
@@ -25,7 +25,7 @@ content_markdown: |-
   `https://v6-1.technopedia.com/tql?q=MATCH (software:SOFTWARE_RELEASE) RETURN software` <br>
   <br>
   
-  The TQL MATCH statement returns results from one or more nodes and relationships that you specify in the query. Typically, the query results are returned as key-value pairs, which resembles the format in the following image: <br>
+  The TQL MATCH query returns results from one or more nodes and relationships that you specify in the query. Typically, the query results are returned as key-value pairs, which resembles the format shown in the following image: <br>
    <br>
   
   ![API Image](/images/results.png)<br>&nbsp;
@@ -54,12 +54,12 @@ content_markdown: |-
      Returns data for `attribute1` and `attribute2`, which are the specified attributes. <br>
     <br>
    * Relationship <br>
-     Use a relationship to connect nodes. <br>
+     Use a relationship to connect nodes in a query. <br>
     `MATCH (aliasx:node1)-[:RELATED_TO]->(aliasy:node2), RETURN aliasx, aliasy` <br>
     <br>
    * Relationship direction <br>
      A unidirectional relationship is indicated by an arrowhead and a birdirectional relationship has no arrowhead. <br>
-     For example, `node_software` is manufactured_by `node_manufacturer` <br>
+     For example, in the following relationship, `node_software` is manufactured_by `node_manufacturer` <br>
     `(:node_software)-[:MANUFACTURED_BY]->(:node_manufacturer)` <br>
     `-[:MANUFACTURED_BY]-` indicates a bidirectional relationship
     <br>
@@ -144,7 +144,7 @@ content_markdown: |-
     3. Use the `WHERE` clause with the `CONTAINS` clause to specify the condition `product CONTAINS "Adobe"`.<br>
        `WHERE s.product CONTAINS "Adobe"`<br>
        `product` is the attribute that stores the name of the product.<br>
-    4. Use the RETURN clause to list software products that contain Adobe in the product name by referencing the alias `s`.  <br>
+    4. Use the RETURN clause to return a list software products that contain Adobe in the product name by referencing the alias `s`.  <br>
        `Return s`
 
     Here's the complete query:<br>
@@ -174,7 +174,7 @@ content_markdown: |-
    {: .warning}
 
   <br>
-  <b>Query Intent:</b> To get software editions named "Enterprise Developer" where the edition order is equal to two.  <br>
+  <b>Query Intent:</b> To return software editions named "Enterprise Developer" where the edition order is equal to two.  <br>
   In this query, you query the software edition node.
     
     1. Use `MATCH` to select the software edtion node, and add the alias `se` or any other alias to the node that you refer to in the `RETURN` clause.<br>
@@ -196,7 +196,7 @@ content_markdown: |-
   <br>  
   <br>
 
-  <b>Query Intent:</b> To get any five software editions and product names that are associated with those editions.<br>
+  <b>Query Intent:</b> To return any five software editions and product names that are associated with those editions.<br>
   You must query the software product and software edition nodes.<br>
 
     1. Use `MATCH` to select the software edtion node, and add node aliases to use in the `RETURN` clause.<br>
@@ -205,9 +205,9 @@ content_markdown: |-
       `MATCH (s:SOFTWARE_EDITION)-[:HAS_A]->(p:SOFTWARE_PRODUCT)`<br>
        You must add an alias for software product becuause you use the alias (p) in the return clause to return the product name.  
     3. You use the `RETURN` clause to define the query output by referring to the alias and attributes.<br>
-       You use the attributes `edition` from software edition and `product` from the software product node.<br> 
+       You use the attributes `edition` from software edition, and `product` from the software product node.<br> 
        `RETURN s.edition, p.product` or you can return all attributes by using `RETURN s, p` <br>  
-    4. To limit the number of results, you use the `LIMIT` clause to limit the results to five or any number that you define.<br>   
+    4. To limit the number of results, you use the `LIMIT` clause to limit the results to five or any other number.<br>   
 
         
    ![API Image](/images/ed_to_prod.png)<br>&nbsp;

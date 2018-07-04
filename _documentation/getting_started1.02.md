@@ -41,7 +41,7 @@ content_markdown: >-
 
   #### Parameters<br>
 
-  For the TQL endpoint, you provide a TQL MATCH statements that specifies at least one node in the query. Attributes and relationships between nodes are optional parameters in the query. <br>
+  For the TQL endpoint, you provide a TQL MATCH statement, which is a query that queries at least one node in Technopedia. Attributes and relationships are optional parameters in the query. <br>
 
   `https://v6-1.technopedia.com/tql?q=<TQL_query>`<br>
 
@@ -80,7 +80,7 @@ content_markdown: >-
   GET `https://v6-1.technopedia.com/tql?q=<TQL_query>`<br>
   <br>
   
-  #### Try out some of the following queries by making a GET request:
+  #### Try out some of the following queries by making a HTTP GET request:
 
   <br>
    * Return twenty software products. <br>

@@ -5,7 +5,7 @@ type:
 description:
   
 content_markdown: |- 
-  You use the Technopedia query language to query a single node, or multiple nodes where you must add a relationship to other nodes to get data from other nodes in one  query. For many TQL queries, you must use relationships to include two or more Technopedia nodes in the query. 
+  You use the Technopedia query language to query a single node, or multiple nodes where you use relationships to connect to other nodes in the query. For many TQL queries, you must use relationships to include two or more Technopedia nodes in the query. 
   
   Relationships might seem complex but their main use is to connect Technopedia nodes. <br>
   {: .warning}
@@ -28,8 +28,8 @@ content_markdown: |-
 
   The following information outlines the makeup of relationships in the Technopedia database:
 
-   * Relationships connect nodes, for example, the software product node uses the `HAS_A` relationhsip to connect the manufacturer node.
-   * You prefix relationships with a colon (:) and nest it inside square brackets, for example `[:HAS_A]`
+   * Relationships connect nodes, for example, the software product node uses the `HAS_A` relationhsip to connect to the manufacturer node.
+   * You prefix relationships with a colon (:) and nest them inside square brackets, for example `[:HAS_A]`
    * Relationships have a type, such as `BELONGS_TO` and a direction, such as node x to node y. <br>
      An arrowhead (`>`) determines the direction of the relationship. <br>
      For example `(node x)-[BELONGS_TO]->(node y)` but node y does not belong to node x. <br>
@@ -71,7 +71,7 @@ content_markdown: |-
   The first node that you reference is the `MANUFACTURER` node, and then you use relationships to connect the other nodes.<br>
     1. Write the first part your query by using `MATCH` to select the `MANUFACTURER` node, and add an alias to the node. <br>
       `MATCH (m:MANUFACTURER)`<br>
-    2. You must add the following node-to_node relationships to connect with the product, version, release, and edtion nodes.<br>
+    2. You must add the following node-to-node relationships to connect the manufacturer node to the product, version, release, and edtion nodes.<br>
        For each node, you must add an alias so that you can get data from that node by using the `RETURN` clause.
     * `(m:MANUFACTURER)<-[:HAS_A]-(sp:SOFTWARE_PRODUCT)` <br>
     * `(sp:SOFTWARE_PRODUCT)<-[:HAS_A]-(sv:SOFTWARE_VERSION)` <br>
@@ -85,7 +85,7 @@ content_markdown: |-
       `WHERE m.manufacturer = "Oracle"` <br>
     4. Return data by referencing the aliases that are assigned to the nodes in the `MATCH` statement.<br>
        `RETURN m.manufacturer, sp.product, sv.version, sr.release, se.edition` <br>
-    5. Limit the number of results that are returned by using the `LIMIT` clause. <br>
+    5. Limit the number of results by using the `LIMIT` clause. <br>
        `LIMIT 2` <br>
 
     Here's the complete query: <br>
@@ -118,15 +118,15 @@ content_markdown: |-
     3. Add the release, version, and product nodes by adding relationships.<br>
       `MATCH (e:SOFTWARE_EDITION)<-[:HAS_A]-(r:SOFTWARE_RELEASE)-[:HAS_A]->(v:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_PRODUCT)`  
     4. Add an alias to each node in the query that you want to get data from.<br>
-    5. To return the data that you need, use the Return clause to refer to the specific aliases.<br>
+    5. To return the data that you need, use the `RETURN` clause to refer to the specific aliases.<br>
       `RETURN r,e,v,p`
   <br>
-  In this query example, you return software editions in Technopedia that include release, verison, and product information. <br>
+  In this query example, you return software editions from Technopedia that include release, verison, and product information. <br>
 
   `MATCH (e:SOFTWARE_EDITION)<-[:HAS_A]-(r:SOFTWARE_RELEASE)-[:HAS_A]->(v:SOFTWARE_VERSION)-[:HAS_A]->(p:SOFTWARE_PRODUCT) RETURN r,e,v,p LIMIT 1`<br>
 
   <br>
-  The following image shows a single result that shows all attributes for edition, release, version and product:<br>
+  The following image shows a result for one software editon that includes all attributes for edition, release, version and product:<br>
   <br>
   ![API Image](/images/4byattrib.png) <br> &nbsp;
   
