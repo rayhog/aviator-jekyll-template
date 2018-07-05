@@ -32,9 +32,9 @@ content_markdown: >-
   #### About Attributes 
   
   An attribute is an named value that is stored in a node but can be also be in a relationship. <br>
-  For example, `{"product" : "Excel"}`  <br> 
+  For example, `{"product" : "Excel"}` <br> 
 
-  The node’s attributes, for example, the edition attribute that belongs to software edition node are represented as key-value pairs within a pair of braces, for example: {edition: "Server"}. <br>
+  The node’s attributes, for example, the edition attribute that belongs to software edition node are represented as key-value pairs within a pair of braces, for example: `{edition: "Server"}`. <br>
   <br>
   The following list shows some attributes that belong to the manufacturer node: <br>
 

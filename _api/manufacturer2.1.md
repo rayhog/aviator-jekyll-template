@@ -13,7 +13,7 @@ content_markdown: |-
   * `description` provides a description of the manfacturer.
   <br>
  
-  The following MATCH query returns information about the manufacturer called Microsoft. 
+  The following MATCH query returns information about the manufacturer named Microsoft. 
   <br>
   `MATCH (a:MANUFACTURER) WHERE a.manufacturer = "Microsoft" RETURN a` <br>
   <br>
