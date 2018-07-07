@@ -603,7 +603,7 @@ right_code_blocks:
       MATCH (s:SOFTWARE_PRODUCT) RETURN s.technopedia_id
       MATCH (s:SOFTWARE_PRODUCT) RETURN s.technopedia_id, s.product
       MATCH (s:SOFTWARE_PRODUCT) RETURN s.technopedia_id, s.is_suite  
-      ____________________________________ 
+      __________________________________________________
  
 
       Query syntax:
