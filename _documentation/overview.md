@@ -13,8 +13,8 @@ content_markdown: |-
   #### Retrieve asset data by making HTTP GET requests
   <br>
   The Technopedia version 6.1 API provides you with read access to the Technopedia database by using an HTTP GET request to retreive asset data.
-    * To get access to the Technopedia database, all you require is an API key that you get from Flexera technical support.<br>
-    * You make an HTTP GET request to the `/tql` endpoint, which requires a TQL query statement to describe the data that you want to retrieve.<br>
+    * To get access to the Technopedia database, all you require is an API key that you get by contacting Flexera sales or technical support.<br>
+    * You make an HTTP GET request to the `/tql` endpoint, which requires a TQL (Technopedia query language) query statement to describe the data that you want to retrieve.<br>
     * Data is returned as key-value pairs in JSON format. <br>
 
   The following query example is an HTTP GET request that uses the `/tql` endpoint to retrieve software product names from Technopedia. <br>
