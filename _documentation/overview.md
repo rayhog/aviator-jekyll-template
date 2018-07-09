@@ -37,7 +37,7 @@ content_markdown: |-
   <br>
    * Attributes belong to nodes and they store data as key-value pairs.<br>
   <br>
-   * Relationships enable you to query several nodes in one query by connecting nodes.<br>
+   * Relationships enable you to query several nodes in one query by providing connections between nodes.<br>
   <br>
 
   The following diagram shows the endpoint that is used to query the Technopedia database.
@@ -57,7 +57,7 @@ content_markdown: |-
      [Technopedia data](../#documentationNodes_Rel)
    2. Get an API key and try out some TQL query examples. <br>
      [Get started](../#documentationgetting_started102)  
-   3. Learn to write queries with TQL. <br>
+   3. Learn to write queries by using TQL. <br>
      [Technopedia queries](../#documentationtql104)
   
  

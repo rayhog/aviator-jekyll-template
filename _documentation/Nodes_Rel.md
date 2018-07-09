@@ -4,24 +4,24 @@ position: 1.02
 type:
 description: >-  
 content_markdown: >-
-  The Technopedia database is a graph database that uses graph structures for semantic queries with nodes, relationships, and attributes to represent the data.
+  The Technopedia database is a graph database that uses graph structures for semantic queries with nodes, relationships, and attributes.
   You access Technopedia data by querying nodes, attributes, or relationships in the Technopedia graph.<br>
   <br>
   
-  Before you start using the Technopedia query language (TQL), it's important to be familiar with nodes, attributes, and relationships in the Technopedia database.
+  Before you start using the Technopedia query language (TQL), you must be familiar with nodes, attributes, and relationships in the Technopedia graph database.
   
 
   #### Nodes in Technopedia
   
   Nodes represent entities that are equivalent to a data category such as hardware or software, and they are the main entity that you target when you query the Technopedia database. <br>
-  For example, you query the manufacturer node to get manufacturer data, or the software product node to get software product data. <br>
+  For example, you might query the manufacturer node to get manufacturer data, or the software product node to get software product data. <br>
   <br>
   The following list describes node charactertistics:
 
   <br> 
-   * Represents data categories in Technopedia.
+   * Represent data categories in Technopedia.
    * Have attributes that store data in key-value pairs, for example, `{"edition" : "server"}`.
-   * Connect to other nodes through defined relationships.
+   * Connect with other nodes through defined relationships.
 
    Here's some examples of nodes and relationships:
 
@@ -31,12 +31,12 @@ content_markdown: >-
   
   #### About Attributes 
   
-  An attribute is an named value that is stored in a node but can be also be in a relationship. <br>
+  An attribute is an named value that is stored under a node.  <br>
   For example, `{"product" : "Excel"}` <br> 
+  Relationships can also have attributes.
 
-  The node’s attributes, for example, the edition attribute that belongs to software edition node are represented as key-value pairs within a pair of braces, for example: `{edition: "Server"}`. <br>
   <br>
-  The following list shows some attributes that belong to the manufacturer node: <br>
+  The following list is an example that shows some manufacturer node attibutes: <br>
 
    * technopedia_id
    * manufacturer
@@ -44,7 +44,7 @@ content_markdown: >-
 
   #### Relationships connect nodes  
 
-  Relationships connect nodes in the database, which enables you to include multiple nodes in a query by adding a node-to-node relationship. <br>
+  Relationships connect nodes in the graph database, which enables you to include multiple nodes in one query by adding a node-to-node relationship. <br>
   For example, you might want to retrieve data for manufacturer, software edtion, and software product by making one query.
   <br>
 
