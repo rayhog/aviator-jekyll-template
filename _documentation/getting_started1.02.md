@@ -111,7 +111,7 @@ content_markdown: >-
   {: .warning}
 
   <br>
-  Learn to start write TQL queries by usint the [Technopedia query language](../#documentationtql104)
+  Learn to write TQL queries by using the [Technopedia query language](../#documentationtql104)
 
 
 

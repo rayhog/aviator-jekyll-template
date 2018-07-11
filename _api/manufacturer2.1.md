@@ -96,7 +96,7 @@ left_code_blocks:
       LIMIT 2
 
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -180,7 +180,7 @@ left_code_blocks:
       RETURN manuf.manufacturer, sw_prod.product, sft_ver.version 
       LIMIT 5
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -219,7 +219,7 @@ left_code_blocks:
       RETURN n.manufacturer, product, version 
       LIMIT 2
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [

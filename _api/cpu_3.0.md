@@ -31,7 +31,7 @@ left_code_blocks:
       RETURN n
       LIMIT 2
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -69,7 +69,7 @@ left_code_blocks:
       LIMIT 7
 
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -119,7 +119,7 @@ left_code_blocks:
       RETURN h.cores, h.model 
       LIMIT 10
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -176,7 +176,7 @@ left_code_blocks:
       RETURN h.cores, h.model, h.isa_bit_mode
       LIMIT 10
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -242,7 +242,7 @@ left_code_blocks:
       RETURN h.cores, h.model 
       LIMIT 10
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [

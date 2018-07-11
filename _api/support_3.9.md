@@ -40,7 +40,7 @@ left_code_blocks:
       RETURN n 
       LIMIT 1
         
-      RESPONSE SAMPLE
+      RESULT
 
       {
         "results": [
@@ -61,7 +61,7 @@ left_code_blocks:
       RETURN n 
       LIMIT 2
       
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -88,7 +88,7 @@ left_code_blocks:
       RETURN n, w 
       LIMIT 2
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -131,7 +131,7 @@ left_code_blocks:
       RETURN n, w, sp 
       LIMIT 2
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -185,7 +185,7 @@ left_code_blocks:
       RETURN n 
       LIMIT 3
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [

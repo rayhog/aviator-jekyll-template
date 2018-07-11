@@ -77,7 +77,7 @@ left_code_blocks:
       RETURN hw_mod.model, hw_prod.product, manu.manufacturer 
       LIMIT 5
          
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -116,7 +116,7 @@ left_code_blocks:
       WHERE prod.product CONTAINS "108" RETURN mod.model, prod.product 
       LIMIT 5
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -150,7 +150,7 @@ left_code_blocks:
       MATCH (n:HARDWARE_MODEL)-[:HAS_A]->(h:HARDWARE_PRODUCT)-[:BELONGS_TO]->(m:CATEGORY_2)-[:BELONGS_TO]->(w:VERTICAL) 
       RETURN n, h, m, w LIMIT 5
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [

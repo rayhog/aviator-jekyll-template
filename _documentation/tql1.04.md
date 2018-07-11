@@ -125,7 +125,7 @@ content_markdown: |-
   For example, `https://v6-1.technopedia.com/tql?q=MATCH (n:SOFTWARE_PRODUCT) RETURN n LIMIT 1`
   
   <br>
-  Here’s some query examples:
+  Here’s some examples of creating a TQL query:
 
   <br>
   <b>Query Intent:</b> To find software products that contain Adobe in their product name.<br>

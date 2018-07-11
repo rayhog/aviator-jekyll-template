@@ -32,7 +32,7 @@ left_code_blocks:
       RETURN n.product, b.version, y.edition 
       LIMIT 5
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -115,7 +115,7 @@ left_code_blocks:
       RETURN s.product, cat2.label 
       LIMIT 5
 
-      RESPONSE SAMPLE
+      RESULTS 
 
       {
         "results": [
@@ -150,7 +150,7 @@ left_code_blocks:
       WHERE s.product CONTAINS "Tools" RETURN s.product, cat1.label, cat2.label, catgrp.label 
       LIMIT 5
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -195,7 +195,7 @@ left_code_blocks:
       RETURN n, r, k 
       LIMIT 1
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -235,7 +235,7 @@ left_code_blocks:
       RETURN sp.product, se.edition, srelease.technopedia_id 
       LIMIT 5
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -363,6 +363,6 @@ right_code_blocks:
       MATCH (n:SOFTWARE_PRODUCT) RETURN n.product ORDER BY n.product DESC
 
       Operators =, <>, >, <, >=, <=
-    title: TQL Clauses and examples
+    title: TQL Clauses
     language: text
 ---
