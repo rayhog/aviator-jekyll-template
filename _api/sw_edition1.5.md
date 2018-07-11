@@ -18,6 +18,12 @@ content_markdown: |-
   `MATCH (s.SOFTWARE_PRODUCT)<-[:HAS_A]-(n:SOFTWARE_EDITION) WHERE n.edition = "Advanced Partitioning Option" RETURN n`
   <br>
   
+  For more information about other software nodes, click a link to go to the relevant page:
+
+   * [Product node](../#apisw_prod115)
+   * [Version node](../#apisw_verison12)
+   * [Release node](../#apisw_release16) 
+  <br>
   The following diagram shows attributes for the sofware editon node, and its related software nodes.
   
   <br>
