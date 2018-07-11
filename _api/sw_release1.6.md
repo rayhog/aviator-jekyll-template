@@ -29,8 +29,14 @@ content_markdown: >-
 
   The following query returns data for the end date of the software release's support stage.<br>
   <br>
-  `MATCH (:SOFTWARE_RELEASE)-[my_alias:HAS_A {end_date: "2013-12-10 00:00:00"}]->(:SUPPORT_STAGE) RETURN my_alias`
+  `MATCH (:SOFTWARE_RELEASE)-[my_alias:HAS_A {end_date: "2013-12-10 00:00:00"}]->(:SUPPORT_STAGE) RETURN my_alias`<br>
+  <br>
+  For more information about other software nodes, click a link to go to the relevant page:<br>
 
+   * [Product node](../#apisw_prod115)
+   * [Version node](../#apisw_verison12)
+   * [Edition node](../#apisw_edition15)
+  <br>
   #### Query Examples <br>
     
   To use the `MATCH` statements in the following examples, you append the `MATCH` statement to the following `/tql` endpoint and make a GET request from a API client or use cURL. <br>
