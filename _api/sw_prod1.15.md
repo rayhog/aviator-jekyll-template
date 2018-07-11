@@ -22,10 +22,10 @@ content_markdown: >-
   ![API Image](/images/sw_prod.png){: .img-responsive}<br>&nbsp;
 
   For more information about other software nodes, click a link to go to the relevant page:
-
+  
    * [Version node](../#apisw_verison12)
    * [Edition node](../#apisw_edition15)
-   * [Release node](../#apisw_release16)
+   * [Release node](../#apisw_release16)   
   <br>
   
   #### Query Examples <br>
