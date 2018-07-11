@@ -9,10 +9,20 @@ content_markdown: |-
   The software product is a good starting point when you want to start with a product name reference and then build out your query to include data from other software nodes. <br>
   <br>
 
-  The following query returns software releases by release name:  
-    
-  `MATCH (a:SOFTWARE_RELEASE) RETURN a.release`
+  The following query examples return data that is specific to that software node:
+  `MATCH (a:SOFTWARE_RELEASE) RETURN a`
+  `MATCH (a:SOFTWARE_PRODUCT) RETURN a`
+  `MATCH (a:SOFTWARE_EDITION) RETURN a`
+  `MATCH (a:SOFTWARE_VERSION) RETURN a`
+  `MATCH (a:SOFTWARE_MAJOR_VERSION) RETURN a`
+  `MATCH (a:SOFTWARE_VERSION_GROUP) RETURN a`
   <br>
+  For more information about specific software nodes, click a link to go to the relevant page:
+
+   * [Product node](../#apisw_prod115)
+   * [Version node](../#apisw_verison12)
+   * [Edition node](../#apisw_edition15)
+   * [Release node](../apisw_release16)
 
   Use a combination of the software nodes with relationships to query software data in Technopedia. <br>
   
