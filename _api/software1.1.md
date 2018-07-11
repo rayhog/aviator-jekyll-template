@@ -22,7 +22,7 @@ content_markdown: |-
    * [Product node](../#apisw_prod115)
    * [Version node](../#apisw_verison12)
    * [Edition node](../#apisw_edition15)
-   * [Release node](../apisw_release16)
+   * [Release node](../#apisw_release16)
 
   Use a combination of the software nodes with relationships to query software data in Technopedia. <br>
   
