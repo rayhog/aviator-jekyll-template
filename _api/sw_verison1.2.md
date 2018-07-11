@@ -69,7 +69,7 @@ left_code_blocks:
       RETURN n, s
       LIMIT 2
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -124,7 +124,7 @@ left_code_blocks:
       RETURN n 
       LIMIT 2
       
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -157,7 +157,7 @@ left_code_blocks:
       RETURN n.release, pr.product, v.version
       LIMIT 6
       
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -202,7 +202,7 @@ left_code_blocks:
       RETURN sp.product AS Product, n.version AS VERSION, p.version AS Major_Version  
       LIMIT 5
       
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -244,7 +244,7 @@ left_code_blocks:
       RETURN manu.manufacturer AS Manufacturer, sp.product AS Product, n.version AS VERSION, p.version AS Major_Version 
       LIMIT 5
       
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [

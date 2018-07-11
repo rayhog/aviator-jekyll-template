@@ -139,7 +139,7 @@ left_code_blocks:
       RETURN hw, cat_2, cat_1, cat_group 
       LIMIT 2
 
-      RESPONSE SAMPLE
+      RESULTS
       {  
          "results": [
         {

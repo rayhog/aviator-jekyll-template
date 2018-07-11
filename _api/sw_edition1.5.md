@@ -34,7 +34,7 @@ left_code_blocks:
       RETURN n.edition AS EDITION, n.modified_at AS MODIFIED 
       LIMIT 8
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -112,7 +112,7 @@ left_code_blocks:
       RETURN p.product, s.edition, s.order 
       LIMIT 3
       
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -142,7 +142,7 @@ left_code_blocks:
       RETURN s.edition, s.order 
       LIMIT 3
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -168,7 +168,7 @@ left_code_blocks:
      RETURN u.product AS Product, n.edition AS Edition, n.order AS Edition_order  
      LIMIT 6
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [

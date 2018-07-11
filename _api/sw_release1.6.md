@@ -42,7 +42,7 @@ left_code_blocks:
       RETURN n.release, n.created_at 
       LIMIT 5
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -80,7 +80,7 @@ left_code_blocks:
       RETURN h
       
 
-      RESPONSE SAMPLE
+      RESULT EXAMPLE
 
       {
         "results": [
@@ -124,7 +124,7 @@ left_code_blocks:
       RETURN srelease.release, sver.version, smajor.version_group 
       LIMIT 5
       
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -163,7 +163,7 @@ left_code_blocks:
       RETURN srelease.release, sver.version, smajor.version 
       LIMIT 5
       
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [

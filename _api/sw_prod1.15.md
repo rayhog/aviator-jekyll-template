@@ -34,7 +34,7 @@ left_code_blocks:
       RETURN n
       LIMIT 2
 
-      RESPONSE SAMPLE
+      RESULTS
       {
          "results": [
             {
@@ -77,7 +77,7 @@ left_code_blocks:
       LIMIT 2
       
       
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -116,7 +116,7 @@ left_code_blocks:
       RETURN sp.product, sv.version, sr, st 
       LIMIT 2
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -177,7 +177,7 @@ left_code_blocks:
       RETURN sp.product, sv.version, sr, st 
       LIMIT 2
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -240,7 +240,7 @@ left_code_blocks:
       RETURN sp.product, sv.version, sr, se 
       LIMIT 2
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -291,7 +291,7 @@ left_code_blocks:
       RETURN s 
       LIMIT 2
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
