@@ -37,7 +37,7 @@ content_markdown: |-
   <br>
    * Attributes belong to nodes and they store data as key-value pairs.<br>
   <br>
-   * Relationships enable you to query several nodes in one query by providing connections between nodes.<br>
+   * Relationships connect nodes, which enable you to query several nodes in one query.<br>
   <br>
 
   The following diagram shows the endpoint that is used to query the Technopedia database.

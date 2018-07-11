@@ -6,10 +6,14 @@ description: >-
 content_markdown: >-
   The Technopedia database is a graph database that uses graph structures for semantic queries with nodes, relationships, and attributes.
   You access Technopedia data by querying nodes, attributes, or relationships in the Technopedia graph.<br>
+
   <br>
   
   Before you start using the Technopedia query language (TQL), you must be familiar with nodes, attributes, and relationships in the Technopedia graph database.
+ 
+  #### A Simple Overview
   
+  You query a data category such as software edtion (node), and specify the data that you want to return from that category such as `edition` (attribute) by specifying attributes. To get related data from other data categories (nodes), you use relationships to connect to other nodes, which enables you to join other data categories in one query.
 
   #### Nodes in Technopedia
   
@@ -19,7 +23,7 @@ content_markdown: >-
   The following list describes node charactertistics:
 
   <br> 
-   * Represent data categories in Technopedia.
+   * Represent data categories in Technopedia such as software version or software editon.
    * Have attributes that store data in key-value pairs, for example, `{"edition" : "server"}`.
    * Connect with other nodes through defined relationships.
 
@@ -31,7 +35,7 @@ content_markdown: >-
   
   #### About Attributes 
   
-  An attribute is an named value that is stored under a node.  <br>
+  An attribute is an named value that stores data for a node.  <br>
   For example, `{"product" : "Excel"}` <br> 
   Relationships can also have attributes.
 

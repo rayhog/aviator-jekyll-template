@@ -7,15 +7,14 @@ description:
 content_markdown: |- 
   You use the Technopedia query language to query a single node, or multiple nodes where you use relationships to connect to other nodes in the query. For many TQL queries, you must use relationships to include two or more Technopedia nodes in the query. 
   
-  Relationships might seem complex but their main use is to connect Technopedia nodes. <br>
+  Relationships might seem complex initially but their main use is to connect Technopedia nodes that you refer to in a query. <br>
   {: .warning}
   
   <br>
   Because TQL is a declarative query language, you can build your query with multiple nodes, relationships, attributes, and add multiple conditions to refine your query.<br>
   
 
-  Like nodes, relationships can have attributes. Add an alias to the relationship when you want to return data for those relationship attributes. 
-  {: .warning}
+  
 
   #### Using relationships to connect nodes in a query<br>
 
@@ -26,7 +25,7 @@ content_markdown: |-
 
   Note the direction of the relationship in the graph. If you specify an incorrect direction, you might not get data from the nodes that you want to connect with.
 
-  The following information outlines the makeup of relationships in the Technopedia database:
+  The following information outlines the makeup of relationships in the Technopedia graph representation of the database:
 
    * Relationships connect nodes, for example, the software product node uses the `HAS_A` relationhsip to connect to the manufacturer node.
    * You prefix relationships with a colon (:) and nest them inside square brackets, for example `[:HAS_A]`
@@ -38,6 +37,8 @@ content_markdown: |-
    * Relationships allow you to use a a single query to traverse the Technopedia nodes and retreive data from multiple nodes.
    * Like nodes, relationships can have attributes. 
      Typically, relationships have quantitative attributes, such as time intervals.
+     You add an alias to the relationship when you want to return data for any relationship attributes that exist. 
+  
   <br>
 
   The following image shows examples of types of relationships and their directions.
@@ -173,7 +174,8 @@ content_markdown: |-
   <br>
    `"sv.product": "Need for Speed Most Wanted"` <br>
    <br>    
- 
+  
+  
   The following `MATCH` query examples show variations in constructions that use relationships and other conditions. To try out a query example, you append the `MATCH` statement to the following `/tql` endpoint and make a GET request from a API client or use cURL. <br>
   <br>
   `https://v6-1.technopedia.com/tql?q=<MATCH Statement>`

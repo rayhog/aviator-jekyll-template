@@ -42,17 +42,18 @@ content_markdown: >-
   #### Parameters<br>
 
   For the TQL endpoint, you provide a TQL MATCH statement, which is a query that queries at least one node in Technopedia. Attributes and relationships are optional parameters in the query. <br>
+  Here's an example of the syntax with a query example:<br>
+  <br>
+  `https://v6-1.technopedia.com/tql?q=<MATCH statement>`<br>
 
-  `https://v6-1.technopedia.com/tql?q=<TQL_query>`<br>
-
-  For example, `https://v6-1.technopedia.com/tql?q=MATCH (a:HARDWARE_MODEL) RETURN a.model`
+  `https://v6-1.technopedia.com/tql?q=MATCH (a:HARDWARE_MODEL) RETURN a.model` <br>
 
   
   #### Authentication<br>
   
-  ###### The Technopedia Version 6.1 API uses OAuth for authentication. To authenticate in a new session, you pass the API key in the request header. <br> 
-  The API key is provided by Flexera Technopedia support.
-
+  ###### The Technopedia Version 6.1 API uses OAuth for authentication. <br> 
+  To authenticate in a new session, you pass the API key in the request header. The API key is provided by Flexera Technopedia support. <br>
+  <br>
   In the following examples, an API key example is used with cURL and in the Postman API client. <br>
   <br>
   The key `Bearer b93477a9-054b-4878-a16f-d7f5d1f27a7a` is used in both of the following examples.
@@ -110,8 +111,7 @@ content_markdown: >-
   {: .warning}
 
   <br>
-  Learn to start writing TQL queries.<br>
-  [Technopedia query language](../#documentationtql104)
+  Learn to start write TQL queries by usint the [Technopedia query language](../#documentationtql104)
 
 
 

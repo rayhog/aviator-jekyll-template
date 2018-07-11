@@ -13,19 +13,19 @@ content_markdown: |-
   #### Get started with TQL<br>
 
   To create a query by using TQL, you must create a MATCH statement, which is similar to a Select statement in SQL.<br>
-  The `MATCH` statement enables you to specify the query parameters that you use to search the database.
-  See the following example: <br>
+  The `MATCH` statement enables you to specify the query parameters that you use to search the database. <br>
+  The following example is a basic query that returns software release data: <br>
   <br>
-  `MATCH (software:SOFTWARE_RELEASE) RETURN software`<br>
+  `MATCH (sft:SOFTWARE_RELEASE) RETURN sft`<br>
   
   You add the MATCH query statement as a query parameter to the `/tql` endpoint.<br>
    See the following example: <br>
   <br>
   `https://v6-1.technopedia.com/tql?q=<MATCH statement>` <br>
-  `https://v6-1.technopedia.com/tql?q=MATCH (software:SOFTWARE_RELEASE) RETURN software` <br>
+  `https://v6-1.technopedia.com/tql?q=MATCH (sft:SOFTWARE_RELEASE) RETURN sft` <br>
   <br>
   
-  The TQL MATCH query returns results from one or more nodes and relationships that you specify in the query. Typically, the query results are returned as key-value pairs, which resembles the format shown in the following image: <br>
+  The TQL MATCH query returns results from one or more nodes that you specify in the query. Typically, the query results are returned as key-value pairs, which resembles the format shown in the following image: <br>
    <br>
   
   ![API Image](/images/results.png)<br>&nbsp;
@@ -40,7 +40,7 @@ content_markdown: |-
     `MATCH` <br>
     <br>
    * Node <br>
-     Nodes are prefixed with a colon (:) and surrounded by parentheses.<br>
+     Nodes are prefixed with a colon (:) and both the colon and node are surrounded by parentheses.<br>
     `MATCH (:node)` <br>
     <br>
    * Alias <br>
@@ -59,9 +59,9 @@ content_markdown: |-
     <br>
    * Relationship direction <br>
      A unidirectional relationship is indicated by an arrowhead and a birdirectional relationship has no arrowhead. <br>
-     For example, in the following relationship, `node_software` is manufactured_by `node_manufacturer` <br>
-    `(:node_software)-[:MANUFACTURED_BY]->(:node_manufacturer)` <br>
-    `-[:MANUFACTURED_BY]-` indicates a bidirectional relationship
+     For example, in the following example, `nodeX` is manufactured_by `nodeY` <br>
+    `(:nodeX)-[:MANUFACTURED_BY]->(:nodeY)` <br>
+    `-[:MANUFACTURED_BY]-` is an example of a bidirectional relationship because it has no direcional arroww.
     <br>
     
    * RETURN <br>
@@ -112,7 +112,7 @@ content_markdown: |-
   <br>
   Use the following guidelines to help you get started with building a basic query:
 
-   1.	Identify the relevant node or nodes that store the data you want to retrieve.<br>
+   1.	Identify the relevant node or nodes that represent the data you want to retrieve.<br>
    2.	Identify any node attributes that you want to target for your data, for example, you use the product
         attribute of the software product node to get names of software products. <br>   
    3.	For queries that involve more than one node, identify any relationships that connect the nodes.<br>
@@ -120,11 +120,10 @@ content_markdown: |-
    5.   Decide on any aliases that you need to add to nodes so you can use them in the `RETURN` clause.
    6.	Write your MATCH statement
 
-  To view a list of attributes for any node, you use the 
-  `MATCH (alias:NODE) RETURN alias` query with the `/tql` endpoint.
+  To view a list of attributes for any node, you use the <br>
+  `MATCH (alias:NODE) RETURN alias` query with the `/tql` endpoint.<br>
   For example, `https://v6-1.technopedia.com/tql?q=MATCH (n:SOFTWARE_PRODUCT) RETURN n LIMIT 1`
-  {: .warning}
-
+  
   <br>
   Here’s some query examples:
 
@@ -133,7 +132,7 @@ content_markdown: |-
 
   The `SOFTWARE_PRODUCT` node has an attribute named `product` that stores the product name.<br>
   View the list of attributes that you can use on the Software Product page, or you can use the following query: <br>
-  `MATCH(x:SOFTWARE_PRODUCT) RETURN x` to get a list of attributes. <br>
+  `MATCH(x:SOFTWARE_PRODUCT) RETURN x` to get a list of attributes for the software product node. <br>
 
     1. Use `MATCH` to select `SOFTWARE_PRODUCT` because it
        has the `product` attribute with a product (name) field.<br>
@@ -152,7 +151,7 @@ content_markdown: |-
 
   <br>
   In this example, software products that have Adobe in the product field are returned. <br>
-  The following sample return shows two results for software products that have Adobe in their product name.<br>
+  The following result example shows two results for software products that have Adobe in their product name.<br>
   <br>
   ![API Image](/images/adobe_contains.png)<br>&nbsp;
   <br>  

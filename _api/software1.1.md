@@ -4,7 +4,7 @@ position: 1.1
 type: 
 description: 
 content_markdown: |-
-  Software in Technopedia is represented by six nodes. You can query individual nodes or you can use relationships to get data from multiple software nodes in one query. <br>
+  Software is categorized by edition, product, version, version group, major version and release. To query a specific category, you query the node that represents the category such as software editon, which is represented by the software editon node.
   <br>
   The software product is a good starting point when you want to start with a product name reference and then build out your query to include data from other software nodes. <br>
   <br>
