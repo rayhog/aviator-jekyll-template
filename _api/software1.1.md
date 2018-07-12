@@ -11,13 +11,21 @@ content_markdown: |-
 
   The following query examples return data that is specific to that software node: <br>
 
-  * `MATCH (a:SOFTWARE_RELEASE) RETURN a` returns release data<br>
-  * `MATCH (a:SOFTWARE_PRODUCT) RETURN a` returns product data<br>
-  * `MATCH (a:SOFTWARE_EDITION) RETURN a` returns edition data<br>
-  * `MATCH (a:SOFTWARE_VERSION) RETURN a` returns version data <br>
-  * `MATCH (a:SOFTWARE_MAJOR_VERSION) RETURN a` returns major version data  <br>
-  * `MATCH (a:SOFTWARE_VERSION_GROUP) RETURN a` returns version group data <br>
+  * `MATCH (a:SOFTWARE_RELEASE) RETURN a` 
+     Returns release data<br>
+  * `MATCH (a:SOFTWARE_PRODUCT) RETURN a` 
+     Returns product data<br>
+  * `MATCH (a:SOFTWARE_EDITION) RETURN a` 
+     Returns edition data<br>
+  * `MATCH (a:SOFTWARE_VERSION) RETURN a` 
+     Returns version data <br>
+  * `MATCH (a:SOFTWARE_MAJOR_VERSION) RETURN a` 
+     Returns major version data  <br>
+  * `MATCH (a:SOFTWARE_VERSION_GROUP) RETURN a`
+     Returns version group data  <br>
+
   <br>
+  
   For more information about specific software nodes, click a link to go to the relevant page:
 
    * [Product node](../#apisw_prod115)

@@ -5,7 +5,7 @@ type:
 description:
   
 content_markdown: |-
-  You use the Technopedia query language (TQL) to create queries that to use with the `/tql` endpoint to retrieve data from the Technopedia database. 
+  You use the Technopedia query language (TQL) to create queries that you use with the `/tql` endpoint to retrieve data from the Technopedia database. 
   <br>
   TQL is a declarative query language that allows you to specify the data that you want to retrieve by referring to nodes, relationships, and attributes in the Technopedia database.
 
@@ -276,7 +276,7 @@ content_markdown: |-
   `>=` greater than or equals <br>
   `<=` less than or equals <br>
 
-
+  Learn more about writing TQL queries and using relationships in queries [TQL queries and relationships](../#documentationtqlqueries106)
 
   #### Query Examples <br>
     
