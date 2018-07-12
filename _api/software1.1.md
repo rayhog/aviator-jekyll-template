@@ -9,13 +9,14 @@ content_markdown: |-
   The software product is a good starting point when you want to start with a product name reference and then build out your query to include data from other software nodes. <br>
   <br>
 
-  The following query examples return data that is specific to that software node:
-  `MATCH (a:SOFTWARE_RELEASE) RETURN a` <br>
-  `MATCH (a:SOFTWARE_PRODUCT) RETURN a` <br>
-  `MATCH (a:SOFTWARE_EDITION) RETURN a` <br>
-  `MATCH (a:SOFTWARE_VERSION) RETURN a` <br>
-  `MATCH (a:SOFTWARE_MAJOR_VERSION) RETURN a` <br>
-  `MATCH (a:SOFTWARE_VERSION_GROUP) RETURN a` <br>
+  The following query examples return data that is specific to that software node: <br>
+
+  * `MATCH (a:SOFTWARE_RELEASE) RETURN a` returns release data<br>
+  * `MATCH (a:SOFTWARE_PRODUCT) RETURN a` returns product data<br>
+  * `MATCH (a:SOFTWARE_EDITION) RETURN a` returns edition data<br>
+  * `MATCH (a:SOFTWARE_VERSION) RETURN a` returns version data <br>
+  * `MATCH (a:SOFTWARE_MAJOR_VERSION) RETURN a` returns major version data  <br>
+  * `MATCH (a:SOFTWARE_VERSION_GROUP) RETURN a` returns version group data <br>
   <br>
   For more information about specific software nodes, click a link to go to the relevant page:
 
