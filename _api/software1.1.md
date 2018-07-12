@@ -10,12 +10,12 @@ content_markdown: |-
   <br>
 
   The following query examples return data that is specific to that software node:
-  `MATCH (a:SOFTWARE_RELEASE) RETURN a`
-  `MATCH (a:SOFTWARE_PRODUCT) RETURN a`
-  `MATCH (a:SOFTWARE_EDITION) RETURN a`
-  `MATCH (a:SOFTWARE_VERSION) RETURN a`
-  `MATCH (a:SOFTWARE_MAJOR_VERSION) RETURN a`
-  `MATCH (a:SOFTWARE_VERSION_GROUP) RETURN a`
+  `MATCH (a:SOFTWARE_RELEASE) RETURN a` <br>
+  `MATCH (a:SOFTWARE_PRODUCT) RETURN a` <br>
+  `MATCH (a:SOFTWARE_EDITION) RETURN a` <br>
+  `MATCH (a:SOFTWARE_VERSION) RETURN a` <br>
+  `MATCH (a:SOFTWARE_MAJOR_VERSION) RETURN a` <br>
+  `MATCH (a:SOFTWARE_VERSION_GROUP) RETURN a` <br>
   <br>
   For more information about specific software nodes, click a link to go to the relevant page:
 

@@ -5,12 +5,12 @@ type:
 description:
   
 content_markdown: |-
-  You create queries by using the Technopedia query language (TQL) to use with the `/tql` endpoint to retrieve data from the Technopedia database. 
+  You use the Technopedia query language (TQL) to create queries that to use with the `/tql` endpoint to retrieve data from the Technopedia database. 
   <br>
   TQL is a declarative query language that allows you to specify the data that you want to retrieve by referring to nodes, relationships, and attributes in the Technopedia database.
 
 
-  #### Get started with TQL<br>
+  #### Get started with creating TQL queries<br>
 
   To create a query by using TQL, you must create a MATCH statement, which is similar to a Select statement in SQL.<br>
   The `MATCH` statement enables you to specify the query parameters that you use to search the database. <br>
@@ -47,8 +47,8 @@ content_markdown: |-
      You append an unique alias to a node, and TQL binds the alias to that node. <br>
      The `RETURN` clause references the alias to retrieve data from the associated node or relationship. <br>
     `MATCH (alias:node)` <br>     
-    `MATCH (alias:node) RETURN alias` <br>
-     Returns all attributes for the node.  <br>
+    `MATCH (alias:Xnode) RETURN alias` <br>
+     Returns all attributes for Xnode.  <br>
     <br>
     `MATCH (alias:node) RETURN alias.attribute1, alias.attribute2`  <br>
      Returns data for `attribute1` and `attribute2`, which are the specified attributes. <br>
@@ -61,14 +61,14 @@ content_markdown: |-
      A unidirectional relationship is indicated by an arrowhead and a birdirectional relationship has no arrowhead. <br>
      For example, in the following example, `nodeX` is manufactured_by `nodeY` <br>
     `(:nodeX)-[:MANUFACTURED_BY]->(:nodeY)` <br>
-    `-[:MANUFACTURED_BY]-` is an example of a bidirectional relationship because it has no direcional arroww.
+    `-[:MANUFACTURED_BY]-` is an example of a bidirectional relationship because it has no direcional arrowhead.
     <br>
     
    * RETURN <br>
     The `RETURN` clause defines the data that you want to get back by referring to the alias. <br>
     <br>
     `MATCH (aliasx:node1) RETURN aliasx` <br>
-     All `node1` attributes are returned <br>
+     All `node1` attributes (data) are returned <br>
      <br>
     `MATCH (aliasx:node1) RETURN aliasx.attribute_xyz` <br>
      Data for `attribute_xyz` is returned for `node1` <br>

@@ -17,15 +17,15 @@ content_markdown: >-
 
   #### Nodes in Technopedia
   
-  Nodes represent entities that are equivalent to a data category such as hardware or software, and they are the main entity that you target when you query the Technopedia database. <br>
+  Nodes are entities that are equivalent to a data category such as hardware or software, and they are the main entity that you target when you query the Technopedia database. <br>
   For example, you might query the manufacturer node to get manufacturer data, or the software product node to get software product data. <br>
   <br>
   The following list describes node charactertistics:
 
   <br> 
    * Represent data categories in Technopedia such as software version or software editon.
-   * Have attributes that store data in key-value pairs, for example, `{"edition" : "server"}`.
-   * Connect with other nodes through defined relationships.
+   * Have attributes that store data in key-value pairs, for example, `{"edition" : "server"}` or `{"manufacturer" : "Microsoft"}` .
+   * Connect with other nodes through defined relationships so you query multiple nodes on one query.
 
    Here's some examples of nodes and relationships:
 
@@ -61,10 +61,10 @@ content_markdown: >-
   <br>
   <br>
   
-  The following diagram shows all of the nodes and relationships in the Technopedia database. <br>
+  The following diagram shows nodes and relationships for software, hardware, manufacturer, and CPU  in the Technopedia graph. <br>
   <br>
   <br>
-  ![API Image](/images/graph.png)<br>&nbsp;
+  ![API Image](/images/core_nodes.png)<br>&nbsp;
   <br>
 
   
