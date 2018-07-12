@@ -5,19 +5,22 @@ type:
 description: >-  
 content_markdown: >-
   The Technopedia database is a graph database that uses graph structures for semantic queries with nodes, relationships, and attributes.
-  You access Technopedia data by querying nodes, attributes, or relationships in the Technopedia graph.<br>
+  You access Technopedia data by sending a query through a HTTP GET request that queries the Technopedia database.<br>
 
   <br>
   
   Before you start using the Technopedia query language (TQL), you must be familiar with nodes, attributes, and relationships in the Technopedia graph database.
  
-  #### A Simple Overview
+  #### Simple Overview
   
-  You query a data category such as software edtion (node), and specify the data that you want to return from that category such as `edition` (attribute) by specifying attributes. To get related data from other data categories (nodes), you use relationships to connect to other nodes, which enables you to join other data categories in one query.
+  You query a data category such as software product (node), and specify the data attribute that you want to query on that node such as `product` (attribute) by specifying attributes. To get related data from other data categories (nodes), you use relationships to connect to other nodes, which enables you to combine other data categories (nodes) in one query. <br>
+  For example, you query the software product category (node) to get data about software products, and if you want to specify specific data, you reference an attribute on the node that stores the data or you can return all data for that node.
+
+  
 
   #### Nodes in Technopedia
   
-  Nodes are entities that are equivalent to a data category such as hardware or software, and they are the main entity that you target when you query the Technopedia database. <br>
+  Nodes are entities in the graph that represent data categories such as hardware or software, and they are the main entity that you target when you query the Technopedia database. <br>
   For example, you might query the manufacturer node to get manufacturer data, or the software product node to get software product data. <br>
   <br>
   The following list describes node charactertistics:

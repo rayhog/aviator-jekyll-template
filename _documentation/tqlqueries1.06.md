@@ -187,7 +187,7 @@ left_code_blocks:
       RETURN n.release, sp.product, m.manufacturer 
       LIMIT 5
       
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -228,7 +228,7 @@ left_code_blocks:
       RETURN m.manufacturer, sp.product, sv.version, sr.release, se.edition 
       LIMIT 5
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -279,7 +279,7 @@ left_code_blocks:
       RETURN s 
       LIMIT 2 
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -321,7 +321,7 @@ left_code_blocks:
       RETURN n.version, n.order 
       LIMIT 5
 
-      RESPONSE SAMPLE
+      RESULT SAMPLE
 
       {
         "results": [
@@ -348,7 +348,7 @@ left_code_blocks:
       WHERE n.release CONTAINS "23" 
       RETURN n.release, sp.product LIMIT 5
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -383,7 +383,7 @@ left_code_blocks:
       RETURN n.release, sp.product, m.manufacturer 
       LIMIT 5
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -431,6 +431,8 @@ left_code_blocks:
 right_code_blocks:
   - code_block: |2
       
+      Try out the following query examples:
+      
       MATCH Node and Attribute Examples:
       __________________________________
       
@@ -463,7 +465,7 @@ right_code_blocks:
 
       
            
-    title: MATCH Statements
+    title: MATCH Query Examples
     language: bash
   - code_block: |2-
       WHERE

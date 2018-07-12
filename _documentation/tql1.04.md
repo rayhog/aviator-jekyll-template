@@ -290,7 +290,7 @@ left_code_blocks:
       MATCH (n:MANUFACTURER) RETURN n 
       LIMIT 1
       
-      RESPONSE SAMPLE
+      RESULT
 
       {
         "results": [
@@ -333,7 +333,7 @@ left_code_blocks:
       RETURN aliasx.product, aliasx.modified_at 
       LIMIT 10
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -386,7 +386,7 @@ left_code_blocks:
       RETURN s 
       LIMIT 2 
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -427,7 +427,7 @@ left_code_blocks:
       RETURN n.version, n.order 
       LIMIT 5
 
-      RESPONSE SAMPLE
+      RESULT SAMPLE
 
       {
         "results": [
@@ -454,7 +454,7 @@ left_code_blocks:
       RETURN n.release, sp.product 
       LIMIT 5
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -488,7 +488,7 @@ left_code_blocks:
       RETURN n.release, sp.product, m.manufacturer 
       LIMIT 5
 
-      RESPONSE SAMPLE
+      RESULTS
 
       {
         "results": [
@@ -528,7 +528,7 @@ left_code_blocks:
       MATCH (a:SOFTWARE_PRODUCT{product:"e1ns.output"}) 
       RETURN a
 
-      RESPONSE SAMPLE
+      RESULT
 
       {
         "results": [
@@ -560,7 +560,7 @@ left_code_blocks:
       m.description AS desc 
       LIMIT 1
 
-      RESPONSE SAMPLE
+      RESULT
 
       {
         "results": [
@@ -597,7 +597,7 @@ right_code_blocks:
       Query syntax:
       MATCH (alias.NODE) RETURN alias.attribute
       
-      Examples:
+      Query examples:
       MATCH (s:SOFTWARE_PRODUCT) RETURN s.product 
       MATCH (s:SOFTWARE_PRODUCT) RETURN s.technopedia_id
       MATCH (s:SOFTWARE_PRODUCT) RETURN s.technopedia_id, s.product
@@ -608,28 +608,28 @@ right_code_blocks:
       Query syntax:
       MATCH (alias.NODE) RETURN alias
       
-      Example:
+      Query example:
       MATCH (s:SOFTWARE_RELEASE) RETURN s
       ___________________________________ 
 
       Query syntax:
       MATCH (alias.NODE) RETURN alias.attribute 
       
-      Example:
+      Query example:
       MATCH (s:SOFTWARE_RELEASE) RETURN s.version 
       ___________________________________________
       
       Query syntax:
       MATCH (alias.NODE) RETURN alias
       
-      Example:
+      Query example:
       MATCH (n:CPU_MODEL) RETURN n
       ____________________________
 
       Query syntax:
       MATCH (alias.NODE) RETURN alias.attribute
       
-      Example:
+      Query example:
       MATCH (s:SOFTWARE_PRODUCT) RETURN s.technopedia_id, s.product
 
            
