@@ -13,9 +13,7 @@ content_markdown: >-
  
   #### Simple Overview
   
-  You query a data category such as software product (node), and specify the data attribute that you want to query on that node such as `product` (attribute) by specifying attributes. To get related data from other data categories (nodes), you use relationships to connect to other nodes, which enables you to combine other data categories (nodes) in one query. <br>
-  For example, you query the software product category (node) to get data about software products, and if you want to specify specific data, you reference an attribute on the node that stores the data or you can return all data for that node.
-
+  You query a data category such as software product (node), and specify any data attributes such as `product` (attribute) to retrieve data that is strored by that attribute. To get related data from other data categories (nodes), you use relationships to connect to other nodes, which enables you to combine other data categories (nodes) in one query. <br>
   
 
   #### Nodes in Technopedia
@@ -23,12 +21,12 @@ content_markdown: >-
   Nodes are entities in the graph that represent data categories such as hardware or software, and they are the main entity that you target when you query the Technopedia database. <br>
   For example, you might query the manufacturer node to get manufacturer data, or the software product node to get software product data. <br>
   <br>
-  The following list describes node charactertistics:
+  The following list describes node characteristics:
 
   <br> 
    * Represent data categories in Technopedia such as software version or software editon.
    * Have attributes that store data in key-value pairs, for example, `{"edition" : "server"}` or `{"manufacturer" : "Microsoft"}` .
-   * Connect with other nodes through defined relationships so you query multiple nodes on one query.
+   * Connect with other nodes through defined relationships, which enables you to query multiple nodes on one query.
 
    Here's some examples of nodes and relationships:
 

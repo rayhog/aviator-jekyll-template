@@ -16,7 +16,7 @@ content_markdown: |-
 
   
 
-  #### Using relationships to connect nodes in a query<br>
+  #### Using relationships to get data from multiple nodes <br>
 
   
   Relationships provide connections to other nodes, which enables you to get data from multiple nodes in one query. You connect the nodes by using the relationship that's shown in the database graph. <br>
@@ -432,7 +432,7 @@ right_code_blocks:
   - code_block: |2
       
       Try out the following query examples:
-      
+
       MATCH Node and Attribute Examples:
       __________________________________
       
