@@ -12,7 +12,11 @@ content_markdown: |-
   <br>
   `MATCH (n:CPU_MODEL) RETURN n LIMIT 25`
   <br>
-    
+  The following query returns data for CPU cores by referncing the cores attribute:<br>
+  <br>
+  `MATCH (n:CPU_MODEL) RETURN n.cores LIMIT 22`
+  <br>
+
   The following diagram shows the `CPU_MODEL` node and other nodes. <br>
   <br>
   ![API Image](/images/cpu.png){:class="img-responsive"} <br>
