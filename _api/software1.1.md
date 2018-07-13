@@ -6,22 +6,22 @@ description:
 content_markdown: |-
   Software is categorized by edition, product, version, version group, major version and release. To query a specific category, you query the node that represents the category, such as software editon.
   <br>
-  The software product node is a good starting point when you want to start with a product name reference and then build out your query to include data from other software nodes. <br>
+  The software product node is a good starting point when you want to start with a product name reference and then build out your query to include data from other software nodes such as edition or version. <br>
   <br>
 
-  The following query examples return data that is specific to that software node: <br>
+  The following query examples return data that is specific to software data: <br>
 
   * `MATCH (a:SOFTWARE_RELEASE) RETURN a` <br>
      Returns release data <br>
-  * `MATCH (a:SOFTWARE_PRODUCT) RETURN a` <br>
+  * `MATCH (f:SOFTWARE_PRODUCT) RETURN f` <br>
      Returns product data <br>
-  * `MATCH (a:SOFTWARE_EDITION) RETURN a` <br>
+  * `MATCH (x:SOFTWARE_EDITION) RETURN x` <br>
      Returns edition data <br>
-  * `MATCH (a:SOFTWARE_VERSION) RETURN a` <br>
+  * `MATCH (y:SOFTWARE_VERSION) RETURN y` <br>
      Returns version data <br>
-  * `MATCH (a:SOFTWARE_MAJOR_VERSION) RETURN a` <br>
+  * `MATCH (z:SOFTWARE_MAJOR_VERSION) RETURN z` <br>
      Returns major version data  <br>
-  * `MATCH (a:SOFTWARE_VERSION_GROUP) RETURN a` <br>
+  * `MATCH (abc:SOFTWARE_VERSION_GROUP) RETURN abc` <br>
      Returns version group data  <br>
 
   <br>

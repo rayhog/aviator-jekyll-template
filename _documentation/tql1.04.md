@@ -132,7 +132,7 @@ content_markdown: |-
 
   The `SOFTWARE_PRODUCT` node has an attribute named `product` that stores the product name.<br>
   View the list of attributes that you can use on the Software Product page, or you can use the following query: <br>
-  `MATCH(x:SOFTWARE_PRODUCT) RETURN x` to get a list of attributes for the software product node. <br>
+  `MATCH (x:SOFTWARE_PRODUCT) RETURN x` to get a list of attributes for the software product node. <br>
 
     1. Use `MATCH` to select `SOFTWARE_PRODUCT` because it
        has the `product` attribute with a product (name) field.<br>
