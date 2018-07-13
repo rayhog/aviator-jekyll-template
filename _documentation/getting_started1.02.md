@@ -113,7 +113,7 @@ content_markdown: >-
   <br>
   Learn to write TQL queries by using the [Technopedia query language](../#documentationtql104)
 
-
+  
 
 
 left_code_blocks:

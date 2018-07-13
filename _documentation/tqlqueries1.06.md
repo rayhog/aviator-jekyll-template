@@ -175,7 +175,7 @@ content_markdown: |-
    `"sv.product": "Need for Speed Most Wanted"` <br>
    <br>    
   
-  Learn more about writing TQL queries and using relationships in a query [TQL queries and relationships](../#documentationtqlqueries106)
+  For more help and examples that you can use to create queries, go to the page that repesents the type of data that you're looking for.
   
   The following `MATCH` query examples show variations in constructions that use relationships and other conditions. To try out a query example, you append the `MATCH` statement to the following `/tql` endpoint and make a GET request from a API client or use cURL. <br>
   <br>

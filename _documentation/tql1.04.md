@@ -276,7 +276,7 @@ content_markdown: |-
   `>=` greater than or equals <br>
   `<=` less than or equals <br>
 
-  Learn more about writing TQL queries and using relationships in queries [TQL queries and relationships](../#documentationtqlqueries106)
+  Learn more about writing [TQL queries and using relationships](../#documentationtqlqueries106)
 
   #### Query Examples <br>
     
